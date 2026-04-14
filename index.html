@@ -1,252 +1,539 @@
 <!DOCTYPE html>
-<html>
+<html lang="ko" data-visual-system="radar-unified-v2" data-visual-surface="dashboard">
 <head>
-    <meta charset="UTF-8">
-    <title>Radar Projects - Data Analysis Dashboard</title>
-    <style>
-        body { font-family: 'Segoe UI', Arial, sans-serif; margin: 20px; background: #f5f5f5; }
-        .header { text-align: center; padding: 20px; background: linear-gradient(135deg, #667eea 0%, #764ba2 100%); color: white; border-radius: 10px; }
-        .dashboard { display: grid; grid-template-columns: repeat(auto-fit, minmax(400px, 1fr)); gap: 20px; margin-top: 20px; }
-        .card { background: white; padding: 20px; border-radius: 10px; box-shadow: 0 2px 10px rgba(0,0,0,0.1); }
-        .card img { width: 100%; border-radius: 5px; }
-        .stats { display: grid; grid-template-columns: repeat(3, 1fr); gap: 15px; margin-top: 20px; }
-        .stat-box { background: white; padding: 20px; border-radius: 10px; text-align: center; box-shadow: 0 2px 5px rgba(0,0,0,0.1); }
-        .stat-value { font-size: 2em; font-weight: bold; color: #667eea; }
-        .stat-label { color: #666; margin-top: 5px; }
-        table { width: 100%; border-collapse: collapse; margin-top: 10px; }
-        th, td { padding: 12px; text-align: left; border-bottom: 1px solid #ddd; }
-        th { background: #667eea; color: white; }
-        tr:hover { background: #f5f5f5; }
-        .match-high { color: #28a745; font-weight: bold; }
-        .match-medium { color: #ffc107; font-weight: bold; }
-        .match-low { color: #dc3545; font-weight: bold; }
-        .timestamp { text-align: center; color: #666; margin-top: 20px; }
-    </style>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Radar Projects Dashboard</title>
+  <style>
+    :root {
+      --bg: #f4f6fb;
+      --surface: #ffffff;
+      --surface-alt: #eef3ff;
+      --text: #18202b;
+      --muted: #617086;
+      --line: #d7dfef;
+      --accent: #2358d5;
+      --accent-soft: #dce7ff;
+      --ok: #1e8e5a;
+      --ok-soft: #daf4e7;
+      --warn: #a96b00;
+      --warn-soft: #fff1cd;
+      --bad: #a23b3b;
+      --bad-soft: #fde2e2;
+      --shadow: 0 18px 50px rgba(24, 32, 43, 0.08);
+      --radius: 18px;
+      --radius-sm: 999px;
+      --max: 1380px;
+    }
+
+    * {
+      box-sizing: border-box;
+    }
+
+    body {
+      margin: 0;
+      font-family: "Pretendard Variable", "Pretendard", "Segoe UI", Arial, sans-serif;
+      color: var(--text);
+      background:
+        radial-gradient(circle at top left, rgba(35, 88, 213, 0.08), transparent 24rem),
+        radial-gradient(circle at bottom right, rgba(30, 142, 90, 0.06), transparent 24rem),
+        var(--bg);
+    }
+
+    a {
+      color: var(--accent);
+      text-decoration: none;
+    }
+
+    a:hover {
+      text-decoration: underline;
+    }
+
+    .page {
+      max-width: var(--max);
+      margin: 0 auto;
+      padding: 32px 24px 56px;
+    }
+
+    .hero {
+      background: linear-gradient(135deg, #13203d, #2358d5);
+      color: white;
+      border-radius: 28px;
+      padding: 32px;
+      box-shadow: var(--shadow);
+    }
+
+    .hero h1 {
+      margin: 0 0 12px;
+      font-size: clamp(2rem, 3vw, 3rem);
+      letter-spacing: -0.04em;
+    }
+
+    .hero p {
+      margin: 0;
+      max-width: 68ch;
+      line-height: 1.6;
+      color: rgba(255,255,255,0.84);
+    }
+
+    .hero-meta {
+      margin-top: 18px;
+      font-size: 0.95rem;
+      color: rgba(255,255,255,0.78);
+    }
+
+    .stats {
+      display: grid;
+      grid-template-columns: repeat(auto-fit, minmax(180px, 1fr));
+      gap: 16px;
+      margin-top: 24px;
+    }
+
+    .stat-card {
+      background: rgba(255,255,255,0.14);
+      border: 1px solid rgba(255,255,255,0.18);
+      border-radius: var(--radius);
+      padding: 18px 20px;
+      backdrop-filter: blur(8px);
+    }
+
+    .stat-card__value {
+      font-size: 1.9rem;
+      font-weight: 700;
+      letter-spacing: -0.03em;
+    }
+
+    .stat-card__label {
+      margin-top: 8px;
+      color: rgba(255,255,255,0.72);
+      font-size: 0.92rem;
+    }
+
+    .section-grid {
+      display: grid;
+      grid-template-columns: 1.4fr 1fr;
+      gap: 20px;
+      margin-top: 24px;
+    }
+
+    .taxonomy-banner {
+      margin-top: 24px;
+      background: var(--surface);
+      border: 1px solid var(--line);
+      border-radius: 24px;
+      padding: 22px 24px;
+      box-shadow: var(--shadow);
+      display: grid;
+      gap: 16px;
+      grid-template-columns: minmax(0, 1.7fr) minmax(280px, 1fr);
+      align-items: center;
+    }
+
+    .taxonomy-banner h2 {
+      margin: 0 0 8px;
+      font-size: 1.2rem;
+      letter-spacing: -0.02em;
+    }
+
+    .taxonomy-banner p {
+      margin: 0;
+      color: var(--muted);
+      line-height: 1.6;
+    }
+
+    .taxonomy-banner__meta {
+      display: flex;
+      gap: 10px;
+      flex-wrap: wrap;
+      align-items: center;
+      justify-content: flex-end;
+    }
+
+    .taxonomy-banner__meta span,
+    .taxonomy-banner__meta a {
+      display: inline-flex;
+      align-items: center;
+      padding: 8px 12px;
+      border-radius: var(--radius-sm);
+      background: var(--surface-alt);
+      color: var(--text);
+      font-size: 0.9rem;
+      white-space: nowrap;
+    }
+
+    .taxonomy-banner__meta a {
+      background: var(--accent);
+      color: white;
+      font-weight: 700;
+    }
+
+    @media (max-width: 980px) {
+      .section-grid {
+        grid-template-columns: 1fr;
+      }
+
+      .taxonomy-banner {
+        grid-template-columns: 1fr;
+      }
+
+      .taxonomy-banner__meta {
+        justify-content: flex-start;
+      }
+    }
+
+    .panel {
+      background: var(--surface);
+      border: 1px solid var(--line);
+      border-radius: 24px;
+      padding: 24px;
+      box-shadow: var(--shadow);
+    }
+
+    .panel h2 {
+      margin: 0 0 12px;
+      font-size: 1.2rem;
+      letter-spacing: -0.02em;
+    }
+
+    .panel p {
+      margin: 0;
+      color: var(--muted);
+      line-height: 1.6;
+    }
+
+    .warning-list,
+    .update-list {
+      margin: 14px 0 0;
+      padding-left: 18px;
+      color: var(--muted);
+    }
+
+    .warning-list li {
+      margin: 10px 0;
+      line-height: 1.5;
+    }
+
+    .update-list {
+      list-style: none;
+      padding: 0;
+    }
+
+    .update-item {
+      display: grid;
+      grid-template-columns: 1fr auto auto;
+      gap: 12px;
+      align-items: center;
+      padding: 12px 0;
+      border-top: 1px solid var(--line);
+    }
+
+    .update-item:first-child {
+      border-top: none;
+      padding-top: 0;
+    }
+
+    .update-item__name {
+      font-weight: 600;
+    }
+
+    .update-item__date {
+      color: var(--muted);
+      font-size: 0.92rem;
+      white-space: nowrap;
+    }
+
+    .table-wrap {
+      margin-top: 24px;
+      background: var(--surface);
+      border: 1px solid var(--line);
+      border-radius: 24px;
+      box-shadow: var(--shadow);
+      overflow: hidden;
+    }
+
+    .table-header {
+      padding: 22px 24px 8px;
+    }
+
+    .table-header h2 {
+      margin: 0;
+      font-size: 1.2rem;
+      letter-spacing: -0.02em;
+    }
+
+    .table-header p {
+      margin: 8px 0 0;
+      color: var(--muted);
+      line-height: 1.6;
+    }
+
+    .table-scroll {
+      overflow-x: auto;
+      padding: 8px 12px 16px;
+    }
+
+    table {
+      width: 100%;
+      border-collapse: collapse;
+      min-width: 1120px;
+    }
+
+    th, td {
+      padding: 14px 12px;
+      text-align: left;
+      border-bottom: 1px solid var(--line);
+      vertical-align: top;
+      font-size: 0.95rem;
+    }
+
+    th {
+      color: var(--muted);
+      font-weight: 600;
+      font-size: 0.82rem;
+      text-transform: uppercase;
+      letter-spacing: 0.06em;
+    }
+
+    tr:hover td {
+      background: #f9fbff;
+    }
+
+    .project-name {
+      font-weight: 700;
+      margin-bottom: 4px;
+    }
+
+    .project-repo {
+      color: var(--muted);
+      font-size: 0.86rem;
+    }
+
+    .badge {
+      display: inline-flex;
+      align-items: center;
+      justify-content: center;
+      border-radius: var(--radius-sm);
+      padding: 6px 10px;
+      font-size: 0.78rem;
+      font-weight: 700;
+      letter-spacing: 0.04em;
+      text-transform: uppercase;
+    }
+
+    .badge--active {
+      background: var(--ok-soft);
+      color: var(--ok);
+    }
+
+    .badge--partial {
+      background: var(--warn-soft);
+      color: var(--warn);
+    }
+
+    .badge--missing {
+      background: var(--bad-soft);
+      color: var(--bad);
+    }
+
+    .entity-chip {
+      display: inline-flex;
+      gap: 6px;
+      align-items: center;
+      padding: 5px 10px;
+      margin: 0 6px 6px 0;
+      background: var(--surface-alt);
+      border-radius: var(--radius-sm);
+      color: #3a4a64;
+      font-size: 0.82rem;
+      white-space: nowrap;
+    }
+
+    .entity-chip--muted {
+      color: var(--muted);
+      background: #f1f3f8;
+    }
+
+    .empty-state {
+      margin-top: 14px;
+      color: var(--muted);
+    }
+
+    .footer {
+      margin-top: 20px;
+      color: var(--muted);
+      font-size: 0.9rem;
+      text-align: right;
+    }
+  </style>
 </head>
 <body>
-    <div class="header">
-        <h1>🛰️ Radar Projects - Data Analysis Dashboard</h1>
-        <p>전체 하위 프로젝트 데이터 분석 리포트</p>
-    </div>
+  <main class="page">
+    <section class="hero">
+      <h1>Radar Projects Dashboard</h1>
+      <p>각 Radar 저장소의 `summary JSON`과 리포트 인덱스를 읽어 워크스페이스 전체 상태를 집계한 canonical 대시보드입니다. 현재는 full metrics 우선, 부족한 저장소는 partial fallback으로 표시합니다.</p>
+      <div class="hero-meta">Generated at 2026-04-13 18:23 · Workspace scan source: sibling Radar repositories</div>
+      <div class="stats">
+        <article class="stat-card">
+          <div class="stat-card__value">36</div>
+          <div class="stat-card__label">Active Projects</div>
+        </article>
+        <article class="stat-card">
+          <div class="stat-card__value">36</div>
+          <div class="stat-card__label">Projects With Full Metrics</div>
+        </article>
+        <article class="stat-card">
+          <div class="stat-card__value">0</div>
+          <div class="stat-card__label">Projects Using Fallback</div>
+        </article>
+        <article class="stat-card">
+          <div class="stat-card__value">1,124</div>
+          <div class="stat-card__label">Articles From Full Metrics</div>
+        </article>
+        <article class="stat-card">
+          <div class="stat-card__value">1,104</div>
+          <div class="stat-card__label">Matched Articles</div>
+        </article>
+        <article class="stat-card">
+          <div class="stat-card__value">98.2%</div>
+          <div class="stat-card__label">Overall Match Rate</div>
+        </article>
+      </div>
+    </section>
 
-    <div class="stats">
-        <div class="stat-box">
-            <div class="stat-value">21</div>
-            <div class="stat-label">Active Projects</div>
-        </div>
-        <div class="stat-box">
-            <div class="stat-value">3,276</div>
-            <div class="stat-label">Total Articles</div>
-        </div>
-        <div class="stat-box">
-            <div class="stat-value">1,679</div>
-            <div class="stat-label">Matched Articles</div>
-        </div>
-    </div>
+    <section class="section-grid">
+      <article class="panel">
+        <h2>Coverage Warnings</h2>
+        <p>Summary JSON이 없는 저장소는 HTML fallback으로 읽었고, 그 결과는 partial로 표시됩니다.</p>
+        <ul class="warning-list">
+<li>ArtRadar: quality report has 9 collection error(s)</li>
+<li>ArtRadar: quality freshness gaps: stale=0, missing=6, unknown_event_date=0</li>
+<li>BenefitRadar: quality freshness gaps: stale=1, missing=2, unknown_event_date=0</li>
+<li>BenefitRadar: quality report has 7 disabled source(s)</li>
+<li>BlogRadar: quality report has 7 collection error(s)</li>
+<li>BlogRadar: quality freshness gaps: stale=6, missing=0, unknown_event_date=0</li>
+<li>BookRadar: quality report has 12 disabled source(s)</li>
+<li>CryptoRadar: quality report has 7 collection error(s)</li>
+<li>CryptoRadar: quality freshness gaps: stale=1, missing=0, unknown_event_date=0</li>
+<li>EventRadar: quality freshness gaps: stale=0, missing=20, unknown_event_date=0</li>
+<li>FoodRadar: quality freshness gaps: stale=1, missing=2, unknown_event_date=0</li>
+<li>GameRadar: quality freshness gaps: stale=0, missing=3, unknown_event_date=0</li>
+<li>GameRadar: quality report has 10 disabled source(s)</li>
+<li>GovRadar: quality freshness gaps: stale=1, missing=5, unknown_event_date=0</li>
+<li>HomeRadar: official primary HomeRadar sources blocked by missing env (molit_apt_transaction, molit_apt_rent, reb_subscription, onbid_auction; required: MOLIT_SERVICE_KEY, ONBID_API_KEY, SUBSCRIPTION_API_KEY)</li>
+<li>HomeRadar: quality report has 14 disabled source(s)</li>
+<li>JobRadar: quality report has 4 collection error(s)</li>
+<li>JobRadar: quality freshness gaps: stale=0, missing=16, unknown_event_date=0</li>
+<li>MiscMCPRadar: quality freshness gaps: stale=0, missing=1, unknown_event_date=0</li>
+<li>MobilityRadar: quality report has 5 disabled source(s)</li>
+<li>MovieRadar: quality report has 4 collection error(s)</li>
+<li>MovieRadar: quality freshness gaps: stale=0, missing=1, unknown_event_date=0</li>
+<li>PaperRadar: quality freshness gaps: stale=2, missing=5, unknown_event_date=0</li>
+<li>PaperworkRadar: quality freshness gaps: stale=0, missing=3, unknown_event_date=0</li>
+<li>PolicyRadar: quality freshness gaps: stale=0, missing=9, unknown_event_date=0</li>
+<li>PolicyRadar: quality report has 3 disabled source(s)</li>
+<li>PropertyRadar: quality freshness gaps: stale=0, missing=2, unknown_event_date=0</li>
+<li>RefundRadar: quality freshness gaps: stale=0, missing=14, unknown_event_date=0</li>
+<li>RefundRadar: quality report has 11 disabled source(s)</li>
+<li>SubscriptionRadar: quality report has 10 collection error(s)</li>
+<li>SubscriptionRadar: quality freshness gaps: stale=0, missing=18, unknown_event_date=0</li>
+<li>TrustRadar: quality freshness gaps: stale=0, missing=6, unknown_event_date=0</li>
+<li>TrustRadar: quality report has 2 disabled source(s)</li>
+<li>WineRadar: quality freshness gaps: stale=20, missing=0, unknown_event_date=0</li>
+<li>WineRadar: quality report has 22 disabled source(s)</li>
+</ul>
+      </article>
+      <article class="panel">
+        <h2>Latest Updates</h2>
+        <p>가장 최근 업데이트된 저장소 순으로 집계했습니다.</p>
+        <ul class="update-list">
+<li class="update-item"><span class="update-item__name">Food</span><span class="update-item__date">2026-04-14</span><span class="badge badge--active">Full</span></li>
+<li class="update-item"><span class="update-item__name">Home</span><span class="update-item__date">2026-04-14</span><span class="badge badge--active">Full</span></li>
+<li class="update-item"><span class="update-item__name">Policy</span><span class="update-item__date">2026-04-14</span><span class="badge badge--active">Full</span></li>
+<li class="update-item"><span class="update-item__name">Trust</span><span class="update-item__date">2026-04-14</span><span class="badge badge--active">Full</span></li>
+<li class="update-item"><span class="update-item__name">Wine</span><span class="update-item__date">2026-04-14</span><span class="badge badge--active">Full</span></li>
+<li class="update-item"><span class="update-item__name">Art</span><span class="update-item__date">2026-04-13</span><span class="badge badge--active">Full</span></li>
+<li class="update-item"><span class="update-item__name">Benefit</span><span class="update-item__date">2026-04-13</span><span class="badge badge--active">Full</span></li>
+<li class="update-item"><span class="update-item__name">Blog</span><span class="update-item__date">2026-04-13</span><span class="badge badge--active">Full</span></li>
+<li class="update-item"><span class="update-item__name">Book</span><span class="update-item__date">2026-04-13</span><span class="badge badge--active">Full</span></li>
+<li class="update-item"><span class="update-item__name">CollaborationMCP</span><span class="update-item__date">2026-04-13</span><span class="badge badge--active">Full</span></li>
+</ul>
+      </article>
+    </section>
 
-    <div class="dashboard">
-        <div class="card">
-            <h3>📊 Overview Dashboard</h3>
-            <img src="overview_dashboard.png" alt="Overview Dashboard">
-        </div>
-        <div class="card">
-            <h3>🏷️ Entity Distribution</h3>
-            <img src="entity_distribution.png" alt="Entity Distribution">
-        </div>
-        <div class="card">
-            <h3>📈 Trend Analysis</h3>
-            <img src="trend_analysis.png" alt="Trend Analysis">
-        </div>
-        <div class="card">
-            <h3>📡 Source Analysis</h3>
-            <img src="source_analysis.png" alt="Source Analysis">
-        </div>
-    </div>
+    <section class="taxonomy-banner"><div><h2>Portfolio Taxonomy Audit</h2><p>전 저장소를 공통 taxonomy로 재분류한 별도 감사 페이지를 추가했습니다. 저장소 구조, 의사결정 용도, 거버넌스, 소스 레이어 공백을 한 번에 점검할 수 있습니다.</p></div><div class="taxonomy-banner__meta"><span>39 repos</span><span>4 advanced</span><span>9 high-governance</span><span>0 upgrade-needed</span><a href="classification.html">Open classification audit</a></div></section>
 
-    <div class="card" style="margin-top: 20px;">
-        <h3>📋 Project Details</h3>
+    <section class="taxonomy-banner"><div><h2>Data Quality Audit</h2><p>전 저장소의 데이터 품질 축을 별도 점검판으로 추가했습니다. P0/P1 실행 큐, weakest dimension, source 보강 next action을 한 화면에서 확인할 수 있습니다.</p></div><div class="taxonomy-banner__meta"><span>avg quality 86.9</span><span>7 P0</span><span>6 P1</span><span>weakest 추적성</span><a href="data-quality.html">Open quality audit</a></div></section>
+
+    <section class="taxonomy-banner"><div><h2>Taxonomy Analysis</h2><p>Classification, evidence layers, collection errors, freshness gaps, and disabled-source backlog are joined into one portfolio analysis queue.</p></div><div class="taxonomy-banner__meta"><span>36 projects</span><span>41 errors</span><span>145 freshness gaps</span><span>86 disabled</span><span>risk 26.6</span><a href="taxonomy-analysis.html">Open taxonomy analysis</a></div></section>
+
+    <section class="taxonomy-banner"><div><h2>Daily Collection Contract</h2><p>전 저장소의 daily schedule, date-partitioned raw records, DuckDB snapshot, retention CLI 적용 상태를 점검합니다.</p></div><div class="taxonomy-banner__meta"><span>25 ok</span><span>0 partial</span><span>2 n/a</span><span>data/snapshots/YYYY-MM-DD/&lt;database&gt;.duckdb / data/daily/YYYY-MM-DD.duckdb</span><a href="daily-collection.html">Open daily contract</a></div></section>
+
+    <section class="table-wrap">
+      <div class="table-header">
+        <h2>Project Status</h2>
+        <p>각 행은 저장소별 최신 상태입니다. `index`는 보고서 인덱스, `latest`는 최신 리포트 링크입니다. partial 저장소는 metrics가 비어 있거나 fallback으로 읽은 상태입니다.</p>
+      </div>
+      <div class="table-scroll">
         <table>
+          <thead>
             <tr>
-                <th>Project</th>
-                <th>Articles</th>
-                <th>Matched</th>
-                <th>Match Rate</th>
-                <th>Sources</th>
-                <th>Last Updated</th>
+              <th>Project</th>
+              <th>Category</th>
+              <th>Status</th>
+              <th>Articles</th>
+              <th>Matched</th>
+              <th>Match Rate</th>
+              <th>Sources</th>
+              <th>Last Updated</th>
+              <th>Top Entities</th>
+              <th>Reports</th>
             </tr>
-            <tr>
-                <td><strong>Queue</strong></td>
-                <td>200</td>
-                <td>200</td>
-                <td class="match-high">100.0%</td>
-                <td>8</td>
-                <td>2026-03-24</td>
-            </tr>
-            <tr>
-                <td><strong>Gov</strong></td>
-                <td>59</td>
-                <td>58</td>
-                <td class="match-high">98.3%</td>
-                <td>1</td>
-                <td>2026-03-31</td>
-            </tr>
-            <tr>
-                <td><strong>Paperwork</strong></td>
-                <td>167</td>
-                <td>120</td>
-                <td class="match-high">71.9%</td>
-                <td>12</td>
-                <td>2026-03-24</td>
-            </tr>
-            <tr>
-                <td><strong>Property</strong></td>
-                <td>200</td>
-                <td>137</td>
-                <td class="match-high">68.5%</td>
-                <td>4</td>
-                <td>2026-03-31</td>
-            </tr>
-            <tr>
-                <td><strong>Game</strong></td>
-                <td>200</td>
-                <td>133</td>
-                <td class="match-high">66.5%</td>
-                <td>15</td>
-                <td>2026-03-31</td>
-            </tr>
-            <tr>
-                <td><strong>Subscription</strong></td>
-                <td>200</td>
-                <td>130</td>
-                <td class="match-high">65.0%</td>
-                <td>12</td>
-                <td>2026-03-24</td>
-            </tr>
-            <tr>
-                <td><strong>Trust</strong></td>
-                <td>153</td>
-                <td>96</td>
-                <td class="match-high">62.7%</td>
-                <td>14</td>
-                <td>2026-03-24</td>
-            </tr>
-            <tr>
-                <td><strong>Crypto</strong></td>
-                <td>200</td>
-                <td>121</td>
-                <td class="match-high">60.5%</td>
-                <td>7</td>
-                <td>2026-03-31</td>
-            </tr>
-            <tr>
-                <td><strong>Policy</strong></td>
-                <td>159</td>
-                <td>96</td>
-                <td class="match-high">60.4%</td>
-                <td>13</td>
-                <td>2026-03-24</td>
-            </tr>
-            <tr>
-                <td><strong>Blog</strong></td>
-                <td>197</td>
-                <td>113</td>
-                <td class="match-high">57.4%</td>
-                <td>31</td>
-                <td>2026-03-31</td>
-            </tr>
-            <tr>
-                <td><strong>Refund</strong></td>
-                <td>197</td>
-                <td>98</td>
-                <td class="match-medium">49.7%</td>
-                <td>12</td>
-                <td>2026-03-24</td>
-            </tr>
-            <tr>
-                <td><strong>Book</strong></td>
-                <td>89</td>
-                <td>40</td>
-                <td class="match-medium">44.9%</td>
-                <td>4</td>
-                <td>2026-03-31</td>
-            </tr>
-            <tr>
-                <td><strong>Food</strong></td>
-                <td>82</td>
-                <td>35</td>
-                <td class="match-medium">42.7%</td>
-                <td>5</td>
-                <td>2026-03-31</td>
-            </tr>
-            <tr>
-                <td><strong>Mobility</strong></td>
-                <td>144</td>
-                <td>61</td>
-                <td class="match-medium">42.4%</td>
-                <td>8</td>
-                <td>2026-03-27</td>
-            </tr>
-            <tr>
-                <td><strong>Art</strong></td>
-                <td>129</td>
-                <td>48</td>
-                <td class="match-medium">37.2%</td>
-                <td>9</td>
-                <td>2026-03-31</td>
-            </tr>
-            <tr>
-                <td><strong>Event</strong></td>
-                <td>200</td>
-                <td>70</td>
-                <td class="match-medium">35.0%</td>
-                <td>17</td>
-                <td>2026-03-30</td>
-            </tr>
-            <tr>
-                <td><strong>Benefit</strong></td>
-                <td>200</td>
-                <td>50</td>
-                <td class="match-medium">25.0%</td>
-                <td>7</td>
-                <td>2026-03-30</td>
-            </tr>
-            <tr>
-                <td><strong>Movie</strong></td>
-                <td>200</td>
-                <td>50</td>
-                <td class="match-medium">25.0%</td>
-                <td>6</td>
-                <td>2026-03-31</td>
-            </tr>
-            <tr>
-                <td><strong>Job</strong></td>
-                <td>200</td>
-                <td>23</td>
-                <td class="match-low">11.5%</td>
-                <td>6</td>
-                <td>2026-03-31</td>
-            </tr>
-            <tr>
-                <td><strong>Price</strong></td>
-                <td>100</td>
-                <td>0</td>
-                <td class="match-low">0.0%</td>
-                <td>4</td>
-                <td>2026-03-24</td>
-            </tr>
-            <tr>
-                <td><strong>Paper</strong></td>
-                <td>0</td>
-                <td>0</td>
-                <td class="match-low">0.0%</td>
-                <td>0</td>
-                <td>2026-03-24</td>
-            </tr>
+          </thead>
+          <tbody>
+            <tr><td><div class="project-name"><a href="../FoodRadar/reports/index.html">Food</a></div><div class="project-repo">FoodRadar</div></td><td>food</td><td><span class="badge badge--active">Full</span></td><td>103</td><td>101</td><td>98.1%</td><td>12</td><td>2026-04-14</td><td><span class="entity-chip">FoodGeneral <strong>222</strong></span><span class="entity-chip">SafetyIssue <strong>102</strong></span><span class="entity-chip">FoodType <strong>83</strong></span><span class="entity-chip">Regulation <strong>30</strong></span></td><td><a href="../FoodRadar/reports/index.html">index</a></td></tr>
+<tr><td><div class="project-name"><a href="../HomeRadar/reports/index.html">Home</a></div><div class="project-repo">HomeRadar</div></td><td>home</td><td><span class="badge badge--active">Full</span></td><td>100</td><td>84</td><td>84.0%</td><td>2</td><td>2026-04-14</td><td><span class="entity-chip">keyword <strong>142</strong></span><span class="entity-chip">district <strong>61</strong></span><span class="entity-chip">project <strong>15</strong></span><span class="entity-chip">complex <strong>5</strong></span></td><td><a href="../HomeRadar/reports/index.html">index</a></td></tr>
+<tr><td><div class="project-name"><a href="../PolicyRadar/reports/index.html">Policy</a></div><div class="project-repo">PolicyRadar</div></td><td>policy</td><td><span class="badge badge--active">Full</span></td><td>28</td><td>27</td><td>96.4%</td><td>8</td><td>2026-04-14</td><td><span class="entity-chip">Regulation <strong>162</strong></span><span class="entity-chip">Privacy <strong>137</strong></span><span class="entity-chip">Platform <strong>43</strong></span><span class="entity-chip">SecurityClassificationFramework <strong>34</strong></span></td><td><a href="../PolicyRadar/reports/index.html">index</a></td></tr>
+<tr><td><div class="project-name"><a href="../TrustRadar/reports/index.html">Trust</a></div><div class="project-repo">TrustRadar</div></td><td>trust</td><td><span class="badge badge--active">Full</span></td><td>34</td><td>33</td><td>97.1%</td><td>13</td><td>2026-04-14</td><td><span class="entity-chip">SecurityGeneral <strong>153</strong></span><span class="entity-chip">OperationalEvent <strong>45</strong></span><span class="entity-chip">Privacy <strong>33</strong></span><span class="entity-chip">VerificationState <strong>25</strong></span></td><td><a href="../TrustRadar/reports/index.html">index</a></td></tr>
+<tr><td><div class="project-name"><a href="../WineRadar/reports/index.html">Wine</a></div><div class="project-repo">WineRadar</div></td><td>wine</td><td><span class="badge badge--active">Full</span></td><td>67</td><td>67</td><td>100.0%</td><td>14</td><td>2026-04-14</td><td><span class="entity-chip">topic <strong>113</strong></span><span class="entity-chip">region <strong>82</strong></span><span class="entity-chip">grape_variety <strong>32</strong></span><span class="entity-chip">climate_zone <strong>23</strong></span></td><td><a href="../WineRadar/reports/index.html">index</a></td></tr>
+<tr><td><div class="project-name"><a href="../ArtRadar/reports/index.html">Art</a></div><div class="project-repo">ArtRadar</div></td><td>art</td><td><span class="badge badge--active">Full</span></td><td>17</td><td>17</td><td>100.0%</td><td>15</td><td>2026-04-13</td><td><span class="entity-chip">ArtGeneral <strong>664</strong></span><span class="entity-chip">Topic <strong>68</strong></span><span class="entity-chip">Institution <strong>45</strong></span><span class="entity-chip">Genre <strong>16</strong></span></td><td><a href="../ArtRadar/reports/index.html">index</a></td></tr>
+<tr><td><div class="project-name"><a href="../BenefitRadar/reports/index.html">Benefit</a></div><div class="project-repo">BenefitRadar</div></td><td>benefit</td><td><span class="badge badge--active">Full</span></td><td>73</td><td>73</td><td>100.0%</td><td>15</td><td>2026-04-13</td><td><span class="entity-chip">GovernmentPolicy <strong>398</strong></span><span class="entity-chip">EmploymentBenefit <strong>287</strong></span><span class="entity-chip">SubsidyProgram <strong>260</strong></span><span class="entity-chip">Eligibility <strong>196</strong></span></td><td><a href="../BenefitRadar/reports/index.html">index</a></td></tr>
+<tr><td><div class="project-name"><a href="../BlogRadar/reports/index.html">Blog</a></div><div class="project-repo">BlogRadar</div></td><td>techblog</td><td><span class="badge badge--active">Full</span></td><td>75</td><td>75</td><td>100.0%</td><td>56</td><td>2026-04-13</td><td><span class="entity-chip">SourceSignal <strong>132</strong></span><span class="entity-chip">Domain <strong>87</strong></span><span class="entity-chip">Topic <strong>87</strong></span><span class="entity-chip">Framework <strong>68</strong></span></td><td><a href="../BlogRadar/reports/index.html">index</a></td></tr>
+<tr><td><div class="project-name"><a href="../BookRadar/reports/index.html">Book</a></div><div class="project-repo">BookRadar</div></td><td>book</td><td><span class="badge badge--active">Full</span></td><td>24</td><td>24</td><td>100.0%</td><td>18</td><td>2026-04-13</td><td><span class="entity-chip">Genre <strong>32</strong></span><span class="entity-chip">SourceSignal <strong>26</strong></span><span class="entity-chip">Author <strong>9</strong></span><span class="entity-chip">Publisher <strong>6</strong></span></td><td><a href="../BookRadar/reports/index.html">index</a></td></tr>
+<tr><td><div class="project-name"><a href="../CollaborationMCPRadar/reports/index.html">CollaborationMCP</a></div><div class="project-repo">CollaborationMCPRadar</div></td><td>collaboration_mcp</td><td><span class="badge badge--active">Full</span></td><td>4</td><td>4</td><td>100.0%</td><td>1</td><td>2026-04-13</td><td><span class="entity-chip">MCPDomain <strong>21</strong></span><span class="entity-chip">ProjectHealth <strong>11</strong></span><span class="entity-chip">RiskScope <strong>6</strong></span><span class="entity-chip">Provider <strong>5</strong></span></td><td><a href="../CollaborationMCPRadar/reports/index.html">index</a></td></tr>
+<tr><td><div class="project-name"><a href="../CommerceMCPRadar/reports/index.html">CommerceMCP</a></div><div class="project-repo">CommerceMCPRadar</div></td><td>commerce_mcp</td><td><span class="badge badge--active">Full</span></td><td>2</td><td>2</td><td>100.0%</td><td>1</td><td>2026-04-13</td><td><span class="entity-chip">MCPDomain <strong>9</strong></span><span class="entity-chip">ProjectHealth <strong>4</strong></span><span class="entity-chip">Capability <strong>3</strong></span></td><td><a href="../CommerceMCPRadar/reports/index.html">index</a></td></tr>
+<tr><td><div class="project-name"><a href="../CryptoRadar/reports/index.html">Crypto</a></div><div class="project-repo">CryptoRadar</div></td><td>crypto</td><td><span class="badge badge--active">Full</span></td><td>11</td><td>11</td><td>100.0%</td><td>10</td><td>2026-04-13</td><td><span class="entity-chip">CryptoGeneral <strong>56</strong></span><span class="entity-chip">Cryptocurrency <strong>11</strong></span><span class="entity-chip">Market <strong>3</strong></span><span class="entity-chip">Regulation <strong>2</strong></span></td><td><a href="../CryptoRadar/reports/index.html">index</a></td></tr>
+<tr><td><div class="project-name"><a href="../EventRadar/reports/index.html">Event</a></div><div class="project-repo">EventRadar</div></td><td>event</td><td><span class="badge badge--active">Full</span></td><td>6</td><td>6</td><td>100.0%</td><td>6</td><td>2026-04-13</td><td><span class="entity-chip">EventGeneral <strong>23</strong></span><span class="entity-chip">Performance <strong>14</strong></span><span class="entity-chip">Exhibition <strong>11</strong></span><span class="entity-chip">Event <strong>10</strong></span></td><td><a href="../EventRadar/reports/index.html">index</a></td></tr>
+<tr><td><div class="project-name"><a href="../FinanceTaxMCPRadar/reports/index.html">FinanceTaxMCP</a></div><div class="project-repo">FinanceTaxMCPRadar</div></td><td>finance_tax_mcp</td><td><span class="badge badge--active">Full</span></td><td>5</td><td>5</td><td>100.0%</td><td>1</td><td>2026-04-13</td><td><span class="entity-chip">MCPDomain <strong>23</strong></span><span class="entity-chip">ProjectHealth <strong>14</strong></span><span class="entity-chip">Provider <strong>6</strong></span><span class="entity-chip">Capability <strong>6</strong></span></td><td><a href="../FinanceTaxMCPRadar/reports/index.html">index</a></td></tr>
+<tr><td><div class="project-name"><a href="../GameRadar/reports/index.html">Game</a></div><div class="project-repo">GameRadar</div></td><td>game</td><td><span class="badge badge--active">Full</span></td><td>56</td><td>56</td><td>100.0%</td><td>24</td><td>2026-04-13</td><td><span class="entity-chip">GameGeneral <strong>99</strong></span><span class="entity-chip">SourceSignal <strong>62</strong></span><span class="entity-chip">GameTitle <strong>15</strong></span><span class="entity-chip">Platform <strong>13</strong></span></td><td><a href="../GameRadar/reports/index.html">index</a></td></tr>
+<tr><td><div class="project-name"><a href="../GovRadar/reports/index.html">Gov</a></div><div class="project-repo">GovRadar</div></td><td>govsupport</td><td><span class="badge badge--active">Full</span></td><td>54</td><td>54</td><td>100.0%</td><td>6</td><td>2026-04-13</td><td><span class="entity-chip">GovGeneral <strong>746</strong></span><span class="entity-chip">ApplicationInfo <strong>404</strong></span><span class="entity-chip">Region <strong>359</strong></span><span class="entity-chip">TargetGroup <strong>234</strong></span></td><td><a href="../GovRadar/reports/index.html">index</a></td></tr>
+<tr><td><div class="project-name"><a href="../JobRadar/reports/index.html">Job</a></div><div class="project-repo">JobRadar</div></td><td>job</td><td><span class="badge badge--active">Full</span></td><td>3</td><td>3</td><td>100.0%</td><td>3</td><td>2026-04-13</td><td><span class="entity-chip">SourceSignal <strong>6</strong></span><span class="entity-chip">Company <strong>2</strong></span><span class="entity-chip">EmploymentTrend <strong>2</strong></span><span class="entity-chip">JobGeneral <strong>1</strong></span></td><td><a href="../JobRadar/reports/index.html">index</a></td></tr>
+<tr><td><div class="project-name"><a href="../KoreanNLPMCPRadar/reports/index.html">KoreanNLPMCP</a></div><div class="project-repo">KoreanNLPMCPRadar</div></td><td>korean_nlp_mcp</td><td><span class="badge badge--active">Full</span></td><td>3</td><td>3</td><td>100.0%</td><td>1</td><td>2026-04-13</td><td><span class="entity-chip">MCPDomain <strong>12</strong></span><span class="entity-chip">ProjectHealth <strong>8</strong></span><span class="entity-chip">Capability <strong>3</strong></span><span class="entity-chip">RiskScope <strong>1</strong></span></td><td><a href="../KoreanNLPMCPRadar/reports/index.html">index</a></td></tr>
+<tr><td><div class="project-name"><a href="../LegalGovMCPRadar/reports/index.html">LegalGovMCP</a></div><div class="project-repo">LegalGovMCPRadar</div></td><td>legal_gov_mcp</td><td><span class="badge badge--active">Full</span></td><td>4</td><td>4</td><td>100.0%</td><td>1</td><td>2026-04-13</td><td><span class="entity-chip">MCPDomain <strong>25</strong></span><span class="entity-chip">ProjectHealth <strong>12</strong></span><span class="entity-chip">Capability <strong>7</strong></span><span class="entity-chip">RiskScope <strong>4</strong></span></td><td><a href="../LegalGovMCPRadar/reports/index.html">index</a></td></tr>
+<tr><td><div class="project-name"><a href="../MapAddressMCPRadar/reports/index.html">MapAddressMCP</a></div><div class="project-repo">MapAddressMCPRadar</div></td><td>map_address_mcp</td><td><span class="badge badge--active">Full</span></td><td>5</td><td>5</td><td>100.0%</td><td>1</td><td>2026-04-13</td><td><span class="entity-chip">MCPDomain <strong>27</strong></span><span class="entity-chip">ProjectHealth <strong>18</strong></span><span class="entity-chip">Provider <strong>9</strong></span><span class="entity-chip">RiskScope <strong>8</strong></span></td><td><a href="../MapAddressMCPRadar/reports/index.html">index</a></td></tr>
+<tr><td><div class="project-name"><a href="../MiscMCPRadar/reports/index.html">MiscMCP</a></div><div class="project-repo">MiscMCPRadar</div></td><td>misc_mcp</td><td><span class="badge badge--active">Full</span></td><td>0</td><td>0</td><td>0.0%</td><td>0</td><td>2026-04-13</td><td><span class="entity-chip entity-chip--muted">No entity data</span></td><td><a href="../MiscMCPRadar/reports/index.html">index</a></td></tr>
+<tr><td><div class="project-name"><a href="../MobilityRadar/reports/index.html">Mobility</a></div><div class="project-repo">MobilityRadar</div></td><td>mobility</td><td><span class="badge badge--active">Full</span></td><td>9</td><td>9</td><td>100.0%</td><td>5</td><td>2026-04-13</td><td><span class="entity-chip">SourceSignal <strong>22</strong></span><span class="entity-chip">Service <strong>5</strong></span><span class="entity-chip">VehicleType <strong>3</strong></span><span class="entity-chip">ChargingInfra <strong>1</strong></span></td><td><a href="../MobilityRadar/reports/index.html">index</a></td></tr>
+<tr><td><div class="project-name"><a href="../MovieRadar/reports/index.html">Movie</a></div><div class="project-repo">MovieRadar</div></td><td>movie</td><td><span class="badge badge--active">Full</span></td><td>3</td><td>3</td><td>100.0%</td><td>3</td><td>2026-04-13</td><td><span class="entity-chip">FilmGeneral <strong>14</strong></span><span class="entity-chip">BoxOffice <strong>12</strong></span><span class="entity-chip">SourceSignal <strong>11</strong></span><span class="entity-chip">Genre <strong>3</strong></span></td><td><a href="../MovieRadar/reports/index.html">index</a></td></tr>
+<tr><td><div class="project-name"><a href="../PaperRadar/reports/index.html">Paper</a></div><div class="project-repo">PaperRadar</div></td><td>research</td><td><span class="badge badge--active">Full</span></td><td>16</td><td>16</td><td>100.0%</td><td>16</td><td>2026-04-13</td><td><span class="entity-chip">ResearchGeneral <strong>143</strong></span><span class="entity-chip">Research Areas <strong>12</strong></span><span class="entity-chip">Techniques <strong>9</strong></span><span class="entity-chip">Tasks <strong>6</strong></span></td><td><a href="../PaperRadar/reports/index.html">index</a></td></tr>
+<tr><td><div class="project-name"><a href="../PaperworkRadar/reports/index.html">Paperwork</a></div><div class="project-repo">PaperworkRadar</div></td><td>paperwork</td><td><span class="badge badge--active">Full</span></td><td>17</td><td>17</td><td>100.0%</td><td>15</td><td>2026-04-13</td><td><span class="entity-chip">PaperworkGeneral <strong>340</strong></span><span class="entity-chip">Registration <strong>16</strong></span><span class="entity-chip">DigitalGov <strong>13</strong></span><span class="entity-chip">TaxDocs <strong>10</strong></span></td><td><a href="../PaperworkRadar/reports/index.html">index</a></td></tr>
+<tr><td><div class="project-name"><a href="../PriceRadar/reports/index.html">Price</a></div><div class="project-repo">PriceRadar</div></td><td>price</td><td><span class="badge badge--active">Full</span></td><td>100</td><td>100</td><td>100.0%</td><td>4</td><td>2026-04-13</td><td><span class="entity-chip">price_band:10k_50k <strong>63</strong></span><span class="entity-chip">source:enuri_main <strong>61</strong></span><span class="entity-chip">discount:50%+ <strong>44</strong></span><span class="entity-chip">platform:coupang <strong>31</strong></span></td><td><a href="../PriceRadar/reports/index.html">index</a></td></tr>
+<tr><td><div class="project-name"><a href="../PropertyRadar/reports/index.html">Property</a></div><div class="project-repo">PropertyRadar</div></td><td>property</td><td><span class="badge badge--active">Full</span></td><td>4</td><td>4</td><td>100.0%</td><td>4</td><td>2026-04-13</td><td><span class="entity-chip">Market <strong>9</strong></span><span class="entity-chip">PropertyGeneral <strong>4</strong></span><span class="entity-chip">Developer <strong>1</strong></span></td><td><a href="../PropertyRadar/reports/index.html">index</a></td></tr>
+<tr><td><div class="project-name"><a href="../PublicDataMCPRadar/reports/index.html">PublicDataMCP</a></div><div class="project-repo">PublicDataMCPRadar</div></td><td>publicdata_mcp</td><td><span class="badge badge--active">Full</span></td><td>7</td><td>7</td><td>100.0%</td><td>1</td><td>2026-04-13</td><td><span class="entity-chip">ProjectHealth <strong>24</strong></span><span class="entity-chip">MCPDomain <strong>16</strong></span><span class="entity-chip">Capability <strong>10</strong></span><span class="entity-chip">RiskScope <strong>8</strong></span></td><td><a href="../PublicDataMCPRadar/reports/index.html">index</a></td></tr>
+<tr><td><div class="project-name"><a href="../QueueRadar/reports/index.html">Queue</a></div><div class="project-repo">QueueRadar</div></td><td>queue</td><td><span class="badge badge--active">Full</span></td><td>15</td><td>15</td><td>100.0%</td><td>15</td><td>2026-04-13</td><td><span class="entity-chip">QueueGeneral <strong>111</strong></span><span class="entity-chip">RealTimeData <strong>72</strong></span><span class="entity-chip">WaitTime <strong>50</strong></span><span class="entity-chip">Status <strong>25</strong></span></td><td><a href="../QueueRadar/reports/index.html">index</a></td></tr>
+<tr><td><div class="project-name"><a href="../RealEstateMCPRadar/reports/index.html">RealEstateMCP</a></div><div class="project-repo">RealEstateMCPRadar</div></td><td>realestate_mcp</td><td><span class="badge badge--active">Full</span></td><td>3</td><td>3</td><td>100.0%</td><td>1</td><td>2026-04-13</td><td><span class="entity-chip">MCPDomain <strong>10</strong></span><span class="entity-chip">ProjectHealth <strong>7</strong></span><span class="entity-chip">RiskScope <strong>2</strong></span><span class="entity-chip">Capability <strong>1</strong></span></td><td><a href="../RealEstateMCPRadar/reports/index.html">index</a></td></tr>
+<tr><td><div class="project-name"><a href="../RefundRadar/reports/index.html">Refund</a></div><div class="project-repo">RefundRadar</div></td><td>refund</td><td><span class="badge badge--active">Full</span></td><td>62</td><td>62</td><td>100.0%</td><td>5</td><td>2026-04-13</td><td><span class="entity-chip">RefundGeneral <strong>2735</strong></span><span class="entity-chip">ConsumerProtection <strong>121</strong></span><span class="entity-chip">SourceSignal <strong>120</strong></span><span class="entity-chip">OperationalEvent <strong>90</strong></span></td><td><a href="../RefundRadar/reports/index.html">index</a></td></tr>
+<tr><td><div class="project-name"><a href="../SearchTrendMCPRadar/reports/index.html">SearchTrendMCP</a></div><div class="project-repo">SearchTrendMCPRadar</div></td><td>search_trend_mcp</td><td><span class="badge badge--active">Full</span></td><td>2</td><td>2</td><td>100.0%</td><td>1</td><td>2026-04-13</td><td><span class="entity-chip">MCPDomain <strong>14</strong></span><span class="entity-chip">ProjectHealth <strong>6</strong></span><span class="entity-chip">Capability <strong>5</strong></span><span class="entity-chip">Provider <strong>4</strong></span></td><td><a href="../SearchTrendMCPRadar/reports/index.html">index</a></td></tr>
+<tr><td><div class="project-name"><a href="../SubscriptionRadar/reports/index.html">Subscription</a></div><div class="project-repo">SubscriptionRadar</div></td><td>subscription</td><td><span class="badge badge--active">Full</span></td><td>5</td><td>5</td><td>100.0%</td><td>5</td><td>2026-04-13</td><td><span class="entity-chip">Subscription <strong>34</strong></span><span class="entity-chip">Service <strong>30</strong></span><span class="entity-chip">Price <strong>27</strong></span><span class="entity-chip">SourceSignal <strong>15</strong></span></td><td><a href="../SubscriptionRadar/reports/index.html">index</a></td></tr>
+<tr><td><div class="project-name"><a href="../TravelMCPRadar/reports/index.html">TravelMCP</a></div><div class="project-repo">TravelMCPRadar</div></td><td>travel_mcp</td><td><span class="badge badge--active">Full</span></td><td>2</td><td>2</td><td>100.0%</td><td>1</td><td>2026-04-13</td><td><span class="entity-chip">MCPDomain <strong>12</strong></span><span class="entity-chip">ProjectHealth <strong>5</strong></span><span class="entity-chip">Capability <strong>2</strong></span><span class="entity-chip">RiskScope <strong>2</strong></span></td><td><a href="../TravelMCPRadar/reports/index.html">index</a></td></tr>
+<tr><td><div class="project-name"><a href="../TrendRadar/reports/index.html">Trend</a></div><div class="project-repo">TrendRadar</div></td><td>trend</td><td><span class="badge badge--active">Full</span></td><td>200</td><td>200</td><td>100.0%</td><td>1</td><td>2026-04-13</td><td><span class="entity-chip">샴페인 <strong>6</strong></span><span class="entity-chip">레드와인 <strong>6</strong></span><span class="entity-chip">화이트와인 <strong>6</strong></span><span class="entity-chip">와인 <strong>6</strong></span></td><td><a href="../TrendRadar/reports/index.html">index</a></td></tr>
+<tr><td><div class="project-name"><a href="../WeatherMCPRadar/reports/index.html">WeatherMCP</a></div><div class="project-repo">WeatherMCPRadar</div></td><td>weather_mcp</td><td><span class="badge badge--active">Full</span></td><td>5</td><td>5</td><td>100.0%</td><td>1</td><td>2026-04-13</td><td><span class="entity-chip">MCPDomain <strong>22</strong></span><span class="entity-chip">ProjectHealth <strong>17</strong></span><span class="entity-chip">Provider <strong>6</strong></span><span class="entity-chip">RiskScope <strong>6</strong></span></td><td><a href="../WeatherMCPRadar/reports/index.html">index</a></td></tr>
+          </tbody>
         </table>
-    </div>
+      </div>
+    </section>
 
-    <div class="timestamp">
-        Generated: 2026-03-31 23:14:48
-    </div>
+    <footer class="footer">
+      Canonical output: <code>radar-dashboard/index.html</code> · Redirect alias: <code>radar-dashboard/dashboard.html</code>
+    </footer>
+  </main>
 </body>
 </html>
