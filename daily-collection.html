@@ -1,0 +1,182 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Daily Collection Contract</title>
+  <style>
+    :root {
+      --bg: #f7f8fa;
+      --surface: #ffffff;
+      --surface-alt: #eef2f0;
+      --text: #1f2424;
+      --muted: #66706d;
+      --line: #d9e0dd;
+      --accent: #126c55;
+      --accent-2: #9b5f00;
+      --ok: #167046;
+      --ok-soft: #dff4e8;
+      --warn: #9b5f00;
+      --warn-soft: #fff0cf;
+      --bad: #a13b36;
+      --bad-soft: #ffe2dd;
+      --max: 1420px;
+    }
+    * { box-sizing: border-box; }
+    body {
+      margin: 0;
+      color: var(--text);
+      font-family: "Pretendard Variable", "Pretendard", "Segoe UI", Arial, sans-serif;
+      background: var(--bg);
+    }
+    a { color: var(--accent); text-decoration: none; font-weight: 700; }
+    a:hover { text-decoration: underline; }
+    code { background: var(--surface-alt); padding: 2px 6px; border-radius: 6px; }
+    .page { max-width: var(--max); margin: 0 auto; padding: 28px 22px 56px; }
+    .hero {
+      background: linear-gradient(135deg, #fdfefe, #e9f2ee);
+      border: 1px solid var(--line);
+      border-radius: 8px;
+      padding: 28px;
+    }
+    .hero h1 { margin: 0 0 10px; font-size: clamp(2rem, 3vw, 3.2rem); }
+    .hero p { margin: 0; max-width: 82ch; color: var(--muted); line-height: 1.6; }
+    .hero-meta { margin-top: 14px; color: var(--muted); }
+    .hero-links { margin-top: 18px; display: flex; flex-wrap: wrap; gap: 10px; }
+    .hero-links a {
+      display: inline-flex;
+      border: 1px solid var(--line);
+      border-radius: 8px;
+      padding: 9px 12px;
+      background: var(--surface);
+    }
+    .stats { display: grid; grid-template-columns: repeat(auto-fit, minmax(160px, 1fr)); gap: 12px; margin-top: 18px; }
+    .stat {
+      border: 1px solid var(--line);
+      border-radius: 8px;
+      background: var(--surface);
+      padding: 16px;
+    }
+    .stat__value { font-size: 2rem; font-weight: 800; }
+    .stat__label { margin-top: 5px; color: var(--muted); }
+    .contract {
+      margin-top: 18px;
+      display: grid;
+      grid-template-columns: repeat(2, minmax(0, 1fr));
+      gap: 12px;
+    }
+    .panel {
+      border: 1px solid var(--line);
+      border-radius: 8px;
+      background: var(--surface);
+      padding: 18px;
+    }
+    .panel h2 { margin: 0 0 10px; font-size: 1.1rem; }
+    .panel p { margin: 0; color: var(--muted); line-height: 1.55; }
+    .table-wrap {
+      margin-top: 18px;
+      border: 1px solid var(--line);
+      border-radius: 8px;
+      background: var(--surface);
+      overflow: hidden;
+    }
+    .table-header { padding: 18px 18px 8px; }
+    .table-header h2 { margin: 0 0 8px; }
+    .table-header p { margin: 0; color: var(--muted); line-height: 1.55; }
+    .table-scroll { overflow-x: auto; padding: 8px 10px 14px; }
+    table { width: 100%; border-collapse: collapse; min-width: 1180px; }
+    th, td { padding: 13px 10px; border-bottom: 1px solid var(--line); text-align: left; vertical-align: top; font-size: 0.94rem; }
+    th { color: var(--muted); font-size: 0.8rem; text-transform: uppercase; letter-spacing: 0.05em; }
+    .repo-name { font-weight: 800; }
+    .repo-meta { margin-top: 4px; color: var(--muted); font-size: 0.84rem; }
+    .badge, .check {
+      display: inline-flex;
+      align-items: center;
+      border-radius: 8px;
+      padding: 6px 9px;
+      font-size: 0.82rem;
+      font-weight: 800;
+      margin: 0 6px 6px 0;
+    }
+    .badge--ok, .check--yes { background: var(--ok-soft); color: var(--ok); }
+    .badge--partial, .check--no { background: var(--warn-soft); color: var(--warn); }
+    .badge--not_applicable { background: var(--surface-alt); color: var(--muted); }
+    .checks { display: flex; flex-wrap: wrap; gap: 2px; }
+    .muted { color: var(--muted); }
+    .footer { margin-top: 16px; color: var(--muted); text-align: right; font-size: 0.9rem; }
+    @media (max-width: 900px) {
+      .contract { grid-template-columns: 1fr; }
+    }
+  </style>
+</head>
+<body>
+  <main class="page">
+    <section class="hero">
+      <h1>Daily Collection Contract</h1>
+      <p>매일 실행, 날짜별 raw 기록, 날짜별 DuckDB snapshot, retention CLI가 전 Radar 저장소에 적용되어 있는지 점검합니다.</p>
+      <div class="hero-meta">Generated at 2026-04-21T12:24:00.292025+00:00</div>
+      <div class="hero-links">
+        <a href="index.html">Main Dashboard</a>
+        <a href="data-quality.html">Data Quality Audit</a>
+        <a href="classification.html">Classification Audit</a>
+        <a href="../docs/harness/daily-collection-review.md">Markdown Review</a>
+      </div>
+      <div class="stats"><article class="stat"><div class="stat__value">25</div><div class="stat__label">OK</div></article><article class="stat"><div class="stat__value">0</div><div class="stat__label">Partial</div></article><article class="stat"><div class="stat__value">2</div><div class="stat__label">N/A</div></article></div>
+    </section>
+
+    <section class="contract">
+      <article class="panel">
+        <h2>Snapshot Paths</h2>
+        <p><code>data/snapshots/YYYY-MM-DD/&lt;database&gt;.duckdb</code>, <code>data/daily/YYYY-MM-DD.duckdb</code></p>
+      </article>
+      <article class="panel">
+        <h2>Required Checks</h2>
+        <p><code>scheduled_workflow</code>, <code>workflow_snapshot_enabled</code>, <code>date_storage_module</code>, <code>snapshot_function</code>, <code>snapshot_path_by_date</code>, <code>raw_data_by_date</code>, <code>retention_cli</code></p>
+      </article>
+    </section>
+
+    <section class="table-wrap">
+      <div class="table-header">
+        <h2>Repository Status</h2>
+        <p>Collecting repos must be OK. Shared infrastructure repos are marked N/A.</p>
+      </div>
+      <div class="table-scroll">
+        <table>
+          <thead><tr><th>Repo</th><th>Status</th><th>Missing</th><th>Checks</th><th>Notes</th></tr></thead>
+          <tbody><tr><td><div class="repo-name">radar-core</div><div class="repo-meta">shared</div></td><td><span class="badge badge--not_applicable">N/A</span></td><td>-</td><td><span class="muted">Shared repo</span></td><td>Shared infrastructure repo; daily collection is implemented in downstream Radar repos.</td></tr>
+<tr><td><div class="repo-name">radar-dashboard</div><div class="repo-meta">shared</div></td><td><span class="badge badge--not_applicable">N/A</span></td><td>-</td><td><span class="muted">Shared repo</span></td><td>Shared infrastructure repo; daily collection is implemented in downstream Radar repos.</td></tr>
+<tr><td><div class="repo-name">ArtRadar</div><div class="repo-meta">radar</div></td><td><span class="badge badge--ok">OK</span></td><td>-</td><td><div class="checks"><span class="check check--yes">date_storage_module: true</span><span class="check check--no">dated_report_or_artifact: false</span><span class="check check--yes">raw_data_by_date: true</span><span class="check check--yes">retention_cli: true</span><span class="check check--yes">scheduled_workflow: true</span><span class="check check--yes">snapshot_function: true</span><span class="check check--yes">snapshot_path_by_date: true</span><span class="check check--yes">workflow_snapshot_enabled: true</span></div></td><td>No explicit dated HTML/report artifact pattern detected; raw + DB snapshots still satisfy the required daily data record contract.</td></tr>
+<tr><td><div class="repo-name">BenefitRadar</div><div class="repo-meta">radar</div></td><td><span class="badge badge--ok">OK</span></td><td>-</td><td><div class="checks"><span class="check check--yes">date_storage_module: true</span><span class="check check--no">dated_report_or_artifact: false</span><span class="check check--yes">raw_data_by_date: true</span><span class="check check--yes">retention_cli: true</span><span class="check check--yes">scheduled_workflow: true</span><span class="check check--yes">snapshot_function: true</span><span class="check check--yes">snapshot_path_by_date: true</span><span class="check check--yes">workflow_snapshot_enabled: true</span></div></td><td>No explicit dated HTML/report artifact pattern detected; raw + DB snapshots still satisfy the required daily data record contract.</td></tr>
+<tr><td><div class="repo-name">BlogRadar</div><div class="repo-meta">radar</div></td><td><span class="badge badge--ok">OK</span></td><td>-</td><td><div class="checks"><span class="check check--yes">date_storage_module: true</span><span class="check check--no">dated_report_or_artifact: false</span><span class="check check--yes">raw_data_by_date: true</span><span class="check check--yes">retention_cli: true</span><span class="check check--yes">scheduled_workflow: true</span><span class="check check--yes">snapshot_function: true</span><span class="check check--yes">snapshot_path_by_date: true</span><span class="check check--yes">workflow_snapshot_enabled: true</span></div></td><td>No explicit dated HTML/report artifact pattern detected; raw + DB snapshots still satisfy the required daily data record contract.</td></tr>
+<tr><td><div class="repo-name">BookRadar</div><div class="repo-meta">radar</div></td><td><span class="badge badge--ok">OK</span></td><td>-</td><td><div class="checks"><span class="check check--yes">date_storage_module: true</span><span class="check check--yes">dated_report_or_artifact: true</span><span class="check check--yes">raw_data_by_date: true</span><span class="check check--yes">retention_cli: true</span><span class="check check--yes">scheduled_workflow: true</span><span class="check check--yes">snapshot_function: true</span><span class="check check--yes">snapshot_path_by_date: true</span><span class="check check--yes">workflow_snapshot_enabled: true</span></div></td><td>-</td></tr>
+<tr><td><div class="repo-name">CryptoRadar</div><div class="repo-meta">radar</div></td><td><span class="badge badge--ok">OK</span></td><td>-</td><td><div class="checks"><span class="check check--yes">date_storage_module: true</span><span class="check check--yes">dated_report_or_artifact: true</span><span class="check check--yes">raw_data_by_date: true</span><span class="check check--yes">retention_cli: true</span><span class="check check--yes">scheduled_workflow: true</span><span class="check check--yes">snapshot_function: true</span><span class="check check--yes">snapshot_path_by_date: true</span><span class="check check--yes">workflow_snapshot_enabled: true</span></div></td><td>-</td></tr>
+<tr><td><div class="repo-name">EventRadar</div><div class="repo-meta">radar</div></td><td><span class="badge badge--ok">OK</span></td><td>-</td><td><div class="checks"><span class="check check--yes">date_storage_module: true</span><span class="check check--no">dated_report_or_artifact: false</span><span class="check check--yes">raw_data_by_date: true</span><span class="check check--yes">retention_cli: true</span><span class="check check--yes">scheduled_workflow: true</span><span class="check check--yes">snapshot_function: true</span><span class="check check--yes">snapshot_path_by_date: true</span><span class="check check--yes">workflow_snapshot_enabled: true</span></div></td><td>No explicit dated HTML/report artifact pattern detected; raw + DB snapshots still satisfy the required daily data record contract.</td></tr>
+<tr><td><div class="repo-name">FoodRadar</div><div class="repo-meta">radar</div></td><td><span class="badge badge--ok">OK</span></td><td>-</td><td><div class="checks"><span class="check check--yes">date_storage_module: true</span><span class="check check--yes">dated_report_or_artifact: true</span><span class="check check--yes">raw_data_by_date: true</span><span class="check check--yes">retention_cli: true</span><span class="check check--yes">scheduled_workflow: true</span><span class="check check--yes">snapshot_function: true</span><span class="check check--yes">snapshot_path_by_date: true</span><span class="check check--yes">workflow_snapshot_enabled: true</span></div></td><td>-</td></tr>
+<tr><td><div class="repo-name">GameRadar</div><div class="repo-meta">radar</div></td><td><span class="badge badge--ok">OK</span></td><td>-</td><td><div class="checks"><span class="check check--yes">date_storage_module: true</span><span class="check check--no">dated_report_or_artifact: false</span><span class="check check--yes">raw_data_by_date: true</span><span class="check check--yes">retention_cli: true</span><span class="check check--yes">scheduled_workflow: true</span><span class="check check--yes">snapshot_function: true</span><span class="check check--yes">snapshot_path_by_date: true</span><span class="check check--yes">workflow_snapshot_enabled: true</span></div></td><td>No explicit dated HTML/report artifact pattern detected; raw + DB snapshots still satisfy the required daily data record contract.</td></tr>
+<tr><td><div class="repo-name">GovRadar</div><div class="repo-meta">radar</div></td><td><span class="badge badge--ok">OK</span></td><td>-</td><td><div class="checks"><span class="check check--yes">date_storage_module: true</span><span class="check check--yes">dated_report_or_artifact: true</span><span class="check check--yes">raw_data_by_date: true</span><span class="check check--yes">retention_cli: true</span><span class="check check--yes">scheduled_workflow: true</span><span class="check check--yes">snapshot_function: true</span><span class="check check--yes">snapshot_path_by_date: true</span><span class="check check--yes">workflow_snapshot_enabled: true</span></div></td><td>-</td></tr>
+<tr><td><div class="repo-name">HomeRadar</div><div class="repo-meta">radar</div></td><td><span class="badge badge--ok">OK</span></td><td>-</td><td><div class="checks"><span class="check check--yes">date_storage_module: true</span><span class="check check--yes">dated_report_or_artifact: true</span><span class="check check--yes">raw_data_by_date: true</span><span class="check check--yes">retention_cli: true</span><span class="check check--yes">scheduled_workflow: true</span><span class="check check--yes">snapshot_function: true</span><span class="check check--yes">snapshot_path_by_date: true</span><span class="check check--yes">workflow_snapshot_enabled: true</span></div></td><td>-</td></tr>
+<tr><td><div class="repo-name">JobRadar</div><div class="repo-meta">radar</div></td><td><span class="badge badge--ok">OK</span></td><td>-</td><td><div class="checks"><span class="check check--yes">date_storage_module: true</span><span class="check check--yes">dated_report_or_artifact: true</span><span class="check check--yes">raw_data_by_date: true</span><span class="check check--yes">retention_cli: true</span><span class="check check--yes">scheduled_workflow: true</span><span class="check check--yes">snapshot_function: true</span><span class="check check--yes">snapshot_path_by_date: true</span><span class="check check--yes">workflow_snapshot_enabled: true</span></div></td><td>-</td></tr>
+<tr><td><div class="repo-name">MobilityRadar</div><div class="repo-meta">radar</div></td><td><span class="badge badge--ok">OK</span></td><td>-</td><td><div class="checks"><span class="check check--yes">date_storage_module: true</span><span class="check check--no">dated_report_or_artifact: false</span><span class="check check--yes">raw_data_by_date: true</span><span class="check check--yes">retention_cli: true</span><span class="check check--yes">scheduled_workflow: true</span><span class="check check--yes">snapshot_function: true</span><span class="check check--yes">snapshot_path_by_date: true</span><span class="check check--yes">workflow_snapshot_enabled: true</span></div></td><td>No explicit dated HTML/report artifact pattern detected; raw + DB snapshots still satisfy the required daily data record contract.</td></tr>
+<tr><td><div class="repo-name">MovieRadar</div><div class="repo-meta">radar</div></td><td><span class="badge badge--ok">OK</span></td><td>-</td><td><div class="checks"><span class="check check--yes">date_storage_module: true</span><span class="check check--yes">dated_report_or_artifact: true</span><span class="check check--yes">raw_data_by_date: true</span><span class="check check--yes">retention_cli: true</span><span class="check check--yes">scheduled_workflow: true</span><span class="check check--yes">snapshot_function: true</span><span class="check check--yes">snapshot_path_by_date: true</span><span class="check check--yes">workflow_snapshot_enabled: true</span></div></td><td>-</td></tr>
+<tr><td><div class="repo-name">PaperRadar</div><div class="repo-meta">radar</div></td><td><span class="badge badge--ok">OK</span></td><td>-</td><td><div class="checks"><span class="check check--yes">date_storage_module: true</span><span class="check check--no">dated_report_or_artifact: false</span><span class="check check--yes">raw_data_by_date: true</span><span class="check check--yes">retention_cli: true</span><span class="check check--yes">scheduled_workflow: true</span><span class="check check--yes">snapshot_function: true</span><span class="check check--yes">snapshot_path_by_date: true</span><span class="check check--yes">workflow_snapshot_enabled: true</span></div></td><td>No explicit dated HTML/report artifact pattern detected; raw + DB snapshots still satisfy the required daily data record contract.</td></tr>
+<tr><td><div class="repo-name">PaperworkRadar</div><div class="repo-meta">radar</div></td><td><span class="badge badge--ok">OK</span></td><td>-</td><td><div class="checks"><span class="check check--yes">date_storage_module: true</span><span class="check check--no">dated_report_or_artifact: false</span><span class="check check--yes">raw_data_by_date: true</span><span class="check check--yes">retention_cli: true</span><span class="check check--yes">scheduled_workflow: true</span><span class="check check--yes">snapshot_function: true</span><span class="check check--yes">snapshot_path_by_date: true</span><span class="check check--yes">workflow_snapshot_enabled: true</span></div></td><td>No explicit dated HTML/report artifact pattern detected; raw + DB snapshots still satisfy the required daily data record contract.</td></tr>
+<tr><td><div class="repo-name">PolicyRadar</div><div class="repo-meta">radar</div></td><td><span class="badge badge--ok">OK</span></td><td>-</td><td><div class="checks"><span class="check check--yes">date_storage_module: true</span><span class="check check--no">dated_report_or_artifact: false</span><span class="check check--yes">raw_data_by_date: true</span><span class="check check--yes">retention_cli: true</span><span class="check check--yes">scheduled_workflow: true</span><span class="check check--yes">snapshot_function: true</span><span class="check check--yes">snapshot_path_by_date: true</span><span class="check check--yes">workflow_snapshot_enabled: true</span></div></td><td>No explicit dated HTML/report artifact pattern detected; raw + DB snapshots still satisfy the required daily data record contract.</td></tr>
+<tr><td><div class="repo-name">PriceRadar</div><div class="repo-meta">radar</div></td><td><span class="badge badge--ok">OK</span></td><td>-</td><td><div class="checks"><span class="check check--yes">date_storage_module: true</span><span class="check check--yes">dated_report_or_artifact: true</span><span class="check check--yes">raw_data_by_date: true</span><span class="check check--yes">retention_cli: true</span><span class="check check--yes">scheduled_workflow: true</span><span class="check check--yes">snapshot_function: true</span><span class="check check--yes">snapshot_path_by_date: true</span><span class="check check--yes">workflow_snapshot_enabled: true</span></div></td><td>-</td></tr>
+<tr><td><div class="repo-name">PropertyRadar</div><div class="repo-meta">radar</div></td><td><span class="badge badge--ok">OK</span></td><td>-</td><td><div class="checks"><span class="check check--yes">date_storage_module: true</span><span class="check check--yes">dated_report_or_artifact: true</span><span class="check check--yes">raw_data_by_date: true</span><span class="check check--yes">retention_cli: true</span><span class="check check--yes">scheduled_workflow: true</span><span class="check check--yes">snapshot_function: true</span><span class="check check--yes">snapshot_path_by_date: true</span><span class="check check--yes">workflow_snapshot_enabled: true</span></div></td><td>-</td></tr>
+<tr><td><div class="repo-name">QueueRadar</div><div class="repo-meta">radar</div></td><td><span class="badge badge--ok">OK</span></td><td>-</td><td><div class="checks"><span class="check check--yes">date_storage_module: true</span><span class="check check--no">dated_report_or_artifact: false</span><span class="check check--yes">raw_data_by_date: true</span><span class="check check--yes">retention_cli: true</span><span class="check check--yes">scheduled_workflow: true</span><span class="check check--yes">snapshot_function: true</span><span class="check check--yes">snapshot_path_by_date: true</span><span class="check check--yes">workflow_snapshot_enabled: true</span></div></td><td>No explicit dated HTML/report artifact pattern detected; raw + DB snapshots still satisfy the required daily data record contract.</td></tr>
+<tr><td><div class="repo-name">Radar-Template</div><div class="repo-meta">template</div></td><td><span class="badge badge--ok">OK</span></td><td>-</td><td><div class="checks"><span class="check check--yes">date_storage_module: true</span><span class="check check--no">dated_report_or_artifact: false</span><span class="check check--yes">raw_data_by_date: true</span><span class="check check--yes">retention_cli: true</span><span class="check check--yes">scheduled_workflow: true</span><span class="check check--yes">snapshot_function: true</span><span class="check check--yes">snapshot_path_by_date: true</span><span class="check check--yes">workflow_snapshot_enabled: true</span></div></td><td>No explicit dated HTML/report artifact pattern detected; raw + DB snapshots still satisfy the required daily data record contract.</td></tr>
+<tr><td><div class="repo-name">RefundRadar</div><div class="repo-meta">radar</div></td><td><span class="badge badge--ok">OK</span></td><td>-</td><td><div class="checks"><span class="check check--yes">date_storage_module: true</span><span class="check check--no">dated_report_or_artifact: false</span><span class="check check--yes">raw_data_by_date: true</span><span class="check check--yes">retention_cli: true</span><span class="check check--yes">scheduled_workflow: true</span><span class="check check--yes">snapshot_function: true</span><span class="check check--yes">snapshot_path_by_date: true</span><span class="check check--yes">workflow_snapshot_enabled: true</span></div></td><td>No explicit dated HTML/report artifact pattern detected; raw + DB snapshots still satisfy the required daily data record contract.</td></tr>
+<tr><td><div class="repo-name">SubscriptionRadar</div><div class="repo-meta">radar</div></td><td><span class="badge badge--ok">OK</span></td><td>-</td><td><div class="checks"><span class="check check--yes">date_storage_module: true</span><span class="check check--no">dated_report_or_artifact: false</span><span class="check check--yes">raw_data_by_date: true</span><span class="check check--yes">retention_cli: true</span><span class="check check--yes">scheduled_workflow: true</span><span class="check check--yes">snapshot_function: true</span><span class="check check--yes">snapshot_path_by_date: true</span><span class="check check--yes">workflow_snapshot_enabled: true</span></div></td><td>No explicit dated HTML/report artifact pattern detected; raw + DB snapshots still satisfy the required daily data record contract.</td></tr>
+<tr><td><div class="repo-name">TrendRadar</div><div class="repo-meta">radar</div></td><td><span class="badge badge--ok">OK</span></td><td>-</td><td><div class="checks"><span class="check check--yes">date_storage_module: true</span><span class="check check--yes">dated_report_or_artifact: true</span><span class="check check--yes">raw_data_by_date: true</span><span class="check check--yes">retention_cli: true</span><span class="check check--yes">scheduled_workflow: true</span><span class="check check--yes">snapshot_function: true</span><span class="check check--yes">snapshot_path_by_date: true</span><span class="check check--yes">workflow_snapshot_enabled: true</span></div></td><td>-</td></tr>
+<tr><td><div class="repo-name">TrustRadar</div><div class="repo-meta">radar</div></td><td><span class="badge badge--ok">OK</span></td><td>-</td><td><div class="checks"><span class="check check--yes">date_storage_module: true</span><span class="check check--no">dated_report_or_artifact: false</span><span class="check check--yes">raw_data_by_date: true</span><span class="check check--yes">retention_cli: true</span><span class="check check--yes">scheduled_workflow: true</span><span class="check check--yes">snapshot_function: true</span><span class="check check--yes">snapshot_path_by_date: true</span><span class="check check--yes">workflow_snapshot_enabled: true</span></div></td><td>No explicit dated HTML/report artifact pattern detected; raw + DB snapshots still satisfy the required daily data record contract.</td></tr>
+<tr><td><div class="repo-name">WineRadar</div><div class="repo-meta">radar</div></td><td><span class="badge badge--ok">OK</span></td><td>-</td><td><div class="checks"><span class="check check--yes">date_storage_module: true</span><span class="check check--yes">dated_report_or_artifact: true</span><span class="check check--yes">raw_data_by_date: true</span><span class="check check--yes">retention_cli: true</span><span class="check check--yes">scheduled_workflow: true</span><span class="check check--yes">snapshot_function: true</span><span class="check check--yes">snapshot_path_by_date: true</span><span class="check check--yes">workflow_snapshot_enabled: true</span></div></td><td>-</td></tr></tbody>
+        </table>
+      </div>
+    </section>
+
+    <footer class="footer">
+      Canonical output: <code>radar-dashboard/daily-collection.html</code> · Data source: <code>radar-dashboard/data/daily-collection.json</code>
+    </footer>
+  </main>
+</body>
+</html>

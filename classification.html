@@ -1,0 +1,253 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Workspace Classification Audit</title>
+  <style>
+    :root {
+      --bg: #f4f6fb;
+      --surface: #fff;
+      --surface-2: #eef3ff;
+      --text: #18202b;
+      --muted: #617086;
+      --line: #d7dfef;
+      --accent: #1d4ed8;
+      --accent-soft: #dbe8ff;
+      --ok: #1d7f49;
+      --ok-soft: #ddf5e5;
+      --warn: #9a6700;
+      --warn-soft: #fff1cc;
+      --bad: #a23b3b;
+      --bad-soft: #fde2e2;
+      --shared: #5b4ab2;
+      --shared-soft: #ece8ff;
+      --shadow: 0 18px 50px rgba(24, 32, 43, 0.08);
+      --max: 1460px;
+      --radius: 20px;
+    }
+    * { box-sizing: border-box; }
+    body {
+      margin: 0;
+      color: var(--text);
+      font-family: "Pretendard Variable", "Pretendard", "Segoe UI", Arial, sans-serif;
+      background:
+        radial-gradient(circle at top left, rgba(29, 78, 216, 0.08), transparent 24rem),
+        radial-gradient(circle at bottom right, rgba(29, 127, 73, 0.08), transparent 22rem),
+        var(--bg);
+    }
+    a { color: var(--accent); text-decoration: none; }
+    a:hover { text-decoration: underline; }
+    .page { max-width: var(--max); margin: 0 auto; padding: 28px 22px 56px; }
+    .hero {
+      background: linear-gradient(135deg, #0f1f3d, #1d4ed8);
+      border-radius: 28px;
+      color: #fff;
+      padding: 34px;
+      box-shadow: var(--shadow);
+    }
+    .hero h1 { margin: 0 0 10px; font-size: clamp(2rem, 3vw, 3rem); letter-spacing: -0.04em; }
+    .hero p { margin: 0; max-width: 75ch; color: rgba(255,255,255,0.86); line-height: 1.6; }
+    .hero-meta { margin-top: 16px; color: rgba(255,255,255,0.75); font-size: 0.95rem; }
+    .hero-links { margin-top: 16px; display: flex; gap: 14px; flex-wrap: wrap; }
+    .hero-links a {
+      display: inline-flex; align-items: center; gap: 6px; padding: 10px 14px;
+      border-radius: 999px; background: rgba(255,255,255,0.12); color: #fff;
+    }
+    .stats {
+      display: grid;
+      grid-template-columns: repeat(auto-fit, minmax(180px, 1fr));
+      gap: 14px;
+      margin-top: 24px;
+    }
+    .stat {
+      background: rgba(255,255,255,0.12);
+      border: 1px solid rgba(255,255,255,0.16);
+      border-radius: 18px;
+      padding: 16px;
+    }
+    .stat__value { font-size: 2rem; font-weight: 700; letter-spacing: -0.04em; }
+    .stat__label { margin-top: 4px; color: rgba(255,255,255,0.78); }
+    .grid {
+      display: grid;
+      grid-template-columns: repeat(2, minmax(0, 1fr));
+      gap: 18px;
+      margin-top: 22px;
+    }
+    .panel {
+      background: var(--surface);
+      border-radius: var(--radius);
+      box-shadow: var(--shadow);
+      padding: 22px;
+    }
+    .panel h2 { margin: 0 0 14px; font-size: 1.15rem; }
+    .metric-row {
+      display: grid;
+      grid-template-columns: 140px minmax(0, 1fr) 32px;
+      gap: 10px;
+      align-items: center;
+      margin-top: 10px;
+    }
+    .metric-row__label { color: var(--muted); font-size: 0.95rem; }
+    .metric-row__bar {
+      height: 10px; border-radius: 999px; background: var(--surface-2); overflow: hidden;
+    }
+    .metric-row__bar span {
+      display: block; height: 100%; border-radius: 999px;
+      background: linear-gradient(90deg, #2358d5, #1d7f49);
+    }
+    .metric-row__value { text-align: right; font-weight: 700; }
+    .priority-list { margin: 0; padding-left: 18px; line-height: 1.7; }
+    .table-wrap {
+      margin-top: 22px; background: var(--surface); border-radius: var(--radius);
+      box-shadow: var(--shadow); overflow: hidden;
+    }
+    .table-header { padding: 22px 22px 0; }
+    .table-header h2 { margin: 0 0 10px; }
+    .table-header p { margin: 0 0 18px; color: var(--muted); line-height: 1.6; }
+    .table-scroll { overflow-x: auto; }
+    table { width: 100%; border-collapse: collapse; min-width: 1340px; }
+    th, td { padding: 14px 16px; border-top: 1px solid var(--line); vertical-align: top; }
+    th { background: #f8faff; text-align: left; font-size: 0.9rem; color: var(--muted); }
+    .repo-name { font-weight: 700; }
+    .repo-id { margin-top: 4px; color: var(--muted); font-size: 0.85rem; }
+    .badge {
+      display: inline-flex; align-items: center; padding: 7px 10px; border-radius: 999px;
+      font-size: 0.82rem; font-weight: 600;
+    }
+    .badge--class { background: var(--shared-soft); color: var(--shared); }
+    .badge--motion { background: var(--accent-soft); color: var(--accent); }
+    .badge--gov { background: #eef6ff; color: #22598f; }
+    .badge--ready { background: var(--ok-soft); color: var(--ok); }
+    .badge--watch { background: var(--warn-soft); color: var(--warn); }
+    .badge--upgrade { background: var(--bad-soft); color: var(--bad); }
+    .layer {
+      display: inline-flex; align-items: center; justify-content: center;
+      min-width: 40px; padding: 6px 8px; border-radius: 10px; margin: 2px 4px 2px 0;
+      font-size: 0.78rem; font-weight: 600; border: 1px solid transparent;
+    }
+    .layer--on { background: var(--accent-soft); color: var(--accent); }
+    .layer--off { background: #fff7e6; color: #9a6700; border-color: #f4d38c; }
+    .layer--na { background: #f1f3f7; color: #8a95a8; }
+    .quality { min-width: 120px; }
+    .quality__bar {
+      height: 10px; background: #edf1f8; border-radius: 999px; overflow: hidden;
+    }
+    .quality__bar span {
+      display: block; height: 100%;
+      background: linear-gradient(90deg, #c94c4c, #dc9f1d, #1d7f49);
+    }
+    .quality__value { margin-top: 6px; color: var(--muted); font-size: 0.85rem; }
+    .footer { margin-top: 18px; color: var(--muted); font-size: 0.92rem; }
+    @media (max-width: 980px) {
+      .grid { grid-template-columns: 1fr; }
+      .metric-row { grid-template-columns: 110px minmax(0, 1fr) 28px; }
+    }
+  </style>
+</head>
+<body>
+  <main class="page">
+    <section class="hero">
+      <h1>Workspace Classification Audit</h1>
+      <p>모든 하위 프로젝트를 같은 공통 taxonomy로 재분류한 점검판입니다. 저장소 구조, 의사결정 용도, 소스 레이어, 거버넌스, 실행 준비도를 한 화면에서 확인할 수 있게 만들었습니다.</p>
+      <div class="hero-meta">Generated from repo taxonomy audit · Framework: docs/harness/portfolio-taxonomy-framework.md</div>
+      <div class="hero-links">
+        <a href="index.html">Main Dashboard</a>
+        <a href="data-quality.html">Data Quality Audit</a>
+        <a href="../docs/harness/repo-taxonomy-review.md">Markdown Review</a>
+        <a href="../docs/harness/portfolio-taxonomy-framework.md">Framework Doc</a>
+      </div>
+      <div class="stats">
+        <article class="stat"><div class="stat__value">39</div><div class="stat__label">Tracked Repos</div></article>
+        <article class="stat"><div class="stat__value">4</div><div class="stat__label">Advanced Radars</div></article>
+        <article class="stat"><div class="stat__value">9</div><div class="stat__label">High Governance</div></article>
+        <article class="stat"><div class="stat__value">0</div><div class="stat__label">Upgrade Needed</div></article>
+      </div>
+    </section>
+
+    <section class="grid">
+      <article class="panel"><h2>Repo Class</h2><div class="metric-row"><div class="metric-row__label">Standard Radar</div><div class="metric-row__bar"><span style="width:100%"></span></div><div class="metric-row__value">32</div></div><div class="metric-row"><div class="metric-row__label">Advanced Radar</div><div class="metric-row__bar"><span style="width:12%"></span></div><div class="metric-row__value">4</div></div><div class="metric-row"><div class="metric-row__label">Shared Core</div><div class="metric-row__bar"><span style="width:12%"></span></div><div class="metric-row__value">1</div></div><div class="metric-row"><div class="metric-row__label">Shared Dashboard</div><div class="metric-row__bar"><span style="width:12%"></span></div><div class="metric-row__value">1</div></div><div class="metric-row"><div class="metric-row__label">Shared Template</div><div class="metric-row__bar"><span style="width:12%"></span></div><div class="metric-row__value">1</div></div></article>
+      <article class="panel"><h2>Primary Motion</h2><div class="metric-row"><div class="metric-row__label">Compliance/Risk</div><div class="metric-row__bar"><span style="width:100%"></span></div><div class="metric-row__value">17</div></div><div class="metric-row"><div class="metric-row__label">Intelligence</div><div class="metric-row__bar"><span style="width:59%"></span></div><div class="metric-row__value">10</div></div><div class="metric-row"><div class="metric-row__label">Conversion</div><div class="metric-row__bar"><span style="width:47%"></span></div><div class="metric-row__value">8</div></div><div class="metric-row"><div class="metric-row__label">Infrastructure</div><div class="metric-row__bar"><span style="width:18%"></span></div><div class="metric-row__value">3</div></div><div class="metric-row"><div class="metric-row__label">Attention</div><div class="metric-row__bar"><span style="width:12%"></span></div><div class="metric-row__value">1</div></div></article>
+      <article class="panel"><h2>Governance</h2><div class="metric-row"><div class="metric-row__label">Medium</div><div class="metric-row__bar"><span style="width:100%"></span></div><div class="metric-row__value">20</div></div><div class="metric-row"><div class="metric-row__label">High</div><div class="metric-row__bar"><span style="width:45%"></span></div><div class="metric-row__value">9</div></div><div class="metric-row"><div class="metric-row__label">Low</div><div class="metric-row__bar"><span style="width:35%"></span></div><div class="metric-row__value">7</div></div><div class="metric-row"><div class="metric-row__label">Shared</div><div class="metric-row__bar"><span style="width:15%"></span></div><div class="metric-row__value">3</div></div></article>
+      <article class="panel"><h2>Execution Readiness</h2><div class="metric-row"><div class="metric-row__label">Ready</div><div class="metric-row__bar"><span style="width:100%"></span></div><div class="metric-row__value">25</div></div><div class="metric-row"><div class="metric-row__label">Watch</div><div class="metric-row__bar"><span style="width:56%"></span></div><div class="metric-row__value">14</div></div></article>
+      <article class="panel"><h2>Evidence Strategy</h2><div class="metric-row"><div class="metric-row__label">official-operational</div><div class="metric-row__bar"><span style="width:100%"></span></div><div class="metric-row__value">22</div></div><div class="metric-row"><div class="metric-row__label">balanced-mixed</div><div class="metric-row__bar"><span style="width:55%"></span></div><div class="metric-row__value">12</div></div><div class="metric-row"><div class="metric-row__label">shared</div><div class="metric-row__bar"><span style="width:14%"></span></div><div class="metric-row__value">3</div></div><div class="metric-row"><div class="metric-row__label">attention-led</div><div class="metric-row__bar"><span style="width:12%"></span></div><div class="metric-row__value">1</div></div><div class="metric-row"><div class="metric-row__label">market-led</div><div class="metric-row__bar"><span style="width:12%"></span></div><div class="metric-row__value">1</div></div></article>
+      <article class="panel">
+        <h2>Priority Upgrades</h2>
+        <ol class="priority-list"><li><strong>PaperworkRadar</strong> · Watch · form_revision, filing_deadline, portal_service_change event model을 검증 산출물과 document hash diff 저장 경로에 연결한다.</li><li><strong>CollaborationMCPRadar</strong> · Watch · awesome-mcp-korea community seed를 GitHub repository metadata와 security/risk cross-check로 보강한다.</li><li><strong>CommerceMCPRadar</strong> · Watch · awesome-mcp-korea community seed를 GitHub repository metadata와 security/risk cross-check로 보강한다.</li><li><strong>FinanceTaxMCPRadar</strong> · Watch · awesome-mcp-korea community seed를 GitHub repository metadata와 security/risk cross-check로 보강한다.</li><li><strong>KoreanNLPMCPRadar</strong> · Watch · awesome-mcp-korea community seed를 GitHub repository metadata와 security/risk cross-check로 보강한다.</li><li><strong>LegalGovMCPRadar</strong> · Watch · awesome-mcp-korea community seed를 GitHub repository metadata와 security/risk cross-check로 보강한다.</li><li><strong>MapAddressMCPRadar</strong> · Watch · awesome-mcp-korea community seed를 GitHub repository metadata와 security/risk cross-check로 보강한다.</li><li><strong>MiscMCPRadar</strong> · Watch · awesome-mcp-korea community seed를 GitHub repository metadata와 security/risk cross-check로 보강한다.</li></ol>
+      </article>
+    </section>
+
+    <section class="table-wrap">
+      <div class="table-header">
+        <h2>Classification Matrix</h2>
+        <p>각 저장소를 `Repo Class`, `Primary Motion`, `Governance`, `Evidence Strategy`, `Readiness` 기준으로 정렬했습니다. `Layers`는 고도화한 분류체계의 5개 소스 계층 점검용 표시입니다.</p>
+      </div>
+      <div class="table-scroll">
+        <table>
+          <thead>
+            <tr>
+              <th>Repo</th>
+              <th>Class</th>
+              <th>Motion</th>
+              <th>Domain</th>
+              <th>Governance</th>
+              <th>Evidence Strategy</th>
+              <th>Readiness</th>
+              <th>Source Status</th>
+              <th>Layers</th>
+              <th>Dashboard</th>
+              <th>Quality</th>
+              <th>Next Step</th>
+            </tr>
+          </thead>
+          <tbody>
+            <tr><td><div class="repo-name">Paperwork</div><div class="repo-id">PaperworkRadar</div></td><td><span class="badge badge--class">Standard Radar</span></td><td><span class="badge badge--motion">Compliance/Risk</span></td><td>administrative-documents</td><td><span class="badge badge--gov">High</span></td><td>official-operational</td><td><span class="badge badge--watch">Watch</span></td><td>불균형</td><td><span class="layer layer--on">공식</span><span class="layer layer--on">운영</span><span class="layer layer--on">시장</span><span class="layer layer--on">커뮤니티</span><span class="layer layer--na">관심</span></td><td>active</td><td><div class="quality"><div class="quality__bar"><span style="width:85%"></span></div><div class="quality__value">85</div></div></td><td>form_revision, filing_deadline, portal_service_change event model을 검증 산출물과 document hash diff 저장 경로에 연결한다.</td></tr>
+<tr><td><div class="repo-name">CollaborationMCP</div><div class="repo-id">CollaborationMCPRadar</div></td><td><span class="badge badge--class">Standard Radar</span></td><td><span class="badge badge--motion">Compliance/Risk</span></td><td>mcp-collaboration</td><td><span class="badge badge--gov">Medium</span></td><td>balanced-mixed</td><td><span class="badge badge--watch">Watch</span></td><td>불균형</td><td><span class="layer layer--na">공식</span><span class="layer layer--na">운영</span><span class="layer layer--off">시장</span><span class="layer layer--on">커뮤니티</span><span class="layer layer--na">관심</span></td><td>active</td><td><div class="quality"><div class="quality__bar"><span style="width:80%"></span></div><div class="quality__value">80</div></div></td><td>awesome-mcp-korea community seed를 GitHub repository metadata와 security/risk cross-check로 보강한다.</td></tr>
+<tr><td><div class="repo-name">CommerceMCP</div><div class="repo-id">CommerceMCPRadar</div></td><td><span class="badge badge--class">Standard Radar</span></td><td><span class="badge badge--motion">Compliance/Risk</span></td><td>mcp-commerce</td><td><span class="badge badge--gov">Medium</span></td><td>balanced-mixed</td><td><span class="badge badge--watch">Watch</span></td><td>불균형</td><td><span class="layer layer--na">공식</span><span class="layer layer--na">운영</span><span class="layer layer--off">시장</span><span class="layer layer--on">커뮤니티</span><span class="layer layer--na">관심</span></td><td>active</td><td><div class="quality"><div class="quality__bar"><span style="width:80%"></span></div><div class="quality__value">80</div></div></td><td>awesome-mcp-korea community seed를 GitHub repository metadata와 security/risk cross-check로 보강한다.</td></tr>
+<tr><td><div class="repo-name">FinanceTaxMCP</div><div class="repo-id">FinanceTaxMCPRadar</div></td><td><span class="badge badge--class">Standard Radar</span></td><td><span class="badge badge--motion">Compliance/Risk</span></td><td>mcp-financetax</td><td><span class="badge badge--gov">Medium</span></td><td>balanced-mixed</td><td><span class="badge badge--watch">Watch</span></td><td>불균형</td><td><span class="layer layer--na">공식</span><span class="layer layer--na">운영</span><span class="layer layer--off">시장</span><span class="layer layer--on">커뮤니티</span><span class="layer layer--na">관심</span></td><td>active</td><td><div class="quality"><div class="quality__bar"><span style="width:80%"></span></div><div class="quality__value">80</div></div></td><td>awesome-mcp-korea community seed를 GitHub repository metadata와 security/risk cross-check로 보강한다.</td></tr>
+<tr><td><div class="repo-name">KoreanNLPMCP</div><div class="repo-id">KoreanNLPMCPRadar</div></td><td><span class="badge badge--class">Standard Radar</span></td><td><span class="badge badge--motion">Compliance/Risk</span></td><td>mcp-koreannlp</td><td><span class="badge badge--gov">Medium</span></td><td>balanced-mixed</td><td><span class="badge badge--watch">Watch</span></td><td>불균형</td><td><span class="layer layer--na">공식</span><span class="layer layer--na">운영</span><span class="layer layer--off">시장</span><span class="layer layer--on">커뮤니티</span><span class="layer layer--na">관심</span></td><td>active</td><td><div class="quality"><div class="quality__bar"><span style="width:80%"></span></div><div class="quality__value">80</div></div></td><td>awesome-mcp-korea community seed를 GitHub repository metadata와 security/risk cross-check로 보강한다.</td></tr>
+<tr><td><div class="repo-name">LegalGovMCP</div><div class="repo-id">LegalGovMCPRadar</div></td><td><span class="badge badge--class">Standard Radar</span></td><td><span class="badge badge--motion">Compliance/Risk</span></td><td>mcp-legalgov</td><td><span class="badge badge--gov">Medium</span></td><td>balanced-mixed</td><td><span class="badge badge--watch">Watch</span></td><td>불균형</td><td><span class="layer layer--na">공식</span><span class="layer layer--na">운영</span><span class="layer layer--off">시장</span><span class="layer layer--on">커뮤니티</span><span class="layer layer--na">관심</span></td><td>active</td><td><div class="quality"><div class="quality__bar"><span style="width:80%"></span></div><div class="quality__value">80</div></div></td><td>awesome-mcp-korea community seed를 GitHub repository metadata와 security/risk cross-check로 보강한다.</td></tr>
+<tr><td><div class="repo-name">MapAddressMCP</div><div class="repo-id">MapAddressMCPRadar</div></td><td><span class="badge badge--class">Standard Radar</span></td><td><span class="badge badge--motion">Compliance/Risk</span></td><td>mcp-mapaddress</td><td><span class="badge badge--gov">Medium</span></td><td>balanced-mixed</td><td><span class="badge badge--watch">Watch</span></td><td>불균형</td><td><span class="layer layer--na">공식</span><span class="layer layer--na">운영</span><span class="layer layer--off">시장</span><span class="layer layer--on">커뮤니티</span><span class="layer layer--na">관심</span></td><td>active</td><td><div class="quality"><div class="quality__bar"><span style="width:80%"></span></div><div class="quality__value">80</div></div></td><td>awesome-mcp-korea community seed를 GitHub repository metadata와 security/risk cross-check로 보강한다.</td></tr>
+<tr><td><div class="repo-name">MiscMCP</div><div class="repo-id">MiscMCPRadar</div></td><td><span class="badge badge--class">Standard Radar</span></td><td><span class="badge badge--motion">Compliance/Risk</span></td><td>mcp-misc</td><td><span class="badge badge--gov">Medium</span></td><td>balanced-mixed</td><td><span class="badge badge--watch">Watch</span></td><td>불균형</td><td><span class="layer layer--na">공식</span><span class="layer layer--na">운영</span><span class="layer layer--off">시장</span><span class="layer layer--on">커뮤니티</span><span class="layer layer--na">관심</span></td><td>active</td><td><div class="quality"><div class="quality__bar"><span style="width:80%"></span></div><div class="quality__value">80</div></div></td><td>awesome-mcp-korea community seed를 GitHub repository metadata와 security/risk cross-check로 보강한다.</td></tr>
+<tr><td><div class="repo-name">PublicDataMCP</div><div class="repo-id">PublicDataMCPRadar</div></td><td><span class="badge badge--class">Standard Radar</span></td><td><span class="badge badge--motion">Compliance/Risk</span></td><td>mcp-publicdata</td><td><span class="badge badge--gov">Medium</span></td><td>balanced-mixed</td><td><span class="badge badge--watch">Watch</span></td><td>불균형</td><td><span class="layer layer--na">공식</span><span class="layer layer--na">운영</span><span class="layer layer--off">시장</span><span class="layer layer--on">커뮤니티</span><span class="layer layer--na">관심</span></td><td>active</td><td><div class="quality"><div class="quality__bar"><span style="width:80%"></span></div><div class="quality__value">80</div></div></td><td>awesome-mcp-korea community seed를 GitHub repository metadata와 security/risk cross-check로 보강한다.</td></tr>
+<tr><td><div class="repo-name">RealEstateMCP</div><div class="repo-id">RealEstateMCPRadar</div></td><td><span class="badge badge--class">Standard Radar</span></td><td><span class="badge badge--motion">Compliance/Risk</span></td><td>mcp-realestate</td><td><span class="badge badge--gov">Medium</span></td><td>balanced-mixed</td><td><span class="badge badge--watch">Watch</span></td><td>불균형</td><td><span class="layer layer--na">공식</span><span class="layer layer--na">운영</span><span class="layer layer--off">시장</span><span class="layer layer--on">커뮤니티</span><span class="layer layer--na">관심</span></td><td>active</td><td><div class="quality"><div class="quality__bar"><span style="width:80%"></span></div><div class="quality__value">80</div></div></td><td>awesome-mcp-korea community seed를 GitHub repository metadata와 security/risk cross-check로 보강한다.</td></tr>
+<tr><td><div class="repo-name">SearchTrendMCP</div><div class="repo-id">SearchTrendMCPRadar</div></td><td><span class="badge badge--class">Standard Radar</span></td><td><span class="badge badge--motion">Compliance/Risk</span></td><td>mcp-searchtrend</td><td><span class="badge badge--gov">Medium</span></td><td>balanced-mixed</td><td><span class="badge badge--watch">Watch</span></td><td>불균형</td><td><span class="layer layer--na">공식</span><span class="layer layer--na">운영</span><span class="layer layer--off">시장</span><span class="layer layer--on">커뮤니티</span><span class="layer layer--na">관심</span></td><td>active</td><td><div class="quality"><div class="quality__bar"><span style="width:80%"></span></div><div class="quality__value">80</div></div></td><td>awesome-mcp-korea community seed를 GitHub repository metadata와 security/risk cross-check로 보강한다.</td></tr>
+<tr><td><div class="repo-name">TravelMCP</div><div class="repo-id">TravelMCPRadar</div></td><td><span class="badge badge--class">Standard Radar</span></td><td><span class="badge badge--motion">Compliance/Risk</span></td><td>mcp-travel</td><td><span class="badge badge--gov">Medium</span></td><td>balanced-mixed</td><td><span class="badge badge--watch">Watch</span></td><td>불균형</td><td><span class="layer layer--na">공식</span><span class="layer layer--na">운영</span><span class="layer layer--off">시장</span><span class="layer layer--on">커뮤니티</span><span class="layer layer--na">관심</span></td><td>active</td><td><div class="quality"><div class="quality__bar"><span style="width:80%"></span></div><div class="quality__value">80</div></div></td><td>awesome-mcp-korea community seed를 GitHub repository metadata와 security/risk cross-check로 보강한다.</td></tr>
+<tr><td><div class="repo-name">WeatherMCP</div><div class="repo-id">WeatherMCPRadar</div></td><td><span class="badge badge--class">Standard Radar</span></td><td><span class="badge badge--motion">Compliance/Risk</span></td><td>mcp-weather</td><td><span class="badge badge--gov">Medium</span></td><td>balanced-mixed</td><td><span class="badge badge--watch">Watch</span></td><td>불균형</td><td><span class="layer layer--na">공식</span><span class="layer layer--na">운영</span><span class="layer layer--off">시장</span><span class="layer layer--on">커뮤니티</span><span class="layer layer--na">관심</span></td><td>active</td><td><div class="quality"><div class="quality__bar"><span style="width:80%"></span></div><div class="quality__value">80</div></div></td><td>awesome-mcp-korea community seed를 GitHub repository metadata와 security/risk cross-check로 보강한다.</td></tr>
+<tr><td><div class="repo-name">Book</div><div class="repo-id">BookRadar</div></td><td><span class="badge badge--class">Standard Radar</span></td><td><span class="badge badge--motion">Intelligence</span></td><td>publishing</td><td><span class="badge badge--gov">Low</span></td><td>official-operational</td><td><span class="badge badge--watch">Watch</span></td><td>불균형</td><td><span class="layer layer--on">공식</span><span class="layer layer--on">운영</span><span class="layer layer--on">시장</span><span class="layer layer--on">커뮤니티</span><span class="layer layer--na">관심</span></td><td>active</td><td><div class="quality"><div class="quality__bar"><span style="width:85%"></span></div><div class="quality__value">85</div></div></td><td>도서 판매 랭킹 추이, 도서관 대출, 작가 행사 일정을 더해 수요 예측력을 올린다.</td></tr>
+<tr><td><div class="repo-name">Home</div><div class="repo-id">HomeRadar</div></td><td><span class="badge badge--class">Advanced Radar</span></td><td><span class="badge badge--motion">Conversion</span></td><td>housing</td><td><span class="badge badge--gov">High</span></td><td>official-operational</td><td><span class="badge badge--ready">Ready</span></td><td>강함</td><td><span class="layer layer--on">공식</span><span class="layer layer--on">운영</span><span class="layer layer--on">시장</span><span class="layer layer--na">커뮤니티</span><span class="layer layer--na">관심</span></td><td>active</td><td><div class="quality"><div class="quality__bar"><span style="width:95%"></span></div><div class="quality__value">95</div></div></td><td>HomeVerificationState를 리포트/MCP 출력에 연결하고 listing·재고 후보는 ToS·stale listing 검증 후 단계적으로 활성화한다.</td></tr>
+<tr><td><div class="repo-name">Food</div><div class="repo-id">FoodRadar</div></td><td><span class="badge badge--class">Standard Radar</span></td><td><span class="badge badge--motion">Compliance/Risk</span></td><td>food-safety</td><td><span class="badge badge--gov">High</span></td><td>official-operational</td><td><span class="badge badge--ready">Ready</span></td><td>강함</td><td><span class="layer layer--on">공식</span><span class="layer layer--on">운영</span><span class="layer layer--on">시장</span><span class="layer layer--on">커뮤니티</span><span class="layer layer--na">관심</span></td><td>active</td><td><div class="quality"><div class="quality__bar"><span style="width:95%"></span></div><div class="quality__value">95</div></div></td><td>source_backlog의 소비자 불만 후보를 API·ToS·개인정보 검토 후 보조 검증 레이어로 활성화하고, 판매중단 확산·유통 가격 데이터를 후속 운영 source로 보강한다.</td></tr>
+<tr><td><div class="repo-name">Gov</div><div class="repo-id">GovRadar</div></td><td><span class="badge badge--class">Standard Radar</span></td><td><span class="badge badge--motion">Conversion</span></td><td>public-programs</td><td><span class="badge badge--gov">High</span></td><td>official-operational</td><td><span class="badge badge--ready">Ready</span></td><td>강함</td><td><span class="layer layer--on">공식</span><span class="layer layer--on">운영</span><span class="layer layer--on">시장</span><span class="layer layer--on">커뮤니티</span><span class="layer layer--na">관심</span></td><td>active</td><td><div class="quality"><div class="quality__bar"><span style="width:95%"></span></div><div class="quality__value">95</div></div></td><td>application_deadline·eligibility_rule 이벤트 모델을 중심으로 freshness/stale 리포트를 붙이고, 선정 결과·집행 실적 후보는 source_backlog에서 검증 후 단계적으로 활성화한다.</td></tr>
+<tr><td><div class="repo-name">Job</div><div class="repo-id">JobRadar</div></td><td><span class="badge badge--class">Standard Radar</span></td><td><span class="badge badge--motion">Conversion</span></td><td>employment</td><td><span class="badge badge--gov">High</span></td><td>official-operational</td><td><span class="badge badge--ready">Ready</span></td><td>강함</td><td><span class="layer layer--on">공식</span><span class="layer layer--on">운영</span><span class="layer layer--on">시장</span><span class="layer layer--on">커뮤니티</span><span class="layer layer--na">관심</span></td><td>active</td><td><div class="quality"><div class="quality__bar"><span style="width:95%"></span></div><div class="quality__value">95</div></div></td><td>공식 채용공고, job board API, salary·skill trend 데이터를 더해 운영 신호를 만든다.</td></tr>
+<tr><td><div class="repo-name">Policy</div><div class="repo-id">PolicyRadar</div></td><td><span class="badge badge--class">Standard Radar</span></td><td><span class="badge badge--motion">Compliance/Risk</span></td><td>policy-regulation</td><td><span class="badge badge--gov">High</span></td><td>official-operational</td><td><span class="badge badge--ready">Ready</span></td><td>강함</td><td><span class="layer layer--on">공식</span><span class="layer layer--on">운영</span><span class="layer layer--on">시장</span><span class="layer layer--on">커뮤니티</span><span class="layer layer--na">관심</span></td><td>active</td><td><div class="quality"><div class="quality__bar"><span style="width:95%"></span></div><div class="quality__value">95</div></div></td><td>public_consultation, enforcement_action, policy_effective_date, platform_policy_change event model을 검증 산출물에 연결하고 Regulations.gov/입법예고/FTC/PIPC 후보는 source_backlog에서 검증 후 활성화한다.</td></tr>
+<tr><td><div class="repo-name">Property</div><div class="repo-id">PropertyRadar</div></td><td><span class="badge badge--class">Standard Radar</span></td><td><span class="badge badge--motion">Conversion</span></td><td>property</td><td><span class="badge badge--gov">High</span></td><td>official-operational</td><td><span class="badge badge--ready">Ready</span></td><td>강함</td><td><span class="layer layer--on">공식</span><span class="layer layer--on">운영</span><span class="layer layer--on">시장</span><span class="layer layer--on">커뮤니티</span><span class="layer layer--na">관심</span></td><td>active</td><td><div class="quality"><div class="quality__bar"><span style="width:95%"></span></div><div class="quality__value">95</div></div></td><td>실거래, 분양 경쟁률, 매물 inventory, 인허가·준공 데이터를 더한다.</td></tr>
+<tr><td><div class="repo-name">Refund</div><div class="repo-id">RefundRadar</div></td><td><span class="badge badge--class">Standard Radar</span></td><td><span class="badge badge--motion">Compliance/Risk</span></td><td>consumer-rights</td><td><span class="badge badge--gov">High</span></td><td>official-operational</td><td><span class="badge badge--ready">Ready</span></td><td>강함</td><td><span class="layer layer--on">공식</span><span class="layer layer--on">운영</span><span class="layer layer--on">시장</span><span class="layer layer--na">커뮤니티</span><span class="layer layer--na">관심</span></td><td>active</td><td><div class="quality"><div class="quality__bar"><span style="width:95%"></span></div><div class="quality__value">95</div></div></td><td>refund_claim_window, recall_refund_notice, complaint_resolution event model을 검증 산출물에 연결하고 seller/airline policy diff 후보는 source_backlog에서 검증 후 활성화한다.</td></tr>
+<tr><td><div class="repo-name">Trust</div><div class="repo-id">TrustRadar</div></td><td><span class="badge badge--class">Standard Radar</span></td><td><span class="badge badge--motion">Compliance/Risk</span></td><td>security-privacy</td><td><span class="badge badge--gov">High</span></td><td>official-operational</td><td><span class="badge badge--ready">Ready</span></td><td>강함</td><td><span class="layer layer--on">공식</span><span class="layer layer--on">운영</span><span class="layer layer--on">시장</span><span class="layer layer--on">커뮤니티</span><span class="layer layer--na">관심</span></td><td>active</td><td><div class="quality"><div class="quality__bar"><span style="width:95%"></span></div><div class="quality__value">95</div></div></td><td>incident_disclosure, status_page_incident, enforcement_action, consumer_complaint, ai_asset_risk event model을 검증 산출물에 연결하고 커뮤니티 신호는 official_confirmation_required 상태로만 병합한다.</td></tr>
+<tr><td><div class="repo-name">Price</div><div class="repo-id">PriceRadar</div></td><td><span class="badge badge--class">Advanced Radar</span></td><td><span class="badge badge--motion">Conversion</span></td><td>commerce-pricing</td><td><span class="badge badge--gov">Medium</span></td><td>market-led</td><td><span class="badge badge--ready">Ready</span></td><td>강함</td><td><span class="layer layer--na">공식</span><span class="layer layer--on">운영</span><span class="layer layer--on">시장</span><span class="layer layer--on">커뮤니티</span><span class="layer layer--na">관심</span></td><td>active</td><td><div class="quality"><div class="quality__bar"><span style="width:95%"></span></div><div class="quality__value">95</div></div></td><td>SKU 가격 이력, 재고·품절, 카드혜택·쿠폰까지 연결해 구매의사결정 정확도를 더 높인다.</td></tr>
+<tr><td><div class="repo-name">Wine</div><div class="repo-id">WineRadar</div></td><td><span class="badge badge--class">Advanced Radar</span></td><td><span class="badge badge--motion">Intelligence</span></td><td>wine-trade</td><td><span class="badge badge--gov">Medium</span></td><td>official-operational</td><td><span class="badge badge--ready">Ready</span></td><td>강함</td><td><span class="layer layer--on">공식</span><span class="layer layer--on">운영</span><span class="layer layer--on">시장</span><span class="layer layer--on">커뮤니티</span><span class="layer layer--na">관심</span></td><td>active</td><td><div class="quality"><div class="quality__bar"><span style="width:95%"></span></div><div class="quality__value">95</div></div></td><td>auction price, 레스토랑 와인리스트 변동, importer portfolio sales 같은 거래 신호를 더한다.</td></tr>
+<tr><td><div class="repo-name">Benefit</div><div class="repo-id">BenefitRadar</div></td><td><span class="badge badge--class">Standard Radar</span></td><td><span class="badge badge--motion">Conversion</span></td><td>public-benefits</td><td><span class="badge badge--gov">Medium</span></td><td>official-operational</td><td><span class="badge badge--ready">Ready</span></td><td>강함</td><td><span class="layer layer--on">공식</span><span class="layer layer--on">운영</span><span class="layer layer--on">시장</span><span class="layer layer--on">커뮤니티</span><span class="layer layer--na">관심</span></td><td>active</td><td><div class="quality"><div class="quality__bar"><span style="width:95%"></span></div><div class="quality__value">95</div></div></td><td>신청 마감일, eligibility 계산, 집행 실적까지 붙여 실제 신청 행동과 연결한다.</td></tr>
+<tr><td><div class="repo-name">Crypto</div><div class="repo-id">CryptoRadar</div></td><td><span class="badge badge--class">Standard Radar</span></td><td><span class="badge badge--motion">Intelligence</span></td><td>crypto-finance</td><td><span class="badge badge--gov">Medium</span></td><td>official-operational</td><td><span class="badge badge--ready">Ready</span></td><td>강함</td><td><span class="layer layer--on">공식</span><span class="layer layer--on">운영</span><span class="layer layer--on">시장</span><span class="layer layer--na">커뮤니티</span><span class="layer layer--na">관심</span></td><td>active</td><td><div class="quality"><div class="quality__bar"><span style="width:95%"></span></div><div class="quality__value">95</div></div></td><td>거래소 상장·상폐 공지, 규제기관 발표, 온체인 지표를 추가해 투자 판단력을 높인다.</td></tr>
+<tr><td><div class="repo-name">Event</div><div class="repo-id">EventRadar</div></td><td><span class="badge badge--class">Standard Radar</span></td><td><span class="badge badge--motion">Intelligence</span></td><td>events</td><td><span class="badge badge--gov">Medium</span></td><td>official-operational</td><td><span class="badge badge--ready">Ready</span></td><td>강함</td><td><span class="layer layer--on">공식</span><span class="layer layer--on">운영</span><span class="layer layer--on">시장</span><span class="layer layer--on">커뮤니티</span><span class="layer layer--na">관심</span></td><td>active</td><td><div class="quality"><div class="quality__bar"><span style="width:95%"></span></div><div class="quality__value">95</div></div></td><td>공식 일정 API, 티켓 판매·잔여석, venue calendar를 붙여 실행 가능성을 높인다.</td></tr>
+<tr><td><div class="repo-name">Mobility</div><div class="repo-id">MobilityRadar</div></td><td><span class="badge badge--class">Standard Radar</span></td><td><span class="badge badge--motion">Intelligence</span></td><td>mobility</td><td><span class="badge badge--gov">Medium</span></td><td>official-operational</td><td><span class="badge badge--ready">Ready</span></td><td>강함</td><td><span class="layer layer--on">공식</span><span class="layer layer--on">운영</span><span class="layer layer--on">시장</span><span class="layer layer--on">커뮤니티</span><span class="layer layer--na">관심</span></td><td>active</td><td><div class="quality"><div class="quality__bar"><span style="width:95%"></span></div><div class="quality__value">95</div></div></td><td>EV 등록·충전 요금·대중교통 요금 source를 추가하고 coffee split 후보의 별도 repo 승격 여부를 결정한다.</td></tr>
+<tr><td><div class="repo-name">Queue</div><div class="repo-id">QueueRadar</div></td><td><span class="badge badge--class">Standard Radar</span></td><td><span class="badge badge--motion">Conversion</span></td><td>operations-queues</td><td><span class="badge badge--gov">Medium</span></td><td>official-operational</td><td><span class="badge badge--ready">Ready</span></td><td>강함</td><td><span class="layer layer--on">공식</span><span class="layer layer--on">운영</span><span class="layer layer--on">시장</span><span class="layer layer--on">커뮤니티</span><span class="layer layer--na">관심</span></td><td>active</td><td><div class="quality"><div class="quality__bar"><span style="width:95%"></span></div><div class="quality__value">95</div></div></td><td>티켓 가격, 예약 슬롯, 날씨·시즈널리티를 합쳐 예측력을 높인다.</td></tr>
+<tr><td><div class="repo-name">Subscription</div><div class="repo-id">SubscriptionRadar</div></td><td><span class="badge badge--class">Standard Radar</span></td><td><span class="badge badge--motion">Conversion</span></td><td>subscription-pricing</td><td><span class="badge badge--gov">Medium</span></td><td>official-operational</td><td><span class="badge badge--ready">Ready</span></td><td>강함</td><td><span class="layer layer--on">공식</span><span class="layer layer--on">운영</span><span class="layer layer--on">시장</span><span class="layer layer--on">커뮤니티</span><span class="layer layer--na">관심</span></td><td>active</td><td><div class="quality"><div class="quality__bar"><span style="width:95%"></span></div><div class="quality__value">95</div></div></td><td>vendor pricing page, app store ranking, churn signal, 카드 결제 카테고리 데이터를 더한다.</td></tr>
+<tr><td><div class="repo-name">Trend</div><div class="repo-id">TrendRadar</div></td><td><span class="badge badge--class">Advanced Radar</span></td><td><span class="badge badge--motion">Attention</span></td><td>trend-discovery</td><td><span class="badge badge--gov">Low</span></td><td>attention-led</td><td><span class="badge badge--ready">Ready</span></td><td>강함</td><td><span class="layer layer--on">공식</span><span class="layer layer--on">운영</span><span class="layer layer--on">시장</span><span class="layer layer--on">커뮤니티</span><span class="layer layer--on">관심</span></td><td>active</td><td><div class="quality"><div class="quality__bar"><span style="width:95%"></span></div><div class="quality__value">95</div></div></td><td>shopping·conversion 지표를 더 넓히고 vertical keyword pack을 표준화한다.</td></tr>
+<tr><td><div class="repo-name">Art</div><div class="repo-id">ArtRadar</div></td><td><span class="badge badge--class">Standard Radar</span></td><td><span class="badge badge--motion">Intelligence</span></td><td>culture</td><td><span class="badge badge--gov">Low</span></td><td>official-operational</td><td><span class="badge badge--ready">Ready</span></td><td>강함</td><td><span class="layer layer--on">공식</span><span class="layer layer--on">운영</span><span class="layer layer--on">시장</span><span class="layer layer--on">커뮤니티</span><span class="layer layer--na">관심</span></td><td>active</td><td><div class="quality"><div class="quality__bar"><span style="width:95%"></span></div><div class="quality__value">95</div></div></td><td>경매 낙찰가, 티켓 판매, 아트페어 참가사 같은 거래형 소스를 넣어 시장성 판단을 강화한다.</td></tr>
+<tr><td><div class="repo-name">Blog</div><div class="repo-id">BlogRadar</div></td><td><span class="badge badge--class">Standard Radar</span></td><td><span class="badge badge--motion">Intelligence</span></td><td>developer-ecosystem</td><td><span class="badge badge--gov">Low</span></td><td>official-operational</td><td><span class="badge badge--ready">Ready</span></td><td>강함</td><td><span class="layer layer--on">공식</span><span class="layer layer--on">운영</span><span class="layer layer--on">시장</span><span class="layer layer--on">커뮤니티</span><span class="layer layer--na">관심</span></td><td>active</td><td><div class="quality"><div class="quality__bar"><span style="width:95%"></span></div><div class="quality__value">95</div></div></td><td>GitHub release·star, package registry download, 채용 공고를 추가해 채택 계층을 보강한다.</td></tr>
+<tr><td><div class="repo-name">Game</div><div class="repo-id">GameRadar</div></td><td><span class="badge badge--class">Standard Radar</span></td><td><span class="badge badge--motion">Intelligence</span></td><td>games</td><td><span class="badge badge--gov">Low</span></td><td>official-operational</td><td><span class="badge badge--ready">Ready</span></td><td>강함</td><td><span class="layer layer--on">공식</span><span class="layer layer--on">운영</span><span class="layer layer--on">시장</span><span class="layer layer--on">커뮤니티</span><span class="layer layer--na">관심</span></td><td>active</td><td><div class="quality"><div class="quality__bar"><span style="width:95%"></span></div><div class="quality__value">95</div></div></td><td>Steam charts, app store ranking, 콘솔 스토어 bestseller, patch note를 넣어 흥행 추적을 보강한다.</td></tr>
+<tr><td><div class="repo-name">Movie</div><div class="repo-id">MovieRadar</div></td><td><span class="badge badge--class">Standard Radar</span></td><td><span class="badge badge--motion">Intelligence</span></td><td>media-entertainment</td><td><span class="badge badge--gov">Low</span></td><td>official-operational</td><td><span class="badge badge--ready">Ready</span></td><td>강함</td><td><span class="layer layer--on">공식</span><span class="layer layer--on">운영</span><span class="layer layer--on">시장</span><span class="layer layer--na">커뮤니티</span><span class="layer layer--na">관심</span></td><td>active</td><td><div class="quality"><div class="quality__bar"><span style="width:95%"></span></div><div class="quality__value">95</div></div></td><td>국내 예매 순위, OTT Top 10, release calendar, audience rating을 더한다.</td></tr>
+<tr><td><div class="repo-name">Paper</div><div class="repo-id">PaperRadar</div></td><td><span class="badge badge--class">Standard Radar</span></td><td><span class="badge badge--motion">Intelligence</span></td><td>ai-research</td><td><span class="badge badge--gov">Low</span></td><td>official-operational</td><td><span class="badge badge--ready">Ready</span></td><td>강함</td><td><span class="layer layer--on">공식</span><span class="layer layer--on">운영</span><span class="layer layer--on">시장</span><span class="layer layer--na">커뮤니티</span><span class="layer layer--na">관심</span></td><td>active</td><td><div class="quality"><div class="quality__bar"><span style="width:95%"></span></div><div class="quality__value">95</div></div></td><td>citation, GitHub star, benchmark leaderboard, 코드 저장소 연결을 보강한다.</td></tr>
+<tr><td><div class="repo-name">Radar-Template</div><div class="repo-id">Radar-Template</div></td><td><span class="badge badge--class">Shared Template</span></td><td><span class="badge badge--motion">Infrastructure</span></td><td>platform</td><td><span class="badge badge--gov">Shared</span></td><td>shared</td><td><span class="badge badge--ready">Ready</span></td><td>공용</td><td><span class="layer layer--na">공식</span><span class="layer layer--na">운영</span><span class="layer layer--na">시장</span><span class="layer layer--na">커뮤니티</span><span class="layer layer--na">관심</span></td><td>n/a</td><td><div class="quality"><div class="quality__bar"><span style="width:85%"></span></div><div class="quality__value">85</div></div></td><td>신규 Radar가 taxonomy 메타데이터를 기본 포함하도록 템플릿을 확장한다.</td></tr>
+<tr><td><div class="repo-name">radar-core</div><div class="repo-id">radar-core</div></td><td><span class="badge badge--class">Shared Core</span></td><td><span class="badge badge--motion">Infrastructure</span></td><td>platform</td><td><span class="badge badge--gov">Shared</span></td><td>shared</td><td><span class="badge badge--ready">Ready</span></td><td>공용</td><td><span class="layer layer--na">공식</span><span class="layer layer--na">운영</span><span class="layer layer--na">시장</span><span class="layer layer--na">커뮤니티</span><span class="layer layer--na">관심</span></td><td>n/a</td><td><div class="quality"><div class="quality__bar"><span style="width:85%"></span></div><div class="quality__value">85</div></div></td><td>summary schema와 shared taxonomy helper를 공용 계약으로 정리한다.</td></tr>
+<tr><td><div class="repo-name">radar-dashboard</div><div class="repo-id">radar-dashboard</div></td><td><span class="badge badge--class">Shared Dashboard</span></td><td><span class="badge badge--motion">Infrastructure</span></td><td>platform</td><td><span class="badge badge--gov">Shared</span></td><td>shared</td><td><span class="badge badge--ready">Ready</span></td><td>공용</td><td><span class="layer layer--na">공식</span><span class="layer layer--na">운영</span><span class="layer layer--na">시장</span><span class="layer layer--na">커뮤니티</span><span class="layer layer--na">관심</span></td><td>n/a</td><td><div class="quality"><div class="quality__bar"><span style="width:100%"></span></div><div class="quality__value">100</div></div></td><td>프로젝트 메트릭과 taxonomy audit를 한 화면에서 점검하도록 시각화를 유지한다.</td></tr>
+          </tbody>
+        </table>
+      </div>
+    </section>
+
+    <footer class="footer">
+      Canonical output: <code>radar-dashboard/classification.html</code> · Data source: <code>radar-dashboard/data/classification.json</code>
+    </footer>
+  </main>
+</body>
+</html>
