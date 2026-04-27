@@ -1,5 +1,5 @@
 {
-  "generated_at": "2026-04-21T12:23:48.799741+00:00",
+  "generated_at": "2026-04-25T16:40:51.374050+00:00",
   "workspace_root": "/mnt/c/projects/ai-frendly-datahub",
   "inputs": {
     "source_portfolio": "docs/harness/source-portfolio.json",
@@ -17,9 +17,9 @@
     },
     "weakest_dimension_counts": {
       "traceability": 10,
-      "verification": 3,
-      "operational_depth": 18,
-      "authority": 5
+      "operational_depth": 20,
+      "authority": 4,
+      "verification": 2
     },
     "governance_counts": {
       "high": 9,
@@ -27,48 +27,60 @@
       "low": 7
     },
     "top_priority_repos": [
-      "PaperworkRadar",
-      "FoodRadar",
-      "GovRadar",
-      "HomeRadar",
-      "PolicyRadar",
       "RefundRadar",
+      "PaperworkRadar",
+      "PolicyRadar",
+      "GovRadar",
+      "FoodRadar",
+      "HomeRadar",
       "TrustRadar",
+      "EventRadar",
       "MobilityRadar",
-      "WineRadar",
-      "EventRadar"
+      "WineRadar"
     ],
     "p0_repos": [
-      "PaperworkRadar",
-      "FoodRadar",
-      "GovRadar",
-      "HomeRadar",
-      "PolicyRadar",
       "RefundRadar",
+      "PaperworkRadar",
+      "PolicyRadar",
+      "GovRadar",
+      "FoodRadar",
+      "HomeRadar",
       "TrustRadar"
     ],
     "p1_repos": [
+      "EventRadar",
       "MobilityRadar",
       "WineRadar",
-      "EventRadar",
       "PriceRadar",
       "BenefitRadar",
       "TrendRadar"
     ],
     "p2_repos": [
-      "BookRadar",
       "PropertyRadar",
+      "BookRadar",
       "JobRadar",
-      "MovieRadar",
-      "ArtRadar",
       "GameRadar",
-      "CryptoRadar",
-      "BlogRadar",
-      "PaperRadar",
       "QueueRadar",
-      "SubscriptionRadar"
+      "ArtRadar",
+      "MovieRadar",
+      "PaperRadar",
+      "SubscriptionRadar",
+      "CryptoRadar",
+      "BlogRadar"
     ],
-    "average_data_quality_score": 71.4
+    "average_data_quality_score": 68.6,
+    "disabled_source_classification_summary": {
+      "total_disabled_count": 197,
+      "bucket_totals": {
+        "awaiting_url_replacement": 57,
+        "awaiting_secret": 17,
+        "awaiting_smoke_test": 4,
+        "upstream_section_missing": 1,
+        "awaiting_partnership_review": 0,
+        "accepted_backlog": 118
+      },
+      "repo_count_with_disabled_sources": 32
+    }
   },
   "quality_dimensions": {
     "authority": "권위성",
@@ -79,6 +91,93 @@
     "traceability": "추적성"
   },
   "repos": [
+    {
+      "repo": "RefundRadar",
+      "priority": "P0",
+      "governance_profile": "high",
+      "primary_motion": "compliance-risk",
+      "source_status": "불균형",
+      "readiness_status": "ready",
+      "quality_score": 95,
+      "data_quality_score": 80,
+      "risk_score": 95,
+      "weakest_dimension": "traceability",
+      "dimensions": {
+        "authority": 100,
+        "operational_depth": 100,
+        "freshness": 67,
+        "actionability": 100,
+        "verification": 62,
+        "traceability": 49
+      },
+      "issues": [
+        "비활성 고가치 source 10개가 있어 freshness와 traceability가 떨어짐",
+        "공식 발표와 사용자 피해/불만 신호를 교차 검증할 보조 레이어가 없음",
+        "가장 약한 품질 축은 추적성(49)"
+      ],
+      "recommendations": [
+        "refund_claim_window와 complaint_resolution freshness/stale 리포트를 검증 산출물에 추가",
+        "seller/airline policy diff와 complaint resolution 후보는 source_backlog에서 ToS·개인정보·parser 검증 후 단계적 활성화",
+        "환불 사건별 claim deadline·resolution status·근거 URL을 결과 리포트에 함께 표시"
+      ],
+      "action_pack": {
+        "required_signals": [
+          "환불·리콜·소비자 구제 공식 공지",
+          "판매자·항공사·플랫폼별 환불 정책 변경",
+          "처리 상태와 complaint resolution 결과"
+        ],
+        "quality_gates": [
+          "환불 가능 조건과 실제 처리 상태를 분리",
+          "정책 변경일과 적용 시작일을 별도 필드로 유지",
+          "커뮤니티 불만은 공식 구제 결과와 cross-reference로만 사용"
+        ],
+        "next_actions": [
+          "refund_claim_window와 complaint_resolution freshness/stale 리포트를 검증 산출물에 추가",
+          "seller/airline policy diff와 complaint resolution 후보는 source_backlog에서 ToS·개인정보·parser 검증 후 단계적 활성화",
+          "환불 사건별 claim deadline·resolution status·근거 URL을 결과 리포트에 함께 표시"
+        ]
+      },
+      "enabled_source_count": 19,
+      "configured_source_count": 39,
+      "layer_counts": {
+        "market": 19,
+        "official": 9,
+        "operational": 8
+      },
+      "domain_scope_counts": {
+        "unspecified": 19
+      },
+      "available_layers": [
+        "market",
+        "official",
+        "operational"
+      ],
+      "verification_signal_count": 0,
+      "verification_role_counts": {},
+      "disabled_high_value_sources": [
+        "Canada Consumer Agency",
+        "EU Consumer Affairs",
+        "HomeTax (국세청 홈택스)",
+        "WeTax (위택스)",
+        "한국소비자원",
+        "한국소비자원 리콜정보",
+        "공정거래위원회 보도자료",
+        "식품의약품안전처 리콜",
+        "국세청 보도자료",
+        "기획재정부 세제개편"
+      ],
+      "integration_candidates": [],
+      "next_step": "refund_claim_window, recall_refund_notice, complaint_resolution event model을 검증 산출물에 연결하고 seller/airline policy diff 후보는 source_backlog에서 검증 후 활성화한다.",
+      "disabled_source_classification": {
+        "awaiting_url_replacement": 3,
+        "awaiting_secret": 0,
+        "awaiting_smoke_test": 0,
+        "upstream_section_missing": 0,
+        "awaiting_partnership_review": 0,
+        "accepted_backlog": 17
+      },
+      "disabled_source_classification_total": 20
+    },
     {
       "repo": "PaperworkRadar",
       "priority": "P0",
@@ -148,7 +247,176 @@
         "하이코리아 민원"
       ],
       "integration_candidates": [],
-      "next_step": "form_revision, filing_deadline, portal_service_change event model을 검증 산출물과 document hash diff 저장 경로에 연결한다."
+      "next_step": "form_revision, filing_deadline, portal_service_change event model을 검증 산출물과 document hash diff 저장 경로에 연결한다.",
+      "disabled_source_classification": {
+        "awaiting_url_replacement": 8,
+        "awaiting_secret": 0,
+        "awaiting_smoke_test": 0,
+        "upstream_section_missing": 0,
+        "awaiting_partnership_review": 0,
+        "accepted_backlog": 0
+      },
+      "disabled_source_classification_total": 8
+    },
+    {
+      "repo": "PolicyRadar",
+      "priority": "P0",
+      "governance_profile": "high",
+      "primary_motion": "compliance-risk",
+      "source_status": "불균형",
+      "readiness_status": "ready",
+      "quality_score": 95,
+      "data_quality_score": 92,
+      "risk_score": 81,
+      "weakest_dimension": "traceability",
+      "dimensions": {
+        "authority": 100,
+        "operational_depth": 100,
+        "freshness": 93,
+        "actionability": 100,
+        "verification": 91,
+        "traceability": 69
+      },
+      "issues": [
+        "비활성 고가치 source 2개가 있어 freshness와 traceability가 떨어짐",
+        "가장 약한 품질 축은 추적성(69)"
+      ],
+      "recommendations": [
+        "public_consultation과 enforcement_action freshness/stale 리포트를 검증 산출물에 추가",
+        "Regulations.gov/입법예고/FTC/PIPC 후보는 source_backlog에서 parser·ToS·개인정보·case id mapping 검증 후 단계적 활성화",
+        "정책별 consultation deadline·effective date·enforcement outcome·근거 URL을 결과 리포트에 함께 표시"
+      ],
+      "action_pack": {
+        "required_signals": [
+          "입법예고·행정예고·의견수렴 문서",
+          "제재·과징금·시정명령 같은 enforcement action",
+          "플랫폼 약관·정책 변경 공지"
+        ],
+        "quality_gates": [
+          "공식 규제 문서와 해설 기사를 분리",
+          "시행일·의견 제출 마감일·공포일을 별도 필드로 유지",
+          "N2SF/CSAP/FIPS 199/FedRAMP 20x 분류는 공식 등급과 내부 오버레이를 분리"
+        ],
+        "next_actions": [
+          "public_consultation과 enforcement_action freshness/stale 리포트를 검증 산출물에 추가",
+          "Regulations.gov/입법예고/FTC/PIPC 후보는 source_backlog에서 parser·ToS·개인정보·case id mapping 검증 후 단계적 활성화",
+          "정책별 consultation deadline·effective date·enforcement outcome·근거 URL을 결과 리포트에 함께 표시"
+        ]
+      },
+      "enabled_source_count": 29,
+      "configured_source_count": 34,
+      "layer_counts": {
+        "community": 3,
+        "market": 29,
+        "official": 19,
+        "operational": 18
+      },
+      "domain_scope_counts": {
+        "unspecified": 29
+      },
+      "available_layers": [
+        "community",
+        "market",
+        "official",
+        "operational"
+      ],
+      "verification_signal_count": 0,
+      "verification_role_counts": {},
+      "disabled_high_value_sources": [
+        "GovInfo Federal Register",
+        "GovInfo Public and Private Laws"
+      ],
+      "integration_candidates": [],
+      "next_step": "public_consultation, enforcement_action, policy_effective_date, platform_policy_change event model을 검증 산출물에 연결하고 Regulations.gov/입법예고/FTC/PIPC 후보는 source_backlog에서 검증 후 활성화한다.",
+      "disabled_source_classification": {
+        "awaiting_url_replacement": 2,
+        "awaiting_secret": 0,
+        "awaiting_smoke_test": 1,
+        "upstream_section_missing": 0,
+        "awaiting_partnership_review": 0,
+        "accepted_backlog": 2
+      },
+      "disabled_source_classification_total": 5
+    },
+    {
+      "repo": "GovRadar",
+      "priority": "P0",
+      "governance_profile": "high",
+      "primary_motion": "conversion",
+      "source_status": "불균형",
+      "readiness_status": "ready",
+      "quality_score": 95,
+      "data_quality_score": 93,
+      "risk_score": 78,
+      "weakest_dimension": "traceability",
+      "dimensions": {
+        "authority": 100,
+        "operational_depth": 100,
+        "freshness": 91,
+        "actionability": 100,
+        "verification": 95,
+        "traceability": 72
+      },
+      "issues": [
+        "비활성 고가치 source 1개가 있어 freshness와 traceability가 떨어짐"
+      ],
+      "recommendations": [
+        "application_deadline과 eligibility_rule freshness/stale 리포트를 검증 산출물에 추가",
+        "선정 결과/집행 실적 후보는 source_backlog에서 parser·program id mapping·evidence URL 검증 후 단계적 활성화",
+        "지원사업별 신청 가능성 점수와 근거 URL을 결과 리포트에 함께 출력"
+      ],
+      "action_pack": {
+        "required_signals": [
+          "지원사업 공고 원문과 신청 마감일",
+          "대상자·업종·지역 eligibility 조건",
+          "선정 결과와 집행 실적"
+        ],
+        "quality_gates": [
+          "접수 시작/마감/선정 발표일을 별도 필드로 유지",
+          "지원금 규모와 신청 자격은 원문 기준으로 trace 가능해야 함",
+          "마감일 파싱 실패 시 경고를 남기고 임의 추정하지 않음"
+        ],
+        "next_actions": [
+          "application_deadline과 eligibility_rule freshness/stale 리포트를 검증 산출물에 추가",
+          "선정 결과/집행 실적 후보는 source_backlog에서 parser·program id mapping·evidence URL 검증 후 단계적 활성화",
+          "지원사업별 신청 가능성 점수와 근거 URL을 결과 리포트에 함께 출력"
+        ]
+      },
+      "enabled_source_count": 24,
+      "configured_source_count": 25,
+      "layer_counts": {
+        "community": 5,
+        "market": 24,
+        "official": 7,
+        "operational": 8
+      },
+      "domain_scope_counts": {
+        "unspecified": 24
+      },
+      "available_layers": [
+        "community",
+        "market",
+        "official",
+        "operational"
+      ],
+      "verification_signal_count": 0,
+      "verification_role_counts": {},
+      "disabled_high_value_sources": [
+        "정부24 보조금"
+      ],
+      "integration_candidates": [
+        "국민연금 사업장 MCP"
+      ],
+      "next_step": "application_deadline·eligibility_rule 이벤트 모델을 중심으로 freshness/stale 리포트를 붙이고, 선정 결과·집행 실적 후보는 source_backlog에서 검증 후 단계적으로 활성화한다.",
+      "disabled_source_classification": {
+        "awaiting_url_replacement": 0,
+        "awaiting_secret": 0,
+        "awaiting_smoke_test": 0,
+        "upstream_section_missing": 0,
+        "awaiting_partnership_review": 0,
+        "accepted_backlog": 1
+      },
+      "disabled_source_classification_total": 1
     },
     {
       "repo": "FoodRadar",
@@ -158,16 +426,16 @@
       "source_status": "강함",
       "readiness_status": "ready",
       "quality_score": 95,
-      "data_quality_score": 93,
+      "data_quality_score": 92,
       "risk_score": 75,
       "weakest_dimension": "traceability",
       "dimensions": {
         "authority": 90,
         "operational_depth": 100,
-        "freshness": 89,
+        "freshness": 90,
         "actionability": 100,
-        "verification": 100,
-        "traceability": 77
+        "verification": 99,
+        "traceability": 76
       },
       "issues": [
         "현재 설정상 즉시 차단 이슈 없음. 운영 지표와 freshness SLA만 명시하면 됨"
@@ -194,16 +462,16 @@
           "소비자 complaint 후보는 source_backlog에서 API·ToS·개인정보 검토 후 보조 레이어로 활성화"
         ]
       },
-      "enabled_source_count": 12,
+      "enabled_source_count": 11,
       "configured_source_count": 12,
       "layer_counts": {
-        "community": 5,
+        "community": 4,
         "market": 7,
         "official": 5,
-        "operational": 9
+        "operational": 8
       },
       "domain_scope_counts": {
-        "unspecified": 12
+        "unspecified": 11
       },
       "available_layers": [
         "community",
@@ -211,84 +479,24 @@
         "official",
         "operational"
       ],
-      "verification_signal_count": 2,
+      "verification_signal_count": 1,
       "verification_role_counts": {
-        "auxiliary_complaint_signal": 2
+        "auxiliary_complaint_signal": 1
       },
       "disabled_high_value_sources": [],
       "integration_candidates": [
         "식약처 식품DB MCP"
       ],
-      "next_step": "source_backlog의 소비자 불만 후보를 API·ToS·개인정보 검토 후 보조 검증 레이어로 활성화하고, 판매중단 확산·유통 가격 데이터를 후속 운영 source로 보강한다."
-    },
-    {
-      "repo": "GovRadar",
-      "priority": "P0",
-      "governance_profile": "high",
-      "primary_motion": "conversion",
-      "source_status": "강함",
-      "readiness_status": "ready",
-      "quality_score": 95,
-      "data_quality_score": 96,
-      "risk_score": 75,
-      "weakest_dimension": "traceability",
-      "dimensions": {
-        "authority": 100,
-        "operational_depth": 100,
-        "freshness": 96,
-        "actionability": 100,
-        "verification": 95,
-        "traceability": 85
+      "next_step": "source_backlog의 소비자 불만 후보를 API·ToS·개인정보 검토 후 보조 검증 레이어로 활성화하고, 판매중단 확산·유통 가격 데이터를 후속 운영 source로 보강한다.",
+      "disabled_source_classification": {
+        "awaiting_url_replacement": 0,
+        "awaiting_secret": 0,
+        "awaiting_smoke_test": 0,
+        "upstream_section_missing": 0,
+        "awaiting_partnership_review": 0,
+        "accepted_backlog": 1
       },
-      "issues": [
-        "현재 설정상 즉시 차단 이슈 없음. 운영 지표와 freshness SLA만 명시하면 됨"
-      ],
-      "recommendations": [
-        "application_deadline과 eligibility_rule freshness/stale 리포트를 검증 산출물에 추가",
-        "선정 결과/집행 실적 후보는 source_backlog에서 parser·program id mapping·evidence URL 검증 후 단계적 활성화",
-        "지원사업별 신청 가능성 점수와 근거 URL을 결과 리포트에 함께 출력"
-      ],
-      "action_pack": {
-        "required_signals": [
-          "지원사업 공고 원문과 신청 마감일",
-          "대상자·업종·지역 eligibility 조건",
-          "선정 결과와 집행 실적"
-        ],
-        "quality_gates": [
-          "접수 시작/마감/선정 발표일을 별도 필드로 유지",
-          "지원금 규모와 신청 자격은 원문 기준으로 trace 가능해야 함",
-          "마감일 파싱 실패 시 경고를 남기고 임의 추정하지 않음"
-        ],
-        "next_actions": [
-          "application_deadline과 eligibility_rule freshness/stale 리포트를 검증 산출물에 추가",
-          "선정 결과/집행 실적 후보는 source_backlog에서 parser·program id mapping·evidence URL 검증 후 단계적 활성화",
-          "지원사업별 신청 가능성 점수와 근거 URL을 결과 리포트에 함께 출력"
-        ]
-      },
-      "enabled_source_count": 25,
-      "configured_source_count": 25,
-      "layer_counts": {
-        "community": 5,
-        "market": 25,
-        "official": 8,
-        "operational": 9
-      },
-      "domain_scope_counts": {
-        "unspecified": 25
-      },
-      "available_layers": [
-        "community",
-        "market",
-        "official",
-        "operational"
-      ],
-      "verification_signal_count": 0,
-      "verification_role_counts": {},
-      "disabled_high_value_sources": [],
-      "integration_candidates": [
-        "국민연금 사업장 MCP"
-      ],
-      "next_step": "application_deadline·eligibility_rule 이벤트 모델을 중심으로 freshness/stale 리포트를 붙이고, 선정 결과·집행 실적 후보는 source_backlog에서 검증 후 단계적으로 활성화한다."
+      "disabled_source_classification_total": 1
     },
     {
       "repo": "HomeRadar",
@@ -298,7 +506,7 @@
       "source_status": "강함",
       "readiness_status": "ready",
       "quality_score": 95,
-      "data_quality_score": 92,
+      "data_quality_score": 91,
       "risk_score": 75,
       "weakest_dimension": "traceability",
       "dimensions": {
@@ -306,8 +514,8 @@
         "operational_depth": 85,
         "freshness": 100,
         "actionability": 100,
-        "verification": 90,
-        "traceability": 76
+        "verification": 89,
+        "traceability": 75
       },
       "issues": [
         "현재 설정상 즉시 차단 이슈 없음. 운영 지표와 freshness SLA만 명시하면 됨"
@@ -337,24 +545,24 @@
           "지역·단지 단위 중복 제거 리포트를 검증 산출물에 포함"
         ]
       },
-      "enabled_source_count": 11,
+      "enabled_source_count": 10,
       "configured_source_count": 25,
       "layer_counts": {
-        "market": 7,
+        "market": 6,
         "official": 6,
         "operational": 5
       },
       "domain_scope_counts": {
-        "unspecified": 11
+        "unspecified": 10
       },
       "available_layers": [
         "market",
         "official",
         "operational"
       ],
-      "verification_signal_count": 11,
+      "verification_signal_count": 10,
       "verification_role_counts": {
-        "market_corroboration": 5,
+        "market_corroboration": 4,
         "official_primary_transaction": 2,
         "official_policy_corroboration": 2,
         "official_primary_subscription": 1,
@@ -362,140 +570,16 @@
       },
       "disabled_high_value_sources": [],
       "integration_candidates": [],
-      "next_step": "HomeVerificationState를 리포트/MCP 출력에 연결하고 listing·재고 후보는 ToS·stale listing 검증 후 단계적으로 활성화한다."
-    },
-    {
-      "repo": "PolicyRadar",
-      "priority": "P0",
-      "governance_profile": "high",
-      "primary_motion": "compliance-risk",
-      "source_status": "강함",
-      "readiness_status": "ready",
-      "quality_score": 95,
-      "data_quality_score": 96,
-      "risk_score": 75,
-      "weakest_dimension": "traceability",
-      "dimensions": {
-        "authority": 100,
-        "operational_depth": 100,
-        "freshness": 100,
-        "actionability": 100,
-        "verification": 91,
-        "traceability": 85
+      "next_step": "HomeVerificationState를 리포트/MCP 출력에 연결하고 listing·재고 후보는 ToS·stale listing 검증 후 단계적으로 활성화한다.",
+      "disabled_source_classification": {
+        "awaiting_url_replacement": 2,
+        "awaiting_secret": 0,
+        "awaiting_smoke_test": 0,
+        "upstream_section_missing": 0,
+        "awaiting_partnership_review": 0,
+        "accepted_backlog": 13
       },
-      "issues": [
-        "현재 설정상 즉시 차단 이슈 없음. 운영 지표와 freshness SLA만 명시하면 됨"
-      ],
-      "recommendations": [
-        "public_consultation과 enforcement_action freshness/stale 리포트를 검증 산출물에 추가",
-        "Regulations.gov/입법예고/FTC/PIPC 후보는 source_backlog에서 parser·ToS·개인정보·case id mapping 검증 후 단계적 활성화",
-        "정책별 consultation deadline·effective date·enforcement outcome·근거 URL을 결과 리포트에 함께 표시"
-      ],
-      "action_pack": {
-        "required_signals": [
-          "입법예고·행정예고·의견수렴 문서",
-          "제재·과징금·시정명령 같은 enforcement action",
-          "플랫폼 약관·정책 변경 공지"
-        ],
-        "quality_gates": [
-          "공식 규제 문서와 해설 기사를 분리",
-          "시행일·의견 제출 마감일·공포일을 별도 필드로 유지",
-          "N2SF/CSAP/FIPS 199/FedRAMP 20x 분류는 공식 등급과 내부 오버레이를 분리"
-        ],
-        "next_actions": [
-          "public_consultation과 enforcement_action freshness/stale 리포트를 검증 산출물에 추가",
-          "Regulations.gov/입법예고/FTC/PIPC 후보는 source_backlog에서 parser·ToS·개인정보·case id mapping 검증 후 단계적 활성화",
-          "정책별 consultation deadline·effective date·enforcement outcome·근거 URL을 결과 리포트에 함께 표시"
-        ]
-      },
-      "enabled_source_count": 34,
-      "configured_source_count": 34,
-      "layer_counts": {
-        "community": 3,
-        "market": 34,
-        "official": 23,
-        "operational": 21
-      },
-      "domain_scope_counts": {
-        "unspecified": 34
-      },
-      "available_layers": [
-        "community",
-        "market",
-        "official",
-        "operational"
-      ],
-      "verification_signal_count": 0,
-      "verification_role_counts": {},
-      "disabled_high_value_sources": [],
-      "integration_candidates": [],
-      "next_step": "public_consultation, enforcement_action, policy_effective_date, platform_policy_change event model을 검증 산출물에 연결하고 Regulations.gov/입법예고/FTC/PIPC 후보는 source_backlog에서 검증 후 활성화한다."
-    },
-    {
-      "repo": "RefundRadar",
-      "priority": "P0",
-      "governance_profile": "high",
-      "primary_motion": "compliance-risk",
-      "source_status": "강함",
-      "readiness_status": "ready",
-      "quality_score": 95,
-      "data_quality_score": 91,
-      "risk_score": 75,
-      "weakest_dimension": "verification",
-      "dimensions": {
-        "authority": 100,
-        "operational_depth": 100,
-        "freshness": 100,
-        "actionability": 100,
-        "verification": 62,
-        "traceability": 85
-      },
-      "issues": [
-        "공식 발표와 사용자 피해/불만 신호를 교차 검증할 보조 레이어가 없음",
-        "가장 약한 품질 축은 교차 검증(62)"
-      ],
-      "recommendations": [
-        "refund_claim_window와 complaint_resolution freshness/stale 리포트를 검증 산출물에 추가",
-        "seller/airline policy diff와 complaint resolution 후보는 source_backlog에서 ToS·개인정보·parser 검증 후 단계적 활성화",
-        "환불 사건별 claim deadline·resolution status·근거 URL을 결과 리포트에 함께 표시"
-      ],
-      "action_pack": {
-        "required_signals": [
-          "환불·리콜·소비자 구제 공식 공지",
-          "판매자·항공사·플랫폼별 환불 정책 변경",
-          "처리 상태와 complaint resolution 결과"
-        ],
-        "quality_gates": [
-          "환불 가능 조건과 실제 처리 상태를 분리",
-          "정책 변경일과 적용 시작일을 별도 필드로 유지",
-          "커뮤니티 불만은 공식 구제 결과와 cross-reference로만 사용"
-        ],
-        "next_actions": [
-          "refund_claim_window와 complaint_resolution freshness/stale 리포트를 검증 산출물에 추가",
-          "seller/airline policy diff와 complaint resolution 후보는 source_backlog에서 ToS·개인정보·parser 검증 후 단계적 활성화",
-          "환불 사건별 claim deadline·resolution status·근거 URL을 결과 리포트에 함께 표시"
-        ]
-      },
-      "enabled_source_count": 35,
-      "configured_source_count": 39,
-      "layer_counts": {
-        "market": 35,
-        "official": 19,
-        "operational": 22
-      },
-      "domain_scope_counts": {
-        "unspecified": 35
-      },
-      "available_layers": [
-        "market",
-        "official",
-        "operational"
-      ],
-      "verification_signal_count": 0,
-      "verification_role_counts": {},
-      "disabled_high_value_sources": [],
-      "integration_candidates": [],
-      "next_step": "refund_claim_window, recall_refund_notice, complaint_resolution event model을 검증 산출물에 연결하고 seller/airline policy diff 후보는 source_backlog에서 검증 후 활성화한다."
+      "disabled_source_classification_total": 15
     },
     {
       "repo": "TrustRadar",
@@ -541,16 +625,16 @@
           "incident severity scoring에 VerificationState·공식 근거 URL·AIAssetRisk를 함께 표시"
         ]
       },
-      "enabled_source_count": 27,
+      "enabled_source_count": 25,
       "configured_source_count": 27,
       "layer_counts": {
         "community": 3,
-        "market": 27,
-        "official": 9,
-        "operational": 15
+        "market": 25,
+        "official": 7,
+        "operational": 13
       },
       "domain_scope_counts": {
-        "unspecified": 27
+        "unspecified": 25
       },
       "available_layers": [
         "community",
@@ -558,19 +642,109 @@
         "official",
         "operational"
       ],
-      "verification_signal_count": 15,
+      "verification_signal_count": 13,
       "verification_role_counts": {
         "corroborating_report": 4,
-        "official_action": 3,
         "community_signal": 3,
         "structured_vulnerability_reference": 2,
         "exploited_vulnerability_reference": 1,
         "official_guidance": 1,
-        "official_disclosure": 1
+        "official_disclosure": 1,
+        "official_action": 1
       },
       "disabled_high_value_sources": [],
       "integration_candidates": [],
-      "next_step": "incident_disclosure, status_page_incident, enforcement_action, consumer_complaint, ai_asset_risk event model을 검증 산출물에 연결하고 커뮤니티 신호는 official_confirmation_required 상태로만 병합한다."
+      "next_step": "incident_disclosure, status_page_incident, enforcement_action, consumer_complaint, ai_asset_risk event model을 검증 산출물에 연결하고 커뮤니티 신호는 official_confirmation_required 상태로만 병합한다.",
+      "disabled_source_classification": {
+        "awaiting_url_replacement": 2,
+        "awaiting_secret": 0,
+        "awaiting_smoke_test": 0,
+        "upstream_section_missing": 0,
+        "awaiting_partnership_review": 0,
+        "accepted_backlog": 0
+      },
+      "disabled_source_classification_total": 2
+    },
+    {
+      "repo": "EventRadar",
+      "priority": "P1",
+      "governance_profile": "medium",
+      "primary_motion": "intelligence",
+      "source_status": "불균형",
+      "readiness_status": "ready",
+      "quality_score": 95,
+      "data_quality_score": 70,
+      "risk_score": 69,
+      "weakest_dimension": "operational_depth",
+      "dimensions": {
+        "authority": 94,
+        "operational_depth": 35,
+        "freshness": 85,
+        "actionability": 47,
+        "verification": 95,
+        "traceability": 66
+      },
+      "issues": [
+        "비활성 고가치 source 3개가 있어 freshness와 traceability가 떨어짐",
+        "가장 약한 품질 축은 운영 깊이(35)"
+      ],
+      "recommendations": [
+        "official calendar와 ticket availability source를 우선 추가",
+        "venue id와 event occurrence id 정규화 규칙을 추가",
+        "참가사/스폰서 entity를 리드 발굴용 필드로 추출"
+      ],
+      "action_pack": {
+        "required_signals": [
+          "공식 행사 일정과 venue calendar",
+          "티켓 오픈·잔여석·매진 상태",
+          "스폰서·참가사·연사 같은 B2B 전환 신호"
+        ],
+        "quality_gates": [
+          "행사일·티켓 오픈일·수집일을 별도 필드로 유지",
+          "동일 행사의 지역/회차/온라인 여부를 canonical key로 분리",
+          "미디어 소개 기사와 공식 등록/티켓 source를 분리"
+        ],
+        "next_actions": [
+          "official calendar와 ticket availability source를 우선 추가",
+          "venue id와 event occurrence id 정규화 규칙을 추가",
+          "참가사/스폰서 entity를 리드 발굴용 필드로 추출"
+        ]
+      },
+      "enabled_source_count": 28,
+      "configured_source_count": 36,
+      "layer_counts": {
+        "community": 4,
+        "market": 28,
+        "official": 6,
+        "operational": 1
+      },
+      "domain_scope_counts": {
+        "unspecified": 28
+      },
+      "available_layers": [
+        "community",
+        "market",
+        "official",
+        "operational"
+      ],
+      "verification_signal_count": 0,
+      "verification_role_counts": {},
+      "disabled_high_value_sources": [
+        "한국문화예술위원회",
+        "국립중앙박물관 행사",
+        "한국관광공사 축제정보"
+      ],
+      "integration_candidates": [],
+      "next_step": "공식 일정 API, 티켓 판매·잔여석, venue calendar를 붙여 실행 가능성을 높인다.",
+      "disabled_source_classification": {
+        "awaiting_url_replacement": 2,
+        "awaiting_secret": 0,
+        "awaiting_smoke_test": 0,
+        "upstream_section_missing": 0,
+        "awaiting_partnership_review": 0,
+        "accepted_backlog": 6
+      },
+      "disabled_source_classification_total": 8
     },
     {
       "repo": "MobilityRadar",
@@ -641,7 +815,16 @@
       },
       "disabled_high_value_sources": [],
       "integration_candidates": [],
-      "next_step": "EV 등록·충전 요금·대중교통 요금 source를 추가하고 coffee split 후보의 별도 repo 승격 여부를 결정한다."
+      "next_step": "EV 등록·충전 요금·대중교통 요금 source를 추가하고 coffee split 후보의 별도 repo 승격 여부를 결정한다.",
+      "disabled_source_classification": {
+        "awaiting_url_replacement": 4,
+        "awaiting_secret": 0,
+        "awaiting_smoke_test": 0,
+        "upstream_section_missing": 0,
+        "awaiting_partnership_review": 0,
+        "accepted_backlog": 1
+      },
+      "disabled_source_classification_total": 5
     },
     {
       "repo": "WineRadar",
@@ -687,16 +870,16 @@
           "importer portfolio sales 후보를 별도 capability/source로 분리 평가"
         ]
       },
-      "enabled_source_count": 64,
+      "enabled_source_count": 58,
       "configured_source_count": 85,
       "layer_counts": {
         "community": 5,
-        "market": 55,
+        "market": 49,
         "official": 15,
         "operational": 2
       },
       "domain_scope_counts": {
-        "unspecified": 64
+        "unspecified": 58
       },
       "available_layers": [
         "community",
@@ -708,74 +891,16 @@
       "verification_role_counts": {},
       "disabled_high_value_sources": [],
       "integration_candidates": [],
-      "next_step": "auction price, 레스토랑 와인리스트 변동, importer portfolio sales 같은 거래 신호를 더한다."
-    },
-    {
-      "repo": "EventRadar",
-      "priority": "P1",
-      "governance_profile": "medium",
-      "primary_motion": "intelligence",
-      "source_status": "강함",
-      "readiness_status": "ready",
-      "quality_score": 95,
-      "data_quality_score": 77,
-      "risk_score": 53,
-      "weakest_dimension": "operational_depth",
-      "dimensions": {
-        "authority": 100,
-        "operational_depth": 35,
-        "freshness": 92,
-        "actionability": 53,
-        "verification": 95,
-        "traceability": 85
+      "next_step": "auction price, 레스토랑 와인리스트 변동, importer portfolio sales 같은 거래 신호를 더한다.",
+      "disabled_source_classification": {
+        "awaiting_url_replacement": 8,
+        "awaiting_secret": 0,
+        "awaiting_smoke_test": 0,
+        "upstream_section_missing": 0,
+        "awaiting_partnership_review": 0,
+        "accepted_backlog": 19
       },
-      "issues": [
-        "가장 약한 품질 축은 운영 깊이(35)"
-      ],
-      "recommendations": [
-        "official calendar와 ticket availability source를 우선 추가",
-        "venue id와 event occurrence id 정규화 규칙을 추가",
-        "참가사/스폰서 entity를 리드 발굴용 필드로 추출"
-      ],
-      "action_pack": {
-        "required_signals": [
-          "공식 행사 일정과 venue calendar",
-          "티켓 오픈·잔여석·매진 상태",
-          "스폰서·참가사·연사 같은 B2B 전환 신호"
-        ],
-        "quality_gates": [
-          "행사일·티켓 오픈일·수집일을 별도 필드로 유지",
-          "동일 행사의 지역/회차/온라인 여부를 canonical key로 분리",
-          "미디어 소개 기사와 공식 등록/티켓 source를 분리"
-        ],
-        "next_actions": [
-          "official calendar와 ticket availability source를 우선 추가",
-          "venue id와 event occurrence id 정규화 규칙을 추가",
-          "참가사/스폰서 entity를 리드 발굴용 필드로 추출"
-        ]
-      },
-      "enabled_source_count": 36,
-      "configured_source_count": 36,
-      "layer_counts": {
-        "community": 4,
-        "market": 32,
-        "official": 9,
-        "operational": 1
-      },
-      "domain_scope_counts": {
-        "unspecified": 36
-      },
-      "available_layers": [
-        "community",
-        "market",
-        "official",
-        "operational"
-      ],
-      "verification_signal_count": 0,
-      "verification_role_counts": {},
-      "disabled_high_value_sources": [],
-      "integration_candidates": [],
-      "next_step": "공식 일정 API, 티켓 판매·잔여석, venue calendar를 붙여 실행 가능성을 높인다."
+      "disabled_source_classification_total": 27
     },
     {
       "repo": "PriceRadar",
@@ -840,29 +965,38 @@
       "verification_role_counts": {},
       "disabled_high_value_sources": [],
       "integration_candidates": [],
-      "next_step": "SKU 가격 이력, 재고·품절, 카드혜택·쿠폰까지 연결해 구매의사결정 정확도를 더 높인다."
+      "next_step": "SKU 가격 이력, 재고·품절, 카드혜택·쿠폰까지 연결해 구매의사결정 정확도를 더 높인다.",
+      "disabled_source_classification": {
+        "awaiting_url_replacement": 0,
+        "awaiting_secret": 0,
+        "awaiting_smoke_test": 0,
+        "upstream_section_missing": 0,
+        "awaiting_partnership_review": 0,
+        "accepted_backlog": 1
+      },
+      "disabled_source_classification_total": 1
     },
     {
       "repo": "BenefitRadar",
       "priority": "P1",
       "governance_profile": "medium",
       "primary_motion": "conversion",
-      "source_status": "강함",
+      "source_status": "불균형",
       "readiness_status": "ready",
       "quality_score": 95,
-      "data_quality_score": 96,
-      "risk_score": 45,
+      "data_quality_score": 93,
+      "risk_score": 48,
       "weakest_dimension": "traceability",
       "dimensions": {
         "authority": 100,
         "operational_depth": 100,
-        "freshness": 93,
+        "freshness": 89,
         "actionability": 100,
         "verification": 95,
-        "traceability": 85
+        "traceability": 72
       },
       "issues": [
-        "현재 설정상 즉시 차단 이슈 없음. 운영 지표와 freshness SLA만 명시하면 됨"
+        "비활성 고가치 source 1개가 있어 freshness와 traceability가 떨어짐"
       ],
       "recommendations": [
         "deadline과 eligibility extractor를 운영 레이어로 추가",
@@ -886,16 +1020,16 @@
           "선정/집행 실적 source를 후행 검증 신호로 연결"
         ]
       },
-      "enabled_source_count": 31,
+      "enabled_source_count": 30,
       "configured_source_count": 38,
       "layer_counts": {
         "community": 8,
         "market": 22,
-        "official": 16,
-        "operational": 12
+        "official": 15,
+        "operational": 11
       },
       "domain_scope_counts": {
-        "unspecified": 31
+        "unspecified": 30
       },
       "available_layers": [
         "community",
@@ -905,9 +1039,20 @@
       ],
       "verification_signal_count": 0,
       "verification_role_counts": {},
-      "disabled_high_value_sources": [],
+      "disabled_high_value_sources": [
+        "보조금24"
+      ],
       "integration_candidates": [],
-      "next_step": "신청 마감일, eligibility 계산, 집행 실적까지 붙여 실제 신청 행동과 연결한다."
+      "next_step": "신청 마감일, eligibility 계산, 집행 실적까지 붙여 실제 신청 행동과 연결한다.",
+      "disabled_source_classification": {
+        "awaiting_url_replacement": 6,
+        "awaiting_secret": 0,
+        "awaiting_smoke_test": 0,
+        "upstream_section_missing": 0,
+        "awaiting_partnership_review": 0,
+        "accepted_backlog": 2
+      },
+      "disabled_source_classification_total": 8
     },
     {
       "repo": "TrendRadar",
@@ -981,7 +1126,97 @@
       },
       "disabled_high_value_sources": [],
       "integration_candidates": [],
-      "next_step": "shopping·conversion 지표를 더 넓히고 vertical keyword pack을 표준화한다."
+      "next_step": "shopping·conversion 지표를 더 넓히고 vertical keyword pack을 표준화한다.",
+      "disabled_source_classification": {
+        "awaiting_url_replacement": 0,
+        "awaiting_secret": 0,
+        "awaiting_smoke_test": 0,
+        "upstream_section_missing": 0,
+        "awaiting_partnership_review": 0,
+        "accepted_backlog": 0
+      },
+      "disabled_source_classification_total": 0
+    },
+    {
+      "repo": "PropertyRadar",
+      "priority": "P2",
+      "governance_profile": "high",
+      "primary_motion": "conversion",
+      "source_status": "불균형",
+      "readiness_status": "ready",
+      "quality_score": 95,
+      "data_quality_score": 55,
+      "risk_score": 66,
+      "weakest_dimension": "operational_depth",
+      "dimensions": {
+        "authority": 43,
+        "operational_depth": 27,
+        "freshness": 84,
+        "actionability": 64,
+        "verification": 53,
+        "traceability": 58
+      },
+      "issues": [
+        "비활성 고가치 source 2개가 있어 freshness와 traceability가 떨어짐",
+        "사업 가치 프레임워크 기준 누락 계층: 커뮤니티",
+        "고거버넌스 저장소 대비 공식 근거 source가 얕음",
+        "전환/리스크 판단에 필요한 신청·상태·거래형 source가 부족함",
+        "가장 약한 품질 축은 운영 깊이(27)"
+      ],
+      "recommendations": [
+        "실거래, 분양 경쟁률, inventory source를 운영 레이어로 보강",
+        "인허가·준공 source를 공식 레이어로 추가",
+        "지역/단지 canonicalization과 중복 거래 검증 리포트를 추가"
+      ],
+      "action_pack": {
+        "required_signals": [
+          "실거래·분양 경쟁률·매물 inventory",
+          "인허가·준공·입주 예정 데이터",
+          "지역·단지·면적 기준 canonical property key"
+        ],
+        "quality_gates": [
+          "거래일·계약일·신고일·수집일을 별도 필드로 유지",
+          "뉴스와 실거래/재고 신호를 같은 품질 등급으로 병합하지 않음",
+          "지역 코드와 단지명 alias를 추적"
+        ],
+        "next_actions": [
+          "실거래, 분양 경쟁률, inventory source를 운영 레이어로 보강",
+          "인허가·준공 source를 공식 레이어로 추가",
+          "지역/단지 canonicalization과 중복 거래 검증 리포트를 추가"
+        ]
+      },
+      "enabled_source_count": 9,
+      "configured_source_count": 17,
+      "layer_counts": {
+        "market": 9,
+        "official": 2,
+        "operational": 1
+      },
+      "domain_scope_counts": {
+        "unspecified": 9
+      },
+      "available_layers": [
+        "market",
+        "official",
+        "operational"
+      ],
+      "verification_signal_count": 0,
+      "verification_role_counts": {},
+      "disabled_high_value_sources": [
+        "부동산 실거래가 MCP",
+        "청약정보 MCP"
+      ],
+      "integration_candidates": [],
+      "next_step": "실거래, 분양 경쟁률, 매물 inventory, 인허가·준공 데이터를 더한다.",
+      "disabled_source_classification": {
+        "awaiting_url_replacement": 0,
+        "awaiting_secret": 0,
+        "awaiting_smoke_test": 0,
+        "upstream_section_missing": 0,
+        "awaiting_partnership_review": 0,
+        "accepted_backlog": 8
+      },
+      "disabled_source_classification_total": 8
     },
     {
       "repo": "BookRadar",
@@ -1052,98 +1287,41 @@
         "교보문고 북뉴스"
       ],
       "integration_candidates": [],
-      "next_step": "도서 판매 랭킹 추이, 도서관 대출, 작가 행사 일정을 더해 수요 예측력을 올린다."
-    },
-    {
-      "repo": "PropertyRadar",
-      "priority": "P2",
-      "governance_profile": "high",
-      "primary_motion": "conversion",
-      "source_status": "강함",
-      "readiness_status": "ready",
-      "quality_score": 95,
-      "data_quality_score": 75,
-      "risk_score": 40,
-      "weakest_dimension": "operational_depth",
-      "dimensions": {
-        "authority": 61,
-        "operational_depth": 47,
-        "freshness": 86,
-        "actionability": 84,
-        "verification": 92,
-        "traceability": 82
+      "next_step": "도서 판매 랭킹 추이, 도서관 대출, 작가 행사 일정을 더해 수요 예측력을 올린다.",
+      "disabled_source_classification": {
+        "awaiting_url_replacement": 7,
+        "awaiting_secret": 0,
+        "awaiting_smoke_test": 0,
+        "upstream_section_missing": 0,
+        "awaiting_partnership_review": 0,
+        "accepted_backlog": 5
       },
-      "issues": [
-        "고거버넌스 저장소 대비 공식 근거 source가 얕음",
-        "가장 약한 품질 축은 운영 깊이(47)"
-      ],
-      "recommendations": [
-        "실거래, 분양 경쟁률, inventory source를 운영 레이어로 보강",
-        "인허가·준공 source를 공식 레이어로 추가",
-        "지역/단지 canonicalization과 중복 거래 검증 리포트를 추가"
-      ],
-      "action_pack": {
-        "required_signals": [
-          "실거래·분양 경쟁률·매물 inventory",
-          "인허가·준공·입주 예정 데이터",
-          "지역·단지·면적 기준 canonical property key"
-        ],
-        "quality_gates": [
-          "거래일·계약일·신고일·수집일을 별도 필드로 유지",
-          "뉴스와 실거래/재고 신호를 같은 품질 등급으로 병합하지 않음",
-          "지역 코드와 단지명 alias를 추적"
-        ],
-        "next_actions": [
-          "실거래, 분양 경쟁률, inventory source를 운영 레이어로 보강",
-          "인허가·준공 source를 공식 레이어로 추가",
-          "지역/단지 canonicalization과 중복 거래 검증 리포트를 추가"
-        ]
-      },
-      "enabled_source_count": 17,
-      "configured_source_count": 17,
-      "layer_counts": {
-        "community": 6,
-        "market": 9,
-        "official": 4,
-        "operational": 3
-      },
-      "domain_scope_counts": {
-        "unspecified": 17
-      },
-      "available_layers": [
-        "community",
-        "market",
-        "official",
-        "operational"
-      ],
-      "verification_signal_count": 0,
-      "verification_role_counts": {},
-      "disabled_high_value_sources": [],
-      "integration_candidates": [],
-      "next_step": "실거래, 분양 경쟁률, 매물 inventory, 인허가·준공 데이터를 더한다."
+      "disabled_source_classification_total": 12
     },
     {
       "repo": "JobRadar",
       "priority": "P2",
       "governance_profile": "high",
       "primary_motion": "conversion",
-      "source_status": "강함",
+      "source_status": "불균형",
       "readiness_status": "ready",
       "quality_score": 95,
-      "data_quality_score": 77,
-      "risk_score": 38,
-      "weakest_dimension": "authority",
+      "data_quality_score": 66,
+      "risk_score": 52,
+      "weakest_dimension": "operational_depth",
       "dimensions": {
-        "authority": 52,
-        "operational_depth": 57,
-        "freshness": 86,
-        "actionability": 92,
-        "verification": 89,
-        "traceability": 85
+        "authority": 43,
+        "operational_depth": 37,
+        "freshness": 90,
+        "actionability": 74,
+        "verification": 86,
+        "traceability": 67
       },
       "issues": [
+        "비활성 고가치 source 1개가 있어 freshness와 traceability가 떨어짐",
         "고거버넌스 저장소 대비 공식 근거 source가 얕음",
-        "가장 약한 품질 축은 권위성(52)"
+        "전환/리스크 판단에 필요한 신청·상태·거래형 source가 부족함",
+        "가장 약한 품질 축은 운영 깊이(37)"
       ],
       "recommendations": [
         "공식 채용공고와 job board source tier를 보강",
@@ -1167,16 +1345,16 @@
           "회사·직무·지역 canonicalization rule을 추가"
         ]
       },
-      "enabled_source_count": 21,
+      "enabled_source_count": 15,
       "configured_source_count": 21,
       "layer_counts": {
         "community": 7,
-        "market": 14,
-        "official": 3,
-        "operational": 4
+        "market": 15,
+        "official": 2,
+        "operational": 2
       },
       "domain_scope_counts": {
-        "unspecified": 21
+        "unspecified": 15
       },
       "available_layers": [
         "community",
@@ -1186,9 +1364,261 @@
       ],
       "verification_signal_count": 0,
       "verification_role_counts": {},
-      "disabled_high_value_sources": [],
+      "disabled_high_value_sources": [
+        "LinkedIn Talent Blog"
+      ],
       "integration_candidates": [],
-      "next_step": "공식 채용공고, job board API, salary·skill trend 데이터를 더해 운영 신호를 만든다."
+      "next_step": "공식 채용공고, job board API, salary·skill trend 데이터를 더해 운영 신호를 만든다.",
+      "disabled_source_classification": {
+        "awaiting_url_replacement": 0,
+        "awaiting_secret": 0,
+        "awaiting_smoke_test": 0,
+        "upstream_section_missing": 0,
+        "awaiting_partnership_review": 0,
+        "accepted_backlog": 6
+      },
+      "disabled_source_classification_total": 6
+    },
+    {
+      "repo": "GameRadar",
+      "priority": "P2",
+      "governance_profile": "low",
+      "primary_motion": "intelligence",
+      "source_status": "불균형",
+      "readiness_status": "ready",
+      "quality_score": 95,
+      "data_quality_score": 72,
+      "risk_score": 41,
+      "weakest_dimension": "authority",
+      "dimensions": {
+        "authority": 53,
+        "operational_depth": 65,
+        "freshness": 83,
+        "actionability": 75,
+        "verification": 86,
+        "traceability": 72
+      },
+      "issues": [
+        "비활성 고가치 source 1개가 있어 freshness와 traceability가 떨어짐",
+        "가장 약한 품질 축은 권위성(53)"
+      ],
+      "recommendations": [
+        "Steam charts, store ranking, patch note source를 운영 레이어로 추가",
+        "게임/플랫폼 canonicalization rule을 추가",
+        "흥행 신호와 커뮤니티 반응을 별도 score로 시각화"
+      ],
+      "action_pack": {
+        "required_signals": [
+          "Steam charts와 app/console store ranking",
+          "패치노트·릴리스 일정·DLC 공지",
+          "동접·매출·리뷰 변화 같은 흥행 신호"
+        ],
+        "quality_gates": [
+          "게임명·플랫폼·edition을 canonical key로 분리",
+          "출시 전 관심 신호와 출시 후 운영 신호를 분리",
+          "패치일·출시일·수집일을 별도 필드로 유지"
+        ],
+        "next_actions": [
+          "Steam charts, store ranking, patch note source를 운영 레이어로 추가",
+          "게임/플랫폼 canonicalization rule을 추가",
+          "흥행 신호와 커뮤니티 반응을 별도 score로 시각화"
+        ]
+      },
+      "enabled_source_count": 37,
+      "configured_source_count": 48,
+      "layer_counts": {
+        "community": 13,
+        "market": 25,
+        "official": 2,
+        "operational": 4
+      },
+      "domain_scope_counts": {
+        "unspecified": 37
+      },
+      "available_layers": [
+        "community",
+        "market",
+        "official",
+        "operational"
+      ],
+      "verification_signal_count": 0,
+      "verification_role_counts": {},
+      "disabled_high_value_sources": [
+        "Steam News"
+      ],
+      "integration_candidates": [],
+      "next_step": "Steam charts, app store ranking, 콘솔 스토어 bestseller, patch note를 넣어 흥행 추적을 보강한다.",
+      "disabled_source_classification": {
+        "awaiting_url_replacement": 8,
+        "awaiting_secret": 0,
+        "awaiting_smoke_test": 0,
+        "upstream_section_missing": 0,
+        "awaiting_partnership_review": 0,
+        "accepted_backlog": 3
+      },
+      "disabled_source_classification_total": 11
+    },
+    {
+      "repo": "QueueRadar",
+      "priority": "P2",
+      "governance_profile": "medium",
+      "primary_motion": "conversion",
+      "source_status": "불균형",
+      "readiness_status": "ready",
+      "quality_score": 95,
+      "data_quality_score": 87,
+      "risk_score": 40,
+      "weakest_dimension": "traceability",
+      "dimensions": {
+        "authority": 100,
+        "operational_depth": 100,
+        "freshness": 83,
+        "actionability": 100,
+        "verification": 77,
+        "traceability": 60
+      },
+      "issues": [
+        "비활성 고가치 source 5개가 있어 freshness와 traceability가 떨어짐",
+        "가장 약한 품질 축은 추적성(60)"
+      ],
+      "recommendations": [
+        "티켓 가격, 예약 슬롯, 날씨 source를 예측 보조 레이어로 연결",
+        "장소/시설 canonicalization rule을 추가",
+        "대기시간 outlier와 stale reading 검증을 리포트에 포함"
+      ],
+      "action_pack": {
+        "required_signals": [
+          "실시간 대기시간·예약 슬롯·운영 상태",
+          "티켓 가격·날씨·시즈널리티 보조 신호",
+          "장소·시설·서비스 단위 canonical queue key"
+        ],
+        "quality_gates": [
+          "관측 시각과 이벤트 시각을 별도 필드로 유지",
+          "대기시간 단위와 timezone을 명시",
+          "예측용 외부 변수는 실제 대기시간과 분리 저장"
+        ],
+        "next_actions": [
+          "티켓 가격, 예약 슬롯, 날씨 source를 예측 보조 레이어로 연결",
+          "장소/시설 canonicalization rule을 추가",
+          "대기시간 outlier와 stale reading 검증을 리포트에 포함"
+        ]
+      },
+      "enabled_source_count": 23,
+      "configured_source_count": 39,
+      "layer_counts": {
+        "community": 1,
+        "market": 11,
+        "official": 14,
+        "operational": 12
+      },
+      "domain_scope_counts": {
+        "unspecified": 23
+      },
+      "available_layers": [
+        "community",
+        "market",
+        "official",
+        "operational"
+      ],
+      "verification_signal_count": 0,
+      "verification_role_counts": {},
+      "disabled_high_value_sources": [
+        "에버랜드 공식",
+        "롯데월드 공식",
+        "서울랜드 공식",
+        "레고랜드 코리아",
+        "캐리비안베이"
+      ],
+      "integration_candidates": [],
+      "next_step": "티켓 가격, 예약 슬롯, 날씨·시즈널리티를 합쳐 예측력을 높인다.",
+      "disabled_source_classification": {
+        "awaiting_url_replacement": 2,
+        "awaiting_secret": 0,
+        "awaiting_smoke_test": 0,
+        "upstream_section_missing": 0,
+        "awaiting_partnership_review": 0,
+        "accepted_backlog": 14
+      },
+      "disabled_source_classification_total": 16
+    },
+    {
+      "repo": "ArtRadar",
+      "priority": "P2",
+      "governance_profile": "low",
+      "primary_motion": "intelligence",
+      "source_status": "불균형",
+      "readiness_status": "ready",
+      "quality_score": 95,
+      "data_quality_score": 77,
+      "risk_score": 36,
+      "weakest_dimension": "operational_depth",
+      "dimensions": {
+        "authority": 100,
+        "operational_depth": 45,
+        "freshness": 90,
+        "actionability": 59,
+        "verification": 95,
+        "traceability": 72
+      },
+      "issues": [
+        "비활성 고가치 source 1개가 있어 freshness와 traceability가 떨어짐",
+        "가장 약한 품질 축은 운영 깊이(45)"
+      ],
+      "recommendations": [
+        "경매 낙찰가와 아트페어 참가사 source를 운영 레이어로 추가",
+        "작가/기관 canonicalization rule을 보강",
+        "전시 coverage와 거래 신호를 분리한 market score를 추가"
+      ],
+      "action_pack": {
+        "required_signals": [
+          "경매 낙찰가와 추정가·낙찰일",
+          "전시 티켓 판매·관람객·아트페어 참가사",
+          "작가·갤러리·기관의 canonical entity"
+        ],
+        "quality_gates": [
+          "작가명·작품명·제작연도 alias를 분리 관리",
+          "전시 기사와 거래/판매 신호를 별도 레이어로 유지",
+          "낙찰가 통화와 수수료 포함 여부를 명시"
+        ],
+        "next_actions": [
+          "경매 낙찰가와 아트페어 참가사 source를 운영 레이어로 추가",
+          "작가/기관 canonicalization rule을 보강",
+          "전시 coverage와 거래 신호를 분리한 market score를 추가"
+        ]
+      },
+      "enabled_source_count": 37,
+      "configured_source_count": 41,
+      "layer_counts": {
+        "community": 6,
+        "market": 35,
+        "official": 9,
+        "operational": 2
+      },
+      "domain_scope_counts": {
+        "unspecified": 37
+      },
+      "available_layers": [
+        "community",
+        "market",
+        "official",
+        "operational"
+      ],
+      "verification_signal_count": 0,
+      "verification_role_counts": {},
+      "disabled_high_value_sources": [
+        "국립현대미술관"
+      ],
+      "integration_candidates": [],
+      "next_step": "경매 낙찰가, 티켓 판매, 아트페어 참가사 같은 거래형 소스를 넣어 시장성 판단을 강화한다.",
+      "disabled_source_classification": {
+        "awaiting_url_replacement": 3,
+        "awaiting_secret": 0,
+        "awaiting_smoke_test": 0,
+        "upstream_section_missing": 0,
+        "awaiting_partnership_review": 0,
+        "accepted_backlog": 1
+      },
+      "disabled_source_classification_total": 4
     },
     {
       "repo": "MovieRadar",
@@ -1253,65 +1683,72 @@
       "verification_role_counts": {},
       "disabled_high_value_sources": [],
       "integration_candidates": [],
-      "next_step": "국내 예매 순위, OTT Top 10, release calendar, audience rating을 더한다."
+      "next_step": "국내 예매 순위, OTT Top 10, release calendar, audience rating을 더한다.",
+      "disabled_source_classification": {
+        "awaiting_url_replacement": 0,
+        "awaiting_secret": 0,
+        "awaiting_smoke_test": 0,
+        "upstream_section_missing": 0,
+        "awaiting_partnership_review": 0,
+        "accepted_backlog": 0
+      },
+      "disabled_source_classification_total": 0
     },
     {
-      "repo": "ArtRadar",
+      "repo": "PaperRadar",
       "priority": "P2",
       "governance_profile": "low",
       "primary_motion": "intelligence",
       "source_status": "강함",
       "readiness_status": "ready",
       "quality_score": 95,
-      "data_quality_score": 79,
-      "risk_score": 31,
+      "data_quality_score": 78,
+      "risk_score": 32,
       "weakest_dimension": "operational_depth",
       "dimensions": {
-        "authority": 100,
-        "operational_depth": 45,
-        "freshness": 90,
-        "actionability": 61,
-        "verification": 95,
-        "traceability": 85
+        "authority": 98,
+        "operational_depth": 55,
+        "freshness": 92,
+        "actionability": 69,
+        "verification": 70,
+        "traceability": 84
       },
       "issues": [
-        "가장 약한 품질 축은 운영 깊이(45)"
+        "가장 약한 품질 축은 운영 깊이(55)"
       ],
       "recommendations": [
-        "경매 낙찰가와 아트페어 참가사 source를 운영 레이어로 추가",
-        "작가/기관 canonicalization rule을 보강",
-        "전시 coverage와 거래 신호를 분리한 market score를 추가"
+        "citation, GitHub, benchmark leaderboard source를 운영 레이어로 보강",
+        "arXiv/DOI/repository canonicalization rule을 추가",
+        "재현성 score에 code availability와 benchmark 근거를 포함"
       ],
       "action_pack": {
         "required_signals": [
-          "경매 낙찰가와 추정가·낙찰일",
-          "전시 티켓 판매·관람객·아트페어 참가사",
-          "작가·갤러리·기관의 canonical entity"
+          "citation과 benchmark leaderboard",
+          "GitHub code repository와 star/fork activity",
+          "model release·dataset·implementation link"
         ],
         "quality_gates": [
-          "작가명·작품명·제작연도 alias를 분리 관리",
-          "전시 기사와 거래/판매 신호를 별도 레이어로 유지",
-          "낙찰가 통화와 수수료 포함 여부를 명시"
+          "paper title·arXiv id·DOI를 canonical key로 정리",
+          "논문 발표일과 코드 공개일을 별도 이벤트로 유지",
+          "citation count는 수집 source와 기준일을 함께 기록"
         ],
         "next_actions": [
-          "경매 낙찰가와 아트페어 참가사 source를 운영 레이어로 추가",
-          "작가/기관 canonicalization rule을 보강",
-          "전시 coverage와 거래 신호를 분리한 market score를 추가"
+          "citation, GitHub, benchmark leaderboard source를 운영 레이어로 보강",
+          "arXiv/DOI/repository canonicalization rule을 추가",
+          "재현성 score에 code availability와 benchmark 근거를 포함"
         ]
       },
-      "enabled_source_count": 41,
-      "configured_source_count": 41,
+      "enabled_source_count": 19,
+      "configured_source_count": 23,
       "layer_counts": {
-        "community": 6,
-        "market": 33,
-        "official": 10,
-        "operational": 2
+        "market": 18,
+        "official": 7,
+        "operational": 3
       },
       "domain_scope_counts": {
-        "unspecified": 41
+        "unspecified": 19
       },
       "available_layers": [
-        "community",
         "market",
         "official",
         "operational"
@@ -1320,74 +1757,92 @@
       "verification_role_counts": {},
       "disabled_high_value_sources": [],
       "integration_candidates": [],
-      "next_step": "경매 낙찰가, 티켓 판매, 아트페어 참가사 같은 거래형 소스를 넣어 시장성 판단을 강화한다."
+      "next_step": "citation, GitHub star, benchmark leaderboard, 코드 저장소 연결을 보강한다.",
+      "disabled_source_classification": {
+        "awaiting_url_replacement": 0,
+        "awaiting_secret": 0,
+        "awaiting_smoke_test": 0,
+        "upstream_section_missing": 0,
+        "awaiting_partnership_review": 0,
+        "accepted_backlog": 4
+      },
+      "disabled_source_classification_total": 4
     },
     {
-      "repo": "GameRadar",
+      "repo": "SubscriptionRadar",
       "priority": "P2",
-      "governance_profile": "low",
-      "primary_motion": "intelligence",
-      "source_status": "강함",
+      "governance_profile": "medium",
+      "primary_motion": "conversion",
+      "source_status": "불균형",
       "readiness_status": "ready",
       "quality_score": 95,
-      "data_quality_score": 81,
-      "risk_score": 29,
-      "weakest_dimension": "authority",
+      "data_quality_score": 90,
+      "risk_score": 28,
+      "weakest_dimension": "verification",
       "dimensions": {
-        "authority": 62,
-        "operational_depth": 75,
-        "freshness": 92,
-        "actionability": 85,
-        "verification": 89,
-        "traceability": 85
+        "authority": 100,
+        "operational_depth": 100,
+        "freshness": 95,
+        "actionability": 100,
+        "verification": 70,
+        "traceability": 72
       },
       "issues": [
-        "가장 약한 품질 축은 권위성(62)"
+        "비활성 고가치 source 1개가 있어 freshness와 traceability가 떨어짐"
       ],
       "recommendations": [
-        "Steam charts, store ranking, patch note source를 운영 레이어로 추가",
-        "게임/플랫폼 canonicalization rule을 추가",
-        "흥행 신호와 커뮤니티 반응을 별도 score로 시각화"
+        "vendor pricing page와 app store ranking source를 보강",
+        "plan/price canonicalization rule과 변경 diff를 추가",
+        "churn proxy와 카드 결제 카테고리 데이터를 보조 신호로 분리 평가"
       ],
       "action_pack": {
         "required_signals": [
-          "Steam charts와 app/console store ranking",
-          "패치노트·릴리스 일정·DLC 공지",
-          "동접·매출·리뷰 변화 같은 흥행 신호"
+          "vendor pricing page와 plan change 공지",
+          "app store ranking·review·churn proxy",
+          "카드 결제 카테고리와 구독료 변동 신호"
         ],
         "quality_gates": [
-          "게임명·플랫폼·edition을 canonical key로 분리",
-          "출시 전 관심 신호와 출시 후 운영 신호를 분리",
-          "패치일·출시일·수집일을 별도 필드로 유지"
+          "요금제명·청구주기·지역·통화를 별도 필드로 유지",
+          "가격 변경일과 적용 시작일을 분리",
+          "뉴스 기사와 공식 pricing page를 같은 근거로 병합하지 않음"
         ],
         "next_actions": [
-          "Steam charts, store ranking, patch note source를 운영 레이어로 추가",
-          "게임/플랫폼 canonicalization rule을 추가",
-          "흥행 신호와 커뮤니티 반응을 별도 score로 시각화"
+          "vendor pricing page와 app store ranking source를 보강",
+          "plan/price canonicalization rule과 변경 diff를 추가",
+          "churn proxy와 카드 결제 카테고리 데이터를 보조 신호로 분리 평가"
         ]
       },
-      "enabled_source_count": 38,
-      "configured_source_count": 48,
+      "enabled_source_count": 37,
+      "configured_source_count": 51,
       "layer_counts": {
-        "community": 13,
-        "market": 26,
-        "official": 3,
-        "operational": 5
+        "market": 35,
+        "official": 15,
+        "operational": 11
       },
       "domain_scope_counts": {
-        "unspecified": 38
+        "unspecified": 37
       },
       "available_layers": [
-        "community",
         "market",
         "official",
         "operational"
       ],
       "verification_signal_count": 0,
       "verification_role_counts": {},
-      "disabled_high_value_sources": [],
+      "disabled_high_value_sources": [
+        "Adobe Creative Cloud Pricing"
+      ],
       "integration_candidates": [],
-      "next_step": "Steam charts, app store ranking, 콘솔 스토어 bestseller, patch note를 넣어 흥행 추적을 보강한다."
+      "next_step": "vendor pricing page, app store ranking, churn signal, 카드 결제 카테고리 데이터를 더한다.",
+      "disabled_source_classification": {
+        "awaiting_url_replacement": 0,
+        "awaiting_secret": 0,
+        "awaiting_smoke_test": 0,
+        "upstream_section_missing": 0,
+        "awaiting_partnership_review": 0,
+        "accepted_backlog": 14
+      },
+      "disabled_source_classification_total": 14
     },
     {
       "repo": "CryptoRadar",
@@ -1452,7 +1907,16 @@
       "verification_role_counts": {},
       "disabled_high_value_sources": [],
       "integration_candidates": [],
-      "next_step": "거래소 상장·상폐 공지, 규제기관 발표, 온체인 지표를 추가해 투자 판단력을 높인다."
+      "next_step": "거래소 상장·상폐 공지, 규제기관 발표, 온체인 지표를 추가해 투자 판단력을 높인다.",
+      "disabled_source_classification": {
+        "awaiting_url_replacement": 0,
+        "awaiting_secret": 0,
+        "awaiting_smoke_test": 0,
+        "upstream_section_missing": 0,
+        "awaiting_partnership_review": 0,
+        "accepted_backlog": 0
+      },
+      "disabled_source_classification_total": 0
     },
     {
       "repo": "BlogRadar",
@@ -1519,206 +1983,76 @@
       "verification_role_counts": {},
       "disabled_high_value_sources": [],
       "integration_candidates": [],
-      "next_step": "GitHub release·star, package registry download, 채용 공고를 추가해 채택 계층을 보강한다."
+      "next_step": "GitHub release·star, package registry download, 채용 공고를 추가해 채택 계층을 보강한다.",
+      "disabled_source_classification": {
+        "awaiting_url_replacement": 0,
+        "awaiting_secret": 0,
+        "awaiting_smoke_test": 0,
+        "upstream_section_missing": 0,
+        "awaiting_partnership_review": 0,
+        "accepted_backlog": 0
+      },
+      "disabled_source_classification_total": 0
     },
     {
-      "repo": "PaperRadar",
-      "priority": "P2",
-      "governance_profile": "low",
-      "primary_motion": "intelligence",
-      "source_status": "강함",
-      "readiness_status": "ready",
-      "quality_score": 95,
-      "data_quality_score": 85,
-      "risk_score": 25,
-      "weakest_dimension": "verification",
-      "dimensions": {
-        "authority": 98,
-        "operational_depth": 75,
-        "freshness": 97,
-        "actionability": 85,
-        "verification": 70,
-        "traceability": 85
-      },
-      "issues": [
-        "현재 설정상 즉시 차단 이슈 없음. 운영 지표와 freshness SLA만 명시하면 됨"
-      ],
-      "recommendations": [
-        "citation, GitHub, benchmark leaderboard source를 운영 레이어로 보강",
-        "arXiv/DOI/repository canonicalization rule을 추가",
-        "재현성 score에 code availability와 benchmark 근거를 포함"
-      ],
-      "action_pack": {
-        "required_signals": [
-          "citation과 benchmark leaderboard",
-          "GitHub code repository와 star/fork activity",
-          "model release·dataset·implementation link"
-        ],
-        "quality_gates": [
-          "paper title·arXiv id·DOI를 canonical key로 정리",
-          "논문 발표일과 코드 공개일을 별도 이벤트로 유지",
-          "citation count는 수집 source와 기준일을 함께 기록"
-        ],
-        "next_actions": [
-          "citation, GitHub, benchmark leaderboard source를 운영 레이어로 보강",
-          "arXiv/DOI/repository canonicalization rule을 추가",
-          "재현성 score에 code availability와 benchmark 근거를 포함"
-        ]
-      },
-      "enabled_source_count": 23,
-      "configured_source_count": 23,
-      "layer_counts": {
-        "market": 22,
-        "official": 7,
-        "operational": 5
-      },
-      "domain_scope_counts": {
-        "unspecified": 23
-      },
-      "available_layers": [
-        "market",
-        "official",
-        "operational"
-      ],
-      "verification_signal_count": 0,
-      "verification_role_counts": {},
-      "disabled_high_value_sources": [],
-      "integration_candidates": [],
-      "next_step": "citation, GitHub star, benchmark leaderboard, 코드 저장소 연결을 보강한다."
-    },
-    {
-      "repo": "QueueRadar",
-      "priority": "P2",
+      "repo": "MiscMCPRadar",
+      "priority": "P3",
       "governance_profile": "medium",
-      "primary_motion": "conversion",
-      "source_status": "강함",
-      "readiness_status": "ready",
-      "quality_score": 95,
-      "data_quality_score": 96,
-      "risk_score": 25,
-      "weakest_dimension": "traceability",
+      "primary_motion": "compliance-risk",
+      "source_status": "보강우선",
+      "readiness_status": "watch",
+      "quality_score": 80,
+      "data_quality_score": 34,
+      "risk_score": 61,
+      "weakest_dimension": "operational_depth",
       "dimensions": {
-        "authority": 100,
-        "operational_depth": 100,
-        "freshness": 95,
-        "actionability": 100,
-        "verification": 95,
-        "traceability": 85
+        "authority": 30,
+        "operational_depth": 17,
+        "freshness": 35,
+        "actionability": 50,
+        "verification": 30,
+        "traceability": 40
       },
       "issues": [
-        "현재 설정상 즉시 차단 이슈 없음. 운영 지표와 freshness SLA만 명시하면 됨"
+        "사업 가치 프레임워크 기준 누락 계층: 커뮤니티, 시장",
+        "전환/리스크 판단에 필요한 신청·상태·거래형 source가 부족함",
+        "가장 약한 품질 축은 운영 깊이(17)"
       ],
       "recommendations": [
-        "티켓 가격, 예약 슬롯, 날씨 source를 예측 보조 레이어로 연결",
-        "장소/시설 canonicalization rule을 추가",
-        "대기시간 outlier와 stale reading 검증을 리포트에 포함"
+        "GitHub repository metadata, archived/license/pushed_at, docs presence, security advisory, credential/write-action risk scope를 enrichment layer로 추가한다."
       ],
       "action_pack": {
         "required_signals": [
-          "실시간 대기시간·예약 슬롯·운영 상태",
-          "티켓 가격·날씨·시즈널리티 보조 신호",
-          "장소·시설·서비스 단위 canonical queue key"
+          "신청·가격·상태·거래 같은 운영 이벤트",
+          "공식 근거 URL과 변경일"
         ],
         "quality_gates": [
-          "관측 시각과 이벤트 시각을 별도 필드로 유지",
-          "대기시간 단위와 timezone을 명시",
-          "예측용 외부 변수는 실제 대기시간과 분리 저장"
+          "이벤트 발생일과 수집일을 분리",
+          "파싱 실패 시 임의 추정하지 않고 경고로 남김"
         ],
         "next_actions": [
-          "티켓 가격, 예약 슬롯, 날씨 source를 예측 보조 레이어로 연결",
-          "장소/시설 canonicalization rule을 추가",
-          "대기시간 outlier와 stale reading 검증을 리포트에 포함"
+          "GitHub repository metadata, archived/license/pushed_at, docs presence, security advisory, credential/write-action risk scope를 enrichment layer로 추가한다."
         ]
       },
-      "enabled_source_count": 39,
-      "configured_source_count": 39,
-      "layer_counts": {
-        "community": 8,
-        "market": 20,
-        "official": 20,
-        "operational": 12
-      },
-      "domain_scope_counts": {
-        "unspecified": 39
-      },
-      "available_layers": [
-        "community",
-        "market",
-        "official",
-        "operational"
-      ],
+      "enabled_source_count": 0,
+      "configured_source_count": 1,
+      "layer_counts": {},
+      "domain_scope_counts": {},
+      "available_layers": [],
       "verification_signal_count": 0,
       "verification_role_counts": {},
       "disabled_high_value_sources": [],
       "integration_candidates": [],
-      "next_step": "티켓 가격, 예약 슬롯, 날씨·시즈널리티를 합쳐 예측력을 높인다."
-    },
-    {
-      "repo": "SubscriptionRadar",
-      "priority": "P2",
-      "governance_profile": "medium",
-      "primary_motion": "conversion",
-      "source_status": "강함",
-      "readiness_status": "ready",
-      "quality_score": 95,
-      "data_quality_score": 97,
-      "risk_score": 25,
-      "weakest_dimension": "traceability",
-      "dimensions": {
-        "authority": 100,
-        "operational_depth": 100,
-        "freshness": 100,
-        "actionability": 100,
-        "verification": 95,
-        "traceability": 85
+      "next_step": "awesome-mcp-korea community seed를 GitHub repository metadata와 security/risk cross-check로 보강한다.",
+      "disabled_source_classification": {
+        "awaiting_url_replacement": 0,
+        "awaiting_secret": 0,
+        "awaiting_smoke_test": 0,
+        "upstream_section_missing": 1,
+        "awaiting_partnership_review": 0,
+        "accepted_backlog": 0
       },
-      "issues": [
-        "현재 설정상 즉시 차단 이슈 없음. 운영 지표와 freshness SLA만 명시하면 됨"
-      ],
-      "recommendations": [
-        "vendor pricing page와 app store ranking source를 보강",
-        "plan/price canonicalization rule과 변경 diff를 추가",
-        "churn proxy와 카드 결제 카테고리 데이터를 보조 신호로 분리 평가"
-      ],
-      "action_pack": {
-        "required_signals": [
-          "vendor pricing page와 plan change 공지",
-          "app store ranking·review·churn proxy",
-          "카드 결제 카테고리와 구독료 변동 신호"
-        ],
-        "quality_gates": [
-          "요금제명·청구주기·지역·통화를 별도 필드로 유지",
-          "가격 변경일과 적용 시작일을 분리",
-          "뉴스 기사와 공식 pricing page를 같은 근거로 병합하지 않음"
-        ],
-        "next_actions": [
-          "vendor pricing page와 app store ranking source를 보강",
-          "plan/price canonicalization rule과 변경 diff를 추가",
-          "churn proxy와 카드 결제 카테고리 데이터를 보조 신호로 분리 평가"
-        ]
-      },
-      "enabled_source_count": 49,
-      "configured_source_count": 49,
-      "layer_counts": {
-        "community": 8,
-        "market": 49,
-        "official": 14,
-        "operational": 11
-      },
-      "domain_scope_counts": {
-        "unspecified": 49
-      },
-      "available_layers": [
-        "community",
-        "market",
-        "official",
-        "operational"
-      ],
-      "verification_signal_count": 0,
-      "verification_role_counts": {},
-      "disabled_high_value_sources": [],
-      "integration_candidates": [],
-      "next_step": "vendor pricing page, app store ranking, churn signal, 카드 결제 카테고리 데이터를 더한다."
+      "disabled_source_classification_total": 1
     },
     {
       "repo": "CollaborationMCPRadar",
@@ -1761,7 +2095,7 @@
         ]
       },
       "enabled_source_count": 1,
-      "configured_source_count": 1,
+      "configured_source_count": 3,
       "layer_counts": {
         "community": 1
       },
@@ -1775,7 +2109,16 @@
       "verification_role_counts": {},
       "disabled_high_value_sources": [],
       "integration_candidates": [],
-      "next_step": "awesome-mcp-korea community seed를 GitHub repository metadata와 security/risk cross-check로 보강한다."
+      "next_step": "awesome-mcp-korea community seed를 GitHub repository metadata와 security/risk cross-check로 보강한다.",
+      "disabled_source_classification": {
+        "awaiting_url_replacement": 0,
+        "awaiting_secret": 1,
+        "awaiting_smoke_test": 1,
+        "upstream_section_missing": 0,
+        "awaiting_partnership_review": 0,
+        "accepted_backlog": 0
+      },
+      "disabled_source_classification_total": 2
     },
     {
       "repo": "CommerceMCPRadar",
@@ -1818,7 +2161,7 @@
         ]
       },
       "enabled_source_count": 1,
-      "configured_source_count": 1,
+      "configured_source_count": 3,
       "layer_counts": {
         "community": 1
       },
@@ -1832,7 +2175,16 @@
       "verification_role_counts": {},
       "disabled_high_value_sources": [],
       "integration_candidates": [],
-      "next_step": "awesome-mcp-korea community seed를 GitHub repository metadata와 security/risk cross-check로 보강한다."
+      "next_step": "awesome-mcp-korea community seed를 GitHub repository metadata와 security/risk cross-check로 보강한다.",
+      "disabled_source_classification": {
+        "awaiting_url_replacement": 0,
+        "awaiting_secret": 2,
+        "awaiting_smoke_test": 0,
+        "upstream_section_missing": 0,
+        "awaiting_partnership_review": 0,
+        "accepted_backlog": 0
+      },
+      "disabled_source_classification_total": 2
     },
     {
       "repo": "FinanceTaxMCPRadar",
@@ -1875,7 +2227,7 @@
         ]
       },
       "enabled_source_count": 1,
-      "configured_source_count": 1,
+      "configured_source_count": 3,
       "layer_counts": {
         "community": 1
       },
@@ -1889,64 +2241,16 @@
       "verification_role_counts": {},
       "disabled_high_value_sources": [],
       "integration_candidates": [],
-      "next_step": "awesome-mcp-korea community seed를 GitHub repository metadata와 security/risk cross-check로 보강한다."
-    },
-    {
-      "repo": "KoreanNLPMCPRadar",
-      "priority": "P3",
-      "governance_profile": "medium",
-      "primary_motion": "compliance-risk",
-      "source_status": "불균형",
-      "readiness_status": "watch",
-      "quality_score": 80,
-      "data_quality_score": 43,
-      "risk_score": 52,
-      "weakest_dimension": "operational_depth",
-      "dimensions": {
-        "authority": 30,
-        "operational_depth": 17,
-        "freshness": 70,
-        "actionability": 50,
-        "verification": 37,
-        "traceability": 56
+      "next_step": "awesome-mcp-korea community seed를 GitHub repository metadata와 security/risk cross-check로 보강한다.",
+      "disabled_source_classification": {
+        "awaiting_url_replacement": 0,
+        "awaiting_secret": 1,
+        "awaiting_smoke_test": 1,
+        "upstream_section_missing": 0,
+        "awaiting_partnership_review": 0,
+        "accepted_backlog": 0
       },
-      "issues": [
-        "사업 가치 프레임워크 기준 누락 계층: 시장",
-        "전환/리스크 판단에 필요한 신청·상태·거래형 source가 부족함",
-        "가장 약한 품질 축은 운영 깊이(17)"
-      ],
-      "recommendations": [
-        "GitHub repository metadata, archived/license/pushed_at, docs presence, security advisory, credential/write-action risk scope를 enrichment layer로 추가한다."
-      ],
-      "action_pack": {
-        "required_signals": [
-          "신청·가격·상태·거래 같은 운영 이벤트",
-          "공식 근거 URL과 변경일"
-        ],
-        "quality_gates": [
-          "이벤트 발생일과 수집일을 분리",
-          "파싱 실패 시 임의 추정하지 않고 경고로 남김"
-        ],
-        "next_actions": [
-          "GitHub repository metadata, archived/license/pushed_at, docs presence, security advisory, credential/write-action risk scope를 enrichment layer로 추가한다."
-        ]
-      },
-      "enabled_source_count": 1,
-      "configured_source_count": 1,
-      "layer_counts": {
-        "community": 1
-      },
-      "domain_scope_counts": {
-        "unspecified": 1
-      },
-      "available_layers": [
-        "community"
-      ],
-      "verification_signal_count": 0,
-      "verification_role_counts": {},
-      "disabled_high_value_sources": [],
-      "integration_candidates": [],
-      "next_step": "awesome-mcp-korea community seed를 GitHub repository metadata와 security/risk cross-check로 보강한다."
+      "disabled_source_classification_total": 2
     },
     {
       "repo": "LegalGovMCPRadar",
@@ -1989,7 +2293,7 @@
         ]
       },
       "enabled_source_count": 1,
-      "configured_source_count": 1,
+      "configured_source_count": 3,
       "layer_counts": {
         "community": 1
       },
@@ -2003,7 +2307,16 @@
       "verification_role_counts": {},
       "disabled_high_value_sources": [],
       "integration_candidates": [],
-      "next_step": "awesome-mcp-korea community seed를 GitHub repository metadata와 security/risk cross-check로 보강한다."
+      "next_step": "awesome-mcp-korea community seed를 GitHub repository metadata와 security/risk cross-check로 보강한다.",
+      "disabled_source_classification": {
+        "awaiting_url_replacement": 0,
+        "awaiting_secret": 2,
+        "awaiting_smoke_test": 0,
+        "upstream_section_missing": 0,
+        "awaiting_partnership_review": 0,
+        "accepted_backlog": 0
+      },
+      "disabled_source_classification_total": 2
     },
     {
       "repo": "MapAddressMCPRadar",
@@ -2046,7 +2359,7 @@
         ]
       },
       "enabled_source_count": 1,
-      "configured_source_count": 1,
+      "configured_source_count": 3,
       "layer_counts": {
         "community": 1
       },
@@ -2060,64 +2373,16 @@
       "verification_role_counts": {},
       "disabled_high_value_sources": [],
       "integration_candidates": [],
-      "next_step": "awesome-mcp-korea community seed를 GitHub repository metadata와 security/risk cross-check로 보강한다."
-    },
-    {
-      "repo": "MiscMCPRadar",
-      "priority": "P3",
-      "governance_profile": "medium",
-      "primary_motion": "compliance-risk",
-      "source_status": "불균형",
-      "readiness_status": "watch",
-      "quality_score": 80,
-      "data_quality_score": 43,
-      "risk_score": 52,
-      "weakest_dimension": "operational_depth",
-      "dimensions": {
-        "authority": 30,
-        "operational_depth": 17,
-        "freshness": 70,
-        "actionability": 50,
-        "verification": 37,
-        "traceability": 56
+      "next_step": "awesome-mcp-korea community seed를 GitHub repository metadata와 security/risk cross-check로 보강한다.",
+      "disabled_source_classification": {
+        "awaiting_url_replacement": 0,
+        "awaiting_secret": 2,
+        "awaiting_smoke_test": 0,
+        "upstream_section_missing": 0,
+        "awaiting_partnership_review": 0,
+        "accepted_backlog": 0
       },
-      "issues": [
-        "사업 가치 프레임워크 기준 누락 계층: 시장",
-        "전환/리스크 판단에 필요한 신청·상태·거래형 source가 부족함",
-        "가장 약한 품질 축은 운영 깊이(17)"
-      ],
-      "recommendations": [
-        "GitHub repository metadata, archived/license/pushed_at, docs presence, security advisory, credential/write-action risk scope를 enrichment layer로 추가한다."
-      ],
-      "action_pack": {
-        "required_signals": [
-          "신청·가격·상태·거래 같은 운영 이벤트",
-          "공식 근거 URL과 변경일"
-        ],
-        "quality_gates": [
-          "이벤트 발생일과 수집일을 분리",
-          "파싱 실패 시 임의 추정하지 않고 경고로 남김"
-        ],
-        "next_actions": [
-          "GitHub repository metadata, archived/license/pushed_at, docs presence, security advisory, credential/write-action risk scope를 enrichment layer로 추가한다."
-        ]
-      },
-      "enabled_source_count": 1,
-      "configured_source_count": 1,
-      "layer_counts": {
-        "community": 1
-      },
-      "domain_scope_counts": {
-        "unspecified": 1
-      },
-      "available_layers": [
-        "community"
-      ],
-      "verification_signal_count": 0,
-      "verification_role_counts": {},
-      "disabled_high_value_sources": [],
-      "integration_candidates": [],
-      "next_step": "awesome-mcp-korea community seed를 GitHub repository metadata와 security/risk cross-check로 보강한다."
+      "disabled_source_classification_total": 2
     },
     {
       "repo": "PublicDataMCPRadar",
@@ -2160,7 +2425,7 @@
         ]
       },
       "enabled_source_count": 1,
-      "configured_source_count": 1,
+      "configured_source_count": 3,
       "layer_counts": {
         "community": 1
       },
@@ -2174,7 +2439,16 @@
       "verification_role_counts": {},
       "disabled_high_value_sources": [],
       "integration_candidates": [],
-      "next_step": "awesome-mcp-korea community seed를 GitHub repository metadata와 security/risk cross-check로 보강한다."
+      "next_step": "awesome-mcp-korea community seed를 GitHub repository metadata와 security/risk cross-check로 보강한다.",
+      "disabled_source_classification": {
+        "awaiting_url_replacement": 0,
+        "awaiting_secret": 2,
+        "awaiting_smoke_test": 0,
+        "upstream_section_missing": 0,
+        "awaiting_partnership_review": 0,
+        "accepted_backlog": 0
+      },
+      "disabled_source_classification_total": 2
     },
     {
       "repo": "RealEstateMCPRadar",
@@ -2217,7 +2491,7 @@
         ]
       },
       "enabled_source_count": 1,
-      "configured_source_count": 1,
+      "configured_source_count": 2,
       "layer_counts": {
         "community": 1
       },
@@ -2231,7 +2505,16 @@
       "verification_role_counts": {},
       "disabled_high_value_sources": [],
       "integration_candidates": [],
-      "next_step": "awesome-mcp-korea community seed를 GitHub repository metadata와 security/risk cross-check로 보강한다."
+      "next_step": "awesome-mcp-korea community seed를 GitHub repository metadata와 security/risk cross-check로 보강한다.",
+      "disabled_source_classification": {
+        "awaiting_url_replacement": 0,
+        "awaiting_secret": 1,
+        "awaiting_smoke_test": 0,
+        "upstream_section_missing": 0,
+        "awaiting_partnership_review": 0,
+        "accepted_backlog": 0
+      },
+      "disabled_source_classification_total": 1
     },
     {
       "repo": "SearchTrendMCPRadar",
@@ -2274,7 +2557,7 @@
         ]
       },
       "enabled_source_count": 1,
-      "configured_source_count": 1,
+      "configured_source_count": 3,
       "layer_counts": {
         "community": 1
       },
@@ -2288,7 +2571,16 @@
       "verification_role_counts": {},
       "disabled_high_value_sources": [],
       "integration_candidates": [],
-      "next_step": "awesome-mcp-korea community seed를 GitHub repository metadata와 security/risk cross-check로 보강한다."
+      "next_step": "awesome-mcp-korea community seed를 GitHub repository metadata와 security/risk cross-check로 보강한다.",
+      "disabled_source_classification": {
+        "awaiting_url_replacement": 0,
+        "awaiting_secret": 2,
+        "awaiting_smoke_test": 0,
+        "upstream_section_missing": 0,
+        "awaiting_partnership_review": 0,
+        "accepted_backlog": 0
+      },
+      "disabled_source_classification_total": 2
     },
     {
       "repo": "TravelMCPRadar",
@@ -2331,7 +2623,7 @@
         ]
       },
       "enabled_source_count": 1,
-      "configured_source_count": 1,
+      "configured_source_count": 3,
       "layer_counts": {
         "community": 1
       },
@@ -2345,7 +2637,16 @@
       "verification_role_counts": {},
       "disabled_high_value_sources": [],
       "integration_candidates": [],
-      "next_step": "awesome-mcp-korea community seed를 GitHub repository metadata와 security/risk cross-check로 보강한다."
+      "next_step": "awesome-mcp-korea community seed를 GitHub repository metadata와 security/risk cross-check로 보강한다.",
+      "disabled_source_classification": {
+        "awaiting_url_replacement": 0,
+        "awaiting_secret": 2,
+        "awaiting_smoke_test": 0,
+        "upstream_section_missing": 0,
+        "awaiting_partnership_review": 0,
+        "accepted_backlog": 0
+      },
+      "disabled_source_classification_total": 2
     },
     {
       "repo": "WeatherMCPRadar",
@@ -2388,7 +2689,7 @@
         ]
       },
       "enabled_source_count": 1,
-      "configured_source_count": 1,
+      "configured_source_count": 3,
       "layer_counts": {
         "community": 1
       },
@@ -2402,7 +2703,82 @@
       "verification_role_counts": {},
       "disabled_high_value_sources": [],
       "integration_candidates": [],
-      "next_step": "awesome-mcp-korea community seed를 GitHub repository metadata와 security/risk cross-check로 보강한다."
+      "next_step": "awesome-mcp-korea community seed를 GitHub repository metadata와 security/risk cross-check로 보강한다.",
+      "disabled_source_classification": {
+        "awaiting_url_replacement": 0,
+        "awaiting_secret": 2,
+        "awaiting_smoke_test": 0,
+        "upstream_section_missing": 0,
+        "awaiting_partnership_review": 0,
+        "accepted_backlog": 0
+      },
+      "disabled_source_classification_total": 2
+    },
+    {
+      "repo": "KoreanNLPMCPRadar",
+      "priority": "P3",
+      "governance_profile": "medium",
+      "primary_motion": "compliance-risk",
+      "source_status": "불균형",
+      "readiness_status": "watch",
+      "quality_score": 80,
+      "data_quality_score": 45,
+      "risk_score": 50,
+      "weakest_dimension": "operational_depth",
+      "dimensions": {
+        "authority": 30,
+        "operational_depth": 17,
+        "freshness": 70,
+        "actionability": 50,
+        "verification": 44,
+        "traceability": 57
+      },
+      "issues": [
+        "사업 가치 프레임워크 기준 누락 계층: 시장",
+        "전환/리스크 판단에 필요한 신청·상태·거래형 source가 부족함",
+        "가장 약한 품질 축은 운영 깊이(17)"
+      ],
+      "recommendations": [
+        "GitHub repository metadata, archived/license/pushed_at, docs presence, security advisory, credential/write-action risk scope를 enrichment layer로 추가한다."
+      ],
+      "action_pack": {
+        "required_signals": [
+          "신청·가격·상태·거래 같은 운영 이벤트",
+          "공식 근거 URL과 변경일"
+        ],
+        "quality_gates": [
+          "이벤트 발생일과 수집일을 분리",
+          "파싱 실패 시 임의 추정하지 않고 경고로 남김"
+        ],
+        "next_actions": [
+          "GitHub repository metadata, archived/license/pushed_at, docs presence, security advisory, credential/write-action risk scope를 enrichment layer로 추가한다."
+        ]
+      },
+      "enabled_source_count": 2,
+      "configured_source_count": 3,
+      "layer_counts": {
+        "community": 2
+      },
+      "domain_scope_counts": {
+        "unspecified": 2
+      },
+      "available_layers": [
+        "community"
+      ],
+      "verification_signal_count": 0,
+      "verification_role_counts": {},
+      "disabled_high_value_sources": [],
+      "integration_candidates": [],
+      "next_step": "awesome-mcp-korea community seed를 GitHub repository metadata와 security/risk cross-check로 보강한다.",
+      "disabled_source_classification": {
+        "awaiting_url_replacement": 0,
+        "awaiting_secret": 0,
+        "awaiting_smoke_test": 1,
+        "upstream_section_missing": 0,
+        "awaiting_partnership_review": 0,
+        "accepted_backlog": 0
+      },
+      "disabled_source_classification_total": 1
     }
   ]
 }

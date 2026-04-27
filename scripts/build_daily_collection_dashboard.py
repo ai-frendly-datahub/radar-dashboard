@@ -84,34 +84,50 @@ def build_html(payload: dict[str, Any]) -> str:
     )
 
     return f"""<!DOCTYPE html>
-<html lang="ko">
+<html lang="ko" data-visual-system="radar-unified-v2" data-visual-surface="portfolio" data-visual-page="daily-collection">
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <title>Daily Collection Contract</title>
   <style>
     :root {{
-      --bg: #f7f8fa;
-      --surface: #ffffff;
-      --surface-alt: #eef2f0;
-      --text: #1f2424;
-      --muted: #66706d;
-      --line: #d9e0dd;
-      --accent: #126c55;
+      --vs-bg-0: #f7f8fa;
+      --vs-bg-1: #eef2f0;
+      --vs-surface-0: #ffffff;
+      --vs-surface-1: #eef2f0;
+      --vs-text: #1f2424;
+      --vs-text-muted: #66706d;
+      --vs-line: #d9e0dd;
+      --vs-brand: #126c55;
+      --vs-brand-strong: #167046;
+      --vs-accent: #9b5f00;
+      --vs-danger: #a13b36;
+      --vs-shadow: 0 18px 40px rgba(31, 36, 36, 0.08);
+      --vs-radius: 8px;
+      --vs-max: 1420px;
+      --vs-font-sans: "Pretendard Variable", "Pretendard", "Segoe UI", Arial, sans-serif;
+
+      --bg: var(--vs-bg-0);
+      --surface: var(--vs-surface-0);
+      --surface-alt: var(--vs-surface-1);
+      --text: var(--vs-text);
+      --muted: var(--vs-text-muted);
+      --line: var(--vs-line);
+      --accent: var(--vs-brand);
       --accent-2: #9b5f00;
-      --ok: #167046;
+      --ok: var(--vs-brand-strong);
       --ok-soft: #dff4e8;
       --warn: #9b5f00;
       --warn-soft: #fff0cf;
-      --bad: #a13b36;
+      --bad: var(--vs-danger);
       --bad-soft: #ffe2dd;
-      --max: 1420px;
+      --max: var(--vs-max);
     }}
     * {{ box-sizing: border-box; }}
     body {{
       margin: 0;
       color: var(--text);
-      font-family: "Pretendard Variable", "Pretendard", "Segoe UI", Arial, sans-serif;
+      font-family: var(--vs-font-sans);
       background: var(--bg);
     }}
     a {{ color: var(--accent); text-decoration: none; font-weight: 700; }}
@@ -204,6 +220,9 @@ def build_html(payload: dict[str, Any]) -> str:
         <a href="index.html">Main Dashboard</a>
         <a href="data-quality.html">Data Quality Audit</a>
         <a href="classification.html">Classification Audit</a>
+        <a href="taxonomy-analysis.html">Taxonomy Analysis</a>
+        <a href="storage.html">Storage Footprint</a>
+        <a href="event-model.html">Event Model Coverage</a>
         <a href="../docs/harness/daily-collection-review.md">Markdown Review</a>
       </div>
       <div class="stats">{render_status_counts(summary)}</div>

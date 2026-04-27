@@ -1,29 +1,45 @@
 <!DOCTYPE html>
-<html lang="ko" data-visual-system="radar-unified-v2" data-visual-surface="dashboard">
+<html lang="ko" data-visual-system="radar-unified-v2" data-visual-surface="portfolio" data-visual-page="portfolio-index">
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <title>Radar Projects Dashboard</title>
   <style>
     :root {
-      --bg: #f4f6fb;
-      --surface: #ffffff;
-      --surface-alt: #eef3ff;
-      --text: #18202b;
-      --muted: #617086;
-      --line: #d7dfef;
-      --accent: #2358d5;
+      --vs-bg-0: #f4f6fb;
+      --vs-bg-1: #e8edf9;
+      --vs-surface-0: #ffffff;
+      --vs-surface-1: #eef3ff;
+      --vs-text: #18202b;
+      --vs-text-muted: #617086;
+      --vs-line: #d7dfef;
+      --vs-brand: #2358d5;
+      --vs-brand-strong: #1e8e5a;
+      --vs-accent: #a96b00;
+      --vs-danger: #a23b3b;
+      --vs-shadow: 0 18px 50px rgba(24, 32, 43, 0.08);
+      --vs-radius: 18px;
+      --vs-max: 1380px;
+      --vs-font-sans: "Pretendard Variable", "Pretendard", "Segoe UI", Arial, sans-serif;
+
+      --bg: var(--vs-bg-0);
+      --surface: var(--vs-surface-0);
+      --surface-alt: var(--vs-surface-1);
+      --text: var(--vs-text);
+      --muted: var(--vs-text-muted);
+      --line: var(--vs-line);
+      --accent: var(--vs-brand);
       --accent-soft: #dce7ff;
-      --ok: #1e8e5a;
+      --ok: var(--vs-brand-strong);
       --ok-soft: #daf4e7;
-      --warn: #a96b00;
+      --warn: var(--vs-accent);
       --warn-soft: #fff1cd;
-      --bad: #a23b3b;
+      --bad: var(--vs-danger);
       --bad-soft: #fde2e2;
-      --shadow: 0 18px 50px rgba(24, 32, 43, 0.08);
-      --radius: 18px;
+      --shadow: var(--vs-shadow);
+      --radius: var(--vs-radius);
       --radius-sm: 999px;
-      --max: 1380px;
+      --max: var(--vs-max);
     }
 
     * {
@@ -32,7 +48,7 @@
 
     body {
       margin: 0;
-      font-family: "Pretendard Variable", "Pretendard", "Segoe UI", Arial, sans-serif;
+      font-family: var(--vs-font-sans);
       color: var(--text);
       background:
         radial-gradient(circle at top left, rgba(35, 88, 213, 0.08), transparent 24rem),
@@ -371,7 +387,7 @@
     <section class="hero">
       <h1>Radar Projects Dashboard</h1>
       <p>각 Radar 저장소의 `summary JSON`과 리포트 인덱스를 읽어 워크스페이스 전체 상태를 집계한 canonical 대시보드입니다. 현재는 full metrics 우선, 부족한 저장소는 partial fallback으로 표시합니다.</p>
-      <div class="hero-meta">Generated at 2026-04-21 12:23 · Workspace scan source: sibling Radar repositories</div>
+      <div class="hero-meta">Generated at 2026-04-26 17:13 · Workspace scan source: sibling Radar repositories</div>
       <div class="stats">
         <article class="stat-card">
           <div class="stat-card__value">36</div>
@@ -386,15 +402,15 @@
           <div class="stat-card__label">Projects Using Fallback</div>
         </article>
         <article class="stat-card">
-          <div class="stat-card__value">1,176</div>
+          <div class="stat-card__value">5,351</div>
           <div class="stat-card__label">Articles From Full Metrics</div>
         </article>
         <article class="stat-card">
-          <div class="stat-card__value">1,143</div>
+          <div class="stat-card__value">5,188</div>
           <div class="stat-card__label">Matched Articles</div>
         </article>
         <article class="stat-card">
-          <div class="stat-card__value">97.2%</div>
+          <div class="stat-card__value">97.0%</div>
           <div class="stat-card__label">Overall Match Rate</div>
         </article>
       </div>
@@ -405,83 +421,80 @@
         <h2>Coverage Warnings</h2>
         <p>Summary JSON이 없는 저장소는 HTML fallback으로 읽었고, 그 결과는 partial로 표시됩니다.</p>
         <ul class="warning-list">
-<li>ArtRadar: quality report has 9 collection error(s)</li>
-<li>ArtRadar: quality freshness gaps: stale=1, missing=6, unknown_event_date=0</li>
-<li>BenefitRadar: quality report has 2 collection error(s)</li>
-<li>BenefitRadar: quality freshness gaps: stale=2, missing=2, unknown_event_date=0</li>
-<li>BenefitRadar: quality report has 7 disabled source(s)</li>
-<li>BlogRadar: quality report has 7 collection error(s)</li>
-<li>BlogRadar: quality freshness gaps: stale=5, missing=0, unknown_event_date=0</li>
+<li>ArtRadar: quality report has 4 disabled source(s)</li>
+<li>BenefitRadar: quality report has 8 disabled source(s)</li>
 <li>BookRadar: quality report has 12 disabled source(s)</li>
 <li>CollaborationMCPRadar: quality report has 2 disabled source(s)</li>
 <li>CommerceMCPRadar: quality report has 2 disabled source(s)</li>
-<li>CryptoRadar: quality report has 7 collection error(s)</li>
 <li>CryptoRadar: quality freshness gaps: stale=1, missing=0, unknown_event_date=0</li>
-<li>EventRadar: quality freshness gaps: stale=0, missing=21, unknown_event_date=0</li>
-<li>FinanceTaxMCPRadar: quality report has 1 disabled source(s)</li>
-<li>FoodRadar: quality freshness gaps: stale=0, missing=2, unknown_event_date=0</li>
-<li>GameRadar: quality freshness gaps: stale=0, missing=3, unknown_event_date=0</li>
-<li>GameRadar: quality report has 10 disabled source(s)</li>
-<li>GovRadar: quality report has 1 collection error(s)</li>
-<li>GovRadar: quality freshness gaps: stale=1, missing=5, unknown_event_date=0</li>
+<li>EventRadar: quality freshness gaps: stale=3, missing=0, unknown_event_date=0</li>
+<li>EventRadar: quality report has 8 disabled source(s)</li>
+<li>FinanceTaxMCPRadar: quality report has 2 disabled source(s)</li>
+<li>FoodRadar: quality freshness gaps: stale=1, missing=0, unknown_event_date=0</li>
+<li>FoodRadar: quality report has 1 disabled source(s)</li>
+<li>GameRadar: quality report has 11 disabled source(s)</li>
+<li>GovRadar: quality freshness gaps: stale=3, missing=0, unknown_event_date=0</li>
+<li>GovRadar: quality report has 1 disabled source(s)</li>
 <li>HomeRadar: official primary HomeRadar sources blocked by missing env (molit_apt_transaction, molit_apt_rent, reb_subscription, onbid_auction; required: MOLIT_SERVICE_KEY, ONBID_API_KEY, SUBSCRIPTION_API_KEY)</li>
-<li>HomeRadar: quality report has 14 disabled source(s)</li>
-<li>JobRadar: quality report has 4 collection error(s)</li>
-<li>JobRadar: quality freshness gaps: stale=7, missing=5, unknown_event_date=0</li>
+<li>HomeRadar: quality report has 15 disabled source(s)</li>
+<li>JobRadar: quality report has 6 disabled source(s)</li>
 <li>KoreanNLPMCPRadar: quality report has 1 disabled source(s)</li>
 <li>LegalGovMCPRadar: quality report has 2 disabled source(s)</li>
 <li>MapAddressMCPRadar: quality report has 2 disabled source(s)</li>
-<li>MiscMCPRadar: quality freshness gaps: stale=0, missing=1, unknown_event_date=0</li>
+<li>MiscMCPRadar: quality report has 1 disabled source(s)</li>
+<li>MobilityRadar: quality freshness gaps: stale=1, missing=0, unknown_event_date=0</li>
 <li>MobilityRadar: quality report has 5 disabled source(s)</li>
-<li>MovieRadar: quality report has 4 collection error(s)</li>
 <li>MovieRadar: quality freshness gaps: stale=2, missing=0, unknown_event_date=0</li>
-<li>PaperRadar: quality report has 5 collection error(s)</li>
-<li>PaperRadar: quality freshness gaps: stale=2, missing=4, unknown_event_date=0</li>
-<li>PaperworkRadar: quality freshness gaps: stale=0, missing=3, unknown_event_date=0</li>
-<li>PolicyRadar: quality report has 1 collection error(s)</li>
-<li>PolicyRadar: quality freshness gaps: stale=0, missing=9, unknown_event_date=0</li>
-<li>PolicyRadar: quality report has 3 disabled source(s)</li>
-<li>PropertyRadar: quality report has 13 collection error(s)</li>
-<li>PropertyRadar: quality freshness gaps: stale=0, missing=5, unknown_event_date=0</li>
+<li>PaperRadar: quality freshness gaps: stale=2, missing=0, unknown_event_date=0</li>
+<li>PaperRadar: quality report has 4 disabled source(s)</li>
+<li>PaperworkRadar: quality freshness gaps: stale=3, missing=0, unknown_event_date=0</li>
+<li>PaperworkRadar: quality report has 8 disabled source(s)</li>
+<li>PolicyRadar: quality freshness gaps: stale=5, missing=0, unknown_event_date=0</li>
+<li>PolicyRadar: quality report has 5 disabled source(s)</li>
+<li>PropertyRadar: quality report has 8 disabled source(s)</li>
 <li>PublicDataMCPRadar: quality report has 2 disabled source(s)</li>
-<li>QueueRadar: quality report has 14 collection error(s)</li>
+<li>QueueRadar: quality freshness gaps: stale=12, missing=0, unknown_event_date=0</li>
+<li>QueueRadar: quality report has 16 disabled source(s)</li>
 <li>RealEstateMCPRadar: quality report has 1 disabled source(s)</li>
-<li>RefundRadar: quality freshness gaps: stale=0, missing=14, unknown_event_date=0</li>
-<li>RefundRadar: quality report has 11 disabled source(s)</li>
+<li>RefundRadar: quality freshness gaps: stale=3, missing=0, unknown_event_date=0</li>
+<li>RefundRadar: quality report has 20 disabled source(s)</li>
 <li>SearchTrendMCPRadar: quality report has 2 disabled source(s)</li>
-<li>SubscriptionRadar: quality report has 10 collection error(s)</li>
-<li>SubscriptionRadar: quality freshness gaps: stale=0, missing=16, unknown_event_date=0</li>
+<li>SubscriptionRadar: quality report has 14 disabled source(s)</li>
 <li>TravelMCPRadar: quality report has 2 disabled source(s)</li>
-<li>TrustRadar: quality freshness gaps: stale=0, missing=5, unknown_event_date=0</li>
+<li>TrustRadar: quality freshness gaps: stale=9, missing=0, unknown_event_date=0</li>
 <li>TrustRadar: quality report has 2 disabled source(s)</li>
 <li>WeatherMCPRadar: quality report has 2 disabled source(s)</li>
-<li>WineRadar: quality freshness gaps: stale=19, missing=0, unknown_event_date=0</li>
-<li>WineRadar: quality report has 22 disabled source(s)</li>
+<li>WineRadar: quality freshness gaps: stale=4, missing=0, unknown_event_date=0</li>
+<li>WineRadar: quality report has 27 disabled source(s)</li>
 </ul>
       </article>
       <article class="panel">
         <h2>Latest Updates</h2>
         <p>가장 최근 업데이트된 저장소 순으로 집계했습니다.</p>
         <ul class="update-list">
-<li class="update-item"><span class="update-item__name">Art</span><span class="update-item__date">2026-04-14</span><span class="badge badge--active">Full</span></li>
-<li class="update-item"><span class="update-item__name">Benefit</span><span class="update-item__date">2026-04-14</span><span class="badge badge--active">Full</span></li>
-<li class="update-item"><span class="update-item__name">Blog</span><span class="update-item__date">2026-04-14</span><span class="badge badge--active">Full</span></li>
-<li class="update-item"><span class="update-item__name">Book</span><span class="update-item__date">2026-04-14</span><span class="badge badge--active">Full</span></li>
-<li class="update-item"><span class="update-item__name">Crypto</span><span class="update-item__date">2026-04-14</span><span class="badge badge--active">Full</span></li>
-<li class="update-item"><span class="update-item__name">Event</span><span class="update-item__date">2026-04-14</span><span class="badge badge--active">Full</span></li>
-<li class="update-item"><span class="update-item__name">Food</span><span class="update-item__date">2026-04-14</span><span class="badge badge--active">Full</span></li>
-<li class="update-item"><span class="update-item__name">Game</span><span class="update-item__date">2026-04-14</span><span class="badge badge--active">Full</span></li>
-<li class="update-item"><span class="update-item__name">Gov</span><span class="update-item__date">2026-04-14</span><span class="badge badge--active">Full</span></li>
-<li class="update-item"><span class="update-item__name">Home</span><span class="update-item__date">2026-04-14</span><span class="badge badge--active">Full</span></li>
+<li class="update-item"><span class="update-item__name">Benefit</span><span class="update-item__date">2026-04-25</span><span class="badge badge--active">Full</span></li>
+<li class="update-item"><span class="update-item__name">Blog</span><span class="update-item__date">2026-04-25</span><span class="badge badge--active">Full</span></li>
+<li class="update-item"><span class="update-item__name">Book</span><span class="update-item__date">2026-04-25</span><span class="badge badge--active">Full</span></li>
+<li class="update-item"><span class="update-item__name">Crypto</span><span class="update-item__date">2026-04-25</span><span class="badge badge--active">Full</span></li>
+<li class="update-item"><span class="update-item__name">Event</span><span class="update-item__date">2026-04-25</span><span class="badge badge--active">Full</span></li>
+<li class="update-item"><span class="update-item__name">Food</span><span class="update-item__date">2026-04-25</span><span class="badge badge--active">Full</span></li>
+<li class="update-item"><span class="update-item__name">Gov</span><span class="update-item__date">2026-04-25</span><span class="badge badge--active">Full</span></li>
+<li class="update-item"><span class="update-item__name">Job</span><span class="update-item__date">2026-04-25</span><span class="badge badge--active">Full</span></li>
+<li class="update-item"><span class="update-item__name">Mobility</span><span class="update-item__date">2026-04-25</span><span class="badge badge--active">Full</span></li>
+<li class="update-item"><span class="update-item__name">Movie</span><span class="update-item__date">2026-04-25</span><span class="badge badge--active">Full</span></li>
 </ul>
       </article>
     </section>
 
     <section class="taxonomy-banner"><div><h2>Portfolio Taxonomy Audit</h2><p>전 저장소를 공통 taxonomy로 재분류한 별도 감사 페이지를 추가했습니다. 저장소 구조, 의사결정 용도, 거버넌스, 소스 레이어 공백을 한 번에 점검할 수 있습니다.</p></div><div class="taxonomy-banner__meta"><span>39 repos</span><span>4 advanced</span><span>9 high-governance</span><span>0 upgrade-needed</span><a href="classification.html">Open classification audit</a></div></section>
 
-    <section class="taxonomy-banner"><div><h2>Data Quality Audit</h2><p>전 저장소의 데이터 품질 축을 별도 점검판으로 추가했습니다. P0/P1 실행 큐, weakest dimension, source 보강 next action을 한 화면에서 확인할 수 있습니다.</p></div><div class="taxonomy-banner__meta"><span>avg quality 71.4</span><span>7 P0</span><span>6 P1</span><span>weakest 운영 깊이</span><a href="data-quality.html">Open quality audit</a></div></section>
+    <section class="taxonomy-banner"><div><h2>Data Quality Audit</h2><p>전 저장소의 데이터 품질 축을 별도 점검판으로 추가했습니다. P0/P1 실행 큐, weakest dimension, source 보강 next action을 한 화면에서 확인할 수 있습니다.</p></div><div class="taxonomy-banner__meta"><span>avg quality 68.6</span><span>7 P0</span><span>6 P1</span><span>weakest 운영 깊이</span><a href="data-quality.html">Open quality audit</a></div></section>
 
-    <section class="taxonomy-banner"><div><h2>Taxonomy Analysis</h2><p>Classification, evidence layers, collection errors, freshness gaps, and disabled-source backlog are joined into one portfolio analysis queue.</p></div><div class="taxonomy-banner__meta"><span>36 projects</span><span>77 errors</span><span>141 freshness gaps</span><span>105 disabled</span><span>risk 34.3</span><a href="taxonomy-analysis.html">Open taxonomy analysis</a></div></section>
+    <section class="taxonomy-banner"><div><h2>Taxonomy Analysis</h2><p>Classification, evidence layers, collection errors, freshness gaps, and disabled-source backlog are joined into one portfolio analysis queue.</p></div><div class="taxonomy-banner__meta"><span>36 projects</span><span>0 errors</span><span>49 freshness gaps</span><span>196 disabled</span><span>risk 19.6</span><a href="taxonomy-analysis.html">Open taxonomy analysis</a></div></section>
+
+    <section class="taxonomy-banner"><div><h2>Storage Footprint</h2><p>각 Radar 저장소의 최신 raw JSONL snapshot과 DuckDB 마트를 직접 집계해 보여줍니다. 분석 마트가 어디서 만들어지고 어디서 비어 있는지 한 화면에서 확인합니다.</p></div><div class="taxonomy-banner__meta"><span>36 repos</span><span>35 with raw</span><span>525 raw files</span><span>6,095 raw records</span><span>105 DuckDB tables</span><span>51 signal tables</span><span>31/32 repos w/ ontology rows</span><a href="storage.html">Open storage footprint</a></div></section>
+
+    <section class="taxonomy-banner"><div><h2>Event Model Coverage</h2><p>radar-ontology event 모델이 어떤 저장소에서 어떤 source를 통해 채워지는지 정리한 마트입니다. 요약 ontology 어댑션과 DuckDB raw payload 양쪽을 같이 집계합니다.</p></div><div class="taxonomy-banner__meta"><span>109 coverage rows</span><span>89 event models</span><span>25 namespaces</span><span>34 summary</span><span>55 duckdb</span><span>27 repos at 100% / 27 above partial floor</span><a href="event-model.html">Open event model coverage</a></div></section>
 
     <section class="taxonomy-banner"><div><h2>Daily Collection Contract</h2><p>전 저장소의 daily schedule, date-partitioned raw records, DuckDB snapshot, retention CLI 적용 상태를 점검합니다.</p></div><div class="taxonomy-banner__meta"><span>25 ok</span><span>0 partial</span><span>2 n/a</span><span>data/snapshots/YYYY-MM-DD/&lt;database&gt;.duckdb / data/daily/YYYY-MM-DD.duckdb</span><a href="daily-collection.html">Open daily contract</a></div></section>
 
@@ -507,42 +520,42 @@
             </tr>
           </thead>
           <tbody>
-            <tr><td><div class="project-name"><a href="../ArtRadar/reports/index.html">Art</a></div><div class="project-repo">ArtRadar</div></td><td>art</td><td><span class="badge badge--active">Full</span></td><td>26</td><td>26</td><td>100.0%</td><td>21</td><td>2026-04-14</td><td><span class="entity-chip">ArtGeneral <strong>1056</strong></span><span class="entity-chip">Topic <strong>78</strong></span><span class="entity-chip">Institution <strong>50</strong></span><span class="entity-chip">Genre <strong>21</strong></span></td><td><a href="../ArtRadar/reports/index.html">index</a></td></tr>
-<tr><td><div class="project-name"><a href="../BenefitRadar/reports/index.html">Benefit</a></div><div class="project-repo">BenefitRadar</div></td><td>benefit</td><td><span class="badge badge--active">Full</span></td><td>77</td><td>77</td><td>100.0%</td><td>12</td><td>2026-04-14</td><td><span class="entity-chip">GovernmentPolicy <strong>409</strong></span><span class="entity-chip">EmploymentBenefit <strong>317</strong></span><span class="entity-chip">SubsidyProgram <strong>290</strong></span><span class="entity-chip">TargetDemographic <strong>214</strong></span></td><td><a href="../BenefitRadar/reports/index.html">index</a></td></tr>
-<tr><td><div class="project-name"><a href="../BlogRadar/reports/index.html">Blog</a></div><div class="project-repo">BlogRadar</div></td><td>techblog</td><td><span class="badge badge--active">Full</span></td><td>81</td><td>81</td><td>100.0%</td><td>56</td><td>2026-04-14</td><td><span class="entity-chip">SourceSignal <strong>120</strong></span><span class="entity-chip">Topic <strong>101</strong></span><span class="entity-chip">Domain <strong>91</strong></span><span class="entity-chip">Framework <strong>79</strong></span></td><td><a href="../BlogRadar/reports/index.html">index</a></td></tr>
-<tr><td><div class="project-name"><a href="../BookRadar/reports/index.html">Book</a></div><div class="project-repo">BookRadar</div></td><td>book</td><td><span class="badge badge--active">Full</span></td><td>33</td><td>33</td><td>100.0%</td><td>18</td><td>2026-04-14</td><td><span class="entity-chip">Genre <strong>39</strong></span><span class="entity-chip">SourceSignal <strong>35</strong></span><span class="entity-chip">Award <strong>6</strong></span><span class="entity-chip">Author <strong>6</strong></span></td><td><a href="../BookRadar/reports/index.html">index</a></td></tr>
-<tr><td><div class="project-name"><a href="../CryptoRadar/reports/index.html">Crypto</a></div><div class="project-repo">CryptoRadar</div></td><td>crypto</td><td><span class="badge badge--active">Full</span></td><td>30</td><td>29</td><td>96.7%</td><td>11</td><td>2026-04-14</td><td><span class="entity-chip">CryptoGeneral <strong>148</strong></span><span class="entity-chip">Cryptocurrency <strong>21</strong></span><span class="entity-chip">Market <strong>17</strong></span><span class="entity-chip">Exchange <strong>7</strong></span></td><td><a href="../CryptoRadar/reports/index.html">index</a></td></tr>
-<tr><td><div class="project-name"><a href="../EventRadar/reports/index.html">Event</a></div><div class="project-repo">EventRadar</div></td><td>event</td><td><span class="badge badge--active">Full</span></td><td>9</td><td>9</td><td>100.0%</td><td>7</td><td>2026-04-14</td><td><span class="entity-chip">EventGeneral <strong>8</strong></span><span class="entity-chip">SourceSignal <strong>7</strong></span><span class="entity-chip">Entertainment <strong>6</strong></span><span class="entity-chip">Event <strong>4</strong></span></td><td><a href="../EventRadar/reports/index.html">index</a></td></tr>
-<tr><td><div class="project-name"><a href="../FoodRadar/reports/index.html">Food</a></div><div class="project-repo">FoodRadar</div></td><td>food</td><td><span class="badge badge--active">Full</span></td><td>37</td><td>35</td><td>94.6%</td><td>9</td><td>2026-04-14</td><td><span class="entity-chip">FoodGeneral <strong>121</strong></span><span class="entity-chip">SafetyIssue <strong>55</strong></span><span class="entity-chip">FoodType <strong>32</strong></span><span class="entity-chip">Regulation <strong>17</strong></span></td><td><a href="../FoodRadar/reports/index.html">index</a></td></tr>
-<tr><td><div class="project-name"><a href="../GameRadar/reports/index.html">Game</a></div><div class="project-repo">GameRadar</div></td><td>game</td><td><span class="badge badge--active">Full</span></td><td>65</td><td>65</td><td>100.0%</td><td>30</td><td>2026-04-14</td><td><span class="entity-chip">GameGeneral <strong>136</strong></span><span class="entity-chip">SourceSignal <strong>80</strong></span><span class="entity-chip">Platform <strong>31</strong></span><span class="entity-chip">Release <strong>29</strong></span></td><td><a href="../GameRadar/reports/index.html">index</a></td></tr>
-<tr><td><div class="project-name"><a href="../GovRadar/reports/index.html">Gov</a></div><div class="project-repo">GovRadar</div></td><td>govsupport</td><td><span class="badge badge--active">Full</span></td><td>77</td><td>77</td><td>100.0%</td><td>5</td><td>2026-04-14</td><td><span class="entity-chip">GovGeneral <strong>1101</strong></span><span class="entity-chip">ApplicationInfo <strong>643</strong></span><span class="entity-chip">Region <strong>546</strong></span><span class="entity-chip">TargetGroup <strong>337</strong></span></td><td><a href="../GovRadar/reports/index.html">index</a></td></tr>
-<tr><td><div class="project-name"><a href="../HomeRadar/reports/index.html">Home</a></div><div class="project-repo">HomeRadar</div></td><td>home</td><td><span class="badge badge--active">Full</span></td><td>100</td><td>76</td><td>76.0%</td><td>1</td><td>2026-04-14</td><td><span class="entity-chip">keyword <strong>117</strong></span><span class="entity-chip">district <strong>45</strong></span><span class="entity-chip">project <strong>16</strong></span><span class="entity-chip">complex <strong>5</strong></span></td><td><a href="../HomeRadar/reports/index.html">index</a></td></tr>
-<tr><td><div class="project-name"><a href="../JobRadar/reports/index.html">Job</a></div><div class="project-repo">JobRadar</div></td><td>job</td><td><span class="badge badge--active">Full</span></td><td>4</td><td>4</td><td>100.0%</td><td>3</td><td>2026-04-14</td><td><span class="entity-chip">SourceSignal <strong>14</strong></span><span class="entity-chip">EmploymentTrend <strong>5</strong></span><span class="entity-chip">Company <strong>2</strong></span><span class="entity-chip">Industry <strong>2</strong></span></td><td><a href="../JobRadar/reports/index.html">index</a></td></tr>
-<tr><td><div class="project-name"><a href="../MobilityRadar/reports/index.html">Mobility</a></div><div class="project-repo">MobilityRadar</div></td><td>mobility</td><td><span class="badge badge--active">Full</span></td><td>16</td><td>16</td><td>100.0%</td><td>9</td><td>2026-04-14</td><td><span class="entity-chip">SourceSignal <strong>22</strong></span><span class="entity-chip">VehicleType <strong>9</strong></span><span class="entity-chip">Service <strong>6</strong></span><span class="entity-chip">ChargingInfra <strong>4</strong></span></td><td><a href="../MobilityRadar/reports/index.html">index</a></td></tr>
-<tr><td><div class="project-name"><a href="../MovieRadar/reports/index.html">Movie</a></div><div class="project-repo">MovieRadar</div></td><td>movie</td><td><span class="badge badge--active">Full</span></td><td>8</td><td>8</td><td>100.0%</td><td>5</td><td>2026-04-14</td><td><span class="entity-chip">FilmGeneral <strong>23</strong></span><span class="entity-chip">SourceSignal <strong>11</strong></span><span class="entity-chip">Studio <strong>8</strong></span><span class="entity-chip">Genre <strong>3</strong></span></td><td><a href="../MovieRadar/reports/index.html">index</a></td></tr>
-<tr><td><div class="project-name"><a href="../PaperRadar/reports/index.html">Paper</a></div><div class="project-repo">PaperRadar</div></td><td>research</td><td><span class="badge badge--active">Full</span></td><td>16</td><td>16</td><td>100.0%</td><td>16</td><td>2026-04-14</td><td><span class="entity-chip">ResearchGeneral <strong>163</strong></span><span class="entity-chip">Tasks <strong>10</strong></span><span class="entity-chip">Research Areas <strong>6</strong></span><span class="entity-chip">Techniques <strong>5</strong></span></td><td><a href="../PaperRadar/reports/index.html">index</a></td></tr>
-<tr><td><div class="project-name"><a href="../PaperworkRadar/reports/index.html">Paperwork</a></div><div class="project-repo">PaperworkRadar</div></td><td>paperwork</td><td><span class="badge badge--active">Full</span></td><td>23</td><td>23</td><td>100.0%</td><td>16</td><td>2026-04-14</td><td><span class="entity-chip">PaperworkGeneral <strong>638</strong></span><span class="entity-chip">Registration <strong>24</strong></span><span class="entity-chip">TaxDocs <strong>17</strong></span><span class="entity-chip">Visa <strong>12</strong></span></td><td><a href="../PaperworkRadar/reports/index.html">index</a></td></tr>
-<tr><td><div class="project-name"><a href="../PolicyRadar/reports/index.html">Policy</a></div><div class="project-repo">PolicyRadar</div></td><td>policy</td><td><span class="badge badge--active">Full</span></td><td>28</td><td>28</td><td>100.0%</td><td>6</td><td>2026-04-14</td><td><span class="entity-chip">Regulation <strong>183</strong></span><span class="entity-chip">Privacy <strong>143</strong></span><span class="entity-chip">Platform <strong>55</strong></span><span class="entity-chip">ExecutiveOrder <strong>34</strong></span></td><td><a href="../PolicyRadar/reports/index.html">index</a></td></tr>
-<tr><td><div class="project-name"><a href="../PriceRadar/reports/index.html">Price</a></div><div class="project-repo">PriceRadar</div></td><td>price</td><td><span class="badge badge--active">Full</span></td><td>100</td><td>100</td><td>100.0%</td><td>4</td><td>2026-04-14</td><td><span class="entity-chip">price_band:10k_50k <strong>63</strong></span><span class="entity-chip">source:enuri_main <strong>61</strong></span><span class="entity-chip">discount:50%+ <strong>44</strong></span><span class="entity-chip">platform:coupang <strong>31</strong></span></td><td><a href="../PriceRadar/reports/index.html">index</a></td></tr>
-<tr><td><div class="project-name"><a href="../PropertyRadar/reports/index.html">Property</a></div><div class="project-repo">PropertyRadar</div></td><td>property</td><td><span class="badge badge--active">Full</span></td><td>10</td><td>9</td><td>90.0%</td><td>4</td><td>2026-04-14</td><td><span class="entity-chip">Market <strong>8</strong></span><span class="entity-chip">PropertyGeneral <strong>5</strong></span><span class="entity-chip">Location <strong>3</strong></span><span class="entity-chip">Developer <strong>3</strong></span></td><td><a href="../PropertyRadar/reports/index.html">index</a></td></tr>
-<tr><td><div class="project-name"><a href="../QueueRadar/reports/index.html">Queue</a></div><div class="project-repo">QueueRadar</div></td><td>queue</td><td><span class="badge badge--active">Full</span></td><td>17</td><td>17</td><td>100.0%</td><td>16</td><td>2026-04-14</td><td><span class="entity-chip">QueueGeneral <strong>202</strong></span><span class="entity-chip">RealTimeData <strong>74</strong></span><span class="entity-chip">WaitTime <strong>51</strong></span><span class="entity-chip">Location <strong>26</strong></span></td><td><a href="../QueueRadar/reports/index.html">index</a></td></tr>
-<tr><td><div class="project-name"><a href="../RefundRadar/reports/index.html">Refund</a></div><div class="project-repo">RefundRadar</div></td><td>refund</td><td><span class="badge badge--active">Full</span></td><td>65</td><td>65</td><td>100.0%</td><td>5</td><td>2026-04-14</td><td><span class="entity-chip">RefundGeneral <strong>2932</strong></span><span class="entity-chip">ConsumerProtection <strong>126</strong></span><span class="entity-chip">SourceSignal <strong>124</strong></span><span class="entity-chip">OperationalEvent <strong>93</strong></span></td><td><a href="../RefundRadar/reports/index.html">index</a></td></tr>
-<tr><td><div class="project-name"><a href="../SubscriptionRadar/reports/index.html">Subscription</a></div><div class="project-repo">SubscriptionRadar</div></td><td>subscription</td><td><span class="badge badge--active">Full</span></td><td>6</td><td>6</td><td>100.0%</td><td>6</td><td>2026-04-14</td><td><span class="entity-chip">Subscription <strong>36</strong></span><span class="entity-chip">Service <strong>35</strong></span><span class="entity-chip">Price <strong>29</strong></span><span class="entity-chip">SourceSignal <strong>15</strong></span></td><td><a href="../SubscriptionRadar/reports/index.html">index</a></td></tr>
-<tr><td><div class="project-name"><a href="../TrendRadar/reports/index.html">Trend</a></div><div class="project-repo">TrendRadar</div></td><td>trend</td><td><span class="badge badge--active">Full</span></td><td>200</td><td>200</td><td>100.0%</td><td>1</td><td>2026-04-14</td><td><span class="entity-chip">샴페인 <strong>6</strong></span><span class="entity-chip">레드와인 <strong>6</strong></span><span class="entity-chip">화이트와인 <strong>6</strong></span><span class="entity-chip">와인 <strong>6</strong></span></td><td><a href="../TrendRadar/reports/index.html">index</a></td></tr>
-<tr><td><div class="project-name"><a href="../TrustRadar/reports/index.html">Trust</a></div><div class="project-repo">TrustRadar</div></td><td>trust</td><td><span class="badge badge--active">Full</span></td><td>37</td><td>32</td><td>86.5%</td><td>12</td><td>2026-04-14</td><td><span class="entity-chip">SecurityGeneral <strong>158</strong></span><span class="entity-chip">OperationalEvent <strong>45</strong></span><span class="entity-chip">Privacy <strong>32</strong></span><span class="entity-chip">VerificationState <strong>25</strong></span></td><td><a href="../TrustRadar/reports/index.html">index</a></td></tr>
-<tr><td><div class="project-name"><a href="../WineRadar/reports/index.html">Wine</a></div><div class="project-repo">WineRadar</div></td><td>wine</td><td><span class="badge badge--active">Full</span></td><td>69</td><td>69</td><td>100.0%</td><td>15</td><td>2026-04-14</td><td><span class="entity-chip">topic <strong>108</strong></span><span class="entity-chip">region <strong>82</strong></span><span class="entity-chip">grape_variety <strong>35</strong></span><span class="entity-chip">climate_zone <strong>24</strong></span></td><td><a href="../WineRadar/reports/index.html">index</a></td></tr>
-<tr><td><div class="project-name"><a href="../CollaborationMCPRadar/reports/index.html">CollaborationMCP</a></div><div class="project-repo">CollaborationMCPRadar</div></td><td>collaboration_mcp</td><td><span class="badge badge--active">Full</span></td><td>4</td><td>4</td><td>100.0%</td><td>1</td><td>2026-04-13</td><td><span class="entity-chip">MCPDomain <strong>21</strong></span><span class="entity-chip">ProjectHealth <strong>11</strong></span><span class="entity-chip">RiskScope <strong>6</strong></span><span class="entity-chip">Provider <strong>5</strong></span></td><td><a href="../CollaborationMCPRadar/reports/index.html">index</a></td></tr>
-<tr><td><div class="project-name"><a href="../CommerceMCPRadar/reports/index.html">CommerceMCP</a></div><div class="project-repo">CommerceMCPRadar</div></td><td>commerce_mcp</td><td><span class="badge badge--active">Full</span></td><td>2</td><td>2</td><td>100.0%</td><td>1</td><td>2026-04-13</td><td><span class="entity-chip">MCPDomain <strong>9</strong></span><span class="entity-chip">ProjectHealth <strong>4</strong></span><span class="entity-chip">Capability <strong>3</strong></span></td><td><a href="../CommerceMCPRadar/reports/index.html">index</a></td></tr>
-<tr><td><div class="project-name"><a href="../FinanceTaxMCPRadar/reports/index.html">FinanceTaxMCP</a></div><div class="project-repo">FinanceTaxMCPRadar</div></td><td>finance_tax_mcp</td><td><span class="badge badge--active">Full</span></td><td>5</td><td>5</td><td>100.0%</td><td>1</td><td>2026-04-13</td><td><span class="entity-chip">MCPDomain <strong>23</strong></span><span class="entity-chip">ProjectHealth <strong>14</strong></span><span class="entity-chip">Provider <strong>6</strong></span><span class="entity-chip">Capability <strong>6</strong></span></td><td><a href="../FinanceTaxMCPRadar/reports/index.html">index</a></td></tr>
-<tr><td><div class="project-name"><a href="../KoreanNLPMCPRadar/reports/index.html">KoreanNLPMCP</a></div><div class="project-repo">KoreanNLPMCPRadar</div></td><td>korean_nlp_mcp</td><td><span class="badge badge--active">Full</span></td><td>3</td><td>3</td><td>100.0%</td><td>1</td><td>2026-04-13</td><td><span class="entity-chip">MCPDomain <strong>12</strong></span><span class="entity-chip">ProjectHealth <strong>8</strong></span><span class="entity-chip">Capability <strong>3</strong></span><span class="entity-chip">RiskScope <strong>1</strong></span></td><td><a href="../KoreanNLPMCPRadar/reports/index.html">index</a></td></tr>
-<tr><td><div class="project-name"><a href="../LegalGovMCPRadar/reports/index.html">LegalGovMCP</a></div><div class="project-repo">LegalGovMCPRadar</div></td><td>legal_gov_mcp</td><td><span class="badge badge--active">Full</span></td><td>4</td><td>4</td><td>100.0%</td><td>1</td><td>2026-04-13</td><td><span class="entity-chip">MCPDomain <strong>25</strong></span><span class="entity-chip">ProjectHealth <strong>12</strong></span><span class="entity-chip">Capability <strong>7</strong></span><span class="entity-chip">RiskScope <strong>4</strong></span></td><td><a href="../LegalGovMCPRadar/reports/index.html">index</a></td></tr>
-<tr><td><div class="project-name"><a href="../MapAddressMCPRadar/reports/index.html">MapAddressMCP</a></div><div class="project-repo">MapAddressMCPRadar</div></td><td>map_address_mcp</td><td><span class="badge badge--active">Full</span></td><td>5</td><td>5</td><td>100.0%</td><td>1</td><td>2026-04-13</td><td><span class="entity-chip">MCPDomain <strong>27</strong></span><span class="entity-chip">ProjectHealth <strong>18</strong></span><span class="entity-chip">Provider <strong>9</strong></span><span class="entity-chip">RiskScope <strong>8</strong></span></td><td><a href="../MapAddressMCPRadar/reports/index.html">index</a></td></tr>
-<tr><td><div class="project-name"><a href="../MiscMCPRadar/reports/index.html">MiscMCP</a></div><div class="project-repo">MiscMCPRadar</div></td><td>misc_mcp</td><td><span class="badge badge--active">Full</span></td><td>0</td><td>0</td><td>0.0%</td><td>0</td><td>2026-04-13</td><td><span class="entity-chip entity-chip--muted">No entity data</span></td><td><a href="../MiscMCPRadar/reports/index.html">index</a></td></tr>
-<tr><td><div class="project-name"><a href="../PublicDataMCPRadar/reports/index.html">PublicDataMCP</a></div><div class="project-repo">PublicDataMCPRadar</div></td><td>publicdata_mcp</td><td><span class="badge badge--active">Full</span></td><td>7</td><td>7</td><td>100.0%</td><td>1</td><td>2026-04-13</td><td><span class="entity-chip">ProjectHealth <strong>24</strong></span><span class="entity-chip">MCPDomain <strong>16</strong></span><span class="entity-chip">Capability <strong>10</strong></span><span class="entity-chip">RiskScope <strong>8</strong></span></td><td><a href="../PublicDataMCPRadar/reports/index.html">index</a></td></tr>
-<tr><td><div class="project-name"><a href="../RealEstateMCPRadar/reports/index.html">RealEstateMCP</a></div><div class="project-repo">RealEstateMCPRadar</div></td><td>realestate_mcp</td><td><span class="badge badge--active">Full</span></td><td>3</td><td>3</td><td>100.0%</td><td>1</td><td>2026-04-13</td><td><span class="entity-chip">MCPDomain <strong>10</strong></span><span class="entity-chip">ProjectHealth <strong>7</strong></span><span class="entity-chip">RiskScope <strong>2</strong></span><span class="entity-chip">Capability <strong>1</strong></span></td><td><a href="../RealEstateMCPRadar/reports/index.html">index</a></td></tr>
-<tr><td><div class="project-name"><a href="../SearchTrendMCPRadar/reports/index.html">SearchTrendMCP</a></div><div class="project-repo">SearchTrendMCPRadar</div></td><td>search_trend_mcp</td><td><span class="badge badge--active">Full</span></td><td>2</td><td>2</td><td>100.0%</td><td>1</td><td>2026-04-13</td><td><span class="entity-chip">MCPDomain <strong>14</strong></span><span class="entity-chip">ProjectHealth <strong>6</strong></span><span class="entity-chip">Capability <strong>5</strong></span><span class="entity-chip">Provider <strong>4</strong></span></td><td><a href="../SearchTrendMCPRadar/reports/index.html">index</a></td></tr>
-<tr><td><div class="project-name"><a href="../TravelMCPRadar/reports/index.html">TravelMCP</a></div><div class="project-repo">TravelMCPRadar</div></td><td>travel_mcp</td><td><span class="badge badge--active">Full</span></td><td>2</td><td>2</td><td>100.0%</td><td>1</td><td>2026-04-13</td><td><span class="entity-chip">MCPDomain <strong>12</strong></span><span class="entity-chip">ProjectHealth <strong>5</strong></span><span class="entity-chip">Capability <strong>2</strong></span><span class="entity-chip">RiskScope <strong>2</strong></span></td><td><a href="../TravelMCPRadar/reports/index.html">index</a></td></tr>
-<tr><td><div class="project-name"><a href="../WeatherMCPRadar/reports/index.html">WeatherMCP</a></div><div class="project-repo">WeatherMCPRadar</div></td><td>weather_mcp</td><td><span class="badge badge--active">Full</span></td><td>5</td><td>5</td><td>100.0%</td><td>1</td><td>2026-04-13</td><td><span class="entity-chip">MCPDomain <strong>22</strong></span><span class="entity-chip">ProjectHealth <strong>17</strong></span><span class="entity-chip">Provider <strong>6</strong></span><span class="entity-chip">RiskScope <strong>6</strong></span></td><td><a href="../WeatherMCPRadar/reports/index.html">index</a></td></tr>
+            <tr><td><div class="project-name"><a href="../BenefitRadar/reports/index.html">Benefit</a></div><div class="project-repo">BenefitRadar</div></td><td>benefit</td><td><span class="badge badge--active">Full</span></td><td>290</td><td>290</td><td>100.0%</td><td>22</td><td>2026-04-25</td><td><span class="entity-chip">GovernmentPolicy <strong>738</strong></span><span class="entity-chip">BenefitProgramKey <strong>290</strong></span><span class="entity-chip">EligibilityRegion <strong>249</strong></span><span class="entity-chip">SubsidyProgram <strong>244</strong></span></td><td><a href="../BenefitRadar/reports/index.html">index</a></td></tr>
+<tr><td><div class="project-name"><a href="../BlogRadar/reports/index.html">Blog</a></div><div class="project-repo">BlogRadar</div></td><td>techblog</td><td><span class="badge badge--active">Full</span></td><td>1,155</td><td>1,150</td><td>99.6%</td><td>60</td><td>2026-04-25</td><td><span class="entity-chip">SourceSignal <strong>1878</strong></span><span class="entity-chip">Domain <strong>1204</strong></span><span class="entity-chip">Topic <strong>1045</strong></span><span class="entity-chip">Framework <strong>942</strong></span></td><td><a href="../BlogRadar/reports/index.html">index</a></td></tr>
+<tr><td><div class="project-name"><a href="../BookRadar/reports/index.html">Book</a></div><div class="project-repo">BookRadar</div></td><td>book</td><td><span class="badge badge--active">Full</span></td><td>485</td><td>485</td><td>100.0%</td><td>19</td><td>2026-04-25</td><td><span class="entity-chip">SourceSignal <strong>521</strong></span><span class="entity-chip">Genre <strong>479</strong></span><span class="entity-chip">Author <strong>92</strong></span><span class="entity-chip">BookType <strong>39</strong></span></td><td><a href="../BookRadar/reports/index.html">index</a></td></tr>
+<tr><td><div class="project-name"><a href="../CryptoRadar/reports/index.html">Crypto</a></div><div class="project-repo">CryptoRadar</div></td><td>crypto</td><td><span class="badge badge--active">Full</span></td><td>200</td><td>194</td><td>97.0%</td><td>10</td><td>2026-04-25</td><td><span class="entity-chip">CryptoGeneral <strong>985</strong></span><span class="entity-chip">Cryptocurrency <strong>228</strong></span><span class="entity-chip">Market <strong>138</strong></span><span class="entity-chip">Technology <strong>56</strong></span></td><td><a href="../CryptoRadar/reports/index.html">index</a></td></tr>
+<tr><td><div class="project-name"><a href="../EventRadar/reports/index.html">Event</a></div><div class="project-repo">EventRadar</div></td><td>event</td><td><span class="badge badge--active">Full</span></td><td>383</td><td>383</td><td>100.0%</td><td>26</td><td>2026-04-25</td><td><span class="entity-chip">EventGeneral <strong>281</strong></span><span class="entity-chip">SourceSignal <strong>272</strong></span><span class="entity-chip">Entertainment <strong>253</strong></span><span class="entity-chip">Event <strong>151</strong></span></td><td><a href="../EventRadar/reports/index.html">index</a></td></tr>
+<tr><td><div class="project-name"><a href="../FoodRadar/reports/index.html">Food</a></div><div class="project-repo">FoodRadar</div></td><td>food</td><td><span class="badge badge--active">Full</span></td><td>200</td><td>163</td><td>81.5%</td><td>10</td><td>2026-04-25</td><td><span class="entity-chip">FoodGeneral <strong>261</strong></span><span class="entity-chip">FoodType <strong>141</strong></span><span class="entity-chip">SafetyIssue <strong>82</strong></span><span class="entity-chip">Regulation <strong>21</strong></span></td><td><a href="../FoodRadar/reports/index.html">index</a></td></tr>
+<tr><td><div class="project-name"><a href="../GovRadar/reports/index.html">Gov</a></div><div class="project-repo">GovRadar</div></td><td>govsupport</td><td><span class="badge badge--active">Full</span></td><td>74</td><td>74</td><td>100.0%</td><td>14</td><td>2026-04-25</td><td><span class="entity-chip">GovGeneral <strong>990</strong></span><span class="entity-chip">ApplicationInfo <strong>194</strong></span><span class="entity-chip">TargetGroup <strong>185</strong></span><span class="entity-chip">SourceSignal <strong>138</strong></span></td><td><a href="../GovRadar/reports/index.html">index</a></td></tr>
+<tr><td><div class="project-name"><a href="../JobRadar/reports/index.html">Job</a></div><div class="project-repo">JobRadar</div></td><td>job</td><td><span class="badge badge--active">Full</span></td><td>193</td><td>193</td><td>100.0%</td><td>15</td><td>2026-04-25</td><td><span class="entity-chip">SourceSignal <strong>183</strong></span><span class="entity-chip">EmploymentTrend <strong>174</strong></span><span class="entity-chip">Industry <strong>123</strong></span><span class="entity-chip">JobTitle <strong>101</strong></span></td><td><a href="../JobRadar/reports/index.html">index</a></td></tr>
+<tr><td><div class="project-name"><a href="../MobilityRadar/reports/index.html">Mobility</a></div><div class="project-repo">MobilityRadar</div></td><td>mobility</td><td><span class="badge badge--active">Full</span></td><td>112</td><td>112</td><td>100.0%</td><td>16</td><td>2026-04-25</td><td><span class="entity-chip">VehicleType <strong>69</strong></span><span class="entity-chip">EVModel <strong>63</strong></span><span class="entity-chip">Manufacturer <strong>59</strong></span><span class="entity-chip">ChargingInfra <strong>36</strong></span></td><td><a href="../MobilityRadar/reports/index.html">index</a></td></tr>
+<tr><td><div class="project-name"><a href="../MovieRadar/reports/index.html">Movie</a></div><div class="project-repo">MovieRadar</div></td><td>movie</td><td><span class="badge badge--active">Full</span></td><td>76</td><td>76</td><td>100.0%</td><td>10</td><td>2026-04-25</td><td><span class="entity-chip">FilmGeneral <strong>170</strong></span><span class="entity-chip">SourceSignal <strong>122</strong></span><span class="entity-chip">Platform <strong>83</strong></span><span class="entity-chip">Studio <strong>70</strong></span></td><td><a href="../MovieRadar/reports/index.html">index</a></td></tr>
+<tr><td><div class="project-name"><a href="../PaperRadar/reports/index.html">Paper</a></div><div class="project-repo">PaperRadar</div></td><td>research</td><td><span class="badge badge--active">Full</span></td><td>54</td><td>52</td><td>96.3%</td><td>11</td><td>2026-04-25</td><td><span class="entity-chip">ResearchGeneral <strong>246</strong></span><span class="entity-chip">Tasks <strong>15</strong></span><span class="entity-chip">Research Areas <strong>14</strong></span><span class="entity-chip">Techniques <strong>8</strong></span></td><td><a href="../PaperRadar/reports/index.html">index</a></td></tr>
+<tr><td><div class="project-name"><a href="../PaperworkRadar/reports/index.html">Paperwork</a></div><div class="project-repo">PaperworkRadar</div></td><td>paperwork</td><td><span class="badge badge--active">Full</span></td><td>200</td><td>197</td><td>98.5%</td><td>17</td><td>2026-04-25</td><td><span class="entity-chip">PaperworkGeneral <strong>5548</strong></span><span class="entity-chip">Registration <strong>138</strong></span><span class="entity-chip">Visa <strong>71</strong></span><span class="entity-chip">TaxDocs <strong>48</strong></span></td><td><a href="../PaperworkRadar/reports/index.html">index</a></td></tr>
+<tr><td><div class="project-name"><a href="../PolicyRadar/reports/index.html">Policy</a></div><div class="project-repo">PolicyRadar</div></td><td>policy</td><td><span class="badge badge--active">Full</span></td><td>185</td><td>171</td><td>92.4%</td><td>17</td><td>2026-04-25</td><td><span class="entity-chip">Regulation <strong>320</strong></span><span class="entity-chip">Legislation <strong>159</strong></span><span class="entity-chip">JudicialRuling <strong>62</strong></span><span class="entity-chip">Privacy <strong>41</strong></span></td><td><a href="../PolicyRadar/reports/index.html">index</a></td></tr>
+<tr><td><div class="project-name"><a href="../PropertyRadar/reports/index.html">Property</a></div><div class="project-repo">PropertyRadar</div></td><td>property</td><td><span class="badge badge--active">Full</span></td><td>146</td><td>120</td><td>82.2%</td><td>8</td><td>2026-04-25</td><td><span class="entity-chip">Market <strong>173</strong></span><span class="entity-chip">PropertyGeneral <strong>166</strong></span><span class="entity-chip">PropertyType <strong>93</strong></span><span class="entity-chip">Location <strong>43</strong></span></td><td><a href="../PropertyRadar/reports/index.html">index</a></td></tr>
+<tr><td><div class="project-name"><a href="../QueueRadar/reports/index.html">Queue</a></div><div class="project-repo">QueueRadar</div></td><td>queue</td><td><span class="badge badge--active">Full</span></td><td>200</td><td>200</td><td>100.0%</td><td>8</td><td>2026-04-25</td><td><span class="entity-chip">RealTimeData <strong>1200</strong></span><span class="entity-chip">QueueGeneral <strong>974</strong></span><span class="entity-chip">WaitTime <strong>876</strong></span><span class="entity-chip">Status <strong>400</strong></span></td><td><a href="../QueueRadar/reports/index.html">index</a></td></tr>
+<tr><td><div class="project-name"><a href="../RefundRadar/reports/index.html">Refund</a></div><div class="project-repo">RefundRadar</div></td><td>refund</td><td><span class="badge badge--active">Full</span></td><td>129</td><td>129</td><td>100.0%</td><td>14</td><td>2026-04-25</td><td><span class="entity-chip">RefundGeneral <strong>2428</strong></span><span class="entity-chip">SourceSignal <strong>197</strong></span><span class="entity-chip">FinancialAmount <strong>106</strong></span><span class="entity-chip">ConsumerProtection <strong>81</strong></span></td><td><a href="../RefundRadar/reports/index.html">index</a></td></tr>
+<tr><td><div class="project-name"><a href="../SubscriptionRadar/reports/index.html">Subscription</a></div><div class="project-repo">SubscriptionRadar</div></td><td>subscription</td><td><span class="badge badge--active">Full</span></td><td>70</td><td>70</td><td>100.0%</td><td>23</td><td>2026-04-25</td><td><span class="entity-chip">Service <strong>155</strong></span><span class="entity-chip">Price <strong>111</strong></span><span class="entity-chip">Subscription <strong>92</strong></span><span class="entity-chip">Provider <strong>56</strong></span></td><td><a href="../SubscriptionRadar/reports/index.html">index</a></td></tr>
+<tr><td><div class="project-name"><a href="../TrustRadar/reports/index.html">Trust</a></div><div class="project-repo">TrustRadar</div></td><td>trust</td><td><span class="badge badge--active">Full</span></td><td>193</td><td>160</td><td>82.9%</td><td>19</td><td>2026-04-25</td><td><span class="entity-chip">SecurityGeneral <strong>211</strong></span><span class="entity-chip">Vulnerability <strong>95</strong></span><span class="entity-chip">Threat <strong>38</strong></span><span class="entity-chip">OperationalEvent <strong>31</strong></span></td><td><a href="../TrustRadar/reports/index.html">index</a></td></tr>
+<tr><td><div class="project-name"><a href="../WineRadar/reports/index.html">Wine</a></div><div class="project-repo">WineRadar</div></td><td>wine</td><td><span class="badge badge--active">Full</span></td><td>62</td><td>62</td><td>100.0%</td><td>17</td><td>2026-04-25</td><td><span class="entity-chip">topic <strong>103</strong></span><span class="entity-chip">region <strong>62</strong></span><span class="entity-chip">grape_variety <strong>38</strong></span><span class="entity-chip">climate_zone <strong>24</strong></span></td><td><a href="../WineRadar/reports/index.html">index</a></td></tr>
+<tr><td><div class="project-name"><a href="../ArtRadar/reports/index.html">Art</a></div><div class="project-repo">ArtRadar</div></td><td>art</td><td><span class="badge badge--active">Full</span></td><td>200</td><td>186</td><td>93.0%</td><td>30</td><td>2026-04-24</td><td><span class="entity-chip">ArtGeneral <strong>3171</strong></span><span class="entity-chip">Topic <strong>170</strong></span><span class="entity-chip">Institution <strong>116</strong></span><span class="entity-chip">Market <strong>40</strong></span></td><td><a href="../ArtRadar/reports/index.html">index</a></td></tr>
+<tr><td><div class="project-name"><a href="../CollaborationMCPRadar/reports/index.html">CollaborationMCP</a></div><div class="project-repo">CollaborationMCPRadar</div></td><td>collaboration_mcp</td><td><span class="badge badge--active">Full</span></td><td>4</td><td>4</td><td>100.0%</td><td>1</td><td>2026-04-24</td><td><span class="entity-chip">MCPDomain <strong>9</strong></span><span class="entity-chip">ProjectHealth <strong>9</strong></span><span class="entity-chip">Provider <strong>6</strong></span><span class="entity-chip">Capability <strong>5</strong></span></td><td><a href="../CollaborationMCPRadar/reports/index.html">index</a></td></tr>
+<tr><td><div class="project-name"><a href="../CommerceMCPRadar/reports/index.html">CommerceMCP</a></div><div class="project-repo">CommerceMCPRadar</div></td><td>commerce_mcp</td><td><span class="badge badge--active">Full</span></td><td>2</td><td>2</td><td>100.0%</td><td>1</td><td>2026-04-24</td><td><span class="entity-chip">ProjectHealth <strong>4</strong></span><span class="entity-chip">MCPDomain <strong>3</strong></span><span class="entity-chip">Capability <strong>3</strong></span></td><td><a href="../CommerceMCPRadar/reports/index.html">index</a></td></tr>
+<tr><td><div class="project-name"><a href="../FinanceTaxMCPRadar/reports/index.html">FinanceTaxMCP</a></div><div class="project-repo">FinanceTaxMCPRadar</div></td><td>finance_tax_mcp</td><td><span class="badge badge--active">Full</span></td><td>5</td><td>5</td><td>100.0%</td><td>1</td><td>2026-04-24</td><td><span class="entity-chip">ProjectHealth <strong>10</strong></span><span class="entity-chip">MCPDomain <strong>8</strong></span><span class="entity-chip">Capability <strong>7</strong></span><span class="entity-chip">Provider <strong>4</strong></span></td><td><a href="../FinanceTaxMCPRadar/reports/index.html">index</a></td></tr>
+<tr><td><div class="project-name"><a href="../GameRadar/reports/index.html">Game</a></div><div class="project-repo">GameRadar</div></td><td>game</td><td><span class="badge badge--active">Full</span></td><td>300</td><td>300</td><td>100.0%</td><td>32</td><td>2026-04-24</td><td><span class="entity-chip">GameGeneral <strong>576</strong></span><span class="entity-chip">SourceSignal <strong>410</strong></span><span class="entity-chip">Release <strong>190</strong></span><span class="entity-chip">Platform <strong>161</strong></span></td><td><a href="../GameRadar/reports/index.html">index</a></td></tr>
+<tr><td><div class="project-name"><a href="../HomeRadar/reports/index.html">Home</a></div><div class="project-repo">HomeRadar</div></td><td>home</td><td><span class="badge badge--active">Full</span></td><td>100</td><td>77</td><td>77.0%</td><td>3</td><td>2026-04-24</td><td><span class="entity-chip">keyword <strong>108</strong></span><span class="entity-chip">district <strong>96</strong></span><span class="entity-chip">complex <strong>7</strong></span><span class="entity-chip">project <strong>2</strong></span></td><td><a href="../HomeRadar/reports/index.html">index</a></td></tr>
+<tr><td><div class="project-name"><a href="../KoreanNLPMCPRadar/reports/index.html">KoreanNLPMCP</a></div><div class="project-repo">KoreanNLPMCPRadar</div></td><td>korean_nlp_mcp</td><td><span class="badge badge--active">Full</span></td><td>3</td><td>3</td><td>100.0%</td><td>2</td><td>2026-04-24</td><td><span class="entity-chip">ProjectHealth <strong>6</strong></span><span class="entity-chip">Capability <strong>3</strong></span><span class="entity-chip">MCPDomain <strong>3</strong></span></td><td><a href="../KoreanNLPMCPRadar/reports/index.html">index</a></td></tr>
+<tr><td><div class="project-name"><a href="../LegalGovMCPRadar/reports/index.html">LegalGovMCP</a></div><div class="project-repo">LegalGovMCPRadar</div></td><td>legal_gov_mcp</td><td><span class="badge badge--active">Full</span></td><td>5</td><td>5</td><td>100.0%</td><td>1</td><td>2026-04-24</td><td><span class="entity-chip">MCPDomain <strong>13</strong></span><span class="entity-chip">ProjectHealth <strong>12</strong></span><span class="entity-chip">Capability <strong>8</strong></span><span class="entity-chip">RiskScope <strong>2</strong></span></td><td><a href="../LegalGovMCPRadar/reports/index.html">index</a></td></tr>
+<tr><td><div class="project-name"><a href="../MapAddressMCPRadar/reports/index.html">MapAddressMCP</a></div><div class="project-repo">MapAddressMCPRadar</div></td><td>map_address_mcp</td><td><span class="badge badge--active">Full</span></td><td>6</td><td>6</td><td>100.0%</td><td>1</td><td>2026-04-24</td><td><span class="entity-chip">ProjectHealth <strong>20</strong></span><span class="entity-chip">MCPDomain <strong>14</strong></span><span class="entity-chip">Provider <strong>10</strong></span><span class="entity-chip">Capability <strong>8</strong></span></td><td><a href="../MapAddressMCPRadar/reports/index.html">index</a></td></tr>
+<tr><td><div class="project-name"><a href="../MiscMCPRadar/reports/index.html">MiscMCP</a></div><div class="project-repo">MiscMCPRadar</div></td><td>misc_mcp</td><td><span class="badge badge--active">Full</span></td><td>0</td><td>0</td><td>0.0%</td><td>0</td><td>2026-04-24</td><td><span class="entity-chip entity-chip--muted">No entity data</span></td><td><a href="../MiscMCPRadar/reports/index.html">index</a></td></tr>
+<tr><td><div class="project-name"><a href="../PriceRadar/reports/index.html">Price</a></div><div class="project-repo">PriceRadar</div></td><td>price</td><td><span class="badge badge--active">Full</span></td><td>100</td><td>100</td><td>100.0%</td><td>4</td><td>2026-04-24</td><td><span class="entity-chip">price_band:10k_50k <strong>63</strong></span><span class="entity-chip">source:enuri_main <strong>61</strong></span><span class="entity-chip">discount:50%+ <strong>44</strong></span><span class="entity-chip">platform:coupang <strong>31</strong></span></td><td><a href="../PriceRadar/reports/index.html">index</a></td></tr>
+<tr><td><div class="project-name"><a href="../PublicDataMCPRadar/reports/index.html">PublicDataMCP</a></div><div class="project-repo">PublicDataMCPRadar</div></td><td>publicdata_mcp</td><td><span class="badge badge--active">Full</span></td><td>7</td><td>7</td><td>100.0%</td><td>1</td><td>2026-04-24</td><td><span class="entity-chip">ProjectHealth <strong>20</strong></span><span class="entity-chip">Capability <strong>10</strong></span><span class="entity-chip">MCPDomain <strong>9</strong></span><span class="entity-chip">Provider <strong>5</strong></span></td><td><a href="../PublicDataMCPRadar/reports/index.html">index</a></td></tr>
+<tr><td><div class="project-name"><a href="../RealEstateMCPRadar/reports/index.html">RealEstateMCP</a></div><div class="project-repo">RealEstateMCPRadar</div></td><td>realestate_mcp</td><td><span class="badge badge--active">Full</span></td><td>3</td><td>3</td><td>100.0%</td><td>1</td><td>2026-04-24</td><td><span class="entity-chip">MCPDomain <strong>7</strong></span><span class="entity-chip">ProjectHealth <strong>6</strong></span><span class="entity-chip">Capability <strong>1</strong></span><span class="entity-chip">RiskScope <strong>1</strong></span></td><td><a href="../RealEstateMCPRadar/reports/index.html">index</a></td></tr>
+<tr><td><div class="project-name"><a href="../SearchTrendMCPRadar/reports/index.html">SearchTrendMCP</a></div><div class="project-repo">SearchTrendMCPRadar</div></td><td>search_trend_mcp</td><td><span class="badge badge--active">Full</span></td><td>2</td><td>2</td><td>100.0%</td><td>1</td><td>2026-04-24</td><td><span class="entity-chip">MCPDomain <strong>10</strong></span><span class="entity-chip">Capability <strong>5</strong></span><span class="entity-chip">Provider <strong>4</strong></span><span class="entity-chip">ProjectHealth <strong>4</strong></span></td><td><a href="../SearchTrendMCPRadar/reports/index.html">index</a></td></tr>
+<tr><td><div class="project-name"><a href="../TravelMCPRadar/reports/index.html">TravelMCP</a></div><div class="project-repo">TravelMCPRadar</div></td><td>travel_mcp</td><td><span class="badge badge--active">Full</span></td><td>2</td><td>2</td><td>100.0%</td><td>1</td><td>2026-04-24</td><td><span class="entity-chip">MCPDomain <strong>6</strong></span><span class="entity-chip">ProjectHealth <strong>5</strong></span><span class="entity-chip">Capability <strong>2</strong></span><span class="entity-chip">RiskScope <strong>2</strong></span></td><td><a href="../TravelMCPRadar/reports/index.html">index</a></td></tr>
+<tr><td><div class="project-name"><a href="../TrendRadar/reports/index.html">Trend</a></div><div class="project-repo">TrendRadar</div></td><td>trend</td><td><span class="badge badge--active">Full</span></td><td>200</td><td>200</td><td>100.0%</td><td>1</td><td>2026-04-24</td><td><span class="entity-chip">샴페인 <strong>6</strong></span><span class="entity-chip">레드와인 <strong>6</strong></span><span class="entity-chip">화이트와인 <strong>6</strong></span><span class="entity-chip">와인 <strong>6</strong></span></td><td><a href="../TrendRadar/reports/index.html">index</a></td></tr>
+<tr><td><div class="project-name"><a href="../WeatherMCPRadar/reports/index.html">WeatherMCP</a></div><div class="project-repo">WeatherMCPRadar</div></td><td>weather_mcp</td><td><span class="badge badge--active">Full</span></td><td>5</td><td>5</td><td>100.0%</td><td>1</td><td>2026-04-24</td><td><span class="entity-chip">MCPDomain <strong>21</strong></span><span class="entity-chip">ProjectHealth <strong>13</strong></span><span class="entity-chip">Provider <strong>6</strong></span><span class="entity-chip">RiskScope <strong>2</strong></span></td><td><a href="../WeatherMCPRadar/reports/index.html">index</a></td></tr>
           </tbody>
         </table>
       </div>

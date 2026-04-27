@@ -26,6 +26,16 @@ FOCUS_LABELS = {
 }
 
 
+DISABLED_BUCKET_LABELS = {
+    "awaiting_url_replacement": "Awaiting URL replacement",
+    "awaiting_secret": "Awaiting secret",
+    "awaiting_smoke_test": "Awaiting smoke test",
+    "upstream_section_missing": "Upstream section missing",
+    "awaiting_partnership_review": "Awaiting partnership review",
+    "accepted_backlog": "Accepted backlog",
+}
+
+
 def parse_args() -> argparse.Namespace:
     parser = argparse.ArgumentParser(description="Render taxonomy-analysis.html")
     parser.add_argument("--data-path", type=Path, default=None)
@@ -195,33 +205,48 @@ def build_html(payload: dict[str, Any]) -> str:
     top_rows = sorted(rows, key=lambda row: (-row["risk_score"], row["repo"]))
 
     return f"""<!DOCTYPE html>
-<html lang="ko">
+<html lang="ko" data-visual-system="radar-unified-v2" data-visual-surface="portfolio" data-visual-page="taxonomy-analysis">
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <title>Taxonomy Analysis</title>
   <style>
     :root {{
-      --bg: #f6f8f7;
-      --surface: #ffffff;
-      --surface-alt: #edf3f1;
-      --text: #18231f;
-      --muted: #5c6b65;
-      --line: #d9e2df;
-      --teal: #0f766e;
-      --green: #2f855a;
-      --coral: #d94841;
-      --amber: #b7791f;
+      --vs-bg-0: #f6f8f7;
+      --vs-bg-1: #edf3f1;
+      --vs-surface-0: #ffffff;
+      --vs-surface-1: #edf3f1;
+      --vs-text: #18231f;
+      --vs-text-muted: #5c6b65;
+      --vs-line: #d9e2df;
+      --vs-brand: #0f766e;
+      --vs-brand-strong: #2f855a;
+      --vs-accent: #b7791f;
+      --vs-danger: #d94841;
+      --vs-shadow: 0 16px 36px rgba(24, 35, 31, 0.08);
+      --vs-radius: 8px;
+      --vs-font-sans: "Pretendard Variable", "Pretendard", "Segoe UI", Arial, sans-serif;
+
+      --bg: var(--vs-bg-0);
+      --surface: var(--vs-surface-0);
+      --surface-alt: var(--vs-surface-1);
+      --text: var(--vs-text);
+      --muted: var(--vs-text-muted);
+      --line: var(--vs-line);
+      --teal: var(--vs-brand);
+      --green: var(--vs-brand-strong);
+      --coral: var(--vs-danger);
+      --amber: var(--vs-accent);
       --ink: #26352f;
-      --shadow: 0 16px 36px rgba(24, 35, 31, 0.08);
-      --radius: 8px;
+      --shadow: var(--vs-shadow);
+      --radius: var(--vs-radius);
     }}
     * {{ box-sizing: border-box; }}
     body {{
       margin: 0;
       color: var(--text);
       background: var(--bg);
-      font-family: "Segoe UI", Arial, sans-serif;
+      font-family: var(--vs-font-sans);
       font-size: 16px;
       letter-spacing: 0;
     }}
@@ -412,6 +437,8 @@ def build_html(payload: dict[str, Any]) -> str:
         <a href="classification.html">Classification</a>
         <a href="data-quality.html">Quality</a>
         <a href="daily-collection.html">Daily Collection</a>
+        <a href="storage.html">Storage</a>
+        <a href="event-model.html">Event Model</a>
       </nav>
     </section>
 
@@ -430,6 +457,7 @@ def build_html(payload: dict[str, Any]) -> str:
       {render_count_bars("Operational Priority", summary["operational_priority_counts"])}
       {render_count_bars("Taxonomy Priority", summary["taxonomy_priority_counts"])}
       {render_count_bars("Focus Area", summary["focus_area_counts"], FOCUS_LABELS)}
+      {render_count_bars("Disabled Source Classification", (summary.get("disabled_source_classification_summary") or {}).get("bucket_totals") or {}, DISABLED_BUCKET_LABELS)}
       {render_group_table("Primary Motion x Quality", groups["primary_motion"], "Primary Motion")}
       {render_group_table("Governance x Quality", groups["governance_profile"], "Governance")}
       {render_group_table("Evidence Strategy x Quality", groups["evidence_strategy"], "Evidence Strategy")}

@@ -1,0 +1,184 @@
+<!DOCTYPE html>
+<html lang="ko" data-visual-system="radar-unified-v2" data-visual-surface="portfolio" data-visual-page="storage-footprint">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Workspace Storage Footprint</title>
+  <style>
+    :root {
+      --bg: #f4f7fb;
+      --surface: #ffffff;
+      --surface-2: #eef2fa;
+      --text: #131c2b;
+      --muted: #5d6a82;
+      --line: #d8e0ee;
+      --accent: #1f5edc;
+      --ok: #1e8a52;
+      --ok-soft: #d8efe1;
+      --bad: #b23a2c;
+      --bad-soft: #fbe1dc;
+      --neutral-soft: #e8edf7;
+      --shadow: 0 14px 38px rgba(15, 23, 42, 0.08);
+      --radius: 20px;
+      --max: 1520px;
+    }
+    * { box-sizing: border-box; }
+    body {
+      margin: 0;
+      color: var(--text);
+      font-family: "Pretendard Variable", "Segoe UI", Arial, sans-serif;
+      background: var(--bg);
+    }
+    a { color: var(--accent); text-decoration: none; }
+    a:hover { text-decoration: underline; }
+    .page { max-width: var(--max); margin: 0 auto; padding: 30px 22px 56px; }
+    .hero {
+      background: linear-gradient(135deg, #16243d, #1f5edc);
+      color: #ffffff;
+      border-radius: 28px;
+      padding: 32px;
+      box-shadow: var(--shadow);
+    }
+    .hero h1 { margin: 0 0 10px; font-size: clamp(2rem, 3vw, 3rem); letter-spacing: -0.04em; }
+    .hero p { margin: 0; max-width: 78ch; line-height: 1.65; color: rgba(255,255,255,0.84); }
+    .hero-links { margin-top: 18px; display: flex; gap: 12px; flex-wrap: wrap; }
+    .hero-links a {
+      display: inline-flex; padding: 10px 14px; border-radius: 999px;
+      background: rgba(255,255,255,0.16); color: #fff; font-weight: 700;
+    }
+    .stats { display: grid; grid-template-columns: repeat(auto-fit, minmax(170px, 1fr)); gap: 14px; margin-top: 22px; }
+    .stat {
+      background: rgba(255,255,255,0.14);
+      border: 1px solid rgba(255,255,255,0.2);
+      border-radius: 18px; padding: 16px;
+    }
+    .stat__value { font-size: 1.9rem; font-weight: 800; letter-spacing: -0.04em; }
+    .stat__label { margin-top: 6px; color: rgba(255,255,255,0.75); }
+    .grid { display: grid; grid-template-columns: repeat(auto-fit, minmax(280px, 1fr)); gap: 16px; margin-top: 22px; }
+    .panel {
+      background: var(--surface);
+      border: 1px solid var(--line);
+      border-radius: var(--radius);
+      padding: 22px;
+      box-shadow: var(--shadow);
+    }
+    .panel h2 { margin: 0 0 12px; font-size: 1.05rem; }
+    .chip-row { display: flex; flex-wrap: wrap; gap: 6px; }
+    .chip {
+      display: inline-flex; padding: 5px 10px; border-radius: 999px;
+      font-size: 0.78rem; font-weight: 600;
+    }
+    .chip--ok { background: var(--ok-soft); color: var(--ok); }
+    .chip--bad { background: var(--bad-soft); color: var(--bad); }
+    .chip--neutral { background: var(--neutral-soft); color: var(--text); }
+    .muted { color: var(--muted); }
+    .table-wrap { margin-top: 24px; background: var(--surface); border: 1px solid var(--line); border-radius: var(--radius); box-shadow: var(--shadow); overflow: hidden; }
+    .table-header { padding: 22px 24px 8px; }
+    .table-header h2 { margin: 0 0 8px; }
+    .table-header p { margin: 0; color: var(--muted); line-height: 1.6; }
+    .table-scroll { overflow-x: auto; padding: 8px 12px 16px; }
+    table { width: 100%; border-collapse: collapse; min-width: 1500px; }
+    th, td { padding: 12px; border-bottom: 1px solid var(--line); text-align: left; vertical-align: top; font-size: 0.9rem; }
+    th { color: var(--muted); font-size: 0.78rem; text-transform: uppercase; letter-spacing: 0.06em; }
+    tr:hover td { background: #f7faff; }
+    .repo-name { font-weight: 800; }
+    .repo-meta { color: var(--muted); font-size: 0.82rem; margin-top: 4px; }
+    .footer { margin-top: 18px; color: var(--muted); font-size: 0.9rem; text-align: right; }
+  </style>
+</head>
+<body>
+  <main class="page">
+    <section class="hero">
+      <h1>Workspace Storage Footprint</h1>
+      <p>각 Radar 저장소의 최신 raw JSONL snapshot, DuckDB 테이블, signal 테이블, ontology / event_model 적재 상태를 직접 집계한 페이지입니다. 마트가 비어 있는 repo와 ontology / event_model 적재 공백을 한 화면에서 점검합니다.</p>
+      <div class="hero-links">
+        <a href="index.html">Main Dashboard</a>
+        <a href="classification.html">Classification Audit</a>
+        <a href="data-quality.html">Data Quality Audit</a>
+        <a href="daily-collection.html">Daily Collection</a>
+        <a href="taxonomy-analysis.html">Taxonomy Analysis</a>
+        <a href="event-model.html">Event Model Coverage</a>
+      </div>
+      <div class="stats">
+        <article class="stat"><div class="stat__value">36</div><div class="stat__label">Repos</div></article>
+        <article class="stat"><div class="stat__value">35</div><div class="stat__label">Repos with Raw Records</div></article>
+        <article class="stat"><div class="stat__value">525</div><div class="stat__label">Raw Files</div></article>
+        <article class="stat"><div class="stat__value">6,095</div><div class="stat__label">Raw Records</div></article>
+        <article class="stat"><div class="stat__value">105</div><div class="stat__label">DuckDB Tables</div></article>
+        <article class="stat"><div class="stat__value">51</div><div class="stat__label">Signal Tables</div></article>
+      </div>
+    </section>
+
+    <section class="grid"><article class="panel"><h2>Raw record = 0 (1 repos)</h2><div class="chip-row"><span class="chip chip--neutral">MiscMCPRadar</span></div></article><article class="panel"><h2>Signal table = 0 (0 repos)</h2><span class="muted">없음</span></article><article class="panel"><h2>Raw + DuckDB ontology row = 0 (5 repos)</h2><div class="chip-row"><span class="chip chip--neutral">HomeRadar</span><span class="chip chip--neutral">MiscMCPRadar</span><span class="chip chip--neutral">PriceRadar</span><span class="chip chip--neutral">TrendRadar</span><span class="chip chip--neutral">WineRadar</span></div></article><article class="panel"><h2>Raw + DuckDB event_model record = 0 (9 repos)</h2><div class="chip-row"><span class="chip chip--neutral">EventRadar</span><span class="chip chip--neutral">FinanceTaxMCPRadar</span><span class="chip chip--neutral">HomeRadar</span><span class="chip chip--neutral">MiscMCPRadar</span><span class="chip chip--neutral">MobilityRadar</span><span class="chip chip--neutral">PriceRadar</span><span class="chip chip--neutral">SubscriptionRadar</span><span class="chip chip--neutral">TrendRadar</span><span class="chip chip--neutral">WineRadar</span></div></article></section>
+
+    <section class="table-wrap">
+      <div class="table-header">
+        <h2>Repo Storage Matrix</h2>
+        <p>raw / DuckDB / signal / ontology / event_model 카운트를 한 줄에 모아 줍니다. Gap 컬럼은 각 행에서 `0`으로 비어 있는 신호를 chip 으로 표시합니다.</p>
+      </div>
+      <div class="table-scroll">
+        <table>
+          <thead>
+            <tr>
+              <th>Repo</th>
+              <th>Latest Raw</th>
+              <th>Raw Files</th>
+              <th>Raw Records</th>
+              <th>Raw Sources</th>
+              <th>DB Files</th>
+              <th>DB Tables</th>
+              <th>Signal Tables</th>
+              <th>Signal Rows</th>
+              <th>Raw Ontology</th>
+              <th>DB Ontology</th>
+              <th>Raw Event Model</th>
+              <th>DB Event Model</th>
+              <th>Gaps</th>
+            </tr>
+          </thead>
+          <tbody><tr><td><div class="repo-name">Art</div><div class="repo-meta">ArtRadar · standard-radar</div></td><td>2026-04-24</td><td>32</td><td>423</td><td>32</td><td>2</td><td>3</td><td>1</td><td>569</td><td>0</td><td>569</td><td>0</td><td>569</td><td><span class="chip chip--ok">healthy</span></td></tr>
+<tr><td><div class="repo-name">Benefit</div><div class="repo-meta">BenefitRadar · standard-radar</div></td><td>2026-04-25</td><td>22</td><td>142</td><td>22</td><td>2</td><td>4</td><td>2</td><td>2,254</td><td>142</td><td>2,254</td><td>76</td><td>2,254</td><td><span class="chip chip--ok">healthy</span></td></tr>
+<tr><td><div class="repo-name">Blog</div><div class="repo-meta">BlogRadar · standard-radar</div></td><td>2026-04-25</td><td>68</td><td>680</td><td>68</td><td>1</td><td>3</td><td>1</td><td>1,279</td><td>680</td><td>1,279</td><td>0</td><td>1,279</td><td><span class="chip chip--ok">healthy</span></td></tr>
+<tr><td><div class="repo-name">Book</div><div class="repo-meta">BookRadar · standard-radar</div></td><td>2026-04-25</td><td>19</td><td>91</td><td>19</td><td>1</td><td>3</td><td>1</td><td>2,068</td><td>91</td><td>2,068</td><td>0</td><td>2,068</td><td><span class="chip chip--ok">healthy</span></td></tr>
+<tr><td><div class="repo-name">CollaborationMCP</div><div class="repo-meta">CollaborationMCPRadar · standard-radar</div></td><td>2026-04-24</td><td>1</td><td>4</td><td>1</td><td>1</td><td>1</td><td>1</td><td>4</td><td>0</td><td>4</td><td>0</td><td>4</td><td><span class="chip chip--ok">healthy</span></td></tr>
+<tr><td><div class="repo-name">CommerceMCP</div><div class="repo-meta">CommerceMCPRadar · standard-radar</div></td><td>2026-04-24</td><td>1</td><td>2</td><td>1</td><td>1</td><td>1</td><td>1</td><td>2</td><td>0</td><td>2</td><td>0</td><td>2</td><td><span class="chip chip--ok">healthy</span></td></tr>
+<tr><td><div class="repo-name">Crypto</div><div class="repo-meta">CryptoRadar · standard-radar</div></td><td>2026-04-25</td><td>12</td><td>120</td><td>12</td><td>1</td><td>3</td><td>1</td><td>3,208</td><td>120</td><td>3,208</td><td>0</td><td>3,208</td><td><span class="chip chip--ok">healthy</span></td></tr>
+<tr><td><div class="repo-name">Event</div><div class="repo-meta">EventRadar · standard-radar</div></td><td>2026-04-25</td><td>27</td><td>132</td><td>27</td><td>2</td><td>4</td><td>2</td><td>2,634</td><td>132</td><td>105</td><td>0</td><td>0</td><td><span class="chip chip--bad">event_model=0</span></td></tr>
+<tr><td><div class="repo-name">FinanceTaxMCP</div><div class="repo-meta">FinanceTaxMCPRadar · standard-radar</div></td><td>2026-04-24</td><td>1</td><td>5</td><td>1</td><td>1</td><td>1</td><td>1</td><td>23</td><td>5</td><td>5</td><td>0</td><td>0</td><td><span class="chip chip--bad">event_model=0</span></td></tr>
+<tr><td><div class="repo-name">Food</div><div class="repo-meta">FoodRadar · standard-radar</div></td><td>2026-04-25</td><td>11</td><td>55</td><td>11</td><td>1</td><td>3</td><td>1</td><td>1,294</td><td>55</td><td>1,294</td><td>15</td><td>1,294</td><td><span class="chip chip--ok">healthy</span></td></tr>
+<tr><td><div class="repo-name">Game</div><div class="repo-meta">GameRadar · standard-radar</div></td><td>2026-04-23</td><td>36</td><td>360</td><td>36</td><td>1</td><td>3</td><td>1</td><td>5,833</td><td>0</td><td>5,833</td><td>0</td><td>5,833</td><td><span class="chip chip--ok">healthy</span></td></tr>
+<tr><td><div class="repo-name">Gov</div><div class="repo-meta">GovRadar · standard-radar</div></td><td>2026-04-24</td><td>23</td><td>145</td><td>23</td><td>2</td><td>6</td><td>2</td><td>1,786</td><td>145</td><td>1,786</td><td>60</td><td>1,786</td><td><span class="chip chip--ok">healthy</span></td></tr>
+<tr><td><div class="repo-name">Home</div><div class="repo-meta">HomeRadar · advanced-radar</div></td><td>2026-04-25</td><td>3</td><td>8</td><td>3</td><td>2</td><td>4</td><td>2</td><td>1,107</td><td>0</td><td>0</td><td>0</td><td>0</td><td><span class="chip chip--bad">event_model=0</span></td></tr>
+<tr><td><div class="repo-name">Job</div><div class="repo-meta">JobRadar · standard-radar</div></td><td>2026-04-25</td><td>15</td><td>81</td><td>15</td><td>1</td><td>3</td><td>1</td><td>3,348</td><td>81</td><td>3,348</td><td>5</td><td>3,348</td><td><span class="chip chip--ok">healthy</span></td></tr>
+<tr><td><div class="repo-name">KoreanNLPMCP</div><div class="repo-meta">KoreanNLPMCPRadar · standard-radar</div></td><td>2026-04-24</td><td>2</td><td>4</td><td>2</td><td>1</td><td>1</td><td>1</td><td>3</td><td>0</td><td>3</td><td>0</td><td>3</td><td><span class="chip chip--ok">healthy</span></td></tr>
+<tr><td><div class="repo-name">LegalGovMCP</div><div class="repo-meta">LegalGovMCPRadar · standard-radar</div></td><td>2026-04-24</td><td>1</td><td>5</td><td>1</td><td>1</td><td>1</td><td>1</td><td>5</td><td>0</td><td>5</td><td>0</td><td>5</td><td><span class="chip chip--ok">healthy</span></td></tr>
+<tr><td><div class="repo-name">MapAddressMCP</div><div class="repo-meta">MapAddressMCPRadar · standard-radar</div></td><td>2026-04-24</td><td>1</td><td>6</td><td>1</td><td>1</td><td>1</td><td>1</td><td>6</td><td>0</td><td>6</td><td>0</td><td>6</td><td><span class="chip chip--ok">healthy</span></td></tr>
+<tr><td><div class="repo-name">MiscMCP</div><div class="repo-meta">MiscMCPRadar · standard-radar</div></td><td>—</td><td>0</td><td>0</td><td>0</td><td>1</td><td>1</td><td>1</td><td>0</td><td>0</td><td>0</td><td>0</td><td>0</td><td><span class="chip chip--bad">raw=0</span><span class="chip chip--bad">event_model=0</span></td></tr>
+<tr><td><div class="repo-name">Mobility</div><div class="repo-meta">MobilityRadar · standard-radar</div></td><td>2026-04-25</td><td>23</td><td>111</td><td>23</td><td>1</td><td>3</td><td>1</td><td>1,925</td><td>0</td><td>51</td><td>0</td><td>0</td><td><span class="chip chip--bad">event_model=0</span></td></tr>
+<tr><td><div class="repo-name">Movie</div><div class="repo-meta">MovieRadar · standard-radar</div></td><td>2026-04-24</td><td>10</td><td>42</td><td>10</td><td>1</td><td>3</td><td>1</td><td>1,184</td><td>42</td><td>1,184</td><td>7</td><td>1,184</td><td><span class="chip chip--ok">healthy</span></td></tr>
+<tr><td><div class="repo-name">Paper</div><div class="repo-meta">PaperRadar · standard-radar</div></td><td>2026-04-25</td><td>11</td><td>54</td><td>11</td><td>2</td><td>5</td><td>1</td><td>622</td><td>0</td><td>622</td><td>0</td><td>622</td><td><span class="chip chip--ok">healthy</span></td></tr>
+<tr><td><div class="repo-name">Paperwork</div><div class="repo-meta">PaperworkRadar · standard-radar</div></td><td>2026-04-25</td><td>20</td><td>88</td><td>20</td><td>2</td><td>4</td><td>2</td><td>2,959</td><td>0</td><td>2,959</td><td>0</td><td>2,959</td><td><span class="chip chip--ok">healthy</span></td></tr>
+<tr><td><div class="repo-name">Policy</div><div class="repo-meta">PolicyRadar · standard-radar</div></td><td>2026-04-25</td><td>22</td><td>107</td><td>22</td><td>2</td><td>4</td><td>2</td><td>4,022</td><td>107</td><td>4,022</td><td>50</td><td>4,022</td><td><span class="chip chip--ok">healthy</span></td></tr>
+<tr><td><div class="repo-name">Price</div><div class="repo-meta">PriceRadar · advanced-radar</div></td><td>2026-04-14</td><td>9</td><td>900</td><td>9</td><td>3</td><td>8</td><td>6</td><td>145,149</td><td>0</td><td>0</td><td>0</td><td>0</td><td><span class="chip chip--bad">event_model=0</span></td></tr>
+<tr><td><div class="repo-name">Property</div><div class="repo-meta">PropertyRadar · standard-radar</div></td><td>2026-04-24</td><td>8</td><td>104</td><td>8</td><td>1</td><td>3</td><td>1</td><td>2,037</td><td>0</td><td>2,037</td><td>0</td><td>2,037</td><td><span class="chip chip--ok">healthy</span></td></tr>
+<tr><td><div class="repo-name">PublicDataMCP</div><div class="repo-meta">PublicDataMCPRadar · standard-radar</div></td><td>2026-04-24</td><td>1</td><td>7</td><td>1</td><td>1</td><td>1</td><td>1</td><td>7</td><td>0</td><td>7</td><td>0</td><td>7</td><td><span class="chip chip--ok">healthy</span></td></tr>
+<tr><td><div class="repo-name">Queue</div><div class="repo-meta">QueueRadar · standard-radar</div></td><td>2026-04-25</td><td>21</td><td>773</td><td>21</td><td>1</td><td>3</td><td>1</td><td>2,239</td><td>773</td><td>2,239</td><td>0</td><td>2,239</td><td><span class="chip chip--ok">healthy</span></td></tr>
+<tr><td><div class="repo-name">RealEstateMCP</div><div class="repo-meta">RealEstateMCPRadar · standard-radar</div></td><td>2026-04-24</td><td>1</td><td>3</td><td>1</td><td>1</td><td>1</td><td>1</td><td>3</td><td>0</td><td>3</td><td>0</td><td>3</td><td><span class="chip chip--ok">healthy</span></td></tr>
+<tr><td><div class="repo-name">Refund</div><div class="repo-meta">RefundRadar · standard-radar</div></td><td>2026-04-25</td><td>19</td><td>320</td><td>19</td><td>2</td><td>4</td><td>2</td><td>1,956</td><td>320</td><td>1,916</td><td>210</td><td>1,916</td><td><span class="chip chip--ok">healthy</span></td></tr>
+<tr><td><div class="repo-name">SearchTrendMCP</div><div class="repo-meta">SearchTrendMCPRadar · standard-radar</div></td><td>2026-04-24</td><td>1</td><td>2</td><td>1</td><td>1</td><td>1</td><td>1</td><td>2</td><td>0</td><td>2</td><td>0</td><td>2</td><td><span class="chip chip--ok">healthy</span></td></tr>
+<tr><td><div class="repo-name">Subscription</div><div class="repo-meta">SubscriptionRadar · standard-radar</div></td><td>2026-04-25</td><td>34</td><td>268</td><td>34</td><td>1</td><td>3</td><td>1</td><td>6,259</td><td>268</td><td>27</td><td>0</td><td>0</td><td><span class="chip chip--bad">event_model=0</span></td></tr>
+<tr><td><div class="repo-name">TravelMCP</div><div class="repo-meta">TravelMCPRadar · standard-radar</div></td><td>2026-04-24</td><td>1</td><td>2</td><td>1</td><td>1</td><td>1</td><td>1</td><td>2</td><td>0</td><td>2</td><td>0</td><td>2</td><td><span class="chip chip--ok">healthy</span></td></tr>
+<tr><td><div class="repo-name">Trend</div><div class="repo-meta">TrendRadar · advanced-radar</div></td><td>2026-04-12</td><td>4</td><td>519</td><td>4</td><td>2</td><td>3</td><td>1</td><td>378</td><td>0</td><td>0</td><td>0</td><td>0</td><td><span class="chip chip--bad">event_model=0</span></td></tr>
+<tr><td><div class="repo-name">Trust</div><div class="repo-meta">TrustRadar · standard-radar</div></td><td>2026-04-25</td><td>21</td><td>105</td><td>21</td><td>2</td><td>6</td><td>2</td><td>2,226</td><td>105</td><td>2,226</td><td>63</td><td>2,226</td><td><span class="chip chip--ok">healthy</span></td></tr>
+<tr><td><div class="repo-name">WeatherMCP</div><div class="repo-meta">WeatherMCPRadar · standard-radar</div></td><td>2026-04-24</td><td>1</td><td>5</td><td>1</td><td>1</td><td>1</td><td>1</td><td>5</td><td>0</td><td>5</td><td>0</td><td>5</td><td><span class="chip chip--ok">healthy</span></td></tr>
+<tr><td><div class="repo-name">Wine</div><div class="repo-meta">WineRadar · advanced-radar</div></td><td>2026-04-25</td><td>43</td><td>422</td><td>43</td><td>2</td><td>5</td><td>3</td><td>7,715</td><td>0</td><td>0</td><td>0</td><td>0</td><td><span class="chip chip--bad">event_model=0</span></td></tr></tbody>
+        </table>
+      </div>
+    </section>
+
+    <footer class="footer">
+      Canonical output: <code>radar-dashboard/storage.html</code> · Data source: <code>radar-dashboard/data/storage-facts.json</code>
+    </footer>
+  </main>
+</body>
+</html>

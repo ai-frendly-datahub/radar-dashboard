@@ -1,5 +1,5 @@
 {
-  "generated_at": "2026-04-21T12:24:00.292025+00:00",
+  "generated_at": "2026-04-26T15:02:00.743127+00:00",
   "contract": {
     "required_checks": [
       "scheduled_workflow",
@@ -592,7 +592,7 @@
         "snapshot_path_by_date": true,
         "raw_data_by_date": true,
         "retention_cli": true,
-        "dated_report_or_artifact": false
+        "dated_report_or_artifact": true
       },
       "workflow_files": [
         ".github/workflows/pr-checks.yml",
@@ -605,9 +605,7 @@
       "raw_logger_files": [
         "queueradar/raw_logger.py"
       ],
-      "notes": [
-        "No explicit dated HTML/report artifact pattern detected; raw + DB snapshots still satisfy the required daily data record contract."
-      ]
+      "notes": []
     },
     {
       "repo": "RefundRadar",
@@ -652,7 +650,7 @@
         "snapshot_path_by_date": true,
         "raw_data_by_date": true,
         "retention_cli": true,
-        "dated_report_or_artifact": false
+        "dated_report_or_artifact": true
       },
       "workflow_files": [
         ".github/workflows/pr-checks.yml",
@@ -665,9 +663,7 @@
       "raw_logger_files": [
         "subscriptionradar/raw_logger.py"
       ],
-      "notes": [
-        "No explicit dated HTML/report artifact pattern detected; raw + DB snapshots still satisfy the required daily data record contract."
-      ]
+      "notes": []
     },
     {
       "repo": "TrendRadar",

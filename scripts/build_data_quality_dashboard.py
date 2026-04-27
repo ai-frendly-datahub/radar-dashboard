@@ -25,6 +25,14 @@ DIMENSION_ORDER = [
     "verification",
     "traceability",
 ]
+DISABLED_BUCKET_LABELS = {
+    "awaiting_url_replacement": "Awaiting URL replacement",
+    "awaiting_secret": "Awaiting secret",
+    "awaiting_smoke_test": "Awaiting smoke test",
+    "upstream_section_missing": "Upstream section missing",
+    "awaiting_partnership_review": "Awaiting partnership review",
+    "accepted_backlog": "Accepted backlog",
+}
 
 
 def parse_args() -> argparse.Namespace:
@@ -84,6 +92,23 @@ def render_action_pack(row: dict[str, Any]) -> str:
     return render_issue_list([str(item) for item in next_actions], limit=3)
 
 
+def render_disabled_chips(row: dict[str, Any]) -> str:
+    total = int(row.get("disabled_source_classification_total") or 0)
+    if total <= 0:
+        return "<span class=\"muted\">0 disabled</span>"
+    bucket_counts = row.get("disabled_source_classification") or {}
+    nonzero = [(key, int(count or 0)) for key, count in bucket_counts.items() if int(count or 0) > 0]
+    nonzero.sort(key=lambda item: (-item[1], item[0]))
+    chips = "".join(
+        f"<span class=\"disabled-chip\">{count} {escape(DISABLED_BUCKET_LABELS.get(key, key))}</span>"
+        for key, count in nonzero
+    )
+    return (
+        f"<div class=\"disabled-total\">{total} disabled</div>"
+        f"<div class=\"disabled-chips\">{chips}</div>"
+    )
+
+
 def render_priority_rows(rows: list[dict[str, Any]], priority: str) -> str:
     rendered = []
     for row in rows:
@@ -96,6 +121,7 @@ def render_priority_rows(rows: list[dict[str, Any]], priority: str) -> str:
             f"<td>{score_bar(int(row.get('risk_score') or 0), 'risk')}</td>"
             f"<td>{score_bar(int(row.get('data_quality_score') or 0))}</td>"
             f"<td>{escape(DIMENSION_LABELS.get(str(row.get('weakest_dimension')), str(row.get('weakest_dimension'))))}</td>"
+            f"<td>{render_disabled_chips(row)}</td>"
             f"<td>{render_issue_list([str(item) for item in row.get('issues') or []])}</td>"
             f"<td>{render_action_pack(row)}</td>"
             "</tr>"
@@ -117,6 +143,7 @@ def render_matrix_rows(rows: list[dict[str, Any]]) -> str:
             f"<td>{score_bar(int(row.get('risk_score') or 0), 'risk')}</td>"
             f"<td>{score_bar(int(row.get('data_quality_score') or 0))}</td>"
             + render_dimension_cells(row.get("dimensions") or {})
+            + f"<td>{render_disabled_chips(row)}</td>"
             + f"<td>{render_issue_list([str(item) for item in row.get('recommendations') or []], limit=1)}</td>"
             "</tr>"
         )
@@ -132,39 +159,62 @@ def build_html(payload: dict[str, Any]) -> str:
     p2_count = int((summary.get("priority_counts") or {}).get("P2", 0))
     average_score = summary.get("average_data_quality_score")
     top_priority = ", ".join(str(value) for value in summary.get("top_priority_repos", [])[:6])
+    disabled_classification = summary.get("disabled_source_classification_summary") or {}
+    disabled_bucket_totals = dict(disabled_classification.get("bucket_totals") or {})
+    disabled_total = int(disabled_classification.get("total_disabled_count", 0) or 0)
+    disabled_repo_count = int(disabled_classification.get("repo_count_with_disabled_sources", 0) or 0)
+    disabled_panel_html = render_count_group(
+        "Disabled Source Classification", disabled_bucket_totals, DISABLED_BUCKET_LABELS
+    )
 
     return f"""<!DOCTYPE html>
-<html lang="ko">
+<html lang="ko" data-visual-system="radar-unified-v2" data-visual-surface="portfolio" data-visual-page="data-quality-audit">
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <title>Workspace Data Quality Audit</title>
   <style>
     :root {{
-      --bg: #f5f1e8;
-      --surface: #fffdf8;
-      --surface-2: #f4ead8;
-      --text: #241f19;
-      --muted: #756956;
-      --line: #e1d2bb;
-      --accent: #9a4f18;
+      --vs-bg-0: #f5f1e8;
+      --vs-bg-1: #f3eee4;
+      --vs-surface-0: #fffdf8;
+      --vs-surface-1: #f4ead8;
+      --vs-text: #241f19;
+      --vs-text-muted: #756956;
+      --vs-line: #e1d2bb;
+      --vs-brand: #9a4f18;
+      --vs-brand-strong: #21734f;
+      --vs-accent: #12332b;
+      --vs-danger: #a43d2a;
+      --vs-shadow: 0 18px 50px rgba(36, 31, 25, 0.10);
+      --vs-radius: 22px;
+      --vs-max: 1520px;
+      --vs-font-sans: "IBM Plex Sans KR", "Pretendard Variable", "Segoe UI", Arial, sans-serif;
+
+      --bg: var(--vs-bg-0);
+      --surface: var(--vs-surface-0);
+      --surface-2: var(--vs-surface-1);
+      --text: var(--vs-text);
+      --muted: var(--vs-text-muted);
+      --line: var(--vs-line);
+      --accent: var(--vs-brand);
       --accent-soft: #ffe2bf;
-      --ink: #12332b;
-      --ok: #21734f;
+      --ink: var(--vs-accent);
+      --ok: var(--vs-brand-strong);
       --ok-soft: #ddf4df;
       --warn: #a26000;
       --warn-soft: #fff0c7;
-      --bad: #a43d2a;
+      --bad: var(--vs-danger);
       --bad-soft: #ffe0d7;
-      --shadow: 0 18px 50px rgba(36, 31, 25, 0.10);
-      --radius: 22px;
-      --max: 1520px;
+      --shadow: var(--vs-shadow);
+      --radius: var(--vs-radius);
+      --max: var(--vs-max);
     }}
     * {{ box-sizing: border-box; }}
     body {{
       margin: 0;
       color: var(--text);
-      font-family: "IBM Plex Sans KR", "Pretendard Variable", "Segoe UI", Arial, sans-serif;
+      font-family: var(--vs-font-sans);
       background:
         radial-gradient(circle at 12% 8%, rgba(154, 79, 24, 0.14), transparent 24rem),
         radial-gradient(circle at 88% 12%, rgba(18, 51, 43, 0.12), transparent 22rem),
@@ -218,7 +268,7 @@ def build_html(payload: dict[str, Any]) -> str:
     .table-header h2 {{ margin: 0 0 8px; }}
     .table-header p {{ margin: 0; color: var(--muted); line-height: 1.6; }}
     .table-scroll {{ overflow-x: auto; padding: 8px 12px 16px; }}
-    table {{ width: 100%; border-collapse: collapse; min-width: 1320px; }}
+    table {{ width: 100%; border-collapse: collapse; min-width: 1480px; }}
     th, td {{ padding: 14px 12px; border-bottom: 1px solid var(--line); text-align: left; vertical-align: top; font-size: 0.93rem; }}
     th {{ color: var(--muted); font-size: 0.8rem; text-transform: uppercase; letter-spacing: 0.06em; }}
     tr:hover td {{ background: #fff8eb; }}
@@ -236,6 +286,13 @@ def build_html(payload: dict[str, Any]) -> str:
     .mini-score {{ min-width: 74px; }}
     .mini-list {{ margin: 0; padding-left: 17px; color: var(--muted); line-height: 1.45; }}
     .muted {{ color: var(--muted); }}
+    .disabled-total {{ font-weight: 800; font-size: 0.86rem; margin-bottom: 4px; }}
+    .disabled-chips {{ display: flex; flex-wrap: wrap; gap: 4px; }}
+    .disabled-chip {{
+      display: inline-flex; padding: 4px 8px; border-radius: 999px;
+      background: var(--accent-soft); color: var(--bad);
+      font-size: 0.74rem; font-weight: 600; white-space: nowrap;
+    }}
     .footer {{ margin-top: 18px; color: var(--muted); font-size: 0.9rem; text-align: right; }}
     @media (max-width: 1080px) {{ .grid {{ grid-template-columns: 1fr; }} }}
   </style>
@@ -249,6 +306,9 @@ def build_html(payload: dict[str, Any]) -> str:
       <div class="hero-links">
         <a href="index.html">Main Dashboard</a>
         <a href="classification.html">Classification Audit</a>
+        <a href="taxonomy-analysis.html">Taxonomy Analysis</a>
+        <a href="storage.html">Storage Footprint</a>
+        <a href="event-model.html">Event Model Coverage</a>
         <a href="../docs/harness/data-quality-review.md">Markdown Review</a>
       </div>
       <div class="stats">
@@ -257,6 +317,7 @@ def build_html(payload: dict[str, Any]) -> str:
         <article class="stat"><div class="stat__value">{p0_count}</div><div class="stat__label">P0 Execution Queue</div></article>
         <article class="stat"><div class="stat__value">{p1_count}</div><div class="stat__label">P1 Execution Queue</div></article>
         <article class="stat"><div class="stat__value">{p2_count}</div><div class="stat__label">P2 Backlog</div></article>
+        <article class="stat"><div class="stat__value">{disabled_total}</div><div class="stat__label">Disabled Sources ({disabled_repo_count} repos)</div></article>
       </div>
     </section>
 
@@ -264,6 +325,7 @@ def build_html(payload: dict[str, Any]) -> str:
       {render_count_group("Priority", summary.get("priority_counts") or {}, PRIORITY_LABELS)}
       {render_count_group("Weakest Dimension", summary.get("weakest_dimension_counts") or {}, DIMENSION_LABELS)}
       {render_count_group("Governance", summary.get("governance_counts") or {}, {})}
+      {disabled_panel_html}
     </section>
 
     <section class="table-wrap">
@@ -273,7 +335,7 @@ def build_html(payload: dict[str, Any]) -> str:
       </div>
       <div class="table-scroll">
         <table>
-          <thead><tr><th>Repo</th><th>Risk</th><th>Quality</th><th>Weakest</th><th>Issues</th><th>Next Actions</th></tr></thead>
+          <thead><tr><th>Repo</th><th>Risk</th><th>Quality</th><th>Weakest</th><th>Disabled</th><th>Issues</th><th>Next Actions</th></tr></thead>
           <tbody>{render_priority_rows(rows, "P0")}</tbody>
         </table>
       </div>
@@ -286,7 +348,7 @@ def build_html(payload: dict[str, Any]) -> str:
       </div>
       <div class="table-scroll">
         <table>
-          <thead><tr><th>Repo</th><th>Risk</th><th>Quality</th><th>Weakest</th><th>Issues</th><th>Next Actions</th></tr></thead>
+          <thead><tr><th>Repo</th><th>Risk</th><th>Quality</th><th>Weakest</th><th>Disabled</th><th>Issues</th><th>Next Actions</th></tr></thead>
           <tbody>{render_priority_rows(rows, "P1")}</tbody>
         </table>
       </div>
@@ -299,7 +361,7 @@ def build_html(payload: dict[str, Any]) -> str:
       </div>
       <div class="table-scroll">
         <table>
-          <thead><tr><th>Repo</th><th>Risk</th><th>Quality</th><th>Weakest</th><th>Issues</th><th>Next Actions</th></tr></thead>
+          <thead><tr><th>Repo</th><th>Risk</th><th>Quality</th><th>Weakest</th><th>Disabled</th><th>Issues</th><th>Next Actions</th></tr></thead>
           <tbody>{render_priority_rows(rows, "P2")}</tbody>
         </table>
       </div>
@@ -315,7 +377,7 @@ def build_html(payload: dict[str, Any]) -> str:
           <thead>
             <tr>
               <th>Priority</th><th>Repo</th><th>Governance</th><th>Motion</th><th>Risk</th><th>Quality</th>
-              <th>Authority</th><th>Operational</th><th>Freshness</th><th>Actionability</th><th>Verification</th><th>Traceability</th><th>Next</th>
+              <th>Authority</th><th>Operational</th><th>Freshness</th><th>Actionability</th><th>Verification</th><th>Traceability</th><th>Disabled</th><th>Next</th>
             </tr>
           </thead>
           <tbody>{render_matrix_rows(rows)}</tbody>

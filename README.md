@@ -23,9 +23,12 @@ Generated outputs:
 
 - `data/projects.json`, `data/summary.json` 기반 canonical 메인 대시보드
 - `data/classification.json` 기반 taxonomy 점검 페이지
-- `data/data-quality.json` 기반 데이터 품질 점검 페이지
+- `data/data-quality.json` 기반 데이터 품질 점검 페이지 (`disabled_source_classification` bucket panel + per-row chips 포함)
 - `data/daily-collection.json` 기반 일일 수집 계약 점검 페이지
-- `index.html` 메인 상태판, `classification.html` 분류체계 감사판, `data-quality.html` 데이터 품질 감사판, `daily-collection.html` 일일 수집 계약판, `dashboard.html` redirect alias
+- `data/taxonomy-analysis.json` 기반 통합 taxonomy/risk 분석 페이지
+- `data/storage-facts.json` 기반 워크스페이스 storage footprint 페이지 (raw / DuckDB / signal table / ontology / event_model 적재 점검)
+- `data/event-model-rollout.json` 기반 event model coverage 페이지 (rollup, namespace × repo grid, coverage progression panel)
+- 7개 페이지 HTML: `index.html` / `classification.html` / `data-quality.html` / `daily-collection.html` / `taxonomy-analysis.html` / `storage.html` / `event-model.html`, plus `dashboard.html` redirect alias
 - 예전 PNG 자산은 참고용 스냅샷으로 남아 있음
 
 즉, 현재는 완전한 애플리케이션형 대시보드는 아니지만, 워크스페이스 집계와 taxonomy 점검을 자동 생성하는 정적 대시보드까지는 올라온 상태입니다.
@@ -121,11 +124,58 @@ python radar-dashboard/scripts/build_dashboard_html.py
 - `radar-dashboard/data/daily-collection.json`
 - `radar-dashboard/daily-collection.html`
 
+## Phase 6 구현
+
+`radar-analysis` 가 만든 storage_facts / event_model_rollout 마트를 dashboard 가 직접 소비하도록 두 데이터셋 + 두 페이지를 추가했습니다.
+
+```bash
+python radar-dashboard/scripts/build_storage_event_model_dataset.py
+python radar-dashboard/scripts/build_storage_dashboard.py
+python radar-dashboard/scripts/build_event_model_dashboard.py
+python radar-dashboard/scripts/build_dashboard_html.py
+```
+
+생성 결과:
+
+- `radar-dashboard/data/storage-facts.json`
+- `radar-dashboard/data/event-model-rollout.json`
+- `radar-dashboard/storage.html` (Repo Storage Matrix + Raw/Signal/Ontology/Event Model gap panels)
+- `radar-dashboard/event-model.html` (Namespace Coverage + Coverage Progression + Rollup + Repo × Event Model Coverage Grid)
+- `index.html` 의 Storage Footprint / Event Model Coverage hero teaser
+
+`build_event_model_dashboard.py` 는 `data/storage-facts.json` 을 optional 입력으로 받아 progression panel 을 렌더합니다 (`--storage-facts-path` 로 override).
+
+## 빌드 순서 요약
+
+전체 dashboard 를 재빌드하는 표준 순서:
+
+```bash
+# upstream artifacts (radar-analysis)
+PYTHONPATH=radar-core python3 radar-analysis/scripts/build_workspace_analysis.py
+
+# datasets (radar-dashboard)
+python3 radar-dashboard/scripts/build_dashboard_dataset.py
+python3 radar-dashboard/scripts/build_classification_dataset.py
+python3 radar-dashboard/scripts/build_data_quality_dataset.py
+python3 radar-dashboard/scripts/build_daily_collection_dataset.py
+python3 radar-dashboard/scripts/build_storage_event_model_dataset.py
+python3 radar-dashboard/scripts/build_taxonomy_analysis_dataset.py
+
+# HTML pages (radar-dashboard)
+python3 radar-dashboard/scripts/build_dashboard_html.py
+python3 radar-dashboard/scripts/build_classification_dashboard.py
+python3 radar-dashboard/scripts/build_data_quality_dashboard.py
+python3 radar-dashboard/scripts/build_daily_collection_dashboard.py
+python3 radar-dashboard/scripts/build_taxonomy_analysis_dashboard.py
+python3 radar-dashboard/scripts/build_storage_dashboard.py
+python3 radar-dashboard/scripts/build_event_model_dashboard.py
+```
+
 <!-- DATAHUB-OPS-AUDIT:START -->
 ## DataHub Operations
 
 - CI/CD workflows: none detected under `.github/workflows/`.
-- GitHub Pages visualization: root static pages: `classification.html`, `daily-collection.html`, `dashboard.html`, `data-quality.html`, `index.html`, `taxonomy-analysis.html`; no Pages deployment workflow detected.
+- GitHub Pages visualization: root static pages: `classification.html`, `daily-collection.html`, `dashboard.html`, `data-quality.html`, `event-model.html`, `index.html`, `storage.html`, `taxonomy-analysis.html`; no Pages deployment workflow detected.
 - Latest remote Pages check: not applicable.
 - Local workspace audit: 10 Python files parsed, 0 syntax errors.
 - Re-run audit from the workspace root: `python scripts/audit_ci_pages_readme.py --syntax-check --write`.

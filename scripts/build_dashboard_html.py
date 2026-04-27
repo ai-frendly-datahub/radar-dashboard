@@ -258,6 +258,95 @@ def render_daily_collection_teaser(daily_payload: dict[str, Any] | None) -> str:
     )
 
 
+def render_storage_teaser(storage_payload: dict[str, Any] | None) -> str:
+    if not storage_payload:
+        return ""
+
+    summary = storage_payload.get("summary") or {}
+    repo_count = summary.get("repo_count")
+    raw_record_count = summary.get("raw_record_count")
+    raw_file_count = summary.get("raw_file_count")
+    duckdb_table_count = summary.get("duckdb_table_count")
+    signal_table_count = summary.get("signal_table_count")
+    repos_with_raw = summary.get("repos_with_raw_records")
+
+    repo_rows = list(storage_payload.get("repo_rows") or [])
+    capable_count = sum(1 for r in repo_rows if r.get("articles_ontology_capable"))
+    ontology_repo_count = sum(
+        1 for r in repo_rows if int(r.get("duckdb_ontology_row_count") or 0) > 0
+    )
+    return (
+        "<section class=\"taxonomy-banner\">"
+        "<div>"
+        "<h2>Storage Footprint</h2>"
+        "<p>각 Radar 저장소의 최신 raw JSONL snapshot과 DuckDB 마트를 직접 집계해 보여줍니다. 분석 마트가 어디서 만들어지고 어디서 비어 있는지 한 화면에서 확인합니다.</p>"
+        "</div>"
+        "<div class=\"taxonomy-banner__meta\">"
+        f"<span>{format_number(repo_count)} repos</span>"
+        f"<span>{format_number(repos_with_raw)} with raw</span>"
+        f"<span>{format_number(raw_file_count)} raw files</span>"
+        f"<span>{format_number(raw_record_count)} raw records</span>"
+        f"<span>{format_number(duckdb_table_count)} DuckDB tables</span>"
+        f"<span>{format_number(signal_table_count)} signal tables</span>"
+        f"<span>{format_number(ontology_repo_count)}/{format_number(capable_count)} repos w/ ontology rows</span>"
+        "<a href=\"storage.html\">Open storage footprint</a>"
+        "</div>"
+        "</section>"
+    )
+
+
+def render_event_model_teaser(
+    event_payload: dict[str, Any] | None,
+    storage_payload: dict[str, Any] | None = None,
+) -> str:
+    if not event_payload:
+        return ""
+
+    summary = event_payload.get("summary") or {}
+    coverage_row_count = summary.get("coverage_row_count")
+    unique_event_model_count = summary.get("unique_event_model_count")
+    namespace_count = summary.get("namespace_count")
+    coverage_source_counts = summary.get("coverage_source_counts") or {}
+    summary_coverage = coverage_source_counts.get("summary", 0)
+    duckdb_coverage = coverage_source_counts.get("duckdb_storage", 0)
+
+    repos_at_full = 0
+    repos_above_partial_floor = 0
+    if storage_payload:
+        for row in storage_payload.get("repo_rows") or []:
+            ontology_rows = int(row.get("duckdb_ontology_row_count") or 0)
+            event_records = int(row.get("duckdb_event_model_record_count") or 0)
+            if ontology_rows == 0:
+                continue
+            ratio = event_records / ontology_rows
+            if ratio >= 0.95:
+                repos_at_full += 1
+            if ratio >= 0.30:
+                repos_above_partial_floor += 1
+    coverage_summary_chip = (
+        f"<span>{format_number(repos_at_full)} repos at 100% / {format_number(repos_above_partial_floor)} above partial floor</span>"
+        if storage_payload
+        else ""
+    )
+    return (
+        "<section class=\"taxonomy-banner\">"
+        "<div>"
+        "<h2>Event Model Coverage</h2>"
+        "<p>radar-ontology event 모델이 어떤 저장소에서 어떤 source를 통해 채워지는지 정리한 마트입니다. 요약 ontology 어댑션과 DuckDB raw payload 양쪽을 같이 집계합니다.</p>"
+        "</div>"
+        "<div class=\"taxonomy-banner__meta\">"
+        f"<span>{format_number(coverage_row_count)} coverage rows</span>"
+        f"<span>{format_number(unique_event_model_count)} event models</span>"
+        f"<span>{format_number(namespace_count)} namespaces</span>"
+        f"<span>{format_number(summary_coverage)} summary</span>"
+        f"<span>{format_number(duckdb_coverage)} duckdb</span>"
+        f"{coverage_summary_chip}"
+        "<a href=\"event-model.html\">Open event model coverage</a>"
+        "</div>"
+        "</section>"
+    )
+
+
 def render_taxonomy_analysis_teaser(analysis_payload: dict[str, Any] | None) -> str:
     if not analysis_payload:
         return ""
@@ -293,6 +382,8 @@ def build_index_html(
     data_quality_payload: dict[str, Any] | None = None,
     daily_collection_payload: dict[str, Any] | None = None,
     taxonomy_analysis_payload: dict[str, Any] | None = None,
+    storage_payload: dict[str, Any] | None = None,
+    event_model_payload: dict[str, Any] | None = None,
 ) -> str:
     projects = list(projects_payload.get("projects") or [])
     projects.sort(
@@ -318,33 +409,51 @@ def build_index_html(
     data_quality_teaser = render_data_quality_teaser(data_quality_payload)
     daily_collection_teaser = render_daily_collection_teaser(daily_collection_payload)
     taxonomy_analysis_teaser = render_taxonomy_analysis_teaser(taxonomy_analysis_payload)
+    storage_teaser = render_storage_teaser(storage_payload)
+    event_model_teaser = render_event_model_teaser(event_model_payload, storage_payload)
 
     return f"""<!DOCTYPE html>
-<html lang="ko">
+<html lang="ko" data-visual-system="radar-unified-v2" data-visual-surface="portfolio" data-visual-page="portfolio-index">
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <title>Radar Projects Dashboard</title>
   <style>
     :root {{
-      --bg: #f4f6fb;
-      --surface: #ffffff;
-      --surface-alt: #eef3ff;
-      --text: #18202b;
-      --muted: #617086;
-      --line: #d7dfef;
-      --accent: #2358d5;
+      --vs-bg-0: #f4f6fb;
+      --vs-bg-1: #e8edf9;
+      --vs-surface-0: #ffffff;
+      --vs-surface-1: #eef3ff;
+      --vs-text: #18202b;
+      --vs-text-muted: #617086;
+      --vs-line: #d7dfef;
+      --vs-brand: #2358d5;
+      --vs-brand-strong: #1e8e5a;
+      --vs-accent: #a96b00;
+      --vs-danger: #a23b3b;
+      --vs-shadow: 0 18px 50px rgba(24, 32, 43, 0.08);
+      --vs-radius: 18px;
+      --vs-max: 1380px;
+      --vs-font-sans: "Pretendard Variable", "Pretendard", "Segoe UI", Arial, sans-serif;
+
+      --bg: var(--vs-bg-0);
+      --surface: var(--vs-surface-0);
+      --surface-alt: var(--vs-surface-1);
+      --text: var(--vs-text);
+      --muted: var(--vs-text-muted);
+      --line: var(--vs-line);
+      --accent: var(--vs-brand);
       --accent-soft: #dce7ff;
-      --ok: #1e8e5a;
+      --ok: var(--vs-brand-strong);
       --ok-soft: #daf4e7;
-      --warn: #a96b00;
+      --warn: var(--vs-accent);
       --warn-soft: #fff1cd;
-      --bad: #a23b3b;
+      --bad: var(--vs-danger);
       --bad-soft: #fde2e2;
-      --shadow: 0 18px 50px rgba(24, 32, 43, 0.08);
-      --radius: 18px;
+      --shadow: var(--vs-shadow);
+      --radius: var(--vs-radius);
       --radius-sm: 999px;
-      --max: 1380px;
+      --max: var(--vs-max);
     }}
 
     * {{
@@ -353,7 +462,7 @@ def build_index_html(
 
     body {{
       margin: 0;
-      font-family: "Pretendard Variable", "Pretendard", "Segoe UI", Arial, sans-serif;
+      font-family: var(--vs-font-sans);
       color: var(--text);
       background:
         radial-gradient(circle at top left, rgba(35, 88, 213, 0.08), transparent 24rem),
@@ -740,6 +849,10 @@ def build_index_html(
 
     {taxonomy_analysis_teaser}
 
+    {storage_teaser}
+
+    {event_model_teaser}
+
     {daily_collection_teaser}
 
     <section class="table-wrap">
@@ -781,7 +894,7 @@ def build_index_html(
 
 def build_redirect_html() -> str:
     return """<!DOCTYPE html>
-<html lang="ko">
+<html lang="ko" data-visual-system="radar-unified-v2" data-visual-surface="portfolio" data-visual-page="dashboard-redirect">
 <head>
   <meta charset="UTF-8">
   <meta http-equiv="refresh" content="0; url=index.html">
@@ -806,6 +919,8 @@ def main() -> int:
     data_quality_payload = load_optional_json(data_dir / "data-quality.json")
     daily_collection_payload = load_optional_json(data_dir / "daily-collection.json")
     taxonomy_analysis_payload = load_optional_json(data_dir / "taxonomy-analysis.json")
+    storage_payload = load_optional_json(data_dir / "storage-facts.json")
+    event_model_payload = load_optional_json(data_dir / "event-model-rollout.json")
 
     index_html = build_index_html(
         projects_payload,
@@ -814,6 +929,8 @@ def main() -> int:
         data_quality_payload,
         daily_collection_payload,
         taxonomy_analysis_payload,
+        storage_payload,
+        event_model_payload,
     )
     redirect_html = build_redirect_html()
 

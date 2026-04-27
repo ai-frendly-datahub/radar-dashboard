@@ -29,8 +29,31 @@ def parse_args() -> argparse.Namespace:
     parser.add_argument("--projects-json", type=Path, default=None)
     parser.add_argument("--summary-json", type=Path, default=None)
     parser.add_argument("--classification-json", type=Path, default=None)
+    parser.add_argument("--disabled-classification-json", type=Path, default=None)
     parser.add_argument("--output", type=Path, default=None)
     return parser.parse_args()
+
+
+def _load_disabled_classification(path: Path) -> dict[str, Any]:
+    if not path.is_file():
+        return {"summary": {}, "by_repo": {}}
+    try:
+        payload = json.loads(path.read_text(encoding="utf-8"))
+    except (OSError, json.JSONDecodeError):
+        return {"summary": {}, "by_repo": {}}
+    rows = payload.get("rows") or []
+    by_repo: dict[str, dict[str, Any]] = {}
+    for row in rows:
+        if not isinstance(row, dict):
+            continue
+        repo = str(row.get("repo") or "")
+        if not repo:
+            continue
+        by_repo[repo] = {
+            "total_disabled_count": int(row.get("total_disabled_count", 0) or 0),
+            "bucket_counts": dict(row.get("bucket_counts") or {}),
+        }
+    return {"summary": dict(payload.get("summary") or {}), "by_repo": by_repo}
 
 
 def number(value: Any, default: float = 0.0) -> float:
@@ -137,8 +160,13 @@ def focus_area(row: dict[str, Any]) -> str:
     return "stable"
 
 
-def build_repo_rows(projects: list[dict[str, Any]], taxonomy_rows: list[dict[str, Any]]) -> list[dict[str, Any]]:
+def build_repo_rows(
+    projects: list[dict[str, Any]],
+    taxonomy_rows: list[dict[str, Any]],
+    disabled_classification: dict[str, Any] | None = None,
+) -> list[dict[str, Any]]:
     taxonomy_by_repo = {row["repo"]: row for row in taxonomy_rows}
+    disabled_by_repo = (disabled_classification or {}).get("by_repo") or {}
     rows: list[dict[str, Any]] = []
     for project in projects:
         repo = project["repo"]
@@ -150,6 +178,7 @@ def build_repo_rows(projects: list[dict[str, Any]], taxonomy_rows: list[dict[str
         article_count = integer(project.get("article_count"))
         matched_count = integer(project.get("matched_count"))
         match_rate = project.get("match_rate")
+        repo_disabled = disabled_by_repo.get(repo) or {}
         row = {
             "repo": repo,
             "display_name": taxonomy.get("display_name") or project.get("display_name") or repo,
@@ -179,6 +208,10 @@ def build_repo_rows(projects: list[dict[str, Any]], taxonomy_rows: list[dict[str
             "data_origin": project.get("data_origin"),
             "tracked_coverage_pct": percent(tracked, enabled) if enabled else None,
             "freshness_coverage_pct": percent(fresh, tracked) if tracked else None,
+            "disabled_source_classification": dict(repo_disabled.get("bucket_counts") or {}),
+            "disabled_source_classification_total": int(
+                repo_disabled.get("total_disabled_count", 0) or 0
+            ),
             **quality,
         }
         row["operational_priority"] = operational_priority(row)
@@ -255,13 +288,24 @@ def count_values(rows: list[dict[str, Any]], field: str) -> dict[str, int]:
     return dict(Counter(str(row.get(field) or "unclassified") for row in rows))
 
 
-def build_payload(workspace_root: Path, projects_path: Path, summary_path: Path, classification_path: Path) -> dict[str, Any]:
+def build_payload(
+    workspace_root: Path,
+    projects_path: Path,
+    summary_path: Path,
+    classification_path: Path,
+    disabled_classification_path: Path | None = None,
+) -> dict[str, Any]:
     projects_payload = json.loads(projects_path.read_text(encoding="utf-8"))
     dashboard_summary = json.loads(summary_path.read_text(encoding="utf-8"))
     classification_payload = json.loads(classification_path.read_text(encoding="utf-8"))
+    disabled_classification = (
+        _load_disabled_classification(disabled_classification_path)
+        if disabled_classification_path
+        else {"summary": {}, "by_repo": {}}
+    )
     projects = list(projects_payload.get("projects") or [])
     taxonomy_rows = list(classification_payload.get("repos") or [])
-    rows = build_repo_rows(projects, taxonomy_rows)
+    rows = build_repo_rows(projects, taxonomy_rows, disabled_classification)
     rows.sort(key=lambda row: (-row["risk_score"], row["repo"]))
 
     taxonomy_by_repo = {row["repo"]: row for row in taxonomy_rows}
@@ -292,6 +336,9 @@ def build_payload(workspace_root: Path, projects_path: Path, summary_path: Path,
         "collection_error_total": sum(row["collection_errors"] for row in rows),
         "freshness_gap_total": sum(row["freshness_gap"] for row in rows),
         "disabled_source_total": sum(row["disabled_sources"] for row in rows),
+        "disabled_source_classification_summary": dict(
+            disabled_classification.get("summary") or {}
+        ),
         "repos_with_errors": sum(1 for row in rows if row["collection_errors"] > 0),
         "repos_with_freshness_gap": sum(1 for row in rows if row["freshness_gap"] > 0),
         "repos_with_disabled_sources": sum(1 for row in rows if row["disabled_sources"] > 0),
@@ -348,9 +395,24 @@ def main() -> int:
         if args.classification_json
         else dashboard_data / "classification.json"
     )
+    disabled_classification_path = (
+        args.disabled_classification_json.resolve()
+        if args.disabled_classification_json
+        else workspace_root
+        / "radar-analysis"
+        / "data"
+        / "exports"
+        / "disabled_source_classification.json"
+    )
     output = args.output.resolve() if args.output else dashboard_data / "taxonomy-analysis.json"
 
-    payload = build_payload(workspace_root, projects_path, summary_path, classification_path)
+    payload = build_payload(
+        workspace_root,
+        projects_path,
+        summary_path,
+        classification_path,
+        disabled_classification_path,
+    )
     output.parent.mkdir(parents=True, exist_ok=True)
     output.write_text(json.dumps(payload, ensure_ascii=False, indent=2) + "\n", encoding="utf-8")
     print(f"Wrote {output}")

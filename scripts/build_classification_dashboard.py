@@ -139,38 +139,54 @@ def build_html(payload: dict[str, Any]) -> str:
     )
 
     return f"""<!DOCTYPE html>
-<html lang="ko">
+<html lang="ko" data-visual-system="radar-unified-v2" data-visual-surface="portfolio" data-visual-page="classification-audit">
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <title>Workspace Classification Audit</title>
   <style>
     :root {{
-      --bg: #f4f6fb;
-      --surface: #fff;
-      --surface-2: #eef3ff;
-      --text: #18202b;
-      --muted: #617086;
-      --line: #d7dfef;
-      --accent: #1d4ed8;
+      --vs-bg-0: #f4f6fb;
+      --vs-bg-1: #eef3ff;
+      --vs-surface-0: #ffffff;
+      --vs-surface-1: #eef3ff;
+      --vs-text: #18202b;
+      --vs-text-muted: #617086;
+      --vs-line: #d7dfef;
+      --vs-brand: #1d4ed8;
+      --vs-brand-strong: #1d7f49;
+      --vs-accent: #9a6700;
+      --vs-danger: #a23b3b;
+      --vs-shadow: 0 18px 50px rgba(24, 32, 43, 0.08);
+      --vs-radius: 20px;
+      --vs-max: 1460px;
+      --vs-font-sans: "Pretendard Variable", "Pretendard", "Segoe UI", Arial, sans-serif;
+
+      --bg: var(--vs-bg-0);
+      --surface: var(--vs-surface-0);
+      --surface-2: var(--vs-surface-1);
+      --text: var(--vs-text);
+      --muted: var(--vs-text-muted);
+      --line: var(--vs-line);
+      --accent: var(--vs-brand);
       --accent-soft: #dbe8ff;
-      --ok: #1d7f49;
+      --ok: var(--vs-brand-strong);
       --ok-soft: #ddf5e5;
-      --warn: #9a6700;
+      --warn: var(--vs-accent);
       --warn-soft: #fff1cc;
-      --bad: #a23b3b;
+      --bad: var(--vs-danger);
       --bad-soft: #fde2e2;
       --shared: #5b4ab2;
       --shared-soft: #ece8ff;
-      --shadow: 0 18px 50px rgba(24, 32, 43, 0.08);
-      --max: 1460px;
-      --radius: 20px;
+      --shadow: var(--vs-shadow);
+      --max: var(--vs-max);
+      --radius: var(--vs-radius);
     }}
     * {{ box-sizing: border-box; }}
     body {{
       margin: 0;
       color: var(--text);
-      font-family: "Pretendard Variable", "Pretendard", "Segoe UI", Arial, sans-serif;
+      font-family: var(--vs-font-sans);
       background:
         radial-gradient(circle at top left, rgba(29, 78, 216, 0.08), transparent 24rem),
         radial-gradient(circle at bottom right, rgba(29, 127, 73, 0.08), transparent 22rem),
@@ -294,6 +310,10 @@ def build_html(payload: dict[str, Any]) -> str:
       <div class="hero-links">
         <a href="index.html">Main Dashboard</a>
         <a href="data-quality.html">Data Quality Audit</a>
+        <a href="taxonomy-analysis.html">Taxonomy Analysis</a>
+        <a href="daily-collection.html">Daily Collection</a>
+        <a href="storage.html">Storage Footprint</a>
+        <a href="event-model.html">Event Model Coverage</a>
         <a href="../docs/harness/repo-taxonomy-review.md">Markdown Review</a>
         <a href="../docs/harness/portfolio-taxonomy-framework.md">Framework Doc</a>
       </div>
