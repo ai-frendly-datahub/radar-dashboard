@@ -1,6 +1,6 @@
 {
   "meta": {
-    "generated_at": "2026-04-28T13:34:22.259450+00:00",
+    "generated_at": "2026-04-28T13:53:11.643810+00:00",
     "workspace_root": "/mnt/c/projects/ai-frendly-datahub",
     "project_count": 37,
     "taxonomy_repo_count": 40,
@@ -26,10 +26,10 @@
       "signal_table_missing_when_raw_present": 0,
       "duckdb_table_missing_with_articles": 0,
       "duckdb_event_model_missing_when_summary_emitted": 0,
-      "duckdb_ontology_missing_when_summary_emitted": 1,
+      "duckdb_ontology_missing_when_summary_emitted": 0,
       "duckdb_event_model_partial_when_summary_emitted": 0
     },
-    "storage_priority_repo_count": 1
+    "storage_priority_repo_count": 0
   },
   "summary": {
     "repo_count": 37,

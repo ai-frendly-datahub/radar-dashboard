@@ -1,5 +1,5 @@
 {
-  "generated_at": "2026-04-28T13:35:28.084167+00:00",
+  "generated_at": "2026-04-28T13:54:23.428780+00:00",
   "workspace_root": "/mnt/c/projects/ai-frendly-datahub",
   "inputs": {
     "projects_json": "radar-dashboard/data/projects.json",
@@ -15,8 +15,8 @@
     "article_total": 5353,
     "matched_total": 5190,
     "overall_match_rate": 97.0,
-    "dashboard_generated_at": "2026-04-28T13:35:26.318284+00:00",
-    "project_data_generated_at": "2026-04-28T13:35:26.318147+00:00",
+    "dashboard_generated_at": "2026-04-28T13:54:21.153296+00:00",
+    "project_data_generated_at": "2026-04-28T13:54:21.153116+00:00",
     "classification_generated_at": "2026-04-28T13:03:30.309633+00:00",
     "collection_error_total": 0,
     "freshness_gap_total": 86,
@@ -1449,7 +1449,7 @@
         "quality report has 1 disabled source(s)"
       ],
       "warning_count": 1,
-      "quality_origin": "MiscMCPRadar/reports/misc_mcp_20260428_quality.json",
+      "quality_origin": "MiscMCPRadar/reports/misc_mcp_quality.json",
       "data_origin": "MiscMCPRadar/reports/misc_mcp_20260424_summary.json",
       "tracked_coverage_pct": 100.0,
       "freshness_coverage_pct": 0.0,
