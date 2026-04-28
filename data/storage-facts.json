@@ -1,6 +1,6 @@
 {
   "meta": {
-    "generated_at": "2026-04-28T13:53:11.643810+00:00",
+    "generated_at": "2026-04-28T14:12:26.884418+00:00",
     "workspace_root": "/mnt/c/projects/ai-frendly-datahub",
     "project_count": 37,
     "taxonomy_repo_count": 40,
@@ -12,11 +12,11 @@
     "raw_ontology_record_count": 2873,
     "duckdb_ontology_row_count": 39847,
     "event_model_coverage_count": 104,
-    "disabled_source_total": 199,
+    "disabled_source_total": 200,
     "disabled_source_bucket_totals": {
       "awaiting_url_replacement": 57,
       "awaiting_secret": 17,
-      "awaiting_smoke_test": 4,
+      "awaiting_smoke_test": 5,
       "upstream_section_missing": 1,
       "awaiting_partnership_review": 0,
       "accepted_backlog": 120

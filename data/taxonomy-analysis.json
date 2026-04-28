@@ -1,5 +1,5 @@
 {
-  "generated_at": "2026-04-28T13:54:23.428780+00:00",
+  "generated_at": "2026-04-28T14:12:42.935622+00:00",
   "workspace_root": "/mnt/c/projects/ai-frendly-datahub",
   "inputs": {
     "projects_json": "radar-dashboard/data/projects.json",
@@ -15,18 +15,18 @@
     "article_total": 5353,
     "matched_total": 5190,
     "overall_match_rate": 97.0,
-    "dashboard_generated_at": "2026-04-28T13:54:21.153296+00:00",
-    "project_data_generated_at": "2026-04-28T13:54:21.153116+00:00",
+    "dashboard_generated_at": "2026-04-28T14:12:41.634065+00:00",
+    "project_data_generated_at": "2026-04-28T14:12:41.633936+00:00",
     "classification_generated_at": "2026-04-28T13:03:30.309633+00:00",
     "collection_error_total": 0,
     "freshness_gap_total": 86,
-    "disabled_source_total": 196,
+    "disabled_source_total": 197,
     "disabled_source_classification_summary": {
-      "total_disabled_count": 199,
+      "total_disabled_count": 200,
       "bucket_totals": {
         "awaiting_url_replacement": 57,
         "awaiting_secret": 17,
-        "awaiting_smoke_test": 4,
+        "awaiting_smoke_test": 5,
         "upstream_section_missing": 1,
         "awaiting_partnership_review": 0,
         "accepted_backlog": 120
@@ -36,7 +36,7 @@
     "repos_with_errors": 0,
     "repos_with_freshness_gap": 17,
     "repos_with_disabled_sources": 31,
-    "average_risk_score": 23.8,
+    "average_risk_score": 23.9,
     "operational_priority_counts": {
       "P1": 13,
       "P0": 4,
@@ -96,7 +96,7 @@
       "WineRadar",
       "PolicyRadar",
       "TrustRadar",
-      "CollaborationMCPRadar"
+      "MiscMCPRadar"
     ],
     "top_taxonomy_repos": [
       "MiscMCPRadar",
@@ -123,8 +123,8 @@
         "match_rate": 97.1,
         "collection_errors": 0,
         "freshness_gap": 82,
-        "disabled_sources": 154,
-        "average_risk_score": 25.8,
+        "disabled_sources": 155,
+        "average_risk_score": 25.9,
         "watch_count": 24,
         "p0_count": 3,
         "t1_count": 25,
@@ -158,14 +158,14 @@
         "match_rate": 90.9,
         "collection_errors": 0,
         "freshness_gap": 33,
-        "disabled_sources": 57,
-        "average_risk_score": 27.5,
+        "disabled_sources": 58,
+        "average_risk_score": 27.6,
         "watch_count": 14,
         "p0_count": 2,
         "t1_count": 15,
         "missing_layer_counts": {
-          "market": 12,
-          "community": 1
+          "community": 1,
+          "market": 12
         }
       },
       {
@@ -242,14 +242,14 @@
         "match_rate": 99.6,
         "collection_errors": 0,
         "freshness_gap": 29,
-        "disabled_sources": 99,
-        "average_risk_score": 23.7,
+        "disabled_sources": 100,
+        "average_risk_score": 23.8,
         "watch_count": 15,
         "p0_count": 0,
         "t1_count": 16,
         "missing_layer_counts": {
-          "market": 12,
-          "community": 1
+          "community": 1,
+          "market": 12
         }
       },
       {
@@ -277,14 +277,14 @@
         "match_rate": 100.0,
         "collection_errors": 0,
         "freshness_gap": 0,
-        "disabled_sources": 21,
-        "average_risk_score": 26.8,
+        "disabled_sources": 22,
+        "average_risk_score": 26.9,
         "watch_count": 11,
         "p0_count": 0,
         "t1_count": 12,
         "missing_layer_counts": {
-          "market": 12,
-          "community": 1
+          "community": 1,
+          "market": 12
         }
       },
       {
@@ -362,8 +362,8 @@
         "match_rate": null,
         "collection_errors": 0,
         "freshness_gap": 0,
-        "disabled_sources": 1,
-        "average_risk_score": 27.0,
+        "disabled_sources": 2,
+        "average_risk_score": 28.0,
         "watch_count": 0,
         "p0_count": 0,
         "t1_count": 1,
@@ -415,8 +415,8 @@
         "match_rate": null,
         "collection_errors": 0,
         "freshness_gap": 0,
-        "disabled_sources": 1,
-        "average_risk_score": 27.0,
+        "disabled_sources": 2,
+        "average_risk_score": 28.0,
         "watch_count": 0,
         "p0_count": 0,
         "t1_count": 1,
@@ -1044,6 +1044,65 @@
       "focus_area": "collector_repair"
     },
     {
+      "repo": "MiscMCPRadar",
+      "display_name": "MiscMCP",
+      "category": "misc_mcp",
+      "repo_class": "standard-radar",
+      "domain_family": "mcp-misc",
+      "primary_motion": "compliance-risk",
+      "governance_profile": "medium",
+      "evidence_strategy": "balanced-mixed",
+      "readiness_status": "upgrade",
+      "source_status": "보강우선",
+      "available_layers": [],
+      "missing_layers": [
+        "community",
+        "market"
+      ],
+      "layer_counts": {},
+      "next_step": "awesome-mcp-korea community seed를 GitHub repository metadata와 security/risk cross-check로 보강한다.",
+      "quality_score": 70,
+      "taxonomy_priority_score": 62,
+      "article_count": 0,
+      "matched_count": 0,
+      "match_rate": 0.0,
+      "source_count": 0,
+      "dashboard_status": "active",
+      "last_updated": "2026-04-24",
+      "warnings": [
+        "quality report has 2 disabled source(s)"
+      ],
+      "warning_count": 1,
+      "quality_origin": "MiscMCPRadar/reports/misc_mcp_20260428_quality.json",
+      "data_origin": "MiscMCPRadar/reports/misc_mcp_20260424_summary.json",
+      "tracked_coverage_pct": 100.0,
+      "freshness_coverage_pct": 0.0,
+      "disabled_source_classification": {
+        "awaiting_url_replacement": 0,
+        "awaiting_secret": 0,
+        "awaiting_smoke_test": 1,
+        "upstream_section_missing": 1,
+        "awaiting_partnership_review": 0,
+        "accepted_backlog": 0
+      },
+      "disabled_source_classification_total": 2,
+      "collection_errors": 0,
+      "freshness_gap": 0,
+      "stale_sources": 0,
+      "missing_sources": 0,
+      "unknown_event_date_sources": 0,
+      "disabled_sources": 2,
+      "total_sources": 2,
+      "enabled_sources": 2,
+      "tracked_sources": 2,
+      "fresh_sources": 0,
+      "not_tracked_sources": 0,
+      "operational_priority": "P2",
+      "taxonomy_priority": "T1",
+      "risk_score": 28,
+      "focus_area": "taxonomy_enrichment"
+    },
+    {
       "repo": "CollaborationMCPRadar",
       "display_name": "CollaborationMCP",
       "category": "collaboration_mcp",
@@ -1413,65 +1472,6 @@
       "enabled_sources": 3,
       "tracked_sources": 3,
       "fresh_sources": 1,
-      "not_tracked_sources": 0,
-      "operational_priority": "P2",
-      "taxonomy_priority": "T1",
-      "risk_score": 27,
-      "focus_area": "taxonomy_enrichment"
-    },
-    {
-      "repo": "MiscMCPRadar",
-      "display_name": "MiscMCP",
-      "category": "misc_mcp",
-      "repo_class": "standard-radar",
-      "domain_family": "mcp-misc",
-      "primary_motion": "compliance-risk",
-      "governance_profile": "medium",
-      "evidence_strategy": "balanced-mixed",
-      "readiness_status": "upgrade",
-      "source_status": "보강우선",
-      "available_layers": [],
-      "missing_layers": [
-        "community",
-        "market"
-      ],
-      "layer_counts": {},
-      "next_step": "awesome-mcp-korea community seed를 GitHub repository metadata와 security/risk cross-check로 보강한다.",
-      "quality_score": 70,
-      "taxonomy_priority_score": 62,
-      "article_count": 0,
-      "matched_count": 0,
-      "match_rate": 0.0,
-      "source_count": 0,
-      "dashboard_status": "active",
-      "last_updated": "2026-04-24",
-      "warnings": [
-        "quality report has 1 disabled source(s)"
-      ],
-      "warning_count": 1,
-      "quality_origin": "MiscMCPRadar/reports/misc_mcp_quality.json",
-      "data_origin": "MiscMCPRadar/reports/misc_mcp_20260424_summary.json",
-      "tracked_coverage_pct": 100.0,
-      "freshness_coverage_pct": 0.0,
-      "disabled_source_classification": {
-        "awaiting_url_replacement": 0,
-        "awaiting_secret": 0,
-        "awaiting_smoke_test": 0,
-        "upstream_section_missing": 1,
-        "awaiting_partnership_review": 0,
-        "accepted_backlog": 0
-      },
-      "disabled_source_classification_total": 1,
-      "collection_errors": 0,
-      "freshness_gap": 0,
-      "stale_sources": 0,
-      "missing_sources": 0,
-      "unknown_event_date_sources": 0,
-      "disabled_sources": 1,
-      "total_sources": 1,
-      "enabled_sources": 1,
-      "tracked_sources": 1,
-      "fresh_sources": 0,
       "not_tracked_sources": 0,
       "operational_priority": "P2",
       "taxonomy_priority": "T1",

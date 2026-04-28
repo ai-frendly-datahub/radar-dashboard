@@ -1,5 +1,5 @@
 {
-  "generated_at": "2026-04-28T13:54:21.153296+00:00",
+  "generated_at": "2026-04-28T14:12:41.634065+00:00",
   "workspace_root": "/mnt/c/projects/ai-frendly-datahub",
   "projects_scanned": 37,
   "active_projects": 37,
@@ -94,7 +94,7 @@
     "KoreanNLPMCPRadar: quality report has 1 disabled source(s)",
     "LegalGovMCPRadar: quality report has 2 disabled source(s)",
     "MapAddressMCPRadar: quality report has 2 disabled source(s)",
-    "MiscMCPRadar: quality report has 1 disabled source(s)",
+    "MiscMCPRadar: quality report has 2 disabled source(s)",
     "MobilityRadar: quality freshness gaps: stale=1, missing=0, unknown_event_date=0",
     "MobilityRadar: quality report has 5 disabled source(s)",
     "MovieRadar: quality freshness gaps: stale=2, missing=0, unknown_event_date=0",

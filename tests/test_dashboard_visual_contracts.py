@@ -89,6 +89,17 @@ def test_storage_dashboard_emits_portfolio_contract() -> None:
     assert "Repo Storage Matrix" in html
 
 
+def test_storage_priority_meta_zero_state_is_consistent() -> None:
+    storage_facts = _load_json("storage-facts.json")
+    meta = storage_facts["meta"]
+    flag_totals = meta["storage_priority_flag_totals"]
+
+    if meta["storage_priority_repo_count"] == 0:
+        assert all(total == 0 for total in flag_totals.values())
+    if any(total > 0 for total in flag_totals.values()):
+        assert meta["storage_priority_repo_count"] > 0
+
+
 def test_event_model_dashboard_emits_portfolio_contract() -> None:
     module = _load_module("build_event_model_dashboard")
     html = module.build_html(_load_json("event-model-rollout.json"))

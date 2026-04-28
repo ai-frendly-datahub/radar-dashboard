@@ -1,5 +1,5 @@
 {
-  "generated_at": "2026-04-28T13:54:21.153116+00:00",
+  "generated_at": "2026-04-28T14:12:41.633936+00:00",
   "workspace_root": "/mnt/c/projects/ai-frendly-datahub",
   "projects": [
     {
@@ -1300,21 +1300,21 @@
       "report_index_path": "MiscMCPRadar/reports/index.html",
       "latest_report_path": "MiscMCPRadar/reports/index.html",
       "data_origin": "MiscMCPRadar/reports/misc_mcp_20260424_summary.json",
-      "quality_origin": "MiscMCPRadar/reports/misc_mcp_quality.json",
+      "quality_origin": "MiscMCPRadar/reports/misc_mcp_20260428_quality.json",
       "quality_summary": {
-        "total_sources": 1,
+        "total_sources": 2,
         "enabled_sources": 0,
-        "tracked_sources": 1,
+        "tracked_sources": 2,
         "fresh_sources": 0,
         "stale_sources": 0,
         "missing_sources": 0,
         "missing_event_sources": 0,
         "unknown_event_date_sources": 0,
         "not_tracked_sources": 0,
-        "skipped_disabled_sources": 1,
+        "skipped_disabled_sources": 2,
         "collection_error_count": 0,
         "mcp_signal_event_count": 0,
-        "directory_seed_source_count": 1,
+        "directory_seed_source_count": 2,
         "mcp_server_candidate_count": 0,
         "enabled_mcp_server_source_count": 0,
         "blocked_mcp_server_source_count": 0,
@@ -1332,7 +1332,7 @@
       },
       "top_entities": [],
       "warnings": [
-        "quality report has 1 disabled source(s)"
+        "quality report has 2 disabled source(s)"
       ]
     },
     {
