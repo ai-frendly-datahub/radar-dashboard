@@ -1,5 +1,5 @@
 {
-  "generated_at": "2026-04-28T11:59:58.827887+00:00",
+  "generated_at": "2026-04-28T12:21:10.046385+00:00",
   "workspace_root": "/mnt/c/projects/ai-frendly-datahub",
   "projects": [
     {
@@ -431,26 +431,45 @@
     {
       "repo": "CommerceRadar",
       "display_name": "Commerce",
-      "category": null,
-      "status": "missing_reports",
-      "pipeline_kind": "none",
-      "has_summary_json": false,
-      "article_count": null,
-      "matched_count": null,
-      "source_count": null,
-      "match_rate": null,
-      "last_updated": null,
-      "generated_at": null,
-      "total_reports": null,
-      "report_index_path": null,
-      "latest_report_path": null,
-      "data_origin": null,
+      "category": "commerce",
+      "status": "active",
+      "pipeline_kind": "summary_json",
+      "has_summary_json": true,
+      "article_count": 2,
+      "matched_count": 2,
+      "source_count": 8,
+      "match_rate": 100.0,
+      "last_updated": "2026-04-28",
+      "generated_at": "2026-04-28T12:18:47.021771+00:00",
+      "total_reports": 1,
+      "report_index_path": "CommerceRadar/reports/index.html",
+      "latest_report_path": "CommerceRadar/reports/index.html",
+      "data_origin": "CommerceRadar/reports/commerce_20260428_summary.json",
       "quality_origin": null,
       "quality_summary": {},
-      "top_entities": [],
-      "warnings": [
-        "no dashboard-readable report artifacts found"
-      ]
+      "top_entities": [
+        {
+          "name": "ABC코스메틱",
+          "count": 1
+        },
+        {
+          "name": "노워시 퍼퓸 헤어오일",
+          "count": 1
+        },
+        {
+          "name": "Tokyo Beauty Distribution",
+          "count": 1
+        },
+        {
+          "name": "Tokyo Beauty Select",
+          "count": 1
+        },
+        {
+          "name": "서울리빙팩토리",
+          "count": 1
+        }
+      ],
+      "warnings": []
     },
     {
       "repo": "CryptoRadar",

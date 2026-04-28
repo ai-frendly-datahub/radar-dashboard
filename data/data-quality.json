@@ -1,5 +1,5 @@
 {
-  "generated_at": "2026-04-28T11:59:44.554352+00:00",
+  "generated_at": "2026-04-28T12:22:18.682024+00:00",
   "workspace_root": "/mnt/c/projects/ai-frendly-datahub",
   "inputs": {
     "source_portfolio": "docs/harness/source-portfolio.json",
@@ -2786,8 +2786,8 @@
       "governance_profile": "medium",
       "primary_motion": "conversion",
       "source_status": "강함",
-      "readiness_status": "watch",
-      "quality_score": 65,
+      "readiness_status": "ready",
+      "quality_score": 95,
       "data_quality_score": 87,
       "risk_score": 10,
       "weakest_dimension": "verification",

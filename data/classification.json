@@ -1,5 +1,5 @@
 {
-  "generated_at": "2026-04-28T11:59:40.840790+00:00",
+  "generated_at": "2026-04-28T12:22:14.057087+00:00",
   "workspace_root": "/mnt/c/projects/ai-frendly-datahub",
   "framework_path": "docs/harness/portfolio-taxonomy-framework.md",
   "summary": {
@@ -26,8 +26,8 @@
     },
     "readiness_counts": {
       "upgrade": 1,
-      "watch": 25,
-      "ready": 14
+      "watch": 24,
+      "ready": 15
     },
     "source_status_counts": {
       "보강우선": 1,
@@ -241,7 +241,7 @@
       "complexity": "medium",
       "evidence_strategy": "official-operational",
       "source_status": "불균형",
-      "current_focus": "시장 + 운영 + 공식",
+      "current_focus": "시장 + 공식 + 운영",
       "available_layers": [
         "community",
         "market",
@@ -1129,51 +1129,6 @@
       "priority_score": 22
     },
     {
-      "repo": "CommerceRadar",
-      "display_name": "Commerce",
-      "repo_class": "advanced-radar",
-      "domain_family": "b2b-commerce-kg",
-      "primary_motion": "conversion",
-      "governance_profile": "medium",
-      "complexity": "high",
-      "evidence_strategy": "official-operational",
-      "source_status": "강함",
-      "current_focus": "공식 + 운영 + 시장",
-      "available_layers": [
-        "attention",
-        "market",
-        "official",
-        "operational"
-      ],
-      "missing_layers": [],
-      "layer_counts": {
-        "attention": 1,
-        "market": 2,
-        "official": 7,
-        "operational": 5
-      },
-      "business_focus": "제조사·제품·유통사·판매사·트렌드·거래 결과를 조합 추천과 30일 테스트 거래로 연결",
-      "business_value": "공개/공식/플랫폼/first-party 거래 데이터를 묶어 B2B 매칭 후보와 실행 액션을 만든다. 현재는 샘플 기반 프로토타입이라 실제 소스 활성화와 근거 검증이 필요하다.",
-      "reinforcement": "config/sources.yaml의 공식 API·플랫폼·first-party source를 실제 수집 파이프라인과 schema validation에 연결하고, combo card마다 evidence_id와 transaction outcome을 의무화한다.",
-      "enabled_source_count": 8,
-      "dashboard_status": "n/a",
-      "dashboard_pipeline_kind": null,
-      "match_rate": null,
-      "quality_score": 65,
-      "readiness_status": "watch",
-      "flags": {
-        "has_readme": true,
-        "has_agents": true,
-        "has_tests": true,
-        "has_docs": true,
-        "has_reports_index": false,
-        "has_summary_json": false,
-        "has_mcp_server": false
-      },
-      "next_step": "config/sources.yaml와 schemas를 실제 수집/검증 파이프라인에 연결하고 combo card evidence coverage를 dashboard에 노출한다.",
-      "priority_score": 18
-    },
-    {
       "repo": "HomeRadar",
       "display_name": "Home",
       "repo_class": "advanced-radar",
@@ -1307,6 +1262,51 @@
       "priority_score": 10
     },
     {
+      "repo": "CommerceRadar",
+      "display_name": "Commerce",
+      "repo_class": "advanced-radar",
+      "domain_family": "b2b-commerce-kg",
+      "primary_motion": "conversion",
+      "governance_profile": "medium",
+      "complexity": "high",
+      "evidence_strategy": "official-operational",
+      "source_status": "강함",
+      "current_focus": "공식 + 운영 + 시장",
+      "available_layers": [
+        "attention",
+        "market",
+        "official",
+        "operational"
+      ],
+      "missing_layers": [],
+      "layer_counts": {
+        "attention": 1,
+        "market": 2,
+        "official": 7,
+        "operational": 5
+      },
+      "business_focus": "제조사·제품·유통사·판매사·트렌드·거래 결과를 조합 추천과 30일 테스트 거래로 연결",
+      "business_value": "공개/공식/플랫폼/first-party 거래 데이터를 묶어 B2B 매칭 후보와 실행 액션을 만든다. 현재는 샘플 기반 프로토타입이라 실제 소스 활성화와 근거 검증이 필요하다.",
+      "reinforcement": "config/sources.yaml의 공식 API·플랫폼·first-party source를 실제 수집 파이프라인과 schema validation에 연결하고, combo card마다 evidence_id와 transaction outcome을 의무화한다.",
+      "enabled_source_count": 8,
+      "dashboard_status": "active",
+      "dashboard_pipeline_kind": "summary_json",
+      "match_rate": 100.0,
+      "quality_score": 95,
+      "readiness_status": "ready",
+      "flags": {
+        "has_readme": true,
+        "has_agents": true,
+        "has_tests": true,
+        "has_docs": true,
+        "has_reports_index": true,
+        "has_summary_json": true,
+        "has_mcp_server": false
+      },
+      "next_step": "config/sources.yaml와 schemas를 실제 수집/검증 파이프라인에 연결하고 combo card evidence coverage를 dashboard에 노출한다.",
+      "priority_score": 8
+    },
+    {
       "repo": "PriceRadar",
       "display_name": "Price",
       "repo_class": "advanced-radar",
@@ -1404,7 +1404,7 @@
       "complexity": "medium",
       "evidence_strategy": "official-operational",
       "source_status": "강함",
-      "current_focus": "시장 + 운영 + 공식",
+      "current_focus": "시장 + 공식 + 운영",
       "available_layers": [
         "market",
         "official",
@@ -1447,7 +1447,7 @@
       "complexity": "medium",
       "evidence_strategy": "official-operational",
       "source_status": "강함",
-      "current_focus": "시장 + 커뮤니티 + 운영",
+      "current_focus": "시장 + 커뮤니티 + 공식",
       "available_layers": [
         "community",
         "market",

@@ -1,5 +1,5 @@
 {
-  "generated_at": "2026-04-28T12:01:18.681891+00:00",
+  "generated_at": "2026-04-28T12:22:32.695289+00:00",
   "workspace_root": "/mnt/c/projects/ai-frendly-datahub",
   "inputs": {
     "projects_json": "radar-dashboard/data/projects.json",
@@ -12,12 +12,12 @@
     "shared_taxonomy_repo_count": 3,
     "unmatched_project_count": 0,
     "unmatched_projects": [],
-    "article_total": 5351,
-    "matched_total": 5188,
+    "article_total": 5353,
+    "matched_total": 5190,
     "overall_match_rate": 97.0,
-    "dashboard_generated_at": "2026-04-28T11:59:58.828065+00:00",
-    "project_data_generated_at": "2026-04-28T11:59:58.827887+00:00",
-    "classification_generated_at": "2026-04-28T11:59:40.840790+00:00",
+    "dashboard_generated_at": "2026-04-28T12:21:10.046603+00:00",
+    "project_data_generated_at": "2026-04-28T12:21:10.046385+00:00",
+    "classification_generated_at": "2026-04-28T12:22:14.057087+00:00",
     "collection_error_total": 0,
     "freshness_gap_total": 86,
     "disabled_source_total": 196,
@@ -36,7 +36,7 @@
     "repos_with_errors": 0,
     "repos_with_freshness_gap": 17,
     "repos_with_disabled_sources": 31,
-    "average_risk_score": 24.3,
+    "average_risk_score": 23.8,
     "operational_priority_counts": {
       "P1": 13,
       "P0": 4,
@@ -44,16 +44,16 @@
       "P3": 4
     },
     "taxonomy_priority_counts": {
-      "T1": 26,
-      "T3": 11
+      "T1": 25,
+      "T3": 12
     },
     "focus_area_counts": {
       "freshness_coverage": 9,
       "collector_repair": 4,
       "disabled_source_governance": 6,
-      "taxonomy_enrichment": 13,
+      "taxonomy_enrichment": 12,
       "tracked_source_coverage": 3,
-      "stable": 2
+      "stable": 3
     },
     "primary_motion_counts": {
       "conversion": 9,
@@ -67,8 +67,8 @@
       "low": 7
     },
     "readiness_counts": {
-      "watch": 25,
-      "ready": 11,
+      "watch": 24,
+      "ready": 12,
       "upgrade": 1
     },
     "source_status_counts": {
@@ -136,16 +136,16 @@
       {
         "key": "advanced-radar",
         "project_count": 5,
-        "article_count": 462,
-        "matched_count": 439,
+        "article_count": 464,
+        "matched_count": 441,
         "match_rate": 95.0,
         "collection_errors": 0,
         "freshness_gap": 4,
         "disabled_sources": 42,
-        "average_risk_score": 14.6,
-        "watch_count": 1,
+        "average_risk_score": 11.0,
+        "watch_count": 0,
         "p0_count": 1,
-        "t1_count": 1,
+        "t1_count": 0,
         "missing_layer_counts": {}
       }
     ],
@@ -171,16 +171,16 @@
       {
         "key": "conversion",
         "project_count": 9,
-        "article_count": 1173,
-        "matched_count": 1124,
+        "article_count": 1175,
+        "matched_count": 1126,
         "match_rate": 95.8,
         "collection_errors": 0,
         "freshness_gap": 25,
         "disabled_sources": 68,
-        "average_risk_score": 24.8,
-        "watch_count": 7,
+        "average_risk_score": 22.8,
+        "watch_count": 6,
         "p0_count": 2,
-        "t1_count": 7,
+        "t1_count": 6,
         "missing_layer_counts": {
           "community": 1
         }
@@ -237,16 +237,16 @@
       {
         "key": "medium",
         "project_count": 21,
-        "article_count": 1461,
-        "matched_count": 1455,
+        "article_count": 1463,
+        "matched_count": 1457,
         "match_rate": 99.6,
         "collection_errors": 0,
         "freshness_gap": 29,
         "disabled_sources": 99,
-        "average_risk_score": 24.6,
-        "watch_count": 16,
+        "average_risk_score": 23.7,
+        "watch_count": 15,
         "p0_count": 0,
-        "t1_count": 17,
+        "t1_count": 16,
         "missing_layer_counts": {
           "market": 12,
           "community": 1
@@ -290,16 +290,16 @@
       {
         "key": "official-operational",
         "project_count": 23,
-        "article_count": 5007,
-        "matched_count": 4844,
+        "article_count": 5009,
+        "matched_count": 4846,
         "match_rate": 96.7,
         "collection_errors": 0,
         "freshness_gap": 86,
         "disabled_sources": 175,
-        "average_risk_score": 25.1,
-        "watch_count": 14,
+        "average_risk_score": 24.3,
+        "watch_count": 13,
         "p0_count": 4,
-        "t1_count": 14,
+        "t1_count": 13,
         "missing_layer_counts": {
           "community": 1
         }
@@ -338,17 +338,17 @@
     "readiness_status": [
       {
         "key": "watch",
-        "project_count": 25,
+        "project_count": 24,
         "article_count": 2899,
         "matched_count": 2842,
         "match_rate": 98.0,
         "collection_errors": 0,
         "freshness_gap": 56,
         "disabled_sources": 141,
-        "average_risk_score": 28.4,
-        "watch_count": 25,
+        "average_risk_score": 28.8,
+        "watch_count": 24,
         "p0_count": 1,
-        "t1_count": 25,
+        "t1_count": 24,
         "missing_layer_counts": {
           "community": 1,
           "market": 11
@@ -374,14 +374,14 @@
       },
       {
         "key": "ready",
-        "project_count": 11,
-        "article_count": 2452,
-        "matched_count": 2346,
+        "project_count": 12,
+        "article_count": 2454,
+        "matched_count": 2348,
         "match_rate": 95.7,
         "collection_errors": 0,
         "freshness_gap": 30,
         "disabled_sources": 54,
-        "average_risk_score": 14.9,
+        "average_risk_score": 13.7,
         "watch_count": 0,
         "p0_count": 3,
         "t1_count": 0,
@@ -428,16 +428,16 @@
       {
         "key": "강함",
         "project_count": 12,
-        "article_count": 2452,
-        "matched_count": 2346,
+        "article_count": 2454,
+        "matched_count": 2348,
         "match_rate": 95.7,
         "collection_errors": 0,
         "freshness_gap": 30,
         "disabled_sources": 54,
-        "average_risk_score": 15.2,
-        "watch_count": 1,
+        "average_risk_score": 13.7,
+        "watch_count": 0,
         "p0_count": 3,
-        "t1_count": 1,
+        "t1_count": 0,
         "missing_layer_counts": {}
       }
     ]
@@ -2248,65 +2248,6 @@
       "focus_area": "disabled_source_governance"
     },
     {
-      "repo": "CommerceRadar",
-      "display_name": "Commerce",
-      "category": null,
-      "repo_class": "advanced-radar",
-      "domain_family": "b2b-commerce-kg",
-      "primary_motion": "conversion",
-      "governance_profile": "medium",
-      "evidence_strategy": "official-operational",
-      "readiness_status": "watch",
-      "source_status": "강함",
-      "available_layers": [
-        "attention",
-        "market",
-        "official",
-        "operational"
-      ],
-      "missing_layers": [],
-      "layer_counts": {
-        "attention": 1,
-        "market": 2,
-        "official": 7,
-        "operational": 5
-      },
-      "next_step": "config/sources.yaml와 schemas를 실제 수집/검증 파이프라인에 연결하고 combo card evidence coverage를 dashboard에 노출한다.",
-      "quality_score": 65,
-      "taxonomy_priority_score": 18,
-      "article_count": 0,
-      "matched_count": 0,
-      "match_rate": null,
-      "source_count": 0,
-      "dashboard_status": "missing_reports",
-      "last_updated": null,
-      "warnings": [
-        "no dashboard-readable report artifacts found"
-      ],
-      "warning_count": 1,
-      "quality_origin": null,
-      "data_origin": null,
-      "tracked_coverage_pct": null,
-      "freshness_coverage_pct": null,
-      "disabled_source_classification": {},
-      "disabled_source_classification_total": 0,
-      "collection_errors": 0,
-      "freshness_gap": 0,
-      "stale_sources": 0,
-      "missing_sources": 0,
-      "unknown_event_date_sources": 0,
-      "disabled_sources": 0,
-      "total_sources": 0,
-      "enabled_sources": 0,
-      "tracked_sources": 0,
-      "fresh_sources": 0,
-      "not_tracked_sources": 0,
-      "operational_priority": "P3",
-      "taxonomy_priority": "T1",
-      "risk_score": 18,
-      "focus_area": "taxonomy_enrichment"
-    },
-    {
       "repo": "PaperRadar",
       "display_name": "Paper",
       "category": "research",
@@ -2696,6 +2637,63 @@
       "taxonomy_priority": "T3",
       "risk_score": 8,
       "focus_area": "tracked_source_coverage"
+    },
+    {
+      "repo": "CommerceRadar",
+      "display_name": "Commerce",
+      "category": "commerce",
+      "repo_class": "advanced-radar",
+      "domain_family": "b2b-commerce-kg",
+      "primary_motion": "conversion",
+      "governance_profile": "medium",
+      "evidence_strategy": "official-operational",
+      "readiness_status": "ready",
+      "source_status": "강함",
+      "available_layers": [
+        "attention",
+        "market",
+        "official",
+        "operational"
+      ],
+      "missing_layers": [],
+      "layer_counts": {
+        "attention": 1,
+        "market": 2,
+        "official": 7,
+        "operational": 5
+      },
+      "next_step": "config/sources.yaml와 schemas를 실제 수집/검증 파이프라인에 연결하고 combo card evidence coverage를 dashboard에 노출한다.",
+      "quality_score": 95,
+      "taxonomy_priority_score": 8,
+      "article_count": 2,
+      "matched_count": 2,
+      "match_rate": 100.0,
+      "source_count": 8,
+      "dashboard_status": "active",
+      "last_updated": "2026-04-28",
+      "warnings": [],
+      "warning_count": 0,
+      "quality_origin": null,
+      "data_origin": "CommerceRadar/reports/commerce_20260428_summary.json",
+      "tracked_coverage_pct": null,
+      "freshness_coverage_pct": null,
+      "disabled_source_classification": {},
+      "disabled_source_classification_total": 0,
+      "collection_errors": 0,
+      "freshness_gap": 0,
+      "stale_sources": 0,
+      "missing_sources": 0,
+      "unknown_event_date_sources": 0,
+      "disabled_sources": 0,
+      "total_sources": 0,
+      "enabled_sources": 0,
+      "tracked_sources": 0,
+      "fresh_sources": 0,
+      "not_tracked_sources": 0,
+      "operational_priority": "P3",
+      "taxonomy_priority": "T3",
+      "risk_score": 0,
+      "focus_area": "stable"
     },
     {
       "repo": "PriceRadar",

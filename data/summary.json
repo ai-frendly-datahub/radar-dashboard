@@ -1,15 +1,21 @@
 {
-  "generated_at": "2026-04-28T11:59:58.828065+00:00",
+  "generated_at": "2026-04-28T12:21:10.046603+00:00",
   "workspace_root": "/mnt/c/projects/ai-frendly-datahub",
   "projects_scanned": 37,
-  "active_projects": 36,
-  "projects_with_full_metrics": 36,
+  "active_projects": 37,
+  "projects_with_full_metrics": 37,
   "projects_with_partial_metrics": 0,
-  "projects_missing_metrics": 1,
-  "article_total": 5351,
-  "matched_total": 5188,
+  "projects_missing_metrics": 0,
+  "article_total": 5353,
+  "matched_total": 5190,
   "overall_match_rate": 97.0,
   "latest_updates": [
+    {
+      "repo": "CommerceRadar",
+      "display_name": "Commerce",
+      "last_updated": "2026-04-28",
+      "status": "active"
+    },
     {
       "repo": "BenefitRadar",
       "display_name": "Benefit",
@@ -63,12 +69,6 @@
       "display_name": "Mobility",
       "last_updated": "2026-04-25",
       "status": "active"
-    },
-    {
-      "repo": "MovieRadar",
-      "display_name": "Movie",
-      "last_updated": "2026-04-25",
-      "status": "active"
     }
   ],
   "warnings": [
@@ -79,7 +79,6 @@
     "BookRadar: quality report has 12 disabled source(s)",
     "CollaborationMCPRadar: quality report has 2 disabled source(s)",
     "CommerceMCPRadar: quality report has 2 disabled source(s)",
-    "CommerceRadar: no dashboard-readable report artifacts found",
     "CryptoRadar: quality freshness gaps: stale=1, missing=0, unknown_event_date=0",
     "EventRadar: quality freshness gaps: stale=5, missing=0, unknown_event_date=0",
     "EventRadar: quality report has 8 disabled source(s)",
