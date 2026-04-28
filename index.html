@@ -183,6 +183,88 @@
       font-weight: 700;
     }
 
+    .goal-panel {
+      margin-top: 24px;
+      background: var(--surface);
+      border: 1px solid var(--line);
+      border-radius: 24px;
+      padding: 24px;
+      box-shadow: var(--shadow);
+    }
+
+    .goal-panel__header {
+      display: grid;
+      gap: 8px;
+      margin-bottom: 18px;
+    }
+
+    .goal-panel__header h2 {
+      margin: 0;
+      font-size: 1.2rem;
+      letter-spacing: 0;
+    }
+
+    .goal-panel__header p {
+      margin: 0;
+      color: var(--muted);
+      line-height: 1.6;
+    }
+
+    .goal-panel__grid {
+      display: grid;
+      grid-template-columns: repeat(auto-fit, minmax(190px, 1fr));
+      gap: 12px;
+    }
+
+    .goal-gate {
+      min-height: 136px;
+      border: 1px solid var(--line);
+      border-radius: 16px;
+      padding: 15px;
+      background: #fbfcff;
+    }
+
+    .goal-gate__status {
+      display: inline-flex;
+      align-items: center;
+      padding: 4px 8px;
+      border-radius: var(--radius-sm);
+      font-size: 0.72rem;
+      font-weight: 800;
+      letter-spacing: 0;
+    }
+
+    .goal-gate__status--ok {
+      background: var(--ok-soft);
+      color: var(--ok);
+    }
+
+    .goal-gate__status--warn {
+      background: var(--warn-soft);
+      color: var(--warn);
+    }
+
+    .goal-gate__label {
+      margin-top: 12px;
+      color: var(--muted);
+      font-size: 0.86rem;
+      line-height: 1.35;
+    }
+
+    .goal-gate__value {
+      margin-top: 8px;
+      font-size: 1.45rem;
+      font-weight: 800;
+      letter-spacing: 0;
+    }
+
+    .goal-gate__detail {
+      margin-top: 6px;
+      color: var(--muted);
+      font-size: 0.84rem;
+      line-height: 1.35;
+    }
+
     @media (max-width: 980px) {
       .section-grid {
         grid-template-columns: 1fr;
@@ -490,11 +572,13 @@
       </article>
     </section>
 
+    <section class="goal-panel"><div class="goal-panel__header"><h2>Project Goal Gates</h2><p>워크스페이스 목표를 운영 가능한 지표로 고정합니다. Green은 인프라/계약이 정상이라는 뜻이고, Warn은 다음 실행 큐가 남아 있다는 뜻입니다.</p></div><div class="goal-panel__grid"><article class="goal-gate"><div class="goal-gate__status goal-gate__status--ok">OK</div><div class="goal-gate__label">Dashboard full metrics</div><div class="goal-gate__value">37/37</div><div class="goal-gate__detail">0 fallback, 0 missing</div></article><article class="goal-gate"><div class="goal-gate__status goal-gate__status--ok">OK</div><div class="goal-gate__label">Storage priority backlog</div><div class="goal-gate__value">0</div><div class="goal-gate__detail">36 repos with DuckDB</div></article><article class="goal-gate"><div class="goal-gate__status goal-gate__status--ok">OK</div><div class="goal-gate__label">Event model mart</div><div class="goal-gate__value">104</div><div class="goal-gate__detail">84 event models, 39,847 ontology rows</div></article><article class="goal-gate"><div class="goal-gate__status goal-gate__status--ok">OK</div><div class="goal-gate__label">Daily collection contract</div><div class="goal-gate__value">25 ok</div><div class="goal-gate__detail">0 partial</div></article><article class="goal-gate"><div class="goal-gate__status goal-gate__status--warn">WARN</div><div class="goal-gate__label">Data quality execution queue</div><div class="goal-gate__value">7 P0 / 6 P1</div><div class="goal-gate__detail">avg quality 69.1</div></article></div></section>
+
     <section class="taxonomy-banner"><div><h2>Portfolio Taxonomy Audit</h2><p>전 저장소를 공통 taxonomy로 재분류한 별도 감사 페이지를 추가했습니다. 저장소 구조, 의사결정 용도, 거버넌스, 소스 레이어 공백을 한 번에 점검할 수 있습니다.</p></div><div class="taxonomy-banner__meta"><span>40 repos</span><span>5 advanced</span><span>9 high-governance</span><span>1 upgrade-needed</span><a href="classification.html">Open classification audit</a></div></section>
 
     <section class="taxonomy-banner"><div><h2>Data Quality Audit</h2><p>전 저장소의 데이터 품질 축을 별도 점검판으로 추가했습니다. P0/P1 실행 큐, weakest dimension, source 보강 next action을 한 화면에서 확인할 수 있습니다.</p></div><div class="taxonomy-banner__meta"><span>avg quality 69.1</span><span>7 P0</span><span>6 P1</span><span>weakest 운영 깊이</span><a href="data-quality.html">Open quality audit</a></div></section>
 
-    <section class="taxonomy-banner"><div><h2>Taxonomy Analysis</h2><p>Classification, evidence layers, collection errors, freshness gaps, and disabled-source backlog are joined into one portfolio analysis queue.</p></div><div class="taxonomy-banner__meta"><span>37 projects</span><span>0 errors</span><span>86 freshness gaps</span><span>196 disabled</span><span>risk 23.8</span><a href="taxonomy-analysis.html">Open taxonomy analysis</a></div></section>
+    <section class="taxonomy-banner"><div><h2>Taxonomy Analysis</h2><p>Classification, evidence layers, collection errors, freshness gaps, and disabled-source backlog are joined into one portfolio analysis queue.</p></div><div class="taxonomy-banner__meta"><span>37 projects</span><span>0 errors</span><span>86 freshness gaps</span><span>197 disabled</span><span>risk 23.9</span><a href="taxonomy-analysis.html">Open taxonomy analysis</a></div></section>
 
     <section class="taxonomy-banner"><div><h2>Storage Footprint</h2><p>각 Radar 저장소의 최신 raw JSONL snapshot과 DuckDB 마트를 직접 집계해 보여줍니다. 분석 마트가 어디서 만들어지고 어디서 비어 있는지 한 화면에서 확인합니다.</p></div><div class="taxonomy-banner__meta"><span>37 repos</span><span>35 with raw</span><span>467 raw files</span><span>5,545 raw records</span><span>103 DuckDB tables</span><span>49 signal tables</span><span>32/33 repos w/ ontology rows</span><a href="storage.html">Open storage footprint</a></div></section>
 

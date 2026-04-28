@@ -347,6 +347,112 @@ def render_event_model_teaser(
     )
 
 
+def render_project_goal_gates(
+    summary_payload: dict[str, Any],
+    data_quality_payload: dict[str, Any] | None,
+    daily_collection_payload: dict[str, Any] | None,
+    storage_payload: dict[str, Any] | None,
+    event_payload: dict[str, Any] | None,
+) -> str:
+    active_projects = int(summary_payload.get("active_projects") or 0)
+    full_projects = int(summary_payload.get("projects_with_full_metrics") or 0)
+    partial_projects = int(summary_payload.get("projects_with_partial_metrics") or 0)
+    missing_projects = int(summary_payload.get("projects_missing_metrics") or 0)
+
+    data_quality_summary = (
+        data_quality_payload.get("summary") if data_quality_payload else {}
+    ) or {}
+    priority_counts = data_quality_summary.get("priority_counts") or {}
+    p0_count = int(priority_counts.get("P0", 0) or 0)
+    p1_count = int(priority_counts.get("P1", 0) or 0)
+    average_quality = data_quality_summary.get("average_data_quality_score")
+
+    daily_summary = (
+        daily_collection_payload.get("summary") if daily_collection_payload else {}
+    ) or {}
+    daily_ok = int(daily_summary.get("ok", 0) or 0)
+    daily_partial = int(daily_summary.get("partial", 0) or 0)
+
+    storage_meta = (storage_payload.get("meta") if storage_payload else {}) or {}
+    storage_summary = (storage_payload.get("summary") if storage_payload else {}) or {}
+    storage_priority_count = int(
+        storage_meta.get("storage_priority_repo_count", 0) or 0
+    )
+    duckdb_ontology_rows = storage_meta.get("duckdb_ontology_row_count")
+    repos_with_duckdb = storage_summary.get("repos_with_duckdb")
+
+    event_summary = (event_payload.get("summary") if event_payload else {}) or {}
+    coverage_rows = event_summary.get("coverage_row_count")
+    event_models = event_summary.get("unique_event_model_count")
+
+    gate_items = [
+        {
+            "label": "Dashboard full metrics",
+            "value": f"{format_number(full_projects)}/{format_number(active_projects)}",
+            "status": (
+                "ok"
+                if active_projects
+                and full_projects == active_projects
+                and missing_projects == 0
+                else "warn"
+            ),
+            "detail": f"{format_number(partial_projects)} fallback, {format_number(missing_projects)} missing",
+        },
+        {
+            "label": "Storage priority backlog",
+            "value": format_number(storage_priority_count),
+            "status": "ok" if storage_priority_count == 0 else "warn",
+            "detail": f"{format_number(repos_with_duckdb)} repos with DuckDB",
+        },
+        {
+            "label": "Event model mart",
+            "value": format_number(coverage_rows),
+            "status": (
+                "ok"
+                if int(coverage_rows or 0) > 0 and int(event_models or 0) > 0
+                else "warn"
+            ),
+            "detail": f"{format_number(event_models)} event models, {format_number(duckdb_ontology_rows)} ontology rows",
+        },
+        {
+            "label": "Daily collection contract",
+            "value": f"{format_number(daily_ok)} ok",
+            "status": "ok" if daily_ok > 0 and daily_partial == 0 else "warn",
+            "detail": f"{format_number(daily_partial)} partial",
+        },
+        {
+            "label": "Data quality execution queue",
+            "value": f"{format_number(p0_count)} P0 / {format_number(p1_count)} P1",
+            "status": "warn" if p0_count or p1_count else "ok",
+            "detail": f"avg quality {format_number(average_quality)}",
+        },
+    ]
+    rows = []
+    for item in gate_items:
+        status = str(item["status"])
+        rows.append(
+            "<article class=\"goal-gate\">"
+            f"<div class=\"goal-gate__status goal-gate__status--{escape(status)}\">"
+            f"{escape(status.upper())}</div>"
+            f"<div class=\"goal-gate__label\">{escape(str(item['label']))}</div>"
+            f"<div class=\"goal-gate__value\">{escape(str(item['value']))}</div>"
+            f"<div class=\"goal-gate__detail\">{escape(str(item['detail']))}</div>"
+            "</article>"
+        )
+
+    return (
+        "<section class=\"goal-panel\">"
+        "<div class=\"goal-panel__header\">"
+        "<h2>Project Goal Gates</h2>"
+        "<p>워크스페이스 목표를 운영 가능한 지표로 고정합니다. Green은 인프라/계약이 정상이라는 뜻이고, Warn은 다음 실행 큐가 남아 있다는 뜻입니다.</p>"
+        "</div>"
+        "<div class=\"goal-panel__grid\">"
+        + "".join(rows)
+        + "</div>"
+        "</section>"
+    )
+
+
 def render_taxonomy_analysis_teaser(analysis_payload: dict[str, Any] | None) -> str:
     if not analysis_payload:
         return ""
@@ -411,6 +517,13 @@ def build_index_html(
     taxonomy_analysis_teaser = render_taxonomy_analysis_teaser(taxonomy_analysis_payload)
     storage_teaser = render_storage_teaser(storage_payload)
     event_model_teaser = render_event_model_teaser(event_model_payload, storage_payload)
+    project_goal_gates = render_project_goal_gates(
+        summary_payload,
+        data_quality_payload,
+        daily_collection_payload,
+        storage_payload,
+        event_model_payload,
+    )
 
     return f"""<!DOCTYPE html>
 <html lang="ko" data-visual-system="radar-unified-v2" data-visual-surface="portfolio" data-visual-page="portfolio-index">
@@ -595,6 +708,88 @@ def build_index_html(
       background: var(--accent);
       color: white;
       font-weight: 700;
+    }}
+
+    .goal-panel {{
+      margin-top: 24px;
+      background: var(--surface);
+      border: 1px solid var(--line);
+      border-radius: 24px;
+      padding: 24px;
+      box-shadow: var(--shadow);
+    }}
+
+    .goal-panel__header {{
+      display: grid;
+      gap: 8px;
+      margin-bottom: 18px;
+    }}
+
+    .goal-panel__header h2 {{
+      margin: 0;
+      font-size: 1.2rem;
+      letter-spacing: 0;
+    }}
+
+    .goal-panel__header p {{
+      margin: 0;
+      color: var(--muted);
+      line-height: 1.6;
+    }}
+
+    .goal-panel__grid {{
+      display: grid;
+      grid-template-columns: repeat(auto-fit, minmax(190px, 1fr));
+      gap: 12px;
+    }}
+
+    .goal-gate {{
+      min-height: 136px;
+      border: 1px solid var(--line);
+      border-radius: 16px;
+      padding: 15px;
+      background: #fbfcff;
+    }}
+
+    .goal-gate__status {{
+      display: inline-flex;
+      align-items: center;
+      padding: 4px 8px;
+      border-radius: var(--radius-sm);
+      font-size: 0.72rem;
+      font-weight: 800;
+      letter-spacing: 0;
+    }}
+
+    .goal-gate__status--ok {{
+      background: var(--ok-soft);
+      color: var(--ok);
+    }}
+
+    .goal-gate__status--warn {{
+      background: var(--warn-soft);
+      color: var(--warn);
+    }}
+
+    .goal-gate__label {{
+      margin-top: 12px;
+      color: var(--muted);
+      font-size: 0.86rem;
+      line-height: 1.35;
+    }}
+
+    .goal-gate__value {{
+      margin-top: 8px;
+      font-size: 1.45rem;
+      font-weight: 800;
+      letter-spacing: 0;
+    }}
+
+    .goal-gate__detail {{
+      margin-top: 6px;
+      color: var(--muted);
+      font-size: 0.84rem;
+      line-height: 1.35;
     }}
 
     @media (max-width: 980px) {{
@@ -842,6 +1037,8 @@ def build_index_html(
         {render_latest_updates(latest_updates)}
       </article>
     </section>
+
+    {project_goal_gates}
 
     {taxonomy_teaser}
 

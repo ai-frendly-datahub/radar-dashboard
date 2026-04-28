@@ -47,6 +47,9 @@ def test_dashboard_index_and_redirect_emit_portfolio_contract() -> None:
 
     _assert_html_contract(html, "portfolio", "portfolio-index")
     _assert_html_contract(redirect_html, "portfolio", "dashboard-redirect")
+    assert "Project Goal Gates" in html
+    assert "Storage priority backlog" in html
+    assert "Data quality execution queue" in html
     assert "Storage Footprint" in html
     assert "Event Model Coverage" in html
 
