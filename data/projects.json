@@ -1,5 +1,5 @@
 {
-  "generated_at": "2026-04-28T13:02:44.599090+00:00",
+  "generated_at": "2026-04-28T13:35:26.318147+00:00",
   "workspace_root": "/mnt/c/projects/ai-frendly-datahub",
   "projects": [
     {
@@ -954,7 +954,7 @@
           "onbid_auction"
         ],
         "not_tracked_sources": 6,
-        "verification_state_count": 0,
+        "verification_state_count": 776,
         "official_primary_status": "blocked_missing_env",
         "official_primary_sources": 4,
         "official_primary_fresh_sources": 0,
@@ -971,7 +971,7 @@
           "ONBID_API_KEY",
           "SUBSCRIPTION_API_KEY"
         ],
-        "corroboration_only_items": 0,
+        "corroboration_only_items": 263,
         "official_primary_items": 0
       },
       "top_entities": [

@@ -1,5 +1,5 @@
 {
-  "generated_at": "2026-04-28T13:03:49.130197+00:00",
+  "generated_at": "2026-04-28T13:35:28.084167+00:00",
   "workspace_root": "/mnt/c/projects/ai-frendly-datahub",
   "inputs": {
     "projects_json": "radar-dashboard/data/projects.json",
@@ -15,23 +15,23 @@
     "article_total": 5353,
     "matched_total": 5190,
     "overall_match_rate": 97.0,
-    "dashboard_generated_at": "2026-04-28T13:02:44.599234+00:00",
-    "project_data_generated_at": "2026-04-28T13:02:44.599090+00:00",
+    "dashboard_generated_at": "2026-04-28T13:35:26.318284+00:00",
+    "project_data_generated_at": "2026-04-28T13:35:26.318147+00:00",
     "classification_generated_at": "2026-04-28T13:03:30.309633+00:00",
     "collection_error_total": 0,
     "freshness_gap_total": 86,
     "disabled_source_total": 196,
     "disabled_source_classification_summary": {
-      "total_disabled_count": 197,
+      "total_disabled_count": 199,
       "bucket_totals": {
         "awaiting_url_replacement": 57,
         "awaiting_secret": 17,
         "awaiting_smoke_test": 4,
         "upstream_section_missing": 1,
         "awaiting_partnership_review": 0,
-        "accepted_backlog": 118
+        "accepted_backlog": 120
       },
-      "repo_count_with_disabled_sources": 32
+      "repo_count_with_disabled_sources": 33
     },
     "repos_with_errors": 0,
     "repos_with_freshness_gap": 17,
@@ -2677,8 +2677,15 @@
       "data_origin": "CommerceRadar/reports/commerce_20260428_summary.json",
       "tracked_coverage_pct": null,
       "freshness_coverage_pct": null,
-      "disabled_source_classification": {},
-      "disabled_source_classification_total": 0,
+      "disabled_source_classification": {
+        "awaiting_url_replacement": 0,
+        "awaiting_secret": 0,
+        "awaiting_smoke_test": 0,
+        "upstream_section_missing": 0,
+        "awaiting_partnership_review": 0,
+        "accepted_backlog": 2
+      },
+      "disabled_source_classification_total": 2,
       "collection_errors": 0,
       "freshness_gap": 0,
       "stale_sources": 0,

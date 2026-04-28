@@ -70,16 +70,16 @@
     ],
     "average_data_quality_score": 69.1,
     "disabled_source_classification_summary": {
-      "total_disabled_count": 197,
+      "total_disabled_count": 199,
       "bucket_totals": {
         "awaiting_url_replacement": 57,
         "awaiting_secret": 17,
         "awaiting_smoke_test": 4,
         "upstream_section_missing": 1,
         "awaiting_partnership_review": 0,
-        "accepted_backlog": 118
+        "accepted_backlog": 120
       },
-      "repo_count_with_disabled_sources": 32
+      "repo_count_with_disabled_sources": 33
     }
   },
   "quality_dimensions": {
@@ -2854,8 +2854,15 @@
       "disabled_high_value_sources": [],
       "integration_candidates": [],
       "next_step": "config/sources.yaml와 schemas를 실제 수집/검증 파이프라인에 연결하고 combo card evidence coverage를 dashboard에 노출한다.",
-      "disabled_source_classification": {},
-      "disabled_source_classification_total": 0
+      "disabled_source_classification": {
+        "awaiting_url_replacement": 0,
+        "awaiting_secret": 0,
+        "awaiting_smoke_test": 0,
+        "upstream_section_missing": 0,
+        "awaiting_partnership_review": 0,
+        "accepted_backlog": 2
+      },
+      "disabled_source_classification_total": 2
     }
   ]
 }

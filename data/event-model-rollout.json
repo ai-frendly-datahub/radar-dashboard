@@ -1,25 +1,25 @@
 {
   "meta": {
-    "generated_at": "2026-04-26T16:02:34.363394+00:00",
+    "generated_at": "2026-04-28T13:34:22.259450+00:00",
     "workspace_root": "/mnt/c/projects/ai-frendly-datahub",
-    "project_count": 36,
-    "taxonomy_repo_count": 39,
+    "project_count": 37,
+    "taxonomy_repo_count": 40,
     "motion_summary_count": 4,
     "summary_ontology_repo_count": 36,
     "runtime_contract_repo_count": 36,
-    "raw_file_fact_count": 525,
-    "duckdb_table_fact_count": 105,
-    "raw_ontology_record_count": 3066,
-    "duckdb_ontology_row_count": 39071,
-    "event_model_coverage_count": 109,
-    "disabled_source_total": 197,
+    "raw_file_fact_count": 467,
+    "duckdb_table_fact_count": 103,
+    "raw_ontology_record_count": 2873,
+    "duckdb_ontology_row_count": 39847,
+    "event_model_coverage_count": 104,
+    "disabled_source_total": 199,
     "disabled_source_bucket_totals": {
       "awaiting_url_replacement": 57,
       "awaiting_secret": 17,
       "awaiting_smoke_test": 4,
       "upstream_section_missing": 1,
       "awaiting_partnership_review": 0,
-      "accepted_backlog": 118
+      "accepted_backlog": 120
     },
     "storage_priority_flag_totals": {
       "raw_record_zero_with_articles": 0,
@@ -32,12 +32,12 @@
     "storage_priority_repo_count": 1
   },
   "summary": {
-    "coverage_row_count": 109,
-    "unique_event_model_count": 89,
-    "namespace_count": 25,
+    "coverage_row_count": 104,
+    "unique_event_model_count": 84,
+    "namespace_count": 26,
     "coverage_source_counts": {
-      "duckdb_storage": 55,
-      "summary": 34
+      "duckdb_storage": 57,
+      "summary": 27
     }
   },
   "rows": [
@@ -306,77 +306,11 @@
       "avg_tracked_sources": 8.5
     },
     {
-      "event_model_id": "home.auction_signal",
-      "event_model_namespace": "home",
+      "event_model_id": "market_context",
+      "event_model_namespace": "market_context",
       "repo_count": 1,
-      "coverage_source": "summary",
-      "event_model_record_total": 0,
-      "article_total": 100,
-      "matched_total": 77,
-      "avg_match_rate": 77.0,
-      "avg_tracked_sources": 4.0
-    },
-    {
-      "event_model_id": "home.listing_inventory",
-      "event_model_namespace": "home",
-      "repo_count": 1,
-      "coverage_source": "summary",
-      "event_model_record_total": 0,
-      "article_total": 100,
-      "matched_total": 77,
-      "avg_match_rate": 77.0,
-      "avg_tracked_sources": 4.0
-    },
-    {
-      "event_model_id": "home.market_context",
-      "event_model_namespace": "home",
-      "repo_count": 1,
-      "coverage_source": "summary",
-      "event_model_record_total": 0,
-      "article_total": 100,
-      "matched_total": 77,
-      "avg_match_rate": 77.0,
-      "avg_tracked_sources": 4.0
-    },
-    {
-      "event_model_id": "home.policy_context",
-      "event_model_namespace": "home",
-      "repo_count": 1,
-      "coverage_source": "summary",
-      "event_model_record_total": 0,
-      "article_total": 100,
-      "matched_total": 77,
-      "avg_match_rate": 77.0,
-      "avg_tracked_sources": 4.0
-    },
-    {
-      "event_model_id": "home.rent_transaction",
-      "event_model_namespace": "home",
-      "repo_count": 1,
-      "coverage_source": "summary",
-      "event_model_record_total": 0,
-      "article_total": 100,
-      "matched_total": 77,
-      "avg_match_rate": 77.0,
-      "avg_tracked_sources": 4.0
-    },
-    {
-      "event_model_id": "home.subscription_notice",
-      "event_model_namespace": "home",
-      "repo_count": 1,
-      "coverage_source": "summary",
-      "event_model_record_total": 0,
-      "article_total": 100,
-      "matched_total": 77,
-      "avg_match_rate": 77.0,
-      "avg_tracked_sources": 4.0
-    },
-    {
-      "event_model_id": "home.transaction_price",
-      "event_model_namespace": "home",
-      "repo_count": 1,
-      "coverage_source": "summary",
-      "event_model_record_total": 0,
+      "coverage_source": "duckdb_storage",
+      "event_model_record_total": 263,
       "article_total": 100,
       "matched_total": 77,
       "avg_match_rate": 77.0,
@@ -645,6 +579,17 @@
       "matched_total": 171,
       "avg_match_rate": 92.4,
       "avg_tracked_sources": 8.0
+    },
+    {
+      "event_model_id": "policy_context",
+      "event_model_namespace": "policy_context",
+      "repo_count": 1,
+      "coverage_source": "duckdb_storage",
+      "event_model_record_total": 471,
+      "article_total": 100,
+      "matched_total": 77,
+      "avg_match_rate": 77.0,
+      "avg_tracked_sources": 4.0
     },
     {
       "event_model_id": "price.purchase_benefit_snapshot",
@@ -1036,7 +981,7 @@
       "matched_count": 186,
       "match_rate": 93.0,
       "tracked_sources": 10,
-      "gap_count": 0
+      "gap_count": 7
     },
     {
       "repo": "ArtRadar",
@@ -1052,7 +997,7 @@
       "matched_count": 186,
       "match_rate": 93.0,
       "tracked_sources": 10,
-      "gap_count": 0
+      "gap_count": 7
     },
     {
       "repo": "ArtRadar",
@@ -1068,7 +1013,7 @@
       "matched_count": 186,
       "match_rate": 93.0,
       "tracked_sources": 10,
-      "gap_count": 0
+      "gap_count": 7
     },
     {
       "repo": "ArtRadar",
@@ -1084,7 +1029,7 @@
       "matched_count": 186,
       "match_rate": 93.0,
       "tracked_sources": 10,
-      "gap_count": 0
+      "gap_count": 7
     },
     {
       "repo": "BenefitRadar",
@@ -1100,7 +1045,7 @@
       "matched_count": 290,
       "match_rate": 100.0,
       "tracked_sources": 11,
-      "gap_count": 0
+      "gap_count": 5
     },
     {
       "repo": "BenefitRadar",
@@ -1116,7 +1061,7 @@
       "matched_count": 290,
       "match_rate": 100.0,
       "tracked_sources": 11,
-      "gap_count": 0
+      "gap_count": 5
     },
     {
       "repo": "BenefitRadar",
@@ -1132,7 +1077,7 @@
       "matched_count": 290,
       "match_rate": 100.0,
       "tracked_sources": 11,
-      "gap_count": 0
+      "gap_count": 5
     },
     {
       "repo": "BenefitRadar",
@@ -1148,7 +1093,7 @@
       "matched_count": 290,
       "match_rate": 100.0,
       "tracked_sources": 11,
-      "gap_count": 0
+      "gap_count": 5
     },
     {
       "repo": "BlogRadar",
@@ -1260,7 +1205,7 @@
       "matched_count": 383,
       "match_rate": 100.0,
       "tracked_sources": 17,
-      "gap_count": 3
+      "gap_count": 5
     },
     {
       "repo": "EventRadar",
@@ -1276,7 +1221,7 @@
       "matched_count": 383,
       "match_rate": 100.0,
       "tracked_sources": 17,
-      "gap_count": 3
+      "gap_count": 5
     },
     {
       "repo": "EventRadar",
@@ -1292,7 +1237,7 @@
       "matched_count": 383,
       "match_rate": 100.0,
       "tracked_sources": 17,
-      "gap_count": 3
+      "gap_count": 5
     },
     {
       "repo": "EventRadar",
@@ -1308,7 +1253,7 @@
       "matched_count": 383,
       "match_rate": 100.0,
       "tracked_sources": 17,
-      "gap_count": 3
+      "gap_count": 5
     },
     {
       "repo": "FinanceTaxMCPRadar",
@@ -1388,7 +1333,7 @@
       "matched_count": 163,
       "match_rate": 81.5,
       "tracked_sources": 3,
-      "gap_count": 1
+      "gap_count": 2
     },
     {
       "repo": "FoodRadar",
@@ -1404,7 +1349,7 @@
       "matched_count": 163,
       "match_rate": 81.5,
       "tracked_sources": 3,
-      "gap_count": 1
+      "gap_count": 2
     },
     {
       "repo": "FoodRadar",
@@ -1420,7 +1365,7 @@
       "matched_count": 163,
       "match_rate": 81.5,
       "tracked_sources": 3,
-      "gap_count": 1
+      "gap_count": 2
     },
     {
       "repo": "FoodRadar",
@@ -1436,7 +1381,7 @@
       "matched_count": 163,
       "match_rate": 81.5,
       "tracked_sources": 3,
-      "gap_count": 1
+      "gap_count": 2
     },
     {
       "repo": "FoodRadar",
@@ -1452,7 +1397,7 @@
       "matched_count": 163,
       "match_rate": 81.5,
       "tracked_sources": 3,
-      "gap_count": 1
+      "gap_count": 2
     },
     {
       "repo": "GameRadar",
@@ -1484,7 +1429,7 @@
       "matched_count": 74,
       "match_rate": 100.0,
       "tracked_sources": 6,
-      "gap_count": 3
+      "gap_count": 5
     },
     {
       "repo": "GovRadar",
@@ -1500,7 +1445,7 @@
       "matched_count": 74,
       "match_rate": 100.0,
       "tracked_sources": 6,
-      "gap_count": 3
+      "gap_count": 5
     },
     {
       "repo": "GovRadar",
@@ -1516,7 +1461,7 @@
       "matched_count": 74,
       "match_rate": 100.0,
       "tracked_sources": 6,
-      "gap_count": 3
+      "gap_count": 5
     },
     {
       "repo": "GovRadar",
@@ -1532,18 +1477,18 @@
       "matched_count": 74,
       "match_rate": 100.0,
       "tracked_sources": 6,
-      "gap_count": 3
+      "gap_count": 5
     },
     {
       "repo": "HomeRadar",
       "category": "home",
       "primary_motion": "conversion",
       "ontology_version": "0.1.0",
-      "ontology_source": "summary",
-      "event_model_id": "home.auction_signal",
-      "event_model_namespace": "home",
+      "ontology_source": "duckdb_storage",
+      "event_model_id": "market_context",
+      "event_model_namespace": "market_context",
       "summary_date": "2026-04-24",
-      "event_model_record_count": 0,
+      "event_model_record_count": 263,
       "article_count": 100,
       "matched_count": 77,
       "match_rate": 77.0,
@@ -1555,91 +1500,11 @@
       "category": "home",
       "primary_motion": "conversion",
       "ontology_version": "0.1.0",
-      "ontology_source": "summary",
-      "event_model_id": "home.listing_inventory",
-      "event_model_namespace": "home",
+      "ontology_source": "duckdb_storage",
+      "event_model_id": "policy_context",
+      "event_model_namespace": "policy_context",
       "summary_date": "2026-04-24",
-      "event_model_record_count": 0,
-      "article_count": 100,
-      "matched_count": 77,
-      "match_rate": 77.0,
-      "tracked_sources": 4,
-      "gap_count": 0
-    },
-    {
-      "repo": "HomeRadar",
-      "category": "home",
-      "primary_motion": "conversion",
-      "ontology_version": "0.1.0",
-      "ontology_source": "summary",
-      "event_model_id": "home.market_context",
-      "event_model_namespace": "home",
-      "summary_date": "2026-04-24",
-      "event_model_record_count": 0,
-      "article_count": 100,
-      "matched_count": 77,
-      "match_rate": 77.0,
-      "tracked_sources": 4,
-      "gap_count": 0
-    },
-    {
-      "repo": "HomeRadar",
-      "category": "home",
-      "primary_motion": "conversion",
-      "ontology_version": "0.1.0",
-      "ontology_source": "summary",
-      "event_model_id": "home.policy_context",
-      "event_model_namespace": "home",
-      "summary_date": "2026-04-24",
-      "event_model_record_count": 0,
-      "article_count": 100,
-      "matched_count": 77,
-      "match_rate": 77.0,
-      "tracked_sources": 4,
-      "gap_count": 0
-    },
-    {
-      "repo": "HomeRadar",
-      "category": "home",
-      "primary_motion": "conversion",
-      "ontology_version": "0.1.0",
-      "ontology_source": "summary",
-      "event_model_id": "home.rent_transaction",
-      "event_model_namespace": "home",
-      "summary_date": "2026-04-24",
-      "event_model_record_count": 0,
-      "article_count": 100,
-      "matched_count": 77,
-      "match_rate": 77.0,
-      "tracked_sources": 4,
-      "gap_count": 0
-    },
-    {
-      "repo": "HomeRadar",
-      "category": "home",
-      "primary_motion": "conversion",
-      "ontology_version": "0.1.0",
-      "ontology_source": "summary",
-      "event_model_id": "home.subscription_notice",
-      "event_model_namespace": "home",
-      "summary_date": "2026-04-24",
-      "event_model_record_count": 0,
-      "article_count": 100,
-      "matched_count": 77,
-      "match_rate": 77.0,
-      "tracked_sources": 4,
-      "gap_count": 0
-    },
-    {
-      "repo": "HomeRadar",
-      "category": "home",
-      "primary_motion": "conversion",
-      "ontology_version": "0.1.0",
-      "ontology_source": "summary",
-      "event_model_id": "home.transaction_price",
-      "event_model_namespace": "home",
-      "summary_date": "2026-04-24",
-      "event_model_record_count": 0,
+      "event_model_record_count": 471,
       "article_count": 100,
       "matched_count": 77,
       "match_rate": 77.0,
@@ -1948,7 +1813,7 @@
       "matched_count": 52,
       "match_rate": 96.3,
       "tracked_sources": 14,
-      "gap_count": 2
+      "gap_count": 8
     },
     {
       "repo": "PaperRadar",
@@ -1964,7 +1829,7 @@
       "matched_count": 52,
       "match_rate": 96.3,
       "tracked_sources": 14,
-      "gap_count": 2
+      "gap_count": 8
     },
     {
       "repo": "PaperRadar",
@@ -1980,7 +1845,7 @@
       "matched_count": 52,
       "match_rate": 96.3,
       "tracked_sources": 14,
-      "gap_count": 2
+      "gap_count": 8
     },
     {
       "repo": "PaperRadar",
@@ -1996,7 +1861,7 @@
       "matched_count": 52,
       "match_rate": 96.3,
       "tracked_sources": 14,
-      "gap_count": 2
+      "gap_count": 8
     },
     {
       "repo": "PaperworkRadar",
@@ -2012,7 +1877,7 @@
       "matched_count": 197,
       "match_rate": 98.5,
       "tracked_sources": 14,
-      "gap_count": 2
+      "gap_count": 8
     },
     {
       "repo": "PaperworkRadar",
@@ -2028,7 +1893,7 @@
       "matched_count": 197,
       "match_rate": 98.5,
       "tracked_sources": 14,
-      "gap_count": 2
+      "gap_count": 8
     },
     {
       "repo": "PaperworkRadar",
@@ -2044,7 +1909,7 @@
       "matched_count": 197,
       "match_rate": 98.5,
       "tracked_sources": 14,
-      "gap_count": 2
+      "gap_count": 8
     },
     {
       "repo": "PaperworkRadar",
@@ -2060,7 +1925,7 @@
       "matched_count": 197,
       "match_rate": 98.5,
       "tracked_sources": 14,
-      "gap_count": 2
+      "gap_count": 8
     },
     {
       "repo": "PolicyRadar",
@@ -2236,7 +2101,7 @@
       "matched_count": 120,
       "match_rate": 82.2,
       "tracked_sources": 6,
-      "gap_count": 1
+      "gap_count": 3
     },
     {
       "repo": "PropertyRadar",
@@ -2252,7 +2117,7 @@
       "matched_count": 120,
       "match_rate": 82.2,
       "tracked_sources": 6,
-      "gap_count": 1
+      "gap_count": 3
     },
     {
       "repo": "PropertyRadar",
@@ -2268,7 +2133,7 @@
       "matched_count": 120,
       "match_rate": 82.2,
       "tracked_sources": 6,
-      "gap_count": 1
+      "gap_count": 3
     },
     {
       "repo": "PropertyRadar",
@@ -2284,7 +2149,7 @@
       "matched_count": 120,
       "match_rate": 82.2,
       "tracked_sources": 6,
-      "gap_count": 1
+      "gap_count": 3
     },
     {
       "repo": "PublicDataMCPRadar",
@@ -2364,7 +2229,7 @@
       "matched_count": 129,
       "match_rate": 100.0,
       "tracked_sources": 6,
-      "gap_count": 3
+      "gap_count": 6
     },
     {
       "repo": "RefundRadar",
@@ -2380,7 +2245,7 @@
       "matched_count": 129,
       "match_rate": 100.0,
       "tracked_sources": 6,
-      "gap_count": 3
+      "gap_count": 6
     },
     {
       "repo": "RefundRadar",
@@ -2396,7 +2261,7 @@
       "matched_count": 129,
       "match_rate": 100.0,
       "tracked_sources": 6,
-      "gap_count": 3
+      "gap_count": 6
     },
     {
       "repo": "RefundRadar",
@@ -2412,7 +2277,7 @@
       "matched_count": 129,
       "match_rate": 100.0,
       "tracked_sources": 6,
-      "gap_count": 3
+      "gap_count": 6
     },
     {
       "repo": "RefundRadar",
@@ -2428,7 +2293,7 @@
       "matched_count": 129,
       "match_rate": 100.0,
       "tracked_sources": 6,
-      "gap_count": 3
+      "gap_count": 6
     },
     {
       "repo": "RefundRadar",
@@ -2444,7 +2309,7 @@
       "matched_count": 129,
       "match_rate": 100.0,
       "tracked_sources": 6,
-      "gap_count": 3
+      "gap_count": 6
     },
     {
       "repo": "SearchTrendMCPRadar",
@@ -2476,7 +2341,7 @@
       "matched_count": 70,
       "match_rate": 100.0,
       "tracked_sources": 25,
-      "gap_count": 0
+      "gap_count": 1
     },
     {
       "repo": "SubscriptionRadar",
@@ -2492,7 +2357,7 @@
       "matched_count": 70,
       "match_rate": 100.0,
       "tracked_sources": 25,
-      "gap_count": 0
+      "gap_count": 1
     },
     {
       "repo": "SubscriptionRadar",
@@ -2508,7 +2373,7 @@
       "matched_count": 70,
       "match_rate": 100.0,
       "tracked_sources": 25,
-      "gap_count": 0
+      "gap_count": 1
     },
     {
       "repo": "SubscriptionRadar",
@@ -2524,7 +2389,7 @@
       "matched_count": 70,
       "match_rate": 100.0,
       "tracked_sources": 25,
-      "gap_count": 0
+      "gap_count": 1
     },
     {
       "repo": "TravelMCPRadar",
@@ -2604,7 +2469,7 @@
       "matched_count": 160,
       "match_rate": 82.9,
       "tracked_sources": 12,
-      "gap_count": 8
+      "gap_count": 12
     },
     {
       "repo": "TrustRadar",
@@ -2620,7 +2485,7 @@
       "matched_count": 160,
       "match_rate": 82.9,
       "tracked_sources": 12,
-      "gap_count": 8
+      "gap_count": 12
     },
     {
       "repo": "TrustRadar",
@@ -2636,7 +2501,7 @@
       "matched_count": 160,
       "match_rate": 82.9,
       "tracked_sources": 12,
-      "gap_count": 8
+      "gap_count": 12
     },
     {
       "repo": "TrustRadar",
@@ -2652,7 +2517,7 @@
       "matched_count": 160,
       "match_rate": 82.9,
       "tracked_sources": 12,
-      "gap_count": 8
+      "gap_count": 12
     },
     {
       "repo": "WeatherMCPRadar",
