@@ -1,5 +1,5 @@
 {
-  "generated_at": "2026-04-25T16:40:51.374050+00:00",
+  "generated_at": "2026-04-28T11:59:44.554352+00:00",
   "workspace_root": "/mnt/c/projects/ai-frendly-datahub",
   "inputs": {
     "source_portfolio": "docs/harness/source-portfolio.json",
@@ -8,22 +8,22 @@
   "framework_path": "docs/harness/source-business-value-framework.md",
   "taxonomy_path": "docs/harness/portfolio-taxonomy-framework.md",
   "summary": {
-    "repo_count": 36,
+    "repo_count": 37,
     "priority_counts": {
       "P0": 7,
       "P1": 6,
       "P2": 11,
-      "P3": 12
+      "P3": 13
     },
     "weakest_dimension_counts": {
       "traceability": 10,
       "operational_depth": 20,
       "authority": 4,
-      "verification": 2
+      "verification": 3
     },
     "governance_counts": {
       "high": 9,
-      "medium": 20,
+      "medium": 21,
       "low": 7
     },
     "top_priority_repos": [
@@ -68,7 +68,7 @@
       "CryptoRadar",
       "BlogRadar"
     ],
-    "average_data_quality_score": 68.6,
+    "average_data_quality_score": 69.1,
     "disabled_source_classification_summary": {
       "total_disabled_count": 197,
       "bucket_totals": {
@@ -97,8 +97,8 @@
       "governance_profile": "high",
       "primary_motion": "compliance-risk",
       "source_status": "불균형",
-      "readiness_status": "ready",
-      "quality_score": 95,
+      "readiness_status": "watch",
+      "quality_score": 85,
       "data_quality_score": 80,
       "risk_score": 95,
       "weakest_dimension": "traceability",
@@ -264,8 +264,8 @@
       "governance_profile": "high",
       "primary_motion": "compliance-risk",
       "source_status": "불균형",
-      "readiness_status": "ready",
-      "quality_score": 95,
+      "readiness_status": "watch",
+      "quality_score": 85,
       "data_quality_score": 92,
       "risk_score": 81,
       "weakest_dimension": "traceability",
@@ -344,8 +344,8 @@
       "governance_profile": "high",
       "primary_motion": "conversion",
       "source_status": "불균형",
-      "readiness_status": "ready",
-      "quality_score": 95,
+      "readiness_status": "watch",
+      "quality_score": 85,
       "data_quality_score": 93,
       "risk_score": 78,
       "weakest_dimension": "traceability",
@@ -671,8 +671,8 @@
       "governance_profile": "medium",
       "primary_motion": "intelligence",
       "source_status": "불균형",
-      "readiness_status": "ready",
-      "quality_score": 95,
+      "readiness_status": "watch",
+      "quality_score": 85,
       "data_quality_score": 70,
       "risk_score": 69,
       "weakest_dimension": "operational_depth",
@@ -982,8 +982,8 @@
       "governance_profile": "medium",
       "primary_motion": "conversion",
       "source_status": "불균형",
-      "readiness_status": "ready",
-      "quality_score": 95,
+      "readiness_status": "watch",
+      "quality_score": 85,
       "data_quality_score": 93,
       "risk_score": 48,
       "weakest_dimension": "traceability",
@@ -1143,8 +1143,8 @@
       "governance_profile": "high",
       "primary_motion": "conversion",
       "source_status": "불균형",
-      "readiness_status": "ready",
-      "quality_score": 95,
+      "readiness_status": "watch",
+      "quality_score": 85,
       "data_quality_score": 55,
       "risk_score": 66,
       "weakest_dimension": "operational_depth",
@@ -1304,8 +1304,8 @@
       "governance_profile": "high",
       "primary_motion": "conversion",
       "source_status": "불균형",
-      "readiness_status": "ready",
-      "quality_score": 95,
+      "readiness_status": "watch",
+      "quality_score": 85,
       "data_quality_score": 66,
       "risk_score": 52,
       "weakest_dimension": "operational_depth",
@@ -1385,8 +1385,8 @@
       "governance_profile": "low",
       "primary_motion": "intelligence",
       "source_status": "불균형",
-      "readiness_status": "ready",
-      "quality_score": 95,
+      "readiness_status": "watch",
+      "quality_score": 85,
       "data_quality_score": 72,
       "risk_score": 41,
       "weakest_dimension": "authority",
@@ -1464,8 +1464,8 @@
       "governance_profile": "medium",
       "primary_motion": "conversion",
       "source_status": "불균형",
-      "readiness_status": "ready",
-      "quality_score": 95,
+      "readiness_status": "watch",
+      "quality_score": 85,
       "data_quality_score": 87,
       "risk_score": 40,
       "weakest_dimension": "traceability",
@@ -1547,8 +1547,8 @@
       "governance_profile": "low",
       "primary_motion": "intelligence",
       "source_status": "불균형",
-      "readiness_status": "ready",
-      "quality_score": 95,
+      "readiness_status": "watch",
+      "quality_score": 85,
       "data_quality_score": 77,
       "risk_score": 36,
       "weakest_dimension": "operational_depth",
@@ -1774,8 +1774,8 @@
       "governance_profile": "medium",
       "primary_motion": "conversion",
       "source_status": "불균형",
-      "readiness_status": "ready",
-      "quality_score": 95,
+      "readiness_status": "watch",
+      "quality_score": 85,
       "data_quality_score": 90,
       "risk_score": 28,
       "weakest_dimension": "verification",
@@ -2000,8 +2000,8 @@
       "governance_profile": "medium",
       "primary_motion": "compliance-risk",
       "source_status": "보강우선",
-      "readiness_status": "watch",
-      "quality_score": 80,
+      "readiness_status": "upgrade",
+      "quality_score": 70,
       "data_quality_score": 34,
       "risk_score": 61,
       "weakest_dimension": "operational_depth",
@@ -2779,6 +2779,83 @@
         "accepted_backlog": 0
       },
       "disabled_source_classification_total": 1
+    },
+    {
+      "repo": "CommerceRadar",
+      "priority": "P3",
+      "governance_profile": "medium",
+      "primary_motion": "conversion",
+      "source_status": "강함",
+      "readiness_status": "watch",
+      "quality_score": 65,
+      "data_quality_score": 87,
+      "risk_score": 10,
+      "weakest_dimension": "verification",
+      "dimensions": {
+        "authority": 100,
+        "operational_depth": 85,
+        "freshness": 90,
+        "actionability": 100,
+        "verification": 73,
+        "traceability": 73
+      },
+      "issues": [
+        "현재 설정상 즉시 차단 이슈 없음. 운영 지표와 freshness SLA만 명시하면 됨"
+      ],
+      "recommendations": [
+        "config/sources.yaml의 공식 API·플랫폼·first-party source를 실제 수집 파이프라인과 schema validation에 연결하고, combo card마다 evidence_id와 transaction outcome을 의무화한다."
+      ],
+      "action_pack": {
+        "required_signals": [
+          "신청·가격·상태·거래 같은 운영 이벤트",
+          "공식 근거 URL과 변경일"
+        ],
+        "quality_gates": [
+          "이벤트 발생일과 수집일을 분리",
+          "파싱 실패 시 임의 추정하지 않고 경고로 남김"
+        ],
+        "next_actions": [
+          "config/sources.yaml의 공식 API·플랫폼·first-party source를 실제 수집 파이프라인과 schema validation에 연결하고, combo card마다 evidence_id와 transaction outcome을 의무화한다."
+        ]
+      },
+      "enabled_source_count": 8,
+      "configured_source_count": 10,
+      "layer_counts": {
+        "attention": 1,
+        "market": 2,
+        "official": 7,
+        "operational": 5
+      },
+      "domain_scope_counts": {
+        "manufacturer": 2,
+        "seller": 1,
+        "trend": 1,
+        "market_statistics": 1,
+        "trade_flow": 1,
+        "target_market": 1,
+        "transaction_result": 1
+      },
+      "available_layers": [
+        "attention",
+        "market",
+        "official",
+        "operational"
+      ],
+      "verification_signal_count": 8,
+      "verification_role_counts": {
+        "official_registration_reference": 2,
+        "primary_discovery": 1,
+        "attention_reference": 1,
+        "official_statistics_reference": 1,
+        "official_trade_reference": 1,
+        "platform_market_reference": 1,
+        "validated_trade_outcome": 1
+      },
+      "disabled_high_value_sources": [],
+      "integration_candidates": [],
+      "next_step": "config/sources.yaml와 schemas를 실제 수집/검증 파이프라인에 연결하고 combo card evidence coverage를 dashboard에 노출한다.",
+      "disabled_source_classification": {},
+      "disabled_source_classification_total": 0
     }
   ]
 }

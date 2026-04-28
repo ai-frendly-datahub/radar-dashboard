@@ -387,7 +387,7 @@
     <section class="hero">
       <h1>Radar Projects Dashboard</h1>
       <p>각 Radar 저장소의 `summary JSON`과 리포트 인덱스를 읽어 워크스페이스 전체 상태를 집계한 canonical 대시보드입니다. 현재는 full metrics 우선, 부족한 저장소는 partial fallback으로 표시합니다.</p>
-      <div class="hero-meta">Generated at 2026-04-26 17:13 · Workspace scan source: sibling Radar repositories</div>
+      <div class="hero-meta">Generated at 2026-04-28 11:59 · Workspace scan source: sibling Radar repositories</div>
       <div class="stats">
         <article class="stat-card">
           <div class="stat-card__value">36</div>
@@ -421,19 +421,22 @@
         <h2>Coverage Warnings</h2>
         <p>Summary JSON이 없는 저장소는 HTML fallback으로 읽었고, 그 결과는 partial로 표시됩니다.</p>
         <ul class="warning-list">
+<li>ArtRadar: quality freshness gaps: stale=7, missing=0, unknown_event_date=0</li>
 <li>ArtRadar: quality report has 4 disabled source(s)</li>
+<li>BenefitRadar: quality freshness gaps: stale=5, missing=0, unknown_event_date=0</li>
 <li>BenefitRadar: quality report has 8 disabled source(s)</li>
 <li>BookRadar: quality report has 12 disabled source(s)</li>
 <li>CollaborationMCPRadar: quality report has 2 disabled source(s)</li>
 <li>CommerceMCPRadar: quality report has 2 disabled source(s)</li>
+<li>CommerceRadar: no dashboard-readable report artifacts found</li>
 <li>CryptoRadar: quality freshness gaps: stale=1, missing=0, unknown_event_date=0</li>
-<li>EventRadar: quality freshness gaps: stale=3, missing=0, unknown_event_date=0</li>
+<li>EventRadar: quality freshness gaps: stale=5, missing=0, unknown_event_date=0</li>
 <li>EventRadar: quality report has 8 disabled source(s)</li>
 <li>FinanceTaxMCPRadar: quality report has 2 disabled source(s)</li>
-<li>FoodRadar: quality freshness gaps: stale=1, missing=0, unknown_event_date=0</li>
+<li>FoodRadar: quality freshness gaps: stale=2, missing=0, unknown_event_date=0</li>
 <li>FoodRadar: quality report has 1 disabled source(s)</li>
 <li>GameRadar: quality report has 11 disabled source(s)</li>
-<li>GovRadar: quality freshness gaps: stale=3, missing=0, unknown_event_date=0</li>
+<li>GovRadar: quality freshness gaps: stale=5, missing=0, unknown_event_date=0</li>
 <li>GovRadar: quality report has 1 disabled source(s)</li>
 <li>HomeRadar: official primary HomeRadar sources blocked by missing env (molit_apt_transaction, molit_apt_rent, reb_subscription, onbid_auction; required: MOLIT_SERVICE_KEY, ONBID_API_KEY, SUBSCRIPTION_API_KEY)</li>
 <li>HomeRadar: quality report has 15 disabled source(s)</li>
@@ -445,23 +448,25 @@
 <li>MobilityRadar: quality freshness gaps: stale=1, missing=0, unknown_event_date=0</li>
 <li>MobilityRadar: quality report has 5 disabled source(s)</li>
 <li>MovieRadar: quality freshness gaps: stale=2, missing=0, unknown_event_date=0</li>
-<li>PaperRadar: quality freshness gaps: stale=2, missing=0, unknown_event_date=0</li>
+<li>PaperRadar: quality freshness gaps: stale=8, missing=0, unknown_event_date=0</li>
 <li>PaperRadar: quality report has 4 disabled source(s)</li>
-<li>PaperworkRadar: quality freshness gaps: stale=3, missing=0, unknown_event_date=0</li>
+<li>PaperworkRadar: quality freshness gaps: stale=8, missing=0, unknown_event_date=0</li>
 <li>PaperworkRadar: quality report has 8 disabled source(s)</li>
 <li>PolicyRadar: quality freshness gaps: stale=5, missing=0, unknown_event_date=0</li>
 <li>PolicyRadar: quality report has 5 disabled source(s)</li>
+<li>PropertyRadar: quality freshness gaps: stale=2, missing=0, unknown_event_date=0</li>
 <li>PropertyRadar: quality report has 8 disabled source(s)</li>
 <li>PublicDataMCPRadar: quality report has 2 disabled source(s)</li>
 <li>QueueRadar: quality freshness gaps: stale=12, missing=0, unknown_event_date=0</li>
 <li>QueueRadar: quality report has 16 disabled source(s)</li>
 <li>RealEstateMCPRadar: quality report has 1 disabled source(s)</li>
-<li>RefundRadar: quality freshness gaps: stale=3, missing=0, unknown_event_date=0</li>
+<li>RefundRadar: quality freshness gaps: stale=6, missing=0, unknown_event_date=0</li>
 <li>RefundRadar: quality report has 20 disabled source(s)</li>
 <li>SearchTrendMCPRadar: quality report has 2 disabled source(s)</li>
+<li>SubscriptionRadar: quality freshness gaps: stale=1, missing=0, unknown_event_date=0</li>
 <li>SubscriptionRadar: quality report has 14 disabled source(s)</li>
 <li>TravelMCPRadar: quality report has 2 disabled source(s)</li>
-<li>TrustRadar: quality freshness gaps: stale=9, missing=0, unknown_event_date=0</li>
+<li>TrustRadar: quality freshness gaps: stale=12, missing=0, unknown_event_date=0</li>
 <li>TrustRadar: quality report has 2 disabled source(s)</li>
 <li>WeatherMCPRadar: quality report has 2 disabled source(s)</li>
 <li>WineRadar: quality freshness gaps: stale=4, missing=0, unknown_event_date=0</li>
@@ -486,11 +491,11 @@
       </article>
     </section>
 
-    <section class="taxonomy-banner"><div><h2>Portfolio Taxonomy Audit</h2><p>전 저장소를 공통 taxonomy로 재분류한 별도 감사 페이지를 추가했습니다. 저장소 구조, 의사결정 용도, 거버넌스, 소스 레이어 공백을 한 번에 점검할 수 있습니다.</p></div><div class="taxonomy-banner__meta"><span>39 repos</span><span>4 advanced</span><span>9 high-governance</span><span>0 upgrade-needed</span><a href="classification.html">Open classification audit</a></div></section>
+    <section class="taxonomy-banner"><div><h2>Portfolio Taxonomy Audit</h2><p>전 저장소를 공통 taxonomy로 재분류한 별도 감사 페이지를 추가했습니다. 저장소 구조, 의사결정 용도, 거버넌스, 소스 레이어 공백을 한 번에 점검할 수 있습니다.</p></div><div class="taxonomy-banner__meta"><span>40 repos</span><span>5 advanced</span><span>9 high-governance</span><span>1 upgrade-needed</span><a href="classification.html">Open classification audit</a></div></section>
 
-    <section class="taxonomy-banner"><div><h2>Data Quality Audit</h2><p>전 저장소의 데이터 품질 축을 별도 점검판으로 추가했습니다. P0/P1 실행 큐, weakest dimension, source 보강 next action을 한 화면에서 확인할 수 있습니다.</p></div><div class="taxonomy-banner__meta"><span>avg quality 68.6</span><span>7 P0</span><span>6 P1</span><span>weakest 운영 깊이</span><a href="data-quality.html">Open quality audit</a></div></section>
+    <section class="taxonomy-banner"><div><h2>Data Quality Audit</h2><p>전 저장소의 데이터 품질 축을 별도 점검판으로 추가했습니다. P0/P1 실행 큐, weakest dimension, source 보강 next action을 한 화면에서 확인할 수 있습니다.</p></div><div class="taxonomy-banner__meta"><span>avg quality 69.1</span><span>7 P0</span><span>6 P1</span><span>weakest 운영 깊이</span><a href="data-quality.html">Open quality audit</a></div></section>
 
-    <section class="taxonomy-banner"><div><h2>Taxonomy Analysis</h2><p>Classification, evidence layers, collection errors, freshness gaps, and disabled-source backlog are joined into one portfolio analysis queue.</p></div><div class="taxonomy-banner__meta"><span>36 projects</span><span>0 errors</span><span>49 freshness gaps</span><span>196 disabled</span><span>risk 19.6</span><a href="taxonomy-analysis.html">Open taxonomy analysis</a></div></section>
+    <section class="taxonomy-banner"><div><h2>Taxonomy Analysis</h2><p>Classification, evidence layers, collection errors, freshness gaps, and disabled-source backlog are joined into one portfolio analysis queue.</p></div><div class="taxonomy-banner__meta"><span>36 projects</span><span>0 errors</span><span>49 freshness gaps</span><span>196 disabled</span><span>risk 22.9</span><a href="taxonomy-analysis.html">Open taxonomy analysis</a></div></section>
 
     <section class="taxonomy-banner"><div><h2>Storage Footprint</h2><p>각 Radar 저장소의 최신 raw JSONL snapshot과 DuckDB 마트를 직접 집계해 보여줍니다. 분석 마트가 어디서 만들어지고 어디서 비어 있는지 한 화면에서 확인합니다.</p></div><div class="taxonomy-banner__meta"><span>36 repos</span><span>35 with raw</span><span>525 raw files</span><span>6,095 raw records</span><span>105 DuckDB tables</span><span>51 signal tables</span><span>31/32 repos w/ ontology rows</span><a href="storage.html">Open storage footprint</a></div></section>
 
@@ -556,6 +561,7 @@
 <tr><td><div class="project-name"><a href="../TravelMCPRadar/reports/index.html">TravelMCP</a></div><div class="project-repo">TravelMCPRadar</div></td><td>travel_mcp</td><td><span class="badge badge--active">Full</span></td><td>2</td><td>2</td><td>100.0%</td><td>1</td><td>2026-04-24</td><td><span class="entity-chip">MCPDomain <strong>6</strong></span><span class="entity-chip">ProjectHealth <strong>5</strong></span><span class="entity-chip">Capability <strong>2</strong></span><span class="entity-chip">RiskScope <strong>2</strong></span></td><td><a href="../TravelMCPRadar/reports/index.html">index</a></td></tr>
 <tr><td><div class="project-name"><a href="../TrendRadar/reports/index.html">Trend</a></div><div class="project-repo">TrendRadar</div></td><td>trend</td><td><span class="badge badge--active">Full</span></td><td>200</td><td>200</td><td>100.0%</td><td>1</td><td>2026-04-24</td><td><span class="entity-chip">샴페인 <strong>6</strong></span><span class="entity-chip">레드와인 <strong>6</strong></span><span class="entity-chip">화이트와인 <strong>6</strong></span><span class="entity-chip">와인 <strong>6</strong></span></td><td><a href="../TrendRadar/reports/index.html">index</a></td></tr>
 <tr><td><div class="project-name"><a href="../WeatherMCPRadar/reports/index.html">WeatherMCP</a></div><div class="project-repo">WeatherMCPRadar</div></td><td>weather_mcp</td><td><span class="badge badge--active">Full</span></td><td>5</td><td>5</td><td>100.0%</td><td>1</td><td>2026-04-24</td><td><span class="entity-chip">MCPDomain <strong>21</strong></span><span class="entity-chip">ProjectHealth <strong>13</strong></span><span class="entity-chip">Provider <strong>6</strong></span><span class="entity-chip">RiskScope <strong>2</strong></span></td><td><a href="../WeatherMCPRadar/reports/index.html">index</a></td></tr>
+<tr><td><div class="project-name">Commerce</div><div class="project-repo">CommerceRadar</div></td><td>—</td><td><span class="badge badge--missing">Missing</span></td><td>—</td><td>—</td><td>—</td><td>—</td><td>—</td><td><span class="entity-chip entity-chip--muted">No entity data</span></td><td>—</td></tr>
           </tbody>
         </table>
       </div>

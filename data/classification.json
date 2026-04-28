@@ -1,60 +1,236 @@
 {
-  "generated_at": "2026-04-21T12:23:48.395269+00:00",
+  "generated_at": "2026-04-28T11:59:40.840790+00:00",
   "workspace_root": "/mnt/c/projects/ai-frendly-datahub",
   "framework_path": "docs/harness/portfolio-taxonomy-framework.md",
   "summary": {
-    "repo_count": 39,
+    "repo_count": 40,
     "repo_class_counts": {
       "standard-radar": 32,
-      "advanced-radar": 4,
+      "advanced-radar": 5,
       "shared-template": 1,
       "shared-core": 1,
       "shared-dashboard": 1
     },
     "primary_motion_counts": {
       "compliance-risk": 17,
+      "conversion": 9,
       "intelligence": 10,
-      "conversion": 8,
       "attention": 1,
       "infrastructure": 3
     },
     "governance_counts": {
+      "medium": 21,
       "high": 9,
-      "medium": 20,
       "low": 7,
       "shared": 3
     },
     "readiness_counts": {
-      "watch": 14,
-      "ready": 25
+      "upgrade": 1,
+      "watch": 25,
+      "ready": 14
     },
     "source_status_counts": {
-      "불균형": 14,
-      "강함": 22,
+      "보강우선": 1,
+      "불균형": 24,
+      "강함": 12,
       "공용": 3
     },
     "evidence_strategy_counts": {
-      "official-operational": 22,
       "balanced-mixed": 12,
+      "official-operational": 23,
       "market-led": 1,
       "attention-led": 1,
       "shared": 3
     },
     "layer_gap_counts": {
+      "community": 2,
       "market": 12
     },
     "priority_repos": [
+      "MiscMCPRadar",
+      "PropertyRadar",
+      "GovRadar",
+      "JobRadar",
       "PaperworkRadar",
-      "CollaborationMCPRadar",
-      "CommerceMCPRadar",
-      "FinanceTaxMCPRadar",
-      "KoreanNLPMCPRadar",
-      "LegalGovMCPRadar",
-      "MapAddressMCPRadar",
-      "MiscMCPRadar"
+      "PolicyRadar",
+      "RefundRadar",
+      "CollaborationMCPRadar"
     ]
   },
   "repos": [
+    {
+      "repo": "MiscMCPRadar",
+      "display_name": "MiscMCP",
+      "repo_class": "standard-radar",
+      "domain_family": "mcp-misc",
+      "primary_motion": "compliance-risk",
+      "governance_profile": "medium",
+      "complexity": "medium",
+      "evidence_strategy": "balanced-mixed",
+      "source_status": "보강우선",
+      "current_focus": "설정 기반 소스 없음",
+      "available_layers": [],
+      "missing_layers": [
+        "community",
+        "market"
+      ],
+      "layer_counts": {},
+      "business_focus": "Misc MCP directory entries를 capability discovery와 risk triage seed로 연결",
+      "business_value": "awesome-mcp-korea section 기반의 T4 community directory seed다. MCP 후보 발굴에는 유용하지만 보안성, 운영상태, repository freshness를 보증하지 않는다.",
+      "reinforcement": "GitHub repository metadata, archived/license/pushed_at, docs presence, security advisory, credential/write-action risk scope를 enrichment layer로 추가한다.",
+      "enabled_source_count": 0,
+      "dashboard_status": "active",
+      "dashboard_pipeline_kind": "summary_json",
+      "match_rate": 0.0,
+      "quality_score": 70,
+      "readiness_status": "upgrade",
+      "flags": {
+        "has_readme": true,
+        "has_agents": true,
+        "has_tests": true,
+        "has_docs": false,
+        "has_reports_index": true,
+        "has_summary_json": true,
+        "has_mcp_server": true
+      },
+      "next_step": "awesome-mcp-korea community seed를 GitHub repository metadata와 security/risk cross-check로 보강한다.",
+      "priority_score": 62
+    },
+    {
+      "repo": "PropertyRadar",
+      "display_name": "Property",
+      "repo_class": "standard-radar",
+      "domain_family": "property",
+      "primary_motion": "conversion",
+      "governance_profile": "high",
+      "complexity": "medium",
+      "evidence_strategy": "official-operational",
+      "source_status": "불균형",
+      "current_focus": "시장 + 공식 + 운영",
+      "available_layers": [
+        "market",
+        "official",
+        "operational"
+      ],
+      "missing_layers": [
+        "community"
+      ],
+      "layer_counts": {
+        "market": 9,
+        "official": 2,
+        "operational": 1
+      },
+      "business_focus": "부동산 뉴스와 정책·커뮤니티를 실거래 판단으로 연결",
+      "business_value": "공식·시장·커뮤니티 조합은 갖췄지만 실거래·재고 심화가 더 필요하다.",
+      "reinforcement": "실거래, 분양 경쟁률, 매물 inventory, 인허가·준공 데이터를 더한다.",
+      "enabled_source_count": 9,
+      "dashboard_status": "active",
+      "dashboard_pipeline_kind": "summary_json",
+      "match_rate": 82.2,
+      "quality_score": 85,
+      "readiness_status": "watch",
+      "flags": {
+        "has_readme": true,
+        "has_agents": true,
+        "has_tests": true,
+        "has_docs": true,
+        "has_reports_index": true,
+        "has_summary_json": true,
+        "has_mcp_server": false
+      },
+      "next_step": "실거래, 분양 경쟁률, 매물 inventory, 인허가·준공 데이터를 더한다.",
+      "priority_score": 36
+    },
+    {
+      "repo": "GovRadar",
+      "display_name": "Gov",
+      "repo_class": "standard-radar",
+      "domain_family": "public-programs",
+      "primary_motion": "conversion",
+      "governance_profile": "high",
+      "complexity": "medium",
+      "evidence_strategy": "official-operational",
+      "source_status": "불균형",
+      "current_focus": "시장 + 운영 + 공식",
+      "available_layers": [
+        "community",
+        "market",
+        "official",
+        "operational"
+      ],
+      "missing_layers": [],
+      "layer_counts": {
+        "community": 5,
+        "market": 24,
+        "official": 7,
+        "operational": 8
+      },
+      "business_focus": "정부 지원사업을 신청 기회와 파이프라인으로 연결",
+      "business_value": "공식·전문·커뮤니티 레이어가 가장 균형적인 축 중 하나다.",
+      "reinforcement": "application_deadline·eligibility_rule 이벤트 모델을 중심으로 freshness/stale 리포트를 붙이고, 선정 결과·집행 실적 후보는 source_backlog에서 검증 후 단계적으로 활성화한다.",
+      "enabled_source_count": 24,
+      "dashboard_status": "active",
+      "dashboard_pipeline_kind": "summary_json",
+      "match_rate": 100.0,
+      "quality_score": 85,
+      "readiness_status": "watch",
+      "flags": {
+        "has_readme": true,
+        "has_agents": true,
+        "has_tests": true,
+        "has_docs": true,
+        "has_reports_index": true,
+        "has_summary_json": true,
+        "has_mcp_server": true
+      },
+      "next_step": "application_deadline·eligibility_rule 이벤트 모델을 중심으로 freshness/stale 리포트를 붙이고, 선정 결과·집행 실적 후보는 source_backlog에서 검증 후 단계적으로 활성화한다.",
+      "priority_score": 32
+    },
+    {
+      "repo": "JobRadar",
+      "display_name": "Job",
+      "repo_class": "standard-radar",
+      "domain_family": "employment",
+      "primary_motion": "conversion",
+      "governance_profile": "high",
+      "complexity": "medium",
+      "evidence_strategy": "official-operational",
+      "source_status": "불균형",
+      "current_focus": "시장 + 커뮤니티 + 운영",
+      "available_layers": [
+        "community",
+        "market",
+        "official",
+        "operational"
+      ],
+      "missing_layers": [],
+      "layer_counts": {
+        "community": 7,
+        "market": 15,
+        "official": 2,
+        "operational": 2
+      },
+      "business_focus": "채용 흐름을 직무 수요와 인재 매칭으로 연결",
+      "business_value": "뉴스와 커뮤니티는 있으나 실제 채용·급여·스킬 수요 데이터가 약하다.",
+      "reinforcement": "공식 채용공고, job board API, salary·skill trend 데이터를 더해 운영 신호를 만든다.",
+      "enabled_source_count": 15,
+      "dashboard_status": "active",
+      "dashboard_pipeline_kind": "summary_json",
+      "match_rate": 100.0,
+      "quality_score": 85,
+      "readiness_status": "watch",
+      "flags": {
+        "has_readme": true,
+        "has_agents": true,
+        "has_tests": true,
+        "has_docs": true,
+        "has_reports_index": true,
+        "has_summary_json": true,
+        "has_mcp_server": false
+      },
+      "next_step": "공식 채용공고, job board API, salary·skill trend 데이터를 더해 운영 신호를 만든다.",
+      "priority_score": 32
+    },
     {
       "repo": "PaperworkRadar",
       "display_name": "Paperwork",
@@ -65,7 +241,7 @@
       "complexity": "medium",
       "evidence_strategy": "official-operational",
       "source_status": "불균형",
-      "current_focus": "시장 + 공식 + 운영",
+      "current_focus": "시장 + 운영 + 공식",
       "available_layers": [
         "community",
         "market",
@@ -85,7 +261,7 @@
       "enabled_source_count": 22,
       "dashboard_status": "active",
       "dashboard_pipeline_kind": "summary_json",
-      "match_rate": 100.0,
+      "match_rate": 98.5,
       "quality_score": 85,
       "readiness_status": "watch",
       "flags": {
@@ -98,6 +274,94 @@
         "has_mcp_server": true
       },
       "next_step": "form_revision, filing_deadline, portal_service_change event model을 검증 산출물과 document hash diff 저장 경로에 연결한다.",
+      "priority_score": 32
+    },
+    {
+      "repo": "PolicyRadar",
+      "display_name": "Policy",
+      "repo_class": "standard-radar",
+      "domain_family": "policy-regulation",
+      "primary_motion": "compliance-risk",
+      "governance_profile": "high",
+      "complexity": "medium",
+      "evidence_strategy": "official-operational",
+      "source_status": "불균형",
+      "current_focus": "시장 + 공식 + 운영",
+      "available_layers": [
+        "community",
+        "market",
+        "official",
+        "operational"
+      ],
+      "missing_layers": [],
+      "layer_counts": {
+        "community": 3,
+        "market": 29,
+        "official": 19,
+        "operational": 18
+      },
+      "business_focus": "정책·규제 변화를 제품·약관·컴플라이언스 대응으로 연결",
+      "business_value": "정책 뉴스 breadth는 넓지만 사업자 행동을 바꾸는 운영 신호는 느슨하다.",
+      "reinforcement": "public_consultation, enforcement_action, policy_effective_date, platform_policy_change event model을 검증 산출물에 연결하고 Regulations.gov/입법예고/FTC/PIPC 후보는 source_backlog에서 검증 후 활성화한다.",
+      "enabled_source_count": 29,
+      "dashboard_status": "active",
+      "dashboard_pipeline_kind": "summary_json",
+      "match_rate": 92.4,
+      "quality_score": 85,
+      "readiness_status": "watch",
+      "flags": {
+        "has_readme": true,
+        "has_agents": true,
+        "has_tests": true,
+        "has_docs": true,
+        "has_reports_index": true,
+        "has_summary_json": true,
+        "has_mcp_server": true
+      },
+      "next_step": "public_consultation, enforcement_action, policy_effective_date, platform_policy_change event model을 검증 산출물에 연결하고 Regulations.gov/입법예고/FTC/PIPC 후보는 source_backlog에서 검증 후 활성화한다.",
+      "priority_score": 32
+    },
+    {
+      "repo": "RefundRadar",
+      "display_name": "Refund",
+      "repo_class": "standard-radar",
+      "domain_family": "consumer-rights",
+      "primary_motion": "compliance-risk",
+      "governance_profile": "high",
+      "complexity": "medium",
+      "evidence_strategy": "official-operational",
+      "source_status": "불균형",
+      "current_focus": "시장 + 공식 + 운영",
+      "available_layers": [
+        "market",
+        "official",
+        "operational"
+      ],
+      "missing_layers": [],
+      "layer_counts": {
+        "market": 19,
+        "official": 9,
+        "operational": 8
+      },
+      "business_focus": "환불·리콜·구제 이슈를 고객지원과 리스크 대응으로 연결",
+      "business_value": "공식 리콜·규제 소스는 있으나 처리 상태와 해결률 신호는 약하다.",
+      "reinforcement": "refund_claim_window, recall_refund_notice, complaint_resolution event model을 검증 산출물에 연결하고 seller/airline policy diff 후보는 source_backlog에서 검증 후 활성화한다.",
+      "enabled_source_count": 19,
+      "dashboard_status": "active",
+      "dashboard_pipeline_kind": "summary_json",
+      "match_rate": 100.0,
+      "quality_score": 85,
+      "readiness_status": "watch",
+      "flags": {
+        "has_readme": true,
+        "has_agents": true,
+        "has_tests": true,
+        "has_docs": true,
+        "has_reports_index": true,
+        "has_summary_json": true,
+        "has_mcp_server": true
+      },
+      "next_step": "refund_claim_window, recall_refund_notice, complaint_resolution event model을 검증 산출물에 연결하고 seller/airline policy diff 후보는 source_backlog에서 검증 후 활성화한다.",
       "priority_score": 32
     },
     {
@@ -241,12 +505,12 @@
         "market"
       ],
       "layer_counts": {
-        "community": 1
+        "community": 2
       },
       "business_focus": "KoreanNLP MCP directory entries를 capability discovery와 risk triage seed로 연결",
       "business_value": "awesome-mcp-korea section 기반의 T4 community directory seed다. MCP 후보 발굴에는 유용하지만 보안성, 운영상태, repository freshness를 보증하지 않는다.",
       "reinforcement": "GitHub repository metadata, archived/license/pushed_at, docs presence, security advisory, credential/write-action risk scope를 enrichment layer로 추가한다.",
-      "enabled_source_count": 1,
+      "enabled_source_count": 2,
       "dashboard_status": "active",
       "dashboard_pipeline_kind": "summary_json",
       "match_rate": 100.0,
@@ -332,47 +596,6 @@
       "dashboard_status": "active",
       "dashboard_pipeline_kind": "summary_json",
       "match_rate": 100.0,
-      "quality_score": 80,
-      "readiness_status": "watch",
-      "flags": {
-        "has_readme": true,
-        "has_agents": true,
-        "has_tests": true,
-        "has_docs": false,
-        "has_reports_index": true,
-        "has_summary_json": true,
-        "has_mcp_server": true
-      },
-      "next_step": "awesome-mcp-korea community seed를 GitHub repository metadata와 security/risk cross-check로 보강한다.",
-      "priority_score": 30
-    },
-    {
-      "repo": "MiscMCPRadar",
-      "display_name": "MiscMCP",
-      "repo_class": "standard-radar",
-      "domain_family": "mcp-misc",
-      "primary_motion": "compliance-risk",
-      "governance_profile": "medium",
-      "complexity": "medium",
-      "evidence_strategy": "balanced-mixed",
-      "source_status": "불균형",
-      "current_focus": "커뮤니티",
-      "available_layers": [
-        "community"
-      ],
-      "missing_layers": [
-        "market"
-      ],
-      "layer_counts": {
-        "community": 1
-      },
-      "business_focus": "Misc MCP directory entries를 capability discovery와 risk triage seed로 연결",
-      "business_value": "awesome-mcp-korea section 기반의 T4 community directory seed다. MCP 후보 발굴에는 유용하지만 보안성, 운영상태, repository freshness를 보증하지 않는다.",
-      "reinforcement": "GitHub repository metadata, archived/license/pushed_at, docs presence, security advisory, credential/write-action risk scope를 enrichment layer로 추가한다.",
-      "enabled_source_count": 1,
-      "dashboard_status": "active",
-      "dashboard_pipeline_kind": "summary_json",
-      "match_rate": 0.0,
       "quality_score": 80,
       "readiness_status": "watch",
       "flags": {
@@ -593,6 +816,229 @@
       "priority_score": 30
     },
     {
+      "repo": "BenefitRadar",
+      "display_name": "Benefit",
+      "repo_class": "standard-radar",
+      "domain_family": "public-benefits",
+      "primary_motion": "conversion",
+      "governance_profile": "medium",
+      "complexity": "medium",
+      "evidence_strategy": "official-operational",
+      "source_status": "불균형",
+      "current_focus": "시장 + 공식 + 운영",
+      "available_layers": [
+        "community",
+        "market",
+        "official",
+        "operational"
+      ],
+      "missing_layers": [],
+      "layer_counts": {
+        "community": 8,
+        "market": 22,
+        "official": 15,
+        "operational": 11
+      },
+      "business_focus": "복지·지원금 공고를 대상자 매칭과 알림 서비스로 연결",
+      "business_value": "정부·지자체 공고와 API가 있어 직접 전환으로 이어질 가능성이 높다.",
+      "reinforcement": "신청 마감일, eligibility 계산, 집행 실적까지 붙여 실제 신청 행동과 연결한다.",
+      "enabled_source_count": 30,
+      "dashboard_status": "active",
+      "dashboard_pipeline_kind": "summary_json",
+      "match_rate": 100.0,
+      "quality_score": 85,
+      "readiness_status": "watch",
+      "flags": {
+        "has_readme": true,
+        "has_agents": true,
+        "has_tests": true,
+        "has_docs": true,
+        "has_reports_index": true,
+        "has_summary_json": true,
+        "has_mcp_server": true
+      },
+      "next_step": "신청 마감일, eligibility 계산, 집행 실적까지 붙여 실제 신청 행동과 연결한다.",
+      "priority_score": 26
+    },
+    {
+      "repo": "EventRadar",
+      "display_name": "Event",
+      "repo_class": "standard-radar",
+      "domain_family": "events",
+      "primary_motion": "intelligence",
+      "governance_profile": "medium",
+      "complexity": "medium",
+      "evidence_strategy": "official-operational",
+      "source_status": "불균형",
+      "current_focus": "시장 + 공식 + 커뮤니티",
+      "available_layers": [
+        "community",
+        "market",
+        "official",
+        "operational"
+      ],
+      "missing_layers": [],
+      "layer_counts": {
+        "community": 4,
+        "market": 28,
+        "official": 6,
+        "operational": 1
+      },
+      "business_focus": "행사·전시·컨벤션 흐름을 리드 발굴과 스폰서십 기회로 연결",
+      "business_value": "이벤트 미디어는 넓지만 실제 참가·예약·캘린더 신호는 약하다.",
+      "reinforcement": "공식 일정 API, 티켓 판매·잔여석, venue calendar를 붙여 실행 가능성을 높인다.",
+      "enabled_source_count": 28,
+      "dashboard_status": "active",
+      "dashboard_pipeline_kind": "summary_json",
+      "match_rate": 100.0,
+      "quality_score": 85,
+      "readiness_status": "watch",
+      "flags": {
+        "has_readme": true,
+        "has_agents": true,
+        "has_tests": true,
+        "has_docs": true,
+        "has_reports_index": true,
+        "has_summary_json": true,
+        "has_mcp_server": true
+      },
+      "next_step": "공식 일정 API, 티켓 판매·잔여석, venue calendar를 붙여 실행 가능성을 높인다.",
+      "priority_score": 26
+    },
+    {
+      "repo": "QueueRadar",
+      "display_name": "Queue",
+      "repo_class": "standard-radar",
+      "domain_family": "operations-queues",
+      "primary_motion": "conversion",
+      "governance_profile": "medium",
+      "complexity": "medium",
+      "evidence_strategy": "official-operational",
+      "source_status": "불균형",
+      "current_focus": "공식 + 운영 + 시장",
+      "available_layers": [
+        "community",
+        "market",
+        "official",
+        "operational"
+      ],
+      "missing_layers": [],
+      "layer_counts": {
+        "community": 1,
+        "market": 11,
+        "official": 14,
+        "operational": 12
+      },
+      "business_focus": "대기시간·예약 혼잡을 방문 의사결정과 운영 최적화로 연결",
+      "business_value": "API 기반 운영 신호가 강하고 공식·커뮤니티도 살아 있다.",
+      "reinforcement": "티켓 가격, 예약 슬롯, 날씨·시즈널리티를 합쳐 예측력을 높인다.",
+      "enabled_source_count": 23,
+      "dashboard_status": "active",
+      "dashboard_pipeline_kind": "summary_json",
+      "match_rate": 100.0,
+      "quality_score": 85,
+      "readiness_status": "watch",
+      "flags": {
+        "has_readme": true,
+        "has_agents": true,
+        "has_tests": true,
+        "has_docs": true,
+        "has_reports_index": true,
+        "has_summary_json": true,
+        "has_mcp_server": true
+      },
+      "next_step": "티켓 가격, 예약 슬롯, 날씨·시즈널리티를 합쳐 예측력을 높인다.",
+      "priority_score": 26
+    },
+    {
+      "repo": "SubscriptionRadar",
+      "display_name": "Subscription",
+      "repo_class": "standard-radar",
+      "domain_family": "subscription-pricing",
+      "primary_motion": "conversion",
+      "governance_profile": "medium",
+      "complexity": "medium",
+      "evidence_strategy": "official-operational",
+      "source_status": "불균형",
+      "current_focus": "시장 + 공식 + 운영",
+      "available_layers": [
+        "market",
+        "official",
+        "operational"
+      ],
+      "missing_layers": [],
+      "layer_counts": {
+        "market": 35,
+        "official": 15,
+        "operational": 11
+      },
+      "business_focus": "구독 상품 변화를 가격정책과 해지 리스크 분석으로 연결",
+      "business_value": "현재는 테크 뉴스 큐레이션 비중이 높아 직접 사업 가치가 약하다.",
+      "reinforcement": "vendor pricing page, app store ranking, churn signal, 카드 결제 카테고리 데이터를 더한다.",
+      "enabled_source_count": 37,
+      "dashboard_status": "active",
+      "dashboard_pipeline_kind": "summary_json",
+      "match_rate": 100.0,
+      "quality_score": 85,
+      "readiness_status": "watch",
+      "flags": {
+        "has_readme": true,
+        "has_agents": true,
+        "has_tests": true,
+        "has_docs": true,
+        "has_reports_index": true,
+        "has_summary_json": true,
+        "has_mcp_server": true
+      },
+      "next_step": "vendor pricing page, app store ranking, churn signal, 카드 결제 카테고리 데이터를 더한다.",
+      "priority_score": 26
+    },
+    {
+      "repo": "ArtRadar",
+      "display_name": "Art",
+      "repo_class": "standard-radar",
+      "domain_family": "culture",
+      "primary_motion": "intelligence",
+      "governance_profile": "low",
+      "complexity": "medium",
+      "evidence_strategy": "official-operational",
+      "source_status": "불균형",
+      "current_focus": "시장 + 공식 + 커뮤니티",
+      "available_layers": [
+        "community",
+        "market",
+        "official",
+        "operational"
+      ],
+      "missing_layers": [],
+      "layer_counts": {
+        "community": 6,
+        "market": 35,
+        "official": 9,
+        "operational": 2
+      },
+      "business_focus": "전시·작가·기관 동향을 파트너십과 큐레이션 기회로 연결",
+      "business_value": "기관·전시 커버리지가 넓어 문화 마케팅과 콘텐츠 기획에는 강하다.",
+      "reinforcement": "경매 낙찰가, 티켓 판매, 아트페어 참가사 같은 거래형 소스를 넣어 시장성 판단을 강화한다.",
+      "enabled_source_count": 37,
+      "dashboard_status": "active",
+      "dashboard_pipeline_kind": "summary_json",
+      "match_rate": 93.0,
+      "quality_score": 85,
+      "readiness_status": "watch",
+      "flags": {
+        "has_readme": true,
+        "has_agents": true,
+        "has_tests": true,
+        "has_docs": true,
+        "has_reports_index": true,
+        "has_summary_json": true,
+        "has_mcp_server": true
+      },
+      "next_step": "경매 낙찰가, 티켓 판매, 아트페어 참가사 같은 거래형 소스를 넣어 시장성 판단을 강화한다.",
+      "priority_score": 22
+    },
+    {
       "repo": "BookRadar",
       "display_name": "Book",
       "repo_class": "standard-radar",
@@ -638,6 +1084,96 @@
       "priority_score": 22
     },
     {
+      "repo": "GameRadar",
+      "display_name": "Game",
+      "repo_class": "standard-radar",
+      "domain_family": "games",
+      "primary_motion": "intelligence",
+      "governance_profile": "low",
+      "complexity": "medium",
+      "evidence_strategy": "official-operational",
+      "source_status": "불균형",
+      "current_focus": "시장 + 커뮤니티 + 운영",
+      "available_layers": [
+        "community",
+        "market",
+        "official",
+        "operational"
+      ],
+      "missing_layers": [],
+      "layer_counts": {
+        "community": 13,
+        "market": 25,
+        "official": 2,
+        "operational": 4
+      },
+      "business_focus": "게임 담론을 출시·흥행 가능성 판단으로 연결",
+      "business_value": "미디어와 커뮤니티는 강하지만 매출·동접·스토어 순위 같은 실행 신호가 약하다.",
+      "reinforcement": "Steam charts, app store ranking, 콘솔 스토어 bestseller, patch note를 넣어 흥행 추적을 보강한다.",
+      "enabled_source_count": 37,
+      "dashboard_status": "active",
+      "dashboard_pipeline_kind": "summary_json",
+      "match_rate": 100.0,
+      "quality_score": 85,
+      "readiness_status": "watch",
+      "flags": {
+        "has_readme": true,
+        "has_agents": true,
+        "has_tests": true,
+        "has_docs": true,
+        "has_reports_index": true,
+        "has_summary_json": true,
+        "has_mcp_server": true
+      },
+      "next_step": "Steam charts, app store ranking, 콘솔 스토어 bestseller, patch note를 넣어 흥행 추적을 보강한다.",
+      "priority_score": 22
+    },
+    {
+      "repo": "CommerceRadar",
+      "display_name": "Commerce",
+      "repo_class": "advanced-radar",
+      "domain_family": "b2b-commerce-kg",
+      "primary_motion": "conversion",
+      "governance_profile": "medium",
+      "complexity": "high",
+      "evidence_strategy": "official-operational",
+      "source_status": "강함",
+      "current_focus": "공식 + 운영 + 시장",
+      "available_layers": [
+        "attention",
+        "market",
+        "official",
+        "operational"
+      ],
+      "missing_layers": [],
+      "layer_counts": {
+        "attention": 1,
+        "market": 2,
+        "official": 7,
+        "operational": 5
+      },
+      "business_focus": "제조사·제품·유통사·판매사·트렌드·거래 결과를 조합 추천과 30일 테스트 거래로 연결",
+      "business_value": "공개/공식/플랫폼/first-party 거래 데이터를 묶어 B2B 매칭 후보와 실행 액션을 만든다. 현재는 샘플 기반 프로토타입이라 실제 소스 활성화와 근거 검증이 필요하다.",
+      "reinforcement": "config/sources.yaml의 공식 API·플랫폼·first-party source를 실제 수집 파이프라인과 schema validation에 연결하고, combo card마다 evidence_id와 transaction outcome을 의무화한다.",
+      "enabled_source_count": 8,
+      "dashboard_status": "n/a",
+      "dashboard_pipeline_kind": null,
+      "match_rate": null,
+      "quality_score": 65,
+      "readiness_status": "watch",
+      "flags": {
+        "has_readme": true,
+        "has_agents": true,
+        "has_tests": true,
+        "has_docs": true,
+        "has_reports_index": false,
+        "has_summary_json": false,
+        "has_mcp_server": false
+      },
+      "next_step": "config/sources.yaml와 schemas를 실제 수집/검증 파이프라인에 연결하고 combo card evidence coverage를 dashboard에 노출한다.",
+      "priority_score": 18
+    },
+    {
       "repo": "HomeRadar",
       "display_name": "Home",
       "repo_class": "advanced-radar",
@@ -647,7 +1183,7 @@
       "complexity": "high",
       "evidence_strategy": "official-operational",
       "source_status": "강함",
-      "current_focus": "시장 + 공식 + 운영",
+      "current_focus": "공식 + 시장 + 운영",
       "available_layers": [
         "market",
         "official",
@@ -655,17 +1191,17 @@
       ],
       "missing_layers": [],
       "layer_counts": {
-        "market": 7,
+        "market": 6,
         "official": 6,
         "operational": 5
       },
       "business_focus": "부동산 정책·실거래·청약을 투자와 거주 의사결정으로 연결",
       "business_value": "공식 거래·청약·공매 source와 시장 뉴스 source가 분리되어 전환형 판단에 필요한 기준점을 제공한다.",
       "reinforcement": "HomeVerificationState를 리포트/MCP 출력에 연결하고 listing·재고 후보는 ToS·stale listing 검증 후 단계적으로 활성화한다.",
-      "enabled_source_count": 11,
+      "enabled_source_count": 10,
       "dashboard_status": "active",
       "dashboard_pipeline_kind": "summary_json",
-      "match_rate": 76.0,
+      "match_rate": 77.0,
       "quality_score": 95,
       "readiness_status": "ready",
       "flags": {
@@ -699,18 +1235,18 @@
       ],
       "missing_layers": [],
       "layer_counts": {
-        "community": 5,
+        "community": 4,
         "market": 7,
         "official": 5,
-        "operational": 9
+        "operational": 8
       },
       "business_focus": "식품안전·리콜·규제 변화를 리스크 경보와 상품 대응으로 연결",
       "business_value": "공식 안전 소스가 강해 운영 리스크 대응 가치가 높다.",
       "reinforcement": "source_backlog의 소비자 불만 후보를 API·ToS·개인정보 검토 후 보조 검증 레이어로 활성화하고, 판매중단 확산·유통 가격 데이터를 후속 운영 source로 보강한다.",
-      "enabled_source_count": 12,
+      "enabled_source_count": 11,
       "dashboard_status": "active",
       "dashboard_pipeline_kind": "summary_json",
-      "match_rate": 94.6,
+      "match_rate": 81.5,
       "quality_score": 95,
       "readiness_status": "ready",
       "flags": {
@@ -723,229 +1259,6 @@
         "has_mcp_server": false
       },
       "next_step": "source_backlog의 소비자 불만 후보를 API·ToS·개인정보 검토 후 보조 검증 레이어로 활성화하고, 판매중단 확산·유통 가격 데이터를 후속 운영 source로 보강한다.",
-      "priority_score": 10
-    },
-    {
-      "repo": "GovRadar",
-      "display_name": "Gov",
-      "repo_class": "standard-radar",
-      "domain_family": "public-programs",
-      "primary_motion": "conversion",
-      "governance_profile": "high",
-      "complexity": "medium",
-      "evidence_strategy": "official-operational",
-      "source_status": "강함",
-      "current_focus": "시장 + 운영 + 공식",
-      "available_layers": [
-        "community",
-        "market",
-        "official",
-        "operational"
-      ],
-      "missing_layers": [],
-      "layer_counts": {
-        "community": 5,
-        "market": 25,
-        "official": 8,
-        "operational": 9
-      },
-      "business_focus": "정부 지원사업을 신청 기회와 파이프라인으로 연결",
-      "business_value": "공식·전문·커뮤니티 레이어가 가장 균형적인 축 중 하나다.",
-      "reinforcement": "application_deadline·eligibility_rule 이벤트 모델을 중심으로 freshness/stale 리포트를 붙이고, 선정 결과·집행 실적 후보는 source_backlog에서 검증 후 단계적으로 활성화한다.",
-      "enabled_source_count": 25,
-      "dashboard_status": "active",
-      "dashboard_pipeline_kind": "summary_json",
-      "match_rate": 100.0,
-      "quality_score": 95,
-      "readiness_status": "ready",
-      "flags": {
-        "has_readme": true,
-        "has_agents": true,
-        "has_tests": true,
-        "has_docs": true,
-        "has_reports_index": true,
-        "has_summary_json": true,
-        "has_mcp_server": true
-      },
-      "next_step": "application_deadline·eligibility_rule 이벤트 모델을 중심으로 freshness/stale 리포트를 붙이고, 선정 결과·집행 실적 후보는 source_backlog에서 검증 후 단계적으로 활성화한다.",
-      "priority_score": 10
-    },
-    {
-      "repo": "JobRadar",
-      "display_name": "Job",
-      "repo_class": "standard-radar",
-      "domain_family": "employment",
-      "primary_motion": "conversion",
-      "governance_profile": "high",
-      "complexity": "medium",
-      "evidence_strategy": "official-operational",
-      "source_status": "강함",
-      "current_focus": "시장 + 커뮤니티 + 운영",
-      "available_layers": [
-        "community",
-        "market",
-        "official",
-        "operational"
-      ],
-      "missing_layers": [],
-      "layer_counts": {
-        "community": 7,
-        "market": 14,
-        "official": 3,
-        "operational": 4
-      },
-      "business_focus": "채용 흐름을 직무 수요와 인재 매칭으로 연결",
-      "business_value": "뉴스와 커뮤니티는 있으나 실제 채용·급여·스킬 수요 데이터가 약하다.",
-      "reinforcement": "공식 채용공고, job board API, salary·skill trend 데이터를 더해 운영 신호를 만든다.",
-      "enabled_source_count": 21,
-      "dashboard_status": "active",
-      "dashboard_pipeline_kind": "summary_json",
-      "match_rate": 100.0,
-      "quality_score": 95,
-      "readiness_status": "ready",
-      "flags": {
-        "has_readme": true,
-        "has_agents": true,
-        "has_tests": true,
-        "has_docs": true,
-        "has_reports_index": true,
-        "has_summary_json": true,
-        "has_mcp_server": false
-      },
-      "next_step": "공식 채용공고, job board API, salary·skill trend 데이터를 더해 운영 신호를 만든다.",
-      "priority_score": 10
-    },
-    {
-      "repo": "PolicyRadar",
-      "display_name": "Policy",
-      "repo_class": "standard-radar",
-      "domain_family": "policy-regulation",
-      "primary_motion": "compliance-risk",
-      "governance_profile": "high",
-      "complexity": "medium",
-      "evidence_strategy": "official-operational",
-      "source_status": "강함",
-      "current_focus": "시장 + 공식 + 운영",
-      "available_layers": [
-        "community",
-        "market",
-        "official",
-        "operational"
-      ],
-      "missing_layers": [],
-      "layer_counts": {
-        "community": 3,
-        "market": 34,
-        "official": 23,
-        "operational": 21
-      },
-      "business_focus": "정책·규제 변화를 제품·약관·컴플라이언스 대응으로 연결",
-      "business_value": "정책 뉴스 breadth는 넓지만 사업자 행동을 바꾸는 운영 신호는 느슨하다.",
-      "reinforcement": "public_consultation, enforcement_action, policy_effective_date, platform_policy_change event model을 검증 산출물에 연결하고 Regulations.gov/입법예고/FTC/PIPC 후보는 source_backlog에서 검증 후 활성화한다.",
-      "enabled_source_count": 34,
-      "dashboard_status": "active",
-      "dashboard_pipeline_kind": "summary_json",
-      "match_rate": 100.0,
-      "quality_score": 95,
-      "readiness_status": "ready",
-      "flags": {
-        "has_readme": true,
-        "has_agents": true,
-        "has_tests": true,
-        "has_docs": true,
-        "has_reports_index": true,
-        "has_summary_json": true,
-        "has_mcp_server": true
-      },
-      "next_step": "public_consultation, enforcement_action, policy_effective_date, platform_policy_change event model을 검증 산출물에 연결하고 Regulations.gov/입법예고/FTC/PIPC 후보는 source_backlog에서 검증 후 활성화한다.",
-      "priority_score": 10
-    },
-    {
-      "repo": "PropertyRadar",
-      "display_name": "Property",
-      "repo_class": "standard-radar",
-      "domain_family": "property",
-      "primary_motion": "conversion",
-      "governance_profile": "high",
-      "complexity": "medium",
-      "evidence_strategy": "official-operational",
-      "source_status": "강함",
-      "current_focus": "시장 + 커뮤니티 + 공식",
-      "available_layers": [
-        "community",
-        "market",
-        "official",
-        "operational"
-      ],
-      "missing_layers": [],
-      "layer_counts": {
-        "community": 6,
-        "market": 9,
-        "official": 4,
-        "operational": 3
-      },
-      "business_focus": "부동산 뉴스와 정책·커뮤니티를 실거래 판단으로 연결",
-      "business_value": "공식·시장·커뮤니티 조합은 갖췄지만 실거래·재고 심화가 더 필요하다.",
-      "reinforcement": "실거래, 분양 경쟁률, 매물 inventory, 인허가·준공 데이터를 더한다.",
-      "enabled_source_count": 17,
-      "dashboard_status": "active",
-      "dashboard_pipeline_kind": "summary_json",
-      "match_rate": 90.0,
-      "quality_score": 95,
-      "readiness_status": "ready",
-      "flags": {
-        "has_readme": true,
-        "has_agents": true,
-        "has_tests": true,
-        "has_docs": true,
-        "has_reports_index": true,
-        "has_summary_json": true,
-        "has_mcp_server": false
-      },
-      "next_step": "실거래, 분양 경쟁률, 매물 inventory, 인허가·준공 데이터를 더한다.",
-      "priority_score": 10
-    },
-    {
-      "repo": "RefundRadar",
-      "display_name": "Refund",
-      "repo_class": "standard-radar",
-      "domain_family": "consumer-rights",
-      "primary_motion": "compliance-risk",
-      "governance_profile": "high",
-      "complexity": "medium",
-      "evidence_strategy": "official-operational",
-      "source_status": "강함",
-      "current_focus": "시장 + 운영 + 공식",
-      "available_layers": [
-        "market",
-        "official",
-        "operational"
-      ],
-      "missing_layers": [],
-      "layer_counts": {
-        "market": 35,
-        "official": 19,
-        "operational": 22
-      },
-      "business_focus": "환불·리콜·구제 이슈를 고객지원과 리스크 대응으로 연결",
-      "business_value": "공식 리콜·규제 소스는 있으나 처리 상태와 해결률 신호는 약하다.",
-      "reinforcement": "refund_claim_window, recall_refund_notice, complaint_resolution event model을 검증 산출물에 연결하고 seller/airline policy diff 후보는 source_backlog에서 검증 후 활성화한다.",
-      "enabled_source_count": 35,
-      "dashboard_status": "active",
-      "dashboard_pipeline_kind": "summary_json",
-      "match_rate": 100.0,
-      "quality_score": 95,
-      "readiness_status": "ready",
-      "flags": {
-        "has_readme": true,
-        "has_agents": true,
-        "has_tests": true,
-        "has_docs": true,
-        "has_reports_index": true,
-        "has_summary_json": true,
-        "has_mcp_server": true
-      },
-      "next_step": "refund_claim_window, recall_refund_notice, complaint_resolution event model을 검증 산출물에 연결하고 seller/airline policy diff 후보는 source_backlog에서 검증 후 활성화한다.",
       "priority_score": 10
     },
     {
@@ -968,17 +1281,17 @@
       "missing_layers": [],
       "layer_counts": {
         "community": 3,
-        "market": 27,
-        "official": 9,
-        "operational": 15
+        "market": 25,
+        "official": 7,
+        "operational": 13
       },
       "business_focus": "보안·개인정보 이슈를 신뢰도와 compliance risk scoring으로 연결",
       "business_value": "보안 미디어 coverage는 넓지만 incident disclosure와 consumer complaint 계층이 약하다.",
       "reinforcement": "incident_disclosure, status_page_incident, enforcement_action, consumer_complaint, ai_asset_risk event model을 검증 산출물에 연결하고 커뮤니티 신호는 official_confirmation_required 상태로만 병합한다.",
-      "enabled_source_count": 27,
+      "enabled_source_count": 25,
       "dashboard_status": "active",
       "dashboard_pipeline_kind": "summary_json",
-      "match_rate": 86.5,
+      "match_rate": 82.9,
       "quality_score": 95,
       "readiness_status": "ready",
       "flags": {
@@ -1056,14 +1369,14 @@
       "missing_layers": [],
       "layer_counts": {
         "community": 5,
-        "market": 55,
+        "market": 49,
         "official": 15,
         "operational": 2
       },
       "business_focus": "와인 미디어·전문가·기관 신호를 수입·유통·브랜드 의사결정으로 연결",
       "business_value": "포트폴리오가 가장 성숙한 축 중 하나다.",
       "reinforcement": "auction price, 레스토랑 와인리스트 변동, importer portfolio sales 같은 거래 신호를 더한다.",
-      "enabled_source_count": 64,
+      "enabled_source_count": 58,
       "dashboard_status": "active",
       "dashboard_pipeline_kind": "summary_json",
       "match_rate": 100.0,
@@ -1082,51 +1395,6 @@
       "priority_score": 8
     },
     {
-      "repo": "BenefitRadar",
-      "display_name": "Benefit",
-      "repo_class": "standard-radar",
-      "domain_family": "public-benefits",
-      "primary_motion": "conversion",
-      "governance_profile": "medium",
-      "complexity": "medium",
-      "evidence_strategy": "official-operational",
-      "source_status": "강함",
-      "current_focus": "시장 + 공식 + 운영",
-      "available_layers": [
-        "community",
-        "market",
-        "official",
-        "operational"
-      ],
-      "missing_layers": [],
-      "layer_counts": {
-        "community": 8,
-        "market": 22,
-        "official": 16,
-        "operational": 12
-      },
-      "business_focus": "복지·지원금 공고를 대상자 매칭과 알림 서비스로 연결",
-      "business_value": "정부·지자체 공고와 API가 있어 직접 전환으로 이어질 가능성이 높다.",
-      "reinforcement": "신청 마감일, eligibility 계산, 집행 실적까지 붙여 실제 신청 행동과 연결한다.",
-      "enabled_source_count": 31,
-      "dashboard_status": "active",
-      "dashboard_pipeline_kind": "summary_json",
-      "match_rate": 100.0,
-      "quality_score": 95,
-      "readiness_status": "ready",
-      "flags": {
-        "has_readme": true,
-        "has_agents": true,
-        "has_tests": true,
-        "has_docs": true,
-        "has_reports_index": true,
-        "has_summary_json": true,
-        "has_mcp_server": true
-      },
-      "next_step": "신청 마감일, eligibility 계산, 집행 실적까지 붙여 실제 신청 행동과 연결한다.",
-      "priority_score": 4
-    },
-    {
       "repo": "CryptoRadar",
       "display_name": "Crypto",
       "repo_class": "standard-radar",
@@ -1136,7 +1404,7 @@
       "complexity": "medium",
       "evidence_strategy": "official-operational",
       "source_status": "강함",
-      "current_focus": "시장 + 공식 + 운영",
+      "current_focus": "시장 + 운영 + 공식",
       "available_layers": [
         "market",
         "official",
@@ -1154,7 +1422,7 @@
       "enabled_source_count": 19,
       "dashboard_status": "active",
       "dashboard_pipeline_kind": "summary_json",
-      "match_rate": 96.7,
+      "match_rate": 97.0,
       "quality_score": 95,
       "readiness_status": "ready",
       "flags": {
@@ -1170,51 +1438,6 @@
       "priority_score": 4
     },
     {
-      "repo": "EventRadar",
-      "display_name": "Event",
-      "repo_class": "standard-radar",
-      "domain_family": "events",
-      "primary_motion": "intelligence",
-      "governance_profile": "medium",
-      "complexity": "medium",
-      "evidence_strategy": "official-operational",
-      "source_status": "강함",
-      "current_focus": "시장 + 공식 + 커뮤니티",
-      "available_layers": [
-        "community",
-        "market",
-        "official",
-        "operational"
-      ],
-      "missing_layers": [],
-      "layer_counts": {
-        "community": 4,
-        "market": 32,
-        "official": 9,
-        "operational": 1
-      },
-      "business_focus": "행사·전시·컨벤션 흐름을 리드 발굴과 스폰서십 기회로 연결",
-      "business_value": "이벤트 미디어는 넓지만 실제 참가·예약·캘린더 신호는 약하다.",
-      "reinforcement": "공식 일정 API, 티켓 판매·잔여석, venue calendar를 붙여 실행 가능성을 높인다.",
-      "enabled_source_count": 36,
-      "dashboard_status": "active",
-      "dashboard_pipeline_kind": "summary_json",
-      "match_rate": 100.0,
-      "quality_score": 95,
-      "readiness_status": "ready",
-      "flags": {
-        "has_readme": true,
-        "has_agents": true,
-        "has_tests": true,
-        "has_docs": true,
-        "has_reports_index": true,
-        "has_summary_json": true,
-        "has_mcp_server": true
-      },
-      "next_step": "공식 일정 API, 티켓 판매·잔여석, venue calendar를 붙여 실행 가능성을 높인다.",
-      "priority_score": 4
-    },
-    {
       "repo": "MobilityRadar",
       "display_name": "Mobility",
       "repo_class": "standard-radar",
@@ -1224,7 +1447,7 @@
       "complexity": "medium",
       "evidence_strategy": "official-operational",
       "source_status": "강함",
-      "current_focus": "시장 + 커뮤니티 + 공식",
+      "current_focus": "시장 + 커뮤니티 + 운영",
       "available_layers": [
         "community",
         "market",
@@ -1257,96 +1480,6 @@
         "has_mcp_server": true
       },
       "next_step": "EV 등록·충전 요금·대중교통 요금 source를 추가하고 coffee split 후보의 별도 repo 승격 여부를 결정한다.",
-      "priority_score": 4
-    },
-    {
-      "repo": "QueueRadar",
-      "display_name": "Queue",
-      "repo_class": "standard-radar",
-      "domain_family": "operations-queues",
-      "primary_motion": "conversion",
-      "governance_profile": "medium",
-      "complexity": "medium",
-      "evidence_strategy": "official-operational",
-      "source_status": "강함",
-      "current_focus": "공식 + 시장 + 운영",
-      "available_layers": [
-        "community",
-        "market",
-        "official",
-        "operational"
-      ],
-      "missing_layers": [],
-      "layer_counts": {
-        "community": 8,
-        "market": 20,
-        "official": 20,
-        "operational": 12
-      },
-      "business_focus": "대기시간·예약 혼잡을 방문 의사결정과 운영 최적화로 연결",
-      "business_value": "API 기반 운영 신호가 강하고 공식·커뮤니티도 살아 있다.",
-      "reinforcement": "티켓 가격, 예약 슬롯, 날씨·시즈널리티를 합쳐 예측력을 높인다.",
-      "enabled_source_count": 39,
-      "dashboard_status": "active",
-      "dashboard_pipeline_kind": "summary_json",
-      "match_rate": 100.0,
-      "quality_score": 95,
-      "readiness_status": "ready",
-      "flags": {
-        "has_readme": true,
-        "has_agents": true,
-        "has_tests": true,
-        "has_docs": true,
-        "has_reports_index": true,
-        "has_summary_json": true,
-        "has_mcp_server": true
-      },
-      "next_step": "티켓 가격, 예약 슬롯, 날씨·시즈널리티를 합쳐 예측력을 높인다.",
-      "priority_score": 4
-    },
-    {
-      "repo": "SubscriptionRadar",
-      "display_name": "Subscription",
-      "repo_class": "standard-radar",
-      "domain_family": "subscription-pricing",
-      "primary_motion": "conversion",
-      "governance_profile": "medium",
-      "complexity": "medium",
-      "evidence_strategy": "official-operational",
-      "source_status": "강함",
-      "current_focus": "시장 + 공식 + 운영",
-      "available_layers": [
-        "community",
-        "market",
-        "official",
-        "operational"
-      ],
-      "missing_layers": [],
-      "layer_counts": {
-        "community": 8,
-        "market": 49,
-        "official": 14,
-        "operational": 11
-      },
-      "business_focus": "구독 상품 변화를 가격정책과 해지 리스크 분석으로 연결",
-      "business_value": "현재는 테크 뉴스 큐레이션 비중이 높아 직접 사업 가치가 약하다.",
-      "reinforcement": "vendor pricing page, app store ranking, churn signal, 카드 결제 카테고리 데이터를 더한다.",
-      "enabled_source_count": 49,
-      "dashboard_status": "active",
-      "dashboard_pipeline_kind": "summary_json",
-      "match_rate": 100.0,
-      "quality_score": 95,
-      "readiness_status": "ready",
-      "flags": {
-        "has_readme": true,
-        "has_agents": true,
-        "has_tests": true,
-        "has_docs": true,
-        "has_reports_index": true,
-        "has_summary_json": true,
-        "has_mcp_server": true
-      },
-      "next_step": "vendor pricing page, app store ranking, churn signal, 카드 결제 카테고리 데이터를 더한다.",
       "priority_score": 4
     },
     {
@@ -1397,51 +1530,6 @@
       "priority_score": 4
     },
     {
-      "repo": "ArtRadar",
-      "display_name": "Art",
-      "repo_class": "standard-radar",
-      "domain_family": "culture",
-      "primary_motion": "intelligence",
-      "governance_profile": "low",
-      "complexity": "medium",
-      "evidence_strategy": "official-operational",
-      "source_status": "강함",
-      "current_focus": "시장 + 공식 + 커뮤니티",
-      "available_layers": [
-        "community",
-        "market",
-        "official",
-        "operational"
-      ],
-      "missing_layers": [],
-      "layer_counts": {
-        "community": 6,
-        "market": 33,
-        "official": 10,
-        "operational": 2
-      },
-      "business_focus": "전시·작가·기관 동향을 파트너십과 큐레이션 기회로 연결",
-      "business_value": "기관·전시 커버리지가 넓어 문화 마케팅과 콘텐츠 기획에는 강하다.",
-      "reinforcement": "경매 낙찰가, 티켓 판매, 아트페어 참가사 같은 거래형 소스를 넣어 시장성 판단을 강화한다.",
-      "enabled_source_count": 41,
-      "dashboard_status": "active",
-      "dashboard_pipeline_kind": "summary_json",
-      "match_rate": 100.0,
-      "quality_score": 95,
-      "readiness_status": "ready",
-      "flags": {
-        "has_readme": true,
-        "has_agents": true,
-        "has_tests": true,
-        "has_docs": true,
-        "has_reports_index": true,
-        "has_summary_json": true,
-        "has_mcp_server": true
-      },
-      "next_step": "경매 낙찰가, 티켓 판매, 아트페어 참가사 같은 거래형 소스를 넣어 시장성 판단을 강화한다.",
-      "priority_score": 0
-    },
-    {
       "repo": "BlogRadar",
       "display_name": "Blog",
       "repo_class": "standard-radar",
@@ -1471,7 +1559,7 @@
       "enabled_source_count": 78,
       "dashboard_status": "active",
       "dashboard_pipeline_kind": "summary_json",
-      "match_rate": 100.0,
+      "match_rate": 99.6,
       "quality_score": 95,
       "readiness_status": "ready",
       "flags": {
@@ -1484,51 +1572,6 @@
         "has_mcp_server": true
       },
       "next_step": "GitHub release·star, package registry download, 채용 공고를 추가해 채택 계층을 보강한다.",
-      "priority_score": 0
-    },
-    {
-      "repo": "GameRadar",
-      "display_name": "Game",
-      "repo_class": "standard-radar",
-      "domain_family": "games",
-      "primary_motion": "intelligence",
-      "governance_profile": "low",
-      "complexity": "medium",
-      "evidence_strategy": "official-operational",
-      "source_status": "강함",
-      "current_focus": "시장 + 커뮤니티 + 운영",
-      "available_layers": [
-        "community",
-        "market",
-        "official",
-        "operational"
-      ],
-      "missing_layers": [],
-      "layer_counts": {
-        "community": 13,
-        "market": 26,
-        "official": 3,
-        "operational": 5
-      },
-      "business_focus": "게임 담론을 출시·흥행 가능성 판단으로 연결",
-      "business_value": "미디어와 커뮤니티는 강하지만 매출·동접·스토어 순위 같은 실행 신호가 약하다.",
-      "reinforcement": "Steam charts, app store ranking, 콘솔 스토어 bestseller, patch note를 넣어 흥행 추적을 보강한다.",
-      "enabled_source_count": 38,
-      "dashboard_status": "active",
-      "dashboard_pipeline_kind": "summary_json",
-      "match_rate": 100.0,
-      "quality_score": 95,
-      "readiness_status": "ready",
-      "flags": {
-        "has_readme": true,
-        "has_agents": true,
-        "has_tests": true,
-        "has_docs": true,
-        "has_reports_index": true,
-        "has_summary_json": true,
-        "has_mcp_server": true
-      },
-      "next_step": "Steam charts, app store ranking, 콘솔 스토어 bestseller, patch note를 넣어 흥행 추적을 보강한다.",
       "priority_score": 0
     },
     {
@@ -1592,17 +1635,17 @@
       ],
       "missing_layers": [],
       "layer_counts": {
-        "market": 22,
+        "market": 18,
         "official": 7,
-        "operational": 5
+        "operational": 3
       },
       "business_focus": "연구·모델 흐름을 제품화 후보 발굴로 연결",
       "business_value": "arXiv와 연구 블로그 coverage는 좋지만 영향력·재현성 계층이 약하다.",
       "reinforcement": "citation, GitHub star, benchmark leaderboard, 코드 저장소 연결을 보강한다.",
-      "enabled_source_count": 23,
+      "enabled_source_count": 19,
       "dashboard_status": "active",
       "dashboard_pipeline_kind": "summary_json",
-      "match_rate": 100.0,
+      "match_rate": 96.3,
       "quality_score": 95,
       "readiness_status": "ready",
       "flags": {
@@ -1713,7 +1756,7 @@
       "flags": {
         "has_readme": true,
         "has_agents": true,
-        "has_tests": false,
+        "has_tests": true,
         "has_docs": true,
         "has_reports_index": false,
         "has_summary_json": false,
