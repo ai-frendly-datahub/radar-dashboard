@@ -1,5 +1,5 @@
 {
-  "generated_at": "2026-04-28T14:12:41.633936+00:00",
+  "generated_at": "2026-05-08T08:09:37.416464+00:00",
   "workspace_root": "/mnt/c/projects/ai-frendly-datahub",
   "projects": [
     {
@@ -9,23 +9,23 @@
       "status": "active",
       "pipeline_kind": "summary_json",
       "has_summary_json": true,
-      "article_count": 200,
-      "matched_count": 186,
-      "source_count": 30,
-      "match_rate": 93.0,
-      "last_updated": "2026-04-24",
-      "generated_at": "2026-04-24T23:27:07.365067+09:00",
-      "total_reports": 54,
+      "article_count": 49,
+      "matched_count": 49,
+      "source_count": 22,
+      "match_rate": 100.0,
+      "last_updated": "2026-05-07",
+      "generated_at": "2026-05-07T10:57:01.925506+09:00",
+      "total_reports": 57,
       "report_index_path": "ArtRadar/reports/index.html",
       "latest_report_path": "ArtRadar/reports/index.html",
-      "data_origin": "ArtRadar/reports/art_20260424_summary.json",
-      "quality_origin": "ArtRadar/reports/art_20260428_quality.json",
+      "data_origin": "ArtRadar/reports/art_20260507_summary.json",
+      "quality_origin": "ArtRadar/reports/art_20260507_quality.json",
       "quality_summary": {
         "total_sources": 36,
         "enabled_sources": 32,
         "tracked_sources": 10,
-        "fresh_sources": 3,
-        "stale_sources": 7,
+        "fresh_sources": 10,
+        "stale_sources": 0,
         "missing_sources": 0,
         "missing_event_sources": 0,
         "unknown_event_date_sources": 0,
@@ -34,20 +34,20 @@
         "collection_error_count": 0,
         "auction_result_events": 4,
         "art_fair_participant_events": 1,
-        "exhibition_ticket_signal_events": 73,
+        "exhibition_ticket_signal_events": 48,
         "artist_institution_entity_events": 0,
-        "art_signal_event_count": 78,
-        "official_or_operational_event_count": 72,
+        "art_signal_event_count": 53,
+        "official_or_operational_event_count": 47,
         "news_proxy_event_count": 0,
         "complete_canonical_key_count": 1,
-        "proxy_canonical_key_count": 77,
+        "proxy_canonical_key_count": 52,
         "missing_canonical_key_count": 0,
-        "artist_present_count": 7,
-        "institution_present_count": 6,
+        "artist_present_count": 6,
+        "institution_present_count": 10,
         "market_present_count": 5,
         "hammer_price_present_count": 0,
-        "event_required_field_gap_count": 230,
-        "tracked_source_gap_count": 7,
+        "event_required_field_gap_count": 153,
+        "tracked_source_gap_count": 0,
         "missing_event_model_count": 1,
         "source_backlog_candidate_count": 4,
         "daily_review_item_count": 50
@@ -55,27 +55,26 @@
       "top_entities": [
         {
           "name": "ArtGeneral",
-          "count": 3171
+          "count": 655
         },
         {
           "name": "Topic",
-          "count": 170
+          "count": 89
         },
         {
           "name": "Institution",
-          "count": 116
+          "count": 46
         },
         {
           "name": "Market",
-          "count": 40
+          "count": 15
         },
         {
-          "name": "Artist",
-          "count": 34
+          "name": "Genre",
+          "count": 14
         }
       ],
       "warnings": [
-        "quality freshness gaps: stale=7, missing=0, unknown_event_date=0",
         "quality report has 4 disabled source(s)"
       ]
     },
@@ -86,61 +85,60 @@
       "status": "active",
       "pipeline_kind": "summary_json",
       "has_summary_json": true,
-      "article_count": 290,
-      "matched_count": 290,
-      "source_count": 22,
+      "article_count": 40,
+      "matched_count": 40,
+      "source_count": 10,
       "match_rate": 100.0,
-      "last_updated": "2026-04-25",
-      "generated_at": "2026-04-25T12:03:39.720374+09:00",
-      "total_reports": 31,
+      "last_updated": "2026-05-07",
+      "generated_at": "2026-05-07T11:06:09.170708+09:00",
+      "total_reports": 34,
       "report_index_path": "BenefitRadar/reports/index.html",
       "latest_report_path": "BenefitRadar/reports/index.html",
-      "data_origin": "BenefitRadar/reports/benefit_20260425_summary.json",
-      "quality_origin": "BenefitRadar/reports/benefit_20260428_quality.json",
+      "data_origin": "BenefitRadar/reports/benefit_20260507_summary.json",
+      "quality_origin": "BenefitRadar/reports/benefit_20260507_quality.json",
       "quality_summary": {
         "total_sources": 38,
-        "tracked_sources": 11,
-        "fresh_sources": 6,
+        "tracked_sources": 7,
+        "fresh_sources": 7,
         "quiet_sources": 0,
-        "stale_sources": 5,
+        "stale_sources": 0,
         "missing_sources": 0,
         "missing_event_sources": 0,
         "unknown_event_date_sources": 0,
         "not_tracked_sources": 19,
-        "skipped_disabled_sources": 8,
+        "skipped_disabled_sources": 12,
         "collection_error_count": 0,
-        "unique_program_key_count": 189,
-        "deadline_with_program_key_events": 73,
-        "support_program_notice_events": 140,
-        "application_deadline_events": 73,
-        "eligibility_rule_events": 162,
+        "unique_program_key_count": 46,
+        "deadline_with_program_key_events": 26,
+        "support_program_notice_events": 22,
+        "application_deadline_events": 26,
+        "eligibility_rule_events": 33,
         "selection_result_events": 0
       },
       "top_entities": [
         {
           "name": "GovernmentPolicy",
-          "count": 738
-        },
-        {
-          "name": "BenefitProgramKey",
-          "count": 290
-        },
-        {
-          "name": "EligibilityRegion",
-          "count": 249
-        },
-        {
-          "name": "SubsidyProgram",
-          "count": 244
+          "count": 75
         },
         {
           "name": "OperationalEvent",
-          "count": 235
+          "count": 59
+        },
+        {
+          "name": "EmploymentBenefit",
+          "count": 46
+        },
+        {
+          "name": "SocialWelfare",
+          "count": 46
+        },
+        {
+          "name": "Eligibility",
+          "count": 40
         }
       ],
       "warnings": [
-        "quality freshness gaps: stale=5, missing=0, unknown_event_date=0",
-        "quality report has 8 disabled source(s)"
+        "quality report has 12 disabled source(s)"
       ]
     },
     {
@@ -150,17 +148,17 @@
       "status": "active",
       "pipeline_kind": "summary_json",
       "has_summary_json": true,
-      "article_count": 1155,
-      "matched_count": 1150,
-      "source_count": 60,
-      "match_rate": 99.6,
-      "last_updated": "2026-04-25",
-      "generated_at": "2026-04-25T20:29:17.179756+09:00",
-      "total_reports": 23,
+      "article_count": 71,
+      "matched_count": 71,
+      "source_count": 63,
+      "match_rate": 100.0,
+      "last_updated": "2026-05-07",
+      "generated_at": "2026-05-07T10:30:59.223776+09:00",
+      "total_reports": 26,
       "report_index_path": "BlogRadar/reports/index.html",
       "latest_report_path": "BlogRadar/reports/index.html",
-      "data_origin": "BlogRadar/reports/techblog_20260425_summary.json",
-      "quality_origin": "BlogRadar/reports/techblog_20260428_quality.json",
+      "data_origin": "BlogRadar/reports/techblog_20260507_summary.json",
+      "quality_origin": "BlogRadar/reports/techblog_20260507_quality.json",
       "quality_summary": {
         "total_sources": 78,
         "tracked_sources": 0,
@@ -169,49 +167,51 @@
         "missing_sources": 0,
         "missing_event_sources": 0,
         "unknown_event_date_sources": 0,
-        "not_tracked_sources": 78,
-        "skipped_disabled_sources": 0,
+        "not_tracked_sources": 75,
+        "skipped_disabled_sources": 3,
         "collection_error_count": 0,
-        "repository_release_events": 136,
+        "repository_release_events": 0,
         "package_download_events": 0,
         "github_activity_events": 0,
         "skill_demand_events": 0,
-        "operational_adoption_event_count": 136,
-        "authoritative_event_count": 136,
+        "operational_adoption_event_count": 0,
+        "authoritative_event_count": 0,
         "community_event_count": 0,
-        "repository_canonical_key_present_count": 31,
+        "repository_canonical_key_present_count": 0,
         "package_canonical_key_present_count": 0,
-        "technology_proxy_key_count": 105,
+        "technology_proxy_key_count": 0,
         "missing_canonical_key_count": 0,
-        "event_required_field_gap_count": 196,
+        "event_required_field_gap_count": 0,
         "tracked_source_gap_count": 0,
         "source_backlog_candidate_count": 4,
-        "missing_event_model_count": 3,
-        "daily_review_item_count": 50
+        "missing_event_model_count": 4,
+        "daily_review_item_count": 8
       },
       "top_entities": [
         {
           "name": "SourceSignal",
-          "count": 1878
+          "count": 141
         },
         {
           "name": "Domain",
-          "count": 1204
+          "count": 96
         },
         {
           "name": "Topic",
-          "count": 1045
+          "count": 90
         },
         {
           "name": "Framework",
-          "count": 942
+          "count": 75
         },
         {
           "name": "Company",
-          "count": 557
+          "count": 44
         }
       ],
-      "warnings": []
+      "warnings": [
+        "quality report has 3 disabled source(s)"
+      ]
     },
     {
       "repo": "BookRadar",
@@ -220,17 +220,17 @@
       "status": "active",
       "pipeline_kind": "summary_json",
       "has_summary_json": true,
-      "article_count": 485,
-      "matched_count": 485,
-      "source_count": 19,
+      "article_count": 18,
+      "matched_count": 18,
+      "source_count": 18,
       "match_rate": 100.0,
-      "last_updated": "2026-04-25",
-      "generated_at": "2026-04-25T20:23:53.194652+09:00",
-      "total_reports": 30,
+      "last_updated": "2026-05-07",
+      "generated_at": "2026-05-07T09:52:57.391313+09:00",
+      "total_reports": 33,
       "report_index_path": "BookRadar/reports/index.html",
       "latest_report_path": "BookRadar/reports/index.html",
-      "data_origin": "BookRadar/reports/book_20260425_summary.json",
-      "quality_origin": "BookRadar/reports/book_20260428_quality.json",
+      "data_origin": "BookRadar/reports/book_20260507_summary.json",
+      "quality_origin": "BookRadar/reports/book_20260507_quality.json",
       "quality_summary": {
         "total_sources": 32,
         "enabled_sources": 20,
@@ -245,20 +245,20 @@
         "collection_error_count": 0,
         "sales_ranking_events": 0,
         "library_lending_events": 0,
-        "author_event_events": 12,
-        "award_signal_events": 25,
-        "book_signal_event_count": 37,
-        "official_or_operational_event_count": 8,
-        "community_proxy_event_count": 5,
+        "author_event_events": 10,
+        "award_signal_events": 26,
+        "book_signal_event_count": 36,
+        "official_or_operational_event_count": 9,
+        "community_proxy_event_count": 4,
         "complete_canonical_key_count": 19,
-        "proxy_canonical_key_count": 18,
+        "proxy_canonical_key_count": 17,
         "missing_canonical_key_count": 0,
         "isbn_present_count": 19,
-        "author_present_count": 11,
-        "publisher_present_count": 8,
+        "author_present_count": 13,
+        "publisher_present_count": 9,
         "rank_present_count": 0,
         "lending_count_present_count": 0,
-        "event_required_field_gap_count": 25,
+        "event_required_field_gap_count": 23,
         "tracked_source_gap_count": 0,
         "missing_event_model_count": 2,
         "source_backlog_candidate_count": 4,
@@ -267,23 +267,23 @@
       "top_entities": [
         {
           "name": "SourceSignal",
-          "count": 521
+          "count": 37
         },
         {
           "name": "Genre",
-          "count": 479
-        },
-        {
-          "name": "Author",
-          "count": 92
+          "count": 23
         },
         {
           "name": "BookType",
-          "count": 39
+          "count": 8
         },
         {
-          "name": "Award",
-          "count": 32
+          "name": "Author",
+          "count": 6
+        },
+        {
+          "name": "Publisher",
+          "count": 5
         }
       ],
       "warnings": [
@@ -297,17 +297,17 @@
       "status": "active",
       "pipeline_kind": "summary_json",
       "has_summary_json": true,
-      "article_count": 4,
-      "matched_count": 4,
+      "article_count": 1,
+      "matched_count": 1,
       "source_count": 1,
       "match_rate": 100.0,
-      "last_updated": "2026-04-24",
-      "generated_at": "2026-04-24T07:38:14.531805+00:00",
-      "total_reports": 2,
+      "last_updated": "2026-05-07",
+      "generated_at": "2026-05-07T09:30:33.409966+00:00",
+      "total_reports": 6,
       "report_index_path": "CollaborationMCPRadar/reports/index.html",
       "latest_report_path": "CollaborationMCPRadar/reports/index.html",
-      "data_origin": "CollaborationMCPRadar/reports/collaboration_mcp_20260424_summary.json",
-      "quality_origin": "CollaborationMCPRadar/reports/collaboration_mcp_20260428_quality.json",
+      "data_origin": "CollaborationMCPRadar/reports/collaboration_mcp_20260507_summary.json",
+      "quality_origin": "CollaborationMCPRadar/reports/collaboration_mcp_20260507_quality.json",
       "quality_summary": {
         "total_sources": 3,
         "enabled_sources": 1,
@@ -320,43 +320,78 @@
         "not_tracked_sources": 0,
         "skipped_disabled_sources": 2,
         "collection_error_count": 0,
-        "mcp_signal_event_count": 5,
-        "directory_seed_source_count": 3,
+        "mcp_signal_event_count": 7,
+        "directory_seed_source_count": 1,
         "mcp_server_candidate_count": 2,
         "enabled_mcp_server_source_count": 0,
         "blocked_mcp_server_source_count": 2,
         "real_transport_smoke_tested_source_count": 0,
-        "tool_allowlist_present_source_count": 0,
-        "credential_required_source_count": 1,
-        "repository_metadata_complete_source_count": 0,
-        "repository_metadata_gap_count": 2,
-        "security_activation_gate_count": 10,
+        "tool_allowlist_present_source_count": 2,
+        "credential_required_source_count": 2,
+        "env_preflight_required_source_count": 2,
+        "env_preflight_ready_source_count": 0,
+        "env_preflight_missing_source_count": 2,
+        "env_preflight_missing_var_count": 2,
+        "env_preflight_not_required_source_count": 0,
+        "repository_metadata_complete_source_count": 2,
+        "repository_metadata_gap_count": 0,
+        "repository_metadata_fresh_source_count": 2,
+        "repository_metadata_stale_source_count": 0,
+        "repository_metadata_incomplete_source_count": 0,
+        "repository_metadata_missing_checked_at_source_count": 0,
+        "repository_metadata_review_required_count": 0,
+        "repository_docs_present_source_count": 2,
+        "repository_docs_missing_source_count": 0,
+        "repository_security_policy_present_source_count": 0,
+        "repository_security_advisory_checked_source_count": 2,
+        "repository_security_advisory_total_count": 0,
+        "repository_security_advisory_open_source_count": 0,
+        "repository_security_enrichment_review_required_count": 0,
+        "security_activation_gate_count": 2,
+        "activation_gate_source_count": 2,
+        "activation_gate_total_count": 2,
+        "activation_risk_scope_review_required_source_count": 0,
+        "activation_command_unresolved_source_count": 0,
+        "activation_command_discovery_checked_source_count": 1,
+        "activation_command_discovery_resolved_source_count": 1,
+        "activation_command_discovery_unresolved_source_count": 0,
+        "activation_command_discovery_multi_server_ambiguous_source_count": 0,
+        "activation_command_discovery_status_counts": {
+          "resolved_direct_binary": 1
+        },
+        "activation_env_secret_required_source_count": 0,
+        "activation_tool_allowlist_required_source_count": 0,
+        "activation_registry_crosscheck_required_source_count": 0,
+        "activation_fake_transport_required_source_count": 0,
+        "activation_real_transport_required_source_count": 2,
+        "activation_runtime_review_required_source_count": 0,
+        "activation_ready_for_fake_transport_source_count": 0,
         "daily_review_item_count": 4,
         "mcp_directory_entry_events": 4,
         "mcp_tool_result_events": 0,
-        "linked_repository_metadata_events": 0,
+        "linked_repository_metadata_events": 2,
         "risk_scope_signal_events": 1
       },
       "top_entities": [
         {
           "name": "MCPDomain",
-          "count": 9
-        },
-        {
-          "name": "ProjectHealth",
-          "count": 9
-        },
-        {
-          "name": "Provider",
-          "count": 6
+          "count": 3
         },
         {
           "name": "Capability",
-          "count": 5
+          "count": 3
         },
         {
           "name": "RiskScope",
           "count": 2
+        },
+        {
+          "name": "ProjectHealth",
+          "count": 2
+        },
+        {
+          "name": "Provider",
+          "count": 1
         }
       ],
       "warnings": [
@@ -370,62 +405,108 @@
       "status": "active",
       "pipeline_kind": "summary_json",
       "has_summary_json": true,
-      "article_count": 2,
-      "matched_count": 2,
-      "source_count": 1,
+      "article_count": 11,
+      "matched_count": 11,
+      "source_count": 2,
       "match_rate": 100.0,
-      "last_updated": "2026-04-24",
-      "generated_at": "2026-04-24T07:38:14.121588+00:00",
-      "total_reports": 2,
+      "last_updated": "2026-05-07",
+      "generated_at": "2026-05-07T09:31:04.942203+00:00",
+      "total_reports": 7,
       "report_index_path": "CommerceMCPRadar/reports/index.html",
       "latest_report_path": "CommerceMCPRadar/reports/index.html",
-      "data_origin": "CommerceMCPRadar/reports/commerce_mcp_20260424_summary.json",
-      "quality_origin": "CommerceMCPRadar/reports/commerce_mcp_20260428_quality.json",
+      "data_origin": "CommerceMCPRadar/reports/commerce_mcp_20260507_summary.json",
+      "quality_origin": "CommerceMCPRadar/reports/commerce_mcp_20260507_quality.json",
       "quality_summary": {
         "total_sources": 3,
-        "enabled_sources": 1,
+        "enabled_sources": 2,
         "tracked_sources": 3,
-        "fresh_sources": 1,
+        "fresh_sources": 2,
         "stale_sources": 0,
         "missing_sources": 0,
         "missing_event_sources": 0,
         "unknown_event_date_sources": 0,
         "not_tracked_sources": 0,
-        "skipped_disabled_sources": 2,
+        "skipped_disabled_sources": 1,
         "collection_error_count": 0,
-        "mcp_signal_event_count": 2,
-        "directory_seed_source_count": 3,
+        "mcp_signal_event_count": 19,
+        "directory_seed_source_count": 1,
         "mcp_server_candidate_count": 2,
-        "enabled_mcp_server_source_count": 0,
-        "blocked_mcp_server_source_count": 2,
-        "real_transport_smoke_tested_source_count": 0,
-        "tool_allowlist_present_source_count": 1,
-        "credential_required_source_count": 2,
+        "enabled_mcp_server_source_count": 1,
+        "blocked_mcp_server_source_count": 1,
+        "real_transport_smoke_tested_source_count": 1,
+        "tool_allowlist_present_source_count": 2,
+        "credential_required_source_count": 1,
+        "env_preflight_required_source_count": 1,
+        "env_preflight_ready_source_count": 0,
+        "env_preflight_missing_source_count": 1,
+        "env_preflight_missing_var_count": 1,
+        "env_preflight_not_required_source_count": 1,
         "repository_metadata_complete_source_count": 2,
         "repository_metadata_gap_count": 0,
-        "security_activation_gate_count": 9,
+        "repository_metadata_fresh_source_count": 2,
+        "repository_metadata_stale_source_count": 0,
+        "repository_metadata_incomplete_source_count": 0,
+        "repository_metadata_missing_checked_at_source_count": 0,
+        "repository_metadata_review_required_count": 0,
+        "repository_docs_present_source_count": 2,
+        "repository_docs_missing_source_count": 0,
+        "repository_security_policy_present_source_count": 1,
+        "repository_security_advisory_checked_source_count": 2,
+        "repository_security_advisory_total_count": 0,
+        "repository_security_advisory_open_source_count": 0,
+        "repository_security_enrichment_review_required_count": 0,
+        "security_activation_gate_count": 1,
+        "activation_gate_source_count": 1,
+        "activation_gate_total_count": 1,
+        "activation_risk_scope_review_required_source_count": 0,
+        "activation_command_unresolved_source_count": 0,
+        "activation_command_discovery_checked_source_count": 0,
+        "activation_command_discovery_resolved_source_count": 0,
+        "activation_command_discovery_unresolved_source_count": 0,
+        "activation_command_discovery_multi_server_ambiguous_source_count": 0,
+        "activation_command_discovery_status_counts": {},
+        "activation_env_secret_required_source_count": 0,
+        "activation_tool_allowlist_required_source_count": 0,
+        "activation_registry_crosscheck_required_source_count": 0,
+        "activation_fake_transport_required_source_count": 0,
+        "activation_real_transport_required_source_count": 1,
+        "activation_runtime_review_required_source_count": 0,
+        "activation_ready_for_fake_transport_source_count": 0,
+        "controlled_rollout_source_count": 1,
+        "controlled_rollout_passed_count": 1,
+        "controlled_rollout_warning_count": 0,
+        "controlled_rollout_failure_count": 0,
+        "enabled_mcp_without_controlled_rollout_guard_count": 0,
         "daily_review_item_count": 2,
         "mcp_directory_entry_events": 2,
-        "mcp_tool_result_events": 0,
-        "linked_repository_metadata_events": 0,
-        "risk_scope_signal_events": 0
+        "mcp_tool_result_events": 10,
+        "linked_repository_metadata_events": 2,
+        "risk_scope_signal_events": 5
       },
       "top_entities": [
         {
-          "name": "ProjectHealth",
-          "count": 4
-        },
-        {
           "name": "MCPDomain",
-          "count": 3
+          "count": 26
         },
         {
           "name": "Capability",
-          "count": 3
+          "count": 22
+        },
+        {
+          "name": "RiskScope",
+          "count": 15
+        },
+        {
+          "name": "Provider",
+          "count": 12
+        },
+        {
+          "name": "ProjectHealth",
+          "count": 2
         }
       ],
       "warnings": [
-        "quality report has 2 disabled source(s)"
+        "quality report has 1 disabled source(s)"
       ]
     },
     {
@@ -439,12 +520,12 @@
       "matched_count": 2,
       "source_count": 8,
       "match_rate": 100.0,
-      "last_updated": "2026-04-28",
-      "generated_at": "2026-04-28T12:18:47.021771+00:00",
-      "total_reports": 1,
+      "last_updated": "2026-05-07",
+      "generated_at": "2026-05-07T04:07:03.578770+00:00",
+      "total_reports": 4,
       "report_index_path": "CommerceRadar/reports/index.html",
       "latest_report_path": "CommerceRadar/reports/index.html",
-      "data_origin": "CommerceRadar/reports/commerce_20260428_summary.json",
+      "data_origin": "CommerceRadar/reports/commerce_20260507_summary.json",
       "quality_origin": null,
       "quality_summary": {},
       "top_entities": [
@@ -478,28 +559,28 @@
       "status": "active",
       "pipeline_kind": "summary_json",
       "has_summary_json": true,
-      "article_count": 200,
-      "matched_count": 194,
+      "article_count": 16,
+      "matched_count": 14,
       "source_count": 10,
-      "match_rate": 97.0,
-      "last_updated": "2026-04-25",
-      "generated_at": "2026-04-25T20:27:44.224491+09:00",
-      "total_reports": 30,
+      "match_rate": 87.5,
+      "last_updated": "2026-05-07",
+      "generated_at": "2026-05-07T12:34:11.406425+09:00",
+      "total_reports": 33,
       "report_index_path": "CryptoRadar/reports/index.html",
       "latest_report_path": "CryptoRadar/reports/index.html",
-      "data_origin": "CryptoRadar/reports/crypto_20260425_summary.json",
-      "quality_origin": "CryptoRadar/reports/crypto_20260428_quality.json",
+      "data_origin": "CryptoRadar/reports/crypto_20260507_summary.json",
+      "quality_origin": "CryptoRadar/reports/crypto_20260507_quality.json",
       "quality_summary": {
         "total_sources": 19,
-        "enabled_sources": 19,
+        "enabled_sources": 13,
         "tracked_sources": 1,
-        "fresh_sources": 0,
-        "stale_sources": 1,
+        "fresh_sources": 1,
+        "stale_sources": 0,
         "missing_sources": 0,
         "missing_event_sources": 0,
         "unknown_event_date_sources": 0,
-        "not_tracked_sources": 18,
-        "skipped_disabled_sources": 0,
+        "not_tracked_sources": 12,
+        "skipped_disabled_sources": 6,
         "collection_error_count": 0,
         "unconfigured_tracked_event_models": [
           "exchange_listing_notice",
@@ -507,54 +588,54 @@
           "liquidity_snapshot"
         ],
         "exchange_listing_notice_configured_sources": 0,
-        "exchange_listing_notice_events": 14,
+        "exchange_listing_notice_events": 4,
         "regulatory_action_configured_sources": 0,
-        "regulatory_action_events": 38,
+        "regulatory_action_events": 32,
         "onchain_metric_configured_sources": 1,
-        "onchain_metric_events": 16,
+        "onchain_metric_events": 15,
         "liquidity_snapshot_configured_sources": 0,
         "liquidity_snapshot_events": 0,
-        "crypto_signal_event_count": 68,
+        "crypto_signal_event_count": 51,
         "official_or_operational_event_count": 0,
-        "news_proxy_event_count": 52,
-        "complete_canonical_key_count": 67,
+        "news_proxy_event_count": 36,
+        "complete_canonical_key_count": 50,
         "proxy_canonical_key_count": 1,
         "missing_canonical_key_count": 0,
-        "asset_symbol_present_count": 67,
-        "exchange_present_count": 25,
-        "regulator_present_count": 42,
-        "metric_name_present_count": 28,
+        "asset_symbol_present_count": 50,
+        "exchange_present_count": 13,
+        "regulator_present_count": 36,
+        "metric_name_present_count": 23,
         "metric_value_present_count": 0,
-        "event_required_field_gap_count": 60,
-        "tracked_source_gap_count": 1,
+        "event_required_field_gap_count": 52,
+        "tracked_source_gap_count": 0,
         "missing_event_model_count": 1,
         "source_backlog_candidate_count": 4,
-        "daily_review_item_count": 48
+        "daily_review_item_count": 41
       },
       "top_entities": [
         {
           "name": "CryptoGeneral",
-          "count": 985
+          "count": 83
         },
         {
           "name": "Cryptocurrency",
-          "count": 228
+          "count": 17
         },
         {
           "name": "Market",
-          "count": 138
+          "count": 16
+        },
+        {
+          "name": "Exchange",
+          "count": 4
         },
         {
           "name": "Technology",
-          "count": 56
-        },
-        {
-          "name": "Regulation",
-          "count": 48
+          "count": 4
         }
       ],
       "warnings": [
-        "quality freshness gaps: stale=1, missing=0, unknown_event_date=0"
+        "quality report has 6 disabled source(s)"
       ]
     },
     {
@@ -564,23 +645,23 @@
       "status": "active",
       "pipeline_kind": "summary_json",
       "has_summary_json": true,
-      "article_count": 383,
-      "matched_count": 383,
-      "source_count": 26,
+      "article_count": 43,
+      "matched_count": 43,
+      "source_count": 20,
       "match_rate": 100.0,
-      "last_updated": "2026-04-25",
-      "generated_at": "2026-04-25T11:57:45.779222+09:00",
-      "total_reports": 31,
+      "last_updated": "2026-05-07",
+      "generated_at": "2026-05-07T11:08:48.364574+09:00",
+      "total_reports": 34,
       "report_index_path": "EventRadar/reports/index.html",
       "latest_report_path": "EventRadar/reports/index.html",
-      "data_origin": "EventRadar/reports/event_20260425_summary.json",
-      "quality_origin": "EventRadar/reports/event_20260428_quality.json",
+      "data_origin": "EventRadar/reports/event_20260507_summary.json",
+      "quality_origin": "EventRadar/reports/event_20260507_quality.json",
       "quality_summary": {
         "total_sources": 36,
         "enabled_sources": 28,
         "tracked_sources": 17,
-        "fresh_sources": 12,
-        "stale_sources": 5,
+        "fresh_sources": 17,
+        "stale_sources": 0,
         "missing_sources": 0,
         "missing_event_sources": 0,
         "unknown_event_date_sources": 0,
@@ -588,40 +669,39 @@
         "skipped_disabled_sources": 8,
         "collection_error_count": 0,
         "official_event_calendar_events": 1,
-        "ticket_availability_events": 41,
+        "ticket_availability_events": 26,
         "venue_calendar_events": 3,
-        "exhibitor_sponsor_signal_events": 118,
-        "event_occurrence_present_count": 30,
-        "venue_id_present_count": 30,
+        "exhibitor_sponsor_signal_events": 9,
+        "event_occurrence_present_count": 28,
+        "venue_id_present_count": 28,
         "availability_status_present_count": 2,
         "organization_signal_present_count": 0,
-        "event_required_field_gap_count": 404,
-        "daily_review_item_count": 50
+        "event_required_field_gap_count": 53,
+        "daily_review_item_count": 36
       },
       "top_entities": [
         {
-          "name": "EventGeneral",
-          "count": 281
-        },
-        {
           "name": "SourceSignal",
-          "count": 272
-        },
-        {
-          "name": "Entertainment",
-          "count": 253
-        },
-        {
-          "name": "Event",
-          "count": 151
+          "count": 90
         },
         {
           "name": "Performance",
-          "count": 148
+          "count": 40
+        },
+        {
+          "name": "EventGeneral",
+          "count": 33
+        },
+        {
+          "name": "Exhibition",
+          "count": 27
+        },
+        {
+          "name": "Event",
+          "count": 19
         }
       ],
       "warnings": [
-        "quality freshness gaps: stale=5, missing=0, unknown_event_date=0",
         "quality report has 8 disabled source(s)"
       ]
     },
@@ -632,17 +712,17 @@
       "status": "active",
       "pipeline_kind": "summary_json",
       "has_summary_json": true,
-      "article_count": 5,
-      "matched_count": 5,
+      "article_count": 1,
+      "matched_count": 1,
       "source_count": 1,
       "match_rate": 100.0,
-      "last_updated": "2026-04-24",
-      "generated_at": "2026-04-24T16:59:44.688472+00:00",
-      "total_reports": 3,
+      "last_updated": "2026-05-07",
+      "generated_at": "2026-05-07T09:31:30.420393+00:00",
+      "total_reports": 7,
       "report_index_path": "FinanceTaxMCPRadar/reports/index.html",
       "latest_report_path": "FinanceTaxMCPRadar/reports/index.html",
-      "data_origin": "FinanceTaxMCPRadar/reports/finance_tax_mcp_20260424_summary.json",
-      "quality_origin": "FinanceTaxMCPRadar/reports/finance_tax_mcp_20260428_quality.json",
+      "data_origin": "FinanceTaxMCPRadar/reports/finance_tax_mcp_20260507_summary.json",
+      "quality_origin": "FinanceTaxMCPRadar/reports/finance_tax_mcp_20260507_quality.json",
       "quality_summary": {
         "total_sources": 3,
         "enabled_sources": 1,
@@ -655,7 +735,7 @@
         "not_tracked_sources": 0,
         "skipped_disabled_sources": 2,
         "collection_error_count": 0,
-        "mcp_signal_event_count": 39,
+        "mcp_signal_event_count": 8,
         "directory_seed_source_count": 1,
         "mcp_server_candidate_count": 2,
         "enabled_mcp_server_source_count": 0,
@@ -663,31 +743,66 @@
         "real_transport_smoke_tested_source_count": 1,
         "tool_allowlist_present_source_count": 2,
         "credential_required_source_count": 1,
+        "env_preflight_required_source_count": 1,
+        "env_preflight_ready_source_count": 0,
+        "env_preflight_missing_source_count": 1,
+        "env_preflight_missing_var_count": 4,
+        "env_preflight_not_required_source_count": 1,
         "repository_metadata_complete_source_count": 2,
         "repository_metadata_gap_count": 0,
-        "security_activation_gate_count": 10,
-        "daily_review_item_count": 2,
+        "repository_metadata_fresh_source_count": 2,
+        "repository_metadata_stale_source_count": 0,
+        "repository_metadata_incomplete_source_count": 0,
+        "repository_metadata_missing_checked_at_source_count": 0,
+        "repository_metadata_review_required_count": 0,
+        "repository_docs_present_source_count": 2,
+        "repository_docs_missing_source_count": 0,
+        "repository_security_policy_present_source_count": 0,
+        "repository_security_advisory_checked_source_count": 2,
+        "repository_security_advisory_total_count": 0,
+        "repository_security_advisory_open_source_count": 0,
+        "repository_security_enrichment_review_required_count": 0,
+        "security_activation_gate_count": 1,
+        "activation_gate_source_count": 1,
+        "activation_gate_total_count": 1,
+        "activation_risk_scope_review_required_source_count": 0,
+        "activation_command_unresolved_source_count": 0,
+        "activation_command_discovery_checked_source_count": 1,
+        "activation_command_discovery_resolved_source_count": 1,
+        "activation_command_discovery_unresolved_source_count": 0,
+        "activation_command_discovery_multi_server_ambiguous_source_count": 0,
+        "activation_command_discovery_status_counts": {
+          "resolved_local_uv_mcp_run": 1
+        },
+        "activation_env_secret_required_source_count": 0,
+        "activation_tool_allowlist_required_source_count": 0,
+        "activation_registry_crosscheck_required_source_count": 0,
+        "activation_fake_transport_required_source_count": 0,
+        "activation_real_transport_required_source_count": 1,
+        "activation_runtime_review_required_source_count": 0,
+        "activation_ready_for_fake_transport_source_count": 0,
+        "daily_review_item_count": 3,
         "mcp_directory_entry_events": 5,
-        "mcp_tool_result_events": 18,
-        "linked_repository_metadata_events": 0,
-        "risk_scope_signal_events": 16
+        "mcp_tool_result_events": 0,
+        "linked_repository_metadata_events": 2,
+        "risk_scope_signal_events": 1
       },
       "top_entities": [
         {
-          "name": "ProjectHealth",
-          "count": 10
-        },
-        {
           "name": "MCPDomain",
-          "count": 8
-        },
-        {
-          "name": "Capability",
-          "count": 7
+          "count": 2
         },
         {
           "name": "Provider",
-          "count": 4
+          "count": 2
+        },
+        {
+          "name": "Capability",
+          "count": 2
+        },
+        {
+          "name": "ProjectHealth",
+          "count": 2
         },
         {
           "name": "RiskScope",
@@ -705,66 +820,69 @@
       "status": "active",
       "pipeline_kind": "summary_json",
       "has_summary_json": true,
-      "article_count": 200,
-      "matched_count": 163,
-      "source_count": 10,
-      "match_rate": 81.5,
-      "last_updated": "2026-04-25",
-      "generated_at": "2026-04-25T20:23:54.095933+09:00",
-      "total_reports": 30,
+      "article_count": 8,
+      "matched_count": 8,
+      "source_count": 8,
+      "match_rate": 100.0,
+      "last_updated": "2026-05-07",
+      "generated_at": "2026-05-07T09:56:06.016772+09:00",
+      "total_reports": 34,
       "report_index_path": "FoodRadar/reports/index.html",
       "latest_report_path": "FoodRadar/reports/index.html",
-      "data_origin": "FoodRadar/reports/food_20260425_summary.json",
-      "quality_origin": "FoodRadar/reports/food_20260428_quality.json",
+      "data_origin": "FoodRadar/reports/food_20260507_summary.json",
+      "quality_origin": "FoodRadar/reports/food_20260507_quality.json",
       "quality_summary": {
         "total_sources": 12,
         "tracked_sources": 3,
-        "fresh_sources": 1,
-        "stale_sources": 2,
+        "fresh_sources": 3,
+        "stale_sources": 0,
         "missing_sources": 0,
         "unknown_event_date_sources": 0,
         "not_tracked_sources": 8,
         "catalog_only_sources": 0,
         "skipped_disabled_sources": 1,
         "collection_error_count": 0,
-        "alias_candidate_count": 3,
-        "fresh_food_events": 5,
-        "stale_food_events": 60,
+        "alias_candidate_count": 0,
+        "product_alias_candidate_count": 0,
+        "brand_alias_candidate_count": 0,
+        "manufacturer_alias_candidate_count": 0,
+        "match_coverage_article_count": 18,
+        "match_coverage_matched_count": 18,
+        "match_coverage_unmatched_count": 0,
+        "match_coverage_rate": 100.0,
+        "match_coverage_review_item_count": 0,
+        "fresh_food_events": 3,
+        "stale_food_events": 3,
         "undated_food_events": 0,
-        "unique_food_event_key_count": 65,
-        "recall_events_with_notice_date_count": 5,
-        "recall_events_with_status_count": 5,
+        "unique_food_event_key_count": 6,
+        "recall_events_with_notice_date_count": 1,
+        "recall_events_with_status_count": 1,
         "event_alias_trace_count": 0,
-        "complaint_auxiliary_only_events": 40,
-        "official_evidence_events": 25,
-        "recall_status_change_events": 5,
-        "enforcement_action_events": 20,
-        "complaint_signal_events": 40
+        "complaint_auxiliary_only_events": 3,
+        "official_evidence_events": 3,
+        "recall_status_change_events": 1,
+        "enforcement_action_events": 2,
+        "complaint_signal_events": 3
       },
       "top_entities": [
         {
           "name": "FoodGeneral",
-          "count": 261
-        },
-        {
-          "name": "FoodType",
-          "count": 141
+          "count": 24
         },
         {
           "name": "SafetyIssue",
-          "count": 82
+          "count": 7
+        },
+        {
+          "name": "FoodType",
+          "count": 6
         },
         {
           "name": "Regulation",
-          "count": 21
-        },
-        {
-          "name": "Brand",
-          "count": 4
+          "count": 2
         }
       ],
       "warnings": [
-        "quality freshness gaps: stale=2, missing=0, unknown_event_date=0",
         "quality report has 1 disabled source(s)"
       ]
     },
@@ -775,60 +893,60 @@
       "status": "active",
       "pipeline_kind": "summary_json",
       "has_summary_json": true,
-      "article_count": 300,
-      "matched_count": 300,
-      "source_count": 32,
+      "article_count": 70,
+      "matched_count": 70,
+      "source_count": 30,
       "match_rate": 100.0,
-      "last_updated": "2026-04-24",
-      "generated_at": "2026-04-24T23:54:03.852924+09:00",
-      "total_reports": 28,
+      "last_updated": "2026-05-07",
+      "generated_at": "2026-05-07T10:57:50.813681+09:00",
+      "total_reports": 31,
       "report_index_path": "GameRadar/reports/index.html",
       "latest_report_path": "GameRadar/reports/index.html",
-      "data_origin": "GameRadar/reports/game_20260424_summary.json",
-      "quality_origin": "GameRadar/reports/game_20260428_quality.json",
+      "data_origin": "GameRadar/reports/game_20260507_summary.json",
+      "quality_origin": "GameRadar/reports/game_20260507_quality.json",
       "quality_summary": {
         "total_sources": 48,
         "enabled_sources": 37,
         "tracked_sources": 6,
-        "fresh_sources": 4,
+        "fresh_sources": 3,
         "stale_sources": 0,
         "missing_sources": 0,
-        "missing_event_sources": 0,
+        "missing_event_sources": 1,
         "unknown_event_date_sources": 0,
         "not_tracked_sources": 33,
         "skipped_disabled_sources": 11,
         "collection_error_count": 0,
         "steam_chart_events": 0,
-        "store_ranking_events": 1,
-        "patch_note_events": 4,
+        "store_ranking_events": 0,
+        "patch_note_events": 3,
         "release_schedule_events": 13,
-        "actionable_game_event_count": 18,
+        "actionable_game_event_count": 16,
         "canonical_game_key_present_count": 0,
-        "missing_canonical_game_key_count": 18,
-        "official_or_trade_event_count": 16,
+        "missing_canonical_game_key_count": 16,
+        "official_or_trade_event_count": 9,
         "event_required_field_gap_count": 16,
         "daily_review_item_count": 10
       },
       "top_entities": [
         {
           "name": "GameGeneral",
-          "count": 576
+          "count": 122
         },
         {
           "name": "SourceSignal",
-          "count": 410
-        },
-        {
-          "name": "Release",
-          "count": 190
+          "count": 100
         },
         {
           "name": "Platform",
-          "count": 161
+          "count": 47
+        },
+        {
+          "name": "Release",
+          "count": 20
         },
         {
           "name": "Genre",
-          "count": 93
+          "count": 18
         }
       ],
       "warnings": [
@@ -842,60 +960,59 @@
       "status": "active",
       "pipeline_kind": "summary_json",
       "has_summary_json": true,
-      "article_count": 74,
-      "matched_count": 74,
-      "source_count": 14,
+      "article_count": 8,
+      "matched_count": 8,
+      "source_count": 5,
       "match_rate": 100.0,
-      "last_updated": "2026-04-25",
-      "generated_at": "2026-04-25T01:59:24.545045+09:00",
-      "total_reports": 23,
+      "last_updated": "2026-05-07",
+      "generated_at": "2026-05-07T10:59:02.466211+09:00",
+      "total_reports": 26,
       "report_index_path": "GovRadar/reports/index.html",
       "latest_report_path": "GovRadar/reports/index.html",
-      "data_origin": "GovRadar/reports/govsupport_20260425_summary.json",
-      "quality_origin": "GovRadar/reports/govsupport_20260428_quality.json",
+      "data_origin": "GovRadar/reports/govsupport_20260507_summary.json",
+      "quality_origin": "GovRadar/reports/govsupport_20260507_quality.json",
       "quality_summary": {
         "total_sources": 25,
         "tracked_sources": 6,
-        "fresh_sources": 1,
-        "stale_sources": 5,
+        "fresh_sources": 6,
+        "stale_sources": 0,
         "missing_sources": 0,
         "missing_event_sources": 0,
         "unknown_event_date_sources": 0,
-        "not_tracked_sources": 18,
-        "skipped_disabled_sources": 1,
-        "support_program_notice_events": 25,
-        "application_deadline_events": 19,
-        "eligibility_rule_events": 49,
+        "not_tracked_sources": 17,
+        "skipped_disabled_sources": 2,
+        "support_program_notice_events": 12,
+        "application_deadline_events": 11,
+        "eligibility_rule_events": 30,
         "selection_result_events": 0,
-        "unique_program_key_count": 91,
-        "events_with_evidence_url": 93,
+        "unique_program_key_count": 53,
+        "events_with_evidence_url": 53,
         "collection_error_count": 0
       },
       "top_entities": [
         {
           "name": "GovGeneral",
-          "count": 990
-        },
-        {
-          "name": "ApplicationInfo",
-          "count": 194
+          "count": 125
         },
         {
           "name": "TargetGroup",
-          "count": 185
+          "count": 41
         },
         {
-          "name": "SourceSignal",
-          "count": 138
+          "name": "ApplicationInfo",
+          "count": 30
         },
         {
           "name": "SupportType",
-          "count": 136
+          "count": 26
+        },
+        {
+          "name": "SourceSignal",
+          "count": 21
         }
       ],
       "warnings": [
-        "quality freshness gaps: stale=5, missing=0, unknown_event_date=0",
-        "quality report has 1 disabled source(s)"
+        "quality report has 2 disabled source(s)"
       ]
     },
     {
@@ -906,16 +1023,16 @@
       "pipeline_kind": "summary_json",
       "has_summary_json": true,
       "article_count": 100,
-      "matched_count": 77,
-      "source_count": 3,
-      "match_rate": 77.0,
-      "last_updated": "2026-04-24",
-      "generated_at": "2026-04-24T23:54:52.610256+09:00",
-      "total_reports": 4,
+      "matched_count": 100,
+      "source_count": 1,
+      "match_rate": 100.0,
+      "last_updated": "2026-05-07",
+      "generated_at": "2026-05-07T10:05:34.094564+09:00",
+      "total_reports": 7,
       "report_index_path": "HomeRadar/reports/index.html",
       "latest_report_path": "HomeRadar/reports/index.html",
-      "data_origin": "HomeRadar/reports/home_20260424_summary.json",
-      "quality_origin": "HomeRadar/reports/home_20260428_quality.json",
+      "data_origin": "HomeRadar/reports/home_20260507_summary.json",
+      "quality_origin": "HomeRadar/reports/home_20260507_quality.json",
       "quality_summary": {
         "total_sources": 25,
         "enabled_sources": 10,
@@ -954,7 +1071,9 @@
           "onbid_auction"
         ],
         "not_tracked_sources": 6,
-        "verification_state_count": 776,
+        "verification_state_count": 844,
+        "verification_review_sample_count": 20,
+        "daily_review_item_count": 32,
         "official_primary_status": "blocked_missing_env",
         "official_primary_sources": 4,
         "official_primary_fresh_sources": 0,
@@ -971,25 +1090,25 @@
           "ONBID_API_KEY",
           "SUBSCRIPTION_API_KEY"
         ],
-        "corroboration_only_items": 263,
+        "corroboration_only_items": 373,
         "official_primary_items": 0
       },
       "top_entities": [
         {
           "name": "keyword",
-          "count": 108
+          "count": 154
         },
         {
           "name": "district",
-          "count": 96
+          "count": 44
         },
         {
           "name": "complex",
-          "count": 7
+          "count": 13
         },
         {
           "name": "project",
-          "count": 2
+          "count": 11
         }
       ],
       "warnings": [
@@ -1004,17 +1123,17 @@
       "status": "active",
       "pipeline_kind": "summary_json",
       "has_summary_json": true,
-      "article_count": 193,
-      "matched_count": 193,
-      "source_count": 15,
+      "article_count": 5,
+      "matched_count": 5,
+      "source_count": 5,
       "match_rate": 100.0,
-      "last_updated": "2026-04-25",
-      "generated_at": "2026-04-25T20:23:47.164874+09:00",
-      "total_reports": 30,
+      "last_updated": "2026-05-07",
+      "generated_at": "2026-05-07T09:58:22.594207+09:00",
+      "total_reports": 33,
       "report_index_path": "JobRadar/reports/index.html",
       "latest_report_path": "JobRadar/reports/index.html",
-      "data_origin": "JobRadar/reports/job_20260425_summary.json",
-      "quality_origin": "JobRadar/reports/job_20260428_quality.json",
+      "data_origin": "JobRadar/reports/job_20260507_summary.json",
+      "quality_origin": "JobRadar/reports/job_20260507_quality.json",
       "quality_summary": {
         "total_sources": 21,
         "enabled_sources": 15,
@@ -1027,20 +1146,20 @@
         "not_tracked_sources": 12,
         "skipped_disabled_sources": 6,
         "collection_error_count": 0,
-        "official_job_posting_events": 17,
+        "official_job_posting_events": 18,
         "job_board_posting_events": 0,
-        "labor_market_signal_events": 1,
+        "labor_market_signal_events": 3,
         "skill_demand_events": 0,
         "salary_signal_events": 0,
-        "job_signal_event_count": 18,
-        "official_or_operational_event_count": 17,
+        "job_signal_event_count": 21,
+        "official_or_operational_event_count": 18,
         "community_proxy_event_count": 0,
-        "complete_canonical_key_count": 11,
+        "complete_canonical_key_count": 14,
         "proxy_canonical_key_count": 7,
         "missing_canonical_key_count": 0,
-        "company_present_count": 17,
-        "job_title_present_count": 10,
-        "location_present_count": 18,
+        "company_present_count": 18,
+        "job_title_present_count": 11,
+        "location_present_count": 21,
         "salary_range_present_count": 0,
         "skill_present_count": 4,
         "demand_count_present_count": 0,
@@ -1053,23 +1172,23 @@
       "top_entities": [
         {
           "name": "SourceSignal",
-          "count": 183
+          "count": 12
         },
         {
           "name": "EmploymentTrend",
-          "count": 174
+          "count": 3
         },
         {
-          "name": "Industry",
-          "count": 123
+          "name": "Company",
+          "count": 2
         },
         {
-          "name": "JobTitle",
-          "count": 101
+          "name": "JobGeneral",
+          "count": 1
         },
         {
           "name": "TechStack",
-          "count": 45
+          "count": 1
         }
       ],
       "warnings": [
@@ -1085,15 +1204,15 @@
       "has_summary_json": true,
       "article_count": 3,
       "matched_count": 3,
-      "source_count": 2,
+      "source_count": 3,
       "match_rate": 100.0,
-      "last_updated": "2026-04-24",
-      "generated_at": "2026-04-24T12:44:40.622312+00:00",
-      "total_reports": 2,
+      "last_updated": "2026-05-08",
+      "generated_at": "2026-05-08T07:13:21.119579+00:00",
+      "total_reports": 8,
       "report_index_path": "KoreanNLPMCPRadar/reports/index.html",
       "latest_report_path": "KoreanNLPMCPRadar/reports/index.html",
-      "data_origin": "KoreanNLPMCPRadar/reports/korean_nlp_mcp_20260424_summary.json",
-      "quality_origin": "KoreanNLPMCPRadar/reports/korean_nlp_mcp_20260428_quality.json",
+      "data_origin": "KoreanNLPMCPRadar/reports/korean_nlp_mcp_20260508_summary.json",
+      "quality_origin": "KoreanNLPMCPRadar/reports/korean_nlp_mcp_20260501_quality.json",
       "quality_summary": {
         "total_sources": 3,
         "enabled_sources": 2,
@@ -1106,34 +1225,68 @@
         "not_tracked_sources": 0,
         "skipped_disabled_sources": 1,
         "collection_error_count": 0,
-        "mcp_signal_event_count": 3,
-        "directory_seed_source_count": 2,
+        "mcp_signal_event_count": 7,
+        "directory_seed_source_count": 1,
         "mcp_server_candidate_count": 2,
         "enabled_mcp_server_source_count": 1,
         "blocked_mcp_server_source_count": 1,
         "real_transport_smoke_tested_source_count": 1,
-        "tool_allowlist_present_source_count": 1,
-        "credential_required_source_count": 0,
+        "tool_allowlist_present_source_count": 2,
+        "credential_required_source_count": 1,
+        "env_preflight_required_source_count": 1,
+        "env_preflight_ready_source_count": 1,
+        "env_preflight_missing_source_count": 0,
+        "env_preflight_missing_var_count": 0,
+        "env_preflight_not_required_source_count": 1,
         "repository_metadata_complete_source_count": 2,
         "repository_metadata_gap_count": 0,
-        "security_activation_gate_count": 8,
-        "daily_review_item_count": 1,
+        "repository_metadata_fresh_source_count": 2,
+        "repository_metadata_stale_source_count": 0,
+        "repository_metadata_incomplete_source_count": 0,
+        "repository_metadata_missing_checked_at_source_count": 0,
+        "repository_metadata_review_required_count": 0,
+        "repository_docs_present_source_count": 2,
+        "repository_docs_missing_source_count": 0,
+        "repository_security_policy_present_source_count": 1,
+        "repository_security_advisory_checked_source_count": 2,
+        "repository_security_advisory_total_count": 0,
+        "repository_security_advisory_open_source_count": 0,
+        "repository_security_enrichment_review_required_count": 0,
+        "security_activation_gate_count": 6,
+        "activation_gate_source_count": 1,
+        "activation_gate_total_count": 6,
+        "activation_risk_scope_review_required_source_count": 1,
+        "activation_command_unresolved_source_count": 0,
+        "activation_command_discovery_checked_source_count": 0,
+        "activation_command_discovery_resolved_source_count": 0,
+        "activation_command_discovery_unresolved_source_count": 0,
+        "activation_command_discovery_multi_server_ambiguous_source_count": 0,
+        "activation_command_discovery_status_counts": {},
+        "activation_env_secret_required_source_count": 0,
+        "activation_tool_allowlist_required_source_count": 0,
+        "activation_registry_crosscheck_required_source_count": 0,
+        "activation_fake_transport_required_source_count": 0,
+        "activation_real_transport_required_source_count": 1,
+        "activation_runtime_review_required_source_count": 1,
+        "activation_ready_for_fake_transport_source_count": 0,
+        "controlled_rollout_source_count": 1,
+        "controlled_rollout_passed_count": 0,
+        "controlled_rollout_warning_count": 0,
+        "controlled_rollout_failure_count": 1,
+        "enabled_mcp_without_controlled_rollout_guard_count": 0,
+        "daily_review_item_count": 2,
         "mcp_directory_entry_events": 2,
-        "mcp_tool_result_events": 1,
-        "linked_repository_metadata_events": 0,
-        "risk_scope_signal_events": 0
+        "mcp_tool_result_events": 2,
+        "linked_repository_metadata_events": 2,
+        "risk_scope_signal_events": 1
       },
       "top_entities": [
         {
           "name": "ProjectHealth",
-          "count": 6
+          "count": 4
         },
         {
           "name": "Capability",
-          "count": 3
-        },
-        {
-          "name": "MCPDomain",
           "count": 3
         }
       ],
@@ -1148,17 +1301,17 @@
       "status": "active",
       "pipeline_kind": "summary_json",
       "has_summary_json": true,
-      "article_count": 5,
-      "matched_count": 5,
+      "article_count": 1,
+      "matched_count": 1,
       "source_count": 1,
       "match_rate": 100.0,
-      "last_updated": "2026-04-24",
-      "generated_at": "2026-04-24T07:38:14.024010+00:00",
-      "total_reports": 2,
+      "last_updated": "2026-05-07",
+      "generated_at": "2026-05-07T09:32:23.998789+00:00",
+      "total_reports": 7,
       "report_index_path": "LegalGovMCPRadar/reports/index.html",
       "latest_report_path": "LegalGovMCPRadar/reports/index.html",
-      "data_origin": "LegalGovMCPRadar/reports/legal_gov_mcp_20260424_summary.json",
-      "quality_origin": "LegalGovMCPRadar/reports/legal_gov_mcp_20260428_quality.json",
+      "data_origin": "LegalGovMCPRadar/reports/legal_gov_mcp_20260507_summary.json",
+      "quality_origin": "LegalGovMCPRadar/reports/legal_gov_mcp_20260507_quality.json",
       "quality_summary": {
         "total_sources": 3,
         "enabled_sources": 1,
@@ -1171,38 +1324,69 @@
         "not_tracked_sources": 0,
         "skipped_disabled_sources": 2,
         "collection_error_count": 0,
-        "mcp_signal_event_count": 7,
-        "directory_seed_source_count": 3,
+        "mcp_signal_event_count": 9,
+        "directory_seed_source_count": 1,
         "mcp_server_candidate_count": 2,
         "enabled_mcp_server_source_count": 0,
         "blocked_mcp_server_source_count": 2,
         "real_transport_smoke_tested_source_count": 0,
-        "tool_allowlist_present_source_count": 1,
+        "tool_allowlist_present_source_count": 2,
         "credential_required_source_count": 2,
-        "repository_metadata_complete_source_count": 1,
-        "repository_metadata_gap_count": 1,
-        "security_activation_gate_count": 10,
-        "daily_review_item_count": 3,
+        "env_preflight_required_source_count": 2,
+        "env_preflight_ready_source_count": 0,
+        "env_preflight_missing_source_count": 2,
+        "env_preflight_missing_var_count": 2,
+        "env_preflight_not_required_source_count": 0,
+        "repository_metadata_complete_source_count": 2,
+        "repository_metadata_gap_count": 0,
+        "repository_metadata_fresh_source_count": 2,
+        "repository_metadata_stale_source_count": 0,
+        "repository_metadata_incomplete_source_count": 0,
+        "repository_metadata_missing_checked_at_source_count": 0,
+        "repository_metadata_review_required_count": 0,
+        "repository_docs_present_source_count": 2,
+        "repository_docs_missing_source_count": 0,
+        "repository_security_policy_present_source_count": 0,
+        "repository_security_advisory_checked_source_count": 2,
+        "repository_security_advisory_total_count": 0,
+        "repository_security_advisory_open_source_count": 0,
+        "repository_security_enrichment_review_required_count": 0,
+        "security_activation_gate_count": 2,
+        "activation_gate_source_count": 2,
+        "activation_gate_total_count": 2,
+        "activation_risk_scope_review_required_source_count": 0,
+        "activation_command_unresolved_source_count": 0,
+        "activation_command_discovery_checked_source_count": 1,
+        "activation_command_discovery_resolved_source_count": 1,
+        "activation_command_discovery_unresolved_source_count": 0,
+        "activation_command_discovery_multi_server_ambiguous_source_count": 0,
+        "activation_command_discovery_status_counts": {
+          "resolved_local_build_artifact": 1
+        },
+        "activation_env_secret_required_source_count": 0,
+        "activation_tool_allowlist_required_source_count": 0,
+        "activation_registry_crosscheck_required_source_count": 0,
+        "activation_fake_transport_required_source_count": 0,
+        "activation_real_transport_required_source_count": 2,
+        "activation_runtime_review_required_source_count": 0,
+        "activation_ready_for_fake_transport_source_count": 0,
+        "daily_review_item_count": 4,
         "mcp_directory_entry_events": 5,
         "mcp_tool_result_events": 0,
-        "linked_repository_metadata_events": 0,
+        "linked_repository_metadata_events": 2,
         "risk_scope_signal_events": 2
       },
       "top_entities": [
         {
           "name": "MCPDomain",
-          "count": 13
-        },
-        {
-          "name": "ProjectHealth",
-          "count": 12
+          "count": 4
         },
         {
           "name": "Capability",
-          "count": 8
+          "count": 3
         },
         {
-          "name": "RiskScope",
+          "name": "ProjectHealth",
           "count": 2
         }
       ],
@@ -1217,17 +1401,17 @@
       "status": "active",
       "pipeline_kind": "summary_json",
       "has_summary_json": true,
-      "article_count": 6,
-      "matched_count": 6,
+      "article_count": 1,
+      "matched_count": 1,
       "source_count": 1,
       "match_rate": 100.0,
-      "last_updated": "2026-04-24",
-      "generated_at": "2026-04-24T07:38:15.312759+00:00",
-      "total_reports": 2,
+      "last_updated": "2026-05-07",
+      "generated_at": "2026-05-07T09:32:42.376347+00:00",
+      "total_reports": 7,
       "report_index_path": "MapAddressMCPRadar/reports/index.html",
       "latest_report_path": "MapAddressMCPRadar/reports/index.html",
-      "data_origin": "MapAddressMCPRadar/reports/map_address_mcp_20260424_summary.json",
-      "quality_origin": "MapAddressMCPRadar/reports/map_address_mcp_20260428_quality.json",
+      "data_origin": "MapAddressMCPRadar/reports/map_address_mcp_20260507_summary.json",
+      "quality_origin": "MapAddressMCPRadar/reports/map_address_mcp_20260507_quality.json",
       "quality_summary": {
         "total_sources": 3,
         "enabled_sources": 1,
@@ -1240,43 +1424,78 @@
         "not_tracked_sources": 0,
         "skipped_disabled_sources": 2,
         "collection_error_count": 0,
-        "mcp_signal_event_count": 12,
-        "directory_seed_source_count": 3,
+        "mcp_signal_event_count": 14,
+        "directory_seed_source_count": 1,
         "mcp_server_candidate_count": 2,
         "enabled_mcp_server_source_count": 0,
         "blocked_mcp_server_source_count": 2,
         "real_transport_smoke_tested_source_count": 0,
-        "tool_allowlist_present_source_count": 0,
-        "credential_required_source_count": 2,
-        "repository_metadata_complete_source_count": 1,
-        "repository_metadata_gap_count": 1,
-        "security_activation_gate_count": 11,
+        "tool_allowlist_present_source_count": 2,
+        "credential_required_source_count": 1,
+        "env_preflight_required_source_count": 1,
+        "env_preflight_ready_source_count": 0,
+        "env_preflight_missing_source_count": 1,
+        "env_preflight_missing_var_count": 2,
+        "env_preflight_not_required_source_count": 1,
+        "repository_metadata_complete_source_count": 2,
+        "repository_metadata_gap_count": 0,
+        "repository_metadata_fresh_source_count": 2,
+        "repository_metadata_stale_source_count": 0,
+        "repository_metadata_incomplete_source_count": 0,
+        "repository_metadata_missing_checked_at_source_count": 0,
+        "repository_metadata_review_required_count": 0,
+        "repository_docs_present_source_count": 2,
+        "repository_docs_missing_source_count": 0,
+        "repository_security_policy_present_source_count": 0,
+        "repository_security_advisory_checked_source_count": 2,
+        "repository_security_advisory_total_count": 0,
+        "repository_security_advisory_open_source_count": 0,
+        "repository_security_enrichment_review_required_count": 0,
+        "security_activation_gate_count": 1,
+        "activation_gate_source_count": 1,
+        "activation_gate_total_count": 1,
+        "activation_risk_scope_review_required_source_count": 0,
+        "activation_command_unresolved_source_count": 0,
+        "activation_command_discovery_checked_source_count": 1,
+        "activation_command_discovery_resolved_source_count": 1,
+        "activation_command_discovery_unresolved_source_count": 0,
+        "activation_command_discovery_multi_server_ambiguous_source_count": 0,
+        "activation_command_discovery_status_counts": {
+          "resolved_local_uv_script": 1
+        },
+        "activation_env_secret_required_source_count": 0,
+        "activation_tool_allowlist_required_source_count": 0,
+        "activation_registry_crosscheck_required_source_count": 0,
+        "activation_fake_transport_required_source_count": 0,
+        "activation_real_transport_required_source_count": 1,
+        "activation_runtime_review_required_source_count": 0,
+        "activation_ready_for_fake_transport_source_count": 0,
         "daily_review_item_count": 3,
         "mcp_directory_entry_events": 6,
         "mcp_tool_result_events": 0,
-        "linked_repository_metadata_events": 0,
+        "linked_repository_metadata_events": 2,
         "risk_scope_signal_events": 6
       },
       "top_entities": [
         {
-          "name": "ProjectHealth",
-          "count": 20
+          "name": "MCPDomain",
+          "count": 5
         },
         {
-          "name": "MCPDomain",
-          "count": 14
+          "name": "ProjectHealth",
+          "count": 4
         },
         {
           "name": "Provider",
-          "count": 10
+          "count": 1
         },
         {
           "name": "Capability",
-          "count": 8
+          "count": 1
         },
         {
           "name": "RiskScope",
-          "count": 6
+          "count": 1
         }
       ],
       "warnings": [
@@ -1294,13 +1513,13 @@
       "matched_count": 0,
       "source_count": 0,
       "match_rate": 0.0,
-      "last_updated": "2026-04-24",
-      "generated_at": "2026-04-24T07:38:11.855736+00:00",
-      "total_reports": 2,
+      "last_updated": "2026-05-07",
+      "generated_at": "2026-05-07T09:32:59.212633+00:00",
+      "total_reports": 6,
       "report_index_path": "MiscMCPRadar/reports/index.html",
       "latest_report_path": "MiscMCPRadar/reports/index.html",
-      "data_origin": "MiscMCPRadar/reports/misc_mcp_20260424_summary.json",
-      "quality_origin": "MiscMCPRadar/reports/misc_mcp_20260428_quality.json",
+      "data_origin": "MiscMCPRadar/reports/misc_mcp_20260507_summary.json",
+      "quality_origin": "MiscMCPRadar/reports/misc_mcp_20260507_quality.json",
       "quality_summary": {
         "total_sources": 2,
         "enabled_sources": 0,
@@ -1321,9 +1540,42 @@
         "real_transport_smoke_tested_source_count": 0,
         "tool_allowlist_present_source_count": 0,
         "credential_required_source_count": 0,
+        "env_preflight_required_source_count": 0,
+        "env_preflight_ready_source_count": 0,
+        "env_preflight_missing_source_count": 0,
+        "env_preflight_missing_var_count": 0,
+        "env_preflight_not_required_source_count": 0,
         "repository_metadata_complete_source_count": 0,
         "repository_metadata_gap_count": 0,
+        "repository_metadata_fresh_source_count": 0,
+        "repository_metadata_stale_source_count": 0,
+        "repository_metadata_incomplete_source_count": 0,
+        "repository_metadata_missing_checked_at_source_count": 0,
+        "repository_metadata_review_required_count": 0,
+        "repository_docs_present_source_count": 0,
+        "repository_docs_missing_source_count": 0,
+        "repository_security_policy_present_source_count": 0,
+        "repository_security_advisory_checked_source_count": 0,
+        "repository_security_advisory_total_count": 0,
+        "repository_security_advisory_open_source_count": 0,
+        "repository_security_enrichment_review_required_count": 0,
         "security_activation_gate_count": 0,
+        "activation_gate_source_count": 0,
+        "activation_gate_total_count": 0,
+        "activation_risk_scope_review_required_source_count": 0,
+        "activation_command_unresolved_source_count": 0,
+        "activation_command_discovery_checked_source_count": 0,
+        "activation_command_discovery_resolved_source_count": 0,
+        "activation_command_discovery_unresolved_source_count": 0,
+        "activation_command_discovery_multi_server_ambiguous_source_count": 0,
+        "activation_command_discovery_status_counts": {},
+        "activation_env_secret_required_source_count": 0,
+        "activation_tool_allowlist_required_source_count": 0,
+        "activation_registry_crosscheck_required_source_count": 0,
+        "activation_fake_transport_required_source_count": 0,
+        "activation_real_transport_required_source_count": 0,
+        "activation_runtime_review_required_source_count": 0,
+        "activation_ready_for_fake_transport_source_count": 0,
         "daily_review_item_count": 0,
         "mcp_directory_entry_events": 0,
         "mcp_tool_result_events": 0,
@@ -1342,28 +1594,28 @@
       "status": "active",
       "pipeline_kind": "summary_json",
       "has_summary_json": true,
-      "article_count": 112,
-      "matched_count": 112,
-      "source_count": 16,
+      "article_count": 10,
+      "matched_count": 10,
+      "source_count": 6,
       "match_rate": 100.0,
-      "last_updated": "2026-04-25",
-      "generated_at": "2026-04-25T20:36:50.742420+09:00",
-      "total_reports": 25,
+      "last_updated": "2026-05-07",
+      "generated_at": "2026-05-07T10:35:37.249022+09:00",
+      "total_reports": 28,
       "report_index_path": "MobilityRadar/reports/index.html",
       "latest_report_path": "MobilityRadar/reports/index.html",
-      "data_origin": "MobilityRadar/reports/mobility_20260425_summary.json",
-      "quality_origin": "MobilityRadar/reports/mobility_20260428_quality.json",
+      "data_origin": "MobilityRadar/reports/mobility_20260507_summary.json",
+      "quality_origin": "MobilityRadar/reports/mobility_quality.json",
       "quality_summary": {
         "total_sources": 29,
-        "enabled_sources": 24,
+        "enabled_sources": 21,
         "tracked_sources": 4,
-        "fresh_sources": 1,
-        "stale_sources": 1,
+        "fresh_sources": 2,
+        "stale_sources": 0,
         "missing_sources": 0,
         "missing_event_sources": 0,
         "unknown_event_date_sources": 0,
-        "not_tracked_sources": 22,
-        "skipped_disabled_sources": 5,
+        "not_tracked_sources": 19,
+        "skipped_disabled_sources": 8,
         "collection_error_count": 0,
         "station_availability_snapshot_events": 5,
         "charger_availability_snapshot_events": 0,
@@ -1386,29 +1638,28 @@
       },
       "top_entities": [
         {
+          "name": "SourceSignal",
+          "count": 22
+        },
+        {
+          "name": "Service",
+          "count": 5
+        },
+        {
           "name": "VehicleType",
-          "count": 69
+          "count": 5
         },
         {
           "name": "EVModel",
-          "count": 63
+          "count": 2
         },
         {
           "name": "Manufacturer",
-          "count": 59
-        },
-        {
-          "name": "ChargingInfra",
-          "count": 36
-        },
-        {
-          "name": "SourceSignal",
-          "count": 22
+          "count": 1
         }
       ],
       "warnings": [
-        "quality freshness gaps: stale=1, missing=0, unknown_event_date=0",
-        "quality report has 5 disabled source(s)"
+        "quality report has 8 disabled source(s)"
       ]
     },
     {
@@ -1418,75 +1669,75 @@
       "status": "active",
       "pipeline_kind": "summary_json",
       "has_summary_json": true,
-      "article_count": 76,
-      "matched_count": 76,
-      "source_count": 10,
+      "article_count": 5,
+      "matched_count": 5,
+      "source_count": 5,
       "match_rate": 100.0,
-      "last_updated": "2026-04-25",
-      "generated_at": "2026-04-25T02:00:07.088635+09:00",
-      "total_reports": 29,
+      "last_updated": "2026-05-07",
+      "generated_at": "2026-05-07T11:14:30.757421+09:00",
+      "total_reports": 32,
       "report_index_path": "MovieRadar/reports/index.html",
       "latest_report_path": "MovieRadar/reports/index.html",
-      "data_origin": "MovieRadar/reports/movie_20260425_summary.json",
-      "quality_origin": "MovieRadar/reports/movie_20260428_quality.json",
+      "data_origin": "MovieRadar/reports/movie_20260507_summary.json",
+      "quality_origin": "MovieRadar/reports/movie_20260507_quality.json",
       "quality_summary": {
         "total_sources": 12,
-        "enabled_sources": 12,
+        "enabled_sources": 10,
         "tracked_sources": 3,
-        "fresh_sources": 1,
-        "stale_sources": 2,
+        "fresh_sources": 3,
+        "stale_sources": 0,
         "missing_sources": 0,
         "missing_event_sources": 0,
         "unknown_event_date_sources": 0,
-        "not_tracked_sources": 9,
-        "skipped_disabled_sources": 0,
+        "not_tracked_sources": 7,
+        "skipped_disabled_sources": 2,
         "collection_error_count": 0,
         "reservation_ranking_events": 0,
         "box_office_events": 2,
         "ott_ranking_events": 0,
-        "release_calendar_events": 10,
-        "movie_signal_event_count": 12,
+        "release_calendar_events": 12,
+        "movie_signal_event_count": 14,
         "official_or_operational_event_count": 1,
         "news_proxy_event_count": 0,
-        "complete_canonical_key_count": 8,
+        "complete_canonical_key_count": 10,
         "proxy_canonical_key_count": 4,
         "missing_canonical_key_count": 0,
         "movie_id_present_count": 0,
-        "normalized_title_present_count": 12,
-        "release_year_present_count": 8,
+        "normalized_title_present_count": 14,
+        "release_year_present_count": 10,
         "rank_present_count": 0,
         "gross_present_count": 0,
-        "platform_present_count": 10,
+        "platform_present_count": 12,
         "event_required_field_gap_count": 10,
-        "tracked_source_gap_count": 2,
+        "tracked_source_gap_count": 0,
         "missing_event_model_count": 2,
         "source_backlog_candidate_count": 4,
-        "daily_review_item_count": 18
+        "daily_review_item_count": 16
       },
       "top_entities": [
         {
           "name": "FilmGeneral",
-          "count": 170
-        },
-        {
-          "name": "SourceSignal",
-          "count": 122
-        },
-        {
-          "name": "Platform",
-          "count": 83
-        },
-        {
-          "name": "Studio",
-          "count": 70
+          "count": 13
         },
         {
           "name": "Genre",
-          "count": 58
+          "count": 7
+        },
+        {
+          "name": "SourceSignal",
+          "count": 7
+        },
+        {
+          "name": "Studio",
+          "count": 5
+        },
+        {
+          "name": "Platform",
+          "count": 5
         }
       ],
       "warnings": [
-        "quality freshness gaps: stale=2, missing=0, unknown_event_date=0"
+        "quality report has 2 disabled source(s)"
       ]
     },
     {
@@ -1496,73 +1747,72 @@
       "status": "active",
       "pipeline_kind": "summary_json",
       "has_summary_json": true,
-      "article_count": 54,
-      "matched_count": 52,
-      "source_count": 11,
-      "match_rate": 96.3,
-      "last_updated": "2026-04-25",
-      "generated_at": "2026-04-25T21:49:34.300174+09:00",
-      "total_reports": 5,
+      "article_count": 17,
+      "matched_count": 17,
+      "source_count": 17,
+      "match_rate": 100.0,
+      "last_updated": "2026-05-07",
+      "generated_at": "2026-05-07T09:59:34.330925+09:00",
+      "total_reports": 8,
       "report_index_path": "PaperRadar/reports/index.html",
       "latest_report_path": "PaperRadar/reports/index.html",
-      "data_origin": "PaperRadar/reports/research_20260425_summary.json",
-      "quality_origin": "PaperRadar/reports/research_20260428_quality.json",
+      "data_origin": "PaperRadar/reports/research_20260507_summary.json",
+      "quality_origin": "PaperRadar/reports/research_20260507_quality.json",
       "quality_summary": {
         "total_sources": 23,
-        "enabled_sources": 19,
+        "enabled_sources": 17,
         "tracked_sources": 14,
-        "fresh_sources": 2,
-        "stale_sources": 8,
+        "fresh_sources": 10,
+        "stale_sources": 0,
         "missing_sources": 0,
         "missing_event_sources": 0,
         "unknown_event_date_sources": 0,
-        "not_tracked_sources": 9,
-        "skipped_disabled_sources": 4,
+        "not_tracked_sources": 7,
+        "skipped_disabled_sources": 6,
         "collection_error_count": 0,
-        "paper_release_events": 401,
-        "citation_snapshot_events": 30,
-        "code_repository_events": 9,
+        "paper_release_events": 219,
+        "citation_snapshot_events": 29,
+        "code_repository_events": 5,
         "benchmark_result_events": 0,
-        "research_signal_event_count": 440,
-        "paper_canonical_key_present_count": 431,
+        "research_signal_event_count": 253,
+        "paper_canonical_key_present_count": 248,
         "repository_canonical_key_present_count": 0,
         "benchmark_canonical_key_present_count": 0,
-        "title_proxy_key_count": 33,
+        "title_proxy_key_count": 20,
         "missing_canonical_key_count": 0,
-        "citation_count_present_count": 30,
-        "code_repository_present_count": 36,
+        "citation_count_present_count": 29,
+        "code_repository_present_count": 14,
         "benchmark_metric_present_count": 0,
-        "event_required_field_gap_count": 9,
-        "tracked_source_gap_count": 8,
+        "event_required_field_gap_count": 5,
+        "tracked_source_gap_count": 0,
         "missing_event_model_count": 1,
         "source_backlog_candidate_count": 4,
-        "daily_review_item_count": 50
+        "daily_review_item_count": 30
       },
       "top_entities": [
         {
           "name": "ResearchGeneral",
-          "count": 246
+          "count": 153
         },
         {
           "name": "Tasks",
-          "count": 15
+          "count": 10
         },
         {
           "name": "Research Areas",
-          "count": 14
+          "count": 7
         },
         {
           "name": "Techniques",
-          "count": 8
+          "count": 6
         },
         {
-          "name": "Institutions",
-          "count": 8
+          "name": "Venues",
+          "count": 2
         }
       ],
       "warnings": [
-        "quality freshness gaps: stale=8, missing=0, unknown_event_date=0",
-        "quality report has 4 disabled source(s)"
+        "quality report has 6 disabled source(s)"
       ]
     },
     {
@@ -1572,61 +1822,69 @@
       "status": "active",
       "pipeline_kind": "summary_json",
       "has_summary_json": true,
-      "article_count": 200,
-      "matched_count": 197,
-      "source_count": 17,
-      "match_rate": 98.5,
-      "last_updated": "2026-04-25",
-      "generated_at": "2026-04-25T20:37:40.425979+09:00",
-      "total_reports": 31,
+      "article_count": 18,
+      "matched_count": 18,
+      "source_count": 13,
+      "match_rate": 100.0,
+      "last_updated": "2026-05-07",
+      "generated_at": "2026-05-07T12:35:07.663750+09:00",
+      "total_reports": 34,
       "report_index_path": "PaperworkRadar/reports/index.html",
       "latest_report_path": "PaperworkRadar/reports/index.html",
-      "data_origin": "PaperworkRadar/reports/paperwork_20260425_summary.json",
-      "quality_origin": "PaperworkRadar/reports/paperwork_20260428_quality.json",
+      "data_origin": "PaperworkRadar/reports/paperwork_20260507_summary.json",
+      "quality_origin": "PaperworkRadar/reports/paperwork_20260507_quality.json",
       "quality_summary": {
         "total_sources": 30,
         "tracked_sources": 14,
-        "fresh_sources": 6,
-        "stale_sources": 8,
+        "fresh_sources": 14,
+        "stale_sources": 0,
         "missing_sources": 0,
         "unknown_event_date_sources": 0,
         "not_tracked_sources": 8,
         "skipped_disabled_sources": 8,
-        "form_revision_events": 108,
-        "filing_deadline_events": 152,
-        "portal_service_change_events": 5,
-        "unique_portal_service_count": 5,
-        "document_diff_count": 108,
+        "form_revision_events": 3,
+        "filing_deadline_events": 3,
+        "portal_service_change_events": 2,
+        "fresh_paperwork_events": 8,
+        "stale_paperwork_events": 0,
+        "undated_paperwork_events": 0,
+        "unique_paperwork_event_key_count": 8,
+        "unique_portal_service_count": 2,
+        "document_diff_count": 3,
         "changed_document_count": 0,
         "new_document_count": 0,
-        "unchanged_document_count": 108,
-        "events_with_evidence_url": 265,
-        "collection_error_count": 0
+        "unchanged_document_count": 3,
+        "events_with_evidence_url": 8,
+        "events_missing_evidence_url": 0,
+        "form_revision_events_with_content_hash": 3,
+        "filing_deadline_events_with_due_date": 1,
+        "portal_service_change_events_with_service_key": 2,
+        "collection_error_count": 0,
+        "daily_review_item_count": 9
       },
       "top_entities": [
         {
           "name": "PaperworkGeneral",
-          "count": 5548
+          "count": 546
         },
         {
           "name": "Registration",
-          "count": 138
+          "count": 15
         },
         {
           "name": "Visa",
-          "count": 71
+          "count": 9
         },
         {
           "name": "TaxDocs",
-          "count": 48
+          "count": 8
         },
         {
           "name": "DigitalGov",
-          "count": 36
+          "count": 5
         }
       ],
       "warnings": [
-        "quality freshness gaps: stale=8, missing=0, unknown_event_date=0",
         "quality report has 8 disabled source(s)"
       ]
     },
@@ -1637,64 +1895,69 @@
       "status": "active",
       "pipeline_kind": "summary_json",
       "has_summary_json": true,
-      "article_count": 185,
-      "matched_count": 171,
-      "source_count": 17,
-      "match_rate": 92.4,
-      "last_updated": "2026-04-25",
-      "generated_at": "2026-04-25T21:50:08.316742+09:00",
-      "total_reports": 31,
+      "article_count": 16,
+      "matched_count": 16,
+      "source_count": 7,
+      "match_rate": 100.0,
+      "last_updated": "2026-05-07",
+      "generated_at": "2026-05-07T10:00:46.393557+09:00",
+      "total_reports": 34,
       "report_index_path": "PolicyRadar/reports/index.html",
       "latest_report_path": "PolicyRadar/reports/index.html",
-      "data_origin": "PolicyRadar/reports/policy_20260425_summary.json",
-      "quality_origin": "PolicyRadar/reports/policy_20260428_quality.json",
+      "data_origin": "PolicyRadar/reports/policy_20260507_summary.json",
+      "quality_origin": "PolicyRadar/reports/policy_20260507_quality.json",
       "quality_summary": {
         "total_sources": 34,
         "tracked_sources": 8,
-        "fresh_sources": 3,
-        "stale_sources": 5,
+        "fresh_sources": 8,
+        "stale_sources": 0,
         "missing_sources": 0,
         "unknown_event_date_sources": 0,
         "not_tracked_sources": 21,
         "skipped_disabled_sources": 5,
         "collection_error_count": 0,
         "validation_error_count": 0,
-        "fresh_policy_events": 5,
-        "stale_policy_events": 206,
+        "fresh_policy_events": 17,
+        "stale_policy_events": 195,
         "undated_policy_events": 0,
         "unique_policy_event_key_count": 209,
-        "events_with_evidence_url": 211,
+        "events_with_evidence_url": 212,
+        "events_missing_evidence_url": 0,
+        "public_consultation_events_with_deadline": 2,
+        "policy_effective_date_events_with_effective_date": 0,
+        "platform_policy_change_events_with_effective_date": 0,
+        "enforcement_action_events_with_outcome": 59,
         "security_framework_official_scope_events": 3,
-        "public_consultation_events": 12,
-        "enforcement_action_events": 97,
-        "policy_effective_date_events": 98,
+        "public_consultation_events": 15,
+        "enforcement_action_events": 102,
+        "policy_effective_date_events": 91,
         "platform_policy_change_events": 1,
-        "security_classification_framework_events": 3
+        "security_classification_framework_events": 3,
+        "daily_review_item_count": 100
       },
       "top_entities": [
         {
           "name": "Regulation",
-          "count": 320
-        },
-        {
-          "name": "Legislation",
-          "count": 159
-        },
-        {
-          "name": "JudicialRuling",
-          "count": 62
+          "count": 21
         },
         {
           "name": "Privacy",
-          "count": 41
+          "count": 12
+        },
+        {
+          "name": "Legislation",
+          "count": 5
         },
         {
           "name": "ExecutiveOrder",
-          "count": 29
+          "count": 3
+        },
+        {
+          "name": "FinancialRegulation",
+          "count": 3
         }
       ],
       "warnings": [
-        "quality freshness gaps: stale=5, missing=0, unknown_event_date=0",
         "quality report has 5 disabled source(s)"
       ]
     },
@@ -1709,13 +1972,13 @@
       "matched_count": 100,
       "source_count": 4,
       "match_rate": 100.0,
-      "last_updated": "2026-04-24",
-      "generated_at": "2026-04-24T23:54:03.269802+09:00",
-      "total_reports": 21,
+      "last_updated": "2026-05-07",
+      "generated_at": "2026-05-07T10:07:29.569908+09:00",
+      "total_reports": 24,
       "report_index_path": "PriceRadar/reports/index.html",
       "latest_report_path": "PriceRadar/reports/index.html",
-      "data_origin": "PriceRadar/reports/price_20260424_summary.json",
-      "quality_origin": "PriceRadar/reports/price_20260408_quality.json",
+      "data_origin": "PriceRadar/reports/price_20260507_summary.json",
+      "quality_origin": "PriceRadar/reports/price_quality.json",
       "quality_summary": {
         "priority": "P1",
         "primary_motion": "conversion",
@@ -1743,7 +2006,7 @@
       "top_entities": [
         {
           "name": "price_band:10k_50k",
-          "count": 63
+          "count": 62
         },
         {
           "name": "source:enuri_main",
@@ -1751,7 +2014,7 @@
         },
         {
           "name": "discount:50%+",
-          "count": 44
+          "count": 43
         },
         {
           "name": "platform:coupang",
@@ -1771,74 +2034,77 @@
       "status": "active",
       "pipeline_kind": "summary_json",
       "has_summary_json": true,
-      "article_count": 146,
-      "matched_count": 120,
+      "article_count": 8,
+      "matched_count": 8,
       "source_count": 8,
-      "match_rate": 82.2,
-      "last_updated": "2026-04-25",
-      "generated_at": "2026-04-25T00:06:39.800661+09:00",
-      "total_reports": 30,
+      "match_rate": 100.0,
+      "last_updated": "2026-05-07",
+      "generated_at": "2026-05-07T10:01:19.415342+09:00",
+      "total_reports": 33,
       "report_index_path": "PropertyRadar/reports/index.html",
       "latest_report_path": "PropertyRadar/reports/index.html",
-      "data_origin": "PropertyRadar/reports/property_20260425_summary.json",
-      "quality_origin": "PropertyRadar/reports/property_20260428_quality.json",
+      "data_origin": "PropertyRadar/reports/property_20260507_summary.json",
+      "quality_origin": "PropertyRadar/reports/property_20260507_quality.json",
       "quality_summary": {
         "total_sources": 17,
         "enabled_sources": 9,
         "tracked_sources": 6,
-        "fresh_sources": 1,
-        "stale_sources": 2,
+        "fresh_sources": 3,
+        "stale_sources": 0,
         "missing_sources": 0,
         "missing_event_sources": 1,
         "unknown_event_date_sources": 0,
         "not_tracked_sources": 5,
         "skipped_disabled_sources": 8,
         "collection_error_count": 0,
-        "transaction_record_events": 9,
-        "presale_competition_events": 22,
+        "transaction_record_events": 8,
+        "presale_competition_events": 16,
         "listing_inventory_events": 3,
         "permit_completion_events": 0,
-        "property_signal_event_count": 34,
+        "property_signal_event_count": 27,
         "official_or_operational_event_count": 2,
-        "news_proxy_event_count": 31,
+        "news_proxy_event_count": 24,
         "complete_canonical_key_count": 0,
-        "proxy_canonical_key_count": 24,
-        "missing_canonical_key_count": 10,
-        "region_code_present_count": 5,
-        "project_key_present_count": 22,
-        "transaction_price_present_count": 15,
-        "listing_count_present_count": 8,
-        "competition_rate_present_count": 4,
+        "proxy_canonical_key_count": 19,
+        "missing_canonical_key_count": 8,
+        "region_code_present_count": 4,
+        "project_key_present_count": 16,
+        "transaction_price_present_count": 13,
+        "listing_count_present_count": 4,
+        "competition_rate_present_count": 0,
         "event_required_field_gap_count": 0,
-        "tracked_source_gap_count": 3,
+        "tracked_source_gap_count": 1,
         "missing_event_model_count": 1,
         "source_backlog_candidate_count": 4,
+        "source_activation_item_count": 7,
+        "disabled_operational_source_count": 2,
+        "enabled_operational_gap_count": 1,
+        "operational_coverage_status": "activation_required",
         "daily_review_item_count": 50
       },
       "top_entities": [
         {
-          "name": "Market",
-          "count": 173
+          "name": "PropertyGeneral",
+          "count": 34
         },
         {
-          "name": "PropertyGeneral",
-          "count": 166
+          "name": "Market",
+          "count": 21
         },
         {
           "name": "PropertyType",
-          "count": 93
-        },
-        {
-          "name": "Location",
-          "count": 43
+          "count": 20
         },
         {
           "name": "Policy",
-          "count": 32
+          "count": 5
+        },
+        {
+          "name": "Location",
+          "count": 4
         }
       ],
       "warnings": [
-        "quality freshness gaps: stale=2, missing=0, unknown_event_date=0",
         "quality report has 8 disabled source(s)"
       ]
     },
@@ -1849,70 +2115,105 @@
       "status": "active",
       "pipeline_kind": "summary_json",
       "has_summary_json": true,
-      "article_count": 7,
-      "matched_count": 7,
+      "article_count": 1,
+      "matched_count": 1,
       "source_count": 1,
       "match_rate": 100.0,
-      "last_updated": "2026-04-24",
-      "generated_at": "2026-04-24T12:44:37.535976+00:00",
-      "total_reports": 2,
+      "last_updated": "2026-05-08",
+      "generated_at": "2026-05-08T08:04:22.809863+00:00",
+      "total_reports": 8,
       "report_index_path": "PublicDataMCPRadar/reports/index.html",
       "latest_report_path": "PublicDataMCPRadar/reports/index.html",
-      "data_origin": "PublicDataMCPRadar/reports/publicdata_mcp_20260424_summary.json",
-      "quality_origin": "PublicDataMCPRadar/reports/publicdata_mcp_20260428_quality.json",
+      "data_origin": "PublicDataMCPRadar/reports/publicdata_mcp_20260508_summary.json",
+      "quality_origin": "PublicDataMCPRadar/reports/publicdata_mcp_20260508_quality.json",
       "quality_summary": {
-        "total_sources": 3,
+        "total_sources": 8,
         "enabled_sources": 1,
-        "tracked_sources": 3,
+        "tracked_sources": 8,
         "fresh_sources": 1,
         "stale_sources": 0,
         "missing_sources": 0,
         "missing_event_sources": 0,
         "unknown_event_date_sources": 0,
         "not_tracked_sources": 0,
-        "skipped_disabled_sources": 2,
+        "skipped_disabled_sources": 7,
         "collection_error_count": 0,
-        "mcp_signal_event_count": 10,
-        "directory_seed_source_count": 3,
-        "mcp_server_candidate_count": 2,
+        "mcp_signal_event_count": 17,
+        "directory_seed_source_count": 1,
+        "mcp_server_candidate_count": 7,
         "enabled_mcp_server_source_count": 0,
-        "blocked_mcp_server_source_count": 2,
+        "blocked_mcp_server_source_count": 7,
         "real_transport_smoke_tested_source_count": 0,
-        "tool_allowlist_present_source_count": 0,
-        "credential_required_source_count": 2,
-        "repository_metadata_complete_source_count": 2,
+        "tool_allowlist_present_source_count": 7,
+        "credential_required_source_count": 6,
+        "env_preflight_required_source_count": 6,
+        "env_preflight_ready_source_count": 0,
+        "env_preflight_missing_source_count": 6,
+        "env_preflight_missing_var_count": 6,
+        "env_preflight_not_required_source_count": 1,
+        "repository_metadata_complete_source_count": 7,
         "repository_metadata_gap_count": 0,
-        "security_activation_gate_count": 11,
-        "daily_review_item_count": 2,
+        "repository_metadata_fresh_source_count": 7,
+        "repository_metadata_stale_source_count": 0,
+        "repository_metadata_incomplete_source_count": 0,
+        "repository_metadata_missing_checked_at_source_count": 0,
+        "repository_metadata_review_required_count": 0,
+        "repository_docs_present_source_count": 7,
+        "repository_docs_missing_source_count": 0,
+        "repository_security_policy_present_source_count": 0,
+        "repository_security_advisory_checked_source_count": 7,
+        "repository_security_advisory_total_count": 0,
+        "repository_security_advisory_open_source_count": 0,
+        "repository_security_enrichment_review_required_count": 0,
+        "security_activation_gate_count": 6,
+        "activation_gate_source_count": 6,
+        "activation_gate_total_count": 6,
+        "activation_risk_scope_review_required_source_count": 0,
+        "activation_command_unresolved_source_count": 0,
+        "activation_command_discovery_checked_source_count": 6,
+        "activation_command_discovery_resolved_source_count": 6,
+        "activation_command_discovery_unresolved_source_count": 0,
+        "activation_command_discovery_multi_server_ambiguous_source_count": 0,
+        "activation_command_discovery_status_counts": {
+          "resolved_package_uvx": 6
+        },
+        "activation_env_secret_required_source_count": 0,
+        "activation_tool_allowlist_required_source_count": 0,
+        "activation_registry_crosscheck_required_source_count": 0,
+        "activation_fake_transport_required_source_count": 0,
+        "activation_real_transport_required_source_count": 6,
+        "activation_runtime_review_required_source_count": 0,
+        "activation_ready_for_fake_transport_source_count": 0,
+        "daily_review_item_count": 13,
         "mcp_directory_entry_events": 7,
         "mcp_tool_result_events": 0,
-        "linked_repository_metadata_events": 0,
+        "linked_repository_metadata_events": 7,
         "risk_scope_signal_events": 3
       },
       "top_entities": [
         {
           "name": "ProjectHealth",
-          "count": 20
-        },
-        {
-          "name": "Capability",
-          "count": 10
+          "count": 3
         },
         {
           "name": "MCPDomain",
-          "count": 9
+          "count": 1
         },
         {
           "name": "Provider",
-          "count": 5
+          "count": 1
+        },
+        {
+          "name": "Capability",
+          "count": 1
         },
         {
           "name": "RiskScope",
-          "count": 3
+          "count": 1
         }
       ],
       "warnings": [
-        "quality report has 2 disabled source(s)"
+        "quality report has 7 disabled source(s)"
       ]
     },
     {
@@ -1922,75 +2223,74 @@
       "status": "active",
       "pipeline_kind": "summary_json",
       "has_summary_json": true,
-      "article_count": 200,
-      "matched_count": 200,
-      "source_count": 8,
+      "article_count": 17,
+      "matched_count": 17,
+      "source_count": 17,
       "match_rate": 100.0,
-      "last_updated": "2026-04-25",
-      "generated_at": "2026-04-25T23:32:38.544016+09:00",
-      "total_reports": 32,
+      "last_updated": "2026-05-07",
+      "generated_at": "2026-05-07T10:02:33.053940+09:00",
+      "total_reports": 35,
       "report_index_path": "QueueRadar/reports/index.html",
       "latest_report_path": "QueueRadar/reports/index.html",
-      "data_origin": "QueueRadar/reports/queue_20260425_summary.json",
-      "quality_origin": "QueueRadar/reports/queue_20260428_quality.json",
+      "data_origin": "QueueRadar/reports/queue_20260507_summary.json",
+      "quality_origin": "QueueRadar/reports/queue_20260507_quality.json",
       "quality_summary": {
         "total_sources": 39,
         "enabled_sources": 23,
         "tracked_sources": 12,
-        "fresh_sources": 0,
-        "stale_sources": 12,
+        "fresh_sources": 12,
+        "stale_sources": 0,
         "missing_sources": 0,
         "missing_event_sources": 0,
         "unknown_event_date_sources": 0,
         "not_tracked_sources": 11,
         "skipped_disabled_sources": 16,
         "collection_error_count": 0,
-        "wait_time_snapshot_events": 364,
+        "wait_time_snapshot_events": 12,
         "reservation_slot_events": 0,
         "ticket_price_events": 0,
         "weather_context_events": 0,
-        "queue_signal_event_count": 364,
-        "wait_time_observation_count": 364,
-        "open_attraction_count": 161,
-        "closed_attraction_count": 203,
-        "zero_wait_count": 267,
-        "high_wait_review_count": 11,
-        "target_canonical_key_present_count": 364,
-        "attraction_canonical_key_present_count": 364,
+        "queue_signal_event_count": 12,
+        "wait_time_observation_count": 12,
+        "open_attraction_count": 6,
+        "closed_attraction_count": 6,
+        "zero_wait_count": 9,
+        "high_wait_review_count": 1,
+        "target_canonical_key_present_count": 12,
+        "attraction_canonical_key_present_count": 12,
         "reservation_canonical_key_present_count": 0,
         "ticket_canonical_key_present_count": 0,
         "weather_context_present_count": 0,
         "missing_canonical_key_count": 0,
         "event_required_field_gap_count": 0,
-        "tracked_source_gap_count": 12,
+        "tracked_source_gap_count": 0,
         "missing_event_model_count": 3,
         "source_backlog_candidate_count": 4,
-        "daily_review_item_count": 30
+        "daily_review_item_count": 8
       },
       "top_entities": [
         {
-          "name": "RealTimeData",
-          "count": 1200
+          "name": "QueueGeneral",
+          "count": 193
         },
         {
-          "name": "QueueGeneral",
-          "count": 974
+          "name": "RealTimeData",
+          "count": 75
         },
         {
           "name": "WaitTime",
-          "count": 876
-        },
-        {
-          "name": "Status",
-          "count": 400
+          "count": 55
         },
         {
           "name": "Location",
-          "count": 262
+          "count": 31
+        },
+        {
+          "name": "Status",
+          "count": 27
         }
       ],
       "warnings": [
-        "quality freshness gaps: stale=12, missing=0, unknown_event_date=0",
         "quality report has 16 disabled source(s)"
       ]
     },
@@ -2001,17 +2301,17 @@
       "status": "active",
       "pipeline_kind": "summary_json",
       "has_summary_json": true,
-      "article_count": 3,
-      "matched_count": 3,
+      "article_count": 1,
+      "matched_count": 1,
       "source_count": 1,
       "match_rate": 100.0,
-      "last_updated": "2026-04-24",
-      "generated_at": "2026-04-24T12:44:37.260374+00:00",
-      "total_reports": 2,
+      "last_updated": "2026-05-07",
+      "generated_at": "2026-05-07T09:33:34.856155+00:00",
+      "total_reports": 7,
       "report_index_path": "RealEstateMCPRadar/reports/index.html",
       "latest_report_path": "RealEstateMCPRadar/reports/index.html",
-      "data_origin": "RealEstateMCPRadar/reports/realestate_mcp_20260424_summary.json",
-      "quality_origin": "RealEstateMCPRadar/reports/realestate_mcp_20260428_quality.json",
+      "data_origin": "RealEstateMCPRadar/reports/realestate_mcp_20260507_summary.json",
+      "quality_origin": "RealEstateMCPRadar/reports/realestate_mcp_20260507_quality.json",
       "quality_summary": {
         "total_sources": 2,
         "enabled_sources": 1,
@@ -2024,35 +2324,66 @@
         "not_tracked_sources": 0,
         "skipped_disabled_sources": 1,
         "collection_error_count": 0,
-        "mcp_signal_event_count": 4,
-        "directory_seed_source_count": 2,
+        "mcp_signal_event_count": 5,
+        "directory_seed_source_count": 1,
         "mcp_server_candidate_count": 1,
         "enabled_mcp_server_source_count": 0,
         "blocked_mcp_server_source_count": 1,
         "real_transport_smoke_tested_source_count": 0,
-        "tool_allowlist_present_source_count": 0,
+        "tool_allowlist_present_source_count": 1,
         "credential_required_source_count": 1,
+        "env_preflight_required_source_count": 1,
+        "env_preflight_ready_source_count": 0,
+        "env_preflight_missing_source_count": 1,
+        "env_preflight_missing_var_count": 3,
+        "env_preflight_not_required_source_count": 0,
         "repository_metadata_complete_source_count": 1,
         "repository_metadata_gap_count": 0,
-        "security_activation_gate_count": 5,
-        "daily_review_item_count": 1,
+        "repository_metadata_fresh_source_count": 1,
+        "repository_metadata_stale_source_count": 0,
+        "repository_metadata_incomplete_source_count": 0,
+        "repository_metadata_missing_checked_at_source_count": 0,
+        "repository_metadata_review_required_count": 0,
+        "repository_docs_present_source_count": 1,
+        "repository_docs_missing_source_count": 0,
+        "repository_security_policy_present_source_count": 0,
+        "repository_security_advisory_checked_source_count": 1,
+        "repository_security_advisory_total_count": 0,
+        "repository_security_advisory_open_source_count": 0,
+        "repository_security_enrichment_review_required_count": 0,
+        "security_activation_gate_count": 1,
+        "activation_gate_source_count": 1,
+        "activation_gate_total_count": 1,
+        "activation_risk_scope_review_required_source_count": 0,
+        "activation_command_unresolved_source_count": 0,
+        "activation_command_discovery_checked_source_count": 1,
+        "activation_command_discovery_resolved_source_count": 1,
+        "activation_command_discovery_unresolved_source_count": 0,
+        "activation_command_discovery_multi_server_ambiguous_source_count": 0,
+        "activation_command_discovery_status_counts": {
+          "resolved_python_file": 1
+        },
+        "activation_env_secret_required_source_count": 0,
+        "activation_tool_allowlist_required_source_count": 0,
+        "activation_registry_crosscheck_required_source_count": 0,
+        "activation_fake_transport_required_source_count": 0,
+        "activation_real_transport_required_source_count": 1,
+        "activation_runtime_review_required_source_count": 0,
+        "activation_ready_for_fake_transport_source_count": 0,
+        "daily_review_item_count": 2,
         "mcp_directory_entry_events": 3,
         "mcp_tool_result_events": 0,
-        "linked_repository_metadata_events": 0,
+        "linked_repository_metadata_events": 1,
         "risk_scope_signal_events": 1
       },
       "top_entities": [
         {
           "name": "MCPDomain",
-          "count": 7
+          "count": 2
         },
         {
           "name": "ProjectHealth",
-          "count": 6
-        },
-        {
-          "name": "Capability",
-          "count": 1
+          "count": 2
         },
         {
           "name": "RiskScope",
@@ -2070,56 +2401,64 @@
       "status": "active",
       "pipeline_kind": "summary_json",
       "has_summary_json": true,
-      "article_count": 129,
-      "matched_count": 129,
-      "source_count": 14,
+      "article_count": 19,
+      "matched_count": 19,
+      "source_count": 8,
       "match_rate": 100.0,
-      "last_updated": "2026-04-25",
-      "generated_at": "2026-04-25T12:06:09.771892+09:00",
-      "total_reports": 31,
+      "last_updated": "2026-05-07",
+      "generated_at": "2026-05-07T10:03:12.978370+09:00",
+      "total_reports": 34,
       "report_index_path": "RefundRadar/reports/index.html",
       "latest_report_path": "RefundRadar/reports/index.html",
-      "data_origin": "RefundRadar/reports/refund_20260425_summary.json",
-      "quality_origin": "RefundRadar/reports/refund_20260428_quality.json",
+      "data_origin": "RefundRadar/reports/refund_20260507_summary.json",
+      "quality_origin": "RefundRadar/reports/refund_20260507_quality.json",
       "quality_summary": {
         "total_sources": 39,
         "tracked_sources": 6,
-        "fresh_sources": 0,
-        "stale_sources": 6,
+        "fresh_sources": 6,
+        "stale_sources": 0,
         "missing_sources": 0,
         "unknown_event_date_sources": 0,
         "not_tracked_sources": 13,
         "skipped_disabled_sources": 20,
         "collection_error_count": 0,
-        "refund_claim_window_events": 18,
-        "recall_refund_notice_events": 42,
-        "complaint_resolution_events": 46,
-        "refund_policy_change_events": 0
+        "fresh_refund_events": 21,
+        "stale_refund_events": 0,
+        "undated_refund_events": 0,
+        "unique_refund_event_key_count": 21,
+        "events_with_evidence_url": 21,
+        "refund_claim_window_events_with_deadline": 1,
+        "complaint_resolution_events_with_status": 6,
+        "refund_policy_change_events_with_effective_date": 0,
+        "refund_claim_window_events": 9,
+        "recall_refund_notice_events": 1,
+        "complaint_resolution_events": 11,
+        "refund_policy_change_events": 0,
+        "daily_review_item_count": 26
       },
       "top_entities": [
         {
           "name": "RefundGeneral",
-          "count": 2428
+          "count": 262
         },
         {
           "name": "SourceSignal",
-          "count": 197
-        },
-        {
-          "name": "FinancialAmount",
-          "count": 106
+          "count": 42
         },
         {
           "name": "ConsumerProtection",
-          "count": 81
+          "count": 12
         },
         {
-          "name": "TaxBenefit",
-          "count": 80
+          "name": "FinancialAmount",
+          "count": 9
+        },
+        {
+          "name": "RefundType",
+          "count": 8
         }
       ],
       "warnings": [
-        "quality freshness gaps: stale=6, missing=0, unknown_event_date=0",
         "quality report has 20 disabled source(s)"
       ]
     },
@@ -2130,165 +2469,17 @@
       "status": "active",
       "pipeline_kind": "summary_json",
       "has_summary_json": true,
-      "article_count": 2,
-      "matched_count": 2,
+      "article_count": 1,
+      "matched_count": 1,
       "source_count": 1,
       "match_rate": 100.0,
-      "last_updated": "2026-04-24",
-      "generated_at": "2026-04-24T12:44:37.215300+00:00",
-      "total_reports": 2,
+      "last_updated": "2026-05-07",
+      "generated_at": "2026-05-07T09:33:54.616166+00:00",
+      "total_reports": 7,
       "report_index_path": "SearchTrendMCPRadar/reports/index.html",
       "latest_report_path": "SearchTrendMCPRadar/reports/index.html",
-      "data_origin": "SearchTrendMCPRadar/reports/search_trend_mcp_20260424_summary.json",
-      "quality_origin": "SearchTrendMCPRadar/reports/search_trend_mcp_20260428_quality.json",
-      "quality_summary": {
-        "total_sources": 3,
-        "enabled_sources": 1,
-        "tracked_sources": 3,
-        "fresh_sources": 1,
-        "stale_sources": 0,
-        "missing_sources": 0,
-        "missing_event_sources": 0,
-        "unknown_event_date_sources": 0,
-        "not_tracked_sources": 0,
-        "skipped_disabled_sources": 2,
-        "collection_error_count": 0,
-        "mcp_signal_event_count": 2,
-        "directory_seed_source_count": 3,
-        "mcp_server_candidate_count": 2,
-        "enabled_mcp_server_source_count": 0,
-        "blocked_mcp_server_source_count": 2,
-        "real_transport_smoke_tested_source_count": 0,
-        "tool_allowlist_present_source_count": 2,
-        "credential_required_source_count": 2,
-        "repository_metadata_complete_source_count": 1,
-        "repository_metadata_gap_count": 1,
-        "security_activation_gate_count": 9,
-        "daily_review_item_count": 3,
-        "mcp_directory_entry_events": 2,
-        "mcp_tool_result_events": 0,
-        "linked_repository_metadata_events": 0,
-        "risk_scope_signal_events": 0
-      },
-      "top_entities": [
-        {
-          "name": "MCPDomain",
-          "count": 10
-        },
-        {
-          "name": "Capability",
-          "count": 5
-        },
-        {
-          "name": "Provider",
-          "count": 4
-        },
-        {
-          "name": "ProjectHealth",
-          "count": 4
-        }
-      ],
-      "warnings": [
-        "quality report has 2 disabled source(s)"
-      ]
-    },
-    {
-      "repo": "SubscriptionRadar",
-      "display_name": "Subscription",
-      "category": "subscription",
-      "status": "active",
-      "pipeline_kind": "summary_json",
-      "has_summary_json": true,
-      "article_count": 70,
-      "matched_count": 70,
-      "source_count": 23,
-      "match_rate": 100.0,
-      "last_updated": "2026-04-25",
-      "generated_at": "2026-04-25T12:18:18.909294+09:00",
-      "total_reports": 31,
-      "report_index_path": "SubscriptionRadar/reports/index.html",
-      "latest_report_path": "SubscriptionRadar/reports/index.html",
-      "data_origin": "SubscriptionRadar/reports/subscription_20260425_summary.json",
-      "quality_origin": "SubscriptionRadar/reports/subscription_20260428_quality.json",
-      "quality_summary": {
-        "total_sources": 51,
-        "enabled_sources": 37,
-        "tracked_sources": 25,
-        "fresh_sources": 11,
-        "quiet_sources": 4,
-        "stale_sources": 1,
-        "missing_sources": 0,
-        "missing_event_sources": 0,
-        "unknown_event_date_sources": 0,
-        "not_tracked_sources": 21,
-        "skipped_disabled_sources": 14,
-        "collection_error_count": 0,
-        "pricing_page_snapshot_events": 5,
-        "plan_change_notice_events": 3,
-        "app_store_ranking_events": 10,
-        "churn_proxy_events": 10,
-        "subscription_signal_event_count": 28,
-        "official_pricing_page_event_count": 5,
-        "community_churn_proxy_event_count": 0,
-        "plan_canonical_key_present_count": 8,
-        "vendor_proxy_key_count": 0,
-        "price_amount_present_count": 5,
-        "currency_present_count": 13,
-        "change_type_present_count": 5,
-        "app_ranking_key_present_count": 10,
-        "churn_metric_present_count": 3,
-        "missing_canonical_key_count": 0,
-        "event_required_field_gap_count": 7,
-        "tracked_source_gap_count": 1,
-        "missing_event_model_count": 0,
-        "source_backlog_candidate_count": 4,
-        "daily_review_item_count": 12
-      },
-      "top_entities": [
-        {
-          "name": "Service",
-          "count": 155
-        },
-        {
-          "name": "Price",
-          "count": 111
-        },
-        {
-          "name": "Subscription",
-          "count": 92
-        },
-        {
-          "name": "Provider",
-          "count": 56
-        },
-        {
-          "name": "SourceSignal",
-          "count": 45
-        }
-      ],
-      "warnings": [
-        "quality freshness gaps: stale=1, missing=0, unknown_event_date=0",
-        "quality report has 14 disabled source(s)"
-      ]
-    },
-    {
-      "repo": "TravelMCPRadar",
-      "display_name": "TravelMCP",
-      "category": "travel_mcp",
-      "status": "active",
-      "pipeline_kind": "summary_json",
-      "has_summary_json": true,
-      "article_count": 2,
-      "matched_count": 2,
-      "source_count": 1,
-      "match_rate": 100.0,
-      "last_updated": "2026-04-24",
-      "generated_at": "2026-04-24T12:44:37.213178+00:00",
-      "total_reports": 2,
-      "report_index_path": "TravelMCPRadar/reports/index.html",
-      "latest_report_path": "TravelMCPRadar/reports/index.html",
-      "data_origin": "TravelMCPRadar/reports/travel_mcp_20260424_summary.json",
-      "quality_origin": "TravelMCPRadar/reports/travel_mcp_20260428_quality.json",
+      "data_origin": "SearchTrendMCPRadar/reports/search_trend_mcp_20260507_summary.json",
+      "quality_origin": "SearchTrendMCPRadar/reports/search_trend_mcp_20260507_quality.json",
       "quality_summary": {
         "total_sources": 3,
         "enabled_sources": 1,
@@ -2302,21 +2493,56 @@
         "skipped_disabled_sources": 2,
         "collection_error_count": 0,
         "mcp_signal_event_count": 4,
-        "directory_seed_source_count": 3,
+        "directory_seed_source_count": 1,
         "mcp_server_candidate_count": 2,
         "enabled_mcp_server_source_count": 0,
         "blocked_mcp_server_source_count": 2,
         "real_transport_smoke_tested_source_count": 0,
-        "tool_allowlist_present_source_count": 1,
+        "tool_allowlist_present_source_count": 2,
         "credential_required_source_count": 2,
-        "repository_metadata_complete_source_count": 1,
-        "repository_metadata_gap_count": 1,
-        "security_activation_gate_count": 10,
-        "daily_review_item_count": 3,
+        "env_preflight_required_source_count": 2,
+        "env_preflight_ready_source_count": 0,
+        "env_preflight_missing_source_count": 2,
+        "env_preflight_missing_var_count": 5,
+        "env_preflight_not_required_source_count": 0,
+        "repository_metadata_complete_source_count": 2,
+        "repository_metadata_gap_count": 0,
+        "repository_metadata_fresh_source_count": 2,
+        "repository_metadata_stale_source_count": 0,
+        "repository_metadata_incomplete_source_count": 0,
+        "repository_metadata_missing_checked_at_source_count": 0,
+        "repository_metadata_review_required_count": 0,
+        "repository_docs_present_source_count": 2,
+        "repository_docs_missing_source_count": 0,
+        "repository_security_policy_present_source_count": 0,
+        "repository_security_advisory_checked_source_count": 2,
+        "repository_security_advisory_total_count": 0,
+        "repository_security_advisory_open_source_count": 0,
+        "repository_security_enrichment_review_required_count": 0,
+        "security_activation_gate_count": 2,
+        "activation_gate_source_count": 2,
+        "activation_gate_total_count": 2,
+        "activation_risk_scope_review_required_source_count": 0,
+        "activation_command_unresolved_source_count": 0,
+        "activation_command_discovery_checked_source_count": 1,
+        "activation_command_discovery_resolved_source_count": 1,
+        "activation_command_discovery_unresolved_source_count": 0,
+        "activation_command_discovery_multi_server_ambiguous_source_count": 0,
+        "activation_command_discovery_status_counts": {
+          "resolved_local_uv_file": 1
+        },
+        "activation_env_secret_required_source_count": 0,
+        "activation_tool_allowlist_required_source_count": 0,
+        "activation_registry_crosscheck_required_source_count": 0,
+        "activation_fake_transport_required_source_count": 0,
+        "activation_real_transport_required_source_count": 2,
+        "activation_runtime_review_required_source_count": 0,
+        "activation_ready_for_fake_transport_source_count": 0,
+        "daily_review_item_count": 4,
         "mcp_directory_entry_events": 2,
         "mcp_tool_result_events": 0,
-        "linked_repository_metadata_events": 0,
-        "risk_scope_signal_events": 2
+        "linked_repository_metadata_events": 2,
+        "risk_scope_signal_events": 0
       },
       "top_entities": [
         {
@@ -2324,16 +2550,196 @@
           "count": 6
         },
         {
+          "name": "Capability",
+          "count": 3
+        },
+        {
+          "name": "Provider",
+          "count": 2
+        },
+        {
           "name": "ProjectHealth",
-          "count": 5
+          "count": 2
+        }
+      ],
+      "warnings": [
+        "quality report has 2 disabled source(s)"
+      ]
+    },
+    {
+      "repo": "SubscriptionRadar",
+      "display_name": "Subscription",
+      "category": "subscription",
+      "status": "active",
+      "pipeline_kind": "summary_json",
+      "has_summary_json": true,
+      "article_count": 11,
+      "matched_count": 11,
+      "source_count": 11,
+      "match_rate": 100.0,
+      "last_updated": "2026-05-07",
+      "generated_at": "2026-05-07T11:20:05.963172+09:00",
+      "total_reports": 34,
+      "report_index_path": "SubscriptionRadar/reports/index.html",
+      "latest_report_path": "SubscriptionRadar/reports/index.html",
+      "data_origin": "SubscriptionRadar/reports/subscription_20260507_summary.json",
+      "quality_origin": "SubscriptionRadar/reports/subscription_20260507_quality.json",
+      "quality_summary": {
+        "total_sources": 51,
+        "enabled_sources": 37,
+        "tracked_sources": 25,
+        "fresh_sources": 16,
+        "quiet_sources": 0,
+        "stale_sources": 0,
+        "missing_sources": 0,
+        "missing_event_sources": 0,
+        "unknown_event_date_sources": 0,
+        "not_tracked_sources": 21,
+        "skipped_disabled_sources": 14,
+        "collection_error_count": 0,
+        "pricing_page_snapshot_events": 5,
+        "plan_change_notice_events": 6,
+        "app_store_ranking_events": 11,
+        "churn_proxy_events": 13,
+        "subscription_signal_event_count": 35,
+        "official_pricing_page_event_count": 5,
+        "community_churn_proxy_event_count": 0,
+        "plan_canonical_key_present_count": 11,
+        "vendor_proxy_key_count": 2,
+        "price_amount_present_count": 5,
+        "currency_present_count": 12,
+        "change_type_present_count": 7,
+        "app_ranking_key_present_count": 11,
+        "churn_metric_present_count": 6,
+        "missing_canonical_key_count": 0,
+        "event_required_field_gap_count": 11,
+        "tracked_source_gap_count": 0,
+        "missing_event_model_count": 0,
+        "source_backlog_candidate_count": 4,
+        "daily_review_item_count": 15
+      },
+      "top_entities": [
+        {
+          "name": "Subscription",
+          "count": 37
+        },
+        {
+          "name": "Service",
+          "count": 36
+        },
+        {
+          "name": "Price",
+          "count": 32
+        },
+        {
+          "name": "SourceSignal",
+          "count": 26
+        },
+        {
+          "name": "Provider",
+          "count": 18
+        }
+      ],
+      "warnings": [
+        "quality report has 14 disabled source(s)"
+      ]
+    },
+    {
+      "repo": "TravelMCPRadar",
+      "display_name": "TravelMCP",
+      "category": "travel_mcp",
+      "status": "active",
+      "pipeline_kind": "summary_json",
+      "has_summary_json": true,
+      "article_count": 1,
+      "matched_count": 1,
+      "source_count": 1,
+      "match_rate": 100.0,
+      "last_updated": "2026-05-07",
+      "generated_at": "2026-05-07T09:34:13.960328+00:00",
+      "total_reports": 7,
+      "report_index_path": "TravelMCPRadar/reports/index.html",
+      "latest_report_path": "TravelMCPRadar/reports/index.html",
+      "data_origin": "TravelMCPRadar/reports/travel_mcp_20260507_summary.json",
+      "quality_origin": "TravelMCPRadar/reports/travel_mcp_20260507_quality.json",
+      "quality_summary": {
+        "total_sources": 3,
+        "enabled_sources": 1,
+        "tracked_sources": 3,
+        "fresh_sources": 1,
+        "stale_sources": 0,
+        "missing_sources": 0,
+        "missing_event_sources": 0,
+        "unknown_event_date_sources": 0,
+        "not_tracked_sources": 0,
+        "skipped_disabled_sources": 2,
+        "collection_error_count": 0,
+        "mcp_signal_event_count": 6,
+        "directory_seed_source_count": 1,
+        "mcp_server_candidate_count": 2,
+        "enabled_mcp_server_source_count": 0,
+        "blocked_mcp_server_source_count": 2,
+        "real_transport_smoke_tested_source_count": 0,
+        "tool_allowlist_present_source_count": 2,
+        "credential_required_source_count": 2,
+        "env_preflight_required_source_count": 2,
+        "env_preflight_ready_source_count": 0,
+        "env_preflight_missing_source_count": 2,
+        "env_preflight_missing_var_count": 2,
+        "env_preflight_not_required_source_count": 0,
+        "repository_metadata_complete_source_count": 2,
+        "repository_metadata_gap_count": 0,
+        "repository_metadata_fresh_source_count": 2,
+        "repository_metadata_stale_source_count": 0,
+        "repository_metadata_incomplete_source_count": 0,
+        "repository_metadata_missing_checked_at_source_count": 0,
+        "repository_metadata_review_required_count": 0,
+        "repository_docs_present_source_count": 2,
+        "repository_docs_missing_source_count": 0,
+        "repository_security_policy_present_source_count": 0,
+        "repository_security_advisory_checked_source_count": 2,
+        "repository_security_advisory_total_count": 0,
+        "repository_security_advisory_open_source_count": 0,
+        "repository_security_enrichment_review_required_count": 0,
+        "security_activation_gate_count": 2,
+        "activation_gate_source_count": 2,
+        "activation_gate_total_count": 2,
+        "activation_risk_scope_review_required_source_count": 0,
+        "activation_command_unresolved_source_count": 0,
+        "activation_command_discovery_checked_source_count": 0,
+        "activation_command_discovery_resolved_source_count": 0,
+        "activation_command_discovery_unresolved_source_count": 0,
+        "activation_command_discovery_multi_server_ambiguous_source_count": 0,
+        "activation_command_discovery_status_counts": {},
+        "activation_env_secret_required_source_count": 0,
+        "activation_tool_allowlist_required_source_count": 0,
+        "activation_registry_crosscheck_required_source_count": 0,
+        "activation_fake_transport_required_source_count": 0,
+        "activation_real_transport_required_source_count": 2,
+        "activation_runtime_review_required_source_count": 0,
+        "activation_ready_for_fake_transport_source_count": 0,
+        "daily_review_item_count": 4,
+        "mcp_directory_entry_events": 2,
+        "mcp_tool_result_events": 0,
+        "linked_repository_metadata_events": 2,
+        "risk_scope_signal_events": 2
+      },
+      "top_entities": [
+        {
+          "name": "MCPDomain",
+          "count": 4
+        },
+        {
+          "name": "ProjectHealth",
+          "count": 3
         },
         {
           "name": "Capability",
-          "count": 2
+          "count": 1
         },
         {
           "name": "RiskScope",
-          "count": 2
+          "count": 1
         }
       ],
       "warnings": [
@@ -2347,65 +2753,55 @@
       "status": "active",
       "pipeline_kind": "summary_json",
       "has_summary_json": true,
-      "article_count": 200,
-      "matched_count": 200,
+      "article_count": 10,
+      "matched_count": 10,
       "source_count": 1,
       "match_rate": 100.0,
-      "last_updated": "2026-04-24",
-      "generated_at": "2026-04-24T23:55:32.202026+09:00",
-      "total_reports": 3,
+      "last_updated": "2026-05-07",
+      "generated_at": "2026-05-07T10:32:29.776217+09:00",
+      "total_reports": 6,
       "report_index_path": "TrendRadar/reports/index.html",
       "latest_report_path": "TrendRadar/reports/index.html",
-      "data_origin": "TrendRadar/reports/trend_20260424_summary.json",
-      "quality_origin": "TrendRadar/reports/trend_quality.json",
+      "data_origin": "TrendRadar/reports/trend_20260507_summary.json",
+      "quality_origin": "TrendRadar/reports/trend_20260507_quality.json",
       "quality_summary": {
         "priority": "P1",
         "primary_motion": "attention",
-        "configured_pack_count": 7,
-        "enabled_pack_count": 7,
+        "configured_pack_count": 1,
+        "enabled_pack_count": 1,
         "versioned_pack_coverage": 1.0,
         "taxonomy_coverage": 1.0,
-        "attention_pack_coverage": 0.857,
-        "conversion_proxy_pack_coverage": 0.143,
-        "community_pack_coverage": 0.286,
+        "attention_pack_coverage": 1.0,
+        "conversion_proxy_pack_coverage": 0.0,
+        "community_pack_coverage": 0.0,
         "separated_score_axes": true,
-        "raw_signal_point_count": 200,
-        "collected_signal_count": 78,
-        "attention_signal_count": 78,
+        "raw_signal_point_count": 10,
+        "collected_signal_count": 10,
+        "attention_signal_count": 10,
         "conversion_proxy_signal_count": 0,
         "community_signal_count": 0,
         "fresh_signal_count": 0,
-        "stale_signal_count": 78,
+        "stale_signal_count": 10,
         "undated_signal_count": 0,
         "distinct_signal_channel_count": 1,
-        "distinct_keyword_pack_event_count": 5,
-        "unique_signal_key_count": 78,
+        "distinct_keyword_pack_event_count": 1,
+        "unique_signal_key_count": 10,
         "signal_required_field_gap_count": 0,
         "score_axis_contamination_count": 0,
-        "daily_review_item_count": 50,
+        "daily_review_item_count": 10,
         "events_truncated": 0,
-        "missing_required_components": []
+        "missing_required_components": [
+          "conversion_proxy_layer"
+        ]
       },
       "top_entities": [
         {
-          "name": "샴페인",
-          "count": 6
+          "name": "Python (programming language)",
+          "count": 5
         },
         {
-          "name": "레드와인",
-          "count": 6
-        },
-        {
-          "name": "화이트와인",
-          "count": 6
-        },
-        {
-          "name": "와인",
-          "count": 6
-        },
-        {
-          "name": "맥캘란",
-          "count": 6
+          "name": "Seoul",
+          "count": 5
         }
       ],
       "warnings": []
@@ -2417,65 +2813,65 @@
       "status": "active",
       "pipeline_kind": "summary_json",
       "has_summary_json": true,
-      "article_count": 193,
-      "matched_count": 160,
-      "source_count": 19,
-      "match_rate": 82.9,
-      "last_updated": "2026-04-25",
-      "generated_at": "2026-04-25T21:49:56.713743+09:00",
-      "total_reports": 31,
+      "article_count": 23,
+      "matched_count": 23,
+      "source_count": 10,
+      "match_rate": 100.0,
+      "last_updated": "2026-05-07",
+      "generated_at": "2026-05-07T12:35:52.207963+09:00",
+      "total_reports": 34,
       "report_index_path": "TrustRadar/reports/index.html",
       "latest_report_path": "TrustRadar/reports/index.html",
-      "data_origin": "TrustRadar/reports/trust_20260425_summary.json",
-      "quality_origin": "TrustRadar/reports/trust_20260428_quality.json",
+      "data_origin": "TrustRadar/reports/trust_20260507_summary.json",
+      "quality_origin": "TrustRadar/reports/trust_20260507_quality.json",
       "quality_summary": {
         "total_sources": 27,
         "tracked_sources": 12,
-        "fresh_sources": 0,
-        "stale_sources": 12,
+        "fresh_sources": 12,
+        "stale_sources": 0,
         "missing_sources": 0,
         "unknown_event_date_sources": 0,
-        "not_tracked_sources": 13,
-        "skipped_disabled_sources": 2,
-        "official_confirmed_events": 38,
-        "official_confirmation_required_events": 24,
-        "corroborating_report_events": 88,
-        "cross_reference_only_events": 92,
-        "authoritative_source_events": 36,
-        "unique_service_count": 4,
+        "not_tracked_sources": 12,
+        "skipped_disabled_sources": 3,
+        "official_confirmed_events": 32,
+        "official_confirmation_required_events": 18,
+        "corroborating_report_events": 57,
+        "cross_reference_only_events": 84,
+        "authoritative_source_events": 31,
+        "unique_service_count": 5,
         "official_confirmation_required_service_count": 3,
         "collection_error_count": 0,
-        "incident_disclosure_events": 217,
-        "status_page_incident_events": 1,
-        "enforcement_action_events": 15,
-        "consumer_complaint_events": 11,
-        "ai_asset_risk_events": 0
+        "incident_disclosure_events": 170,
+        "status_page_incident_events": 0,
+        "enforcement_action_events": 20,
+        "consumer_complaint_events": 2,
+        "ai_asset_risk_events": 0,
+        "daily_review_item_count": 80
       },
       "top_entities": [
         {
           "name": "SecurityGeneral",
-          "count": 211
+          "count": 28
         },
         {
-          "name": "Vulnerability",
-          "count": 95
+          "name": "Privacy",
+          "count": 10
         },
         {
           "name": "Threat",
-          "count": 38
+          "count": 5
         },
         {
-          "name": "OperationalEvent",
-          "count": 31
+          "name": "Malware",
+          "count": 5
         },
         {
-          "name": "DataBreach",
-          "count": 30
+          "name": "Vulnerability",
+          "count": 4
         }
       ],
       "warnings": [
-        "quality freshness gaps: stale=12, missing=0, unknown_event_date=0",
-        "quality report has 2 disabled source(s)"
+        "quality report has 3 disabled source(s)"
       ]
     },
     {
@@ -2485,17 +2881,17 @@
       "status": "active",
       "pipeline_kind": "summary_json",
       "has_summary_json": true,
-      "article_count": 5,
-      "matched_count": 5,
+      "article_count": 1,
+      "matched_count": 1,
       "source_count": 1,
       "match_rate": 100.0,
-      "last_updated": "2026-04-24",
-      "generated_at": "2026-04-24T12:44:37.527746+00:00",
-      "total_reports": 2,
+      "last_updated": "2026-05-07",
+      "generated_at": "2026-05-07T09:34:33.754212+00:00",
+      "total_reports": 7,
       "report_index_path": "WeatherMCPRadar/reports/index.html",
       "latest_report_path": "WeatherMCPRadar/reports/index.html",
-      "data_origin": "WeatherMCPRadar/reports/weather_mcp_20260424_summary.json",
-      "quality_origin": "WeatherMCPRadar/reports/weather_mcp_20260428_quality.json",
+      "data_origin": "WeatherMCPRadar/reports/weather_mcp_20260507_summary.json",
+      "quality_origin": "WeatherMCPRadar/reports/weather_mcp_20260507_quality.json",
       "quality_summary": {
         "total_sources": 3,
         "enabled_sources": 1,
@@ -2508,42 +2904,67 @@
         "not_tracked_sources": 0,
         "skipped_disabled_sources": 2,
         "collection_error_count": 0,
-        "mcp_signal_event_count": 7,
-        "directory_seed_source_count": 3,
+        "mcp_signal_event_count": 9,
+        "directory_seed_source_count": 1,
         "mcp_server_candidate_count": 2,
         "enabled_mcp_server_source_count": 0,
         "blocked_mcp_server_source_count": 2,
         "real_transport_smoke_tested_source_count": 0,
-        "tool_allowlist_present_source_count": 0,
+        "tool_allowlist_present_source_count": 2,
         "credential_required_source_count": 2,
-        "repository_metadata_complete_source_count": 0,
-        "repository_metadata_gap_count": 2,
-        "security_activation_gate_count": 11,
+        "env_preflight_required_source_count": 2,
+        "env_preflight_ready_source_count": 0,
+        "env_preflight_missing_source_count": 2,
+        "env_preflight_missing_var_count": 2,
+        "env_preflight_not_required_source_count": 0,
+        "repository_metadata_complete_source_count": 2,
+        "repository_metadata_gap_count": 0,
+        "repository_metadata_fresh_source_count": 2,
+        "repository_metadata_stale_source_count": 0,
+        "repository_metadata_incomplete_source_count": 0,
+        "repository_metadata_missing_checked_at_source_count": 0,
+        "repository_metadata_review_required_count": 0,
+        "repository_docs_present_source_count": 2,
+        "repository_docs_missing_source_count": 0,
+        "repository_security_policy_present_source_count": 0,
+        "repository_security_advisory_checked_source_count": 2,
+        "repository_security_advisory_total_count": 0,
+        "repository_security_advisory_open_source_count": 0,
+        "repository_security_enrichment_review_required_count": 0,
+        "security_activation_gate_count": 2,
+        "activation_gate_source_count": 2,
+        "activation_gate_total_count": 2,
+        "activation_risk_scope_review_required_source_count": 0,
+        "activation_command_unresolved_source_count": 0,
+        "activation_command_discovery_checked_source_count": 0,
+        "activation_command_discovery_resolved_source_count": 0,
+        "activation_command_discovery_unresolved_source_count": 0,
+        "activation_command_discovery_multi_server_ambiguous_source_count": 0,
+        "activation_command_discovery_status_counts": {},
+        "activation_env_secret_required_source_count": 0,
+        "activation_tool_allowlist_required_source_count": 0,
+        "activation_registry_crosscheck_required_source_count": 0,
+        "activation_fake_transport_required_source_count": 0,
+        "activation_real_transport_required_source_count": 2,
+        "activation_runtime_review_required_source_count": 0,
+        "activation_ready_for_fake_transport_source_count": 0,
         "daily_review_item_count": 4,
         "mcp_directory_entry_events": 5,
         "mcp_tool_result_events": 0,
-        "linked_repository_metadata_events": 0,
+        "linked_repository_metadata_events": 2,
         "risk_scope_signal_events": 2
       },
       "top_entities": [
         {
           "name": "MCPDomain",
-          "count": 21
+          "count": 5
         },
         {
           "name": "ProjectHealth",
-          "count": 13
+          "count": 3
         },
         {
           "name": "Provider",
-          "count": 6
-        },
-        {
-          "name": "RiskScope",
-          "count": 2
-        },
-        {
-          "name": "Capability",
           "count": 2
         }
       ],
@@ -2558,60 +2979,59 @@
       "status": "active",
       "pipeline_kind": "summary_json",
       "has_summary_json": true,
-      "article_count": 62,
-      "matched_count": 62,
-      "source_count": 17,
+      "article_count": 56,
+      "matched_count": 56,
+      "source_count": 14,
       "match_rate": 100.0,
-      "last_updated": "2026-04-25",
-      "generated_at": "2026-04-25T21:55:58.467796+09:00",
-      "total_reports": 13,
+      "last_updated": "2026-05-07",
+      "generated_at": "2026-05-07T12:53:39.349673+09:00",
+      "total_reports": 16,
       "report_index_path": "WineRadar/reports/index.html",
       "latest_report_path": "WineRadar/reports/index.html",
-      "data_origin": "WineRadar/reports/wine_20260425_summary.json",
-      "quality_origin": "WineRadar/reports/wine_quality.json",
+      "data_origin": "WineRadar/reports/wine_20260507_summary.json",
+      "quality_origin": "WineRadar/reports/wine_20260507_quality.json",
       "quality_summary": {
         "total_sources": 71,
-        "tracked_sources": 36,
-        "fresh_sources": 32,
-        "stale_sources": 4,
+        "tracked_sources": 33,
+        "fresh_sources": 33,
+        "stale_sources": 0,
         "missing_sources": 0,
         "unknown_event_date_sources": 0,
-        "not_tracked_sources": 8,
-        "skipped_disabled_sources": 27,
-        "disabled_high_value_sources": 24,
+        "not_tracked_sources": 9,
+        "skipped_disabled_sources": 29,
+        "disabled_high_value_sources": 25,
         "collection_error_count": 0,
         "auction_price_sources": 0,
         "restaurant_wine_list_sources": 0,
         "importer_portfolio_signal_sources": 1,
         "market_report_sources": 5,
-        "daily_briefing_sources": 26,
-        "education_sources": 4
+        "daily_briefing_sources": 24,
+        "education_sources": 3
       },
       "top_entities": [
         {
           "name": "topic",
-          "count": 103
+          "count": 97
         },
         {
           "name": "region",
-          "count": 62
-        },
-        {
-          "name": "grape_variety",
-          "count": 38
-        },
-        {
-          "name": "climate_zone",
-          "count": 24
+          "count": 94
         },
         {
           "name": "winery",
-          "count": 20
+          "count": 26
+        },
+        {
+          "name": "climate_zone",
+          "count": 22
+        },
+        {
+          "name": "grape_variety",
+          "count": 22
         }
       ],
       "warnings": [
-        "quality freshness gaps: stale=4, missing=0, unknown_event_date=0",
-        "quality report has 27 disabled source(s)"
+        "quality report has 29 disabled source(s)"
       ]
     }
   ]

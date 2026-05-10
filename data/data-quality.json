@@ -1,5 +1,5 @@
 {
-  "generated_at": "2026-04-28T13:35:46.992156+00:00",
+  "generated_at": "2026-04-29T04:07:51.717729+00:00",
   "workspace_root": "/mnt/c/projects/ai-frendly-datahub",
   "inputs": {
     "source_portfolio": "docs/harness/source-portfolio.json",
@@ -70,16 +70,16 @@
     ],
     "average_data_quality_score": 69.1,
     "disabled_source_classification_summary": {
-      "total_disabled_count": 200,
+      "total_disabled_count": 227,
       "bucket_totals": {
-        "awaiting_url_replacement": 57,
-        "awaiting_secret": 17,
-        "awaiting_smoke_test": 5,
+        "awaiting_url_replacement": 66,
+        "awaiting_secret": 21,
+        "awaiting_smoke_test": 2,
         "upstream_section_missing": 1,
         "awaiting_partnership_review": 0,
-        "accepted_backlog": 120
+        "accepted_backlog": 137
       },
-      "repo_count_with_disabled_sources": 33
+      "repo_count_with_disabled_sources": 35
     }
   },
   "quality_dimensions": {
@@ -409,14 +409,14 @@
       ],
       "next_step": "application_deadline·eligibility_rule 이벤트 모델을 중심으로 freshness/stale 리포트를 붙이고, 선정 결과·집행 실적 후보는 source_backlog에서 검증 후 단계적으로 활성화한다.",
       "disabled_source_classification": {
-        "awaiting_url_replacement": 0,
+        "awaiting_url_replacement": 1,
         "awaiting_secret": 0,
         "awaiting_smoke_test": 0,
         "upstream_section_missing": 0,
         "awaiting_partnership_review": 0,
         "accepted_backlog": 1
       },
-      "disabled_source_classification_total": 1
+      "disabled_source_classification_total": 2
     },
     {
       "repo": "FoodRadar",
@@ -425,7 +425,7 @@
       "primary_motion": "compliance-risk",
       "source_status": "강함",
       "readiness_status": "ready",
-      "quality_score": 95,
+      "quality_score": 96,
       "data_quality_score": 92,
       "risk_score": 75,
       "weakest_dimension": "traceability",
@@ -570,7 +570,7 @@
       },
       "disabled_high_value_sources": [],
       "integration_candidates": [],
-      "next_step": "HomeVerificationState를 리포트/MCP 출력에 연결하고 listing·재고 후보는 ToS·stale listing 검증 후 단계적으로 활성화한다.",
+      "next_step": "daily_review_items를 운영 큐로 사용해 공식 primary env gate를 해소하고 listing·재고 후보는 ToS·stale listing 검증 후 단계적으로 활성화한다.",
       "disabled_source_classification": {
         "awaiting_url_replacement": 2,
         "awaiting_secret": 0,
@@ -654,16 +654,16 @@
       },
       "disabled_high_value_sources": [],
       "integration_candidates": [],
-      "next_step": "incident_disclosure, status_page_incident, enforcement_action, consumer_complaint, ai_asset_risk event model을 검증 산출물에 연결하고 커뮤니티 신호는 official_confirmation_required 상태로만 병합한다.",
+      "next_step": "status page·breach notice·consumer complaint 후보를 parser·개인정보·service id mapping 검증 후 단계적으로 활성화하고, incident severity scoring에 VerificationState·공식 근거 URL·AIAssetRisk를 함께 표시한다.",
       "disabled_source_classification": {
         "awaiting_url_replacement": 2,
         "awaiting_secret": 0,
         "awaiting_smoke_test": 0,
         "upstream_section_missing": 0,
         "awaiting_partnership_review": 0,
-        "accepted_backlog": 0
+        "accepted_backlog": 1
       },
-      "disabled_source_classification_total": 2
+      "disabled_source_classification_total": 3
     },
     {
       "repo": "EventRadar",
@@ -817,14 +817,14 @@
       "integration_candidates": [],
       "next_step": "EV 등록·충전 요금·대중교통 요금 source를 추가하고 coffee split 후보의 별도 repo 승격 여부를 결정한다.",
       "disabled_source_classification": {
-        "awaiting_url_replacement": 4,
+        "awaiting_url_replacement": 7,
         "awaiting_secret": 0,
         "awaiting_smoke_test": 0,
         "upstream_section_missing": 0,
         "awaiting_partnership_review": 0,
         "accepted_backlog": 1
       },
-      "disabled_source_classification_total": 5
+      "disabled_source_classification_total": 8
     },
     {
       "repo": "WineRadar",
@@ -893,14 +893,14 @@
       "integration_candidates": [],
       "next_step": "auction price, 레스토랑 와인리스트 변동, importer portfolio sales 같은 거래 신호를 더한다.",
       "disabled_source_classification": {
-        "awaiting_url_replacement": 8,
+        "awaiting_url_replacement": 9,
         "awaiting_secret": 0,
         "awaiting_smoke_test": 0,
         "upstream_section_missing": 0,
         "awaiting_partnership_review": 0,
-        "accepted_backlog": 19
+        "accepted_backlog": 20
       },
-      "disabled_source_classification_total": 27
+      "disabled_source_classification_total": 29
     },
     {
       "repo": "PriceRadar",
@@ -1050,9 +1050,9 @@
         "awaiting_smoke_test": 0,
         "upstream_section_missing": 0,
         "awaiting_partnership_review": 0,
-        "accepted_backlog": 2
+        "accepted_backlog": 6
       },
-      "disabled_source_classification_total": 8
+      "disabled_source_classification_total": 12
     },
     {
       "repo": "TrendRadar",
@@ -1207,7 +1207,7 @@
         "청약정보 MCP"
       ],
       "integration_candidates": [],
-      "next_step": "실거래, 분양 경쟁률, 매물 inventory, 인허가·준공 데이터를 더한다.",
+      "next_step": "source_activation_items를 운영 큐로 사용해 DATA_GO_KR_API_KEY와 real-estate-mcp 실행 게이트를 해소하고 listing_inventory를 구조화 이벤트로 전환한다.",
       "disabled_source_classification": {
         "awaiting_url_replacement": 0,
         "awaiting_secret": 0,
@@ -1690,9 +1690,9 @@
         "awaiting_smoke_test": 0,
         "upstream_section_missing": 0,
         "awaiting_partnership_review": 0,
-        "accepted_backlog": 0
+        "accepted_backlog": 2
       },
-      "disabled_source_classification_total": 0
+      "disabled_source_classification_total": 2
     },
     {
       "repo": "PaperRadar",
@@ -1711,7 +1711,7 @@
         "freshness": 92,
         "actionability": 69,
         "verification": 70,
-        "traceability": 84
+        "traceability": 82
       },
       "issues": [
         "가장 약한 품질 축은 운영 깊이(55)"
@@ -1738,15 +1738,15 @@
           "재현성 score에 code availability와 benchmark 근거를 포함"
         ]
       },
-      "enabled_source_count": 19,
+      "enabled_source_count": 17,
       "configured_source_count": 23,
       "layer_counts": {
-        "market": 18,
+        "market": 16,
         "official": 7,
         "operational": 3
       },
       "domain_scope_counts": {
-        "unspecified": 19
+        "unspecified": 17
       },
       "available_layers": [
         "market",
@@ -1764,9 +1764,9 @@
         "awaiting_smoke_test": 0,
         "upstream_section_missing": 0,
         "awaiting_partnership_review": 0,
-        "accepted_backlog": 4
+        "accepted_backlog": 6
       },
-      "disabled_source_classification_total": 4
+      "disabled_source_classification_total": 6
     },
     {
       "repo": "SubscriptionRadar",
@@ -1909,14 +1909,14 @@
       "integration_candidates": [],
       "next_step": "거래소 상장·상폐 공지, 규제기관 발표, 온체인 지표를 추가해 투자 판단력을 높인다.",
       "disabled_source_classification": {
-        "awaiting_url_replacement": 0,
+        "awaiting_url_replacement": 1,
         "awaiting_secret": 0,
         "awaiting_smoke_test": 0,
         "upstream_section_missing": 0,
         "awaiting_partnership_review": 0,
-        "accepted_backlog": 0
+        "accepted_backlog": 5
       },
-      "disabled_source_classification_total": 0
+      "disabled_source_classification_total": 6
     },
     {
       "repo": "BlogRadar",
@@ -1985,14 +1985,14 @@
       "integration_candidates": [],
       "next_step": "GitHub release·star, package registry download, 채용 공고를 추가해 채택 계층을 보강한다.",
       "disabled_source_classification": {
-        "awaiting_url_replacement": 0,
+        "awaiting_url_replacement": 3,
         "awaiting_secret": 0,
         "awaiting_smoke_test": 0,
         "upstream_section_missing": 0,
         "awaiting_partnership_review": 0,
         "accepted_backlog": 0
       },
-      "disabled_source_classification_total": 0
+      "disabled_source_classification_total": 3
     },
     {
       "repo": "MiscMCPRadar",
@@ -2035,7 +2035,7 @@
         ]
       },
       "enabled_source_count": 0,
-      "configured_source_count": 1,
+      "configured_source_count": 2,
       "layer_counts": {},
       "domain_scope_counts": {},
       "available_layers": [],
@@ -2112,8 +2112,8 @@
       "next_step": "awesome-mcp-korea community seed를 GitHub repository metadata와 security/risk cross-check로 보강한다.",
       "disabled_source_classification": {
         "awaiting_url_replacement": 0,
-        "awaiting_secret": 1,
-        "awaiting_smoke_test": 1,
+        "awaiting_secret": 2,
+        "awaiting_smoke_test": 0,
         "upstream_section_missing": 0,
         "awaiting_partnership_review": 0,
         "accepted_backlog": 0
@@ -2178,13 +2178,13 @@
       "next_step": "awesome-mcp-korea community seed를 GitHub repository metadata와 security/risk cross-check로 보강한다.",
       "disabled_source_classification": {
         "awaiting_url_replacement": 0,
-        "awaiting_secret": 2,
+        "awaiting_secret": 1,
         "awaiting_smoke_test": 0,
         "upstream_section_missing": 0,
         "awaiting_partnership_review": 0,
         "accepted_backlog": 0
       },
-      "disabled_source_classification_total": 2
+      "disabled_source_classification_total": 1
     },
     {
       "repo": "FinanceTaxMCPRadar",
@@ -2245,10 +2245,10 @@
       "disabled_source_classification": {
         "awaiting_url_replacement": 0,
         "awaiting_secret": 1,
-        "awaiting_smoke_test": 1,
+        "awaiting_smoke_test": 0,
         "upstream_section_missing": 0,
         "awaiting_partnership_review": 0,
-        "accepted_backlog": 0
+        "accepted_backlog": 1
       },
       "disabled_source_classification_total": 2
     },
@@ -2376,11 +2376,11 @@
       "next_step": "awesome-mcp-korea community seed를 GitHub repository metadata와 security/risk cross-check로 보강한다.",
       "disabled_source_classification": {
         "awaiting_url_replacement": 0,
-        "awaiting_secret": 2,
+        "awaiting_secret": 1,
         "awaiting_smoke_test": 0,
         "upstream_section_missing": 0,
         "awaiting_partnership_review": 0,
-        "accepted_backlog": 0
+        "accepted_backlog": 1
       },
       "disabled_source_classification_total": 2
     },
@@ -2442,13 +2442,13 @@
       "next_step": "awesome-mcp-korea community seed를 GitHub repository metadata와 security/risk cross-check로 보강한다.",
       "disabled_source_classification": {
         "awaiting_url_replacement": 0,
-        "awaiting_secret": 2,
+        "awaiting_secret": 7,
         "awaiting_smoke_test": 0,
         "upstream_section_missing": 0,
         "awaiting_partnership_review": 0,
         "accepted_backlog": 0
       },
-      "disabled_source_classification_total": 2
+      "disabled_source_classification_total": 7
     },
     {
       "repo": "RealEstateMCPRadar",
@@ -2773,12 +2773,12 @@
       "disabled_source_classification": {
         "awaiting_url_replacement": 0,
         "awaiting_secret": 0,
-        "awaiting_smoke_test": 1,
+        "awaiting_smoke_test": 0,
         "upstream_section_missing": 0,
         "awaiting_partnership_review": 0,
         "accepted_backlog": 0
       },
-      "disabled_source_classification_total": 1
+      "disabled_source_classification_total": 0
     },
     {
       "repo": "CommerceRadar",

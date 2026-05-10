@@ -1,5 +1,5 @@
 {
-  "generated_at": "2026-04-28T13:03:30.309633+00:00",
+  "generated_at": "2026-04-29T04:08:15.596084+00:00",
   "workspace_root": "/mnt/c/projects/ai-frendly-datahub",
   "framework_path": "docs/harness/portfolio-taxonomy-framework.md",
   "summary": {
@@ -122,7 +122,7 @@
       },
       "business_focus": "부동산 뉴스와 정책·커뮤니티를 실거래 판단으로 연결",
       "business_value": "공식·시장·커뮤니티 조합은 갖췄지만 실거래·재고 심화가 더 필요하다.",
-      "reinforcement": "실거래, 분양 경쟁률, 매물 inventory, 인허가·준공 데이터를 더한다.",
+      "reinforcement": "source_activation_items를 운영 큐로 사용해 DATA_GO_KR_API_KEY와 real-estate-mcp 실행 게이트를 해소하고 listing_inventory를 구조화 이벤트로 전환한다.",
       "enabled_source_count": 9,
       "dashboard_status": "active",
       "dashboard_pipeline_kind": "summary_json",
@@ -138,7 +138,7 @@
         "has_summary_json": true,
         "has_mcp_server": false
       },
-      "next_step": "실거래, 분양 경쟁률, 매물 inventory, 인허가·준공 데이터를 더한다.",
+      "next_step": "source_activation_items를 운영 큐로 사용해 DATA_GO_KR_API_KEY와 real-estate-mcp 실행 게이트를 해소하고 listing_inventory를 구조화 이벤트로 전환한다.",
       "priority_score": 36
     },
     {
@@ -1152,7 +1152,7 @@
       },
       "business_focus": "부동산 정책·실거래·청약을 투자와 거주 의사결정으로 연결",
       "business_value": "공식 거래·청약·공매 source와 시장 뉴스 source가 분리되어 전환형 판단에 필요한 기준점을 제공한다.",
-      "reinforcement": "HomeVerificationState를 리포트/MCP 출력에 연결하고 listing·재고 후보는 ToS·stale listing 검증 후 단계적으로 활성화한다.",
+      "reinforcement": "daily_review_items를 운영 큐로 사용해 공식 primary env gate를 해소하고 listing·재고 후보는 ToS·stale listing 검증 후 단계적으로 활성화한다.",
       "enabled_source_count": 10,
       "dashboard_status": "active",
       "dashboard_pipeline_kind": "summary_json",
@@ -1168,7 +1168,7 @@
         "has_summary_json": true,
         "has_mcp_server": true
       },
-      "next_step": "HomeVerificationState를 리포트/MCP 출력에 연결하고 listing·재고 후보는 ToS·stale listing 검증 후 단계적으로 활성화한다.",
+      "next_step": "daily_review_items를 운영 큐로 사용해 공식 primary env gate를 해소하고 listing·재고 후보는 ToS·stale listing 검증 후 단계적으로 활성화한다.",
       "priority_score": 14
     },
     {
@@ -1635,14 +1635,14 @@
       ],
       "missing_layers": [],
       "layer_counts": {
-        "market": 18,
+        "market": 16,
         "official": 7,
         "operational": 3
       },
       "business_focus": "연구·모델 흐름을 제품화 후보 발굴로 연결",
       "business_value": "arXiv와 연구 블로그 coverage는 좋지만 영향력·재현성 계층이 약하다.",
       "reinforcement": "citation, GitHub star, benchmark leaderboard, 코드 저장소 연결을 보강한다.",
-      "enabled_source_count": 19,
+      "enabled_source_count": 17,
       "dashboard_status": "active",
       "dashboard_pipeline_kind": "summary_json",
       "match_rate": 96.3,
