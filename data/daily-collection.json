@@ -1,5 +1,5 @@
 {
-  "generated_at": "2026-05-02T03:58:59.022357+00:00",
+  "generated_at": "2026-05-13T10:12:37.119206+00:00",
   "contract": {
     "required_checks": [
       "scheduled_workflow",
@@ -21,8 +21,8 @@
     "description": "Daily collectors must run on a schedule, keep date-partitioned raw records, and create date-addressable DuckDB snapshots with retention controls. Both snapshot path families are valid to preserve repo-local compatibility."
   },
   "summary": {
-    "not_applicable": 2,
-    "ok": 25
+    "not_applicable": 3,
+    "ok": 37
   },
   "repos": [
     {
@@ -94,7 +94,8 @@
       },
       "workflow_files": [
         ".github/workflows/pr-checks.yml",
-        ".github/workflows/radar-crawler.yml"
+        ".github/workflows/radar-crawler.yml",
+        ".github/workflows/release.yml"
       ],
       "date_storage_files": [
         "artradar/date_storage.py"
@@ -155,7 +156,8 @@
       "workflow_files": [
         ".github/workflows/newsletter.yml",
         ".github/workflows/pr-checks.yml",
-        ".github/workflows/radar-crawler.yml"
+        ".github/workflows/radar-crawler.yml",
+        ".github/workflows/release.yml"
       ],
       "date_storage_files": [
         "blogradar/date_storage.py"
@@ -183,7 +185,9 @@
         "dated_report_or_artifact": true
       },
       "workflow_files": [
-        ".github/workflows/radar-crawler.yml"
+        ".github/workflows/pr-checks.yml",
+        ".github/workflows/radar-crawler.yml",
+        ".github/workflows/release.yml"
       ],
       "date_storage_files": [],
       "raw_logger_files": [],
@@ -206,7 +210,9 @@
       },
       "workflow_files": [
         ".github/workflows/deploy-pages.yml",
-        ".github/workflows/radar-crawler.yml"
+        ".github/workflows/pr-checks.yml",
+        ".github/workflows/radar-crawler.yml",
+        ".github/workflows/release.yml"
       ],
       "date_storage_files": [],
       "raw_logger_files": [],
@@ -259,7 +265,9 @@
       },
       "workflow_files": [
         ".github/workflows/deploy-pages.yml",
-        ".github/workflows/radar-crawler.yml"
+        ".github/workflows/pr-checks.yml",
+        ".github/workflows/radar-crawler.yml",
+        ".github/workflows/release.yml"
       ],
       "date_storage_files": [],
       "raw_logger_files": [],
@@ -373,7 +381,9 @@
       },
       "workflow_files": [
         ".github/workflows/deploy-pages.yml",
-        ".github/workflows/radar-crawler.yml"
+        ".github/workflows/pr-checks.yml",
+        ".github/workflows/radar-crawler.yml",
+        ".github/workflows/release.yml"
       ],
       "date_storage_files": [],
       "raw_logger_files": [],
@@ -426,7 +436,9 @@
       },
       "workflow_files": [
         ".github/workflows/deploy-pages.yml",
-        ".github/workflows/radar-crawler.yml"
+        ".github/workflows/pr-checks.yml",
+        ".github/workflows/radar-crawler.yml",
+        ".github/workflows/release.yml"
       ],
       "date_storage_files": [],
       "raw_logger_files": [],
@@ -450,7 +462,8 @@
       "workflow_files": [
         ".github/workflows/paper-crawler.yml",
         ".github/workflows/pr-checks.yml",
-        ".github/workflows/radar-crawler.yml"
+        ".github/workflows/radar-crawler.yml",
+        ".github/workflows/release.yml"
       ],
       "date_storage_files": [
         "paperradar/date_storage.py"
@@ -569,7 +582,9 @@
       },
       "workflow_files": [
         ".github/workflows/deploy-pages.yml",
-        ".github/workflows/radar-crawler.yml"
+        ".github/workflows/pr-checks.yml",
+        ".github/workflows/radar-crawler.yml",
+        ".github/workflows/release.yml"
       ],
       "date_storage_files": [
         "propertyradar/date_storage.py"
@@ -758,6 +773,400 @@
         "wineradar/raw_logger.py"
       ],
       "notes": []
+    },
+    {
+      "repo": "CollaborationMCPRadar",
+      "repo_type": "mcp-radar",
+      "status": "ok",
+      "missing_required": [],
+      "checks": {
+        "scheduled_workflow": true,
+        "workflow_snapshot_enabled": true,
+        "date_storage_module": true,
+        "snapshot_function": true,
+        "snapshot_path_by_date": true,
+        "raw_data_by_date": true,
+        "retention_cli": true,
+        "dated_report_or_artifact": false
+      },
+      "workflow_files": [
+        ".github/workflows/deploy-pages.yml",
+        ".github/workflows/health-check.yml",
+        ".github/workflows/pr-checks.yml",
+        ".github/workflows/radar-crawler.yml",
+        ".github/workflows/release.yml"
+      ],
+      "date_storage_files": [
+        "radar/date_storage.py"
+      ],
+      "raw_logger_files": [
+        "radar/raw_logger.py"
+      ],
+      "notes": [
+        "No explicit dated HTML/report artifact pattern detected; raw + DB snapshots still satisfy the required daily data record contract."
+      ]
+    },
+    {
+      "repo": "CommerceMCPRadar",
+      "repo_type": "mcp-radar",
+      "status": "ok",
+      "missing_required": [],
+      "checks": {
+        "scheduled_workflow": true,
+        "workflow_snapshot_enabled": true,
+        "date_storage_module": true,
+        "snapshot_function": true,
+        "snapshot_path_by_date": true,
+        "raw_data_by_date": true,
+        "retention_cli": true,
+        "dated_report_or_artifact": false
+      },
+      "workflow_files": [
+        ".github/workflows/deploy-pages.yml",
+        ".github/workflows/health-check.yml",
+        ".github/workflows/pr-checks.yml",
+        ".github/workflows/radar-crawler.yml",
+        ".github/workflows/release.yml"
+      ],
+      "date_storage_files": [
+        "radar/date_storage.py"
+      ],
+      "raw_logger_files": [
+        "radar/raw_logger.py"
+      ],
+      "notes": [
+        "No explicit dated HTML/report artifact pattern detected; raw + DB snapshots still satisfy the required daily data record contract."
+      ]
+    },
+    {
+      "repo": "FinanceTaxMCPRadar",
+      "repo_type": "mcp-radar",
+      "status": "ok",
+      "missing_required": [],
+      "checks": {
+        "scheduled_workflow": true,
+        "workflow_snapshot_enabled": true,
+        "date_storage_module": true,
+        "snapshot_function": true,
+        "snapshot_path_by_date": true,
+        "raw_data_by_date": true,
+        "retention_cli": true,
+        "dated_report_or_artifact": false
+      },
+      "workflow_files": [
+        ".github/workflows/deploy-pages.yml",
+        ".github/workflows/health-check.yml",
+        ".github/workflows/pr-checks.yml",
+        ".github/workflows/radar-crawler.yml",
+        ".github/workflows/release.yml"
+      ],
+      "date_storage_files": [
+        "radar/date_storage.py"
+      ],
+      "raw_logger_files": [
+        "radar/raw_logger.py"
+      ],
+      "notes": [
+        "No explicit dated HTML/report artifact pattern detected; raw + DB snapshots still satisfy the required daily data record contract."
+      ]
+    },
+    {
+      "repo": "KoreanNLPMCPRadar",
+      "repo_type": "mcp-radar",
+      "status": "ok",
+      "missing_required": [],
+      "checks": {
+        "scheduled_workflow": true,
+        "workflow_snapshot_enabled": true,
+        "date_storage_module": true,
+        "snapshot_function": true,
+        "snapshot_path_by_date": true,
+        "raw_data_by_date": true,
+        "retention_cli": true,
+        "dated_report_or_artifact": false
+      },
+      "workflow_files": [
+        ".github/workflows/deploy-pages.yml",
+        ".github/workflows/health-check.yml",
+        ".github/workflows/pr-checks.yml",
+        ".github/workflows/radar-crawler.yml",
+        ".github/workflows/release.yml"
+      ],
+      "date_storage_files": [
+        "radar/date_storage.py"
+      ],
+      "raw_logger_files": [
+        "radar/raw_logger.py"
+      ],
+      "notes": [
+        "No explicit dated HTML/report artifact pattern detected; raw + DB snapshots still satisfy the required daily data record contract."
+      ]
+    },
+    {
+      "repo": "LegalGovMCPRadar",
+      "repo_type": "mcp-radar",
+      "status": "ok",
+      "missing_required": [],
+      "checks": {
+        "scheduled_workflow": true,
+        "workflow_snapshot_enabled": true,
+        "date_storage_module": true,
+        "snapshot_function": true,
+        "snapshot_path_by_date": true,
+        "raw_data_by_date": true,
+        "retention_cli": true,
+        "dated_report_or_artifact": false
+      },
+      "workflow_files": [
+        ".github/workflows/deploy-pages.yml",
+        ".github/workflows/health-check.yml",
+        ".github/workflows/pr-checks.yml",
+        ".github/workflows/radar-crawler.yml",
+        ".github/workflows/release.yml"
+      ],
+      "date_storage_files": [
+        "radar/date_storage.py"
+      ],
+      "raw_logger_files": [
+        "radar/raw_logger.py"
+      ],
+      "notes": [
+        "No explicit dated HTML/report artifact pattern detected; raw + DB snapshots still satisfy the required daily data record contract."
+      ]
+    },
+    {
+      "repo": "MapAddressMCPRadar",
+      "repo_type": "mcp-radar",
+      "status": "ok",
+      "missing_required": [],
+      "checks": {
+        "scheduled_workflow": true,
+        "workflow_snapshot_enabled": true,
+        "date_storage_module": true,
+        "snapshot_function": true,
+        "snapshot_path_by_date": true,
+        "raw_data_by_date": true,
+        "retention_cli": true,
+        "dated_report_or_artifact": false
+      },
+      "workflow_files": [
+        ".github/workflows/deploy-pages.yml",
+        ".github/workflows/health-check.yml",
+        ".github/workflows/pr-checks.yml",
+        ".github/workflows/radar-crawler.yml",
+        ".github/workflows/release.yml"
+      ],
+      "date_storage_files": [
+        "radar/date_storage.py"
+      ],
+      "raw_logger_files": [
+        "radar/raw_logger.py"
+      ],
+      "notes": [
+        "No explicit dated HTML/report artifact pattern detected; raw + DB snapshots still satisfy the required daily data record contract."
+      ]
+    },
+    {
+      "repo": "MiscMCPRadar",
+      "repo_type": "mcp-radar",
+      "status": "ok",
+      "missing_required": [],
+      "checks": {
+        "scheduled_workflow": true,
+        "workflow_snapshot_enabled": true,
+        "date_storage_module": true,
+        "snapshot_function": true,
+        "snapshot_path_by_date": true,
+        "raw_data_by_date": true,
+        "retention_cli": true,
+        "dated_report_or_artifact": false
+      },
+      "workflow_files": [
+        ".github/workflows/deploy-pages.yml",
+        ".github/workflows/health-check.yml",
+        ".github/workflows/pr-checks.yml",
+        ".github/workflows/radar-crawler.yml",
+        ".github/workflows/release.yml"
+      ],
+      "date_storage_files": [
+        "radar/date_storage.py"
+      ],
+      "raw_logger_files": [
+        "radar/raw_logger.py"
+      ],
+      "notes": [
+        "No explicit dated HTML/report artifact pattern detected; raw + DB snapshots still satisfy the required daily data record contract."
+      ]
+    },
+    {
+      "repo": "PublicDataMCPRadar",
+      "repo_type": "mcp-radar",
+      "status": "ok",
+      "missing_required": [],
+      "checks": {
+        "scheduled_workflow": true,
+        "workflow_snapshot_enabled": true,
+        "date_storage_module": true,
+        "snapshot_function": true,
+        "snapshot_path_by_date": true,
+        "raw_data_by_date": true,
+        "retention_cli": true,
+        "dated_report_or_artifact": false
+      },
+      "workflow_files": [
+        ".github/workflows/deploy-pages.yml",
+        ".github/workflows/health-check.yml",
+        ".github/workflows/pr-checks.yml",
+        ".github/workflows/radar-crawler.yml",
+        ".github/workflows/release.yml"
+      ],
+      "date_storage_files": [
+        "radar/date_storage.py"
+      ],
+      "raw_logger_files": [
+        "radar/raw_logger.py"
+      ],
+      "notes": [
+        "No explicit dated HTML/report artifact pattern detected; raw + DB snapshots still satisfy the required daily data record contract."
+      ]
+    },
+    {
+      "repo": "RealEstateMCPRadar",
+      "repo_type": "mcp-radar",
+      "status": "ok",
+      "missing_required": [],
+      "checks": {
+        "scheduled_workflow": true,
+        "workflow_snapshot_enabled": true,
+        "date_storage_module": true,
+        "snapshot_function": true,
+        "snapshot_path_by_date": true,
+        "raw_data_by_date": true,
+        "retention_cli": true,
+        "dated_report_or_artifact": false
+      },
+      "workflow_files": [
+        ".github/workflows/deploy-pages.yml",
+        ".github/workflows/health-check.yml",
+        ".github/workflows/pr-checks.yml",
+        ".github/workflows/radar-crawler.yml",
+        ".github/workflows/release.yml"
+      ],
+      "date_storage_files": [
+        "radar/date_storage.py"
+      ],
+      "raw_logger_files": [
+        "radar/raw_logger.py"
+      ],
+      "notes": [
+        "No explicit dated HTML/report artifact pattern detected; raw + DB snapshots still satisfy the required daily data record contract."
+      ]
+    },
+    {
+      "repo": "SearchTrendMCPRadar",
+      "repo_type": "mcp-radar",
+      "status": "ok",
+      "missing_required": [],
+      "checks": {
+        "scheduled_workflow": true,
+        "workflow_snapshot_enabled": true,
+        "date_storage_module": true,
+        "snapshot_function": true,
+        "snapshot_path_by_date": true,
+        "raw_data_by_date": true,
+        "retention_cli": true,
+        "dated_report_or_artifact": false
+      },
+      "workflow_files": [
+        ".github/workflows/deploy-pages.yml",
+        ".github/workflows/health-check.yml",
+        ".github/workflows/pr-checks.yml",
+        ".github/workflows/radar-crawler.yml",
+        ".github/workflows/release.yml"
+      ],
+      "date_storage_files": [
+        "radar/date_storage.py"
+      ],
+      "raw_logger_files": [
+        "radar/raw_logger.py"
+      ],
+      "notes": [
+        "No explicit dated HTML/report artifact pattern detected; raw + DB snapshots still satisfy the required daily data record contract."
+      ]
+    },
+    {
+      "repo": "TravelMCPRadar",
+      "repo_type": "mcp-radar",
+      "status": "ok",
+      "missing_required": [],
+      "checks": {
+        "scheduled_workflow": true,
+        "workflow_snapshot_enabled": true,
+        "date_storage_module": true,
+        "snapshot_function": true,
+        "snapshot_path_by_date": true,
+        "raw_data_by_date": true,
+        "retention_cli": true,
+        "dated_report_or_artifact": false
+      },
+      "workflow_files": [
+        ".github/workflows/deploy-pages.yml",
+        ".github/workflows/health-check.yml",
+        ".github/workflows/pr-checks.yml",
+        ".github/workflows/radar-crawler.yml",
+        ".github/workflows/release.yml"
+      ],
+      "date_storage_files": [
+        "radar/date_storage.py"
+      ],
+      "raw_logger_files": [
+        "radar/raw_logger.py"
+      ],
+      "notes": [
+        "No explicit dated HTML/report artifact pattern detected; raw + DB snapshots still satisfy the required daily data record contract."
+      ]
+    },
+    {
+      "repo": "WeatherMCPRadar",
+      "repo_type": "mcp-radar",
+      "status": "ok",
+      "missing_required": [],
+      "checks": {
+        "scheduled_workflow": true,
+        "workflow_snapshot_enabled": true,
+        "date_storage_module": true,
+        "snapshot_function": true,
+        "snapshot_path_by_date": true,
+        "raw_data_by_date": true,
+        "retention_cli": true,
+        "dated_report_or_artifact": false
+      },
+      "workflow_files": [
+        ".github/workflows/deploy-pages.yml",
+        ".github/workflows/health-check.yml",
+        ".github/workflows/pr-checks.yml",
+        ".github/workflows/radar-crawler.yml",
+        ".github/workflows/release.yml"
+      ],
+      "date_storage_files": [
+        "radar/date_storage.py"
+      ],
+      "raw_logger_files": [
+        "radar/raw_logger.py"
+      ],
+      "notes": [
+        "No explicit dated HTML/report artifact pattern detected; raw + DB snapshots still satisfy the required daily data record contract."
+      ]
+    },
+    {
+      "repo": "CommerceRadar",
+      "repo_type": "non-standard",
+      "status": "not_applicable",
+      "missing_required": [],
+      "checks": {},
+      "notes": [
+        "Independent analytics/product prototype; not a scheduled radar-core daily collector."
+      ]
     }
   ]
 }

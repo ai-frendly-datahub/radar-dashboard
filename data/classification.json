@@ -1,50 +1,54 @@
 {
-  "generated_at": "2026-04-29T04:08:15.596084+00:00",
+  "generated_at": "2026-05-13T10:12:47.539050+00:00",
   "workspace_root": "/mnt/c/projects/ai-frendly-datahub",
   "framework_path": "docs/harness/portfolio-taxonomy-framework.md",
   "summary": {
-    "repo_count": 40,
+    "repo_count": 42,
     "repo_class_counts": {
       "standard-radar": 32,
       "advanced-radar": 5,
       "shared-template": 1,
+      "shared-analysis": 1,
       "shared-core": 1,
-      "shared-dashboard": 1
+      "shared-dashboard": 1,
+      "shared-ontology": 1
     },
     "primary_motion_counts": {
       "compliance-risk": 17,
       "conversion": 9,
       "intelligence": 10,
       "attention": 1,
-      "infrastructure": 3
+      "infrastructure": 5
     },
     "governance_counts": {
       "medium": 21,
       "high": 9,
       "low": 7,
-      "shared": 3
+      "shared": 5
     },
     "readiness_counts": {
       "upgrade": 1,
-      "watch": 24,
+      "watch": 26,
       "ready": 15
     },
     "source_status_counts": {
       "보강우선": 1,
-      "불균형": 24,
-      "강함": 12,
-      "공용": 3
+      "불균형": 26,
+      "강함": 10,
+      "공용": 5
     },
     "evidence_strategy_counts": {
-      "balanced-mixed": 12,
-      "official-operational": 23,
-      "market-led": 1,
+      "balanced-mixed": 10,
+      "official-operational": 22,
+      "operational-led": 2,
+      "market-led": 2,
       "attention-led": 1,
-      "shared": 3
+      "shared": 5
     },
     "layer_gap_counts": {
       "community": 2,
-      "market": 12
+      "market": 12,
+      "official": 1
     },
     "priority_repos": [
       "MiscMCPRadar",
@@ -122,11 +126,11 @@
       },
       "business_focus": "부동산 뉴스와 정책·커뮤니티를 실거래 판단으로 연결",
       "business_value": "공식·시장·커뮤니티 조합은 갖췄지만 실거래·재고 심화가 더 필요하다.",
-      "reinforcement": "source_activation_items를 운영 큐로 사용해 DATA_GO_KR_API_KEY와 real-estate-mcp 실행 게이트를 해소하고 listing_inventory를 구조화 이벤트로 전환한다.",
+      "reinforcement": "실거래, 분양 경쟁률, 매물 inventory, 인허가·준공 데이터를 더한다.",
       "enabled_source_count": 9,
       "dashboard_status": "active",
       "dashboard_pipeline_kind": "summary_json",
-      "match_rate": 82.2,
+      "match_rate": 100.0,
       "quality_score": 85,
       "readiness_status": "watch",
       "flags": {
@@ -138,7 +142,7 @@
         "has_summary_json": true,
         "has_mcp_server": false
       },
-      "next_step": "source_activation_items를 운영 큐로 사용해 DATA_GO_KR_API_KEY와 real-estate-mcp 실행 게이트를 해소하고 listing_inventory를 구조화 이벤트로 전환한다.",
+      "next_step": "실거래, 분양 경쟁률, 매물 inventory, 인허가·준공 데이터를 더한다.",
       "priority_score": 36
     },
     {
@@ -161,14 +165,14 @@
       "missing_layers": [],
       "layer_counts": {
         "community": 5,
-        "market": 24,
-        "official": 7,
-        "operational": 8
+        "market": 23,
+        "official": 6,
+        "operational": 7
       },
       "business_focus": "정부 지원사업을 신청 기회와 파이프라인으로 연결",
       "business_value": "공식·전문·커뮤니티 레이어가 가장 균형적인 축 중 하나다.",
       "reinforcement": "application_deadline·eligibility_rule 이벤트 모델을 중심으로 freshness/stale 리포트를 붙이고, 선정 결과·집행 실적 후보는 source_backlog에서 검증 후 단계적으로 활성화한다.",
-      "enabled_source_count": 24,
+      "enabled_source_count": 23,
       "dashboard_status": "active",
       "dashboard_pipeline_kind": "summary_json",
       "match_rate": 100.0,
@@ -261,7 +265,7 @@
       "enabled_source_count": 22,
       "dashboard_status": "active",
       "dashboard_pipeline_kind": "summary_json",
-      "match_rate": 98.5,
+      "match_rate": 100.0,
       "quality_score": 85,
       "readiness_status": "watch",
       "flags": {
@@ -306,7 +310,7 @@
       "enabled_source_count": 29,
       "dashboard_status": "active",
       "dashboard_pipeline_kind": "summary_json",
-      "match_rate": 92.4,
+      "match_rate": 100.0,
       "quality_score": 85,
       "readiness_status": "watch",
       "flags": {
@@ -413,22 +417,24 @@
       "primary_motion": "compliance-risk",
       "governance_profile": "medium",
       "complexity": "medium",
-      "evidence_strategy": "balanced-mixed",
+      "evidence_strategy": "operational-led",
       "source_status": "불균형",
-      "current_focus": "커뮤니티",
+      "current_focus": "커뮤니티 + 운영",
       "available_layers": [
-        "community"
+        "community",
+        "operational"
       ],
       "missing_layers": [
         "market"
       ],
       "layer_counts": {
-        "community": 1
+        "community": 2,
+        "operational": 1
       },
       "business_focus": "Commerce MCP directory entries를 capability discovery와 risk triage seed로 연결",
       "business_value": "awesome-mcp-korea section 기반의 T4 community directory seed다. MCP 후보 발굴에는 유용하지만 보안성, 운영상태, repository freshness를 보증하지 않는다.",
       "reinforcement": "GitHub repository metadata, archived/license/pushed_at, docs presence, security advisory, credential/write-action risk scope를 enrichment layer로 추가한다.",
-      "enabled_source_count": 1,
+      "enabled_source_count": 2,
       "dashboard_status": "active",
       "dashboard_pipeline_kind": "summary_json",
       "match_rate": 100.0,
@@ -444,6 +450,49 @@
         "has_mcp_server": true
       },
       "next_step": "awesome-mcp-korea community seed를 GitHub repository metadata와 security/risk cross-check로 보강한다.",
+      "priority_score": 30
+    },
+    {
+      "repo": "CryptoRadar",
+      "display_name": "Crypto",
+      "repo_class": "standard-radar",
+      "domain_family": "crypto-finance",
+      "primary_motion": "intelligence",
+      "governance_profile": "medium",
+      "complexity": "medium",
+      "evidence_strategy": "market-led",
+      "source_status": "불균형",
+      "current_focus": "시장 + 운영",
+      "available_layers": [
+        "market",
+        "operational"
+      ],
+      "missing_layers": [
+        "official"
+      ],
+      "layer_counts": {
+        "market": 13,
+        "operational": 1
+      },
+      "business_focus": "규제·가격·시장 심리를 함께 보는 자산 레이더",
+      "business_value": "뉴스와 가격 레이어는 있으나 규제·거래소·온체인 신호가 더 필요하다.",
+      "reinforcement": "거래소 상장·상폐 공지, 규제기관 발표, 온체인 지표를 추가해 투자 판단력을 높인다.",
+      "enabled_source_count": 13,
+      "dashboard_status": "active",
+      "dashboard_pipeline_kind": "summary_json",
+      "match_rate": 100.0,
+      "quality_score": 85,
+      "readiness_status": "watch",
+      "flags": {
+        "has_readme": true,
+        "has_agents": true,
+        "has_tests": true,
+        "has_docs": true,
+        "has_reports_index": true,
+        "has_summary_json": true,
+        "has_mcp_server": false
+      },
+      "next_step": "거래소 상장·상폐 공지, 규제기관 발표, 온체인 지표를 추가해 투자 판단력을 높인다.",
       "priority_score": 30
     },
     {
@@ -495,22 +544,24 @@
       "primary_motion": "compliance-risk",
       "governance_profile": "medium",
       "complexity": "medium",
-      "evidence_strategy": "balanced-mixed",
+      "evidence_strategy": "operational-led",
       "source_status": "불균형",
-      "current_focus": "커뮤니티",
+      "current_focus": "커뮤니티 + 운영",
       "available_layers": [
-        "community"
+        "community",
+        "operational"
       ],
       "missing_layers": [
         "market"
       ],
       "layer_counts": {
-        "community": 2
+        "community": 3,
+        "operational": 2
       },
       "business_focus": "KoreanNLP MCP directory entries를 capability discovery와 risk triage seed로 연결",
       "business_value": "awesome-mcp-korea section 기반의 T4 community directory seed다. MCP 후보 발굴에는 유용하지만 보안성, 운영상태, repository freshness를 보증하지 않는다.",
       "reinforcement": "GitHub repository metadata, archived/license/pushed_at, docs presence, security advisory, credential/write-action risk scope를 enrichment layer로 추가한다.",
-      "enabled_source_count": 2,
+      "enabled_source_count": 3,
       "dashboard_status": "active",
       "dashboard_pipeline_kind": "summary_json",
       "match_rate": 100.0,
@@ -825,7 +876,7 @@
       "complexity": "medium",
       "evidence_strategy": "official-operational",
       "source_status": "불균형",
-      "current_focus": "시장 + 공식 + 운영",
+      "current_focus": "시장 + 공식 + 커뮤니티",
       "available_layers": [
         "community",
         "market",
@@ -835,14 +886,14 @@
       "missing_layers": [],
       "layer_counts": {
         "community": 8,
-        "market": 22,
-        "official": 15,
-        "operational": 11
+        "market": 18,
+        "official": 11,
+        "operational": 7
       },
       "business_focus": "복지·지원금 공고를 대상자 매칭과 알림 서비스로 연결",
       "business_value": "정부·지자체 공고와 API가 있어 직접 전환으로 이어질 가능성이 높다.",
       "reinforcement": "신청 마감일, eligibility 계산, 집행 실적까지 붙여 실제 신청 행동과 연결한다.",
-      "enabled_source_count": 30,
+      "enabled_source_count": 26,
       "dashboard_status": "active",
       "dashboard_pipeline_kind": "summary_json",
       "match_rate": 100.0,
@@ -1023,7 +1074,7 @@
       "enabled_source_count": 37,
       "dashboard_status": "active",
       "dashboard_pipeline_kind": "summary_json",
-      "match_rate": 93.0,
+      "match_rate": 100.0,
       "quality_score": 85,
       "readiness_status": "watch",
       "flags": {
@@ -1129,6 +1180,49 @@
       "priority_score": 22
     },
     {
+      "repo": "MovieRadar",
+      "display_name": "Movie",
+      "repo_class": "standard-radar",
+      "domain_family": "media-entertainment",
+      "primary_motion": "intelligence",
+      "governance_profile": "low",
+      "complexity": "medium",
+      "evidence_strategy": "official-operational",
+      "source_status": "불균형",
+      "current_focus": "시장 + 운영 + 공식",
+      "available_layers": [
+        "market",
+        "official",
+        "operational"
+      ],
+      "missing_layers": [],
+      "layer_counts": {
+        "market": 10,
+        "official": 1,
+        "operational": 3
+      },
+      "business_focus": "영화·OTT 화제를 배급·편성·마케팅 의사결정으로 연결",
+      "business_value": "박스오피스와 미디어는 있으나 OTT 순위·예매·평점 데이터는 더 여지가 있다.",
+      "reinforcement": "국내 예매 순위, OTT Top 10, release calendar, audience rating을 더한다.",
+      "enabled_source_count": 10,
+      "dashboard_status": "active",
+      "dashboard_pipeline_kind": "summary_json",
+      "match_rate": 100.0,
+      "quality_score": 85,
+      "readiness_status": "watch",
+      "flags": {
+        "has_readme": true,
+        "has_agents": true,
+        "has_tests": true,
+        "has_docs": true,
+        "has_reports_index": true,
+        "has_summary_json": true,
+        "has_mcp_server": false
+      },
+      "next_step": "국내 예매 순위, OTT Top 10, release calendar, audience rating을 더한다.",
+      "priority_score": 22
+    },
+    {
       "repo": "HomeRadar",
       "display_name": "Home",
       "repo_class": "advanced-radar",
@@ -1152,11 +1246,11 @@
       },
       "business_focus": "부동산 정책·실거래·청약을 투자와 거주 의사결정으로 연결",
       "business_value": "공식 거래·청약·공매 source와 시장 뉴스 source가 분리되어 전환형 판단에 필요한 기준점을 제공한다.",
-      "reinforcement": "daily_review_items를 운영 큐로 사용해 공식 primary env gate를 해소하고 listing·재고 후보는 ToS·stale listing 검증 후 단계적으로 활성화한다.",
+      "reinforcement": "HomeVerificationState를 리포트/MCP 출력에 연결하고 listing·재고 후보는 ToS·stale listing 검증 후 단계적으로 활성화한다.",
       "enabled_source_count": 10,
       "dashboard_status": "active",
       "dashboard_pipeline_kind": "summary_json",
-      "match_rate": 77.0,
+      "match_rate": 100.0,
       "quality_score": 95,
       "readiness_status": "ready",
       "flags": {
@@ -1168,7 +1262,7 @@
         "has_summary_json": true,
         "has_mcp_server": true
       },
-      "next_step": "daily_review_items를 운영 큐로 사용해 공식 primary env gate를 해소하고 listing·재고 후보는 ToS·stale listing 검증 후 단계적으로 활성화한다.",
+      "next_step": "HomeVerificationState를 리포트/MCP 출력에 연결하고 listing·재고 후보는 ToS·stale listing 검증 후 단계적으로 활성화한다.",
       "priority_score": 14
     },
     {
@@ -1201,7 +1295,7 @@
       "enabled_source_count": 11,
       "dashboard_status": "active",
       "dashboard_pipeline_kind": "summary_json",
-      "match_rate": 81.5,
+      "match_rate": 100.0,
       "quality_score": 95,
       "readiness_status": "ready",
       "flags": {
@@ -1236,17 +1330,17 @@
       "missing_layers": [],
       "layer_counts": {
         "community": 3,
-        "market": 25,
+        "market": 24,
         "official": 7,
         "operational": 13
       },
       "business_focus": "보안·개인정보 이슈를 신뢰도와 compliance risk scoring으로 연결",
       "business_value": "보안 미디어 coverage는 넓지만 incident disclosure와 consumer complaint 계층이 약하다.",
       "reinforcement": "incident_disclosure, status_page_incident, enforcement_action, consumer_complaint, ai_asset_risk event model을 검증 산출물에 연결하고 커뮤니티 신호는 official_confirmation_required 상태로만 병합한다.",
-      "enabled_source_count": 25,
+      "enabled_source_count": 24,
       "dashboard_status": "active",
       "dashboard_pipeline_kind": "summary_json",
-      "match_rate": 82.9,
+      "match_rate": 100.0,
       "quality_score": 95,
       "readiness_status": "ready",
       "flags": {
@@ -1369,14 +1463,14 @@
       "missing_layers": [],
       "layer_counts": {
         "community": 5,
-        "market": 49,
-        "official": 15,
-        "operational": 2
+        "market": 48,
+        "official": 14,
+        "operational": 4
       },
       "business_focus": "와인 미디어·전문가·기관 신호를 수입·유통·브랜드 의사결정으로 연결",
       "business_value": "포트폴리오가 가장 성숙한 축 중 하나다.",
       "reinforcement": "auction price, 레스토랑 와인리스트 변동, importer portfolio sales 같은 거래 신호를 더한다.",
-      "enabled_source_count": 58,
+      "enabled_source_count": 56,
       "dashboard_status": "active",
       "dashboard_pipeline_kind": "summary_json",
       "match_rate": 100.0,
@@ -1393,49 +1487,6 @@
       },
       "next_step": "auction price, 레스토랑 와인리스트 변동, importer portfolio sales 같은 거래 신호를 더한다.",
       "priority_score": 8
-    },
-    {
-      "repo": "CryptoRadar",
-      "display_name": "Crypto",
-      "repo_class": "standard-radar",
-      "domain_family": "crypto-finance",
-      "primary_motion": "intelligence",
-      "governance_profile": "medium",
-      "complexity": "medium",
-      "evidence_strategy": "official-operational",
-      "source_status": "강함",
-      "current_focus": "시장 + 공식 + 운영",
-      "available_layers": [
-        "market",
-        "official",
-        "operational"
-      ],
-      "missing_layers": [],
-      "layer_counts": {
-        "market": 19,
-        "official": 5,
-        "operational": 5
-      },
-      "business_focus": "규제·가격·시장 심리를 함께 보는 자산 레이더",
-      "business_value": "뉴스와 가격 레이어는 있으나 규제·거래소·온체인 신호가 더 필요하다.",
-      "reinforcement": "거래소 상장·상폐 공지, 규제기관 발표, 온체인 지표를 추가해 투자 판단력을 높인다.",
-      "enabled_source_count": 19,
-      "dashboard_status": "active",
-      "dashboard_pipeline_kind": "summary_json",
-      "match_rate": 97.0,
-      "quality_score": 95,
-      "readiness_status": "ready",
-      "flags": {
-        "has_readme": true,
-        "has_agents": true,
-        "has_tests": true,
-        "has_docs": true,
-        "has_reports_index": true,
-        "has_summary_json": true,
-        "has_mcp_server": false
-      },
-      "next_step": "거래소 상장·상폐 공지, 규제기관 발표, 온체인 지표를 추가해 투자 판단력을 높인다.",
-      "priority_score": 4
     },
     {
       "repo": "MobilityRadar",
@@ -1457,14 +1508,14 @@
       "missing_layers": [],
       "layer_counts": {
         "community": 7,
-        "market": 26,
+        "market": 23,
         "official": 2,
         "operational": 2
       },
       "business_focus": "EV·공유모빌리티 운영 신호를 mobility domain으로 묶고 coffee source는 split 후보로 분리 관리한다.",
       "business_value": "공식 정류장·충전소·교통 공지 메타데이터가 생겼지만 실제 mobility 사업 판단에는 더 많은 구조화 운영 지표가 필요하다.",
       "reinforcement": "EV 등록·충전 요금·대중교통 요금 source를 추가하고 coffee split 후보의 별도 repo 승격 여부를 결정한다.",
-      "enabled_source_count": 27,
+      "enabled_source_count": 24,
       "dashboard_status": "active",
       "dashboard_pipeline_kind": "summary_json",
       "match_rate": 100.0,
@@ -1549,57 +1600,14 @@
       "missing_layers": [],
       "layer_counts": {
         "community": 8,
-        "market": 70,
+        "market": 67,
         "official": 5,
         "operational": 9
       },
       "business_focus": "기술 블로그 흐름을 개발자 수요와 채택 신호로 해석",
       "business_value": "콘텐츠 커버리지는 넓지만 실제 adoption 판단에 필요한 운영 신호가 약하다.",
       "reinforcement": "GitHub release·star, package registry download, 채용 공고를 추가해 채택 계층을 보강한다.",
-      "enabled_source_count": 78,
-      "dashboard_status": "active",
-      "dashboard_pipeline_kind": "summary_json",
-      "match_rate": 99.6,
-      "quality_score": 95,
-      "readiness_status": "ready",
-      "flags": {
-        "has_readme": true,
-        "has_agents": true,
-        "has_tests": true,
-        "has_docs": true,
-        "has_reports_index": true,
-        "has_summary_json": true,
-        "has_mcp_server": true
-      },
-      "next_step": "GitHub release·star, package registry download, 채용 공고를 추가해 채택 계층을 보강한다.",
-      "priority_score": 0
-    },
-    {
-      "repo": "MovieRadar",
-      "display_name": "Movie",
-      "repo_class": "standard-radar",
-      "domain_family": "media-entertainment",
-      "primary_motion": "intelligence",
-      "governance_profile": "low",
-      "complexity": "medium",
-      "evidence_strategy": "official-operational",
-      "source_status": "강함",
-      "current_focus": "시장 + 운영 + 공식",
-      "available_layers": [
-        "market",
-        "official",
-        "operational"
-      ],
-      "missing_layers": [],
-      "layer_counts": {
-        "market": 10,
-        "official": 3,
-        "operational": 5
-      },
-      "business_focus": "영화·OTT 화제를 배급·편성·마케팅 의사결정으로 연결",
-      "business_value": "박스오피스와 미디어는 있으나 OTT 순위·예매·평점 데이터는 더 여지가 있다.",
-      "reinforcement": "국내 예매 순위, OTT Top 10, release calendar, audience rating을 더한다.",
-      "enabled_source_count": 12,
+      "enabled_source_count": 75,
       "dashboard_status": "active",
       "dashboard_pipeline_kind": "summary_json",
       "match_rate": 100.0,
@@ -1612,9 +1620,9 @@
         "has_docs": true,
         "has_reports_index": true,
         "has_summary_json": true,
-        "has_mcp_server": false
+        "has_mcp_server": true
       },
-      "next_step": "국내 예매 순위, OTT Top 10, release calendar, audience rating을 더한다.",
+      "next_step": "GitHub release·star, package registry download, 채용 공고를 추가해 채택 계층을 보강한다.",
       "priority_score": 0
     },
     {
@@ -1645,7 +1653,7 @@
       "enabled_source_count": 17,
       "dashboard_status": "active",
       "dashboard_pipeline_kind": "summary_json",
-      "match_rate": 96.3,
+      "match_rate": 100.0,
       "quality_score": 95,
       "readiness_status": "ready",
       "flags": {
@@ -1693,6 +1701,41 @@
         "has_mcp_server": true
       },
       "next_step": "신규 Radar가 taxonomy 메타데이터를 기본 포함하도록 템플릿을 확장한다.",
+      "priority_score": 0
+    },
+    {
+      "repo": "radar-analysis",
+      "display_name": "radar-analysis",
+      "repo_class": "shared-analysis",
+      "domain_family": "platform",
+      "primary_motion": "infrastructure",
+      "governance_profile": "shared",
+      "complexity": "high",
+      "evidence_strategy": "shared",
+      "source_status": "공용",
+      "current_focus": "공용",
+      "available_layers": [],
+      "missing_layers": [],
+      "layer_counts": {},
+      "business_focus": null,
+      "business_value": null,
+      "reinforcement": null,
+      "enabled_source_count": null,
+      "dashboard_status": "n/a",
+      "dashboard_pipeline_kind": null,
+      "match_rate": null,
+      "quality_score": 100,
+      "readiness_status": "ready",
+      "flags": {
+        "has_readme": true,
+        "has_agents": true,
+        "has_tests": true,
+        "has_docs": true,
+        "has_reports_index": false,
+        "has_summary_json": false,
+        "has_mcp_server": false
+      },
+      "next_step": "producer repo 산출물을 warehouse/mart로 정규화하고 dashboard export 계약을 유지한다.",
       "priority_score": 0
     },
     {
@@ -1763,6 +1806,41 @@
         "has_mcp_server": false
       },
       "next_step": "프로젝트 메트릭과 taxonomy audit를 한 화면에서 점검하도록 시각화를 유지한다.",
+      "priority_score": 0
+    },
+    {
+      "repo": "radar-ontology",
+      "display_name": "radar-ontology",
+      "repo_class": "shared-ontology",
+      "domain_family": "platform",
+      "primary_motion": "infrastructure",
+      "governance_profile": "shared",
+      "complexity": "high",
+      "evidence_strategy": "shared",
+      "source_status": "공용",
+      "current_focus": "공용",
+      "available_layers": [],
+      "missing_layers": [],
+      "layer_counts": {},
+      "business_focus": null,
+      "business_value": null,
+      "reinforcement": null,
+      "enabled_source_count": null,
+      "dashboard_status": "n/a",
+      "dashboard_pipeline_kind": null,
+      "match_rate": null,
+      "quality_score": 100,
+      "readiness_status": "ready",
+      "flags": {
+        "has_readme": true,
+        "has_agents": true,
+        "has_tests": true,
+        "has_docs": true,
+        "has_reports_index": false,
+        "has_summary_json": false,
+        "has_mcp_server": false
+      },
+      "next_step": "event_model과 repo mapping runtime contract를 versioned semantic source of truth로 유지한다.",
       "priority_score": 0
     }
   ]

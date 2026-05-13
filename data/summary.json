@@ -1,13 +1,13 @@
 {
-  "generated_at": "2026-05-13T00:52:20.081924+00:00",
+  "generated_at": "2026-05-13T12:34:49.189865+00:00",
   "workspace_root": "/mnt/c/projects/ai-frendly-datahub",
   "projects_scanned": 37,
   "active_projects": 37,
   "projects_with_full_metrics": 37,
   "projects_with_partial_metrics": 0,
   "projects_missing_metrics": 0,
-  "article_total": 2853,
-  "matched_total": 2853,
+  "article_total": 2334,
+  "matched_total": 2334,
   "overall_match_rate": 100.0,
   "latest_updates": [
     {
@@ -29,6 +29,12 @@
       "status": "active"
     },
     {
+      "repo": "BookRadar",
+      "display_name": "Book",
+      "last_updated": "2026-05-13",
+      "status": "active"
+    },
+    {
       "repo": "CryptoRadar",
       "display_name": "Crypto",
       "last_updated": "2026-05-13",
@@ -41,32 +47,26 @@
       "status": "active"
     },
     {
+      "repo": "FoodRadar",
+      "display_name": "Food",
+      "last_updated": "2026-05-13",
+      "status": "active"
+    },
+    {
       "repo": "GameRadar",
       "display_name": "Game",
       "last_updated": "2026-05-13",
       "status": "active"
     },
     {
-      "repo": "MobilityRadar",
-      "display_name": "Mobility",
+      "repo": "GovRadar",
+      "display_name": "Gov",
       "last_updated": "2026-05-13",
       "status": "active"
     },
     {
-      "repo": "PaperworkRadar",
-      "display_name": "Paperwork",
-      "last_updated": "2026-05-13",
-      "status": "active"
-    },
-    {
-      "repo": "PolicyRadar",
-      "display_name": "Policy",
-      "last_updated": "2026-05-13",
-      "status": "active"
-    },
-    {
-      "repo": "PriceRadar",
-      "display_name": "Price",
+      "repo": "HomeRadar",
+      "display_name": "Home",
       "last_updated": "2026-05-13",
       "status": "active"
     }
@@ -79,7 +79,6 @@
     "CollaborationMCPRadar: quality report has 2 disabled source(s)",
     "CommerceMCPRadar: quality report has 1 disabled source(s)",
     "CryptoRadar: quality report has 6 disabled source(s)",
-    "EventRadar: quality freshness gaps: stale=0, missing=1, unknown_event_date=0",
     "EventRadar: quality report has 8 disabled source(s)",
     "FinanceTaxMCPRadar: quality report has 2 disabled source(s)",
     "FoodRadar: quality report has 1 disabled source(s)",
@@ -98,7 +97,6 @@
     "QueueRadar: quality report has 16 disabled source(s)",
     "RealEstateMCPRadar: quality report has 1 disabled source(s)",
     "SearchTrendMCPRadar: quality report has 2 disabled source(s)",
-    "SubscriptionRadar: quality freshness gaps: stale=1, missing=0, unknown_event_date=0",
     "SubscriptionRadar: quality report has 14 disabled source(s)",
     "TravelMCPRadar: quality report has 2 disabled source(s)",
     "WeatherMCPRadar: quality report has 2 disabled source(s)",
