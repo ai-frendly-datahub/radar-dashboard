@@ -1,17 +1,17 @@
 {
   "meta": {
-    "generated_at": "2026-05-13T12:32:56.833093+00:00",
+    "generated_at": "2026-05-13T16:17:24.440937+00:00",
     "workspace_root": "/mnt/c/projects/ai-frendly-datahub",
     "project_count": 37,
     "taxonomy_repo_count": 42,
     "motion_summary_count": 4,
-    "summary_ontology_repo_count": 16,
-    "runtime_contract_repo_count": 36,
-    "raw_file_fact_count": 429,
-    "duckdb_table_fact_count": 99,
-    "raw_ontology_record_count": 1354,
-    "duckdb_ontology_row_count": 32521,
-    "event_model_coverage_count": 108,
+    "summary_ontology_repo_count": 19,
+    "runtime_contract_repo_count": 37,
+    "raw_file_fact_count": 510,
+    "duckdb_table_fact_count": 102,
+    "raw_ontology_record_count": 1355,
+    "duckdb_ontology_row_count": 33213,
+    "event_model_coverage_count": 115,
     "disabled_source_total": 183,
     "disabled_source_bucket_totals": {
       "awaiting_url_replacement": 44,
@@ -22,24 +22,24 @@
       "accepted_backlog": 116
     },
     "storage_priority_flag_totals": {
-      "raw_record_zero_with_articles": 12,
+      "raw_record_zero_with_articles": 4,
       "signal_table_missing_when_raw_present": 0,
       "duckdb_table_missing_with_articles": 0,
       "duckdb_event_model_missing_when_summary_emitted": 0,
       "duckdb_ontology_missing_when_summary_emitted": 0,
       "duckdb_event_model_partial_when_summary_emitted": 0
     },
-    "storage_priority_repo_count": 12
+    "storage_priority_repo_count": 4
   },
   "summary": {
     "repo_count": 37,
-    "repos_with_raw_records": 19,
+    "repos_with_raw_records": 31,
     "repos_with_duckdb": 36,
-    "repos_with_signal_tables": 35,
-    "raw_file_count": 429,
-    "raw_record_count": 1438,
-    "duckdb_table_count": 99,
-    "signal_table_count": 47
+    "repos_with_signal_tables": 36,
+    "raw_file_count": 510,
+    "raw_record_count": 2727,
+    "duckdb_table_count": 102,
+    "signal_table_count": 50
   },
   "repo_rows": [
     {
@@ -111,7 +111,7 @@
       "preferred_db_path": "BlogRadar/data/radar_data.duckdb",
       "preferred_table_name": "articles",
       "preferred_table_row_count": 1408,
-      "ontology_adoption_status": "summary_emitted",
+      "ontology_adoption_status": "runtime_only",
       "ontology_version": "0.1.0"
     },
     {
@@ -143,10 +143,10 @@
       "display_name": "CollaborationMCP",
       "category": "collaboration_mcp",
       "repo_class": "standard-radar",
-      "latest_raw_date": "",
-      "latest_raw_file_count": 0,
-      "latest_raw_record_count": 0,
-      "latest_raw_source_count": 0,
+      "latest_raw_date": "2026-05-13",
+      "latest_raw_file_count": 1,
+      "latest_raw_record_count": 1,
+      "latest_raw_source_count": 1,
       "latest_raw_ontology_record_count": 0,
       "latest_raw_event_model_record_count": 0,
       "duckdb_file_count": 1,
@@ -159,7 +159,7 @@
       "preferred_db_path": "CollaborationMCPRadar/data/radar_data.duckdb",
       "preferred_table_name": "articles",
       "preferred_table_row_count": 4,
-      "ontology_adoption_status": "runtime_fallback",
+      "ontology_adoption_status": "summary_emitted",
       "ontology_version": "0.1.0"
     },
     {
@@ -167,10 +167,10 @@
       "display_name": "CommerceMCP",
       "category": "commerce_mcp",
       "repo_class": "standard-radar",
-      "latest_raw_date": "",
-      "latest_raw_file_count": 0,
-      "latest_raw_record_count": 0,
-      "latest_raw_source_count": 0,
+      "latest_raw_date": "2026-05-13",
+      "latest_raw_file_count": 2,
+      "latest_raw_record_count": 11,
+      "latest_raw_source_count": 2,
       "latest_raw_ontology_record_count": 0,
       "latest_raw_event_model_record_count": 0,
       "duckdb_file_count": 1,
@@ -183,7 +183,7 @@
       "preferred_db_path": "CommerceMCPRadar/data/radar_data.duckdb",
       "preferred_table_name": "articles",
       "preferred_table_row_count": 12,
-      "ontology_adoption_status": "runtime_fallback",
+      "ontology_adoption_status": "summary_emitted",
       "ontology_version": "0.1.0"
     },
     {
@@ -207,8 +207,8 @@
       "preferred_db_path": "",
       "preferred_table_name": "",
       "preferred_table_row_count": 0,
-      "ontology_adoption_status": "missing",
-      "ontology_version": ""
+      "ontology_adoption_status": "runtime_fallback",
+      "ontology_version": "0.1.0"
     },
     {
       "repo": "CryptoRadar",
@@ -248,14 +248,14 @@
       "duckdb_file_count": 2,
       "duckdb_table_count": 4,
       "signal_table_count": 2,
-      "signal_row_total": 2861,
-      "duckdb_ontology_row_count": 356,
+      "signal_row_total": 3032,
+      "duckdb_ontology_row_count": 525,
       "duckdb_event_model_record_count": 0,
       "articles_ontology_capable": true,
       "preferred_db_path": "EventRadar/data/radar_data.duckdb",
       "preferred_table_name": "articles",
-      "preferred_table_row_count": 2861,
-      "ontology_adoption_status": "summary_emitted",
+      "preferred_table_row_count": 3032,
+      "ontology_adoption_status": "runtime_only",
       "ontology_version": "0.1.0"
     },
     {
@@ -263,11 +263,11 @@
       "display_name": "FinanceTaxMCP",
       "category": "finance_tax_mcp",
       "repo_class": "standard-radar",
-      "latest_raw_date": "",
-      "latest_raw_file_count": 0,
-      "latest_raw_record_count": 0,
-      "latest_raw_source_count": 0,
-      "latest_raw_ontology_record_count": 0,
+      "latest_raw_date": "2026-05-13",
+      "latest_raw_file_count": 1,
+      "latest_raw_record_count": 1,
+      "latest_raw_source_count": 1,
+      "latest_raw_ontology_record_count": 1,
       "latest_raw_event_model_record_count": 0,
       "duckdb_file_count": 1,
       "duckdb_table_count": 1,
@@ -279,7 +279,7 @@
       "preferred_db_path": "FinanceTaxMCPRadar/data/radar_data.duckdb",
       "preferred_table_name": "articles",
       "preferred_table_row_count": 24,
-      "ontology_adoption_status": "runtime_fallback",
+      "ontology_adoption_status": "summary_emitted",
       "ontology_version": "0.1.0"
     },
     {
@@ -320,14 +320,14 @@
       "duckdb_file_count": 1,
       "duckdb_table_count": 3,
       "signal_table_count": 1,
-      "signal_row_total": 7064,
-      "duckdb_ontology_row_count": 7064,
-      "duckdb_event_model_record_count": 6713,
+      "signal_row_total": 6743,
+      "duckdb_ontology_row_count": 6743,
+      "duckdb_event_model_record_count": 5947,
       "articles_ontology_capable": true,
       "preferred_db_path": "GameRadar/data/radar_data.duckdb",
       "preferred_table_name": "articles",
-      "preferred_table_row_count": 7064,
-      "ontology_adoption_status": "summary_emitted",
+      "preferred_table_row_count": 6743,
+      "ontology_adoption_status": "runtime_only",
       "ontology_version": "0.1.0"
     },
     {
@@ -359,22 +359,22 @@
       "display_name": "Home",
       "category": "home",
       "repo_class": "advanced-radar",
-      "latest_raw_date": "",
-      "latest_raw_file_count": 0,
-      "latest_raw_record_count": 0,
-      "latest_raw_source_count": 0,
+      "latest_raw_date": "2026-05-13",
+      "latest_raw_file_count": 1,
+      "latest_raw_record_count": 43,
+      "latest_raw_source_count": 1,
       "latest_raw_ontology_record_count": 0,
       "latest_raw_event_model_record_count": 0,
       "duckdb_file_count": 2,
       "duckdb_table_count": 5,
       "signal_table_count": 3,
-      "signal_row_total": 3546,
-      "duckdb_ontology_row_count": 886,
-      "duckdb_event_model_record_count": 844,
+      "signal_row_total": 3737,
+      "duckdb_ontology_row_count": 929,
+      "duckdb_event_model_record_count": 887,
       "articles_ontology_capable": true,
       "preferred_db_path": "HomeRadar/data/homeradar.duckdb",
       "preferred_table_name": "articles",
-      "preferred_table_row_count": 886,
+      "preferred_table_row_count": 929,
       "ontology_adoption_status": "summary_emitted",
       "ontology_version": "0.1.0"
     },
@@ -407,10 +407,10 @@
       "display_name": "KoreanNLPMCP",
       "category": "korean_nlp_mcp",
       "repo_class": "standard-radar",
-      "latest_raw_date": "",
-      "latest_raw_file_count": 0,
-      "latest_raw_record_count": 0,
-      "latest_raw_source_count": 0,
+      "latest_raw_date": "2026-05-13",
+      "latest_raw_file_count": 2,
+      "latest_raw_record_count": 2,
+      "latest_raw_source_count": 2,
       "latest_raw_ontology_record_count": 0,
       "latest_raw_event_model_record_count": 0,
       "duckdb_file_count": 1,
@@ -423,7 +423,7 @@
       "preferred_db_path": "KoreanNLPMCPRadar/data/radar_data.duckdb",
       "preferred_table_name": "articles",
       "preferred_table_row_count": 5,
-      "ontology_adoption_status": "runtime_fallback",
+      "ontology_adoption_status": "summary_emitted",
       "ontology_version": "0.1.0"
     },
     {
@@ -431,10 +431,10 @@
       "display_name": "LegalGovMCP",
       "category": "legal_gov_mcp",
       "repo_class": "standard-radar",
-      "latest_raw_date": "",
-      "latest_raw_file_count": 0,
-      "latest_raw_record_count": 0,
-      "latest_raw_source_count": 0,
+      "latest_raw_date": "2026-05-13",
+      "latest_raw_file_count": 1,
+      "latest_raw_record_count": 1,
+      "latest_raw_source_count": 1,
       "latest_raw_ontology_record_count": 0,
       "latest_raw_event_model_record_count": 0,
       "duckdb_file_count": 1,
@@ -447,7 +447,7 @@
       "preferred_db_path": "LegalGovMCPRadar/data/radar_data.duckdb",
       "preferred_table_name": "articles",
       "preferred_table_row_count": 6,
-      "ontology_adoption_status": "runtime_fallback",
+      "ontology_adoption_status": "summary_emitted",
       "ontology_version": "0.1.0"
     },
     {
@@ -455,10 +455,10 @@
       "display_name": "MapAddressMCP",
       "category": "map_address_mcp",
       "repo_class": "standard-radar",
-      "latest_raw_date": "",
-      "latest_raw_file_count": 0,
-      "latest_raw_record_count": 0,
-      "latest_raw_source_count": 0,
+      "latest_raw_date": "2026-05-13",
+      "latest_raw_file_count": 1,
+      "latest_raw_record_count": 1,
+      "latest_raw_source_count": 1,
       "latest_raw_ontology_record_count": 0,
       "latest_raw_event_model_record_count": 0,
       "duckdb_file_count": 1,
@@ -471,7 +471,7 @@
       "preferred_db_path": "MapAddressMCPRadar/data/radar_data.duckdb",
       "preferred_table_name": "articles",
       "preferred_table_row_count": 6,
-      "ontology_adoption_status": "runtime_fallback",
+      "ontology_adoption_status": "summary_emitted",
       "ontology_version": "0.1.0"
     },
     {
@@ -495,7 +495,7 @@
       "preferred_db_path": "MiscMCPRadar/data/radar_data.duckdb",
       "preferred_table_name": "articles",
       "preferred_table_row_count": 0,
-      "ontology_adoption_status": "runtime_fallback",
+      "ontology_adoption_status": "summary_emitted",
       "ontology_version": "0.1.0"
     },
     {
@@ -512,14 +512,14 @@
       "duckdb_file_count": 1,
       "duckdb_table_count": 3,
       "signal_table_count": 1,
-      "signal_row_total": 6445,
-      "duckdb_ontology_row_count": 306,
+      "signal_row_total": 6723,
+      "duckdb_ontology_row_count": 584,
       "duckdb_event_model_record_count": 0,
       "articles_ontology_capable": true,
       "preferred_db_path": "MobilityRadar/data/radar_data.duckdb",
       "preferred_table_name": "articles",
-      "preferred_table_row_count": 6445,
-      "ontology_adoption_status": "runtime_fallback",
+      "preferred_table_row_count": 6723,
+      "ontology_adoption_status": "runtime_only",
       "ontology_version": "0.1.0"
     },
     {
@@ -584,14 +584,14 @@
       "duckdb_file_count": 2,
       "duckdb_table_count": 4,
       "signal_table_count": 2,
-      "signal_row_total": 4515,
-      "duckdb_ontology_row_count": 14,
+      "signal_row_total": 4599,
+      "duckdb_ontology_row_count": 237,
       "duckdb_event_model_record_count": 0,
       "articles_ontology_capable": true,
       "preferred_db_path": "PaperworkRadar/data/radar_data.duckdb",
       "preferred_table_name": "articles",
-      "preferred_table_row_count": 4515,
-      "ontology_adoption_status": "runtime_fallback",
+      "preferred_table_row_count": 4599,
+      "ontology_adoption_status": "runtime_only",
       "ontology_version": "0.1.0"
     },
     {
@@ -623,23 +623,23 @@
       "display_name": "Price",
       "category": "price",
       "repo_class": "advanced-radar",
-      "latest_raw_date": "",
-      "latest_raw_file_count": 0,
-      "latest_raw_record_count": 0,
-      "latest_raw_source_count": 0,
+      "latest_raw_date": "2026-05-13",
+      "latest_raw_file_count": 9,
+      "latest_raw_record_count": 466,
+      "latest_raw_source_count": 9,
       "latest_raw_ontology_record_count": 0,
       "latest_raw_event_model_record_count": 0,
       "duckdb_file_count": 3,
       "duckdb_table_count": 8,
       "signal_table_count": 6,
-      "signal_row_total": 166248,
+      "signal_row_total": 177138,
       "duckdb_ontology_row_count": 0,
       "duckdb_event_model_record_count": 0,
       "articles_ontology_capable": false,
       "preferred_db_path": "PriceRadar/data/priceradar.duckdb",
       "preferred_table_name": "price_snapshots",
-      "preferred_table_row_count": 14786,
-      "ontology_adoption_status": "runtime_fallback",
+      "preferred_table_row_count": 15252,
+      "ontology_adoption_status": "runtime_only",
       "ontology_version": "0.1.0"
     },
     {
@@ -671,10 +671,10 @@
       "display_name": "PublicDataMCP",
       "category": "publicdata_mcp",
       "repo_class": "standard-radar",
-      "latest_raw_date": "",
-      "latest_raw_file_count": 0,
-      "latest_raw_record_count": 0,
-      "latest_raw_source_count": 0,
+      "latest_raw_date": "2026-05-13",
+      "latest_raw_file_count": 1,
+      "latest_raw_record_count": 1,
+      "latest_raw_source_count": 1,
       "latest_raw_ontology_record_count": 0,
       "latest_raw_event_model_record_count": 0,
       "duckdb_file_count": 1,
@@ -687,7 +687,7 @@
       "preferred_db_path": "PublicDataMCPRadar/data/radar_data.duckdb",
       "preferred_table_name": "articles",
       "preferred_table_row_count": 8,
-      "ontology_adoption_status": "runtime_fallback",
+      "ontology_adoption_status": "summary_emitted",
       "ontology_version": "0.1.0"
     },
     {
@@ -704,14 +704,14 @@
       "duckdb_file_count": 1,
       "duckdb_table_count": 3,
       "signal_table_count": 1,
-      "signal_row_total": 2460,
-      "duckdb_ontology_row_count": 2460,
-      "duckdb_event_model_record_count": 1895,
+      "signal_row_total": 2595,
+      "duckdb_ontology_row_count": 2595,
+      "duckdb_event_model_record_count": 1873,
       "articles_ontology_capable": true,
       "preferred_db_path": "QueueRadar/data/radar_data.duckdb",
       "preferred_table_name": "articles",
-      "preferred_table_row_count": 2460,
-      "ontology_adoption_status": "summary_emitted",
+      "preferred_table_row_count": 2595,
+      "ontology_adoption_status": "runtime_only",
       "ontology_version": "0.1.0"
     },
     {
@@ -743,10 +743,10 @@
       "display_name": "Refund",
       "category": "refund",
       "repo_class": "standard-radar",
-      "latest_raw_date": "",
-      "latest_raw_file_count": 0,
-      "latest_raw_record_count": 0,
-      "latest_raw_source_count": 0,
+      "latest_raw_date": "2026-05-13",
+      "latest_raw_file_count": 19,
+      "latest_raw_record_count": 333,
+      "latest_raw_source_count": 19,
       "latest_raw_ontology_record_count": 0,
       "latest_raw_event_model_record_count": 0,
       "duckdb_file_count": 1,
@@ -800,14 +800,14 @@
       "duckdb_file_count": 1,
       "duckdb_table_count": 3,
       "signal_table_count": 1,
-      "signal_row_total": 6286,
-      "duckdb_ontology_row_count": 85,
+      "signal_row_total": 6317,
+      "duckdb_ontology_row_count": 117,
       "duckdb_event_model_record_count": 0,
       "articles_ontology_capable": true,
       "preferred_db_path": "SubscriptionRadar/data/radar_data.duckdb",
       "preferred_table_name": "articles",
-      "preferred_table_row_count": 6286,
-      "ontology_adoption_status": "summary_emitted",
+      "preferred_table_row_count": 6317,
+      "ontology_adoption_status": "runtime_only",
       "ontology_version": "0.1.0"
     },
     {
@@ -839,22 +839,22 @@
       "display_name": "Trend",
       "category": "trend",
       "repo_class": "advanced-radar",
-      "latest_raw_date": "",
-      "latest_raw_file_count": 0,
-      "latest_raw_record_count": 0,
-      "latest_raw_source_count": 0,
+      "latest_raw_date": "2026-05-13",
+      "latest_raw_file_count": 1,
+      "latest_raw_record_count": 14,
+      "latest_raw_source_count": 1,
       "latest_raw_ontology_record_count": 0,
       "latest_raw_event_model_record_count": 0,
-      "duckdb_file_count": 1,
-      "duckdb_table_count": 2,
-      "signal_table_count": 0,
-      "signal_row_total": 0,
+      "duckdb_file_count": 2,
+      "duckdb_table_count": 3,
+      "signal_table_count": 1,
+      "signal_row_total": 14,
       "duckdb_ontology_row_count": 0,
       "duckdb_event_model_record_count": 0,
       "articles_ontology_capable": false,
-      "preferred_db_path": "TrendRadar/data/radar_data.duckdb",
-      "preferred_table_name": "_migrations",
-      "preferred_table_row_count": 3,
+      "preferred_db_path": "TrendRadar/data/trendradar.duckdb",
+      "preferred_table_name": "trend_points",
+      "preferred_table_row_count": 14,
       "ontology_adoption_status": "summary_emitted",
       "ontology_version": "0.1.0"
     },
@@ -872,14 +872,14 @@
       "duckdb_file_count": 2,
       "duckdb_table_count": 5,
       "signal_table_count": 1,
-      "signal_row_total": 3410,
-      "duckdb_ontology_row_count": 310,
+      "signal_row_total": 3543,
+      "duckdb_ontology_row_count": 443,
       "duckdb_event_model_record_count": 0,
       "articles_ontology_capable": true,
       "preferred_db_path": "TrustRadar/data/trustradar_data.duckdb",
       "preferred_table_name": "articles",
-      "preferred_table_row_count": 3410,
-      "ontology_adoption_status": "runtime_fallback",
+      "preferred_table_row_count": 3543,
+      "ontology_adoption_status": "runtime_only",
       "ontology_version": "0.1.0"
     },
     {
@@ -911,23 +911,23 @@
       "display_name": "Wine",
       "category": "wine",
       "repo_class": "advanced-radar",
-      "latest_raw_date": "",
-      "latest_raw_file_count": 0,
-      "latest_raw_record_count": 0,
-      "latest_raw_source_count": 0,
+      "latest_raw_date": "2026-05-13",
+      "latest_raw_file_count": 42,
+      "latest_raw_record_count": 415,
+      "latest_raw_source_count": 42,
       "latest_raw_ontology_record_count": 0,
       "latest_raw_event_model_record_count": 0,
       "duckdb_file_count": 2,
-      "duckdb_table_count": 3,
-      "signal_table_count": 1,
-      "signal_row_total": 1,
+      "duckdb_table_count": 5,
+      "signal_table_count": 3,
+      "signal_row_total": 2373,
       "duckdb_ontology_row_count": 0,
       "duckdb_event_model_record_count": 0,
       "articles_ontology_capable": false,
       "preferred_db_path": "WineRadar/data/wineradar.duckdb",
-      "preferred_table_name": "kpi_daily",
-      "preferred_table_row_count": 1,
-      "ontology_adoption_status": "runtime_fallback",
+      "preferred_table_name": "urls",
+      "preferred_table_row_count": 410,
+      "ontology_adoption_status": "runtime_only",
       "ontology_version": "0.1.0"
     }
   ],
@@ -2686,7 +2686,7 @@
       "source_role_record_count": 0,
       "distinct_source_role_ids": [],
       "source_role_counts": {},
-      "ontology_adoption_status": "summary_emitted",
+      "ontology_adoption_status": "runtime_only",
       "ontology_version": "0.1.0"
     },
     {
@@ -2721,7 +2721,7 @@
       "source_role_record_count": 0,
       "distinct_source_role_ids": [],
       "source_role_counts": {},
-      "ontology_adoption_status": "summary_emitted",
+      "ontology_adoption_status": "runtime_only",
       "ontology_version": "0.1.0"
     },
     {
@@ -2756,7 +2756,7 @@
       "source_role_record_count": 0,
       "distinct_source_role_ids": [],
       "source_role_counts": {},
-      "ontology_adoption_status": "summary_emitted",
+      "ontology_adoption_status": "runtime_only",
       "ontology_version": "0.1.0"
     },
     {
@@ -2791,7 +2791,7 @@
       "source_role_record_count": 0,
       "distinct_source_role_ids": [],
       "source_role_counts": {},
-      "ontology_adoption_status": "summary_emitted",
+      "ontology_adoption_status": "runtime_only",
       "ontology_version": "0.1.0"
     },
     {
@@ -2826,7 +2826,7 @@
       "source_role_record_count": 0,
       "distinct_source_role_ids": [],
       "source_role_counts": {},
-      "ontology_adoption_status": "summary_emitted",
+      "ontology_adoption_status": "runtime_only",
       "ontology_version": "0.1.0"
     },
     {
@@ -2861,7 +2861,7 @@
       "source_role_record_count": 0,
       "distinct_source_role_ids": [],
       "source_role_counts": {},
-      "ontology_adoption_status": "summary_emitted",
+      "ontology_adoption_status": "runtime_only",
       "ontology_version": "0.1.0"
     },
     {
@@ -2896,7 +2896,7 @@
       "source_role_record_count": 0,
       "distinct_source_role_ids": [],
       "source_role_counts": {},
-      "ontology_adoption_status": "summary_emitted",
+      "ontology_adoption_status": "runtime_only",
       "ontology_version": "0.1.0"
     },
     {
@@ -2931,7 +2931,7 @@
       "source_role_record_count": 0,
       "distinct_source_role_ids": [],
       "source_role_counts": {},
-      "ontology_adoption_status": "summary_emitted",
+      "ontology_adoption_status": "runtime_only",
       "ontology_version": "0.1.0"
     },
     {
@@ -2966,7 +2966,7 @@
       "source_role_record_count": 0,
       "distinct_source_role_ids": [],
       "source_role_counts": {},
-      "ontology_adoption_status": "summary_emitted",
+      "ontology_adoption_status": "runtime_only",
       "ontology_version": "0.1.0"
     },
     {
@@ -3001,7 +3001,7 @@
       "source_role_record_count": 0,
       "distinct_source_role_ids": [],
       "source_role_counts": {},
-      "ontology_adoption_status": "summary_emitted",
+      "ontology_adoption_status": "runtime_only",
       "ontology_version": "0.1.0"
     },
     {
@@ -3036,7 +3036,7 @@
       "source_role_record_count": 0,
       "distinct_source_role_ids": [],
       "source_role_counts": {},
-      "ontology_adoption_status": "summary_emitted",
+      "ontology_adoption_status": "runtime_only",
       "ontology_version": "0.1.0"
     },
     {
@@ -3071,7 +3071,7 @@
       "source_role_record_count": 0,
       "distinct_source_role_ids": [],
       "source_role_counts": {},
-      "ontology_adoption_status": "summary_emitted",
+      "ontology_adoption_status": "runtime_only",
       "ontology_version": "0.1.0"
     },
     {
@@ -3106,7 +3106,7 @@
       "source_role_record_count": 0,
       "distinct_source_role_ids": [],
       "source_role_counts": {},
-      "ontology_adoption_status": "summary_emitted",
+      "ontology_adoption_status": "runtime_only",
       "ontology_version": "0.1.0"
     },
     {
@@ -3141,7 +3141,7 @@
       "source_role_record_count": 0,
       "distinct_source_role_ids": [],
       "source_role_counts": {},
-      "ontology_adoption_status": "summary_emitted",
+      "ontology_adoption_status": "runtime_only",
       "ontology_version": "0.1.0"
     },
     {
@@ -3176,7 +3176,7 @@
       "source_role_record_count": 0,
       "distinct_source_role_ids": [],
       "source_role_counts": {},
-      "ontology_adoption_status": "summary_emitted",
+      "ontology_adoption_status": "runtime_only",
       "ontology_version": "0.1.0"
     },
     {
@@ -3211,7 +3211,7 @@
       "source_role_record_count": 0,
       "distinct_source_role_ids": [],
       "source_role_counts": {},
-      "ontology_adoption_status": "summary_emitted",
+      "ontology_adoption_status": "runtime_only",
       "ontology_version": "0.1.0"
     },
     {
@@ -3246,7 +3246,7 @@
       "source_role_record_count": 0,
       "distinct_source_role_ids": [],
       "source_role_counts": {},
-      "ontology_adoption_status": "summary_emitted",
+      "ontology_adoption_status": "runtime_only",
       "ontology_version": "0.1.0"
     },
     {
@@ -3281,7 +3281,7 @@
       "source_role_record_count": 0,
       "distinct_source_role_ids": [],
       "source_role_counts": {},
-      "ontology_adoption_status": "summary_emitted",
+      "ontology_adoption_status": "runtime_only",
       "ontology_version": "0.1.0"
     },
     {
@@ -3316,7 +3316,7 @@
       "source_role_record_count": 0,
       "distinct_source_role_ids": [],
       "source_role_counts": {},
-      "ontology_adoption_status": "summary_emitted",
+      "ontology_adoption_status": "runtime_only",
       "ontology_version": "0.1.0"
     },
     {
@@ -3351,7 +3351,7 @@
       "source_role_record_count": 0,
       "distinct_source_role_ids": [],
       "source_role_counts": {},
-      "ontology_adoption_status": "summary_emitted",
+      "ontology_adoption_status": "runtime_only",
       "ontology_version": "0.1.0"
     },
     {
@@ -3390,7 +3390,7 @@
       "source_role_counts": {
         "community_signal": 1
       },
-      "ontology_adoption_status": "summary_emitted",
+      "ontology_adoption_status": "runtime_only",
       "ontology_version": "0.1.0"
     },
     {
@@ -3425,7 +3425,7 @@
       "source_role_record_count": 0,
       "distinct_source_role_ids": [],
       "source_role_counts": {},
-      "ontology_adoption_status": "summary_emitted",
+      "ontology_adoption_status": "runtime_only",
       "ontology_version": "0.1.0"
     },
     {
@@ -3460,7 +3460,7 @@
       "source_role_record_count": 0,
       "distinct_source_role_ids": [],
       "source_role_counts": {},
-      "ontology_adoption_status": "summary_emitted",
+      "ontology_adoption_status": "runtime_only",
       "ontology_version": "0.1.0"
     },
     {
@@ -3495,7 +3495,7 @@
       "source_role_record_count": 0,
       "distinct_source_role_ids": [],
       "source_role_counts": {},
-      "ontology_adoption_status": "summary_emitted",
+      "ontology_adoption_status": "runtime_only",
       "ontology_version": "0.1.0"
     },
     {
@@ -3530,7 +3530,7 @@
       "source_role_record_count": 0,
       "distinct_source_role_ids": [],
       "source_role_counts": {},
-      "ontology_adoption_status": "summary_emitted",
+      "ontology_adoption_status": "runtime_only",
       "ontology_version": "0.1.0"
     },
     {
@@ -3565,7 +3565,7 @@
       "source_role_record_count": 0,
       "distinct_source_role_ids": [],
       "source_role_counts": {},
-      "ontology_adoption_status": "summary_emitted",
+      "ontology_adoption_status": "runtime_only",
       "ontology_version": "0.1.0"
     },
     {
@@ -3600,7 +3600,7 @@
       "source_role_record_count": 0,
       "distinct_source_role_ids": [],
       "source_role_counts": {},
-      "ontology_adoption_status": "summary_emitted",
+      "ontology_adoption_status": "runtime_only",
       "ontology_version": "0.1.0"
     },
     {
@@ -3635,7 +3635,7 @@
       "source_role_record_count": 0,
       "distinct_source_role_ids": [],
       "source_role_counts": {},
-      "ontology_adoption_status": "summary_emitted",
+      "ontology_adoption_status": "runtime_only",
       "ontology_version": "0.1.0"
     },
     {
@@ -3670,7 +3670,7 @@
       "source_role_record_count": 0,
       "distinct_source_role_ids": [],
       "source_role_counts": {},
-      "ontology_adoption_status": "summary_emitted",
+      "ontology_adoption_status": "runtime_only",
       "ontology_version": "0.1.0"
     },
     {
@@ -3705,7 +3705,7 @@
       "source_role_record_count": 0,
       "distinct_source_role_ids": [],
       "source_role_counts": {},
-      "ontology_adoption_status": "summary_emitted",
+      "ontology_adoption_status": "runtime_only",
       "ontology_version": "0.1.0"
     },
     {
@@ -3744,7 +3744,7 @@
       "source_role_counts": {
         "context_only": 1
       },
-      "ontology_adoption_status": "summary_emitted",
+      "ontology_adoption_status": "runtime_only",
       "ontology_version": "0.1.0"
     },
     {
@@ -3779,7 +3779,7 @@
       "source_role_record_count": 0,
       "distinct_source_role_ids": [],
       "source_role_counts": {},
-      "ontology_adoption_status": "summary_emitted",
+      "ontology_adoption_status": "runtime_only",
       "ontology_version": "0.1.0"
     },
     {
@@ -3814,7 +3814,7 @@
       "source_role_record_count": 0,
       "distinct_source_role_ids": [],
       "source_role_counts": {},
-      "ontology_adoption_status": "summary_emitted",
+      "ontology_adoption_status": "runtime_only",
       "ontology_version": "0.1.0"
     },
     {
@@ -3849,7 +3849,7 @@
       "source_role_record_count": 0,
       "distinct_source_role_ids": [],
       "source_role_counts": {},
-      "ontology_adoption_status": "summary_emitted",
+      "ontology_adoption_status": "runtime_only",
       "ontology_version": "0.1.0"
     },
     {
@@ -3884,7 +3884,7 @@
       "source_role_record_count": 0,
       "distinct_source_role_ids": [],
       "source_role_counts": {},
-      "ontology_adoption_status": "summary_emitted",
+      "ontology_adoption_status": "runtime_only",
       "ontology_version": "0.1.0"
     },
     {
@@ -3919,7 +3919,7 @@
       "source_role_record_count": 0,
       "distinct_source_role_ids": [],
       "source_role_counts": {},
-      "ontology_adoption_status": "summary_emitted",
+      "ontology_adoption_status": "runtime_only",
       "ontology_version": "0.1.0"
     },
     {
@@ -3954,7 +3954,7 @@
       "source_role_record_count": 0,
       "distinct_source_role_ids": [],
       "source_role_counts": {},
-      "ontology_adoption_status": "summary_emitted",
+      "ontology_adoption_status": "runtime_only",
       "ontology_version": "0.1.0"
     },
     {
@@ -3989,7 +3989,7 @@
       "source_role_record_count": 0,
       "distinct_source_role_ids": [],
       "source_role_counts": {},
-      "ontology_adoption_status": "summary_emitted",
+      "ontology_adoption_status": "runtime_only",
       "ontology_version": "0.1.0"
     },
     {
@@ -4024,7 +4024,7 @@
       "source_role_record_count": 0,
       "distinct_source_role_ids": [],
       "source_role_counts": {},
-      "ontology_adoption_status": "summary_emitted",
+      "ontology_adoption_status": "runtime_only",
       "ontology_version": "0.1.0"
     },
     {
@@ -4059,7 +4059,7 @@
       "source_role_record_count": 0,
       "distinct_source_role_ids": [],
       "source_role_counts": {},
-      "ontology_adoption_status": "summary_emitted",
+      "ontology_adoption_status": "runtime_only",
       "ontology_version": "0.1.0"
     },
     {
@@ -4094,7 +4094,7 @@
       "source_role_record_count": 0,
       "distinct_source_role_ids": [],
       "source_role_counts": {},
-      "ontology_adoption_status": "summary_emitted",
+      "ontology_adoption_status": "runtime_only",
       "ontology_version": "0.1.0"
     },
     {
@@ -4129,7 +4129,7 @@
       "source_role_record_count": 0,
       "distinct_source_role_ids": [],
       "source_role_counts": {},
-      "ontology_adoption_status": "summary_emitted",
+      "ontology_adoption_status": "runtime_only",
       "ontology_version": "0.1.0"
     },
     {
@@ -4164,7 +4164,7 @@
       "source_role_record_count": 0,
       "distinct_source_role_ids": [],
       "source_role_counts": {},
-      "ontology_adoption_status": "summary_emitted",
+      "ontology_adoption_status": "runtime_only",
       "ontology_version": "0.1.0"
     },
     {
@@ -4199,7 +4199,7 @@
       "source_role_record_count": 0,
       "distinct_source_role_ids": [],
       "source_role_counts": {},
-      "ontology_adoption_status": "summary_emitted",
+      "ontology_adoption_status": "runtime_only",
       "ontology_version": "0.1.0"
     },
     {
@@ -4234,7 +4234,7 @@
       "source_role_record_count": 0,
       "distinct_source_role_ids": [],
       "source_role_counts": {},
-      "ontology_adoption_status": "summary_emitted",
+      "ontology_adoption_status": "runtime_only",
       "ontology_version": "0.1.0"
     },
     {
@@ -4269,7 +4269,7 @@
       "source_role_record_count": 0,
       "distinct_source_role_ids": [],
       "source_role_counts": {},
-      "ontology_adoption_status": "summary_emitted",
+      "ontology_adoption_status": "runtime_only",
       "ontology_version": "0.1.0"
     },
     {
@@ -4304,7 +4304,7 @@
       "source_role_record_count": 0,
       "distinct_source_role_ids": [],
       "source_role_counts": {},
-      "ontology_adoption_status": "summary_emitted",
+      "ontology_adoption_status": "runtime_only",
       "ontology_version": "0.1.0"
     },
     {
@@ -4339,7 +4339,7 @@
       "source_role_record_count": 0,
       "distinct_source_role_ids": [],
       "source_role_counts": {},
-      "ontology_adoption_status": "summary_emitted",
+      "ontology_adoption_status": "runtime_only",
       "ontology_version": "0.1.0"
     },
     {
@@ -4374,7 +4374,7 @@
       "source_role_record_count": 0,
       "distinct_source_role_ids": [],
       "source_role_counts": {},
-      "ontology_adoption_status": "summary_emitted",
+      "ontology_adoption_status": "runtime_only",
       "ontology_version": "0.1.0"
     },
     {
@@ -4409,7 +4409,7 @@
       "source_role_record_count": 0,
       "distinct_source_role_ids": [],
       "source_role_counts": {},
-      "ontology_adoption_status": "summary_emitted",
+      "ontology_adoption_status": "runtime_only",
       "ontology_version": "0.1.0"
     },
     {
@@ -4444,7 +4444,7 @@
       "source_role_record_count": 0,
       "distinct_source_role_ids": [],
       "source_role_counts": {},
-      "ontology_adoption_status": "summary_emitted",
+      "ontology_adoption_status": "runtime_only",
       "ontology_version": "0.1.0"
     },
     {
@@ -4479,7 +4479,7 @@
       "source_role_record_count": 0,
       "distinct_source_role_ids": [],
       "source_role_counts": {},
-      "ontology_adoption_status": "summary_emitted",
+      "ontology_adoption_status": "runtime_only",
       "ontology_version": "0.1.0"
     },
     {
@@ -4514,7 +4514,7 @@
       "source_role_record_count": 0,
       "distinct_source_role_ids": [],
       "source_role_counts": {},
-      "ontology_adoption_status": "summary_emitted",
+      "ontology_adoption_status": "runtime_only",
       "ontology_version": "0.1.0"
     },
     {
@@ -4549,7 +4549,7 @@
       "source_role_record_count": 0,
       "distinct_source_role_ids": [],
       "source_role_counts": {},
-      "ontology_adoption_status": "summary_emitted",
+      "ontology_adoption_status": "runtime_only",
       "ontology_version": "0.1.0"
     },
     {
@@ -4584,7 +4584,7 @@
       "source_role_record_count": 0,
       "distinct_source_role_ids": [],
       "source_role_counts": {},
-      "ontology_adoption_status": "summary_emitted",
+      "ontology_adoption_status": "runtime_only",
       "ontology_version": "0.1.0"
     },
     {
@@ -4619,7 +4619,7 @@
       "source_role_record_count": 0,
       "distinct_source_role_ids": [],
       "source_role_counts": {},
-      "ontology_adoption_status": "summary_emitted",
+      "ontology_adoption_status": "runtime_only",
       "ontology_version": "0.1.0"
     },
     {
@@ -4654,7 +4654,7 @@
       "source_role_record_count": 0,
       "distinct_source_role_ids": [],
       "source_role_counts": {},
-      "ontology_adoption_status": "summary_emitted",
+      "ontology_adoption_status": "runtime_only",
       "ontology_version": "0.1.0"
     },
     {
@@ -4689,7 +4689,7 @@
       "source_role_record_count": 0,
       "distinct_source_role_ids": [],
       "source_role_counts": {},
-      "ontology_adoption_status": "summary_emitted",
+      "ontology_adoption_status": "runtime_only",
       "ontology_version": "0.1.0"
     },
     {
@@ -4724,7 +4724,7 @@
       "source_role_record_count": 0,
       "distinct_source_role_ids": [],
       "source_role_counts": {},
-      "ontology_adoption_status": "summary_emitted",
+      "ontology_adoption_status": "runtime_only",
       "ontology_version": "0.1.0"
     },
     {
@@ -4759,7 +4759,7 @@
       "source_role_record_count": 0,
       "distinct_source_role_ids": [],
       "source_role_counts": {},
-      "ontology_adoption_status": "summary_emitted",
+      "ontology_adoption_status": "runtime_only",
       "ontology_version": "0.1.0"
     },
     {
@@ -4794,7 +4794,7 @@
       "source_role_record_count": 0,
       "distinct_source_role_ids": [],
       "source_role_counts": {},
-      "ontology_adoption_status": "summary_emitted",
+      "ontology_adoption_status": "runtime_only",
       "ontology_version": "0.1.0"
     },
     {
@@ -4829,7 +4829,7 @@
       "source_role_record_count": 0,
       "distinct_source_role_ids": [],
       "source_role_counts": {},
-      "ontology_adoption_status": "summary_emitted",
+      "ontology_adoption_status": "runtime_only",
       "ontology_version": "0.1.0"
     },
     {
@@ -4864,7 +4864,7 @@
       "source_role_record_count": 0,
       "distinct_source_role_ids": [],
       "source_role_counts": {},
-      "ontology_adoption_status": "summary_emitted",
+      "ontology_adoption_status": "runtime_only",
       "ontology_version": "0.1.0"
     },
     {
@@ -4899,7 +4899,7 @@
       "source_role_record_count": 0,
       "distinct_source_role_ids": [],
       "source_role_counts": {},
-      "ontology_adoption_status": "summary_emitted",
+      "ontology_adoption_status": "runtime_only",
       "ontology_version": "0.1.0"
     },
     {
@@ -4934,7 +4934,7 @@
       "source_role_record_count": 0,
       "distinct_source_role_ids": [],
       "source_role_counts": {},
-      "ontology_adoption_status": "summary_emitted",
+      "ontology_adoption_status": "runtime_only",
       "ontology_version": "0.1.0"
     },
     {
@@ -4969,7 +4969,7 @@
       "source_role_record_count": 0,
       "distinct_source_role_ids": [],
       "source_role_counts": {},
-      "ontology_adoption_status": "summary_emitted",
+      "ontology_adoption_status": "runtime_only",
       "ontology_version": "0.1.0"
     },
     {
@@ -5004,7 +5004,7 @@
       "source_role_record_count": 0,
       "distinct_source_role_ids": [],
       "source_role_counts": {},
-      "ontology_adoption_status": "summary_emitted",
+      "ontology_adoption_status": "runtime_only",
       "ontology_version": "0.1.0"
     },
     {
@@ -5039,7 +5039,7 @@
       "source_role_record_count": 0,
       "distinct_source_role_ids": [],
       "source_role_counts": {},
-      "ontology_adoption_status": "summary_emitted",
+      "ontology_adoption_status": "runtime_only",
       "ontology_version": "0.1.0"
     },
     {
@@ -5074,7 +5074,7 @@
       "source_role_record_count": 0,
       "distinct_source_role_ids": [],
       "source_role_counts": {},
-      "ontology_adoption_status": "summary_emitted",
+      "ontology_adoption_status": "runtime_only",
       "ontology_version": "0.1.0"
     },
     {
@@ -5109,7 +5109,7 @@
       "source_role_record_count": 0,
       "distinct_source_role_ids": [],
       "source_role_counts": {},
-      "ontology_adoption_status": "summary_emitted",
+      "ontology_adoption_status": "runtime_only",
       "ontology_version": "0.1.0"
     },
     {
@@ -5144,7 +5144,7 @@
       "source_role_record_count": 0,
       "distinct_source_role_ids": [],
       "source_role_counts": {},
-      "ontology_adoption_status": "summary_emitted",
+      "ontology_adoption_status": "runtime_only",
       "ontology_version": "0.1.0"
     },
     {
@@ -5829,6 +5829,96 @@
       "ontology_version": "0.1.0"
     },
     {
+      "repo": "CollaborationMCPRadar",
+      "category": "collaboration_mcp",
+      "raw_date": "2026-05-13",
+      "raw_dir_path": "CollaborationMCPRadar/data/raw/2026-05-13",
+      "file_path": "CollaborationMCPRadar/data/raw/2026-05-13/awesome-mcp-korea Collaboration & Communication.jsonl",
+      "source_name": "awesome-mcp-korea Collaboration & Communication",
+      "record_count": 1,
+      "file_size_bytes": 424,
+      "sample_key_count": 8,
+      "sample_keys": [
+        "category",
+        "link",
+        "logged_at",
+        "matched_entities",
+        "published",
+        "source",
+        "summary",
+        "title"
+      ],
+      "ontology_record_count": 0,
+      "event_model_record_count": 0,
+      "distinct_event_model_ids": [],
+      "event_model_counts": {},
+      "source_role_record_count": 0,
+      "distinct_source_role_ids": [],
+      "source_role_counts": {},
+      "ontology_adoption_status": "summary_emitted",
+      "ontology_version": "0.1.0"
+    },
+    {
+      "repo": "CommerceMCPRadar",
+      "category": "commerce_mcp",
+      "raw_date": "2026-05-13",
+      "raw_dir_path": "CommerceMCPRadar/data/raw/2026-05-13",
+      "file_path": "CommerceMCPRadar/data/raw/2026-05-13/awesome-mcp-korea Commerce & Retail.jsonl",
+      "source_name": "awesome-mcp-korea Commerce & Retail",
+      "record_count": 1,
+      "file_size_bytes": 451,
+      "sample_key_count": 8,
+      "sample_keys": [
+        "category",
+        "link",
+        "logged_at",
+        "matched_entities",
+        "published",
+        "source",
+        "summary",
+        "title"
+      ],
+      "ontology_record_count": 0,
+      "event_model_record_count": 0,
+      "distinct_event_model_ids": [],
+      "event_model_counts": {},
+      "source_role_record_count": 0,
+      "distinct_source_role_ids": [],
+      "source_role_counts": {},
+      "ontology_adoption_status": "summary_emitted",
+      "ontology_version": "0.1.0"
+    },
+    {
+      "repo": "CommerceMCPRadar",
+      "category": "commerce_mcp",
+      "raw_date": "2026-05-13",
+      "raw_dir_path": "CommerceMCPRadar/data/raw/2026-05-13",
+      "file_path": "CommerceMCPRadar/data/raw/2026-05-13/hmmhmmhm_daiso-mcp.jsonl",
+      "source_name": "hmmhmmhm_daiso-mcp",
+      "record_count": 10,
+      "file_size_bytes": 6835,
+      "sample_key_count": 8,
+      "sample_keys": [
+        "category",
+        "link",
+        "logged_at",
+        "matched_entities",
+        "published",
+        "source",
+        "summary",
+        "title"
+      ],
+      "ontology_record_count": 0,
+      "event_model_record_count": 0,
+      "distinct_event_model_ids": [],
+      "event_model_counts": {},
+      "source_role_record_count": 0,
+      "distinct_source_role_ids": [],
+      "source_role_counts": {},
+      "ontology_adoption_status": "summary_emitted",
+      "ontology_version": "0.1.0"
+    },
+    {
       "repo": "CryptoRadar",
       "category": "crypto",
       "raw_date": "2026-05-13",
@@ -6292,7 +6382,7 @@
       "source_role_record_count": 0,
       "distinct_source_role_ids": [],
       "source_role_counts": {},
-      "ontology_adoption_status": "summary_emitted",
+      "ontology_adoption_status": "runtime_only",
       "ontology_version": "0.1.0"
     },
     {
@@ -6323,7 +6413,7 @@
       "source_role_record_count": 0,
       "distinct_source_role_ids": [],
       "source_role_counts": {},
-      "ontology_adoption_status": "summary_emitted",
+      "ontology_adoption_status": "runtime_only",
       "ontology_version": "0.1.0"
     },
     {
@@ -6354,7 +6444,7 @@
       "source_role_record_count": 0,
       "distinct_source_role_ids": [],
       "source_role_counts": {},
-      "ontology_adoption_status": "summary_emitted",
+      "ontology_adoption_status": "runtime_only",
       "ontology_version": "0.1.0"
     },
     {
@@ -6385,7 +6475,7 @@
       "source_role_record_count": 0,
       "distinct_source_role_ids": [],
       "source_role_counts": {},
-      "ontology_adoption_status": "summary_emitted",
+      "ontology_adoption_status": "runtime_only",
       "ontology_version": "0.1.0"
     },
     {
@@ -6416,7 +6506,7 @@
       "source_role_record_count": 0,
       "distinct_source_role_ids": [],
       "source_role_counts": {},
-      "ontology_adoption_status": "summary_emitted",
+      "ontology_adoption_status": "runtime_only",
       "ontology_version": "0.1.0"
     },
     {
@@ -6451,7 +6541,7 @@
       "source_role_counts": {
         "context_only": 1
       },
-      "ontology_adoption_status": "summary_emitted",
+      "ontology_adoption_status": "runtime_only",
       "ontology_version": "0.1.0"
     },
     {
@@ -6482,7 +6572,7 @@
       "source_role_record_count": 0,
       "distinct_source_role_ids": [],
       "source_role_counts": {},
-      "ontology_adoption_status": "summary_emitted",
+      "ontology_adoption_status": "runtime_only",
       "ontology_version": "0.1.0"
     },
     {
@@ -6513,7 +6603,7 @@
       "source_role_record_count": 0,
       "distinct_source_role_ids": [],
       "source_role_counts": {},
-      "ontology_adoption_status": "summary_emitted",
+      "ontology_adoption_status": "runtime_only",
       "ontology_version": "0.1.0"
     },
     {
@@ -6544,7 +6634,7 @@
       "source_role_record_count": 0,
       "distinct_source_role_ids": [],
       "source_role_counts": {},
-      "ontology_adoption_status": "summary_emitted",
+      "ontology_adoption_status": "runtime_only",
       "ontology_version": "0.1.0"
     },
     {
@@ -6575,7 +6665,7 @@
       "source_role_record_count": 0,
       "distinct_source_role_ids": [],
       "source_role_counts": {},
-      "ontology_adoption_status": "summary_emitted",
+      "ontology_adoption_status": "runtime_only",
       "ontology_version": "0.1.0"
     },
     {
@@ -6606,7 +6696,7 @@
       "source_role_record_count": 0,
       "distinct_source_role_ids": [],
       "source_role_counts": {},
-      "ontology_adoption_status": "summary_emitted",
+      "ontology_adoption_status": "runtime_only",
       "ontology_version": "0.1.0"
     },
     {
@@ -6637,7 +6727,7 @@
       "source_role_record_count": 0,
       "distinct_source_role_ids": [],
       "source_role_counts": {},
-      "ontology_adoption_status": "summary_emitted",
+      "ontology_adoption_status": "runtime_only",
       "ontology_version": "0.1.0"
     },
     {
@@ -6672,7 +6762,7 @@
       "source_role_counts": {
         "community_signal": 1
       },
-      "ontology_adoption_status": "summary_emitted",
+      "ontology_adoption_status": "runtime_only",
       "ontology_version": "0.1.0"
     },
     {
@@ -6703,7 +6793,7 @@
       "source_role_record_count": 0,
       "distinct_source_role_ids": [],
       "source_role_counts": {},
-      "ontology_adoption_status": "summary_emitted",
+      "ontology_adoption_status": "runtime_only",
       "ontology_version": "0.1.0"
     },
     {
@@ -6734,7 +6824,7 @@
       "source_role_record_count": 0,
       "distinct_source_role_ids": [],
       "source_role_counts": {},
-      "ontology_adoption_status": "summary_emitted",
+      "ontology_adoption_status": "runtime_only",
       "ontology_version": "0.1.0"
     },
     {
@@ -6765,7 +6855,7 @@
       "source_role_record_count": 0,
       "distinct_source_role_ids": [],
       "source_role_counts": {},
-      "ontology_adoption_status": "summary_emitted",
+      "ontology_adoption_status": "runtime_only",
       "ontology_version": "0.1.0"
     },
     {
@@ -6800,7 +6890,7 @@
       "source_role_counts": {
         "operational_evidence": 1
       },
-      "ontology_adoption_status": "summary_emitted",
+      "ontology_adoption_status": "runtime_only",
       "ontology_version": "0.1.0"
     },
     {
@@ -6831,7 +6921,7 @@
       "source_role_record_count": 0,
       "distinct_source_role_ids": [],
       "source_role_counts": {},
-      "ontology_adoption_status": "summary_emitted",
+      "ontology_adoption_status": "runtime_only",
       "ontology_version": "0.1.0"
     },
     {
@@ -6862,7 +6952,7 @@
       "source_role_record_count": 0,
       "distinct_source_role_ids": [],
       "source_role_counts": {},
-      "ontology_adoption_status": "summary_emitted",
+      "ontology_adoption_status": "runtime_only",
       "ontology_version": "0.1.0"
     },
     {
@@ -6897,7 +6987,7 @@
       "source_role_counts": {
         "operational_evidence": 1
       },
-      "ontology_adoption_status": "summary_emitted",
+      "ontology_adoption_status": "runtime_only",
       "ontology_version": "0.1.0"
     },
     {
@@ -6932,7 +7022,7 @@
       "source_role_counts": {
         "primary_evidence": 1
       },
-      "ontology_adoption_status": "summary_emitted",
+      "ontology_adoption_status": "runtime_only",
       "ontology_version": "0.1.0"
     },
     {
@@ -6963,7 +7053,7 @@
       "source_role_record_count": 0,
       "distinct_source_role_ids": [],
       "source_role_counts": {},
-      "ontology_adoption_status": "summary_emitted",
+      "ontology_adoption_status": "runtime_only",
       "ontology_version": "0.1.0"
     },
     {
@@ -6994,7 +7084,7 @@
       "source_role_record_count": 0,
       "distinct_source_role_ids": [],
       "source_role_counts": {},
-      "ontology_adoption_status": "summary_emitted",
+      "ontology_adoption_status": "runtime_only",
       "ontology_version": "0.1.0"
     },
     {
@@ -7025,7 +7115,7 @@
       "source_role_record_count": 0,
       "distinct_source_role_ids": [],
       "source_role_counts": {},
-      "ontology_adoption_status": "summary_emitted",
+      "ontology_adoption_status": "runtime_only",
       "ontology_version": "0.1.0"
     },
     {
@@ -7060,7 +7150,7 @@
       "source_role_counts": {
         "operational_evidence": 30
       },
-      "ontology_adoption_status": "summary_emitted",
+      "ontology_adoption_status": "runtime_only",
       "ontology_version": "0.1.0"
     },
     {
@@ -7091,7 +7181,7 @@
       "source_role_record_count": 0,
       "distinct_source_role_ids": [],
       "source_role_counts": {},
-      "ontology_adoption_status": "summary_emitted",
+      "ontology_adoption_status": "runtime_only",
       "ontology_version": "0.1.0"
     },
     {
@@ -7122,6 +7212,41 @@
       "source_role_record_count": 0,
       "distinct_source_role_ids": [],
       "source_role_counts": {},
+      "ontology_adoption_status": "runtime_only",
+      "ontology_version": "0.1.0"
+    },
+    {
+      "repo": "FinanceTaxMCPRadar",
+      "category": "finance_tax_mcp",
+      "raw_date": "2026-05-13",
+      "raw_dir_path": "FinanceTaxMCPRadar/data/raw/2026-05-13",
+      "file_path": "FinanceTaxMCPRadar/data/raw/2026-05-13/awesome-mcp-korea Finance & Tax.jsonl",
+      "source_name": "awesome-mcp-korea Finance & Tax",
+      "record_count": 1,
+      "file_size_bytes": 657,
+      "sample_key_count": 9,
+      "sample_keys": [
+        "category",
+        "link",
+        "logged_at",
+        "matched_entities",
+        "ontology",
+        "published",
+        "source",
+        "summary",
+        "title"
+      ],
+      "ontology_record_count": 1,
+      "event_model_record_count": 0,
+      "distinct_event_model_ids": [],
+      "event_model_counts": {},
+      "source_role_record_count": 1,
+      "distinct_source_role_ids": [
+        "community_signal"
+      ],
+      "source_role_counts": {
+        "community_signal": 1
+      },
       "ontology_adoption_status": "summary_emitted",
       "ontology_version": "0.1.0"
     },
@@ -7527,7 +7652,7 @@
       "source_role_record_count": 0,
       "distinct_source_role_ids": [],
       "source_role_counts": {},
-      "ontology_adoption_status": "summary_emitted",
+      "ontology_adoption_status": "runtime_only",
       "ontology_version": "0.1.0"
     },
     {
@@ -7562,7 +7687,7 @@
       "source_role_record_count": 0,
       "distinct_source_role_ids": [],
       "source_role_counts": {},
-      "ontology_adoption_status": "summary_emitted",
+      "ontology_adoption_status": "runtime_only",
       "ontology_version": "0.1.0"
     },
     {
@@ -7597,7 +7722,7 @@
       "source_role_record_count": 0,
       "distinct_source_role_ids": [],
       "source_role_counts": {},
-      "ontology_adoption_status": "summary_emitted",
+      "ontology_adoption_status": "runtime_only",
       "ontology_version": "0.1.0"
     },
     {
@@ -7632,7 +7757,7 @@
       "source_role_record_count": 0,
       "distinct_source_role_ids": [],
       "source_role_counts": {},
-      "ontology_adoption_status": "summary_emitted",
+      "ontology_adoption_status": "runtime_only",
       "ontology_version": "0.1.0"
     },
     {
@@ -7667,7 +7792,7 @@
       "source_role_record_count": 0,
       "distinct_source_role_ids": [],
       "source_role_counts": {},
-      "ontology_adoption_status": "summary_emitted",
+      "ontology_adoption_status": "runtime_only",
       "ontology_version": "0.1.0"
     },
     {
@@ -7706,7 +7831,7 @@
       "source_role_counts": {
         "operational_evidence": 30
       },
-      "ontology_adoption_status": "summary_emitted",
+      "ontology_adoption_status": "runtime_only",
       "ontology_version": "0.1.0"
     },
     {
@@ -7741,7 +7866,7 @@
       "source_role_record_count": 0,
       "distinct_source_role_ids": [],
       "source_role_counts": {},
-      "ontology_adoption_status": "summary_emitted",
+      "ontology_adoption_status": "runtime_only",
       "ontology_version": "0.1.0"
     },
     {
@@ -7776,7 +7901,7 @@
       "source_role_record_count": 0,
       "distinct_source_role_ids": [],
       "source_role_counts": {},
-      "ontology_adoption_status": "summary_emitted",
+      "ontology_adoption_status": "runtime_only",
       "ontology_version": "0.1.0"
     },
     {
@@ -7811,7 +7936,7 @@
       "source_role_record_count": 0,
       "distinct_source_role_ids": [],
       "source_role_counts": {},
-      "ontology_adoption_status": "summary_emitted",
+      "ontology_adoption_status": "runtime_only",
       "ontology_version": "0.1.0"
     },
     {
@@ -7846,7 +7971,7 @@
       "source_role_record_count": 0,
       "distinct_source_role_ids": [],
       "source_role_counts": {},
-      "ontology_adoption_status": "summary_emitted",
+      "ontology_adoption_status": "runtime_only",
       "ontology_version": "0.1.0"
     },
     {
@@ -7885,7 +8010,7 @@
       "source_role_counts": {
         "context_only": 25
       },
-      "ontology_adoption_status": "summary_emitted",
+      "ontology_adoption_status": "runtime_only",
       "ontology_version": "0.1.0"
     },
     {
@@ -7920,7 +8045,7 @@
       "source_role_record_count": 0,
       "distinct_source_role_ids": [],
       "source_role_counts": {},
-      "ontology_adoption_status": "summary_emitted",
+      "ontology_adoption_status": "runtime_only",
       "ontology_version": "0.1.0"
     },
     {
@@ -7959,7 +8084,7 @@
       "source_role_counts": {
         "primary_evidence": 10
       },
-      "ontology_adoption_status": "summary_emitted",
+      "ontology_adoption_status": "runtime_only",
       "ontology_version": "0.1.0"
     },
     {
@@ -7994,7 +8119,7 @@
       "source_role_record_count": 0,
       "distinct_source_role_ids": [],
       "source_role_counts": {},
-      "ontology_adoption_status": "summary_emitted",
+      "ontology_adoption_status": "runtime_only",
       "ontology_version": "0.1.0"
     },
     {
@@ -8029,7 +8154,7 @@
       "source_role_record_count": 0,
       "distinct_source_role_ids": [],
       "source_role_counts": {},
-      "ontology_adoption_status": "summary_emitted",
+      "ontology_adoption_status": "runtime_only",
       "ontology_version": "0.1.0"
     },
     {
@@ -8064,7 +8189,7 @@
       "source_role_record_count": 0,
       "distinct_source_role_ids": [],
       "source_role_counts": {},
-      "ontology_adoption_status": "summary_emitted",
+      "ontology_adoption_status": "runtime_only",
       "ontology_version": "0.1.0"
     },
     {
@@ -8099,7 +8224,7 @@
       "source_role_record_count": 0,
       "distinct_source_role_ids": [],
       "source_role_counts": {},
-      "ontology_adoption_status": "summary_emitted",
+      "ontology_adoption_status": "runtime_only",
       "ontology_version": "0.1.0"
     },
     {
@@ -8134,7 +8259,7 @@
       "source_role_record_count": 0,
       "distinct_source_role_ids": [],
       "source_role_counts": {},
-      "ontology_adoption_status": "summary_emitted",
+      "ontology_adoption_status": "runtime_only",
       "ontology_version": "0.1.0"
     },
     {
@@ -8169,7 +8294,7 @@
       "source_role_record_count": 0,
       "distinct_source_role_ids": [],
       "source_role_counts": {},
-      "ontology_adoption_status": "summary_emitted",
+      "ontology_adoption_status": "runtime_only",
       "ontology_version": "0.1.0"
     },
     {
@@ -8208,7 +8333,7 @@
       "source_role_counts": {
         "primary_evidence": 10
       },
-      "ontology_adoption_status": "summary_emitted",
+      "ontology_adoption_status": "runtime_only",
       "ontology_version": "0.1.0"
     },
     {
@@ -8243,7 +8368,7 @@
       "source_role_record_count": 0,
       "distinct_source_role_ids": [],
       "source_role_counts": {},
-      "ontology_adoption_status": "summary_emitted",
+      "ontology_adoption_status": "runtime_only",
       "ontology_version": "0.1.0"
     },
     {
@@ -8278,7 +8403,7 @@
       "source_role_record_count": 0,
       "distinct_source_role_ids": [],
       "source_role_counts": {},
-      "ontology_adoption_status": "summary_emitted",
+      "ontology_adoption_status": "runtime_only",
       "ontology_version": "0.1.0"
     },
     {
@@ -8313,7 +8438,7 @@
       "source_role_record_count": 0,
       "distinct_source_role_ids": [],
       "source_role_counts": {},
-      "ontology_adoption_status": "summary_emitted",
+      "ontology_adoption_status": "runtime_only",
       "ontology_version": "0.1.0"
     },
     {
@@ -8348,7 +8473,7 @@
       "source_role_record_count": 0,
       "distinct_source_role_ids": [],
       "source_role_counts": {},
-      "ontology_adoption_status": "summary_emitted",
+      "ontology_adoption_status": "runtime_only",
       "ontology_version": "0.1.0"
     },
     {
@@ -8383,7 +8508,7 @@
       "source_role_record_count": 0,
       "distinct_source_role_ids": [],
       "source_role_counts": {},
-      "ontology_adoption_status": "summary_emitted",
+      "ontology_adoption_status": "runtime_only",
       "ontology_version": "0.1.0"
     },
     {
@@ -8418,7 +8543,7 @@
       "source_role_record_count": 0,
       "distinct_source_role_ids": [],
       "source_role_counts": {},
-      "ontology_adoption_status": "summary_emitted",
+      "ontology_adoption_status": "runtime_only",
       "ontology_version": "0.1.0"
     },
     {
@@ -8453,7 +8578,7 @@
       "source_role_record_count": 0,
       "distinct_source_role_ids": [],
       "source_role_counts": {},
-      "ontology_adoption_status": "summary_emitted",
+      "ontology_adoption_status": "runtime_only",
       "ontology_version": "0.1.0"
     },
     {
@@ -8488,7 +8613,7 @@
       "source_role_record_count": 0,
       "distinct_source_role_ids": [],
       "source_role_counts": {},
-      "ontology_adoption_status": "summary_emitted",
+      "ontology_adoption_status": "runtime_only",
       "ontology_version": "0.1.0"
     },
     {
@@ -8523,7 +8648,7 @@
       "source_role_record_count": 0,
       "distinct_source_role_ids": [],
       "source_role_counts": {},
-      "ontology_adoption_status": "summary_emitted",
+      "ontology_adoption_status": "runtime_only",
       "ontology_version": "0.1.0"
     },
     {
@@ -8558,7 +8683,7 @@
       "source_role_record_count": 0,
       "distinct_source_role_ids": [],
       "source_role_counts": {},
-      "ontology_adoption_status": "summary_emitted",
+      "ontology_adoption_status": "runtime_only",
       "ontology_version": "0.1.0"
     },
     {
@@ -8593,7 +8718,7 @@
       "source_role_record_count": 0,
       "distinct_source_role_ids": [],
       "source_role_counts": {},
-      "ontology_adoption_status": "summary_emitted",
+      "ontology_adoption_status": "runtime_only",
       "ontology_version": "0.1.0"
     },
     {
@@ -8628,7 +8753,7 @@
       "source_role_record_count": 0,
       "distinct_source_role_ids": [],
       "source_role_counts": {},
-      "ontology_adoption_status": "summary_emitted",
+      "ontology_adoption_status": "runtime_only",
       "ontology_version": "0.1.0"
     },
     {
@@ -8663,7 +8788,7 @@
       "source_role_record_count": 0,
       "distinct_source_role_ids": [],
       "source_role_counts": {},
-      "ontology_adoption_status": "summary_emitted",
+      "ontology_adoption_status": "runtime_only",
       "ontology_version": "0.1.0"
     },
     {
@@ -8698,7 +8823,7 @@
       "source_role_record_count": 0,
       "distinct_source_role_ids": [],
       "source_role_counts": {},
-      "ontology_adoption_status": "summary_emitted",
+      "ontology_adoption_status": "runtime_only",
       "ontology_version": "0.1.0"
     },
     {
@@ -8733,7 +8858,7 @@
       "source_role_record_count": 0,
       "distinct_source_role_ids": [],
       "source_role_counts": {},
-      "ontology_adoption_status": "summary_emitted",
+      "ontology_adoption_status": "runtime_only",
       "ontology_version": "0.1.0"
     },
     {
@@ -9482,6 +9607,39 @@
       "ontology_version": "0.1.0"
     },
     {
+      "repo": "HomeRadar",
+      "category": "home",
+      "raw_date": "2026-05-13",
+      "raw_dir_path": "HomeRadar/data/raw/2026-05-13",
+      "file_path": "HomeRadar/data/raw/2026-05-13/hankyung_realestate.jsonl",
+      "source_name": "hankyung_realestate",
+      "record_count": 43,
+      "file_size_bytes": 22572,
+      "sample_key_count": 11,
+      "sample_keys": [
+        "area",
+        "collected_at",
+        "price",
+        "property_type",
+        "published_at",
+        "raw_data",
+        "region",
+        "source_id",
+        "summary",
+        "title",
+        "url"
+      ],
+      "ontology_record_count": 0,
+      "event_model_record_count": 0,
+      "distinct_event_model_ids": [],
+      "event_model_counts": {},
+      "source_role_record_count": 0,
+      "distinct_source_role_ids": [],
+      "source_role_counts": {},
+      "ontology_adoption_status": "summary_emitted",
+      "ontology_version": "0.1.0"
+    },
+    {
       "repo": "JobRadar",
       "category": "job",
       "raw_date": "2026-05-13",
@@ -10027,6 +10185,126 @@
       "ontology_version": "0.1.0"
     },
     {
+      "repo": "KoreanNLPMCPRadar",
+      "category": "korean_nlp_mcp",
+      "raw_date": "2026-05-13",
+      "raw_dir_path": "KoreanNLPMCPRadar/data/raw/2026-05-13",
+      "file_path": "KoreanNLPMCPRadar/data/raw/2026-05-13/awesome-mcp-korea Korean NLP & Language.jsonl",
+      "source_name": "awesome-mcp-korea Korean NLP & Language",
+      "record_count": 1,
+      "file_size_bytes": 573,
+      "sample_key_count": 8,
+      "sample_keys": [
+        "category",
+        "link",
+        "logged_at",
+        "matched_entities",
+        "published",
+        "source",
+        "summary",
+        "title"
+      ],
+      "ontology_record_count": 0,
+      "event_model_record_count": 0,
+      "distinct_event_model_ids": [],
+      "event_model_counts": {},
+      "source_role_record_count": 0,
+      "distinct_source_role_ids": [],
+      "source_role_counts": {},
+      "ontology_adoption_status": "summary_emitted",
+      "ontology_version": "0.1.0"
+    },
+    {
+      "repo": "KoreanNLPMCPRadar",
+      "category": "korean_nlp_mcp",
+      "raw_date": "2026-05-13",
+      "raw_dir_path": "KoreanNLPMCPRadar/data/raw/2026-05-13",
+      "file_path": "KoreanNLPMCPRadar/data/raw/2026-05-13/chrisryugj_kordoc.jsonl",
+      "source_name": "chrisryugj_kordoc",
+      "record_count": 1,
+      "file_size_bytes": 393,
+      "sample_key_count": 8,
+      "sample_keys": [
+        "category",
+        "link",
+        "logged_at",
+        "matched_entities",
+        "published",
+        "source",
+        "summary",
+        "title"
+      ],
+      "ontology_record_count": 0,
+      "event_model_record_count": 0,
+      "distinct_event_model_ids": [],
+      "event_model_counts": {},
+      "source_role_record_count": 0,
+      "distinct_source_role_ids": [],
+      "source_role_counts": {},
+      "ontology_adoption_status": "summary_emitted",
+      "ontology_version": "0.1.0"
+    },
+    {
+      "repo": "LegalGovMCPRadar",
+      "category": "legal_gov_mcp",
+      "raw_date": "2026-05-13",
+      "raw_dir_path": "LegalGovMCPRadar/data/raw/2026-05-13",
+      "file_path": "LegalGovMCPRadar/data/raw/2026-05-13/awesome-mcp-korea Legal & Government.jsonl",
+      "source_name": "awesome-mcp-korea Legal & Government",
+      "record_count": 1,
+      "file_size_bytes": 441,
+      "sample_key_count": 8,
+      "sample_keys": [
+        "category",
+        "link",
+        "logged_at",
+        "matched_entities",
+        "published",
+        "source",
+        "summary",
+        "title"
+      ],
+      "ontology_record_count": 0,
+      "event_model_record_count": 0,
+      "distinct_event_model_ids": [],
+      "event_model_counts": {},
+      "source_role_record_count": 0,
+      "distinct_source_role_ids": [],
+      "source_role_counts": {},
+      "ontology_adoption_status": "summary_emitted",
+      "ontology_version": "0.1.0"
+    },
+    {
+      "repo": "MapAddressMCPRadar",
+      "category": "map_address_mcp",
+      "raw_date": "2026-05-13",
+      "raw_dir_path": "MapAddressMCPRadar/data/raw/2026-05-13",
+      "file_path": "MapAddressMCPRadar/data/raw/2026-05-13/awesome-mcp-korea Maps & Address.jsonl",
+      "source_name": "awesome-mcp-korea Maps & Address",
+      "record_count": 1,
+      "file_size_bytes": 518,
+      "sample_key_count": 8,
+      "sample_keys": [
+        "category",
+        "link",
+        "logged_at",
+        "matched_entities",
+        "published",
+        "source",
+        "summary",
+        "title"
+      ],
+      "ontology_record_count": 0,
+      "event_model_record_count": 0,
+      "distinct_event_model_ids": [],
+      "event_model_counts": {},
+      "source_role_record_count": 0,
+      "distinct_source_role_ids": [],
+      "source_role_counts": {},
+      "ontology_adoption_status": "summary_emitted",
+      "ontology_version": "0.1.0"
+    },
+    {
       "repo": "MobilityRadar",
       "category": "mobility",
       "raw_date": "2026-05-13",
@@ -10053,7 +10331,7 @@
       "source_role_record_count": 0,
       "distinct_source_role_ids": [],
       "source_role_counts": {},
-      "ontology_adoption_status": "runtime_fallback",
+      "ontology_adoption_status": "runtime_only",
       "ontology_version": "0.1.0"
     },
     {
@@ -10083,7 +10361,7 @@
       "source_role_record_count": 0,
       "distinct_source_role_ids": [],
       "source_role_counts": {},
-      "ontology_adoption_status": "runtime_fallback",
+      "ontology_adoption_status": "runtime_only",
       "ontology_version": "0.1.0"
     },
     {
@@ -10113,7 +10391,7 @@
       "source_role_record_count": 0,
       "distinct_source_role_ids": [],
       "source_role_counts": {},
-      "ontology_adoption_status": "runtime_fallback",
+      "ontology_adoption_status": "runtime_only",
       "ontology_version": "0.1.0"
     },
     {
@@ -10143,7 +10421,7 @@
       "source_role_record_count": 0,
       "distinct_source_role_ids": [],
       "source_role_counts": {},
-      "ontology_adoption_status": "runtime_fallback",
+      "ontology_adoption_status": "runtime_only",
       "ontology_version": "0.1.0"
     },
     {
@@ -10173,7 +10451,7 @@
       "source_role_record_count": 0,
       "distinct_source_role_ids": [],
       "source_role_counts": {},
-      "ontology_adoption_status": "runtime_fallback",
+      "ontology_adoption_status": "runtime_only",
       "ontology_version": "0.1.0"
     },
     {
@@ -10203,7 +10481,7 @@
       "source_role_record_count": 0,
       "distinct_source_role_ids": [],
       "source_role_counts": {},
-      "ontology_adoption_status": "runtime_fallback",
+      "ontology_adoption_status": "runtime_only",
       "ontology_version": "0.1.0"
     },
     {
@@ -10233,7 +10511,7 @@
       "source_role_record_count": 0,
       "distinct_source_role_ids": [],
       "source_role_counts": {},
-      "ontology_adoption_status": "runtime_fallback",
+      "ontology_adoption_status": "runtime_only",
       "ontology_version": "0.1.0"
     },
     {
@@ -10263,7 +10541,7 @@
       "source_role_record_count": 0,
       "distinct_source_role_ids": [],
       "source_role_counts": {},
-      "ontology_adoption_status": "runtime_fallback",
+      "ontology_adoption_status": "runtime_only",
       "ontology_version": "0.1.0"
     },
     {
@@ -10293,7 +10571,7 @@
       "source_role_record_count": 0,
       "distinct_source_role_ids": [],
       "source_role_counts": {},
-      "ontology_adoption_status": "runtime_fallback",
+      "ontology_adoption_status": "runtime_only",
       "ontology_version": "0.1.0"
     },
     {
@@ -10323,7 +10601,7 @@
       "source_role_record_count": 0,
       "distinct_source_role_ids": [],
       "source_role_counts": {},
-      "ontology_adoption_status": "runtime_fallback",
+      "ontology_adoption_status": "runtime_only",
       "ontology_version": "0.1.0"
     },
     {
@@ -10353,7 +10631,7 @@
       "source_role_record_count": 0,
       "distinct_source_role_ids": [],
       "source_role_counts": {},
-      "ontology_adoption_status": "runtime_fallback",
+      "ontology_adoption_status": "runtime_only",
       "ontology_version": "0.1.0"
     },
     {
@@ -10383,7 +10661,7 @@
       "source_role_record_count": 0,
       "distinct_source_role_ids": [],
       "source_role_counts": {},
-      "ontology_adoption_status": "runtime_fallback",
+      "ontology_adoption_status": "runtime_only",
       "ontology_version": "0.1.0"
     },
     {
@@ -10413,7 +10691,7 @@
       "source_role_record_count": 0,
       "distinct_source_role_ids": [],
       "source_role_counts": {},
-      "ontology_adoption_status": "runtime_fallback",
+      "ontology_adoption_status": "runtime_only",
       "ontology_version": "0.1.0"
     },
     {
@@ -10443,7 +10721,7 @@
       "source_role_record_count": 0,
       "distinct_source_role_ids": [],
       "source_role_counts": {},
-      "ontology_adoption_status": "runtime_fallback",
+      "ontology_adoption_status": "runtime_only",
       "ontology_version": "0.1.0"
     },
     {
@@ -10473,7 +10751,7 @@
       "source_role_record_count": 0,
       "distinct_source_role_ids": [],
       "source_role_counts": {},
-      "ontology_adoption_status": "runtime_fallback",
+      "ontology_adoption_status": "runtime_only",
       "ontology_version": "0.1.0"
     },
     {
@@ -10503,7 +10781,7 @@
       "source_role_record_count": 0,
       "distinct_source_role_ids": [],
       "source_role_counts": {},
-      "ontology_adoption_status": "runtime_fallback",
+      "ontology_adoption_status": "runtime_only",
       "ontology_version": "0.1.0"
     },
     {
@@ -10533,7 +10811,7 @@
       "source_role_record_count": 0,
       "distinct_source_role_ids": [],
       "source_role_counts": {},
-      "ontology_adoption_status": "runtime_fallback",
+      "ontology_adoption_status": "runtime_only",
       "ontology_version": "0.1.0"
     },
     {
@@ -10563,7 +10841,7 @@
       "source_role_record_count": 0,
       "distinct_source_role_ids": [],
       "source_role_counts": {},
-      "ontology_adoption_status": "runtime_fallback",
+      "ontology_adoption_status": "runtime_only",
       "ontology_version": "0.1.0"
     },
     {
@@ -11566,7 +11844,7 @@
       "source_role_record_count": 0,
       "distinct_source_role_ids": [],
       "source_role_counts": {},
-      "ontology_adoption_status": "runtime_fallback",
+      "ontology_adoption_status": "runtime_only",
       "ontology_version": "0.1.0"
     },
     {
@@ -11596,7 +11874,7 @@
       "source_role_record_count": 0,
       "distinct_source_role_ids": [],
       "source_role_counts": {},
-      "ontology_adoption_status": "runtime_fallback",
+      "ontology_adoption_status": "runtime_only",
       "ontology_version": "0.1.0"
     },
     {
@@ -11626,7 +11904,7 @@
       "source_role_record_count": 0,
       "distinct_source_role_ids": [],
       "source_role_counts": {},
-      "ontology_adoption_status": "runtime_fallback",
+      "ontology_adoption_status": "runtime_only",
       "ontology_version": "0.1.0"
     },
     {
@@ -11656,7 +11934,7 @@
       "source_role_record_count": 0,
       "distinct_source_role_ids": [],
       "source_role_counts": {},
-      "ontology_adoption_status": "runtime_fallback",
+      "ontology_adoption_status": "runtime_only",
       "ontology_version": "0.1.0"
     },
     {
@@ -11686,7 +11964,7 @@
       "source_role_record_count": 0,
       "distinct_source_role_ids": [],
       "source_role_counts": {},
-      "ontology_adoption_status": "runtime_fallback",
+      "ontology_adoption_status": "runtime_only",
       "ontology_version": "0.1.0"
     },
     {
@@ -11716,7 +11994,7 @@
       "source_role_record_count": 0,
       "distinct_source_role_ids": [],
       "source_role_counts": {},
-      "ontology_adoption_status": "runtime_fallback",
+      "ontology_adoption_status": "runtime_only",
       "ontology_version": "0.1.0"
     },
     {
@@ -11746,7 +12024,7 @@
       "source_role_record_count": 0,
       "distinct_source_role_ids": [],
       "source_role_counts": {},
-      "ontology_adoption_status": "runtime_fallback",
+      "ontology_adoption_status": "runtime_only",
       "ontology_version": "0.1.0"
     },
     {
@@ -11776,7 +12054,7 @@
       "source_role_record_count": 0,
       "distinct_source_role_ids": [],
       "source_role_counts": {},
-      "ontology_adoption_status": "runtime_fallback",
+      "ontology_adoption_status": "runtime_only",
       "ontology_version": "0.1.0"
     },
     {
@@ -11806,7 +12084,7 @@
       "source_role_record_count": 0,
       "distinct_source_role_ids": [],
       "source_role_counts": {},
-      "ontology_adoption_status": "runtime_fallback",
+      "ontology_adoption_status": "runtime_only",
       "ontology_version": "0.1.0"
     },
     {
@@ -11836,7 +12114,7 @@
       "source_role_record_count": 0,
       "distinct_source_role_ids": [],
       "source_role_counts": {},
-      "ontology_adoption_status": "runtime_fallback",
+      "ontology_adoption_status": "runtime_only",
       "ontology_version": "0.1.0"
     },
     {
@@ -11866,7 +12144,7 @@
       "source_role_record_count": 0,
       "distinct_source_role_ids": [],
       "source_role_counts": {},
-      "ontology_adoption_status": "runtime_fallback",
+      "ontology_adoption_status": "runtime_only",
       "ontology_version": "0.1.0"
     },
     {
@@ -11896,7 +12174,7 @@
       "source_role_record_count": 0,
       "distinct_source_role_ids": [],
       "source_role_counts": {},
-      "ontology_adoption_status": "runtime_fallback",
+      "ontology_adoption_status": "runtime_only",
       "ontology_version": "0.1.0"
     },
     {
@@ -11926,7 +12204,7 @@
       "source_role_record_count": 0,
       "distinct_source_role_ids": [],
       "source_role_counts": {},
-      "ontology_adoption_status": "runtime_fallback",
+      "ontology_adoption_status": "runtime_only",
       "ontology_version": "0.1.0"
     },
     {
@@ -11956,7 +12234,7 @@
       "source_role_record_count": 0,
       "distinct_source_role_ids": [],
       "source_role_counts": {},
-      "ontology_adoption_status": "runtime_fallback",
+      "ontology_adoption_status": "runtime_only",
       "ontology_version": "0.1.0"
     },
     {
@@ -11986,7 +12264,7 @@
       "source_role_record_count": 0,
       "distinct_source_role_ids": [],
       "source_role_counts": {},
-      "ontology_adoption_status": "runtime_fallback",
+      "ontology_adoption_status": "runtime_only",
       "ontology_version": "0.1.0"
     },
     {
@@ -12710,6 +12988,222 @@
       "ontology_version": "0.1.0"
     },
     {
+      "repo": "PriceRadar",
+      "category": "price",
+      "raw_date": "2026-05-13",
+      "raw_dir_path": "PriceRadar/data/raw/2026-05-13",
+      "file_path": "PriceRadar/data/raw/2026-05-13/algumon_main.jsonl",
+      "source_name": "algumon_main",
+      "record_count": 0,
+      "file_size_bytes": 0,
+      "sample_key_count": 0,
+      "sample_keys": [],
+      "ontology_record_count": 0,
+      "event_model_record_count": 0,
+      "distinct_event_model_ids": [],
+      "event_model_counts": {},
+      "source_role_record_count": 0,
+      "distinct_source_role_ids": [],
+      "source_role_counts": {},
+      "ontology_adoption_status": "runtime_only",
+      "ontology_version": "0.1.0"
+    },
+    {
+      "repo": "PriceRadar",
+      "category": "price",
+      "raw_date": "2026-05-13",
+      "raw_dir_path": "PriceRadar/data/raw/2026-05-13",
+      "file_path": "PriceRadar/data/raw/2026-05-13/clien_albulgumai.jsonl",
+      "source_name": "clien_albulgumai",
+      "record_count": 0,
+      "file_size_bytes": 0,
+      "sample_key_count": 0,
+      "sample_keys": [],
+      "ontology_record_count": 0,
+      "event_model_record_count": 0,
+      "distinct_event_model_ids": [],
+      "event_model_counts": {},
+      "source_role_record_count": 0,
+      "distinct_source_role_ids": [],
+      "source_role_counts": {},
+      "ontology_adoption_status": "runtime_only",
+      "ontology_version": "0.1.0"
+    },
+    {
+      "repo": "PriceRadar",
+      "category": "price",
+      "raw_date": "2026-05-13",
+      "raw_dir_path": "PriceRadar/data/raw/2026-05-13",
+      "file_path": "PriceRadar/data/raw/2026-05-13/danawa_browser.jsonl",
+      "source_name": "danawa_browser",
+      "record_count": 6,
+      "file_size_bytes": 2078,
+      "sample_key_count": 8,
+      "sample_keys": [
+        "category",
+        "link",
+        "logged_at",
+        "matched_entities",
+        "published",
+        "source",
+        "summary",
+        "title"
+      ],
+      "ontology_record_count": 0,
+      "event_model_record_count": 0,
+      "distinct_event_model_ids": [],
+      "event_model_counts": {},
+      "source_role_record_count": 0,
+      "distinct_source_role_ids": [],
+      "source_role_counts": {},
+      "ontology_adoption_status": "runtime_only",
+      "ontology_version": "0.1.0"
+    },
+    {
+      "repo": "PriceRadar",
+      "category": "price",
+      "raw_date": "2026-05-13",
+      "raw_dir_path": "PriceRadar/data/raw/2026-05-13",
+      "file_path": "PriceRadar/data/raw/2026-05-13/dealbada_main.jsonl",
+      "source_name": "dealbada_main",
+      "record_count": 0,
+      "file_size_bytes": 0,
+      "sample_key_count": 0,
+      "sample_keys": [],
+      "ontology_record_count": 0,
+      "event_model_record_count": 0,
+      "distinct_event_model_ids": [],
+      "event_model_counts": {},
+      "source_role_record_count": 0,
+      "distinct_source_role_ids": [],
+      "source_role_counts": {},
+      "ontology_adoption_status": "runtime_only",
+      "ontology_version": "0.1.0"
+    },
+    {
+      "repo": "PriceRadar",
+      "category": "price",
+      "raw_date": "2026-05-13",
+      "raw_dir_path": "PriceRadar/data/raw/2026-05-13",
+      "file_path": "PriceRadar/data/raw/2026-05-13/enuri_main.jsonl",
+      "source_name": "enuri_main",
+      "record_count": 360,
+      "file_size_bytes": 148588,
+      "sample_key_count": 8,
+      "sample_keys": [
+        "category",
+        "link",
+        "logged_at",
+        "matched_entities",
+        "published",
+        "source",
+        "summary",
+        "title"
+      ],
+      "ontology_record_count": 0,
+      "event_model_record_count": 0,
+      "distinct_event_model_ids": [],
+      "event_model_counts": {},
+      "source_role_record_count": 0,
+      "distinct_source_role_ids": [],
+      "source_role_counts": {},
+      "ontology_adoption_status": "runtime_only",
+      "ontology_version": "0.1.0"
+    },
+    {
+      "repo": "PriceRadar",
+      "category": "price",
+      "raw_date": "2026-05-13",
+      "raw_dir_path": "PriceRadar/data/raw/2026-05-13",
+      "file_path": "PriceRadar/data/raw/2026-05-13/fallcent_main.jsonl",
+      "source_name": "fallcent_main",
+      "record_count": 0,
+      "file_size_bytes": 0,
+      "sample_key_count": 0,
+      "sample_keys": [],
+      "ontology_record_count": 0,
+      "event_model_record_count": 0,
+      "distinct_event_model_ids": [],
+      "event_model_counts": {},
+      "source_role_record_count": 0,
+      "distinct_source_role_ids": [],
+      "source_role_counts": {},
+      "ontology_adoption_status": "runtime_only",
+      "ontology_version": "0.1.0"
+    },
+    {
+      "repo": "PriceRadar",
+      "category": "price",
+      "raw_date": "2026-05-13",
+      "raw_dir_path": "PriceRadar/data/raw/2026-05-13",
+      "file_path": "PriceRadar/data/raw/2026-05-13/fmkorea_hotdeal.jsonl",
+      "source_name": "fmkorea_hotdeal",
+      "record_count": 0,
+      "file_size_bytes": 0,
+      "sample_key_count": 0,
+      "sample_keys": [],
+      "ontology_record_count": 0,
+      "event_model_record_count": 0,
+      "distinct_event_model_ids": [],
+      "event_model_counts": {},
+      "source_role_record_count": 0,
+      "distinct_source_role_ids": [],
+      "source_role_counts": {},
+      "ontology_adoption_status": "runtime_only",
+      "ontology_version": "0.1.0"
+    },
+    {
+      "repo": "PriceRadar",
+      "category": "price",
+      "raw_date": "2026-05-13",
+      "raw_dir_path": "PriceRadar/data/raw/2026-05-13",
+      "file_path": "PriceRadar/data/raw/2026-05-13/quasarzone_saleinfo.jsonl",
+      "source_name": "quasarzone_saleinfo",
+      "record_count": 0,
+      "file_size_bytes": 0,
+      "sample_key_count": 0,
+      "sample_keys": [],
+      "ontology_record_count": 0,
+      "event_model_record_count": 0,
+      "distinct_event_model_ids": [],
+      "event_model_counts": {},
+      "source_role_record_count": 0,
+      "distinct_source_role_ids": [],
+      "source_role_counts": {},
+      "ontology_adoption_status": "runtime_only",
+      "ontology_version": "0.1.0"
+    },
+    {
+      "repo": "PriceRadar",
+      "category": "price",
+      "raw_date": "2026-05-13",
+      "raw_dir_path": "PriceRadar/data/raw/2026-05-13",
+      "file_path": "PriceRadar/data/raw/2026-05-13/ruliweb_market.jsonl",
+      "source_name": "ruliweb_market",
+      "record_count": 100,
+      "file_size_bytes": 36308,
+      "sample_key_count": 8,
+      "sample_keys": [
+        "category",
+        "link",
+        "logged_at",
+        "matched_entities",
+        "published",
+        "source",
+        "summary",
+        "title"
+      ],
+      "ontology_record_count": 0,
+      "event_model_record_count": 0,
+      "distinct_event_model_ids": [],
+      "event_model_counts": {},
+      "source_role_record_count": 0,
+      "distinct_source_role_ids": [],
+      "source_role_counts": {},
+      "ontology_adoption_status": "runtime_only",
+      "ontology_version": "0.1.0"
+    },
+    {
       "repo": "PropertyRadar",
       "category": "property",
       "raw_date": "2026-05-13",
@@ -12950,6 +13444,36 @@
       "ontology_version": "0.1.0"
     },
     {
+      "repo": "PublicDataMCPRadar",
+      "category": "publicdata_mcp",
+      "raw_date": "2026-05-13",
+      "raw_dir_path": "PublicDataMCPRadar/data/raw/2026-05-13",
+      "file_path": "PublicDataMCPRadar/data/raw/2026-05-13/awesome-mcp-korea Public Data.jsonl",
+      "source_name": "awesome-mcp-korea Public Data",
+      "record_count": 1,
+      "file_size_bytes": 428,
+      "sample_key_count": 8,
+      "sample_keys": [
+        "category",
+        "link",
+        "logged_at",
+        "matched_entities",
+        "published",
+        "source",
+        "summary",
+        "title"
+      ],
+      "ontology_record_count": 0,
+      "event_model_record_count": 0,
+      "distinct_event_model_ids": [],
+      "event_model_counts": {},
+      "source_role_record_count": 0,
+      "distinct_source_role_ids": [],
+      "source_role_counts": {},
+      "ontology_adoption_status": "summary_emitted",
+      "ontology_version": "0.1.0"
+    },
+    {
       "repo": "QueueRadar",
       "category": "queue",
       "raw_date": "2026-05-13",
@@ -12981,7 +13505,7 @@
       "source_role_record_count": 0,
       "distinct_source_role_ids": [],
       "source_role_counts": {},
-      "ontology_adoption_status": "summary_emitted",
+      "ontology_adoption_status": "runtime_only",
       "ontology_version": "0.1.0"
     },
     {
@@ -13016,7 +13540,7 @@
       "source_role_record_count": 0,
       "distinct_source_role_ids": [],
       "source_role_counts": {},
-      "ontology_adoption_status": "summary_emitted",
+      "ontology_adoption_status": "runtime_only",
       "ontology_version": "0.1.0"
     },
     {
@@ -13051,7 +13575,7 @@
       "source_role_record_count": 0,
       "distinct_source_role_ids": [],
       "source_role_counts": {},
-      "ontology_adoption_status": "summary_emitted",
+      "ontology_adoption_status": "runtime_only",
       "ontology_version": "0.1.0"
     },
     {
@@ -13086,7 +13610,7 @@
       "source_role_record_count": 0,
       "distinct_source_role_ids": [],
       "source_role_counts": {},
-      "ontology_adoption_status": "summary_emitted",
+      "ontology_adoption_status": "runtime_only",
       "ontology_version": "0.1.0"
     },
     {
@@ -13121,7 +13645,7 @@
       "source_role_record_count": 0,
       "distinct_source_role_ids": [],
       "source_role_counts": {},
-      "ontology_adoption_status": "summary_emitted",
+      "ontology_adoption_status": "runtime_only",
       "ontology_version": "0.1.0"
     },
     {
@@ -13156,7 +13680,7 @@
       "source_role_record_count": 0,
       "distinct_source_role_ids": [],
       "source_role_counts": {},
-      "ontology_adoption_status": "summary_emitted",
+      "ontology_adoption_status": "runtime_only",
       "ontology_version": "0.1.0"
     },
     {
@@ -13191,7 +13715,7 @@
       "source_role_record_count": 0,
       "distinct_source_role_ids": [],
       "source_role_counts": {},
-      "ontology_adoption_status": "summary_emitted",
+      "ontology_adoption_status": "runtime_only",
       "ontology_version": "0.1.0"
     },
     {
@@ -13230,7 +13754,7 @@
       "source_role_counts": {
         "operational_evidence": 1
       },
-      "ontology_adoption_status": "summary_emitted",
+      "ontology_adoption_status": "runtime_only",
       "ontology_version": "0.1.0"
     },
     {
@@ -13265,7 +13789,7 @@
       "source_role_record_count": 0,
       "distinct_source_role_ids": [],
       "source_role_counts": {},
-      "ontology_adoption_status": "summary_emitted",
+      "ontology_adoption_status": "runtime_only",
       "ontology_version": "0.1.0"
     },
     {
@@ -13300,7 +13824,7 @@
       "source_role_record_count": 0,
       "distinct_source_role_ids": [],
       "source_role_counts": {},
-      "ontology_adoption_status": "summary_emitted",
+      "ontology_adoption_status": "runtime_only",
       "ontology_version": "0.1.0"
     },
     {
@@ -13335,7 +13859,7 @@
       "source_role_record_count": 0,
       "distinct_source_role_ids": [],
       "source_role_counts": {},
-      "ontology_adoption_status": "summary_emitted",
+      "ontology_adoption_status": "runtime_only",
       "ontology_version": "0.1.0"
     },
     {
@@ -13370,7 +13894,7 @@
       "source_role_record_count": 0,
       "distinct_source_role_ids": [],
       "source_role_counts": {},
-      "ontology_adoption_status": "summary_emitted",
+      "ontology_adoption_status": "runtime_only",
       "ontology_version": "0.1.0"
     },
     {
@@ -13405,7 +13929,7 @@
       "source_role_record_count": 0,
       "distinct_source_role_ids": [],
       "source_role_counts": {},
-      "ontology_adoption_status": "summary_emitted",
+      "ontology_adoption_status": "runtime_only",
       "ontology_version": "0.1.0"
     },
     {
@@ -13444,7 +13968,7 @@
       "source_role_counts": {
         "community_signal": 1
       },
-      "ontology_adoption_status": "summary_emitted",
+      "ontology_adoption_status": "runtime_only",
       "ontology_version": "0.1.0"
     },
     {
@@ -13479,7 +14003,7 @@
       "source_role_record_count": 0,
       "distinct_source_role_ids": [],
       "source_role_counts": {},
-      "ontology_adoption_status": "summary_emitted",
+      "ontology_adoption_status": "runtime_only",
       "ontology_version": "0.1.0"
     },
     {
@@ -13514,7 +14038,7 @@
       "source_role_record_count": 0,
       "distinct_source_role_ids": [],
       "source_role_counts": {},
-      "ontology_adoption_status": "summary_emitted",
+      "ontology_adoption_status": "runtime_only",
       "ontology_version": "0.1.0"
     },
     {
@@ -13553,7 +14077,7 @@
       "source_role_counts": {
         "context_only": 1
       },
-      "ontology_adoption_status": "summary_emitted",
+      "ontology_adoption_status": "runtime_only",
       "ontology_version": "0.1.0"
     },
     {
@@ -13588,7 +14112,7 @@
       "source_role_record_count": 0,
       "distinct_source_role_ids": [],
       "source_role_counts": {},
-      "ontology_adoption_status": "summary_emitted",
+      "ontology_adoption_status": "runtime_only",
       "ontology_version": "0.1.0"
     },
     {
@@ -13623,7 +14147,7 @@
       "source_role_record_count": 0,
       "distinct_source_role_ids": [],
       "source_role_counts": {},
-      "ontology_adoption_status": "summary_emitted",
+      "ontology_adoption_status": "runtime_only",
       "ontology_version": "0.1.0"
     },
     {
@@ -13662,7 +14186,7 @@
       "source_role_counts": {
         "operational_evidence": 1
       },
-      "ontology_adoption_status": "summary_emitted",
+      "ontology_adoption_status": "runtime_only",
       "ontology_version": "0.1.0"
     },
     {
@@ -13697,7 +14221,7 @@
       "source_role_record_count": 0,
       "distinct_source_role_ids": [],
       "source_role_counts": {},
-      "ontology_adoption_status": "summary_emitted",
+      "ontology_adoption_status": "runtime_only",
       "ontology_version": "0.1.0"
     },
     {
@@ -13732,7 +14256,577 @@
       "source_role_record_count": 0,
       "distinct_source_role_ids": [],
       "source_role_counts": {},
-      "ontology_adoption_status": "summary_emitted",
+      "ontology_adoption_status": "runtime_only",
+      "ontology_version": "0.1.0"
+    },
+    {
+      "repo": "RefundRadar",
+      "category": "refund",
+      "raw_date": "2026-05-13",
+      "raw_dir_path": "RefundRadar/data/raw/2026-05-13",
+      "file_path": "RefundRadar/data/raw/2026-05-13/CFPB Blog.jsonl",
+      "source_name": "CFPB Blog",
+      "record_count": 25,
+      "file_size_bytes": 13505,
+      "sample_key_count": 8,
+      "sample_keys": [
+        "category",
+        "link",
+        "logged_at",
+        "matched_entities",
+        "published",
+        "source",
+        "summary",
+        "title"
+      ],
+      "ontology_record_count": 0,
+      "event_model_record_count": 0,
+      "distinct_event_model_ids": [],
+      "event_model_counts": {},
+      "source_role_record_count": 0,
+      "distinct_source_role_ids": [],
+      "source_role_counts": {},
+      "ontology_adoption_status": "runtime_fallback",
+      "ontology_version": "0.1.0"
+    },
+    {
+      "repo": "RefundRadar",
+      "category": "refund",
+      "raw_date": "2026-05-13",
+      "raw_dir_path": "RefundRadar/data/raw/2026-05-13",
+      "file_path": "RefundRadar/data/raw/2026-05-13/CFPB Newsroom.jsonl",
+      "source_name": "CFPB Newsroom",
+      "record_count": 25,
+      "file_size_bytes": 14789,
+      "sample_key_count": 8,
+      "sample_keys": [
+        "category",
+        "link",
+        "logged_at",
+        "matched_entities",
+        "published",
+        "source",
+        "summary",
+        "title"
+      ],
+      "ontology_record_count": 0,
+      "event_model_record_count": 0,
+      "distinct_event_model_ids": [],
+      "event_model_counts": {},
+      "source_role_record_count": 0,
+      "distinct_source_role_ids": [],
+      "source_role_counts": {},
+      "ontology_adoption_status": "runtime_fallback",
+      "ontology_version": "0.1.0"
+    },
+    {
+      "repo": "RefundRadar",
+      "category": "refund",
+      "raw_date": "2026-05-13",
+      "raw_dir_path": "RefundRadar/data/raw/2026-05-13",
+      "file_path": "RefundRadar/data/raw/2026-05-13/CPSC Recalls.jsonl",
+      "source_name": "CPSC Recalls",
+      "record_count": 40,
+      "file_size_bytes": 39295,
+      "sample_key_count": 8,
+      "sample_keys": [
+        "category",
+        "link",
+        "logged_at",
+        "matched_entities",
+        "published",
+        "source",
+        "summary",
+        "title"
+      ],
+      "ontology_record_count": 0,
+      "event_model_record_count": 0,
+      "distinct_event_model_ids": [],
+      "event_model_counts": {},
+      "source_role_record_count": 0,
+      "distinct_source_role_ids": [],
+      "source_role_counts": {},
+      "ontology_adoption_status": "runtime_fallback",
+      "ontology_version": "0.1.0"
+    },
+    {
+      "repo": "RefundRadar",
+      "category": "refund",
+      "raw_date": "2026-05-13",
+      "raw_dir_path": "RefundRadar/data/raw/2026-05-13",
+      "file_path": "RefundRadar/data/raw/2026-05-13/Class Action Rebates.jsonl",
+      "source_name": "Class Action Rebates",
+      "record_count": 2,
+      "file_size_bytes": 1145,
+      "sample_key_count": 8,
+      "sample_keys": [
+        "category",
+        "link",
+        "logged_at",
+        "matched_entities",
+        "published",
+        "source",
+        "summary",
+        "title"
+      ],
+      "ontology_record_count": 0,
+      "event_model_record_count": 0,
+      "distinct_event_model_ids": [],
+      "event_model_counts": {},
+      "source_role_record_count": 0,
+      "distinct_source_role_ids": [],
+      "source_role_counts": {},
+      "ontology_adoption_status": "runtime_fallback",
+      "ontology_version": "0.1.0"
+    },
+    {
+      "repo": "RefundRadar",
+      "category": "refund",
+      "raw_date": "2026-05-13",
+      "raw_dir_path": "RefundRadar/data/raw/2026-05-13",
+      "file_path": "RefundRadar/data/raw/2026-05-13/DOE Energy News.jsonl",
+      "source_name": "DOE Energy News",
+      "record_count": 10,
+      "file_size_bytes": 19214,
+      "sample_key_count": 8,
+      "sample_keys": [
+        "category",
+        "link",
+        "logged_at",
+        "matched_entities",
+        "published",
+        "source",
+        "summary",
+        "title"
+      ],
+      "ontology_record_count": 0,
+      "event_model_record_count": 0,
+      "distinct_event_model_ids": [],
+      "event_model_counts": {},
+      "source_role_record_count": 0,
+      "distinct_source_role_ids": [],
+      "source_role_counts": {},
+      "ontology_adoption_status": "runtime_fallback",
+      "ontology_version": "0.1.0"
+    },
+    {
+      "repo": "RefundRadar",
+      "category": "refund",
+      "raw_date": "2026-05-13",
+      "raw_dir_path": "RefundRadar/data/raw/2026-05-13",
+      "file_path": "RefundRadar/data/raw/2026-05-13/Freakonomics Radio.jsonl",
+      "source_name": "Freakonomics Radio",
+      "record_count": 50,
+      "file_size_bytes": 25362,
+      "sample_key_count": 8,
+      "sample_keys": [
+        "category",
+        "link",
+        "logged_at",
+        "matched_entities",
+        "published",
+        "source",
+        "summary",
+        "title"
+      ],
+      "ontology_record_count": 0,
+      "event_model_record_count": 0,
+      "distinct_event_model_ids": [],
+      "event_model_counts": {},
+      "source_role_record_count": 0,
+      "distinct_source_role_ids": [],
+      "source_role_counts": {},
+      "ontology_adoption_status": "runtime_fallback",
+      "ontology_version": "0.1.0"
+    },
+    {
+      "repo": "RefundRadar",
+      "category": "refund",
+      "raw_date": "2026-05-13",
+      "raw_dir_path": "RefundRadar/data/raw/2026-05-13",
+      "file_path": "RefundRadar/data/raw/2026-05-13/IRS Newsroom.jsonl",
+      "source_name": "IRS Newsroom",
+      "record_count": 1,
+      "file_size_bytes": 4379,
+      "sample_key_count": 8,
+      "sample_keys": [
+        "category",
+        "link",
+        "logged_at",
+        "matched_entities",
+        "published",
+        "source",
+        "summary",
+        "title"
+      ],
+      "ontology_record_count": 0,
+      "event_model_record_count": 0,
+      "distinct_event_model_ids": [],
+      "event_model_counts": {},
+      "source_role_record_count": 0,
+      "distinct_source_role_ids": [],
+      "source_role_counts": {},
+      "ontology_adoption_status": "runtime_fallback",
+      "ontology_version": "0.1.0"
+    },
+    {
+      "repo": "RefundRadar",
+      "category": "refund",
+      "raw_date": "2026-05-13",
+      "raw_dir_path": "RefundRadar/data/raw/2026-05-13",
+      "file_path": "RefundRadar/data/raw/2026-05-13/MarketWatch.jsonl",
+      "source_name": "MarketWatch",
+      "record_count": 10,
+      "file_size_bytes": 5683,
+      "sample_key_count": 8,
+      "sample_keys": [
+        "category",
+        "link",
+        "logged_at",
+        "matched_entities",
+        "published",
+        "source",
+        "summary",
+        "title"
+      ],
+      "ontology_record_count": 0,
+      "event_model_record_count": 0,
+      "distinct_event_model_ids": [],
+      "event_model_counts": {},
+      "source_role_record_count": 0,
+      "distinct_source_role_ids": [],
+      "source_role_counts": {},
+      "ontology_adoption_status": "runtime_fallback",
+      "ontology_version": "0.1.0"
+    },
+    {
+      "repo": "RefundRadar",
+      "category": "refund",
+      "raw_date": "2026-05-13",
+      "raw_dir_path": "RefundRadar/data/raw/2026-05-13",
+      "file_path": "RefundRadar/data/raw/2026-05-13/Money.com.jsonl",
+      "source_name": "Money.com",
+      "record_count": 10,
+      "file_size_bytes": 4416,
+      "sample_key_count": 8,
+      "sample_keys": [
+        "category",
+        "link",
+        "logged_at",
+        "matched_entities",
+        "published",
+        "source",
+        "summary",
+        "title"
+      ],
+      "ontology_record_count": 0,
+      "event_model_record_count": 0,
+      "distinct_event_model_ids": [],
+      "event_model_counts": {},
+      "source_role_record_count": 0,
+      "distinct_source_role_ids": [],
+      "source_role_counts": {},
+      "ontology_adoption_status": "runtime_fallback",
+      "ontology_version": "0.1.0"
+    },
+    {
+      "repo": "RefundRadar",
+      "category": "refund",
+      "raw_date": "2026-05-13",
+      "raw_dir_path": "RefundRadar/data/raw/2026-05-13",
+      "file_path": "RefundRadar/data/raw/2026-05-13/NerdWallet Finance.jsonl",
+      "source_name": "NerdWallet Finance",
+      "record_count": 10,
+      "file_size_bytes": 4525,
+      "sample_key_count": 8,
+      "sample_keys": [
+        "category",
+        "link",
+        "logged_at",
+        "matched_entities",
+        "published",
+        "source",
+        "summary",
+        "title"
+      ],
+      "ontology_record_count": 0,
+      "event_model_record_count": 0,
+      "distinct_event_model_ids": [],
+      "event_model_counts": {},
+      "source_role_record_count": 0,
+      "distinct_source_role_ids": [],
+      "source_role_counts": {},
+      "ontology_adoption_status": "runtime_fallback",
+      "ontology_version": "0.1.0"
+    },
+    {
+      "repo": "RefundRadar",
+      "category": "refund",
+      "raw_date": "2026-05-13",
+      "raw_dir_path": "RefundRadar/data/raw/2026-05-13",
+      "file_path": "RefundRadar/data/raw/2026-05-13/Tax Foundation Blog.jsonl",
+      "source_name": "Tax Foundation Blog",
+      "record_count": 20,
+      "file_size_bytes": 11361,
+      "sample_key_count": 8,
+      "sample_keys": [
+        "category",
+        "link",
+        "logged_at",
+        "matched_entities",
+        "published",
+        "source",
+        "summary",
+        "title"
+      ],
+      "ontology_record_count": 0,
+      "event_model_record_count": 0,
+      "distinct_event_model_ids": [],
+      "event_model_counts": {},
+      "source_role_record_count": 0,
+      "distinct_source_role_ids": [],
+      "source_role_counts": {},
+      "ontology_adoption_status": "runtime_fallback",
+      "ontology_version": "0.1.0"
+    },
+    {
+      "repo": "RefundRadar",
+      "category": "refund",
+      "raw_date": "2026-05-13",
+      "raw_dir_path": "RefundRadar/data/raw/2026-05-13",
+      "file_path": "RefundRadar/data/raw/2026-05-13/TaxAct Blog.jsonl",
+      "source_name": "TaxAct Blog",
+      "record_count": 5,
+      "file_size_bytes": 3177,
+      "sample_key_count": 8,
+      "sample_keys": [
+        "category",
+        "link",
+        "logged_at",
+        "matched_entities",
+        "published",
+        "source",
+        "summary",
+        "title"
+      ],
+      "ontology_record_count": 0,
+      "event_model_record_count": 0,
+      "distinct_event_model_ids": [],
+      "event_model_counts": {},
+      "source_role_record_count": 0,
+      "distinct_source_role_ids": [],
+      "source_role_counts": {},
+      "ontology_adoption_status": "runtime_fallback",
+      "ontology_version": "0.1.0"
+    },
+    {
+      "repo": "RefundRadar",
+      "category": "refund",
+      "raw_date": "2026-05-13",
+      "raw_dir_path": "RefundRadar/data/raw/2026-05-13",
+      "file_path": "RefundRadar/data/raw/2026-05-13/Taxpayer Advocate Service.jsonl",
+      "source_name": "Taxpayer Advocate Service",
+      "record_count": 10,
+      "file_size_bytes": 8702,
+      "sample_key_count": 8,
+      "sample_keys": [
+        "category",
+        "link",
+        "logged_at",
+        "matched_entities",
+        "published",
+        "source",
+        "summary",
+        "title"
+      ],
+      "ontology_record_count": 0,
+      "event_model_record_count": 0,
+      "distinct_event_model_ids": [],
+      "event_model_counts": {},
+      "source_role_record_count": 0,
+      "distinct_source_role_ids": [],
+      "source_role_counts": {},
+      "ontology_adoption_status": "runtime_fallback",
+      "ontology_version": "0.1.0"
+    },
+    {
+      "repo": "RefundRadar",
+      "category": "refund",
+      "raw_date": "2026-05-13",
+      "raw_dir_path": "RefundRadar/data/raw/2026-05-13",
+      "file_path": "RefundRadar/data/raw/2026-05-13/TurboTax Blog.jsonl",
+      "source_name": "TurboTax Blog",
+      "record_count": 20,
+      "file_size_bytes": 19625,
+      "sample_key_count": 8,
+      "sample_keys": [
+        "category",
+        "link",
+        "logged_at",
+        "matched_entities",
+        "published",
+        "source",
+        "summary",
+        "title"
+      ],
+      "ontology_record_count": 0,
+      "event_model_record_count": 0,
+      "distinct_event_model_ids": [],
+      "event_model_counts": {},
+      "source_role_record_count": 0,
+      "distinct_source_role_ids": [],
+      "source_role_counts": {},
+      "ontology_adoption_status": "runtime_fallback",
+      "ontology_version": "0.1.0"
+    },
+    {
+      "repo": "RefundRadar",
+      "category": "refund",
+      "raw_date": "2026-05-13",
+      "raw_dir_path": "RefundRadar/data/raw/2026-05-13",
+      "file_path": "RefundRadar/data/raw/2026-05-13/WeTax (위택스).jsonl",
+      "source_name": "WeTax (위택스)",
+      "record_count": 1,
+      "file_size_bytes": 622,
+      "sample_key_count": 8,
+      "sample_keys": [
+        "category",
+        "link",
+        "logged_at",
+        "matched_entities",
+        "published",
+        "source",
+        "summary",
+        "title"
+      ],
+      "ontology_record_count": 0,
+      "event_model_record_count": 0,
+      "distinct_event_model_ids": [],
+      "event_model_counts": {},
+      "source_role_record_count": 0,
+      "distinct_source_role_ids": [],
+      "source_role_counts": {},
+      "ontology_adoption_status": "runtime_fallback",
+      "ontology_version": "0.1.0"
+    },
+    {
+      "repo": "RefundRadar",
+      "category": "refund",
+      "raw_date": "2026-05-13",
+      "raw_dir_path": "RefundRadar/data/raw/2026-05-13",
+      "file_path": "RefundRadar/data/raw/2026-05-13/Yahoo Finance.jsonl",
+      "source_name": "Yahoo Finance",
+      "record_count": 42,
+      "file_size_bytes": 15227,
+      "sample_key_count": 8,
+      "sample_keys": [
+        "category",
+        "link",
+        "logged_at",
+        "matched_entities",
+        "published",
+        "source",
+        "summary",
+        "title"
+      ],
+      "ontology_record_count": 0,
+      "event_model_record_count": 0,
+      "distinct_event_model_ids": [],
+      "event_model_counts": {},
+      "source_role_record_count": 0,
+      "distinct_source_role_ids": [],
+      "source_role_counts": {},
+      "ontology_adoption_status": "runtime_fallback",
+      "ontology_version": "0.1.0"
+    },
+    {
+      "repo": "RefundRadar",
+      "category": "refund",
+      "raw_date": "2026-05-13",
+      "raw_dir_path": "RefundRadar/data/raw/2026-05-13",
+      "file_path": "RefundRadar/data/raw/2026-05-13/Yonhap Economy.jsonl",
+      "source_name": "Yonhap Economy",
+      "record_count": 50,
+      "file_size_bytes": 25263,
+      "sample_key_count": 8,
+      "sample_keys": [
+        "category",
+        "link",
+        "logged_at",
+        "matched_entities",
+        "published",
+        "source",
+        "summary",
+        "title"
+      ],
+      "ontology_record_count": 0,
+      "event_model_record_count": 0,
+      "distinct_event_model_ids": [],
+      "event_model_counts": {},
+      "source_role_record_count": 0,
+      "distinct_source_role_ids": [],
+      "source_role_counts": {},
+      "ontology_adoption_status": "runtime_fallback",
+      "ontology_version": "0.1.0"
+    },
+    {
+      "repo": "RefundRadar",
+      "category": "refund",
+      "raw_date": "2026-05-13",
+      "raw_dir_path": "RefundRadar/data/raw/2026-05-13",
+      "file_path": "RefundRadar/data/raw/2026-05-13/국세청 보도자료.jsonl",
+      "source_name": "국세청 보도자료",
+      "record_count": 1,
+      "file_size_bytes": 288,
+      "sample_key_count": 8,
+      "sample_keys": [
+        "category",
+        "link",
+        "logged_at",
+        "matched_entities",
+        "published",
+        "source",
+        "summary",
+        "title"
+      ],
+      "ontology_record_count": 0,
+      "event_model_record_count": 0,
+      "distinct_event_model_ids": [],
+      "event_model_counts": {},
+      "source_role_record_count": 0,
+      "distinct_source_role_ids": [],
+      "source_role_counts": {},
+      "ontology_adoption_status": "runtime_fallback",
+      "ontology_version": "0.1.0"
+    },
+    {
+      "repo": "RefundRadar",
+      "category": "refund",
+      "raw_date": "2026-05-13",
+      "raw_dir_path": "RefundRadar/data/raw/2026-05-13",
+      "file_path": "RefundRadar/data/raw/2026-05-13/한국소비자원 리콜정보.jsonl",
+      "source_name": "한국소비자원 리콜정보",
+      "record_count": 1,
+      "file_size_bytes": 333,
+      "sample_key_count": 8,
+      "sample_keys": [
+        "category",
+        "link",
+        "logged_at",
+        "matched_entities",
+        "published",
+        "source",
+        "summary",
+        "title"
+      ],
+      "ontology_record_count": 0,
+      "event_model_record_count": 0,
+      "distinct_event_model_ids": [],
+      "event_model_counts": {},
+      "source_role_record_count": 0,
+      "distinct_source_role_ids": [],
+      "source_role_counts": {},
+      "ontology_adoption_status": "runtime_fallback",
       "ontology_version": "0.1.0"
     },
     {
@@ -13763,7 +14857,7 @@
       "source_role_record_count": 0,
       "distinct_source_role_ids": [],
       "source_role_counts": {},
-      "ontology_adoption_status": "summary_emitted",
+      "ontology_adoption_status": "runtime_only",
       "ontology_version": "0.1.0"
     },
     {
@@ -13794,7 +14888,7 @@
       "source_role_record_count": 0,
       "distinct_source_role_ids": [],
       "source_role_counts": {},
-      "ontology_adoption_status": "summary_emitted",
+      "ontology_adoption_status": "runtime_only",
       "ontology_version": "0.1.0"
     },
     {
@@ -13825,7 +14919,7 @@
       "source_role_record_count": 0,
       "distinct_source_role_ids": [],
       "source_role_counts": {},
-      "ontology_adoption_status": "summary_emitted",
+      "ontology_adoption_status": "runtime_only",
       "ontology_version": "0.1.0"
     },
     {
@@ -13860,7 +14954,7 @@
       "source_role_counts": {
         "operational_evidence": 1
       },
-      "ontology_adoption_status": "summary_emitted",
+      "ontology_adoption_status": "runtime_only",
       "ontology_version": "0.1.0"
     },
     {
@@ -13891,7 +14985,7 @@
       "source_role_record_count": 0,
       "distinct_source_role_ids": [],
       "source_role_counts": {},
-      "ontology_adoption_status": "summary_emitted",
+      "ontology_adoption_status": "runtime_only",
       "ontology_version": "0.1.0"
     },
     {
@@ -13922,7 +15016,7 @@
       "source_role_record_count": 0,
       "distinct_source_role_ids": [],
       "source_role_counts": {},
-      "ontology_adoption_status": "summary_emitted",
+      "ontology_adoption_status": "runtime_only",
       "ontology_version": "0.1.0"
     },
     {
@@ -13953,7 +15047,7 @@
       "source_role_record_count": 0,
       "distinct_source_role_ids": [],
       "source_role_counts": {},
-      "ontology_adoption_status": "summary_emitted",
+      "ontology_adoption_status": "runtime_only",
       "ontology_version": "0.1.0"
     },
     {
@@ -13984,7 +15078,7 @@
       "source_role_record_count": 0,
       "distinct_source_role_ids": [],
       "source_role_counts": {},
-      "ontology_adoption_status": "summary_emitted",
+      "ontology_adoption_status": "runtime_only",
       "ontology_version": "0.1.0"
     },
     {
@@ -14015,7 +15109,7 @@
       "source_role_record_count": 0,
       "distinct_source_role_ids": [],
       "source_role_counts": {},
-      "ontology_adoption_status": "summary_emitted",
+      "ontology_adoption_status": "runtime_only",
       "ontology_version": "0.1.0"
     },
     {
@@ -14046,7 +15140,7 @@
       "source_role_record_count": 0,
       "distinct_source_role_ids": [],
       "source_role_counts": {},
-      "ontology_adoption_status": "summary_emitted",
+      "ontology_adoption_status": "runtime_only",
       "ontology_version": "0.1.0"
     },
     {
@@ -14077,7 +15171,7 @@
       "source_role_record_count": 0,
       "distinct_source_role_ids": [],
       "source_role_counts": {},
-      "ontology_adoption_status": "summary_emitted",
+      "ontology_adoption_status": "runtime_only",
       "ontology_version": "0.1.0"
     },
     {
@@ -14112,7 +15206,7 @@
       "source_role_counts": {
         "context_only": 1
       },
-      "ontology_adoption_status": "summary_emitted",
+      "ontology_adoption_status": "runtime_only",
       "ontology_version": "0.1.0"
     },
     {
@@ -14143,7 +15237,7 @@
       "source_role_record_count": 0,
       "distinct_source_role_ids": [],
       "source_role_counts": {},
-      "ontology_adoption_status": "summary_emitted",
+      "ontology_adoption_status": "runtime_only",
       "ontology_version": "0.1.0"
     },
     {
@@ -14174,7 +15268,7 @@
       "source_role_record_count": 0,
       "distinct_source_role_ids": [],
       "source_role_counts": {},
-      "ontology_adoption_status": "summary_emitted",
+      "ontology_adoption_status": "runtime_only",
       "ontology_version": "0.1.0"
     },
     {
@@ -14209,7 +15303,7 @@
       "source_role_counts": {
         "primary_evidence": 1
       },
-      "ontology_adoption_status": "summary_emitted",
+      "ontology_adoption_status": "runtime_only",
       "ontology_version": "0.1.0"
     },
     {
@@ -14240,7 +15334,7 @@
       "source_role_record_count": 0,
       "distinct_source_role_ids": [],
       "source_role_counts": {},
-      "ontology_adoption_status": "summary_emitted",
+      "ontology_adoption_status": "runtime_only",
       "ontology_version": "0.1.0"
     },
     {
@@ -14271,7 +15365,7 @@
       "source_role_record_count": 0,
       "distinct_source_role_ids": [],
       "source_role_counts": {},
-      "ontology_adoption_status": "summary_emitted",
+      "ontology_adoption_status": "runtime_only",
       "ontology_version": "0.1.0"
     },
     {
@@ -14302,7 +15396,7 @@
       "source_role_record_count": 0,
       "distinct_source_role_ids": [],
       "source_role_counts": {},
-      "ontology_adoption_status": "summary_emitted",
+      "ontology_adoption_status": "runtime_only",
       "ontology_version": "0.1.0"
     },
     {
@@ -14333,7 +15427,7 @@
       "source_role_record_count": 0,
       "distinct_source_role_ids": [],
       "source_role_counts": {},
-      "ontology_adoption_status": "summary_emitted",
+      "ontology_adoption_status": "runtime_only",
       "ontology_version": "0.1.0"
     },
     {
@@ -14364,7 +15458,7 @@
       "source_role_record_count": 0,
       "distinct_source_role_ids": [],
       "source_role_counts": {},
-      "ontology_adoption_status": "summary_emitted",
+      "ontology_adoption_status": "runtime_only",
       "ontology_version": "0.1.0"
     },
     {
@@ -14399,7 +15493,7 @@
       "source_role_counts": {
         "operational_evidence": 1
       },
-      "ontology_adoption_status": "summary_emitted",
+      "ontology_adoption_status": "runtime_only",
       "ontology_version": "0.1.0"
     },
     {
@@ -14434,7 +15528,7 @@
       "source_role_counts": {
         "primary_evidence": 1
       },
-      "ontology_adoption_status": "summary_emitted",
+      "ontology_adoption_status": "runtime_only",
       "ontology_version": "0.1.0"
     },
     {
@@ -14465,7 +15559,7 @@
       "source_role_record_count": 0,
       "distinct_source_role_ids": [],
       "source_role_counts": {},
-      "ontology_adoption_status": "summary_emitted",
+      "ontology_adoption_status": "runtime_only",
       "ontology_version": "0.1.0"
     },
     {
@@ -14496,7 +15590,7 @@
       "source_role_record_count": 0,
       "distinct_source_role_ids": [],
       "source_role_counts": {},
-      "ontology_adoption_status": "summary_emitted",
+      "ontology_adoption_status": "runtime_only",
       "ontology_version": "0.1.0"
     },
     {
@@ -14527,7 +15621,7 @@
       "source_role_record_count": 0,
       "distinct_source_role_ids": [],
       "source_role_counts": {},
-      "ontology_adoption_status": "summary_emitted",
+      "ontology_adoption_status": "runtime_only",
       "ontology_version": "0.1.0"
     },
     {
@@ -14558,7 +15652,7 @@
       "source_role_record_count": 0,
       "distinct_source_role_ids": [],
       "source_role_counts": {},
-      "ontology_adoption_status": "summary_emitted",
+      "ontology_adoption_status": "runtime_only",
       "ontology_version": "0.1.0"
     },
     {
@@ -14589,7 +15683,7 @@
       "source_role_record_count": 0,
       "distinct_source_role_ids": [],
       "source_role_counts": {},
-      "ontology_adoption_status": "summary_emitted",
+      "ontology_adoption_status": "runtime_only",
       "ontology_version": "0.1.0"
     },
     {
@@ -14620,7 +15714,7 @@
       "source_role_record_count": 0,
       "distinct_source_role_ids": [],
       "source_role_counts": {},
-      "ontology_adoption_status": "summary_emitted",
+      "ontology_adoption_status": "runtime_only",
       "ontology_version": "0.1.0"
     },
     {
@@ -14651,7 +15745,7 @@
       "source_role_record_count": 0,
       "distinct_source_role_ids": [],
       "source_role_counts": {},
-      "ontology_adoption_status": "summary_emitted",
+      "ontology_adoption_status": "runtime_only",
       "ontology_version": "0.1.0"
     },
     {
@@ -14682,7 +15776,7 @@
       "source_role_record_count": 0,
       "distinct_source_role_ids": [],
       "source_role_counts": {},
-      "ontology_adoption_status": "summary_emitted",
+      "ontology_adoption_status": "runtime_only",
       "ontology_version": "0.1.0"
     },
     {
@@ -14713,7 +15807,7 @@
       "source_role_record_count": 0,
       "distinct_source_role_ids": [],
       "source_role_counts": {},
-      "ontology_adoption_status": "summary_emitted",
+      "ontology_adoption_status": "runtime_only",
       "ontology_version": "0.1.0"
     },
     {
@@ -14744,7 +15838,7 @@
       "source_role_record_count": 0,
       "distinct_source_role_ids": [],
       "source_role_counts": {},
-      "ontology_adoption_status": "summary_emitted",
+      "ontology_adoption_status": "runtime_only",
       "ontology_version": "0.1.0"
     },
     {
@@ -14775,7 +15869,7 @@
       "source_role_record_count": 0,
       "distinct_source_role_ids": [],
       "source_role_counts": {},
-      "ontology_adoption_status": "summary_emitted",
+      "ontology_adoption_status": "runtime_only",
       "ontology_version": "0.1.0"
     },
     {
@@ -14800,6 +15894,32 @@
         "title"
       ],
       "ontology_record_count": 1,
+      "event_model_record_count": 0,
+      "distinct_event_model_ids": [],
+      "event_model_counts": {},
+      "source_role_record_count": 0,
+      "distinct_source_role_ids": [],
+      "source_role_counts": {},
+      "ontology_adoption_status": "runtime_only",
+      "ontology_version": "0.1.0"
+    },
+    {
+      "repo": "TrendRadar",
+      "category": "trend",
+      "raw_date": "2026-05-13",
+      "raw_dir_path": "TrendRadar/data/raw/2026-05-13",
+      "file_path": "TrendRadar/data/raw/2026-05-13/wikipedia.jsonl",
+      "source_name": "wikipedia",
+      "record_count": 14,
+      "file_size_bytes": 1442,
+      "sample_key_count": 4,
+      "sample_keys": [
+        "keyword",
+        "platform",
+        "timestamp",
+        "value"
+      ],
+      "ontology_record_count": 0,
       "event_model_record_count": 0,
       "distinct_event_model_ids": [],
       "event_model_counts": {},
@@ -14836,7 +15956,7 @@
       "source_role_record_count": 0,
       "distinct_source_role_ids": [],
       "source_role_counts": {},
-      "ontology_adoption_status": "runtime_fallback",
+      "ontology_adoption_status": "runtime_only",
       "ontology_version": "0.1.0"
     },
     {
@@ -14866,7 +15986,7 @@
       "source_role_record_count": 0,
       "distinct_source_role_ids": [],
       "source_role_counts": {},
-      "ontology_adoption_status": "runtime_fallback",
+      "ontology_adoption_status": "runtime_only",
       "ontology_version": "0.1.0"
     },
     {
@@ -14896,7 +16016,7 @@
       "source_role_record_count": 0,
       "distinct_source_role_ids": [],
       "source_role_counts": {},
-      "ontology_adoption_status": "runtime_fallback",
+      "ontology_adoption_status": "runtime_only",
       "ontology_version": "0.1.0"
     },
     {
@@ -14926,7 +16046,7 @@
       "source_role_record_count": 0,
       "distinct_source_role_ids": [],
       "source_role_counts": {},
-      "ontology_adoption_status": "runtime_fallback",
+      "ontology_adoption_status": "runtime_only",
       "ontology_version": "0.1.0"
     },
     {
@@ -14956,7 +16076,7 @@
       "source_role_record_count": 0,
       "distinct_source_role_ids": [],
       "source_role_counts": {},
-      "ontology_adoption_status": "runtime_fallback",
+      "ontology_adoption_status": "runtime_only",
       "ontology_version": "0.1.0"
     },
     {
@@ -14986,7 +16106,7 @@
       "source_role_record_count": 0,
       "distinct_source_role_ids": [],
       "source_role_counts": {},
-      "ontology_adoption_status": "runtime_fallback",
+      "ontology_adoption_status": "runtime_only",
       "ontology_version": "0.1.0"
     },
     {
@@ -15016,7 +16136,7 @@
       "source_role_record_count": 0,
       "distinct_source_role_ids": [],
       "source_role_counts": {},
-      "ontology_adoption_status": "runtime_fallback",
+      "ontology_adoption_status": "runtime_only",
       "ontology_version": "0.1.0"
     },
     {
@@ -15046,7 +16166,7 @@
       "source_role_record_count": 0,
       "distinct_source_role_ids": [],
       "source_role_counts": {},
-      "ontology_adoption_status": "runtime_fallback",
+      "ontology_adoption_status": "runtime_only",
       "ontology_version": "0.1.0"
     },
     {
@@ -15076,7 +16196,7 @@
       "source_role_record_count": 0,
       "distinct_source_role_ids": [],
       "source_role_counts": {},
-      "ontology_adoption_status": "runtime_fallback",
+      "ontology_adoption_status": "runtime_only",
       "ontology_version": "0.1.0"
     },
     {
@@ -15106,7 +16226,7 @@
       "source_role_record_count": 0,
       "distinct_source_role_ids": [],
       "source_role_counts": {},
-      "ontology_adoption_status": "runtime_fallback",
+      "ontology_adoption_status": "runtime_only",
       "ontology_version": "0.1.0"
     },
     {
@@ -15136,7 +16256,7 @@
       "source_role_record_count": 0,
       "distinct_source_role_ids": [],
       "source_role_counts": {},
-      "ontology_adoption_status": "runtime_fallback",
+      "ontology_adoption_status": "runtime_only",
       "ontology_version": "0.1.0"
     },
     {
@@ -15166,7 +16286,7 @@
       "source_role_record_count": 0,
       "distinct_source_role_ids": [],
       "source_role_counts": {},
-      "ontology_adoption_status": "runtime_fallback",
+      "ontology_adoption_status": "runtime_only",
       "ontology_version": "0.1.0"
     },
     {
@@ -15196,7 +16316,7 @@
       "source_role_record_count": 0,
       "distinct_source_role_ids": [],
       "source_role_counts": {},
-      "ontology_adoption_status": "runtime_fallback",
+      "ontology_adoption_status": "runtime_only",
       "ontology_version": "0.1.0"
     },
     {
@@ -15226,7 +16346,7 @@
       "source_role_record_count": 0,
       "distinct_source_role_ids": [],
       "source_role_counts": {},
-      "ontology_adoption_status": "runtime_fallback",
+      "ontology_adoption_status": "runtime_only",
       "ontology_version": "0.1.0"
     },
     {
@@ -15256,7 +16376,7 @@
       "source_role_record_count": 0,
       "distinct_source_role_ids": [],
       "source_role_counts": {},
-      "ontology_adoption_status": "runtime_fallback",
+      "ontology_adoption_status": "runtime_only",
       "ontology_version": "0.1.0"
     },
     {
@@ -15286,7 +16406,7 @@
       "source_role_record_count": 0,
       "distinct_source_role_ids": [],
       "source_role_counts": {},
-      "ontology_adoption_status": "runtime_fallback",
+      "ontology_adoption_status": "runtime_only",
       "ontology_version": "0.1.0"
     },
     {
@@ -15316,7 +16436,7 @@
       "source_role_record_count": 0,
       "distinct_source_role_ids": [],
       "source_role_counts": {},
-      "ontology_adoption_status": "runtime_fallback",
+      "ontology_adoption_status": "runtime_only",
       "ontology_version": "0.1.0"
     },
     {
@@ -15346,7 +16466,7 @@
       "source_role_record_count": 0,
       "distinct_source_role_ids": [],
       "source_role_counts": {},
-      "ontology_adoption_status": "runtime_fallback",
+      "ontology_adoption_status": "runtime_only",
       "ontology_version": "0.1.0"
     },
     {
@@ -15376,7 +16496,1645 @@
       "source_role_record_count": 0,
       "distinct_source_role_ids": [],
       "source_role_counts": {},
-      "ontology_adoption_status": "runtime_fallback",
+      "ontology_adoption_status": "runtime_only",
+      "ontology_version": "0.1.0"
+    },
+    {
+      "repo": "WineRadar",
+      "category": "wine",
+      "raw_date": "2026-05-13",
+      "raw_dir_path": "WineRadar/data/raw/2026-05-13",
+      "file_path": "WineRadar/data/raw/2026-05-13/1 Wine Dude.jsonl",
+      "source_name": "1 Wine Dude",
+      "record_count": 10,
+      "file_size_bytes": 15541,
+      "sample_key_count": 17,
+      "sample_keys": [
+        "collection_tier",
+        "content",
+        "content_type",
+        "continent",
+        "country",
+        "id",
+        "info_purpose",
+        "language",
+        "producer_role",
+        "published_at",
+        "region",
+        "source_name",
+        "source_type",
+        "summary",
+        "title",
+        "trust_tier",
+        "url"
+      ],
+      "ontology_record_count": 0,
+      "event_model_record_count": 0,
+      "distinct_event_model_ids": [],
+      "event_model_counts": {},
+      "source_role_record_count": 0,
+      "distinct_source_role_ids": [],
+      "source_role_counts": {},
+      "ontology_adoption_status": "runtime_only",
+      "ontology_version": "0.1.0"
+    },
+    {
+      "repo": "WineRadar",
+      "category": "wine",
+      "raw_date": "2026-05-13",
+      "raw_dir_path": "WineRadar/data/raw/2026-05-13",
+      "file_path": "WineRadar/data/raw/2026-05-13/ACE Vinos.jsonl",
+      "source_name": "ACE Vinos",
+      "record_count": 10,
+      "file_size_bytes": 113525,
+      "sample_key_count": 17,
+      "sample_keys": [
+        "collection_tier",
+        "content",
+        "content_type",
+        "continent",
+        "country",
+        "id",
+        "info_purpose",
+        "language",
+        "producer_role",
+        "published_at",
+        "region",
+        "source_name",
+        "source_type",
+        "summary",
+        "title",
+        "trust_tier",
+        "url"
+      ],
+      "ontology_record_count": 0,
+      "event_model_record_count": 0,
+      "distinct_event_model_ids": [],
+      "event_model_counts": {},
+      "source_role_record_count": 0,
+      "distinct_source_role_ids": [],
+      "source_role_counts": {},
+      "ontology_adoption_status": "runtime_only",
+      "ontology_version": "0.1.0"
+    },
+    {
+      "repo": "WineRadar",
+      "category": "wine",
+      "raw_date": "2026-05-13",
+      "raw_dir_path": "WineRadar/data/raw/2026-05-13",
+      "file_path": "WineRadar/data/raw/2026-05-13/Decanter.jsonl",
+      "source_name": "Decanter",
+      "record_count": 10,
+      "file_size_bytes": 7928,
+      "sample_key_count": 17,
+      "sample_keys": [
+        "collection_tier",
+        "content",
+        "content_type",
+        "continent",
+        "country",
+        "id",
+        "info_purpose",
+        "language",
+        "producer_role",
+        "published_at",
+        "region",
+        "source_name",
+        "source_type",
+        "summary",
+        "title",
+        "trust_tier",
+        "url"
+      ],
+      "ontology_record_count": 0,
+      "event_model_record_count": 0,
+      "distinct_event_model_ids": [],
+      "event_model_counts": {},
+      "source_role_record_count": 0,
+      "distinct_source_role_ids": [],
+      "source_role_counts": {},
+      "ontology_adoption_status": "runtime_only",
+      "ontology_version": "0.1.0"
+    },
+    {
+      "repo": "WineRadar",
+      "category": "wine",
+      "raw_date": "2026-05-13",
+      "raw_dir_path": "WineRadar/data/raw/2026-05-13",
+      "file_path": "WineRadar/data/raw/2026-05-13/Drinkhacker.jsonl",
+      "source_name": "Drinkhacker",
+      "record_count": 10,
+      "file_size_bytes": 56865,
+      "sample_key_count": 17,
+      "sample_keys": [
+        "collection_tier",
+        "content",
+        "content_type",
+        "continent",
+        "country",
+        "id",
+        "info_purpose",
+        "language",
+        "producer_role",
+        "published_at",
+        "region",
+        "source_name",
+        "source_type",
+        "summary",
+        "title",
+        "trust_tier",
+        "url"
+      ],
+      "ontology_record_count": 0,
+      "event_model_record_count": 0,
+      "distinct_event_model_ids": [],
+      "event_model_counts": {},
+      "source_role_record_count": 0,
+      "distinct_source_role_ids": [],
+      "source_role_counts": {},
+      "ontology_adoption_status": "runtime_only",
+      "ontology_version": "0.1.0"
+    },
+    {
+      "repo": "WineRadar",
+      "category": "wine",
+      "raw_date": "2026-05-13",
+      "raw_dir_path": "WineRadar/data/raw/2026-05-13",
+      "file_path": "WineRadar/data/raw/2026-05-13/Enolife.jsonl",
+      "source_name": "Enolife",
+      "record_count": 10,
+      "file_size_bytes": 77765,
+      "sample_key_count": 17,
+      "sample_keys": [
+        "collection_tier",
+        "content",
+        "content_type",
+        "continent",
+        "country",
+        "id",
+        "info_purpose",
+        "language",
+        "producer_role",
+        "published_at",
+        "region",
+        "source_name",
+        "source_type",
+        "summary",
+        "title",
+        "trust_tier",
+        "url"
+      ],
+      "ontology_record_count": 0,
+      "event_model_record_count": 0,
+      "distinct_event_model_ids": [],
+      "event_model_counts": {},
+      "source_role_record_count": 0,
+      "distinct_source_role_ids": [],
+      "source_role_counts": {},
+      "ontology_adoption_status": "runtime_only",
+      "ontology_version": "0.1.0"
+    },
+    {
+      "repo": "WineRadar",
+      "category": "wine",
+      "raw_date": "2026-05-13",
+      "raw_dir_path": "WineRadar/data/raw/2026-05-13",
+      "file_path": "WineRadar/data/raw/2026-05-13/Federdoc.jsonl",
+      "source_name": "Federdoc",
+      "record_count": 10,
+      "file_size_bytes": 9026,
+      "sample_key_count": 17,
+      "sample_keys": [
+        "collection_tier",
+        "content",
+        "content_type",
+        "continent",
+        "country",
+        "id",
+        "info_purpose",
+        "language",
+        "producer_role",
+        "published_at",
+        "region",
+        "source_name",
+        "source_type",
+        "summary",
+        "title",
+        "trust_tier",
+        "url"
+      ],
+      "ontology_record_count": 0,
+      "event_model_record_count": 0,
+      "distinct_event_model_ids": [],
+      "event_model_counts": {},
+      "source_role_record_count": 0,
+      "distinct_source_role_ids": [],
+      "source_role_counts": {},
+      "ontology_adoption_status": "runtime_only",
+      "ontology_version": "0.1.0"
+    },
+    {
+      "repo": "WineRadar",
+      "category": "wine",
+      "raw_date": "2026-05-13",
+      "raw_dir_path": "WineRadar/data/raw/2026-05-13",
+      "file_path": "WineRadar/data/raw/2026-05-13/Finger Lakes Wine Alliance.jsonl",
+      "source_name": "Finger Lakes Wine Alliance",
+      "record_count": 10,
+      "file_size_bytes": 39205,
+      "sample_key_count": 17,
+      "sample_keys": [
+        "collection_tier",
+        "content",
+        "content_type",
+        "continent",
+        "country",
+        "id",
+        "info_purpose",
+        "language",
+        "producer_role",
+        "published_at",
+        "region",
+        "source_name",
+        "source_type",
+        "summary",
+        "title",
+        "trust_tier",
+        "url"
+      ],
+      "ontology_record_count": 0,
+      "event_model_record_count": 0,
+      "distinct_event_model_ids": [],
+      "event_model_counts": {},
+      "source_role_record_count": 0,
+      "distinct_source_role_ids": [],
+      "source_role_counts": {},
+      "ontology_adoption_status": "runtime_only",
+      "ontology_version": "0.1.0"
+    },
+    {
+      "repo": "WineRadar",
+      "category": "wine",
+      "raw_date": "2026-05-13",
+      "raw_dir_path": "WineRadar/data/raw/2026-05-13",
+      "file_path": "WineRadar/data/raw/2026-05-13/Gambero Rosso.jsonl",
+      "source_name": "Gambero Rosso",
+      "record_count": 10,
+      "file_size_bytes": 10489,
+      "sample_key_count": 17,
+      "sample_keys": [
+        "collection_tier",
+        "content",
+        "content_type",
+        "continent",
+        "country",
+        "id",
+        "info_purpose",
+        "language",
+        "producer_role",
+        "published_at",
+        "region",
+        "source_name",
+        "source_type",
+        "summary",
+        "title",
+        "trust_tier",
+        "url"
+      ],
+      "ontology_record_count": 0,
+      "event_model_record_count": 0,
+      "distinct_event_model_ids": [],
+      "event_model_counts": {},
+      "source_role_record_count": 0,
+      "distinct_source_role_ids": [],
+      "source_role_counts": {},
+      "ontology_adoption_status": "runtime_only",
+      "ontology_version": "0.1.0"
+    },
+    {
+      "repo": "WineRadar",
+      "category": "wine",
+      "raw_date": "2026-05-13",
+      "raw_dir_path": "WineRadar/data/raw/2026-05-13",
+      "file_path": "WineRadar/data/raw/2026-05-13/Jamie Goode's Wine Blog.jsonl",
+      "source_name": "Jamie Goode's Wine Blog",
+      "record_count": 10,
+      "file_size_bytes": 45177,
+      "sample_key_count": 17,
+      "sample_keys": [
+        "collection_tier",
+        "content",
+        "content_type",
+        "continent",
+        "country",
+        "id",
+        "info_purpose",
+        "language",
+        "producer_role",
+        "published_at",
+        "region",
+        "source_name",
+        "source_type",
+        "summary",
+        "title",
+        "trust_tier",
+        "url"
+      ],
+      "ontology_record_count": 0,
+      "event_model_record_count": 0,
+      "distinct_event_model_ids": [],
+      "event_model_counts": {},
+      "source_role_record_count": 0,
+      "distinct_source_role_ids": [],
+      "source_role_counts": {},
+      "ontology_adoption_status": "runtime_only",
+      "ontology_version": "0.1.0"
+    },
+    {
+      "repo": "WineRadar",
+      "category": "wine",
+      "raw_date": "2026-05-13",
+      "raw_dir_path": "WineRadar/data/raw/2026-05-13",
+      "file_path": "WineRadar/data/raw/2026-05-13/Jancis Robinson.jsonl",
+      "source_name": "Jancis Robinson",
+      "record_count": 10,
+      "file_size_bytes": 8090,
+      "sample_key_count": 17,
+      "sample_keys": [
+        "collection_tier",
+        "content",
+        "content_type",
+        "continent",
+        "country",
+        "id",
+        "info_purpose",
+        "language",
+        "producer_role",
+        "published_at",
+        "region",
+        "source_name",
+        "source_type",
+        "summary",
+        "title",
+        "trust_tier",
+        "url"
+      ],
+      "ontology_record_count": 0,
+      "event_model_record_count": 0,
+      "distinct_event_model_ids": [],
+      "event_model_counts": {},
+      "source_role_record_count": 0,
+      "distinct_source_role_ids": [],
+      "source_role_counts": {},
+      "ontology_adoption_status": "runtime_only",
+      "ontology_version": "0.1.0"
+    },
+    {
+      "repo": "WineRadar",
+      "category": "wine",
+      "raw_date": "2026-05-13",
+      "raw_dir_path": "WineRadar/data/raw/2026-05-13",
+      "file_path": "WineRadar/data/raw/2026-05-13/Jeb Dunnuck.jsonl",
+      "source_name": "Jeb Dunnuck",
+      "record_count": 10,
+      "file_size_bytes": 24022,
+      "sample_key_count": 17,
+      "sample_keys": [
+        "collection_tier",
+        "content",
+        "content_type",
+        "continent",
+        "country",
+        "id",
+        "info_purpose",
+        "language",
+        "producer_role",
+        "published_at",
+        "region",
+        "source_name",
+        "source_type",
+        "summary",
+        "title",
+        "trust_tier",
+        "url"
+      ],
+      "ontology_record_count": 0,
+      "event_model_record_count": 0,
+      "distinct_event_model_ids": [],
+      "event_model_counts": {},
+      "source_role_record_count": 0,
+      "distinct_source_role_ids": [],
+      "source_role_counts": {},
+      "ontology_adoption_status": "runtime_only",
+      "ontology_version": "0.1.0"
+    },
+    {
+      "repo": "WineRadar",
+      "category": "wine",
+      "raw_date": "2026-05-13",
+      "raw_dir_path": "WineRadar/data/raw/2026-05-13",
+      "file_path": "WineRadar/data/raw/2026-05-13/Korean Wine Consumer Association.jsonl",
+      "source_name": "Korean Wine Consumer Association",
+      "record_count": 10,
+      "file_size_bytes": 12784,
+      "sample_key_count": 17,
+      "sample_keys": [
+        "collection_tier",
+        "content",
+        "content_type",
+        "continent",
+        "country",
+        "id",
+        "info_purpose",
+        "language",
+        "producer_role",
+        "published_at",
+        "region",
+        "source_name",
+        "source_type",
+        "summary",
+        "title",
+        "trust_tier",
+        "url"
+      ],
+      "ontology_record_count": 0,
+      "event_model_record_count": 0,
+      "distinct_event_model_ids": [],
+      "event_model_counts": {},
+      "source_role_record_count": 0,
+      "distinct_source_role_ids": [],
+      "source_role_counts": {},
+      "ontology_adoption_status": "runtime_only",
+      "ontology_version": "0.1.0"
+    },
+    {
+      "repo": "WineRadar",
+      "category": "wine",
+      "raw_date": "2026-05-13",
+      "raw_dir_path": "WineRadar/data/raw/2026-05-13",
+      "file_path": "WineRadar/data/raw/2026-05-13/Opening a Bottle.jsonl",
+      "source_name": "Opening a Bottle",
+      "record_count": 10,
+      "file_size_bytes": 273777,
+      "sample_key_count": 17,
+      "sample_keys": [
+        "collection_tier",
+        "content",
+        "content_type",
+        "continent",
+        "country",
+        "id",
+        "info_purpose",
+        "language",
+        "producer_role",
+        "published_at",
+        "region",
+        "source_name",
+        "source_type",
+        "summary",
+        "title",
+        "trust_tier",
+        "url"
+      ],
+      "ontology_record_count": 0,
+      "event_model_record_count": 0,
+      "distinct_event_model_ids": [],
+      "event_model_counts": {},
+      "source_role_record_count": 0,
+      "distinct_source_role_ids": [],
+      "source_role_counts": {},
+      "ontology_adoption_status": "runtime_only",
+      "ontology_version": "0.1.0"
+    },
+    {
+      "repo": "WineRadar",
+      "category": "wine",
+      "raw_date": "2026-05-13",
+      "raw_dir_path": "WineRadar/data/raw/2026-05-13",
+      "file_path": "WineRadar/data/raw/2026-05-13/Palate Press.jsonl",
+      "source_name": "Palate Press",
+      "record_count": 8,
+      "file_size_bytes": 70372,
+      "sample_key_count": 17,
+      "sample_keys": [
+        "collection_tier",
+        "content",
+        "content_type",
+        "continent",
+        "country",
+        "id",
+        "info_purpose",
+        "language",
+        "producer_role",
+        "published_at",
+        "region",
+        "source_name",
+        "source_type",
+        "summary",
+        "title",
+        "trust_tier",
+        "url"
+      ],
+      "ontology_record_count": 0,
+      "event_model_record_count": 0,
+      "distinct_event_model_ids": [],
+      "event_model_counts": {},
+      "source_role_record_count": 0,
+      "distinct_source_role_ids": [],
+      "source_role_counts": {},
+      "ontology_adoption_status": "runtime_only",
+      "ontology_version": "0.1.0"
+    },
+    {
+      "repo": "WineRadar",
+      "category": "wine",
+      "raw_date": "2026-05-13",
+      "raw_dir_path": "WineRadar/data/raw/2026-05-13",
+      "file_path": "WineRadar/data/raw/2026-05-13/Punch.jsonl",
+      "source_name": "Punch",
+      "record_count": 10,
+      "file_size_bytes": 30543,
+      "sample_key_count": 17,
+      "sample_keys": [
+        "collection_tier",
+        "content",
+        "content_type",
+        "continent",
+        "country",
+        "id",
+        "info_purpose",
+        "language",
+        "producer_role",
+        "published_at",
+        "region",
+        "source_name",
+        "source_type",
+        "summary",
+        "title",
+        "trust_tier",
+        "url"
+      ],
+      "ontology_record_count": 0,
+      "event_model_record_count": 0,
+      "distinct_event_model_ids": [],
+      "event_model_counts": {},
+      "source_role_record_count": 0,
+      "distinct_source_role_ids": [],
+      "source_role_counts": {},
+      "ontology_adoption_status": "runtime_only",
+      "ontology_version": "0.1.0"
+    },
+    {
+      "repo": "WineRadar",
+      "category": "wine",
+      "raw_date": "2026-05-13",
+      "raw_dir_path": "WineRadar/data/raw/2026-05-13",
+      "file_path": "WineRadar/data/raw/2026-05-13/Rioja Wine Official.jsonl",
+      "source_name": "Rioja Wine Official",
+      "record_count": 10,
+      "file_size_bytes": 95676,
+      "sample_key_count": 17,
+      "sample_keys": [
+        "collection_tier",
+        "content",
+        "content_type",
+        "continent",
+        "country",
+        "id",
+        "info_purpose",
+        "language",
+        "producer_role",
+        "published_at",
+        "region",
+        "source_name",
+        "source_type",
+        "summary",
+        "title",
+        "trust_tier",
+        "url"
+      ],
+      "ontology_record_count": 0,
+      "event_model_record_count": 0,
+      "distinct_event_model_ids": [],
+      "event_model_counts": {},
+      "source_role_record_count": 0,
+      "distinct_source_role_ids": [],
+      "source_role_counts": {},
+      "ontology_adoption_status": "runtime_only",
+      "ontology_version": "0.1.0"
+    },
+    {
+      "repo": "WineRadar",
+      "category": "wine",
+      "raw_date": "2026-05-13",
+      "raw_dir_path": "WineRadar/data/raw/2026-05-13",
+      "file_path": "WineRadar/data/raw/2026-05-13/Shinsegae L&B.jsonl",
+      "source_name": "Shinsegae L&B",
+      "record_count": 10,
+      "file_size_bytes": 7050,
+      "sample_key_count": 17,
+      "sample_keys": [
+        "collection_tier",
+        "content",
+        "content_type",
+        "continent",
+        "country",
+        "id",
+        "info_purpose",
+        "language",
+        "producer_role",
+        "published_at",
+        "region",
+        "source_name",
+        "source_type",
+        "summary",
+        "title",
+        "trust_tier",
+        "url"
+      ],
+      "ontology_record_count": 0,
+      "event_model_record_count": 0,
+      "distinct_event_model_ids": [],
+      "event_model_counts": {},
+      "source_role_record_count": 0,
+      "distinct_source_role_ids": [],
+      "source_role_counts": {},
+      "ontology_adoption_status": "runtime_only",
+      "ontology_version": "0.1.0"
+    },
+    {
+      "repo": "WineRadar",
+      "category": "wine",
+      "raw_date": "2026-05-13",
+      "raw_dir_path": "WineRadar/data/raw/2026-05-13",
+      "file_path": "WineRadar/data/raw/2026-05-13/Sonoma Magazine.jsonl",
+      "source_name": "Sonoma Magazine",
+      "record_count": 10,
+      "file_size_bytes": 114870,
+      "sample_key_count": 17,
+      "sample_keys": [
+        "collection_tier",
+        "content",
+        "content_type",
+        "continent",
+        "country",
+        "id",
+        "info_purpose",
+        "language",
+        "producer_role",
+        "published_at",
+        "region",
+        "source_name",
+        "source_type",
+        "summary",
+        "title",
+        "trust_tier",
+        "url"
+      ],
+      "ontology_record_count": 0,
+      "event_model_record_count": 0,
+      "distinct_event_model_ids": [],
+      "event_model_counts": {},
+      "source_role_record_count": 0,
+      "distinct_source_role_ids": [],
+      "source_role_counts": {},
+      "ontology_adoption_status": "runtime_only",
+      "ontology_version": "0.1.0"
+    },
+    {
+      "repo": "WineRadar",
+      "category": "wine",
+      "raw_date": "2026-05-13",
+      "raw_dir_path": "WineRadar/data/raw/2026-05-13",
+      "file_path": "WineRadar/data/raw/2026-05-13/South Africa Wine Research Library.jsonl",
+      "source_name": "South Africa Wine Research Library",
+      "record_count": 10,
+      "file_size_bytes": 27498,
+      "sample_key_count": 17,
+      "sample_keys": [
+        "collection_tier",
+        "content",
+        "content_type",
+        "continent",
+        "country",
+        "id",
+        "info_purpose",
+        "language",
+        "producer_role",
+        "published_at",
+        "region",
+        "source_name",
+        "source_type",
+        "summary",
+        "title",
+        "trust_tier",
+        "url"
+      ],
+      "ontology_record_count": 0,
+      "event_model_record_count": 0,
+      "distinct_event_model_ids": [],
+      "event_model_counts": {},
+      "source_role_record_count": 0,
+      "distinct_source_role_ids": [],
+      "source_role_counts": {},
+      "ontology_adoption_status": "runtime_only",
+      "ontology_version": "0.1.0"
+    },
+    {
+      "repo": "WineRadar",
+      "category": "wine",
+      "raw_date": "2026-05-13",
+      "raw_dir_path": "WineRadar/data/raw/2026-05-13",
+      "file_path": "WineRadar/data/raw/2026-05-13/Terre de Vins.jsonl",
+      "source_name": "Terre de Vins",
+      "record_count": 10,
+      "file_size_bytes": 97552,
+      "sample_key_count": 17,
+      "sample_keys": [
+        "collection_tier",
+        "content",
+        "content_type",
+        "continent",
+        "country",
+        "id",
+        "info_purpose",
+        "language",
+        "producer_role",
+        "published_at",
+        "region",
+        "source_name",
+        "source_type",
+        "summary",
+        "title",
+        "trust_tier",
+        "url"
+      ],
+      "ontology_record_count": 0,
+      "event_model_record_count": 0,
+      "distinct_event_model_ids": [],
+      "event_model_counts": {},
+      "source_role_record_count": 0,
+      "distinct_source_role_ids": [],
+      "source_role_counts": {},
+      "ontology_adoption_status": "runtime_only",
+      "ontology_version": "0.1.0"
+    },
+    {
+      "repo": "WineRadar",
+      "category": "wine",
+      "raw_date": "2026-05-13",
+      "raw_dir_path": "WineRadar/data/raw/2026-05-13",
+      "file_path": "WineRadar/data/raw/2026-05-13/The Drinks Business.jsonl",
+      "source_name": "The Drinks Business",
+      "record_count": 10,
+      "file_size_bytes": 64726,
+      "sample_key_count": 17,
+      "sample_keys": [
+        "collection_tier",
+        "content",
+        "content_type",
+        "continent",
+        "country",
+        "id",
+        "info_purpose",
+        "language",
+        "producer_role",
+        "published_at",
+        "region",
+        "source_name",
+        "source_type",
+        "summary",
+        "title",
+        "trust_tier",
+        "url"
+      ],
+      "ontology_record_count": 0,
+      "event_model_record_count": 0,
+      "distinct_event_model_ids": [],
+      "event_model_counts": {},
+      "source_role_record_count": 0,
+      "distinct_source_role_ids": [],
+      "source_role_counts": {},
+      "ontology_adoption_status": "runtime_only",
+      "ontology_version": "0.1.0"
+    },
+    {
+      "repo": "WineRadar",
+      "category": "wine",
+      "raw_date": "2026-05-13",
+      "raw_dir_path": "WineRadar/data/raw/2026-05-13",
+      "file_path": "WineRadar/data/raw/2026-05-13/The Napa Wine Project.jsonl",
+      "source_name": "The Napa Wine Project",
+      "record_count": 10,
+      "file_size_bytes": 24370,
+      "sample_key_count": 17,
+      "sample_keys": [
+        "collection_tier",
+        "content",
+        "content_type",
+        "continent",
+        "country",
+        "id",
+        "info_purpose",
+        "language",
+        "producer_role",
+        "published_at",
+        "region",
+        "source_name",
+        "source_type",
+        "summary",
+        "title",
+        "trust_tier",
+        "url"
+      ],
+      "ontology_record_count": 0,
+      "event_model_record_count": 0,
+      "distinct_event_model_ids": [],
+      "event_model_counts": {},
+      "source_role_record_count": 0,
+      "distinct_source_role_ids": [],
+      "source_role_counts": {},
+      "ontology_adoption_status": "runtime_only",
+      "ontology_version": "0.1.0"
+    },
+    {
+      "repo": "WineRadar",
+      "category": "wine",
+      "raw_date": "2026-05-13",
+      "raw_dir_path": "WineRadar/data/raw/2026-05-13",
+      "file_path": "WineRadar/data/raw/2026-05-13/The Wine Cellar Insider.jsonl",
+      "source_name": "The Wine Cellar Insider",
+      "record_count": 7,
+      "file_size_bytes": 222003,
+      "sample_key_count": 17,
+      "sample_keys": [
+        "collection_tier",
+        "content",
+        "content_type",
+        "continent",
+        "country",
+        "id",
+        "info_purpose",
+        "language",
+        "producer_role",
+        "published_at",
+        "region",
+        "source_name",
+        "source_type",
+        "summary",
+        "title",
+        "trust_tier",
+        "url"
+      ],
+      "ontology_record_count": 0,
+      "event_model_record_count": 0,
+      "distinct_event_model_ids": [],
+      "event_model_counts": {},
+      "source_role_record_count": 0,
+      "distinct_source_role_ids": [],
+      "source_role_counts": {},
+      "ontology_adoption_status": "runtime_only",
+      "ontology_version": "0.1.0"
+    },
+    {
+      "repo": "WineRadar",
+      "category": "wine",
+      "raw_date": "2026-05-13",
+      "raw_dir_path": "WineRadar/data/raw/2026-05-13",
+      "file_path": "WineRadar/data/raw/2026-05-13/The Wine Economist.jsonl",
+      "source_name": "The Wine Economist",
+      "record_count": 10,
+      "file_size_bytes": 80495,
+      "sample_key_count": 17,
+      "sample_keys": [
+        "collection_tier",
+        "content",
+        "content_type",
+        "continent",
+        "country",
+        "id",
+        "info_purpose",
+        "language",
+        "producer_role",
+        "published_at",
+        "region",
+        "source_name",
+        "source_type",
+        "summary",
+        "title",
+        "trust_tier",
+        "url"
+      ],
+      "ontology_record_count": 0,
+      "event_model_record_count": 0,
+      "distinct_event_model_ids": [],
+      "event_model_counts": {},
+      "source_role_record_count": 0,
+      "distinct_source_role_ids": [],
+      "source_role_counts": {},
+      "ontology_adoption_status": "runtime_only",
+      "ontology_version": "0.1.0"
+    },
+    {
+      "repo": "WineRadar",
+      "category": "wine",
+      "raw_date": "2026-05-13",
+      "raw_dir_path": "WineRadar/data/raw/2026-05-13",
+      "file_path": "WineRadar/data/raw/2026-05-13/Tim Atkin MW.jsonl",
+      "source_name": "Tim Atkin MW",
+      "record_count": 10,
+      "file_size_bytes": 78639,
+      "sample_key_count": 17,
+      "sample_keys": [
+        "collection_tier",
+        "content",
+        "content_type",
+        "continent",
+        "country",
+        "id",
+        "info_purpose",
+        "language",
+        "producer_role",
+        "published_at",
+        "region",
+        "source_name",
+        "source_type",
+        "summary",
+        "title",
+        "trust_tier",
+        "url"
+      ],
+      "ontology_record_count": 0,
+      "event_model_record_count": 0,
+      "distinct_event_model_ids": [],
+      "event_model_counts": {},
+      "source_role_record_count": 0,
+      "distinct_source_role_ids": [],
+      "source_role_counts": {},
+      "ontology_adoption_status": "runtime_only",
+      "ontology_version": "0.1.0"
+    },
+    {
+      "repo": "WineRadar",
+      "category": "wine",
+      "raw_date": "2026-05-13",
+      "raw_dir_path": "WineRadar/data/raw/2026-05-13",
+      "file_path": "WineRadar/data/raw/2026-05-13/VinePair.jsonl",
+      "source_name": "VinePair",
+      "record_count": 10,
+      "file_size_bytes": 106638,
+      "sample_key_count": 17,
+      "sample_keys": [
+        "collection_tier",
+        "content",
+        "content_type",
+        "continent",
+        "country",
+        "id",
+        "info_purpose",
+        "language",
+        "producer_role",
+        "published_at",
+        "region",
+        "source_name",
+        "source_type",
+        "summary",
+        "title",
+        "trust_tier",
+        "url"
+      ],
+      "ontology_record_count": 0,
+      "event_model_record_count": 0,
+      "distinct_event_model_ids": [],
+      "event_model_counts": {},
+      "source_role_record_count": 0,
+      "distinct_source_role_ids": [],
+      "source_role_counts": {},
+      "ontology_adoption_status": "runtime_only",
+      "ontology_version": "0.1.0"
+    },
+    {
+      "repo": "WineRadar",
+      "category": "wine",
+      "raw_date": "2026-05-13",
+      "raw_dir_path": "WineRadar/data/raw/2026-05-13",
+      "file_path": "WineRadar/data/raw/2026-05-13/Vino Joy News.jsonl",
+      "source_name": "Vino Joy News",
+      "record_count": 10,
+      "file_size_bytes": 16879,
+      "sample_key_count": 17,
+      "sample_keys": [
+        "collection_tier",
+        "content",
+        "content_type",
+        "continent",
+        "country",
+        "id",
+        "info_purpose",
+        "language",
+        "producer_role",
+        "published_at",
+        "region",
+        "source_name",
+        "source_type",
+        "summary",
+        "title",
+        "trust_tier",
+        "url"
+      ],
+      "ontology_record_count": 0,
+      "event_model_record_count": 0,
+      "distinct_event_model_ids": [],
+      "event_model_counts": {},
+      "source_role_record_count": 0,
+      "distinct_source_role_ids": [],
+      "source_role_counts": {},
+      "ontology_adoption_status": "runtime_only",
+      "ontology_version": "0.1.0"
+    },
+    {
+      "repo": "WineRadar",
+      "category": "wine",
+      "raw_date": "2026-05-13",
+      "raw_dir_path": "WineRadar/data/raw/2026-05-13",
+      "file_path": "WineRadar/data/raw/2026-05-13/Vinography.jsonl",
+      "source_name": "Vinography",
+      "record_count": 10,
+      "file_size_bytes": 75555,
+      "sample_key_count": 17,
+      "sample_keys": [
+        "collection_tier",
+        "content",
+        "content_type",
+        "continent",
+        "country",
+        "id",
+        "info_purpose",
+        "language",
+        "producer_role",
+        "published_at",
+        "region",
+        "source_name",
+        "source_type",
+        "summary",
+        "title",
+        "trust_tier",
+        "url"
+      ],
+      "ontology_record_count": 0,
+      "event_model_record_count": 0,
+      "distinct_event_model_ids": [],
+      "event_model_counts": {},
+      "source_role_record_count": 0,
+      "distinct_source_role_ids": [],
+      "source_role_counts": {},
+      "ontology_adoption_status": "runtime_only",
+      "ontology_version": "0.1.0"
+    },
+    {
+      "repo": "WineRadar",
+      "category": "wine",
+      "raw_date": "2026-05-13",
+      "raw_dir_path": "WineRadar/data/raw/2026-05-13",
+      "file_path": "WineRadar/data/raw/2026-05-13/Wine Australia.jsonl",
+      "source_name": "Wine Australia",
+      "record_count": 10,
+      "file_size_bytes": 9810,
+      "sample_key_count": 17,
+      "sample_keys": [
+        "collection_tier",
+        "content",
+        "content_type",
+        "continent",
+        "country",
+        "id",
+        "info_purpose",
+        "language",
+        "producer_role",
+        "published_at",
+        "region",
+        "source_name",
+        "source_type",
+        "summary",
+        "title",
+        "trust_tier",
+        "url"
+      ],
+      "ontology_record_count": 0,
+      "event_model_record_count": 0,
+      "distinct_event_model_ids": [],
+      "event_model_counts": {},
+      "source_role_record_count": 0,
+      "distinct_source_role_ids": [],
+      "source_role_counts": {},
+      "ontology_adoption_status": "runtime_only",
+      "ontology_version": "0.1.0"
+    },
+    {
+      "repo": "WineRadar",
+      "category": "wine",
+      "raw_date": "2026-05-13",
+      "raw_dir_path": "WineRadar/data/raw/2026-05-13",
+      "file_path": "WineRadar/data/raw/2026-05-13/Wine Country.jsonl",
+      "source_name": "Wine Country",
+      "record_count": 10,
+      "file_size_bytes": 299299,
+      "sample_key_count": 17,
+      "sample_keys": [
+        "collection_tier",
+        "content",
+        "content_type",
+        "continent",
+        "country",
+        "id",
+        "info_purpose",
+        "language",
+        "producer_role",
+        "published_at",
+        "region",
+        "source_name",
+        "source_type",
+        "summary",
+        "title",
+        "trust_tier",
+        "url"
+      ],
+      "ontology_record_count": 0,
+      "event_model_record_count": 0,
+      "distinct_event_model_ids": [],
+      "event_model_counts": {},
+      "source_role_record_count": 0,
+      "distinct_source_role_ids": [],
+      "source_role_counts": {},
+      "ontology_adoption_status": "runtime_only",
+      "ontology_version": "0.1.0"
+    },
+    {
+      "repo": "WineRadar",
+      "category": "wine",
+      "raw_date": "2026-05-13",
+      "raw_dir_path": "WineRadar/data/raw/2026-05-13",
+      "file_path": "WineRadar/data/raw/2026-05-13/Wine Dharma.jsonl",
+      "source_name": "Wine Dharma",
+      "record_count": 10,
+      "file_size_bytes": 9070,
+      "sample_key_count": 17,
+      "sample_keys": [
+        "collection_tier",
+        "content",
+        "content_type",
+        "continent",
+        "country",
+        "id",
+        "info_purpose",
+        "language",
+        "producer_role",
+        "published_at",
+        "region",
+        "source_name",
+        "source_type",
+        "summary",
+        "title",
+        "trust_tier",
+        "url"
+      ],
+      "ontology_record_count": 0,
+      "event_model_record_count": 0,
+      "distinct_event_model_ids": [],
+      "event_model_counts": {},
+      "source_role_record_count": 0,
+      "distinct_source_role_ids": [],
+      "source_role_counts": {},
+      "ontology_adoption_status": "runtime_only",
+      "ontology_version": "0.1.0"
+    },
+    {
+      "repo": "WineRadar",
+      "category": "wine",
+      "raw_date": "2026-05-13",
+      "raw_dir_path": "WineRadar/data/raw/2026-05-13",
+      "file_path": "WineRadar/data/raw/2026-05-13/Wine Enthusiast.jsonl",
+      "source_name": "Wine Enthusiast",
+      "record_count": 10,
+      "file_size_bytes": 208828,
+      "sample_key_count": 17,
+      "sample_keys": [
+        "collection_tier",
+        "content",
+        "content_type",
+        "continent",
+        "country",
+        "id",
+        "info_purpose",
+        "language",
+        "producer_role",
+        "published_at",
+        "region",
+        "source_name",
+        "source_type",
+        "summary",
+        "title",
+        "trust_tier",
+        "url"
+      ],
+      "ontology_record_count": 0,
+      "event_model_record_count": 0,
+      "distinct_event_model_ids": [],
+      "event_model_counts": {},
+      "source_role_record_count": 0,
+      "distinct_source_role_ids": [],
+      "source_role_counts": {},
+      "ontology_adoption_status": "runtime_only",
+      "ontology_version": "0.1.0"
+    },
+    {
+      "repo": "WineRadar",
+      "category": "wine",
+      "raw_date": "2026-05-13",
+      "raw_dir_path": "WineRadar/data/raw/2026-05-13",
+      "file_path": "WineRadar/data/raw/2026-05-13/Wine Industry Advisor.jsonl",
+      "source_name": "Wine Industry Advisor",
+      "record_count": 10,
+      "file_size_bytes": 20778,
+      "sample_key_count": 17,
+      "sample_keys": [
+        "collection_tier",
+        "content",
+        "content_type",
+        "continent",
+        "country",
+        "id",
+        "info_purpose",
+        "language",
+        "producer_role",
+        "published_at",
+        "region",
+        "source_name",
+        "source_type",
+        "summary",
+        "title",
+        "trust_tier",
+        "url"
+      ],
+      "ontology_record_count": 0,
+      "event_model_record_count": 0,
+      "distinct_event_model_ids": [],
+      "event_model_counts": {},
+      "source_role_record_count": 0,
+      "distinct_source_role_ids": [],
+      "source_role_counts": {},
+      "ontology_adoption_status": "runtime_only",
+      "ontology_version": "0.1.0"
+    },
+    {
+      "repo": "WineRadar",
+      "category": "wine",
+      "raw_date": "2026-05-13",
+      "raw_dir_path": "WineRadar/data/raw/2026-05-13",
+      "file_path": "WineRadar/data/raw/2026-05-13/Wine Institute.jsonl",
+      "source_name": "Wine Institute",
+      "record_count": 10,
+      "file_size_bytes": 8528,
+      "sample_key_count": 17,
+      "sample_keys": [
+        "collection_tier",
+        "content",
+        "content_type",
+        "continent",
+        "country",
+        "id",
+        "info_purpose",
+        "language",
+        "producer_role",
+        "published_at",
+        "region",
+        "source_name",
+        "source_type",
+        "summary",
+        "title",
+        "trust_tier",
+        "url"
+      ],
+      "ontology_record_count": 0,
+      "event_model_record_count": 0,
+      "distinct_event_model_ids": [],
+      "event_model_counts": {},
+      "source_role_record_count": 0,
+      "distinct_source_role_ids": [],
+      "source_role_counts": {},
+      "ontology_adoption_status": "runtime_only",
+      "ontology_version": "0.1.0"
+    },
+    {
+      "repo": "WineRadar",
+      "category": "wine",
+      "raw_date": "2026-05-13",
+      "raw_dir_path": "WineRadar/data/raw/2026-05-13",
+      "file_path": "WineRadar/data/raw/2026-05-13/Wine Magazine South Africa.jsonl",
+      "source_name": "Wine Magazine South Africa",
+      "record_count": 10,
+      "file_size_bytes": 52840,
+      "sample_key_count": 17,
+      "sample_keys": [
+        "collection_tier",
+        "content",
+        "content_type",
+        "continent",
+        "country",
+        "id",
+        "info_purpose",
+        "language",
+        "producer_role",
+        "published_at",
+        "region",
+        "source_name",
+        "source_type",
+        "summary",
+        "title",
+        "trust_tier",
+        "url"
+      ],
+      "ontology_record_count": 0,
+      "event_model_record_count": 0,
+      "distinct_event_model_ids": [],
+      "event_model_counts": {},
+      "source_role_record_count": 0,
+      "distinct_source_role_ids": [],
+      "source_role_counts": {},
+      "ontology_adoption_status": "runtime_only",
+      "ontology_version": "0.1.0"
+    },
+    {
+      "repo": "WineRadar",
+      "category": "wine",
+      "raw_date": "2026-05-13",
+      "raw_dir_path": "WineRadar/data/raw/2026-05-13",
+      "file_path": "WineRadar/data/raw/2026-05-13/Wine Review Korea RSS.jsonl",
+      "source_name": "Wine Review Korea RSS",
+      "record_count": 10,
+      "file_size_bytes": 151721,
+      "sample_key_count": 17,
+      "sample_keys": [
+        "collection_tier",
+        "content",
+        "content_type",
+        "continent",
+        "country",
+        "id",
+        "info_purpose",
+        "language",
+        "producer_role",
+        "published_at",
+        "region",
+        "source_name",
+        "source_type",
+        "summary",
+        "title",
+        "trust_tier",
+        "url"
+      ],
+      "ontology_record_count": 0,
+      "event_model_record_count": 0,
+      "distinct_event_model_ids": [],
+      "event_model_counts": {},
+      "source_role_record_count": 0,
+      "distinct_source_role_ids": [],
+      "source_role_counts": {},
+      "ontology_adoption_status": "runtime_only",
+      "ontology_version": "0.1.0"
+    },
+    {
+      "repo": "WineRadar",
+      "category": "wine",
+      "raw_date": "2026-05-13",
+      "raw_dir_path": "WineRadar/data/raw/2026-05-13",
+      "file_path": "WineRadar/data/raw/2026-05-13/Wine Review Online.jsonl",
+      "source_name": "Wine Review Online",
+      "record_count": 10,
+      "file_size_bytes": 18132,
+      "sample_key_count": 17,
+      "sample_keys": [
+        "collection_tier",
+        "content",
+        "content_type",
+        "continent",
+        "country",
+        "id",
+        "info_purpose",
+        "language",
+        "producer_role",
+        "published_at",
+        "region",
+        "source_name",
+        "source_type",
+        "summary",
+        "title",
+        "trust_tier",
+        "url"
+      ],
+      "ontology_record_count": 0,
+      "event_model_record_count": 0,
+      "distinct_event_model_ids": [],
+      "event_model_counts": {},
+      "source_role_record_count": 0,
+      "distinct_source_role_ids": [],
+      "source_role_counts": {},
+      "ontology_adoption_status": "runtime_only",
+      "ontology_version": "0.1.0"
+    },
+    {
+      "repo": "WineRadar",
+      "category": "wine",
+      "raw_date": "2026-05-13",
+      "raw_dir_path": "WineRadar/data/raw/2026-05-13",
+      "file_path": "WineRadar/data/raw/2026-05-13/Wine21.jsonl",
+      "source_name": "Wine21",
+      "record_count": 10,
+      "file_size_bytes": 7250,
+      "sample_key_count": 17,
+      "sample_keys": [
+        "collection_tier",
+        "content",
+        "content_type",
+        "continent",
+        "country",
+        "id",
+        "info_purpose",
+        "language",
+        "producer_role",
+        "published_at",
+        "region",
+        "source_name",
+        "source_type",
+        "summary",
+        "title",
+        "trust_tier",
+        "url"
+      ],
+      "ontology_record_count": 0,
+      "event_model_record_count": 0,
+      "distinct_event_model_ids": [],
+      "event_model_counts": {},
+      "source_role_record_count": 0,
+      "distinct_source_role_ids": [],
+      "source_role_counts": {},
+      "ontology_adoption_status": "runtime_only",
+      "ontology_version": "0.1.0"
+    },
+    {
+      "repo": "WineRadar",
+      "category": "wine",
+      "raw_date": "2026-05-13",
+      "raw_dir_path": "WineRadar/data/raw/2026-05-13",
+      "file_path": "WineRadar/data/raw/2026-05-13/WineAmerica.jsonl",
+      "source_name": "WineAmerica",
+      "record_count": 10,
+      "file_size_bytes": 34711,
+      "sample_key_count": 17,
+      "sample_keys": [
+        "collection_tier",
+        "content",
+        "content_type",
+        "continent",
+        "country",
+        "id",
+        "info_purpose",
+        "language",
+        "producer_role",
+        "published_at",
+        "region",
+        "source_name",
+        "source_type",
+        "summary",
+        "title",
+        "trust_tier",
+        "url"
+      ],
+      "ontology_record_count": 0,
+      "event_model_record_count": 0,
+      "distinct_event_model_ids": [],
+      "event_model_counts": {},
+      "source_role_record_count": 0,
+      "distinct_source_role_ids": [],
+      "source_role_counts": {},
+      "ontology_adoption_status": "runtime_only",
+      "ontology_version": "0.1.0"
+    },
+    {
+      "repo": "WineRadar",
+      "category": "wine",
+      "raw_date": "2026-05-13",
+      "raw_dir_path": "WineRadar/data/raw/2026-05-13",
+      "file_path": "WineRadar/data/raw/2026-05-13/Wines With Attitude.jsonl",
+      "source_name": "Wines With Attitude",
+      "record_count": 10,
+      "file_size_bytes": 382518,
+      "sample_key_count": 17,
+      "sample_keys": [
+        "collection_tier",
+        "content",
+        "content_type",
+        "continent",
+        "country",
+        "id",
+        "info_purpose",
+        "language",
+        "producer_role",
+        "published_at",
+        "region",
+        "source_name",
+        "source_type",
+        "summary",
+        "title",
+        "trust_tier",
+        "url"
+      ],
+      "ontology_record_count": 0,
+      "event_model_record_count": 0,
+      "distinct_event_model_ids": [],
+      "event_model_counts": {},
+      "source_role_record_count": 0,
+      "distinct_source_role_ids": [],
+      "source_role_counts": {},
+      "ontology_adoption_status": "runtime_only",
+      "ontology_version": "0.1.0"
+    },
+    {
+      "repo": "WineRadar",
+      "category": "wine",
+      "raw_date": "2026-05-13",
+      "raw_dir_path": "WineRadar/data/raw/2026-05-13",
+      "file_path": "WineRadar/data/raw/2026-05-13/Winetitles Australia.jsonl",
+      "source_name": "Winetitles Australia",
+      "record_count": 10,
+      "file_size_bytes": 49474,
+      "sample_key_count": 17,
+      "sample_keys": [
+        "collection_tier",
+        "content",
+        "content_type",
+        "continent",
+        "country",
+        "id",
+        "info_purpose",
+        "language",
+        "producer_role",
+        "published_at",
+        "region",
+        "source_name",
+        "source_type",
+        "summary",
+        "title",
+        "trust_tier",
+        "url"
+      ],
+      "ontology_record_count": 0,
+      "event_model_record_count": 0,
+      "distinct_event_model_ids": [],
+      "event_model_counts": {},
+      "source_role_record_count": 0,
+      "distinct_source_role_ids": [],
+      "source_role_counts": {},
+      "ontology_adoption_status": "runtime_only",
+      "ontology_version": "0.1.0"
+    },
+    {
+      "repo": "WineRadar",
+      "category": "wine",
+      "raw_date": "2026-05-13",
+      "raw_dir_path": "WineRadar/data/raw/2026-05-13",
+      "file_path": "WineRadar/data/raw/2026-05-13/Winetraveler.jsonl",
+      "source_name": "Winetraveler",
+      "record_count": 10,
+      "file_size_bytes": 17474,
+      "sample_key_count": 17,
+      "sample_keys": [
+        "collection_tier",
+        "content",
+        "content_type",
+        "continent",
+        "country",
+        "id",
+        "info_purpose",
+        "language",
+        "producer_role",
+        "published_at",
+        "region",
+        "source_name",
+        "source_type",
+        "summary",
+        "title",
+        "trust_tier",
+        "url"
+      ],
+      "ontology_record_count": 0,
+      "event_model_record_count": 0,
+      "distinct_event_model_ids": [],
+      "event_model_counts": {},
+      "source_role_record_count": 0,
+      "distinct_source_role_ids": [],
+      "source_role_counts": {},
+      "ontology_adoption_status": "runtime_only",
       "ontology_version": "0.1.0"
     }
   ],
@@ -15572,7 +18330,7 @@
       "source_role_record_count": 0,
       "distinct_source_role_ids": [],
       "source_role_counts": {},
-      "ontology_adoption_status": "summary_emitted",
+      "ontology_adoption_status": "runtime_only",
       "ontology_version": "0.1.0"
     },
     {
@@ -15602,7 +18360,7 @@
         "community_signal": 40,
         "context_only": 49
       },
-      "ontology_adoption_status": "summary_emitted",
+      "ontology_adoption_status": "runtime_only",
       "ontology_version": "0.1.0"
     },
     {
@@ -15622,7 +18380,7 @@
       "source_role_record_count": 0,
       "distinct_source_role_ids": [],
       "source_role_counts": {},
-      "ontology_adoption_status": "summary_emitted",
+      "ontology_adoption_status": "runtime_only",
       "ontology_version": "0.1.0"
     },
     {
@@ -15724,7 +18482,7 @@
       "source_role_counts": {
         "community_signal": 4
       },
-      "ontology_adoption_status": "runtime_fallback",
+      "ontology_adoption_status": "summary_emitted",
       "ontology_version": "0.1.0"
     },
     {
@@ -15752,7 +18510,7 @@
       "source_role_counts": {
         "community_signal": 2
       },
-      "ontology_adoption_status": "runtime_fallback",
+      "ontology_adoption_status": "summary_emitted",
       "ontology_version": "0.1.0"
     },
     {
@@ -15844,7 +18602,7 @@
       "source_role_record_count": 0,
       "distinct_source_role_ids": [],
       "source_role_counts": {},
-      "ontology_adoption_status": "summary_emitted",
+      "ontology_adoption_status": "runtime_only",
       "ontology_version": "0.1.0"
     },
     {
@@ -15853,7 +18611,7 @@
       "db_path": "EventRadar/data/radar_data.duckdb",
       "db_name": "radar_data.duckdb",
       "table_name": "_migrations",
-      "row_count": 4,
+      "row_count": 3,
       "column_count": 2,
       "is_signal_table": false,
       "ontology_column_present": false,
@@ -15864,7 +18622,7 @@
       "source_role_record_count": 0,
       "distinct_source_role_ids": [],
       "source_role_counts": {},
-      "ontology_adoption_status": "summary_emitted",
+      "ontology_adoption_status": "runtime_only",
       "ontology_version": "0.1.0"
     },
     {
@@ -15873,26 +18631,26 @@
       "db_path": "EventRadar/data/radar_data.duckdb",
       "db_name": "radar_data.duckdb",
       "table_name": "articles",
-      "row_count": 2861,
-      "column_count": 15,
+      "row_count": 3032,
+      "column_count": 14,
       "is_signal_table": true,
       "ontology_column_present": true,
-      "ontology_row_count": 356,
+      "ontology_row_count": 525,
       "event_model_record_count": 0,
       "distinct_event_model_ids": [],
       "event_model_counts": {},
-      "source_role_record_count": 62,
+      "source_role_record_count": 36,
       "distinct_source_role_ids": [
         "context_only",
         "operational_evidence",
         "primary_evidence"
       ],
       "source_role_counts": {
-        "context_only": 9,
-        "operational_evidence": 52,
+        "context_only": 8,
+        "operational_evidence": 27,
         "primary_evidence": 1
       },
-      "ontology_adoption_status": "summary_emitted",
+      "ontology_adoption_status": "runtime_only",
       "ontology_version": "0.1.0"
     },
     {
@@ -15912,7 +18670,7 @@
       "source_role_record_count": 0,
       "distinct_source_role_ids": [],
       "source_role_counts": {},
-      "ontology_adoption_status": "summary_emitted",
+      "ontology_adoption_status": "runtime_only",
       "ontology_version": "0.1.0"
     },
     {
@@ -15929,10 +18687,14 @@
       "event_model_record_count": 0,
       "distinct_event_model_ids": [],
       "event_model_counts": {},
-      "source_role_record_count": 0,
-      "distinct_source_role_ids": [],
-      "source_role_counts": {},
-      "ontology_adoption_status": "runtime_fallback",
+      "source_role_record_count": 1,
+      "distinct_source_role_ids": [
+        "community_signal"
+      ],
+      "source_role_counts": {
+        "community_signal": 1
+      },
+      "ontology_adoption_status": "summary_emitted",
       "ontology_version": "0.1.0"
     },
     {
@@ -16021,7 +18783,7 @@
       "db_path": "GameRadar/data/radar_data.duckdb",
       "db_name": "radar_data.duckdb",
       "table_name": "_migrations",
-      "row_count": 4,
+      "row_count": 3,
       "column_count": 2,
       "is_signal_table": false,
       "ontology_column_present": false,
@@ -16032,7 +18794,7 @@
       "source_role_record_count": 0,
       "distinct_source_role_ids": [],
       "source_role_counts": {},
-      "ontology_adoption_status": "summary_emitted",
+      "ontology_adoption_status": "runtime_only",
       "ontology_version": "0.1.0"
     },
     {
@@ -16041,30 +18803,30 @@
       "db_path": "GameRadar/data/radar_data.duckdb",
       "db_name": "radar_data.duckdb",
       "table_name": "articles",
-      "row_count": 7064,
-      "column_count": 15,
+      "row_count": 6743,
+      "column_count": 14,
       "is_signal_table": true,
       "ontology_column_present": true,
-      "ontology_row_count": 7064,
-      "event_model_record_count": 6713,
+      "ontology_row_count": 6743,
+      "event_model_record_count": 5947,
       "distinct_event_model_ids": [
         "game.editorial_coverage"
       ],
       "event_model_counts": {
-        "game.editorial_coverage": 6713
+        "game.editorial_coverage": 5947
       },
-      "source_role_record_count": 712,
+      "source_role_record_count": 637,
       "distinct_source_role_ids": [
         "context_only",
         "operational_evidence",
         "primary_evidence"
       ],
       "source_role_counts": {
-        "context_only": 409,
-        "primary_evidence": 187,
-        "operational_evidence": 116
+        "context_only": 384,
+        "primary_evidence": 167,
+        "operational_evidence": 86
       },
-      "ontology_adoption_status": "summary_emitted",
+      "ontology_adoption_status": "runtime_only",
       "ontology_version": "0.1.0"
     },
     {
@@ -16084,7 +18846,7 @@
       "source_role_record_count": 0,
       "distinct_source_role_ids": [],
       "source_role_counts": {},
-      "ontology_adoption_status": "summary_emitted",
+      "ontology_adoption_status": "runtime_only",
       "ontology_version": "0.1.0"
     },
     {
@@ -16229,27 +18991,27 @@
       "db_path": "HomeRadar/data/homeradar.duckdb",
       "db_name": "homeradar.duckdb",
       "table_name": "articles",
-      "row_count": 886,
+      "row_count": 929,
       "column_count": 10,
       "is_signal_table": true,
       "ontology_column_present": true,
-      "ontology_row_count": 886,
-      "event_model_record_count": 844,
+      "ontology_row_count": 929,
+      "event_model_record_count": 887,
       "distinct_event_model_ids": [
         "market_context",
         "policy_context"
       ],
       "event_model_counts": {
-        "market_context": 373,
+        "market_context": 416,
         "policy_context": 471
       },
-      "source_role_record_count": 844,
+      "source_role_record_count": 887,
       "distinct_source_role_ids": [
         "market_corroboration",
         "official_policy_corroboration"
       ],
       "source_role_counts": {
-        "market_corroboration": 373,
+        "market_corroboration": 416,
         "official_policy_corroboration": 471
       },
       "ontology_adoption_status": "summary_emitted",
@@ -16261,7 +19023,7 @@
       "db_path": "HomeRadar/data/homeradar.duckdb",
       "db_name": "homeradar.duckdb",
       "table_name": "url_entities",
-      "row_count": 1816,
+      "row_count": 1921,
       "column_count": 6,
       "is_signal_table": true,
       "ontology_column_present": false,
@@ -16281,7 +19043,7 @@
       "db_path": "HomeRadar/data/homeradar.duckdb",
       "db_name": "homeradar.duckdb",
       "table_name": "urls",
-      "row_count": 844,
+      "row_count": 887,
       "column_count": 20,
       "is_signal_table": true,
       "ontology_column_present": false,
@@ -16301,7 +19063,7 @@
       "db_path": "HomeRadar/data/radar_data.duckdb",
       "db_name": "radar_data.duckdb",
       "table_name": "_migrations",
-      "row_count": 3,
+      "row_count": 4,
       "column_count": 2,
       "is_signal_table": false,
       "ontology_column_present": false,
@@ -16430,8 +19192,8 @@
         "mcp.tool_result"
       ],
       "event_model_counts": {
-        "mcp.directory_entry": 2,
-        "mcp.tool_result": 1
+        "mcp.tool_result": 1,
+        "mcp.directory_entry": 2
       },
       "source_role_record_count": 3,
       "distinct_source_role_ids": [
@@ -16439,10 +19201,10 @@
         "operational_evidence"
       ],
       "source_role_counts": {
-        "community_signal": 2,
-        "operational_evidence": 1
+        "operational_evidence": 1,
+        "community_signal": 2
       },
-      "ontology_adoption_status": "runtime_fallback",
+      "ontology_adoption_status": "summary_emitted",
       "ontology_version": "0.1.0"
     },
     {
@@ -16470,7 +19232,7 @@
       "source_role_counts": {
         "community_signal": 5
       },
-      "ontology_adoption_status": "runtime_fallback",
+      "ontology_adoption_status": "summary_emitted",
       "ontology_version": "0.1.0"
     },
     {
@@ -16498,7 +19260,7 @@
       "source_role_counts": {
         "community_signal": 6
       },
-      "ontology_adoption_status": "runtime_fallback",
+      "ontology_adoption_status": "summary_emitted",
       "ontology_version": "0.1.0"
     },
     {
@@ -16518,7 +19280,7 @@
       "source_role_record_count": 0,
       "distinct_source_role_ids": [],
       "source_role_counts": {},
-      "ontology_adoption_status": "runtime_fallback",
+      "ontology_adoption_status": "summary_emitted",
       "ontology_version": "0.1.0"
     },
     {
@@ -16527,7 +19289,7 @@
       "db_path": "MobilityRadar/data/radar_data.duckdb",
       "db_name": "radar_data.duckdb",
       "table_name": "_migrations",
-      "row_count": 4,
+      "row_count": 3,
       "column_count": 2,
       "is_signal_table": false,
       "ontology_column_present": false,
@@ -16538,7 +19300,7 @@
       "source_role_record_count": 0,
       "distinct_source_role_ids": [],
       "source_role_counts": {},
-      "ontology_adoption_status": "runtime_fallback",
+      "ontology_adoption_status": "runtime_only",
       "ontology_version": "0.1.0"
     },
     {
@@ -16547,18 +19309,18 @@
       "db_path": "MobilityRadar/data/radar_data.duckdb",
       "db_name": "radar_data.duckdb",
       "table_name": "articles",
-      "row_count": 6445,
-      "column_count": 15,
+      "row_count": 6723,
+      "column_count": 14,
       "is_signal_table": true,
       "ontology_column_present": true,
-      "ontology_row_count": 306,
+      "ontology_row_count": 584,
       "event_model_record_count": 0,
       "distinct_event_model_ids": [],
       "event_model_counts": {},
       "source_role_record_count": 0,
       "distinct_source_role_ids": [],
       "source_role_counts": {},
-      "ontology_adoption_status": "runtime_fallback",
+      "ontology_adoption_status": "runtime_only",
       "ontology_version": "0.1.0"
     },
     {
@@ -16578,7 +19340,7 @@
       "source_role_record_count": 0,
       "distinct_source_role_ids": [],
       "source_role_counts": {},
-      "ontology_adoption_status": "runtime_fallback",
+      "ontology_adoption_status": "runtime_only",
       "ontology_version": "0.1.0"
     },
     {
@@ -16792,7 +19554,7 @@
       "source_role_record_count": 0,
       "distinct_source_role_ids": [],
       "source_role_counts": {},
-      "ontology_adoption_status": "runtime_fallback",
+      "ontology_adoption_status": "runtime_only",
       "ontology_version": "0.1.0"
     },
     {
@@ -16801,7 +19563,7 @@
       "db_path": "PaperworkRadar/data/radar_data.duckdb",
       "db_name": "radar_data.duckdb",
       "table_name": "_migrations",
-      "row_count": 4,
+      "row_count": 3,
       "column_count": 2,
       "is_signal_table": false,
       "ontology_column_present": false,
@@ -16812,7 +19574,7 @@
       "source_role_record_count": 0,
       "distinct_source_role_ids": [],
       "source_role_counts": {},
-      "ontology_adoption_status": "runtime_fallback",
+      "ontology_adoption_status": "runtime_only",
       "ontology_version": "0.1.0"
     },
     {
@@ -16821,18 +19583,18 @@
       "db_path": "PaperworkRadar/data/radar_data.duckdb",
       "db_name": "radar_data.duckdb",
       "table_name": "articles",
-      "row_count": 4515,
-      "column_count": 15,
+      "row_count": 4599,
+      "column_count": 14,
       "is_signal_table": true,
       "ontology_column_present": true,
-      "ontology_row_count": 14,
+      "ontology_row_count": 237,
       "event_model_record_count": 0,
       "distinct_event_model_ids": [],
       "event_model_counts": {},
       "source_role_record_count": 0,
       "distinct_source_role_ids": [],
       "source_role_counts": {},
-      "ontology_adoption_status": "runtime_fallback",
+      "ontology_adoption_status": "runtime_only",
       "ontology_version": "0.1.0"
     },
     {
@@ -16852,7 +19614,7 @@
       "source_role_record_count": 0,
       "distinct_source_role_ids": [],
       "source_role_counts": {},
-      "ontology_adoption_status": "runtime_fallback",
+      "ontology_adoption_status": "runtime_only",
       "ontology_version": "0.1.0"
     },
     {
@@ -16921,7 +19683,7 @@
       "db_path": "PolicyRadar/data/radar_data.duckdb",
       "db_name": "radar_data.duckdb",
       "table_name": "crawl_health",
-      "row_count": 36,
+      "row_count": 40,
       "column_count": 8,
       "is_signal_table": false,
       "ontology_column_present": false,
@@ -16952,7 +19714,7 @@
       "source_role_record_count": 0,
       "distinct_source_role_ids": [],
       "source_role_counts": {},
-      "ontology_adoption_status": "runtime_fallback",
+      "ontology_adoption_status": "runtime_only",
       "ontology_version": "0.1.0"
     },
     {
@@ -16972,7 +19734,7 @@
       "source_role_record_count": 0,
       "distinct_source_role_ids": [],
       "source_role_counts": {},
-      "ontology_adoption_status": "runtime_fallback",
+      "ontology_adoption_status": "runtime_only",
       "ontology_version": "0.1.0"
     },
     {
@@ -16992,7 +19754,7 @@
       "source_role_record_count": 0,
       "distinct_source_role_ids": [],
       "source_role_counts": {},
-      "ontology_adoption_status": "runtime_fallback",
+      "ontology_adoption_status": "runtime_only",
       "ontology_version": "0.1.0"
     },
     {
@@ -17001,7 +19763,7 @@
       "db_path": "PriceRadar/data/priceradar.duckdb",
       "db_name": "priceradar.duckdb",
       "table_name": "price_scores",
-      "row_count": 146387,
+      "row_count": 156702,
       "column_count": 10,
       "is_signal_table": true,
       "ontology_column_present": false,
@@ -17012,7 +19774,7 @@
       "source_role_record_count": 0,
       "distinct_source_role_ids": [],
       "source_role_counts": {},
-      "ontology_adoption_status": "runtime_fallback",
+      "ontology_adoption_status": "runtime_only",
       "ontology_version": "0.1.0"
     },
     {
@@ -17021,7 +19783,7 @@
       "db_path": "PriceRadar/data/priceradar.duckdb",
       "db_name": "priceradar.duckdb",
       "table_name": "price_snapshots",
-      "row_count": 14786,
+      "row_count": 15252,
       "column_count": 19,
       "is_signal_table": true,
       "ontology_column_present": false,
@@ -17032,7 +19794,7 @@
       "source_role_record_count": 0,
       "distinct_source_role_ids": [],
       "source_role_counts": {},
-      "ontology_adoption_status": "runtime_fallback",
+      "ontology_adoption_status": "runtime_only",
       "ontology_version": "0.1.0"
     },
     {
@@ -17041,7 +19803,7 @@
       "db_path": "PriceRadar/data/priceradar.duckdb",
       "db_name": "priceradar.duckdb",
       "table_name": "products",
-      "row_count": 5060,
+      "row_count": 5169,
       "column_count": 9,
       "is_signal_table": true,
       "ontology_column_present": false,
@@ -17052,7 +19814,7 @@
       "source_role_record_count": 0,
       "distinct_source_role_ids": [],
       "source_role_counts": {},
-      "ontology_adoption_status": "runtime_fallback",
+      "ontology_adoption_status": "runtime_only",
       "ontology_version": "0.1.0"
     },
     {
@@ -17072,7 +19834,7 @@
       "source_role_record_count": 0,
       "distinct_source_role_ids": [],
       "source_role_counts": {},
-      "ontology_adoption_status": "runtime_fallback",
+      "ontology_adoption_status": "runtime_only",
       "ontology_version": "0.1.0"
     },
     {
@@ -17092,7 +19854,7 @@
       "source_role_record_count": 0,
       "distinct_source_role_ids": [],
       "source_role_counts": {},
-      "ontology_adoption_status": "runtime_fallback",
+      "ontology_adoption_status": "runtime_only",
       "ontology_version": "0.1.0"
     },
     {
@@ -17198,7 +19960,7 @@
       "source_role_counts": {
         "community_signal": 7
       },
-      "ontology_adoption_status": "runtime_fallback",
+      "ontology_adoption_status": "summary_emitted",
       "ontology_version": "0.1.0"
     },
     {
@@ -17207,7 +19969,7 @@
       "db_path": "QueueRadar/data/radar_data.duckdb",
       "db_name": "radar_data.duckdb",
       "table_name": "_migrations",
-      "row_count": 4,
+      "row_count": 3,
       "column_count": 2,
       "is_signal_table": false,
       "ontology_column_present": false,
@@ -17218,7 +19980,7 @@
       "source_role_record_count": 0,
       "distinct_source_role_ids": [],
       "source_role_counts": {},
-      "ontology_adoption_status": "summary_emitted",
+      "ontology_adoption_status": "runtime_only",
       "ontology_version": "0.1.0"
     },
     {
@@ -17227,32 +19989,32 @@
       "db_path": "QueueRadar/data/radar_data.duckdb",
       "db_name": "radar_data.duckdb",
       "table_name": "articles",
-      "row_count": 2460,
-      "column_count": 15,
+      "row_count": 2595,
+      "column_count": 14,
       "is_signal_table": true,
       "ontology_column_present": true,
-      "ontology_row_count": 2460,
-      "event_model_record_count": 1895,
+      "ontology_row_count": 2595,
+      "event_model_record_count": 1873,
       "distinct_event_model_ids": [
         "queue.editorial_coverage",
         "queue.wait_time_snapshot"
       ],
       "event_model_counts": {
-        "queue.editorial_coverage": 1873,
-        "queue.wait_time_snapshot": 22
+        "queue.editorial_coverage": 1863,
+        "queue.wait_time_snapshot": 10
       },
-      "source_role_record_count": 207,
+      "source_role_record_count": 203,
       "distinct_source_role_ids": [
         "community_signal",
         "context_only",
         "operational_evidence"
       ],
       "source_role_counts": {
-        "operational_evidence": 4,
-        "context_only": 60,
-        "community_signal": 143
+        "operational_evidence": 2,
+        "context_only": 59,
+        "community_signal": 142
       },
-      "ontology_adoption_status": "summary_emitted",
+      "ontology_adoption_status": "runtime_only",
       "ontology_version": "0.1.0"
     },
     {
@@ -17272,7 +20034,7 @@
       "source_role_record_count": 0,
       "distinct_source_role_ids": [],
       "source_role_counts": {},
-      "ontology_adoption_status": "summary_emitted",
+      "ontology_adoption_status": "runtime_only",
       "ontology_version": "0.1.0"
     },
     {
@@ -17357,7 +20119,7 @@
       "db_path": "SubscriptionRadar/data/radar_data.duckdb",
       "db_name": "radar_data.duckdb",
       "table_name": "_migrations",
-      "row_count": 4,
+      "row_count": 3,
       "column_count": 2,
       "is_signal_table": false,
       "ontology_column_present": false,
@@ -17368,7 +20130,7 @@
       "source_role_record_count": 0,
       "distinct_source_role_ids": [],
       "source_role_counts": {},
-      "ontology_adoption_status": "summary_emitted",
+      "ontology_adoption_status": "runtime_only",
       "ontology_version": "0.1.0"
     },
     {
@@ -17377,26 +20139,22 @@
       "db_path": "SubscriptionRadar/data/radar_data.duckdb",
       "db_name": "radar_data.duckdb",
       "table_name": "articles",
-      "row_count": 6286,
-      "column_count": 15,
+      "row_count": 6317,
+      "column_count": 14,
       "is_signal_table": true,
       "ontology_column_present": true,
-      "ontology_row_count": 85,
+      "ontology_row_count": 117,
       "event_model_record_count": 0,
       "distinct_event_model_ids": [],
       "event_model_counts": {},
-      "source_role_record_count": 4,
+      "source_role_record_count": 1,
       "distinct_source_role_ids": [
-        "context_only",
-        "operational_evidence",
-        "primary_evidence"
+        "context_only"
       ],
       "source_role_counts": {
-        "context_only": 1,
-        "operational_evidence": 1,
-        "primary_evidence": 2
+        "context_only": 1
       },
-      "ontology_adoption_status": "summary_emitted",
+      "ontology_adoption_status": "runtime_only",
       "ontology_version": "0.1.0"
     },
     {
@@ -17416,7 +20174,7 @@
       "source_role_record_count": 0,
       "distinct_source_role_ids": [],
       "source_role_counts": {},
-      "ontology_adoption_status": "summary_emitted",
+      "ontology_adoption_status": "runtime_only",
       "ontology_version": "0.1.0"
     },
     {
@@ -17488,12 +20246,32 @@
       "ontology_version": "0.1.0"
     },
     {
+      "repo": "TrendRadar",
+      "category": "trend",
+      "db_path": "TrendRadar/data/trendradar.duckdb",
+      "db_name": "trendradar.duckdb",
+      "table_name": "trend_points",
+      "row_count": 14,
+      "column_count": 7,
+      "is_signal_table": true,
+      "ontology_column_present": false,
+      "ontology_row_count": 0,
+      "event_model_record_count": 0,
+      "distinct_event_model_ids": [],
+      "event_model_counts": {},
+      "source_role_record_count": 0,
+      "distinct_source_role_ids": [],
+      "source_role_counts": {},
+      "ontology_adoption_status": "summary_emitted",
+      "ontology_version": "0.1.0"
+    },
+    {
       "repo": "TrustRadar",
       "category": "trust",
       "db_path": "TrustRadar/data/radar_data.duckdb",
       "db_name": "radar_data.duckdb",
       "table_name": "_migrations",
-      "row_count": 4,
+      "row_count": 3,
       "column_count": 2,
       "is_signal_table": false,
       "ontology_column_present": false,
@@ -17504,7 +20282,7 @@
       "source_role_record_count": 0,
       "distinct_source_role_ids": [],
       "source_role_counts": {},
-      "ontology_adoption_status": "runtime_fallback",
+      "ontology_adoption_status": "runtime_only",
       "ontology_version": "0.1.0"
     },
     {
@@ -17524,7 +20302,7 @@
       "source_role_record_count": 0,
       "distinct_source_role_ids": [],
       "source_role_counts": {},
-      "ontology_adoption_status": "runtime_fallback",
+      "ontology_adoption_status": "runtime_only",
       "ontology_version": "0.1.0"
     },
     {
@@ -17533,7 +20311,7 @@
       "db_path": "TrustRadar/data/trustradar_data.duckdb",
       "db_name": "trustradar_data.duckdb",
       "table_name": "_migrations",
-      "row_count": 4,
+      "row_count": 3,
       "column_count": 2,
       "is_signal_table": false,
       "ontology_column_present": false,
@@ -17544,7 +20322,7 @@
       "source_role_record_count": 0,
       "distinct_source_role_ids": [],
       "source_role_counts": {},
-      "ontology_adoption_status": "runtime_fallback",
+      "ontology_adoption_status": "runtime_only",
       "ontology_version": "0.1.0"
     },
     {
@@ -17553,18 +20331,18 @@
       "db_path": "TrustRadar/data/trustradar_data.duckdb",
       "db_name": "trustradar_data.duckdb",
       "table_name": "articles",
-      "row_count": 3410,
-      "column_count": 15,
+      "row_count": 3543,
+      "column_count": 14,
       "is_signal_table": true,
       "ontology_column_present": true,
-      "ontology_row_count": 310,
+      "ontology_row_count": 443,
       "event_model_record_count": 0,
       "distinct_event_model_ids": [],
       "event_model_counts": {},
       "source_role_record_count": 0,
       "distinct_source_role_ids": [],
       "source_role_counts": {},
-      "ontology_adoption_status": "runtime_fallback",
+      "ontology_adoption_status": "runtime_only",
       "ontology_version": "0.1.0"
     },
     {
@@ -17584,7 +20362,7 @@
       "source_role_record_count": 0,
       "distinct_source_role_ids": [],
       "source_role_counts": {},
-      "ontology_adoption_status": "runtime_fallback",
+      "ontology_adoption_status": "runtime_only",
       "ontology_version": "0.1.0"
     },
     {
@@ -17632,7 +20410,7 @@
       "source_role_record_count": 0,
       "distinct_source_role_ids": [],
       "source_role_counts": {},
-      "ontology_adoption_status": "runtime_fallback",
+      "ontology_adoption_status": "runtime_only",
       "ontology_version": "0.1.0"
     },
     {
@@ -17652,7 +20430,7 @@
       "source_role_record_count": 0,
       "distinct_source_role_ids": [],
       "source_role_counts": {},
-      "ontology_adoption_status": "runtime_fallback",
+      "ontology_adoption_status": "runtime_only",
       "ontology_version": "0.1.0"
     },
     {
@@ -17661,7 +20439,7 @@
       "db_path": "WineRadar/data/wineradar.duckdb",
       "db_name": "wineradar.duckdb",
       "table_name": "kpi_daily",
-      "row_count": 1,
+      "row_count": 2,
       "column_count": 21,
       "is_signal_table": true,
       "ontology_column_present": false,
@@ -17672,7 +20450,47 @@
       "source_role_record_count": 0,
       "distinct_source_role_ids": [],
       "source_role_counts": {},
-      "ontology_adoption_status": "runtime_fallback",
+      "ontology_adoption_status": "runtime_only",
+      "ontology_version": "0.1.0"
+    },
+    {
+      "repo": "WineRadar",
+      "category": "wine",
+      "db_path": "WineRadar/data/wineradar.duckdb",
+      "db_name": "wineradar.duckdb",
+      "table_name": "url_entities",
+      "row_count": 1961,
+      "column_count": 4,
+      "is_signal_table": true,
+      "ontology_column_present": false,
+      "ontology_row_count": 0,
+      "event_model_record_count": 0,
+      "distinct_event_model_ids": [],
+      "event_model_counts": {},
+      "source_role_record_count": 0,
+      "distinct_source_role_ids": [],
+      "source_role_counts": {},
+      "ontology_adoption_status": "runtime_only",
+      "ontology_version": "0.1.0"
+    },
+    {
+      "repo": "WineRadar",
+      "category": "wine",
+      "db_path": "WineRadar/data/wineradar.duckdb",
+      "db_name": "wineradar.duckdb",
+      "table_name": "urls",
+      "row_count": 410,
+      "column_count": 22,
+      "is_signal_table": true,
+      "ontology_column_present": false,
+      "ontology_row_count": 0,
+      "event_model_record_count": 0,
+      "distinct_event_model_ids": [],
+      "event_model_counts": {},
+      "source_role_record_count": 0,
+      "distinct_source_role_ids": [],
+      "source_role_counts": {},
+      "ontology_adoption_status": "runtime_only",
       "ontology_version": "0.1.0"
     }
   ]

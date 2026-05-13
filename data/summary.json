@@ -1,15 +1,21 @@
 {
-  "generated_at": "2026-05-13T12:34:49.189865+00:00",
+  "generated_at": "2026-05-13T16:43:01.776873+00:00",
   "workspace_root": "/mnt/c/projects/ai-frendly-datahub",
   "projects_scanned": 37,
   "active_projects": 37,
   "projects_with_full_metrics": 37,
   "projects_with_partial_metrics": 0,
   "projects_missing_metrics": 0,
-  "article_total": 2334,
-  "matched_total": 2334,
+  "article_total": 2963,
+  "matched_total": 2963,
   "overall_match_rate": 100.0,
   "latest_updates": [
+    {
+      "repo": "CommerceRadar",
+      "display_name": "Commerce",
+      "last_updated": "2026-05-14",
+      "status": "active"
+    },
     {
       "repo": "ArtRadar",
       "display_name": "Art",
@@ -35,6 +41,18 @@
       "status": "active"
     },
     {
+      "repo": "CollaborationMCPRadar",
+      "display_name": "CollaborationMCP",
+      "last_updated": "2026-05-13",
+      "status": "active"
+    },
+    {
+      "repo": "CommerceMCPRadar",
+      "display_name": "CommerceMCP",
+      "last_updated": "2026-05-13",
+      "status": "active"
+    },
+    {
       "repo": "CryptoRadar",
       "display_name": "Crypto",
       "last_updated": "2026-05-13",
@@ -47,26 +65,8 @@
       "status": "active"
     },
     {
-      "repo": "FoodRadar",
-      "display_name": "Food",
-      "last_updated": "2026-05-13",
-      "status": "active"
-    },
-    {
-      "repo": "GameRadar",
-      "display_name": "Game",
-      "last_updated": "2026-05-13",
-      "status": "active"
-    },
-    {
-      "repo": "GovRadar",
-      "display_name": "Gov",
-      "last_updated": "2026-05-13",
-      "status": "active"
-    },
-    {
-      "repo": "HomeRadar",
-      "display_name": "Home",
+      "repo": "FinanceTaxMCPRadar",
+      "display_name": "FinanceTaxMCP",
       "last_updated": "2026-05-13",
       "status": "active"
     }
@@ -79,6 +79,7 @@
     "CollaborationMCPRadar: quality report has 2 disabled source(s)",
     "CommerceMCPRadar: quality report has 1 disabled source(s)",
     "CryptoRadar: quality report has 6 disabled source(s)",
+    "EventRadar: quality freshness gaps: stale=0, missing=1, unknown_event_date=0",
     "EventRadar: quality report has 8 disabled source(s)",
     "FinanceTaxMCPRadar: quality report has 2 disabled source(s)",
     "FoodRadar: quality report has 1 disabled source(s)",
@@ -87,6 +88,7 @@
     "HomeRadar: official primary HomeRadar sources blocked by missing env (molit_apt_transaction, molit_apt_rent, reb_subscription, onbid_auction; required: MOLIT_SERVICE_KEY, ONBID_API_KEY, SUBSCRIPTION_API_KEY)",
     "HomeRadar: quality report has 15 disabled source(s)",
     "JobRadar: quality report has 6 disabled source(s)",
+    "KoreanNLPMCPRadar: quality report has 1 collection error(s)",
     "LegalGovMCPRadar: quality report has 2 disabled source(s)",
     "MapAddressMCPRadar: quality report has 2 disabled source(s)",
     "MiscMCPRadar: quality report has 2 disabled source(s)",
@@ -97,6 +99,7 @@
     "QueueRadar: quality report has 16 disabled source(s)",
     "RealEstateMCPRadar: quality report has 1 disabled source(s)",
     "SearchTrendMCPRadar: quality report has 2 disabled source(s)",
+    "SubscriptionRadar: quality freshness gaps: stale=1, missing=0, unknown_event_date=0",
     "SubscriptionRadar: quality report has 14 disabled source(s)",
     "TravelMCPRadar: quality report has 2 disabled source(s)",
     "WeatherMCPRadar: quality report has 2 disabled source(s)",
