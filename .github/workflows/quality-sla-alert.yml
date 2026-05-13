@@ -1,0 +1,105 @@
+name: Quality SLA Alert
+
+on:
+  workflow_dispatch:
+  schedule:
+    - cron: "0 8 * * *"  # daily 08:00 UTC = 17:00 KST
+
+permissions:
+  contents: read
+  issues: write
+
+env:
+  FORCE_JAVASCRIPT_ACTIONS_TO_NODE24: "true"
+
+jobs:
+  check-sla:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v4
+
+      - uses: actions/setup-python@v5
+        with:
+          python-version: "3.11"
+
+      - name: Compute quality scores
+        id: scores
+        run: |
+          python3 scripts/build_data_quality_panel_dataset.py
+          python3 - <<'PY'
+          import json, os
+          with open("data/data-quality-panel.json") as f:
+              payload = json.load(f)
+          rows = payload["rows"]
+          summary = payload["summary"]
+          low = [r for r in rows if r["score"] < 70]
+          out = {
+              "avg_score": summary["avg_score"],
+              "p50_score": summary["p50_score"],
+              "low_count": len(low),
+              "low_repos": [r["repo"] for r in low],
+          }
+          os.makedirs("artifacts", exist_ok=True)
+          with open("artifacts/sla.json", "w") as f:
+              json.dump(out, f, indent=2)
+          print(json.dumps(out, indent=2))
+          PY
+
+      - name: File alert issue when SLA breached
+        if: ${{ always() }}
+        uses: actions/github-script@v7
+        with:
+          script: |
+            const fs = require('fs');
+            const sla = JSON.parse(fs.readFileSync('artifacts/sla.json', 'utf8'));
+            // Threshold: avg_score < 70 OR more than 6 repos under 70.
+            if (sla.avg_score >= 70 && sla.low_count <= 6) {
+              core.info(`SLA ok: avg=${sla.avg_score} low_count=${sla.low_count}`);
+              return;
+            }
+            const title = `[Quality SLA] avg=${sla.avg_score} low=${sla.low_count}`;
+            const body = [
+              `Daily quality panel rebuilt at ${new Date().toISOString()} found a regression:`,
+              ``,
+              `- avg_score: **${sla.avg_score}** (target ≥ 70)`,
+              `- p50_score: ${sla.p50_score}`,
+              `- repos under 70: **${sla.low_count}**`,
+              ``,
+              `Affected repos:\n${sla.low_repos.map(r => '- ' + r).join('\n')}`,
+            ].join('\n');
+            // Reuse open issue if title already exists.
+            const issues = await github.rest.issues.listForRepo({
+              owner: context.repo.owner,
+              repo: context.repo.repo,
+              labels: 'quality-sla',
+              state: 'open',
+            });
+            const existing = issues.data.find(i => i.title.startsWith('[Quality SLA]'));
+            if (existing) {
+              await github.rest.issues.createComment({
+                owner: context.repo.owner,
+                repo: context.repo.repo,
+                issue_number: existing.number,
+                body,
+              });
+              core.info(`Updated existing issue #${existing.number}`);
+            } else {
+              const created = await github.rest.issues.create({
+                owner: context.repo.owner,
+                repo: context.repo.repo,
+                title,
+                body,
+                labels: ['quality-sla'],
+              });
+              core.info(`Created issue #${created.data.number}`);
+            }
+
+      - name: Upload artifacts
+        if: ${{ always() }}
+        uses: actions/upload-artifact@v4
+        with:
+          name: quality-sla
+          path: |
+            data/data-quality-panel.json
+            artifacts/sla.json
+          retention-days: 90
