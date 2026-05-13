@@ -70,16 +70,16 @@
     ],
     "average_data_quality_score": 69.1,
     "disabled_source_classification_summary": {
-      "total_disabled_count": 227,
+      "total_disabled_count": 183,
       "bucket_totals": {
-        "awaiting_url_replacement": 66,
+        "awaiting_url_replacement": 44,
         "awaiting_secret": 21,
-        "awaiting_smoke_test": 2,
+        "awaiting_smoke_test": 1,
         "upstream_section_missing": 1,
         "awaiting_partnership_review": 0,
-        "accepted_backlog": 137
+        "accepted_backlog": 116
       },
-      "repo_count_with_disabled_sources": 35
+      "repo_count_with_disabled_sources": 30
     }
   },
   "quality_dimensions": {
@@ -169,14 +169,14 @@
       "integration_candidates": [],
       "next_step": "refund_claim_window, recall_refund_notice, complaint_resolution event model을 검증 산출물에 연결하고 seller/airline policy diff 후보는 source_backlog에서 검증 후 활성화한다.",
       "disabled_source_classification": {
-        "awaiting_url_replacement": 3,
+        "awaiting_url_replacement": 0,
         "awaiting_secret": 0,
         "awaiting_smoke_test": 0,
         "upstream_section_missing": 0,
         "awaiting_partnership_review": 0,
-        "accepted_backlog": 17
+        "accepted_backlog": 0
       },
-      "disabled_source_classification_total": 20
+      "disabled_source_classification_total": 0
     },
     {
       "repo": "PaperworkRadar",
@@ -249,14 +249,14 @@
       "integration_candidates": [],
       "next_step": "form_revision, filing_deadline, portal_service_change event model을 검증 산출물과 document hash diff 저장 경로에 연결한다.",
       "disabled_source_classification": {
-        "awaiting_url_replacement": 8,
+        "awaiting_url_replacement": 0,
         "awaiting_secret": 0,
         "awaiting_smoke_test": 0,
         "upstream_section_missing": 0,
         "awaiting_partnership_review": 0,
         "accepted_backlog": 0
       },
-      "disabled_source_classification_total": 8
+      "disabled_source_classification_total": 0
     },
     {
       "repo": "PolicyRadar",
@@ -329,14 +329,14 @@
       "integration_candidates": [],
       "next_step": "public_consultation, enforcement_action, policy_effective_date, platform_policy_change event model을 검증 산출물에 연결하고 Regulations.gov/입법예고/FTC/PIPC 후보는 source_backlog에서 검증 후 활성화한다.",
       "disabled_source_classification": {
-        "awaiting_url_replacement": 2,
+        "awaiting_url_replacement": 0,
         "awaiting_secret": 0,
-        "awaiting_smoke_test": 1,
+        "awaiting_smoke_test": 0,
         "upstream_section_missing": 0,
         "awaiting_partnership_review": 0,
-        "accepted_backlog": 2
+        "accepted_backlog": 0
       },
-      "disabled_source_classification_total": 5
+      "disabled_source_classification_total": 0
     },
     {
       "repo": "GovRadar",
@@ -656,14 +656,14 @@
       "integration_candidates": [],
       "next_step": "status page·breach notice·consumer complaint 후보를 parser·개인정보·service id mapping 검증 후 단계적으로 활성화하고, incident severity scoring에 VerificationState·공식 근거 URL·AIAssetRisk를 함께 표시한다.",
       "disabled_source_classification": {
-        "awaiting_url_replacement": 2,
+        "awaiting_url_replacement": 0,
         "awaiting_secret": 0,
         "awaiting_smoke_test": 0,
         "upstream_section_missing": 0,
         "awaiting_partnership_review": 0,
-        "accepted_backlog": 1
+        "accepted_backlog": 0
       },
-      "disabled_source_classification_total": 3
+      "disabled_source_classification_total": 0
     },
     {
       "repo": "EventRadar",
@@ -817,14 +817,14 @@
       "integration_candidates": [],
       "next_step": "EV 등록·충전 요금·대중교통 요금 source를 추가하고 coffee split 후보의 별도 repo 승격 여부를 결정한다.",
       "disabled_source_classification": {
-        "awaiting_url_replacement": 7,
+        "awaiting_url_replacement": 0,
         "awaiting_secret": 0,
         "awaiting_smoke_test": 0,
         "upstream_section_missing": 0,
         "awaiting_partnership_review": 0,
-        "accepted_backlog": 1
+        "accepted_backlog": 0
       },
-      "disabled_source_classification_total": 8
+      "disabled_source_classification_total": 0
     },
     {
       "repo": "WineRadar",
