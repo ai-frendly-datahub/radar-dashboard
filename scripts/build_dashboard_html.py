@@ -226,6 +226,7 @@ def render_data_quality_teaser(data_quality_payload: dict[str, Any] | None) -> s
         f"<span>weakest {escape(str(weakest))}</span>"
         "<a href=\"data-quality.html\">Open quality audit</a>"
         " <a href=\"data-quality-panel.html\">5-dim panel</a>"
+        " <a href=\"source-reliability.html\">Source reliability</a>"
         "</div>"
         "</section>"
     )

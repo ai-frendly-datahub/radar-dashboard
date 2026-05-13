@@ -1,0 +1,2935 @@
+{
+  "generated_at": "2026-05-13T04:14:27.793943+00:00",
+  "window_days": 30,
+  "repo_count": 16,
+  "repos": [
+    {
+      "repo": "BenefitRadar",
+      "source_count": 23,
+      "avg_score": 81.82,
+      "low_score_count": 0,
+      "sources": [
+        {
+          "source": "정책브리핑",
+          "article_count": 82,
+          "success_rate": 1.0,
+          "last_seen": "2026-05-13T03:49:20.939270+00:00",
+          "staleness_days": 0.02,
+          "score": 99.96
+        },
+        {
+          "source": "KFF Health News",
+          "article_count": 9,
+          "success_rate": 1.0,
+          "last_seen": "2026-05-13T03:49:20.939270+00:00",
+          "staleness_days": 0.02,
+          "score": 99.96
+        },
+        {
+          "source": "정책브리핑 보도자료",
+          "article_count": 84,
+          "success_rate": 1.0,
+          "last_seen": "2026-05-13T03:49:20.939270+00:00",
+          "staleness_days": 0.02,
+          "score": 99.96
+        },
+        {
+          "source": "Government Executive",
+          "article_count": 3,
+          "success_rate": 1.0,
+          "last_seen": "2026-05-13T03:49:20.939270+00:00",
+          "staleness_days": 0.02,
+          "score": 99.96
+        },
+        {
+          "source": "Federal News Network",
+          "article_count": 6,
+          "success_rate": 1.0,
+          "last_seen": "2026-05-13T03:49:20.939270+00:00",
+          "staleness_days": 0.02,
+          "score": 99.96
+        },
+        {
+          "source": "기획재정부",
+          "article_count": 17,
+          "success_rate": 1.0,
+          "last_seen": "2026-05-07T02:06:07.468602+00:00",
+          "staleness_days": 6.09,
+          "score": 86.95
+        },
+        {
+          "source": "중소벤처기업부",
+          "article_count": 39,
+          "success_rate": 1.0,
+          "last_seen": "2026-05-07T02:06:07.468602+00:00",
+          "staleness_days": 6.09,
+          "score": 86.95
+        },
+        {
+          "source": "경기도 일자리재단",
+          "article_count": 71,
+          "success_rate": 1.0,
+          "last_seen": "2026-05-07T02:06:07.468602+00:00",
+          "staleness_days": 6.09,
+          "score": 86.95
+        },
+        {
+          "source": "r/SocialSecurity",
+          "article_count": 34,
+          "success_rate": 1.0,
+          "last_seen": "2026-05-07T02:06:07.468602+00:00",
+          "staleness_days": 6.09,
+          "score": 86.95
+        },
+        {
+          "source": "보건복지부",
+          "article_count": 43,
+          "success_rate": 1.0,
+          "last_seen": "2026-05-07T02:06:07.468602+00:00",
+          "staleness_days": 6.09,
+          "score": 86.95
+        },
+        {
+          "source": "서울시 복지",
+          "article_count": 1,
+          "success_rate": 1.0,
+          "last_seen": "2026-05-07T02:06:07.468602+00:00",
+          "staleness_days": 6.09,
+          "score": 86.95
+        },
+        {
+          "source": "r/disability",
+          "article_count": 7,
+          "success_rate": 1.0,
+          "last_seen": "2026-05-07T01:29:37.454530+00:00",
+          "staleness_days": 6.11,
+          "score": 86.9
+        },
+        {
+          "source": "r/Unemployment",
+          "article_count": 12,
+          "success_rate": 1.0,
+          "last_seen": "2026-04-29T23:54:24.034342+00:00",
+          "staleness_days": 13.18,
+          "score": 71.76
+        },
+        {
+          "source": "국토교통부",
+          "article_count": 22,
+          "success_rate": 1.0,
+          "last_seen": "2026-04-29T23:54:24.034342+00:00",
+          "staleness_days": 13.18,
+          "score": 71.76
+        },
+        {
+          "source": "고용노동부",
+          "article_count": 32,
+          "success_rate": 1.0,
+          "last_seen": "2026-04-28T14:51:45.046651+00:00",
+          "staleness_days": 14.56,
+          "score": 70.0
+        },
+        {
+          "source": "r/povertyfinance",
+          "article_count": 15,
+          "success_rate": 1.0,
+          "last_seen": "2026-04-25T03:03:34.192682+00:00",
+          "staleness_days": 18.05,
+          "score": 70.0
+        },
+        {
+          "source": "여성가족부",
+          "article_count": 25,
+          "success_rate": 1.0,
+          "last_seen": "2026-04-24T13:52:40.252072+00:00",
+          "staleness_days": 18.6,
+          "score": 70.0
+        },
+        {
+          "source": "Niskanen Center",
+          "article_count": 4,
+          "success_rate": 1.0,
+          "last_seen": "2026-04-25T03:03:34.192682+00:00",
+          "staleness_days": 18.05,
+          "score": 70.0
+        },
+        {
+          "source": "r/personalfinance",
+          "article_count": 8,
+          "success_rate": 1.0,
+          "last_seen": "2026-04-24T13:52:40.252072+00:00",
+          "staleness_days": 18.6,
+          "score": 70.0
+        },
+        {
+          "source": "교육부",
+          "article_count": 17,
+          "success_rate": 1.0,
+          "last_seen": "2026-04-28T14:51:45.046651+00:00",
+          "staleness_days": 14.56,
+          "score": 70.0
+        },
+        {
+          "source": "Tax Foundation",
+          "article_count": 2,
+          "success_rate": 1.0,
+          "last_seen": "2026-04-24T13:52:40.252072+00:00",
+          "staleness_days": 18.6,
+          "score": 70.0
+        },
+        {
+          "source": "r/healthcare",
+          "article_count": 8,
+          "success_rate": 1.0,
+          "last_seen": "2026-04-28T14:51:45.046651+00:00",
+          "staleness_days": 14.56,
+          "score": 70.0
+        },
+        {
+          "source": "r/korea",
+          "article_count": 1,
+          "success_rate": 1.0,
+          "last_seen": "2026-04-24T13:52:40.252072+00:00",
+          "staleness_days": 18.6,
+          "score": 70.0
+        }
+      ]
+    },
+    {
+      "repo": "BlogRadar",
+      "source_count": 64,
+      "avg_score": 86.64,
+      "low_score_count": 0,
+      "sources": [
+        {
+          "source": "Cloudflare Blog",
+          "article_count": 25,
+          "success_rate": 1.0,
+          "last_seen": "2026-05-07T01:30:56.756701+00:00",
+          "staleness_days": 6.11,
+          "score": 86.9
+        },
+        {
+          "source": "Grafana Labs Blog",
+          "article_count": 16,
+          "success_rate": 1.0,
+          "last_seen": "2026-05-07T01:30:56.756701+00:00",
+          "staleness_days": 6.11,
+          "score": 86.9
+        },
+        {
+          "source": "InfoQ",
+          "article_count": 31,
+          "success_rate": 1.0,
+          "last_seen": "2026-05-07T01:30:56.756701+00:00",
+          "staleness_days": 6.11,
+          "score": 86.9
+        },
+        {
+          "source": "Dev.to - Python",
+          "article_count": 45,
+          "success_rate": 1.0,
+          "last_seen": "2026-05-07T01:30:56.756701+00:00",
+          "staleness_days": 6.11,
+          "score": 86.9
+        },
+        {
+          "source": "Dev.to - DevOps",
+          "article_count": 42,
+          "success_rate": 1.0,
+          "last_seen": "2026-05-07T01:30:56.756701+00:00",
+          "staleness_days": 6.11,
+          "score": 86.9
+        },
+        {
+          "source": "Dev.to - Open Source",
+          "article_count": 43,
+          "success_rate": 1.0,
+          "last_seen": "2026-05-07T01:30:56.756701+00:00",
+          "staleness_days": 6.11,
+          "score": 86.9
+        },
+        {
+          "source": "r/programming",
+          "article_count": 64,
+          "success_rate": 1.0,
+          "last_seen": "2026-05-07T01:30:56.756701+00:00",
+          "staleness_days": 6.11,
+          "score": 86.9
+        },
+        {
+          "source": "r/coding",
+          "article_count": 41,
+          "success_rate": 1.0,
+          "last_seen": "2026-05-07T01:30:56.756701+00:00",
+          "staleness_days": 6.11,
+          "score": 86.9
+        },
+        {
+          "source": "r/ExperiencedDevs",
+          "article_count": 58,
+          "success_rate": 1.0,
+          "last_seen": "2026-05-07T01:30:56.756701+00:00",
+          "staleness_days": 6.11,
+          "score": 86.9
+        },
+        {
+          "source": "r/devops",
+          "article_count": 66,
+          "success_rate": 1.0,
+          "last_seen": "2026-05-07T01:30:56.756701+00:00",
+          "staleness_days": 6.11,
+          "score": 86.9
+        },
+        {
+          "source": "r/rust",
+          "article_count": 78,
+          "success_rate": 1.0,
+          "last_seen": "2026-05-07T01:30:56.756701+00:00",
+          "staleness_days": 6.11,
+          "score": 86.9
+        },
+        {
+          "source": "r/golang",
+          "article_count": 52,
+          "success_rate": 1.0,
+          "last_seen": "2026-05-07T01:30:56.756701+00:00",
+          "staleness_days": 6.11,
+          "score": 86.9
+        },
+        {
+          "source": "r/Python",
+          "article_count": 48,
+          "success_rate": 1.0,
+          "last_seen": "2026-05-07T01:30:56.756701+00:00",
+          "staleness_days": 6.11,
+          "score": 86.9
+        },
+        {
+          "source": "Hacker News Ask HN",
+          "article_count": 41,
+          "success_rate": 1.0,
+          "last_seen": "2026-05-07T01:30:56.756701+00:00",
+          "staleness_days": 6.11,
+          "score": 86.9
+        },
+        {
+          "source": "r/MachineLearning",
+          "article_count": 48,
+          "success_rate": 1.0,
+          "last_seen": "2026-05-07T01:30:56.756701+00:00",
+          "staleness_days": 6.11,
+          "score": 86.9
+        },
+        {
+          "source": "The New Stack",
+          "article_count": 37,
+          "success_rate": 1.0,
+          "last_seen": "2026-05-07T01:30:56.756701+00:00",
+          "staleness_days": 6.11,
+          "score": 86.9
+        },
+        {
+          "source": "여기어때 기술블로그",
+          "article_count": 13,
+          "success_rate": 1.0,
+          "last_seen": "2026-05-07T01:30:56.756701+00:00",
+          "staleness_days": 6.11,
+          "score": 86.9
+        },
+        {
+          "source": "무신사 기술블로그",
+          "article_count": 12,
+          "success_rate": 1.0,
+          "last_seen": "2026-05-07T01:30:56.756701+00:00",
+          "staleness_days": 6.11,
+          "score": 86.9
+        },
+        {
+          "source": "Google Developers Blog",
+          "article_count": 22,
+          "success_rate": 1.0,
+          "last_seen": "2026-05-07T01:30:56.756701+00:00",
+          "staleness_days": 6.11,
+          "score": 86.9
+        },
+        {
+          "source": "Vercel Blog",
+          "article_count": 35,
+          "success_rate": 1.0,
+          "last_seen": "2026-05-07T01:30:56.756701+00:00",
+          "staleness_days": 6.11,
+          "score": 86.9
+        },
+        {
+          "source": "HashiCorp Blog",
+          "article_count": 25,
+          "success_rate": 1.0,
+          "last_seen": "2026-05-07T01:30:56.756701+00:00",
+          "staleness_days": 6.11,
+          "score": 86.9
+        },
+        {
+          "source": "Elastic Blog",
+          "article_count": 15,
+          "success_rate": 1.0,
+          "last_seen": "2026-05-07T01:30:56.756701+00:00",
+          "staleness_days": 6.11,
+          "score": 86.9
+        },
+        {
+          "source": "Hacker News Best",
+          "article_count": 37,
+          "success_rate": 1.0,
+          "last_seen": "2026-05-07T01:30:56.756701+00:00",
+          "staleness_days": 6.11,
+          "score": 86.9
+        },
+        {
+          "source": "The Pragmatic Engineer",
+          "article_count": 23,
+          "success_rate": 1.0,
+          "last_seen": "2026-05-07T01:30:56.756701+00:00",
+          "staleness_days": 6.11,
+          "score": 86.9
+        },
+        {
+          "source": "ByteByteGo",
+          "article_count": 20,
+          "success_rate": 1.0,
+          "last_seen": "2026-05-07T01:30:56.756701+00:00",
+          "staleness_days": 6.11,
+          "score": 86.9
+        },
+        {
+          "source": "OpenAI News",
+          "article_count": 47,
+          "success_rate": 1.0,
+          "last_seen": "2026-05-07T01:30:56.756701+00:00",
+          "staleness_days": 6.11,
+          "score": 86.9
+        },
+        {
+          "source": "Fireship",
+          "article_count": 17,
+          "success_rate": 1.0,
+          "last_seen": "2026-05-07T01:30:56.756701+00:00",
+          "staleness_days": 6.11,
+          "score": 86.9
+        },
+        {
+          "source": "Theo - t3.gg",
+          "article_count": 18,
+          "success_rate": 1.0,
+          "last_seen": "2026-05-07T01:30:56.756701+00:00",
+          "staleness_days": 6.11,
+          "score": 86.9
+        },
+        {
+          "source": "카카오 기술블로그",
+          "article_count": 10,
+          "success_rate": 1.0,
+          "last_seen": "2026-05-07T01:30:56.756701+00:00",
+          "staleness_days": 6.11,
+          "score": 86.9
+        },
+        {
+          "source": "네이버 D2",
+          "article_count": 9,
+          "success_rate": 1.0,
+          "last_seen": "2026-05-07T01:30:56.756701+00:00",
+          "staleness_days": 6.11,
+          "score": 86.9
+        },
+        {
+          "source": "당근 기술블로그",
+          "article_count": 8,
+          "success_rate": 1.0,
+          "last_seen": "2026-05-07T01:30:56.756701+00:00",
+          "staleness_days": 6.11,
+          "score": 86.9
+        },
+        {
+          "source": "라인 엔지니어링",
+          "article_count": 26,
+          "success_rate": 1.0,
+          "last_seen": "2026-05-07T01:30:56.756701+00:00",
+          "staleness_days": 6.11,
+          "score": 86.9
+        },
+        {
+          "source": "올리브영 기술블로그",
+          "article_count": 8,
+          "success_rate": 1.0,
+          "last_seen": "2026-05-07T01:30:56.756701+00:00",
+          "staleness_days": 6.11,
+          "score": 86.9
+        },
+        {
+          "source": "Google AI Blog",
+          "article_count": 18,
+          "success_rate": 1.0,
+          "last_seen": "2026-05-07T01:30:56.756701+00:00",
+          "staleness_days": 6.11,
+          "score": 86.9
+        },
+        {
+          "source": "Meta Engineering",
+          "article_count": 10,
+          "success_rate": 1.0,
+          "last_seen": "2026-05-07T01:30:56.756701+00:00",
+          "staleness_days": 6.11,
+          "score": 86.9
+        },
+        {
+          "source": "Netflix TechBlog",
+          "article_count": 12,
+          "success_rate": 1.0,
+          "last_seen": "2026-05-07T01:30:56.756701+00:00",
+          "staleness_days": 6.11,
+          "score": 86.9
+        },
+        {
+          "source": "Airbnb Engineering",
+          "article_count": 12,
+          "success_rate": 1.0,
+          "last_seen": "2026-05-07T01:30:56.756701+00:00",
+          "staleness_days": 6.11,
+          "score": 86.9
+        },
+        {
+          "source": "AWS Architecture Blog",
+          "article_count": 15,
+          "success_rate": 1.0,
+          "last_seen": "2026-05-07T01:30:56.756701+00:00",
+          "staleness_days": 6.11,
+          "score": 86.9
+        },
+        {
+          "source": "Dropbox Tech",
+          "article_count": 6,
+          "success_rate": 1.0,
+          "last_seen": "2026-05-07T01:30:56.756701+00:00",
+          "staleness_days": 6.11,
+          "score": 86.9
+        },
+        {
+          "source": "Figma Blog",
+          "article_count": 22,
+          "success_rate": 1.0,
+          "last_seen": "2026-05-07T01:30:56.756701+00:00",
+          "staleness_days": 6.11,
+          "score": 86.9
+        },
+        {
+          "source": "MongoDB Engineering",
+          "article_count": 9,
+          "success_rate": 1.0,
+          "last_seen": "2026-05-07T01:30:56.756701+00:00",
+          "staleness_days": 6.11,
+          "score": 86.9
+        },
+        {
+          "source": "Stripe Engineering",
+          "article_count": 11,
+          "success_rate": 1.0,
+          "last_seen": "2026-05-07T01:30:56.756701+00:00",
+          "staleness_days": 6.11,
+          "score": 86.9
+        },
+        {
+          "source": "Kubernetes Blog",
+          "article_count": 15,
+          "success_rate": 1.0,
+          "last_seen": "2026-05-07T01:30:56.756701+00:00",
+          "staleness_days": 6.11,
+          "score": 86.9
+        },
+        {
+          "source": "Rust Blog",
+          "article_count": 10,
+          "success_rate": 1.0,
+          "last_seen": "2026-05-07T01:30:56.756701+00:00",
+          "staleness_days": 6.11,
+          "score": 86.9
+        },
+        {
+          "source": "PyTorch Blog",
+          "article_count": 12,
+          "success_rate": 1.0,
+          "last_seen": "2026-05-07T01:30:56.756701+00:00",
+          "staleness_days": 6.11,
+          "score": 86.9
+        },
+        {
+          "source": "Sequoia Capital",
+          "article_count": 4,
+          "success_rate": 1.0,
+          "last_seen": "2026-05-07T01:30:56.756701+00:00",
+          "staleness_days": 6.11,
+          "score": 86.9
+        },
+        {
+          "source": "Krebs on Security",
+          "article_count": 9,
+          "success_rate": 1.0,
+          "last_seen": "2026-05-07T01:30:56.756701+00:00",
+          "staleness_days": 6.11,
+          "score": 86.9
+        },
+        {
+          "source": "Syntax.fm",
+          "article_count": 25,
+          "success_rate": 1.0,
+          "last_seen": "2026-05-07T01:30:56.756701+00:00",
+          "staleness_days": 6.11,
+          "score": 86.9
+        },
+        {
+          "source": "Software Engineering Daily",
+          "article_count": 24,
+          "success_rate": 1.0,
+          "last_seen": "2026-05-07T01:30:56.756701+00:00",
+          "staleness_days": 6.11,
+          "score": 86.9
+        },
+        {
+          "source": "NHN 기술블로그",
+          "article_count": 6,
+          "success_rate": 1.0,
+          "last_seen": "2026-05-07T01:30:56.756701+00:00",
+          "staleness_days": 6.11,
+          "score": 86.9
+        },
+        {
+          "source": "하이퍼커넥트 기술블로그",
+          "article_count": 2,
+          "success_rate": 1.0,
+          "last_seen": "2026-05-07T01:30:56.756701+00:00",
+          "staleness_days": 6.11,
+          "score": 86.9
+        },
+        {
+          "source": "왓챠 기술블로그",
+          "article_count": 2,
+          "success_rate": 1.0,
+          "last_seen": "2026-05-07T01:30:56.756701+00:00",
+          "staleness_days": 6.11,
+          "score": 86.9
+        },
+        {
+          "source": "GitHub Blog Engineering",
+          "article_count": 5,
+          "success_rate": 1.0,
+          "last_seen": "2026-05-07T01:30:56.756701+00:00",
+          "staleness_days": 6.11,
+          "score": 86.9
+        },
+        {
+          "source": "Spotify Engineering",
+          "article_count": 6,
+          "success_rate": 1.0,
+          "last_seen": "2026-05-07T01:30:56.756701+00:00",
+          "staleness_days": 6.11,
+          "score": 86.9
+        },
+        {
+          "source": "Slack Engineering",
+          "article_count": 4,
+          "success_rate": 1.0,
+          "last_seen": "2026-05-07T01:30:56.756701+00:00",
+          "staleness_days": 6.11,
+          "score": 86.9
+        },
+        {
+          "source": "Go Blog",
+          "article_count": 5,
+          "success_rate": 1.0,
+          "last_seen": "2026-05-07T01:30:56.756701+00:00",
+          "staleness_days": 6.11,
+          "score": 86.9
+        },
+        {
+          "source": "Changelog News",
+          "article_count": 6,
+          "success_rate": 1.0,
+          "last_seen": "2026-05-07T01:30:56.756701+00:00",
+          "staleness_days": 6.11,
+          "score": 86.9
+        },
+        {
+          "source": "Google Project Zero",
+          "article_count": 3,
+          "success_rate": 1.0,
+          "last_seen": "2026-05-07T01:30:56.756701+00:00",
+          "staleness_days": 6.11,
+          "score": 86.9
+        },
+        {
+          "source": "리디 기술블로그",
+          "article_count": 3,
+          "success_rate": 1.0,
+          "last_seen": "2026-05-07T01:30:56.756701+00:00",
+          "staleness_days": 6.11,
+          "score": 86.9
+        },
+        {
+          "source": "마켓컬리 기술블로그",
+          "article_count": 2,
+          "success_rate": 1.0,
+          "last_seen": "2026-05-07T01:30:56.756701+00:00",
+          "staleness_days": 6.11,
+          "score": 86.9
+        },
+        {
+          "source": "CircleCI Blog",
+          "article_count": 2,
+          "success_rate": 1.0,
+          "last_seen": "2026-05-07T01:30:56.756701+00:00",
+          "staleness_days": 6.11,
+          "score": 86.9
+        },
+        {
+          "source": "스포카 기술블로그",
+          "article_count": 1,
+          "success_rate": 1.0,
+          "last_seen": "2026-05-07T01:30:56.756701+00:00",
+          "staleness_days": 6.11,
+          "score": 86.9
+        },
+        {
+          "source": "Y Combinator Blog",
+          "article_count": 1,
+          "success_rate": 1.0,
+          "last_seen": "2026-05-07T01:30:56.756701+00:00",
+          "staleness_days": 6.11,
+          "score": 86.9
+        },
+        {
+          "source": "토스 기술블로그",
+          "article_count": 6,
+          "success_rate": 1.0,
+          "last_seen": "2026-04-25T11:28:56.729297+00:00",
+          "staleness_days": 17.7,
+          "score": 70.0
+        }
+      ]
+    },
+    {
+      "repo": "BookRadar",
+      "source_count": 19,
+      "avg_score": 85.95,
+      "low_score_count": 0,
+      "sources": [
+        {
+          "source": "Publishers Weekly",
+          "article_count": 41,
+          "success_rate": 1.0,
+          "last_seen": "2026-05-07T00:52:56.565800+00:00",
+          "staleness_days": 6.14,
+          "score": 86.84
+        },
+        {
+          "source": "Literary Hub",
+          "article_count": 31,
+          "success_rate": 1.0,
+          "last_seen": "2026-05-07T00:52:56.565800+00:00",
+          "staleness_days": 6.14,
+          "score": 86.84
+        },
+        {
+          "source": "Book Riot",
+          "article_count": 27,
+          "success_rate": 1.0,
+          "last_seen": "2026-05-07T00:52:56.565800+00:00",
+          "staleness_days": 6.14,
+          "score": 86.84
+        },
+        {
+          "source": "Publishing Perspectives",
+          "article_count": 19,
+          "success_rate": 1.0,
+          "last_seen": "2026-05-07T00:52:56.565800+00:00",
+          "staleness_days": 6.14,
+          "score": 86.84
+        },
+        {
+          "source": "The Guardian Books",
+          "article_count": 33,
+          "success_rate": 1.0,
+          "last_seen": "2026-05-07T00:52:56.565800+00:00",
+          "staleness_days": 6.14,
+          "score": 86.84
+        },
+        {
+          "source": "r/books",
+          "article_count": 41,
+          "success_rate": 1.0,
+          "last_seen": "2026-05-07T00:52:56.565800+00:00",
+          "staleness_days": 6.14,
+          "score": 86.84
+        },
+        {
+          "source": "r/suggestmeabook",
+          "article_count": 43,
+          "success_rate": 1.0,
+          "last_seen": "2026-05-07T00:52:56.565800+00:00",
+          "staleness_days": 6.14,
+          "score": 86.84
+        },
+        {
+          "source": "r/52book",
+          "article_count": 42,
+          "success_rate": 1.0,
+          "last_seen": "2026-05-07T00:52:56.565800+00:00",
+          "staleness_days": 6.14,
+          "score": 86.84
+        },
+        {
+          "source": "r/booksuggestions",
+          "article_count": 43,
+          "success_rate": 1.0,
+          "last_seen": "2026-05-07T00:52:56.565800+00:00",
+          "staleness_days": 6.14,
+          "score": 86.84
+        },
+        {
+          "source": "r/Fantasy",
+          "article_count": 43,
+          "success_rate": 1.0,
+          "last_seen": "2026-05-07T00:52:56.565800+00:00",
+          "staleness_days": 6.14,
+          "score": 86.84
+        },
+        {
+          "source": "r/literature",
+          "article_count": 40,
+          "success_rate": 1.0,
+          "last_seen": "2026-05-07T00:52:56.565800+00:00",
+          "staleness_days": 6.14,
+          "score": 86.84
+        },
+        {
+          "source": "r/horrorlit",
+          "article_count": 42,
+          "success_rate": 1.0,
+          "last_seen": "2026-05-07T00:52:56.565800+00:00",
+          "staleness_days": 6.14,
+          "score": 86.84
+        },
+        {
+          "source": "r/scifi",
+          "article_count": 42,
+          "success_rate": 1.0,
+          "last_seen": "2026-05-07T00:52:56.565800+00:00",
+          "staleness_days": 6.14,
+          "score": 86.84
+        },
+        {
+          "source": "알라딘 신간",
+          "article_count": 39,
+          "success_rate": 1.0,
+          "last_seen": "2026-05-07T00:52:56.565800+00:00",
+          "staleness_days": 6.14,
+          "score": 86.84
+        },
+        {
+          "source": "알라딘 베스트셀러",
+          "article_count": 4,
+          "success_rate": 1.0,
+          "last_seen": "2026-05-07T00:52:56.565800+00:00",
+          "staleness_days": 6.14,
+          "score": 86.84
+        },
+        {
+          "source": "NPR Books",
+          "article_count": 13,
+          "success_rate": 1.0,
+          "last_seen": "2026-05-07T00:52:56.565800+00:00",
+          "staleness_days": 6.14,
+          "score": 86.84
+        },
+        {
+          "source": "merphy napier",
+          "article_count": 17,
+          "success_rate": 1.0,
+          "last_seen": "2026-05-07T00:52:56.565800+00:00",
+          "staleness_days": 6.14,
+          "score": 86.84
+        },
+        {
+          "source": "Daniel Greene",
+          "article_count": 15,
+          "success_rate": 1.0,
+          "last_seen": "2026-05-07T00:52:56.565800+00:00",
+          "staleness_days": 6.14,
+          "score": 86.84
+        },
+        {
+          "source": "New York Times Books",
+          "article_count": 16,
+          "success_rate": 1.0,
+          "last_seen": "2026-04-24T14:22:35.245705+00:00",
+          "staleness_days": 18.58,
+          "score": 70.0
+        }
+      ]
+    },
+    {
+      "repo": "CryptoRadar",
+      "source_count": 14,
+      "avg_score": 99.7,
+      "low_score_count": 0,
+      "sources": [
+        {
+          "source": "블록미디어",
+          "article_count": 55,
+          "success_rate": 1.0,
+          "last_seen": "2026-05-13T00:50:21.428835+00:00",
+          "staleness_days": 0.14,
+          "score": 99.7
+        },
+        {
+          "source": "코인데스크 코리아",
+          "article_count": 70,
+          "success_rate": 1.0,
+          "last_seen": "2026-05-13T00:50:21.428835+00:00",
+          "staleness_days": 0.14,
+          "score": 99.7
+        },
+        {
+          "source": "디지털투데이",
+          "article_count": 64,
+          "success_rate": 1.0,
+          "last_seen": "2026-05-13T00:50:21.428835+00:00",
+          "staleness_days": 0.14,
+          "score": 99.7
+        },
+        {
+          "source": "CoinTelegraph",
+          "article_count": 73,
+          "success_rate": 1.0,
+          "last_seen": "2026-05-13T00:50:21.428835+00:00",
+          "staleness_days": 0.14,
+          "score": 99.7
+        },
+        {
+          "source": "CoinDesk",
+          "article_count": 63,
+          "success_rate": 1.0,
+          "last_seen": "2026-05-13T00:50:21.428835+00:00",
+          "staleness_days": 0.14,
+          "score": 99.7
+        },
+        {
+          "source": "The Block",
+          "article_count": 54,
+          "success_rate": 1.0,
+          "last_seen": "2026-05-13T00:50:21.428835+00:00",
+          "staleness_days": 0.14,
+          "score": 99.7
+        },
+        {
+          "source": "Decrypt",
+          "article_count": 73,
+          "success_rate": 1.0,
+          "last_seen": "2026-05-13T00:50:21.428835+00:00",
+          "staleness_days": 0.14,
+          "score": 99.7
+        },
+        {
+          "source": "Bitcoin Magazine",
+          "article_count": 32,
+          "success_rate": 1.0,
+          "last_seen": "2026-05-13T00:50:21.428835+00:00",
+          "staleness_days": 0.14,
+          "score": 99.7
+        },
+        {
+          "source": "CryptoSlate",
+          "article_count": 36,
+          "success_rate": 1.0,
+          "last_seen": "2026-05-13T00:50:21.428835+00:00",
+          "staleness_days": 0.14,
+          "score": 99.7
+        },
+        {
+          "source": "BeInCrypto",
+          "article_count": 58,
+          "success_rate": 1.0,
+          "last_seen": "2026-05-13T00:50:21.428835+00:00",
+          "staleness_days": 0.14,
+          "score": 99.7
+        },
+        {
+          "source": "NewsBTC",
+          "article_count": 42,
+          "success_rate": 1.0,
+          "last_seen": "2026-05-13T00:50:21.428835+00:00",
+          "staleness_days": 0.14,
+          "score": 99.7
+        },
+        {
+          "source": "Glassnode Insights",
+          "article_count": 27,
+          "success_rate": 1.0,
+          "last_seen": "2026-05-13T00:50:21.428835+00:00",
+          "staleness_days": 0.14,
+          "score": 99.7
+        },
+        {
+          "source": "블로터",
+          "article_count": 4,
+          "success_rate": 1.0,
+          "last_seen": "2026-05-13T00:50:21.428835+00:00",
+          "staleness_days": 0.14,
+          "score": 99.7
+        },
+        {
+          "source": "코인텔레그래프",
+          "article_count": 1,
+          "success_rate": 1.0,
+          "last_seen": "2026-05-13T00:50:21.428835+00:00",
+          "staleness_days": 0.14,
+          "score": 99.7
+        }
+      ]
+    },
+    {
+      "repo": "EventRadar",
+      "source_count": 27,
+      "avg_score": 97.22,
+      "low_score_count": 0,
+      "sources": [
+        {
+          "source": "Exhibition News",
+          "article_count": 27,
+          "success_rate": 1.0,
+          "last_seen": "2026-05-12T20:39:19.775712+00:00",
+          "staleness_days": 0.32,
+          "score": 99.32
+        },
+        {
+          "source": "Event Marketer",
+          "article_count": 16,
+          "success_rate": 1.0,
+          "last_seen": "2026-05-12T20:39:19.775712+00:00",
+          "staleness_days": 0.32,
+          "score": 99.32
+        },
+        {
+          "source": "Event Industry News",
+          "article_count": 35,
+          "success_rate": 1.0,
+          "last_seen": "2026-05-12T20:39:19.775712+00:00",
+          "staleness_days": 0.32,
+          "score": 99.32
+        },
+        {
+          "source": "IQ Magazine",
+          "article_count": 38,
+          "success_rate": 1.0,
+          "last_seen": "2026-05-12T20:39:19.775712+00:00",
+          "staleness_days": 0.32,
+          "score": 99.32
+        },
+        {
+          "source": "Pollstar News",
+          "article_count": 47,
+          "success_rate": 1.0,
+          "last_seen": "2026-05-12T20:39:19.775712+00:00",
+          "staleness_days": 0.32,
+          "score": 99.32
+        },
+        {
+          "source": "Skift Meetings",
+          "article_count": 33,
+          "success_rate": 1.0,
+          "last_seen": "2026-05-12T20:39:19.775712+00:00",
+          "staleness_days": 0.32,
+          "score": 99.32
+        },
+        {
+          "source": "연합뉴스 연예",
+          "article_count": 38,
+          "success_rate": 1.0,
+          "last_seen": "2026-05-12T20:39:19.775712+00:00",
+          "staleness_days": 0.32,
+          "score": 99.32
+        },
+        {
+          "source": "Brooklyn Vegan",
+          "article_count": 24,
+          "success_rate": 1.0,
+          "last_seen": "2026-05-12T20:39:19.775712+00:00",
+          "staleness_days": 0.32,
+          "score": 99.32
+        },
+        {
+          "source": "연합뉴스 문화",
+          "article_count": 49,
+          "success_rate": 1.0,
+          "last_seen": "2026-05-12T20:39:19.775712+00:00",
+          "staleness_days": 0.32,
+          "score": 99.32
+        },
+        {
+          "source": "PCMA Convene",
+          "article_count": 27,
+          "success_rate": 1.0,
+          "last_seen": "2026-05-12T20:39:19.775712+00:00",
+          "staleness_days": 0.32,
+          "score": 99.32
+        },
+        {
+          "source": "Billboard",
+          "article_count": 13,
+          "success_rate": 1.0,
+          "last_seen": "2026-05-12T20:39:19.775712+00:00",
+          "staleness_days": 0.32,
+          "score": 99.32
+        },
+        {
+          "source": "Smart Meetings",
+          "article_count": 25,
+          "success_rate": 1.0,
+          "last_seen": "2026-05-12T20:39:19.775712+00:00",
+          "staleness_days": 0.32,
+          "score": 99.32
+        },
+        {
+          "source": "Exhibit City News",
+          "article_count": 26,
+          "success_rate": 1.0,
+          "last_seen": "2026-05-12T20:39:19.775712+00:00",
+          "staleness_days": 0.32,
+          "score": 99.32
+        },
+        {
+          "source": "IAEE Blog",
+          "article_count": 19,
+          "success_rate": 1.0,
+          "last_seen": "2026-05-12T20:39:19.775712+00:00",
+          "staleness_days": 0.32,
+          "score": 99.32
+        },
+        {
+          "source": "Reddit r/festivals",
+          "article_count": 39,
+          "success_rate": 1.0,
+          "last_seen": "2026-05-12T20:39:19.775712+00:00",
+          "staleness_days": 0.32,
+          "score": 99.32
+        },
+        {
+          "source": "Reddit r/concerts",
+          "article_count": 49,
+          "success_rate": 1.0,
+          "last_seen": "2026-05-12T20:39:19.775712+00:00",
+          "staleness_days": 0.32,
+          "score": 99.32
+        },
+        {
+          "source": "Ticketmaster Blog",
+          "article_count": 25,
+          "success_rate": 1.0,
+          "last_seen": "2026-05-12T20:39:19.775712+00:00",
+          "staleness_days": 0.32,
+          "score": 99.32
+        },
+        {
+          "source": "Reddit r/conferences",
+          "article_count": 32,
+          "success_rate": 1.0,
+          "last_seen": "2026-05-12T20:39:19.775712+00:00",
+          "staleness_days": 0.32,
+          "score": 99.32
+        },
+        {
+          "source": "예술의전당 공연",
+          "article_count": 48,
+          "success_rate": 1.0,
+          "last_seen": "2026-05-12T20:39:19.775712+00:00",
+          "staleness_days": 0.32,
+          "score": 99.32
+        },
+        {
+          "source": "UFI Blog",
+          "article_count": 10,
+          "success_rate": 1.0,
+          "last_seen": "2026-05-12T20:39:19.775712+00:00",
+          "staleness_days": 0.32,
+          "score": 99.32
+        },
+        {
+          "source": "강서구 문화행사",
+          "article_count": 1,
+          "success_rate": 1.0,
+          "last_seen": "2026-05-12T20:39:19.775712+00:00",
+          "staleness_days": 0.32,
+          "score": 99.32
+        },
+        {
+          "source": "인터파크 이벤트",
+          "article_count": 1,
+          "success_rate": 1.0,
+          "last_seen": "2026-05-12T20:39:19.775712+00:00",
+          "staleness_days": 0.32,
+          "score": 99.32
+        },
+        {
+          "source": "국립현대미술관 전시",
+          "article_count": 1,
+          "success_rate": 1.0,
+          "last_seen": "2026-05-12T20:39:19.775712+00:00",
+          "staleness_days": 0.32,
+          "score": 99.32
+        },
+        {
+          "source": "세종문화회관 공연",
+          "article_count": 1,
+          "success_rate": 1.0,
+          "last_seen": "2026-05-12T20:39:19.775712+00:00",
+          "staleness_days": 0.32,
+          "score": 99.32
+        },
+        {
+          "source": "지역축제365",
+          "article_count": 1,
+          "success_rate": 1.0,
+          "last_seen": "2026-05-12T20:39:19.775712+00:00",
+          "staleness_days": 0.32,
+          "score": 99.32
+        },
+        {
+          "source": "서울시 문화행사",
+          "article_count": 1,
+          "success_rate": 1.0,
+          "last_seen": "2026-04-30T01:08:07.786220+00:00",
+          "staleness_days": 13.13,
+          "score": 71.87
+        },
+        {
+          "source": "Arts Professional",
+          "article_count": 2,
+          "success_rate": 1.0,
+          "last_seen": "2026-04-23T14:34:57.156910+00:00",
+          "staleness_days": 19.57,
+          "score": 70.0
+        }
+      ]
+    },
+    {
+      "repo": "FoodRadar",
+      "source_count": 13,
+      "avg_score": 84.26,
+      "low_score_count": 0,
+      "sources": [
+        {
+          "source": "식품안전나라 행정처분",
+          "article_count": 31,
+          "success_rate": 1.0,
+          "last_seen": "2026-05-07T00:56:05.432223+00:00",
+          "staleness_days": 6.14,
+          "score": 86.85
+        },
+        {
+          "source": "r/Cooking",
+          "article_count": 61,
+          "success_rate": 1.0,
+          "last_seen": "2026-05-07T00:56:05.432223+00:00",
+          "staleness_days": 6.14,
+          "score": 86.85
+        },
+        {
+          "source": "r/KoreanFood",
+          "article_count": 53,
+          "success_rate": 1.0,
+          "last_seen": "2026-05-07T00:56:05.432223+00:00",
+          "staleness_days": 6.14,
+          "score": 86.85
+        },
+        {
+          "source": "r/foodsafety",
+          "article_count": 54,
+          "success_rate": 1.0,
+          "last_seen": "2026-05-07T00:56:05.432223+00:00",
+          "staleness_days": 6.14,
+          "score": 86.85
+        },
+        {
+          "source": "Food Dive",
+          "article_count": 27,
+          "success_rate": 1.0,
+          "last_seen": "2026-05-07T00:56:05.432223+00:00",
+          "staleness_days": 6.14,
+          "score": 86.85
+        },
+        {
+          "source": "Food Safety News",
+          "article_count": 41,
+          "success_rate": 1.0,
+          "last_seen": "2026-05-07T00:56:05.432223+00:00",
+          "staleness_days": 6.14,
+          "score": 86.85
+        },
+        {
+          "source": "식품안전 국내뉴스",
+          "article_count": 30,
+          "success_rate": 1.0,
+          "last_seen": "2026-05-07T00:56:05.432223+00:00",
+          "staleness_days": 6.14,
+          "score": 86.85
+        },
+        {
+          "source": "식약처 보도자료",
+          "article_count": 26,
+          "success_rate": 1.0,
+          "last_seen": "2026-05-07T00:56:05.432223+00:00",
+          "staleness_days": 6.14,
+          "score": 86.85
+        },
+        {
+          "source": "r/nutrition",
+          "article_count": 43,
+          "success_rate": 1.0,
+          "last_seen": "2026-05-07T00:56:05.432223+00:00",
+          "staleness_days": 6.14,
+          "score": 86.85
+        },
+        {
+          "source": "식품안전나라 회수판매중지",
+          "article_count": 23,
+          "success_rate": 1.0,
+          "last_seen": "2026-05-07T00:56:05.432223+00:00",
+          "staleness_days": 6.14,
+          "score": 86.85
+        },
+        {
+          "source": "식품안전 해외뉴스",
+          "article_count": 20,
+          "success_rate": 1.0,
+          "last_seen": "2026-05-07T00:56:05.432223+00:00",
+          "staleness_days": 6.14,
+          "score": 86.85
+        },
+        {
+          "source": "식품저널",
+          "article_count": 13,
+          "success_rate": 1.0,
+          "last_seen": "2026-04-13T15:20:46.227495+00:00",
+          "staleness_days": 29.54,
+          "score": 70.0
+        },
+        {
+          "source": "식품음료신문",
+          "article_count": 6,
+          "success_rate": 1.0,
+          "last_seen": "2026-04-13T15:20:46.227495+00:00",
+          "staleness_days": 29.54,
+          "score": 70.0
+        }
+      ]
+    },
+    {
+      "repo": "GameRadar",
+      "source_count": 35,
+      "avg_score": 93.75,
+      "low_score_count": 0,
+      "sources": [
+        {
+          "source": "Nintendo Life",
+          "article_count": 45,
+          "success_rate": 1.0,
+          "last_seen": "2026-05-12T20:37:37.793876+00:00",
+          "staleness_days": 0.32,
+          "score": 99.32
+        },
+        {
+          "source": "VGC",
+          "article_count": 28,
+          "success_rate": 1.0,
+          "last_seen": "2026-05-12T20:37:37.793876+00:00",
+          "staleness_days": 0.32,
+          "score": 99.32
+        },
+        {
+          "source": "GamesRadar",
+          "article_count": 45,
+          "success_rate": 1.0,
+          "last_seen": "2026-05-12T20:37:37.793876+00:00",
+          "staleness_days": 0.32,
+          "score": 99.32
+        },
+        {
+          "source": "Push Square",
+          "article_count": 44,
+          "success_rate": 1.0,
+          "last_seen": "2026-05-12T20:37:37.793876+00:00",
+          "staleness_days": 0.32,
+          "score": 99.32
+        },
+        {
+          "source": "Destructoid",
+          "article_count": 48,
+          "success_rate": 1.0,
+          "last_seen": "2026-05-12T20:37:37.793876+00:00",
+          "staleness_days": 0.32,
+          "score": 99.32
+        },
+        {
+          "source": "Dot Esports",
+          "article_count": 30,
+          "success_rate": 1.0,
+          "last_seen": "2026-05-12T20:37:37.793876+00:00",
+          "staleness_days": 0.32,
+          "score": 99.32
+        },
+        {
+          "source": "Dexerto",
+          "article_count": 28,
+          "success_rate": 1.0,
+          "last_seen": "2026-05-12T20:37:37.793876+00:00",
+          "staleness_days": 0.32,
+          "score": 99.32
+        },
+        {
+          "source": "게임톡",
+          "article_count": 71,
+          "success_rate": 1.0,
+          "last_seen": "2026-05-12T20:37:37.793876+00:00",
+          "staleness_days": 0.32,
+          "score": 99.32
+        },
+        {
+          "source": "Pocket Gamer",
+          "article_count": 43,
+          "success_rate": 1.0,
+          "last_seen": "2026-05-12T20:37:37.793876+00:00",
+          "staleness_days": 0.32,
+          "score": 99.32
+        },
+        {
+          "source": "PlayStation Blog",
+          "article_count": 24,
+          "success_rate": 1.0,
+          "last_seen": "2026-05-12T20:37:37.793876+00:00",
+          "staleness_days": 0.32,
+          "score": 99.32
+        },
+        {
+          "source": "Xbox Wire",
+          "article_count": 25,
+          "success_rate": 1.0,
+          "last_seen": "2026-05-12T20:37:37.793876+00:00",
+          "staleness_days": 0.32,
+          "score": 99.32
+        },
+        {
+          "source": "GameSpot",
+          "article_count": 33,
+          "success_rate": 1.0,
+          "last_seen": "2026-05-12T20:37:37.793876+00:00",
+          "staleness_days": 0.32,
+          "score": 99.32
+        },
+        {
+          "source": "Kotaku",
+          "article_count": 27,
+          "success_rate": 1.0,
+          "last_seen": "2026-05-12T20:37:37.793876+00:00",
+          "staleness_days": 0.32,
+          "score": 99.32
+        },
+        {
+          "source": "PC Gamer",
+          "article_count": 47,
+          "success_rate": 1.0,
+          "last_seen": "2026-05-12T20:37:37.793876+00:00",
+          "staleness_days": 0.32,
+          "score": 99.32
+        },
+        {
+          "source": "Rock Paper Shotgun",
+          "article_count": 67,
+          "success_rate": 1.0,
+          "last_seen": "2026-05-12T20:37:37.793876+00:00",
+          "staleness_days": 0.32,
+          "score": 99.32
+        },
+        {
+          "source": "Pure Xbox",
+          "article_count": 43,
+          "success_rate": 1.0,
+          "last_seen": "2026-05-12T20:37:37.793876+00:00",
+          "staleness_days": 0.32,
+          "score": 99.32
+        },
+        {
+          "source": "GamesIndustry.biz",
+          "article_count": 65,
+          "success_rate": 1.0,
+          "last_seen": "2026-05-12T20:37:37.793876+00:00",
+          "staleness_days": 0.32,
+          "score": 99.32
+        },
+        {
+          "source": "Game Developer",
+          "article_count": 63,
+          "success_rate": 1.0,
+          "last_seen": "2026-05-12T20:37:37.793876+00:00",
+          "staleness_days": 0.32,
+          "score": 99.32
+        },
+        {
+          "source": "게임조선",
+          "article_count": 52,
+          "success_rate": 1.0,
+          "last_seen": "2026-05-12T20:37:37.793876+00:00",
+          "staleness_days": 0.32,
+          "score": 99.32
+        },
+        {
+          "source": "루리웹 뉴스",
+          "article_count": 39,
+          "success_rate": 1.0,
+          "last_seen": "2026-05-12T20:37:37.793876+00:00",
+          "staleness_days": 0.32,
+          "score": 99.32
+        },
+        {
+          "source": "IndieGames.com",
+          "article_count": 15,
+          "success_rate": 1.0,
+          "last_seen": "2026-05-12T20:37:37.793876+00:00",
+          "staleness_days": 0.32,
+          "score": 99.32
+        },
+        {
+          "source": "IGN Game Scoop",
+          "article_count": 15,
+          "success_rate": 1.0,
+          "last_seen": "2026-05-12T20:37:37.793876+00:00",
+          "staleness_days": 0.32,
+          "score": 99.32
+        },
+        {
+          "source": "r/gaming",
+          "article_count": 20,
+          "success_rate": 1.0,
+          "last_seen": "2026-05-07T01:57:50.079721+00:00",
+          "staleness_days": 6.09,
+          "score": 86.94
+        },
+        {
+          "source": "r/PS5",
+          "article_count": 20,
+          "success_rate": 1.0,
+          "last_seen": "2026-05-07T01:57:50.079721+00:00",
+          "staleness_days": 6.09,
+          "score": 86.94
+        },
+        {
+          "source": "r/IndieGaming",
+          "article_count": 23,
+          "success_rate": 1.0,
+          "last_seen": "2026-05-07T01:57:50.079721+00:00",
+          "staleness_days": 6.09,
+          "score": 86.94
+        },
+        {
+          "source": "r/leagueoflegends",
+          "article_count": 24,
+          "success_rate": 1.0,
+          "last_seen": "2026-05-07T01:57:50.079721+00:00",
+          "staleness_days": 6.09,
+          "score": 86.94
+        },
+        {
+          "source": "r/VALORANT",
+          "article_count": 23,
+          "success_rate": 1.0,
+          "last_seen": "2026-05-07T01:57:50.079721+00:00",
+          "staleness_days": 6.09,
+          "score": 86.94
+        },
+        {
+          "source": "r/Genshin_Impact",
+          "article_count": 24,
+          "success_rate": 1.0,
+          "last_seen": "2026-05-07T01:57:50.079721+00:00",
+          "staleness_days": 6.09,
+          "score": 86.94
+        },
+        {
+          "source": "r/MapleStory",
+          "article_count": 22,
+          "success_rate": 1.0,
+          "last_seen": "2026-05-07T01:57:50.079721+00:00",
+          "staleness_days": 6.09,
+          "score": 86.94
+        },
+        {
+          "source": "r/Games",
+          "article_count": 18,
+          "success_rate": 1.0,
+          "last_seen": "2026-05-07T01:57:50.079721+00:00",
+          "staleness_days": 6.09,
+          "score": 86.94
+        },
+        {
+          "source": "r/NintendoSwitch",
+          "article_count": 19,
+          "success_rate": 1.0,
+          "last_seen": "2026-05-07T01:57:50.079721+00:00",
+          "staleness_days": 6.09,
+          "score": 86.94
+        },
+        {
+          "source": "r/pcgaming",
+          "article_count": 18,
+          "success_rate": 1.0,
+          "last_seen": "2026-05-07T01:57:50.079721+00:00",
+          "staleness_days": 6.09,
+          "score": 86.94
+        },
+        {
+          "source": "r/lostarkgame",
+          "article_count": 17,
+          "success_rate": 1.0,
+          "last_seen": "2026-05-07T01:57:50.079721+00:00",
+          "staleness_days": 6.09,
+          "score": 86.94
+        },
+        {
+          "source": "Esports Insider",
+          "article_count": 1,
+          "success_rate": 1.0,
+          "last_seen": "2026-04-13T08:11:29.579246+00:00",
+          "staleness_days": 29.84,
+          "score": 70.0
+        },
+        {
+          "source": "Steam News",
+          "article_count": 2,
+          "success_rate": 1.0,
+          "last_seen": "2026-04-23T18:59:53.472308+00:00",
+          "staleness_days": 19.39,
+          "score": 70.0
+        }
+      ]
+    },
+    {
+      "repo": "JobRadar",
+      "source_count": 15,
+      "avg_score": 78.99,
+      "low_score_count": 0,
+      "sources": [
+        {
+          "source": "HR Dive",
+          "article_count": 28,
+          "success_rate": 1.0,
+          "last_seen": "2026-05-07T00:58:22.078789+00:00",
+          "staleness_days": 6.14,
+          "score": 86.85
+        },
+        {
+          "source": "HR Executive",
+          "article_count": 26,
+          "success_rate": 1.0,
+          "last_seen": "2026-05-07T00:58:22.078789+00:00",
+          "staleness_days": 6.14,
+          "score": 86.85
+        },
+        {
+          "source": "Indeed Hiring Lab",
+          "article_count": 14,
+          "success_rate": 1.0,
+          "last_seen": "2026-05-07T00:58:22.078789+00:00",
+          "staleness_days": 6.14,
+          "score": 86.85
+        },
+        {
+          "source": "r/cscareerquestions",
+          "article_count": 25,
+          "success_rate": 1.0,
+          "last_seen": "2026-05-07T00:58:22.078789+00:00",
+          "staleness_days": 6.14,
+          "score": 86.85
+        },
+        {
+          "source": "r/recruitinghell",
+          "article_count": 21,
+          "success_rate": 1.0,
+          "last_seen": "2026-05-07T00:58:22.078789+00:00",
+          "staleness_days": 6.14,
+          "score": 86.85
+        },
+        {
+          "source": "HR Bartender",
+          "article_count": 9,
+          "success_rate": 1.0,
+          "last_seen": "2026-05-07T00:58:22.078789+00:00",
+          "staleness_days": 6.14,
+          "score": 86.85
+        },
+        {
+          "source": "Kakao Careers",
+          "article_count": 17,
+          "success_rate": 1.0,
+          "last_seen": "2026-05-07T00:58:22.078789+00:00",
+          "staleness_days": 6.14,
+          "score": 86.85
+        },
+        {
+          "source": "Samsung Careers",
+          "article_count": 1,
+          "success_rate": 1.0,
+          "last_seen": "2026-05-07T00:58:22.078789+00:00",
+          "staleness_days": 6.14,
+          "score": 86.85
+        },
+        {
+          "source": "매일경제 취업",
+          "article_count": 12,
+          "success_rate": 1.0,
+          "last_seen": "2026-04-28T14:59:36.356025+00:00",
+          "staleness_days": 14.55,
+          "score": 70.0
+        },
+        {
+          "source": "한국경제",
+          "article_count": 2,
+          "success_rate": 1.0,
+          "last_seen": "2026-04-22T20:18:56.016555+00:00",
+          "staleness_days": 20.33,
+          "score": 70.0
+        },
+        {
+          "source": "r/jobs",
+          "article_count": 20,
+          "success_rate": 1.0,
+          "last_seen": "2026-04-25T11:23:44.851181+00:00",
+          "staleness_days": 17.7,
+          "score": 70.0
+        },
+        {
+          "source": "r/careeradvice",
+          "article_count": 22,
+          "success_rate": 1.0,
+          "last_seen": "2026-04-25T11:23:44.851181+00:00",
+          "staleness_days": 17.7,
+          "score": 70.0
+        },
+        {
+          "source": "r/layoffs",
+          "article_count": 18,
+          "success_rate": 1.0,
+          "last_seen": "2026-04-25T11:23:44.851181+00:00",
+          "staleness_days": 17.7,
+          "score": 70.0
+        },
+        {
+          "source": "r/korea",
+          "article_count": 7,
+          "success_rate": 1.0,
+          "last_seen": "2026-04-24T14:22:23.274602+00:00",
+          "staleness_days": 18.58,
+          "score": 70.0
+        },
+        {
+          "source": "r/overemployed",
+          "article_count": 15,
+          "success_rate": 1.0,
+          "last_seen": "2026-04-25T11:23:44.851181+00:00",
+          "staleness_days": 17.7,
+          "score": 70.0
+        }
+      ]
+    },
+    {
+      "repo": "MobilityRadar",
+      "source_count": 17,
+      "avg_score": 97.87,
+      "low_score_count": 0,
+      "sources": [
+        {
+          "source": "The Driven",
+          "article_count": 112,
+          "success_rate": 1.0,
+          "last_seen": "2026-05-12T23:49:53.980157+00:00",
+          "staleness_days": 0.18,
+          "score": 99.61
+        },
+        {
+          "source": "InsideEVs",
+          "article_count": 141,
+          "success_rate": 1.0,
+          "last_seen": "2026-05-12T23:49:53.980157+00:00",
+          "staleness_days": 0.18,
+          "score": 99.61
+        },
+        {
+          "source": "CleanTechnica",
+          "article_count": 396,
+          "success_rate": 1.0,
+          "last_seen": "2026-05-12T23:49:53.980157+00:00",
+          "staleness_days": 0.18,
+          "score": 99.61
+        },
+        {
+          "source": "r/electricvehicles",
+          "article_count": 537,
+          "success_rate": 1.0,
+          "last_seen": "2026-05-12T23:49:53.980157+00:00",
+          "staleness_days": 0.18,
+          "score": 99.61
+        },
+        {
+          "source": "r/teslamotors",
+          "article_count": 86,
+          "success_rate": 1.0,
+          "last_seen": "2026-05-12T23:49:53.980157+00:00",
+          "staleness_days": 0.18,
+          "score": 99.61
+        },
+        {
+          "source": "r/Rivian",
+          "article_count": 606,
+          "success_rate": 1.0,
+          "last_seen": "2026-05-12T23:49:53.980157+00:00",
+          "staleness_days": 0.18,
+          "score": 99.61
+        },
+        {
+          "source": "r/electricscooters",
+          "article_count": 711,
+          "success_rate": 1.0,
+          "last_seen": "2026-05-12T23:49:53.980157+00:00",
+          "staleness_days": 0.18,
+          "score": 99.61
+        },
+        {
+          "source": "r/ebikes",
+          "article_count": 726,
+          "success_rate": 1.0,
+          "last_seen": "2026-05-12T23:49:53.980157+00:00",
+          "staleness_days": 0.18,
+          "score": 99.61
+        },
+        {
+          "source": "r/korea",
+          "article_count": 371,
+          "success_rate": 1.0,
+          "last_seen": "2026-05-12T23:49:53.980157+00:00",
+          "staleness_days": 0.18,
+          "score": 99.61
+        },
+        {
+          "source": "Electrek",
+          "article_count": 371,
+          "success_rate": 1.0,
+          "last_seen": "2026-05-12T23:49:53.980157+00:00",
+          "staleness_days": 0.18,
+          "score": 99.61
+        },
+        {
+          "source": "Charged EVs",
+          "article_count": 133,
+          "success_rate": 1.0,
+          "last_seen": "2026-05-12T23:49:53.980157+00:00",
+          "staleness_days": 0.18,
+          "score": 99.61
+        },
+        {
+          "source": "Smart Cities Dive",
+          "article_count": 79,
+          "success_rate": 1.0,
+          "last_seen": "2026-05-12T23:49:53.980157+00:00",
+          "staleness_days": 0.18,
+          "score": 99.61
+        },
+        {
+          "source": "r/SelfDrivingCars",
+          "article_count": 134,
+          "success_rate": 1.0,
+          "last_seen": "2026-05-12T23:49:53.980157+00:00",
+          "staleness_days": 0.18,
+          "score": 99.61
+        },
+        {
+          "source": "Cities Today",
+          "article_count": 23,
+          "success_rate": 1.0,
+          "last_seen": "2026-05-12T23:49:53.980157+00:00",
+          "staleness_days": 0.18,
+          "score": 99.61
+        },
+        {
+          "source": "서울 교통정보",
+          "article_count": 1,
+          "success_rate": 1.0,
+          "last_seen": "2026-05-12T23:49:53.980157+00:00",
+          "staleness_days": 0.18,
+          "score": 99.61
+        },
+        {
+          "source": "환경부 전기차 충전소",
+          "article_count": 1,
+          "success_rate": 1.0,
+          "last_seen": "2026-05-12T23:49:53.980157+00:00",
+          "staleness_days": 0.18,
+          "score": 99.61
+        },
+        {
+          "source": "Transport Evolved",
+          "article_count": 7,
+          "success_rate": 1.0,
+          "last_seen": "2026-04-14T12:19:36.787874+00:00",
+          "staleness_days": 28.66,
+          "score": 70.0
+        }
+      ]
+    },
+    {
+      "repo": "MovieRadar",
+      "source_count": 10,
+      "avg_score": 78.99,
+      "low_score_count": 0,
+      "sources": [
+        {
+          "source": "IndieWire",
+          "article_count": 17,
+          "success_rate": 1.0,
+          "last_seen": "2026-05-07T02:14:29.967157+00:00",
+          "staleness_days": 6.08,
+          "score": 86.96
+        },
+        {
+          "source": "Screen Rant",
+          "article_count": 10,
+          "success_rate": 1.0,
+          "last_seen": "2026-05-07T02:14:29.967157+00:00",
+          "staleness_days": 6.08,
+          "score": 86.96
+        },
+        {
+          "source": "Decider",
+          "article_count": 8,
+          "success_rate": 1.0,
+          "last_seen": "2026-05-07T02:14:29.967157+00:00",
+          "staleness_days": 6.08,
+          "score": 86.96
+        },
+        {
+          "source": "Collider",
+          "article_count": 12,
+          "success_rate": 1.0,
+          "last_seen": "2026-05-07T00:59:07.589606+00:00",
+          "staleness_days": 6.14,
+          "score": 86.85
+        },
+        {
+          "source": "Deadline",
+          "article_count": 16,
+          "success_rate": 1.0,
+          "last_seen": "2026-05-07T00:59:07.589606+00:00",
+          "staleness_days": 6.14,
+          "score": 86.85
+        },
+        {
+          "source": "Hollywood Reporter",
+          "article_count": 9,
+          "success_rate": 1.0,
+          "last_seen": "2026-04-29T23:56:03.537037+00:00",
+          "staleness_days": 13.18,
+          "score": 71.76
+        },
+        {
+          "source": "KOFIC 박스오피스",
+          "article_count": 1,
+          "success_rate": 1.0,
+          "last_seen": "2026-04-29T23:56:03.537037+00:00",
+          "staleness_days": 13.18,
+          "score": 71.76
+        },
+        {
+          "source": "Box Office Mojo",
+          "article_count": 1,
+          "success_rate": 1.0,
+          "last_seen": "2026-04-29T23:56:03.537037+00:00",
+          "staleness_days": 13.18,
+          "score": 71.76
+        },
+        {
+          "source": "Variety Film",
+          "article_count": 13,
+          "success_rate": 1.0,
+          "last_seen": "2026-04-28T15:00:44.751389+00:00",
+          "staleness_days": 14.55,
+          "score": 70.0
+        },
+        {
+          "source": "What's on Netflix",
+          "article_count": 11,
+          "success_rate": 1.0,
+          "last_seen": "2026-04-28T15:00:44.751389+00:00",
+          "staleness_days": 14.55,
+          "score": 70.0
+        }
+      ]
+    },
+    {
+      "repo": "PaperworkRadar",
+      "source_count": 14,
+      "avg_score": 99.31,
+      "low_score_count": 0,
+      "sources": [
+        {
+          "source": "Federal Register Documents",
+          "article_count": 872,
+          "success_rate": 1.0,
+          "last_seen": "2026-05-12T20:29:14.556181+00:00",
+          "staleness_days": 0.32,
+          "score": 99.31
+        },
+        {
+          "source": "GOV.UK Forms Search",
+          "article_count": 273,
+          "success_rate": 1.0,
+          "last_seen": "2026-05-12T20:29:14.556181+00:00",
+          "staleness_days": 0.32,
+          "score": 99.31
+        },
+        {
+          "source": "GOV.UK HMRC",
+          "article_count": 269,
+          "success_rate": 1.0,
+          "last_seen": "2026-05-12T20:29:14.556181+00:00",
+          "staleness_days": 0.32,
+          "score": 99.31
+        },
+        {
+          "source": "GOV.UK Home Office",
+          "article_count": 114,
+          "success_rate": 1.0,
+          "last_seen": "2026-05-12T20:29:14.556181+00:00",
+          "staleness_days": 0.32,
+          "score": 99.31
+        },
+        {
+          "source": "UK Legislation New",
+          "article_count": 131,
+          "success_rate": 1.0,
+          "last_seen": "2026-05-12T20:29:14.556181+00:00",
+          "staleness_days": 0.32,
+          "score": 99.31
+        },
+        {
+          "source": "Federal Register Forms Focus",
+          "article_count": 312,
+          "success_rate": 1.0,
+          "last_seen": "2026-05-12T20:29:14.556181+00:00",
+          "staleness_days": 0.32,
+          "score": 99.31
+        },
+        {
+          "source": "UK Land Registry",
+          "article_count": 36,
+          "success_rate": 1.0,
+          "last_seen": "2026-05-12T20:29:14.556181+00:00",
+          "staleness_days": 0.32,
+          "score": 99.31
+        },
+        {
+          "source": "UK Visas and Immigration",
+          "article_count": 48,
+          "success_rate": 1.0,
+          "last_seen": "2026-05-12T20:29:14.556181+00:00",
+          "staleness_days": 0.32,
+          "score": 99.31
+        },
+        {
+          "source": "FedScoop",
+          "article_count": 61,
+          "success_rate": 1.0,
+          "last_seen": "2026-05-12T20:29:14.556181+00:00",
+          "staleness_days": 0.32,
+          "score": 99.31
+        },
+        {
+          "source": "StateScoop",
+          "article_count": 61,
+          "success_rate": 1.0,
+          "last_seen": "2026-05-12T20:29:14.556181+00:00",
+          "staleness_days": 0.32,
+          "score": 99.31
+        },
+        {
+          "source": "GOV.UK Government Digital Service",
+          "article_count": 23,
+          "success_rate": 1.0,
+          "last_seen": "2026-05-12T20:29:14.556181+00:00",
+          "staleness_days": 0.32,
+          "score": 99.31
+        },
+        {
+          "source": "UK Companies House Updates",
+          "article_count": 33,
+          "success_rate": 1.0,
+          "last_seen": "2026-05-12T20:29:14.556181+00:00",
+          "staleness_days": 0.32,
+          "score": 99.31
+        },
+        {
+          "source": "정부24 서비스",
+          "article_count": 1,
+          "success_rate": 1.0,
+          "last_seen": "2026-05-12T20:29:14.556181+00:00",
+          "staleness_days": 0.32,
+          "score": 99.31
+        },
+        {
+          "source": "하이코리아 민원",
+          "article_count": 1,
+          "success_rate": 1.0,
+          "last_seen": "2026-05-12T20:29:14.556181+00:00",
+          "staleness_days": 0.32,
+          "score": 99.31
+        }
+      ]
+    },
+    {
+      "repo": "PolicyRadar",
+      "source_count": 24,
+      "avg_score": 99.2,
+      "low_score_count": 0,
+      "sources": [
+        {
+          "source": "TechCrunch Policy",
+          "article_count": 410,
+          "success_rate": 1.0,
+          "last_seen": "2026-05-13T00:07:24.499666+00:00",
+          "staleness_days": 0.17,
+          "score": 99.63
+        },
+        {
+          "source": "The Verge",
+          "article_count": 233,
+          "success_rate": 1.0,
+          "last_seen": "2026-05-13T00:07:24.499666+00:00",
+          "staleness_days": 0.17,
+          "score": 99.63
+        },
+        {
+          "source": "The Hill",
+          "article_count": 1260,
+          "success_rate": 1.0,
+          "last_seen": "2026-05-13T00:07:24.499666+00:00",
+          "staleness_days": 0.17,
+          "score": 99.63
+        },
+        {
+          "source": "GovInfo Bills",
+          "article_count": 825,
+          "success_rate": 1.0,
+          "last_seen": "2026-05-13T00:07:24.499666+00:00",
+          "staleness_days": 0.17,
+          "score": 99.63
+        },
+        {
+          "source": "GovInfo Congressional Reports",
+          "article_count": 101,
+          "success_rate": 1.0,
+          "last_seen": "2026-05-13T00:07:24.499666+00:00",
+          "staleness_days": 0.17,
+          "score": 99.63
+        },
+        {
+          "source": "Reddit r/law",
+          "article_count": 546,
+          "success_rate": 1.0,
+          "last_seen": "2026-05-13T00:07:24.499666+00:00",
+          "staleness_days": 0.17,
+          "score": 99.63
+        },
+        {
+          "source": "Reddit r/politics",
+          "article_count": 655,
+          "success_rate": 1.0,
+          "last_seen": "2026-05-13T00:07:24.499666+00:00",
+          "staleness_days": 0.17,
+          "score": 99.63
+        },
+        {
+          "source": "Reddit r/technology (Tech Policy)",
+          "article_count": 602,
+          "success_rate": 1.0,
+          "last_seen": "2026-05-13T00:07:24.499666+00:00",
+          "staleness_days": 0.17,
+          "score": 99.63
+        },
+        {
+          "source": "금융위원회 보도자료",
+          "article_count": 61,
+          "success_rate": 1.0,
+          "last_seen": "2026-05-13T00:07:24.499666+00:00",
+          "staleness_days": 0.17,
+          "score": 99.63
+        },
+        {
+          "source": "EFF Updates",
+          "article_count": 93,
+          "success_rate": 1.0,
+          "last_seen": "2026-05-13T00:07:24.499666+00:00",
+          "staleness_days": 0.17,
+          "score": 99.63
+        },
+        {
+          "source": "White House Presidential Actions",
+          "article_count": 42,
+          "success_rate": 1.0,
+          "last_seen": "2026-05-13T00:07:24.499666+00:00",
+          "staleness_days": 0.17,
+          "score": 99.63
+        },
+        {
+          "source": "CDC Media Releases",
+          "article_count": 50,
+          "success_rate": 1.0,
+          "last_seen": "2026-05-13T00:07:24.499666+00:00",
+          "staleness_days": 0.17,
+          "score": 99.63
+        },
+        {
+          "source": "ProPublica Congress",
+          "article_count": 59,
+          "success_rate": 1.0,
+          "last_seen": "2026-05-13T00:07:24.499666+00:00",
+          "staleness_days": 0.17,
+          "score": 99.63
+        },
+        {
+          "source": "CATO Institute",
+          "article_count": 74,
+          "success_rate": 1.0,
+          "last_seen": "2026-05-13T00:07:24.499666+00:00",
+          "staleness_days": 0.17,
+          "score": 99.63
+        },
+        {
+          "source": "금융위원회 보도설명",
+          "article_count": 16,
+          "success_rate": 1.0,
+          "last_seen": "2026-05-13T00:07:24.499666+00:00",
+          "staleness_days": 0.17,
+          "score": 99.63
+        },
+        {
+          "source": "SEC Speeches",
+          "article_count": 46,
+          "success_rate": 1.0,
+          "last_seen": "2026-05-13T00:07:24.499666+00:00",
+          "staleness_days": 0.17,
+          "score": 99.63
+        },
+        {
+          "source": "FDA News Releases",
+          "article_count": 36,
+          "success_rate": 1.0,
+          "last_seen": "2026-05-13T00:07:24.499666+00:00",
+          "staleness_days": 0.17,
+          "score": 99.63
+        },
+        {
+          "source": "SEC Press Releases",
+          "article_count": 26,
+          "success_rate": 1.0,
+          "last_seen": "2026-05-13T00:07:24.499666+00:00",
+          "staleness_days": 0.17,
+          "score": 99.63
+        },
+        {
+          "source": "NIST News",
+          "article_count": 9,
+          "success_rate": 1.0,
+          "last_seen": "2026-05-13T00:07:24.499666+00:00",
+          "staleness_days": 0.17,
+          "score": 99.63
+        },
+        {
+          "source": "CFPB Newsroom",
+          "article_count": 1,
+          "success_rate": 1.0,
+          "last_seen": "2026-05-13T00:07:24.499666+00:00",
+          "staleness_days": 0.17,
+          "score": 99.63
+        },
+        {
+          "source": "NIST Cybersecurity Insights",
+          "article_count": 5,
+          "success_rate": 1.0,
+          "last_seen": "2026-05-13T00:07:24.499666+00:00",
+          "staleness_days": 0.17,
+          "score": 99.63
+        },
+        {
+          "source": "GovInfo Federal Register",
+          "article_count": 21,
+          "success_rate": 1.0,
+          "last_seen": "2026-05-13T00:07:24.499666+00:00",
+          "staleness_days": 0.17,
+          "score": 99.63
+        },
+        {
+          "source": "UN News - Law and Crime",
+          "article_count": 13,
+          "success_rate": 1.0,
+          "last_seen": "2026-05-13T00:07:24.499666+00:00",
+          "staleness_days": 0.17,
+          "score": 99.63
+        },
+        {
+          "source": "UK Parliament Bills",
+          "article_count": 263,
+          "success_rate": 1.0,
+          "last_seen": "2026-05-08T03:32:28.128482+00:00",
+          "staleness_days": 5.03,
+          "score": 89.22
+        }
+      ]
+    },
+    {
+      "repo": "PropertyRadar",
+      "source_count": 8,
+      "avg_score": 86.86,
+      "low_score_count": 0,
+      "sources": [
+        {
+          "source": "한경 부동산",
+          "article_count": 48,
+          "success_rate": 1.0,
+          "last_seen": "2026-05-07T01:01:18.843335+00:00",
+          "staleness_days": 6.13,
+          "score": 86.86
+        },
+        {
+          "source": "매일경제 부동산",
+          "article_count": 48,
+          "success_rate": 1.0,
+          "last_seen": "2026-05-07T01:01:18.843335+00:00",
+          "staleness_days": 6.13,
+          "score": 86.86
+        },
+        {
+          "source": "Realtor.com News",
+          "article_count": 50,
+          "success_rate": 1.0,
+          "last_seen": "2026-05-07T01:01:18.843335+00:00",
+          "staleness_days": 6.13,
+          "score": 86.86
+        },
+        {
+          "source": "PropertyWire UK",
+          "article_count": 28,
+          "success_rate": 1.0,
+          "last_seen": "2026-05-07T01:01:18.843335+00:00",
+          "staleness_days": 6.13,
+          "score": 86.86
+        },
+        {
+          "source": "LH 공사",
+          "article_count": 1,
+          "success_rate": 1.0,
+          "last_seen": "2026-05-07T01:01:18.843335+00:00",
+          "staleness_days": 6.13,
+          "score": 86.86
+        },
+        {
+          "source": "SH 서울주택도시공사",
+          "article_count": 1,
+          "success_rate": 1.0,
+          "last_seen": "2026-05-07T01:01:18.843335+00:00",
+          "staleness_days": 6.13,
+          "score": 86.86
+        },
+        {
+          "source": "아파트실거래가",
+          "article_count": 1,
+          "success_rate": 1.0,
+          "last_seen": "2026-05-07T01:01:18.843335+00:00",
+          "staleness_days": 6.13,
+          "score": 86.86
+        },
+        {
+          "source": "부동산114",
+          "article_count": 1,
+          "success_rate": 1.0,
+          "last_seen": "2026-05-07T01:01:18.843335+00:00",
+          "staleness_days": 6.13,
+          "score": 86.86
+        }
+      ]
+    },
+    {
+      "repo": "QueueRadar",
+      "source_count": 23,
+      "avg_score": 98.04,
+      "low_score_count": 0,
+      "sources": [
+        {
+          "source": "Theme Park Insider",
+          "article_count": 29,
+          "success_rate": 1.0,
+          "last_seen": "2026-05-12T20:31:34.997843+00:00",
+          "staleness_days": 0.32,
+          "score": 99.31
+        },
+        {
+          "source": "Attractions Magazine",
+          "article_count": 113,
+          "success_rate": 1.0,
+          "last_seen": "2026-05-12T20:31:34.997843+00:00",
+          "staleness_days": 0.32,
+          "score": 99.31
+        },
+        {
+          "source": "Inside the Magic",
+          "article_count": 85,
+          "success_rate": 1.0,
+          "last_seen": "2026-05-12T20:31:34.997843+00:00",
+          "staleness_days": 0.32,
+          "score": 99.31
+        },
+        {
+          "source": "Blooloop",
+          "article_count": 91,
+          "success_rate": 1.0,
+          "last_seen": "2026-05-12T20:31:34.997843+00:00",
+          "staleness_days": 0.32,
+          "score": 99.31
+        },
+        {
+          "source": "Reddit r/KoreaTravel",
+          "article_count": 124,
+          "success_rate": 1.0,
+          "last_seen": "2026-05-12T20:31:34.997843+00:00",
+          "staleness_days": 0.32,
+          "score": 99.31
+        },
+        {
+          "source": "Park World Magazine",
+          "article_count": 24,
+          "success_rate": 1.0,
+          "last_seen": "2026-05-12T20:31:34.997843+00:00",
+          "staleness_days": 0.32,
+          "score": 99.31
+        },
+        {
+          "source": "Theme Park Tribune",
+          "article_count": 17,
+          "success_rate": 1.0,
+          "last_seen": "2026-05-12T20:31:34.997843+00:00",
+          "staleness_days": 0.32,
+          "score": 99.31
+        },
+        {
+          "source": "Coaster Nation",
+          "article_count": 12,
+          "success_rate": 1.0,
+          "last_seen": "2026-05-12T20:31:34.997843+00:00",
+          "staleness_days": 0.32,
+          "score": 99.31
+        },
+        {
+          "source": "WDWMAGIC News",
+          "article_count": 115,
+          "success_rate": 1.0,
+          "last_seen": "2026-05-12T20:31:34.997843+00:00",
+          "staleness_days": 0.32,
+          "score": 99.31
+        },
+        {
+          "source": "Disney Hollywood Studios",
+          "article_count": 24,
+          "success_rate": 1.0,
+          "last_seen": "2026-05-12T20:31:34.997843+00:00",
+          "staleness_days": 0.32,
+          "score": 99.31
+        },
+        {
+          "source": "Islands of Adventure",
+          "article_count": 27,
+          "success_rate": 1.0,
+          "last_seen": "2026-05-12T20:31:34.997843+00:00",
+          "staleness_days": 0.32,
+          "score": 99.31
+        },
+        {
+          "source": "Six Flags Magic Mountain",
+          "article_count": 40,
+          "success_rate": 1.0,
+          "last_seen": "2026-05-12T20:31:34.997843+00:00",
+          "staleness_days": 0.32,
+          "score": 99.31
+        },
+        {
+          "source": "Disney Magic Kingdom",
+          "article_count": 39,
+          "success_rate": 1.0,
+          "last_seen": "2026-05-12T20:31:34.997843+00:00",
+          "staleness_days": 0.32,
+          "score": 99.31
+        },
+        {
+          "source": "Epcot",
+          "article_count": 33,
+          "success_rate": 1.0,
+          "last_seen": "2026-05-12T20:31:34.997843+00:00",
+          "staleness_days": 0.32,
+          "score": 99.31
+        },
+        {
+          "source": "Animal Kingdom",
+          "article_count": 20,
+          "success_rate": 1.0,
+          "last_seen": "2026-05-12T20:31:34.997843+00:00",
+          "staleness_days": 0.32,
+          "score": 99.31
+        },
+        {
+          "source": "Disneyland",
+          "article_count": 50,
+          "success_rate": 1.0,
+          "last_seen": "2026-05-12T20:31:34.997843+00:00",
+          "staleness_days": 0.32,
+          "score": 99.31
+        },
+        {
+          "source": "Disney California Adventure",
+          "article_count": 31,
+          "success_rate": 1.0,
+          "last_seen": "2026-05-12T20:31:34.997843+00:00",
+          "staleness_days": 0.32,
+          "score": 99.31
+        },
+        {
+          "source": "Universal Studios Orlando",
+          "article_count": 31,
+          "success_rate": 1.0,
+          "last_seen": "2026-05-12T20:31:34.997843+00:00",
+          "staleness_days": 0.32,
+          "score": 99.31
+        },
+        {
+          "source": "Universal Studios Hollywood",
+          "article_count": 28,
+          "success_rate": 1.0,
+          "last_seen": "2026-05-12T20:31:34.997843+00:00",
+          "staleness_days": 0.32,
+          "score": 99.31
+        },
+        {
+          "source": "Busch Gardens Tampa",
+          "article_count": 24,
+          "success_rate": 1.0,
+          "last_seen": "2026-05-12T20:31:34.997843+00:00",
+          "staleness_days": 0.32,
+          "score": 99.31
+        },
+        {
+          "source": "SeaWorld Orlando",
+          "article_count": 17,
+          "success_rate": 1.0,
+          "last_seen": "2026-05-12T20:31:34.997843+00:00",
+          "staleness_days": 0.32,
+          "score": 99.31
+        },
+        {
+          "source": "네이버 롯데월드 블로그",
+          "article_count": 6,
+          "success_rate": 1.0,
+          "last_seen": "2026-05-12T20:31:34.997843+00:00",
+          "staleness_days": 0.32,
+          "score": 99.31
+        },
+        {
+          "source": "Theme Park Crazy",
+          "article_count": 11,
+          "success_rate": 1.0,
+          "last_seen": "2026-04-22T20:18:22.196994+00:00",
+          "staleness_days": 20.33,
+          "score": 70.0
+        }
+      ]
+    },
+    {
+      "repo": "RefundRadar",
+      "source_count": 16,
+      "avg_score": 94.06,
+      "low_score_count": 0,
+      "sources": [
+        {
+          "source": "NerdWallet Finance",
+          "article_count": 124,
+          "success_rate": 1.0,
+          "last_seen": "2026-05-12T23:50:08.233866+00:00",
+          "staleness_days": 0.18,
+          "score": 99.61
+        },
+        {
+          "source": "MarketWatch",
+          "article_count": 279,
+          "success_rate": 1.0,
+          "last_seen": "2026-05-12T23:50:08.233866+00:00",
+          "staleness_days": 0.18,
+          "score": 99.61
+        },
+        {
+          "source": "Yonhap Economy",
+          "article_count": 1542,
+          "success_rate": 1.0,
+          "last_seen": "2026-05-12T23:50:08.233866+00:00",
+          "staleness_days": 0.18,
+          "score": 99.61
+        },
+        {
+          "source": "Money.com",
+          "article_count": 240,
+          "success_rate": 1.0,
+          "last_seen": "2026-05-12T23:50:08.233866+00:00",
+          "staleness_days": 0.18,
+          "score": 99.61
+        },
+        {
+          "source": "TurboTax Blog",
+          "article_count": 24,
+          "success_rate": 1.0,
+          "last_seen": "2026-05-12T23:50:08.233866+00:00",
+          "staleness_days": 0.18,
+          "score": 99.61
+        },
+        {
+          "source": "Taxpayer Advocate Service",
+          "article_count": 23,
+          "success_rate": 1.0,
+          "last_seen": "2026-05-12T23:50:08.233866+00:00",
+          "staleness_days": 0.18,
+          "score": 99.61
+        },
+        {
+          "source": "TaxAct Blog",
+          "article_count": 23,
+          "success_rate": 1.0,
+          "last_seen": "2026-05-12T23:50:08.233866+00:00",
+          "staleness_days": 0.18,
+          "score": 99.61
+        },
+        {
+          "source": "Tax Foundation Blog",
+          "article_count": 47,
+          "success_rate": 1.0,
+          "last_seen": "2026-05-12T23:50:08.233866+00:00",
+          "staleness_days": 0.18,
+          "score": 99.61
+        },
+        {
+          "source": "CPSC Recalls",
+          "article_count": 97,
+          "success_rate": 1.0,
+          "last_seen": "2026-05-12T23:50:08.233866+00:00",
+          "staleness_days": 0.18,
+          "score": 99.61
+        },
+        {
+          "source": "CFPB Newsroom",
+          "article_count": 1,
+          "success_rate": 1.0,
+          "last_seen": "2026-05-12T23:50:08.233866+00:00",
+          "staleness_days": 0.18,
+          "score": 99.61
+        },
+        {
+          "source": "IRS Newsroom",
+          "article_count": 1,
+          "success_rate": 1.0,
+          "last_seen": "2026-05-12T23:50:08.233866+00:00",
+          "staleness_days": 0.18,
+          "score": 99.61
+        },
+        {
+          "source": "WeTax (위택스)",
+          "article_count": 1,
+          "success_rate": 1.0,
+          "last_seen": "2026-05-12T23:50:08.233866+00:00",
+          "staleness_days": 0.18,
+          "score": 99.61
+        },
+        {
+          "source": "한국소비자원 리콜정보",
+          "article_count": 1,
+          "success_rate": 1.0,
+          "last_seen": "2026-05-12T23:50:08.233866+00:00",
+          "staleness_days": 0.18,
+          "score": 99.61
+        },
+        {
+          "source": "Lawsuit Information Center",
+          "article_count": 27,
+          "success_rate": 1.0,
+          "last_seen": "2026-04-23T01:19:48.547829+00:00",
+          "staleness_days": 20.12,
+          "score": 70.0
+        },
+        {
+          "source": "공정거래위원회 보도자료",
+          "article_count": 1,
+          "success_rate": 1.0,
+          "last_seen": "2026-04-24T01:19:31.991196+00:00",
+          "staleness_days": 19.12,
+          "score": 70.0
+        },
+        {
+          "source": "식품의약품안전처 리콜",
+          "article_count": 1,
+          "success_rate": 1.0,
+          "last_seen": "2026-04-28T01:29:04.066518+00:00",
+          "staleness_days": 15.11,
+          "score": 70.0
+        }
+      ]
+    },
+    {
+      "repo": "SubscriptionRadar",
+      "source_count": 28,
+      "avg_score": 91.99,
+      "low_score_count": 0,
+      "sources": [
+        {
+          "source": "9to5Google",
+          "article_count": 13,
+          "success_rate": 1.0,
+          "last_seen": "2026-05-12T20:40:48.406304+00:00",
+          "staleness_days": 0.32,
+          "score": 99.32
+        },
+        {
+          "source": "Engadget",
+          "article_count": 20,
+          "success_rate": 1.0,
+          "last_seen": "2026-05-12T20:40:48.406304+00:00",
+          "staleness_days": 0.32,
+          "score": 99.32
+        },
+        {
+          "source": "SaaStr",
+          "article_count": 14,
+          "success_rate": 1.0,
+          "last_seen": "2026-05-12T20:40:48.406304+00:00",
+          "staleness_days": 0.32,
+          "score": 99.32
+        },
+        {
+          "source": "Financial Times - Technology",
+          "article_count": 6,
+          "success_rate": 1.0,
+          "last_seen": "2026-05-12T20:40:48.406304+00:00",
+          "staleness_days": 0.32,
+          "score": 99.32
+        },
+        {
+          "source": "9to5Mac",
+          "article_count": 10,
+          "success_rate": 1.0,
+          "last_seen": "2026-05-12T20:40:48.406304+00:00",
+          "staleness_days": 0.32,
+          "score": 99.32
+        },
+        {
+          "source": "Netflix TechBlog",
+          "article_count": 4,
+          "success_rate": 1.0,
+          "last_seen": "2026-05-12T20:40:48.406304+00:00",
+          "staleness_days": 0.32,
+          "score": 99.32
+        },
+        {
+          "source": "Apple App Store Top Free US",
+          "article_count": 7,
+          "success_rate": 1.0,
+          "last_seen": "2026-05-12T20:40:48.406304+00:00",
+          "staleness_days": 0.32,
+          "score": 99.32
+        },
+        {
+          "source": "Wired",
+          "article_count": 15,
+          "success_rate": 1.0,
+          "last_seen": "2026-05-12T20:40:48.406304+00:00",
+          "staleness_days": 0.32,
+          "score": 99.32
+        },
+        {
+          "source": "Subscription Insider",
+          "article_count": 14,
+          "success_rate": 1.0,
+          "last_seen": "2026-05-12T20:40:48.406304+00:00",
+          "staleness_days": 0.32,
+          "score": 99.32
+        },
+        {
+          "source": "CNET Tech",
+          "article_count": 3,
+          "success_rate": 1.0,
+          "last_seen": "2026-05-12T20:40:48.406304+00:00",
+          "staleness_days": 0.32,
+          "score": 99.32
+        },
+        {
+          "source": "Product Hunt",
+          "article_count": 1,
+          "success_rate": 1.0,
+          "last_seen": "2026-05-12T20:40:48.406304+00:00",
+          "staleness_days": 0.32,
+          "score": 99.32
+        },
+        {
+          "source": "Spotify Newsroom",
+          "article_count": 1,
+          "success_rate": 1.0,
+          "last_seen": "2026-05-12T20:40:48.406304+00:00",
+          "staleness_days": 0.32,
+          "score": 99.32
+        },
+        {
+          "source": "Apple App Store Top Free KR",
+          "article_count": 3,
+          "success_rate": 1.0,
+          "last_seen": "2026-05-12T20:40:48.406304+00:00",
+          "staleness_days": 0.32,
+          "score": 99.32
+        },
+        {
+          "source": "Netflix Plans & Pricing",
+          "article_count": 1,
+          "success_rate": 1.0,
+          "last_seen": "2026-05-12T20:40:48.406304+00:00",
+          "staleness_days": 0.32,
+          "score": 99.32
+        },
+        {
+          "source": "Spotify Premium Pricing",
+          "article_count": 1,
+          "success_rate": 1.0,
+          "last_seen": "2026-05-12T20:40:48.406304+00:00",
+          "staleness_days": 0.32,
+          "score": 99.32
+        },
+        {
+          "source": "Apple One Pricing",
+          "article_count": 1,
+          "success_rate": 1.0,
+          "last_seen": "2026-05-12T20:40:48.406304+00:00",
+          "staleness_days": 0.32,
+          "score": 99.32
+        },
+        {
+          "source": "Notion Pricing",
+          "article_count": 1,
+          "success_rate": 1.0,
+          "last_seen": "2026-05-12T20:40:48.406304+00:00",
+          "staleness_days": 0.32,
+          "score": 99.32
+        },
+        {
+          "source": "Basecamp Pricing",
+          "article_count": 1,
+          "success_rate": 1.0,
+          "last_seen": "2026-05-12T20:40:48.406304+00:00",
+          "staleness_days": 0.32,
+          "score": 99.32
+        },
+        {
+          "source": "TVING 공지사항",
+          "article_count": 1,
+          "success_rate": 1.0,
+          "last_seen": "2026-05-12T20:40:48.406304+00:00",
+          "staleness_days": 0.32,
+          "score": 99.32
+        },
+        {
+          "source": "Wavve 공지사항",
+          "article_count": 1,
+          "success_rate": 1.0,
+          "last_seen": "2026-05-12T20:40:48.406304+00:00",
+          "staleness_days": 0.32,
+          "score": 99.32
+        },
+        {
+          "source": "밀리의서재",
+          "article_count": 1,
+          "success_rate": 1.0,
+          "last_seen": "2026-05-12T20:40:48.406304+00:00",
+          "staleness_days": 0.32,
+          "score": 99.32
+        },
+        {
+          "source": "Linus Tech Tips",
+          "article_count": 6,
+          "success_rate": 1.0,
+          "last_seen": "2026-04-24T05:51:00.120270+00:00",
+          "staleness_days": 18.93,
+          "score": 70.0
+        },
+        {
+          "source": "r/cordcutters",
+          "article_count": 1,
+          "success_rate": 1.0,
+          "last_seen": "2026-04-14T11:30:19.028195+00:00",
+          "staleness_days": 28.7,
+          "score": 70.0
+        },
+        {
+          "source": "TechCrunch",
+          "article_count": 2,
+          "success_rate": 1.0,
+          "last_seen": "2026-04-28T15:07:37.166764+00:00",
+          "staleness_days": 14.55,
+          "score": 70.0
+        },
+        {
+          "source": "Techmeme",
+          "article_count": 2,
+          "success_rate": 1.0,
+          "last_seen": "2026-04-24T13:51:45.465084+00:00",
+          "staleness_days": 18.6,
+          "score": 70.0
+        },
+        {
+          "source": "Subscription Economy News",
+          "article_count": 8,
+          "success_rate": 1.0,
+          "last_seen": "2026-04-25T03:18:16.659567+00:00",
+          "staleness_days": 18.04,
+          "score": 70.0
+        },
+        {
+          "source": "Bloomberg Technology",
+          "article_count": 1,
+          "success_rate": 1.0,
+          "last_seen": "2026-04-24T13:51:45.465084+00:00",
+          "staleness_days": 18.6,
+          "score": 70.0
+        },
+        {
+          "source": "The Verge",
+          "article_count": 1,
+          "success_rate": 1.0,
+          "last_seen": "2026-04-25T03:18:16.659567+00:00",
+          "staleness_days": 18.04,
+          "score": 70.0
+        }
+      ]
+    }
+  ]
+}
