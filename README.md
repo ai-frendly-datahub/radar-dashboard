@@ -24,11 +24,13 @@ Generated outputs:
 - `data/projects.json`, `data/summary.json` 기반 canonical 메인 대시보드
 - `data/classification.json` 기반 taxonomy 점검 페이지
 - `data/data-quality.json` 기반 데이터 품질 점검 페이지 (`disabled_source_classification` bucket panel + per-row chips 포함)
+- `data/data-quality-panel.json` 기반 5-dimension 품질 scorecard 페이지
 - `data/daily-collection.json` 기반 일일 수집 계약 점검 페이지
 - `data/taxonomy-analysis.json` 기반 통합 taxonomy/risk 분석 페이지
 - `data/storage-facts.json` 기반 워크스페이스 storage footprint 페이지 (raw / DuckDB / signal table / ontology / event_model 적재 점검)
 - `data/event-model-rollout.json` 기반 event model coverage 페이지 (rollup, namespace × repo grid, coverage progression panel)
-- 7개 페이지 HTML: `index.html` / `classification.html` / `data-quality.html` / `daily-collection.html` / `taxonomy-analysis.html` / `storage.html` / `event-model.html`, plus `dashboard.html` redirect alias
+- `data/source-reliability.json` 기반 source reliability scoreboard 페이지
+- 10개 페이지 HTML: `index.html` / `dashboard.html` / `classification.html` / `data-quality.html` / `data-quality-panel.html` / `daily-collection.html` / `taxonomy-analysis.html` / `storage.html` / `event-model.html` / `source-reliability.html`
 - 예전 PNG 자산은 참고용 스냅샷으로 남아 있음
 
 즉, 현재는 완전한 애플리케이션형 대시보드는 아니지만, 워크스페이스 집계와 taxonomy 점검을 자동 생성하는 정적 대시보드까지는 올라온 상태입니다.
@@ -157,6 +159,7 @@ PYTHONPATH=radar-core python3 radar-analysis/scripts/build_workspace_analysis.py
 python3 radar-dashboard/scripts/build_dashboard_dataset.py
 python3 radar-dashboard/scripts/build_classification_dataset.py
 python3 radar-dashboard/scripts/build_data_quality_dataset.py
+python3 radar-dashboard/scripts/build_data_quality_panel_dataset.py
 python3 radar-dashboard/scripts/build_daily_collection_dataset.py
 python3 radar-dashboard/scripts/build_storage_event_model_dataset.py
 python3 radar-dashboard/scripts/build_taxonomy_analysis_dataset.py
@@ -165,17 +168,20 @@ python3 radar-dashboard/scripts/build_taxonomy_analysis_dataset.py
 python3 radar-dashboard/scripts/build_dashboard_html.py
 python3 radar-dashboard/scripts/build_classification_dashboard.py
 python3 radar-dashboard/scripts/build_data_quality_dashboard.py
+python3 radar-dashboard/scripts/build_data_quality_panel_html.py
 python3 radar-dashboard/scripts/build_daily_collection_dashboard.py
 python3 radar-dashboard/scripts/build_taxonomy_analysis_dashboard.py
 python3 radar-dashboard/scripts/build_storage_dashboard.py
 python3 radar-dashboard/scripts/build_event_model_dashboard.py
+python3 radar-dashboard/scripts/build_source_reliability_html.py
+python3 radar-dashboard/scripts/check_dashboard_artifact_boundary.py
 ```
 
 <!-- DATAHUB-OPS-AUDIT:START -->
 ## DataHub Operations
 
 - CI/CD workflows: none detected under `.github/workflows/`.
-- GitHub Pages visualization: root static pages: `classification.html`, `daily-collection.html`, `dashboard.html`, `data-quality.html`, `event-model.html`, `index.html`, `storage.html`, `taxonomy-analysis.html`; no Pages deployment workflow detected.
+- GitHub Pages visualization: root static pages: `classification.html`, `daily-collection.html`, `dashboard.html`, `data-quality-panel.html`, `data-quality.html`, `event-model.html`, `index.html`, `source-reliability.html`, `storage.html`, `taxonomy-analysis.html`; no Pages deployment workflow detected.
 - Latest remote Pages check: not applicable.
 - Local workspace audit: 10 Python files parsed, 0 syntax errors.
 - Re-run audit from the workspace root: `python scripts/audit_ci_pages_readme.py --syntax-check --write`.

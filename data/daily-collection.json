@@ -1,5 +1,5 @@
 {
-  "generated_at": "2026-05-13T10:12:37.119206+00:00",
+  "generated_at": "2026-05-13T16:57:51.510958+00:00",
   "contract": {
     "required_checks": [
       "scheduled_workflow",
@@ -21,8 +21,8 @@
     "description": "Daily collectors must run on a schedule, keep date-partitioned raw records, and create date-addressable DuckDB snapshots with retention controls. Both snapshot path families are valid to preserve repo-local compatibility."
   },
   "summary": {
-    "not_applicable": 3,
-    "ok": 37
+    "not_applicable": 2,
+    "ok": 38
   },
   "repos": [
     {
@@ -192,6 +192,36 @@
       "date_storage_files": [],
       "raw_logger_files": [],
       "notes": []
+    },
+    {
+      "repo": "CommerceRadar",
+      "repo_type": "radar",
+      "status": "ok",
+      "missing_required": [],
+      "checks": {
+        "scheduled_workflow": true,
+        "workflow_snapshot_enabled": true,
+        "date_storage_module": true,
+        "snapshot_function": true,
+        "snapshot_path_by_date": true,
+        "raw_data_by_date": true,
+        "retention_cli": true,
+        "dated_report_or_artifact": false
+      },
+      "workflow_files": [
+        ".github/workflows/ci.yml",
+        ".github/workflows/health-check.yml",
+        ".github/workflows/pr-checks.yml",
+        ".github/workflows/radar-crawler.yml",
+        ".github/workflows/release.yml"
+      ],
+      "date_storage_files": [
+        "commerceradar/date_storage.py"
+      ],
+      "raw_logger_files": [],
+      "notes": [
+        "No explicit dated HTML/report artifact pattern detected; raw + DB snapshots still satisfy the required daily data record contract."
+      ]
     },
     {
       "repo": "CryptoRadar",
@@ -1156,16 +1186,6 @@
       ],
       "notes": [
         "No explicit dated HTML/report artifact pattern detected; raw + DB snapshots still satisfy the required daily data record contract."
-      ]
-    },
-    {
-      "repo": "CommerceRadar",
-      "repo_type": "non-standard",
-      "status": "not_applicable",
-      "missing_required": [],
-      "checks": {},
-      "notes": [
-        "Independent analytics/product prototype; not a scheduled radar-core daily collector."
       ]
     }
   ]

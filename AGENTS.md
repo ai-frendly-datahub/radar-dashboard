@@ -19,20 +19,24 @@ radar-dashboard/
 ├── index.html                   # 메인 대시보드 (storage / event-model teaser 포함)
 ├── classification.html          # workspace taxonomy 점검판
 ├── data-quality.html            # workspace data quality 점검판 (disabled bucket panel + per-row chips)
+├── data-quality-panel.html      # 5-dimension quality scorecard
 ├── daily-collection.html        # workspace daily collection 계약 점검판
 ├── taxonomy-analysis.html       # 통합 taxonomy / risk 분석판
 ├── storage.html                 # workspace storage footprint 점검판
 ├── event-model.html             # event model coverage 점검판 (rollup + namespace × repo grid + progression panel)
+├── source-reliability.html      # source reliability scoreboard
 ├── dashboard.html               # redirect alias
 ├── data/
 │   ├── projects.json
 │   ├── summary.json
 │   ├── classification.json
 │   ├── data-quality.json
+│   ├── data-quality-panel.json
 │   ├── daily-collection.json
 │   ├── taxonomy-analysis.json
 │   ├── storage-facts.json       # radar-analysis 마트 사본
-│   └── event-model-rollout.json # radar-analysis 마트 사본
+│   ├── event-model-rollout.json # radar-analysis 마트 사본
+│   └── source-reliability.json  # radar-analysis source reliability 마트 사본
 ├── scripts/
 │   ├── build_dashboard_dataset.py
 │   ├── build_dashboard_html.py
@@ -40,13 +44,17 @@ radar-dashboard/
 │   ├── build_classification_dashboard.py
 │   ├── build_data_quality_dataset.py
 │   ├── build_data_quality_dashboard.py
+│   ├── build_data_quality_panel_dataset.py
+│   ├── build_data_quality_panel_html.py
 │   ├── build_daily_collection_dataset.py
 │   ├── build_daily_collection_dashboard.py
 │   ├── build_taxonomy_analysis_dataset.py
 │   ├── build_taxonomy_analysis_dashboard.py
 │   ├── build_storage_event_model_dataset.py
 │   ├── build_storage_dashboard.py
-│   └── build_event_model_dashboard.py
+│   ├── build_event_model_dashboard.py
+│   ├── build_source_reliability_html.py
+│   └── check_dashboard_artifact_boundary.py
 └── *.png                        # 예전 수동 스냅샷 자산
 ```
 
@@ -72,6 +80,7 @@ radar-dashboard/
 - Phase 6 storage / event-model 데이터셋 동기화는 `scripts/build_storage_event_model_dataset.py`로 `radar-analysis/data/exports/storage_facts.json` 와 `event_model_rollout.json` 을 복사합니다.
 - Phase 6 storage 점검 페이지 생성은 `scripts/build_storage_dashboard.py`를 사용합니다.
 - Phase 6 event-model 점검 페이지 생성은 `scripts/build_event_model_dashboard.py`를 사용하며, `data/storage-facts.json` 을 optional 입력으로 받아 coverage progression panel을 렌더합니다.
+- `scripts/check_dashboard_artifact_boundary.py`는 commit 대상 dashboard JSON/HTML 목록과 committed HTML 재현성을 검증합니다.
 - 모든 dashboard 페이지는 cross-page nav (Main / Classification / Quality / Daily Collection / Taxonomy Analysis / Storage / Event Model) 를 일관되게 노출합니다.
 
 ## NOTES

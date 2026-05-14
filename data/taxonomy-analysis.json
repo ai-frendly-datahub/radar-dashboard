@@ -1,5 +1,5 @@
 {
-  "generated_at": "2026-05-13T16:43:14.331963+00:00",
+  "generated_at": "2026-05-13T17:18:05.841544+00:00",
   "workspace_root": "/mnt/c/projects/ai-frendly-datahub",
   "inputs": {
     "projects_json": "radar-dashboard/data/projects.json",
@@ -15,8 +15,8 @@
     "article_total": 2963,
     "matched_total": 2963,
     "overall_match_rate": 100.0,
-    "dashboard_generated_at": "2026-05-13T16:43:01.776873+00:00",
-    "project_data_generated_at": "2026-05-13T16:43:01.776696+00:00",
+    "dashboard_generated_at": "2026-05-13T17:17:56.924434+00:00",
+    "project_data_generated_at": "2026-05-13T17:17:56.924243+00:00",
     "classification_generated_at": "2026-05-13T10:12:47.539050+00:00",
     "collection_error_total": 1,
     "freshness_gap_total": 7,

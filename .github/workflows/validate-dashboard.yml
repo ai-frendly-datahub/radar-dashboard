@@ -7,12 +7,14 @@ on:
       - "*.html"
       - "data/**"
       - "scripts/**"
+      - "tests/**"
       - ".github/workflows/validate-dashboard.yml"
   pull_request:
     paths:
       - "*.html"
       - "data/**"
       - "scripts/**"
+      - "tests/**"
       - ".github/workflows/validate-dashboard.yml"
   workflow_dispatch:
 
@@ -34,17 +36,5 @@ jobs:
         with:
           python-version: "3.11"
 
-      - name: Render dashboards from committed datasets
-        run: |
-          out_dir="$(mktemp -d)"
-          python scripts/build_dashboard_html.py --data-dir data --output-dir "$out_dir"
-          python scripts/build_classification_dashboard.py --data-path data/classification.json --output "$out_dir/classification.html"
-          python scripts/build_data_quality_dashboard.py --data-path data/data-quality.json --output "$out_dir/data-quality.html"
-          python scripts/build_daily_collection_dashboard.py --data-path data/daily-collection.json --output "$out_dir/daily-collection.html"
-          python scripts/build_taxonomy_analysis_dashboard.py --data-path data/taxonomy-analysis.json --output "$out_dir/taxonomy-analysis.html"
-          test -f "$out_dir/index.html"
-          test -f "$out_dir/dashboard.html"
-          test -f "$out_dir/classification.html"
-          test -f "$out_dir/data-quality.html"
-          test -f "$out_dir/daily-collection.html"
-          test -f "$out_dir/taxonomy-analysis.html"
+      - name: Validate committed generated artifact boundary
+        run: python scripts/check_dashboard_artifact_boundary.py

@@ -12,6 +12,8 @@ CLASS_LABELS = {
     "shared-core": "Shared Core",
     "shared-template": "Shared Template",
     "shared-dashboard": "Shared Dashboard",
+    "shared-analysis": "Shared Analysis",
+    "shared-ontology": "Shared Ontology",
     "standard-radar": "Standard Radar",
     "advanced-radar": "Advanced Radar",
 }
