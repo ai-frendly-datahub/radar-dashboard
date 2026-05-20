@@ -1,5 +1,5 @@
 {
-  "generated_at": "2026-05-20T03:30:30.974648+00:00",
+  "generated_at": "2026-05-20T11:42:42.633153+00:00",
   "median_article_count": 106,
   "family_median_article_counts": {
     "standard": 186.0,
@@ -10,6 +10,20 @@
   "target_sources_per_repo": 8,
   "rows": [
     {
+      "repo": "FoodRadar",
+      "family": "standard",
+      "article_count": 170,
+      "matched_count": 170,
+      "source_count": 10,
+      "match_rate": 100.0,
+      "completeness": 1.0,
+      "timeliness": 0.9627,
+      "volume": 1.0,
+      "diversity": 1.0,
+      "consistency": 1.0,
+      "score": 99.3
+    },
+    {
       "repo": "QueueRadar",
       "family": "standard",
       "article_count": 176,
@@ -17,11 +31,11 @@
       "source_count": 21,
       "match_rate": 100.0,
       "completeness": 1.0,
-      "timeliness": 0.9878,
+      "timeliness": 0.9634,
       "volume": 1.0,
       "diversity": 1.0,
       "consistency": 1.0,
-      "score": 99.8
+      "score": 99.3
     },
     {
       "repo": "BenefitRadar",
@@ -31,25 +45,11 @@
       "source_count": 15,
       "match_rate": 100.0,
       "completeness": 1.0,
-      "timeliness": 0.9839,
+      "timeliness": 0.9595,
       "volume": 1.0,
       "diversity": 1.0,
       "consistency": 1.0,
-      "score": 99.7
-    },
-    {
-      "repo": "FoodRadar",
-      "family": "standard",
-      "article_count": 170,
-      "matched_count": 170,
-      "source_count": 10,
-      "match_rate": 100.0,
-      "completeness": 1.0,
-      "timeliness": 0.9871,
-      "volume": 1.0,
-      "diversity": 1.0,
-      "consistency": 1.0,
-      "score": 99.7
+      "score": 99.2
     },
     {
       "repo": "SubscriptionRadar",
@@ -59,11 +59,11 @@
       "source_count": 23,
       "match_rate": 100.0,
       "completeness": 1.0,
-      "timeliness": 0.9838,
+      "timeliness": 0.9594,
       "volume": 1.0,
       "diversity": 1.0,
       "consistency": 1.0,
-      "score": 99.7
+      "score": 99.2
     },
     {
       "repo": "BookRadar",
@@ -73,11 +73,11 @@
       "source_count": 19,
       "match_rate": 100.0,
       "completeness": 1.0,
-      "timeliness": 0.9582,
+      "timeliness": 0.9337,
       "volume": 1.0,
       "diversity": 1.0,
       "consistency": 1.0,
-      "score": 99.2
+      "score": 98.7
     },
     {
       "repo": "CryptoRadar",
@@ -87,11 +87,11 @@
       "source_count": 12,
       "match_rate": 100.0,
       "completeness": 1.0,
-      "timeliness": 0.9582,
+      "timeliness": 0.9337,
       "volume": 1.0,
       "diversity": 1.0,
       "consistency": 1.0,
-      "score": 99.2
+      "score": 98.7
     },
     {
       "repo": "JobRadar",
@@ -101,11 +101,11 @@
       "source_count": 14,
       "match_rate": 100.0,
       "completeness": 1.0,
-      "timeliness": 0.9582,
+      "timeliness": 0.9338,
       "volume": 1.0,
       "diversity": 1.0,
       "consistency": 1.0,
-      "score": 99.2
+      "score": 98.7
     },
     {
       "repo": "MobilityRadar",
@@ -115,11 +115,11 @@
       "source_count": 14,
       "match_rate": 100.0,
       "completeness": 1.0,
-      "timeliness": 0.9582,
+      "timeliness": 0.9338,
       "volume": 1.0,
       "diversity": 1.0,
       "consistency": 1.0,
-      "score": 99.2
+      "score": 98.7
     },
     {
       "repo": "MovieRadar",
@@ -129,11 +129,11 @@
       "source_count": 10,
       "match_rate": 100.0,
       "completeness": 1.0,
-      "timeliness": 0.9582,
+      "timeliness": 0.9338,
       "volume": 1.0,
       "diversity": 1.0,
       "consistency": 1.0,
-      "score": 99.2
+      "score": 98.7
     },
     {
       "repo": "PaperworkRadar",
@@ -143,11 +143,11 @@
       "source_count": 15,
       "match_rate": 100.0,
       "completeness": 1.0,
-      "timeliness": 0.9582,
+      "timeliness": 0.9338,
       "volume": 1.0,
       "diversity": 1.0,
       "consistency": 1.0,
-      "score": 99.2
+      "score": 98.7
     },
     {
       "repo": "PolicyRadar",
@@ -157,11 +157,11 @@
       "source_count": 15,
       "match_rate": 100.0,
       "completeness": 1.0,
-      "timeliness": 0.9582,
+      "timeliness": 0.9338,
       "volume": 1.0,
       "diversity": 1.0,
       "consistency": 1.0,
-      "score": 99.2
+      "score": 98.7
     },
     {
       "repo": "PropertyRadar",
@@ -171,11 +171,11 @@
       "source_count": 8,
       "match_rate": 100.0,
       "completeness": 1.0,
-      "timeliness": 0.9585,
+      "timeliness": 0.9341,
       "volume": 1.0,
       "diversity": 1.0,
       "consistency": 1.0,
-      "score": 99.2
+      "score": 98.7
     },
     {
       "repo": "RefundRadar",
@@ -185,11 +185,11 @@
       "source_count": 11,
       "match_rate": 100.0,
       "completeness": 1.0,
-      "timeliness": 0.9582,
+      "timeliness": 0.9338,
       "volume": 1.0,
       "diversity": 1.0,
       "consistency": 1.0,
-      "score": 99.2
+      "score": 98.7
     },
     {
       "repo": "TrustRadar",
@@ -199,11 +199,11 @@
       "source_count": 11,
       "match_rate": 100.0,
       "completeness": 1.0,
-      "timeliness": 0.9596,
+      "timeliness": 0.9352,
       "volume": 1.0,
       "diversity": 1.0,
       "consistency": 1.0,
-      "score": 99.2
+      "score": 98.7
     },
     {
       "repo": "GovRadar",
@@ -213,11 +213,11 @@
       "source_count": 10,
       "match_rate": 100.0,
       "completeness": 1.0,
-      "timeliness": 0.9839,
+      "timeliness": 0.9595,
       "volume": 0.9795,
       "diversity": 1.0,
       "consistency": 0.9677,
-      "score": 98.7
+      "score": 98.2
     },
     {
       "repo": "WineRadar",
@@ -227,11 +227,11 @@
       "source_count": 18,
       "match_rate": 100.0,
       "completeness": 1.0,
-      "timeliness": 0.9898,
+      "timeliness": 0.9654,
       "volume": 0.9256,
       "diversity": 1.0,
       "consistency": 1.0,
-      "score": 98.7
+      "score": 98.2
     },
     {
       "repo": "PaperRadar",
@@ -241,11 +241,11 @@
       "source_count": 15,
       "match_rate": 95.0,
       "completeness": 0.9504,
-      "timeliness": 0.9975,
+      "timeliness": 0.9731,
       "volume": 1.0,
       "diversity": 1.0,
       "consistency": 1.0,
-      "score": 98.5
+      "score": 98.0
     },
     {
       "repo": "BlogRadar",
@@ -255,11 +255,11 @@
       "source_count": 47,
       "match_rate": 100.0,
       "completeness": 1.0,
-      "timeliness": 0.9582,
+      "timeliness": 0.9337,
       "volume": 1.0,
       "diversity": 1.0,
       "consistency": 0.6584,
-      "score": 92.3
+      "score": 91.8
     },
     {
       "repo": "PriceRadar",
@@ -269,11 +269,11 @@
       "source_count": 4,
       "match_rate": 100.0,
       "completeness": 1.0,
-      "timeliness": 0.9592,
+      "timeliness": 0.9347,
       "volume": 1.0,
       "diversity": 0.5,
       "consistency": 1.0,
-      "score": 91.7
+      "score": 91.2
     },
     {
       "repo": "HomeRadar",
@@ -283,11 +283,11 @@
       "source_count": 3,
       "match_rate": 100.0,
       "completeness": 1.0,
-      "timeliness": 0.9865,
+      "timeliness": 0.9621,
       "volume": 1.0,
       "diversity": 0.375,
       "consistency": 1.0,
-      "score": 90.4
+      "score": 89.9
     },
     {
       "repo": "EventRadar",
@@ -297,11 +297,11 @@
       "source_count": 25,
       "match_rate": 100.0,
       "completeness": 1.0,
-      "timeliness": 0.9841,
+      "timeliness": 0.9597,
       "volume": 1.0,
       "diversity": 1.0,
       "consistency": 0.498,
-      "score": 89.6
+      "score": 89.2
     },
     {
       "repo": "GameRadar",
@@ -311,11 +311,11 @@
       "source_count": 22,
       "match_rate": 100.0,
       "completeness": 1.0,
-      "timeliness": 0.9582,
+      "timeliness": 0.9338,
       "volume": 1.0,
       "diversity": 1.0,
       "consistency": 0.5082,
-      "score": 89.3
+      "score": 88.8
     },
     {
       "repo": "TrendRadar",
@@ -325,11 +325,11 @@
       "source_count": 2,
       "match_rate": 100.0,
       "completeness": 1.0,
-      "timeliness": 0.9591,
+      "timeliness": 0.9347,
       "volume": 1.0,
       "diversity": 0.25,
       "consistency": 1.0,
-      "score": 87.9
+      "score": 87.4
     },
     {
       "repo": "CommerceRadar",
@@ -339,11 +339,11 @@
       "source_count": 8,
       "match_rate": 100.0,
       "completeness": 1.0,
-      "timeliness": 0.959,
+      "timeliness": 0.9346,
       "volume": 0.2386,
       "diversity": 1.0,
       "consistency": 1.0,
-      "score": 87.8
+      "score": 87.3
     },
     {
       "repo": "CommerceMCPRadar",
@@ -353,11 +353,11 @@
       "source_count": 2,
       "match_rate": 100.0,
       "completeness": 1.0,
-      "timeliness": 0.9582,
+      "timeliness": 0.9338,
       "volume": 0.557,
       "diversity": 0.25,
       "consistency": 1.0,
-      "score": 81.3
+      "score": 80.8
     },
     {
       "repo": "KoreanNLPMCPRadar",
@@ -367,11 +367,11 @@
       "source_count": 3,
       "match_rate": 100.0,
       "completeness": 1.0,
-      "timeliness": 0.9584,
+      "timeliness": 0.934,
       "volume": 0.3891,
       "diversity": 0.375,
       "consistency": 1.0,
-      "score": 80.6
+      "score": 80.1
     },
     {
       "repo": "PublicDataMCPRadar",
@@ -381,11 +381,11 @@
       "source_count": 1,
       "match_rate": 100.0,
       "completeness": 1.0,
-      "timeliness": 0.959,
+      "timeliness": 0.9346,
       "volume": 0.5207,
       "diversity": 0.125,
       "consistency": 1.0,
-      "score": 78.9
+      "score": 78.4
     },
     {
       "repo": "MiscMCPRadar",
@@ -395,11 +395,11 @@
       "source_count": 1,
       "match_rate": 100.0,
       "completeness": 1.0,
-      "timeliness": 0.9706,
+      "timeliness": 0.9462,
       "volume": 0.5,
       "diversity": 0.125,
       "consistency": 1.0,
-      "score": 78.8
+      "score": 78.3
     },
     {
       "repo": "LegalGovMCPRadar",
@@ -409,11 +409,11 @@
       "source_count": 1,
       "match_rate": 100.0,
       "completeness": 1.0,
-      "timeliness": 0.959,
+      "timeliness": 0.9346,
       "volume": 0.5,
       "diversity": 0.125,
       "consistency": 1.0,
-      "score": 78.6
+      "score": 78.1
     },
     {
       "repo": "FinanceTaxMCPRadar",
@@ -423,11 +423,11 @@
       "source_count": 1,
       "match_rate": 100.0,
       "completeness": 1.0,
-      "timeliness": 0.9582,
+      "timeliness": 0.9338,
       "volume": 0.4771,
       "diversity": 0.125,
       "consistency": 1.0,
-      "score": 78.2
+      "score": 77.7
     },
     {
       "repo": "MapAddressMCPRadar",
@@ -437,11 +437,11 @@
       "source_count": 1,
       "match_rate": 100.0,
       "completeness": 1.0,
-      "timeliness": 0.959,
+      "timeliness": 0.9346,
       "volume": 0.4225,
       "diversity": 0.125,
       "consistency": 1.0,
-      "score": 77.4
+      "score": 76.9
     },
     {
       "repo": "WeatherMCPRadar",
@@ -451,11 +451,11 @@
       "source_count": 1,
       "match_rate": 100.0,
       "completeness": 1.0,
-      "timeliness": 0.9591,
+      "timeliness": 0.9346,
       "volume": 0.4225,
       "diversity": 0.125,
       "consistency": 1.0,
-      "score": 77.4
+      "score": 76.9
     },
     {
       "repo": "CollaborationMCPRadar",
@@ -465,11 +465,11 @@
       "source_count": 1,
       "match_rate": 100.0,
       "completeness": 1.0,
-      "timeliness": 0.9582,
+      "timeliness": 0.9338,
       "volume": 0.3495,
       "diversity": 0.125,
       "consistency": 1.0,
-      "score": 76.3
+      "score": 75.8
     },
     {
       "repo": "RealEstateMCPRadar",
@@ -479,11 +479,11 @@
       "source_count": 1,
       "match_rate": 100.0,
       "completeness": 1.0,
-      "timeliness": 0.959,
+      "timeliness": 0.9346,
       "volume": 0.301,
       "diversity": 0.125,
       "consistency": 1.0,
-      "score": 75.6
+      "score": 75.1
     },
     {
       "repo": "ArtRadar",
@@ -493,11 +493,11 @@
       "source_count": 5,
       "match_rate": 100.0,
       "completeness": 1.0,
-      "timeliness": 0.9861,
+      "timeliness": 0.9617,
       "volume": 0.7157,
       "diversity": 0.625,
       "consistency": 0.2796,
-      "score": 75.4
+      "score": 74.9
     },
     {
       "repo": "SearchTrendMCPRadar",
@@ -507,11 +507,11 @@
       "source_count": 1,
       "match_rate": 100.0,
       "completeness": 1.0,
-      "timeliness": 0.959,
+      "timeliness": 0.9346,
       "volume": 0.2386,
       "diversity": 0.125,
       "consistency": 0.6667,
-      "score": 68.0
+      "score": 67.5
     },
     {
       "repo": "TravelMCPRadar",
@@ -521,17 +521,17 @@
       "source_count": 1,
       "match_rate": 100.0,
       "completeness": 1.0,
-      "timeliness": 0.959,
+      "timeliness": 0.9346,
       "volume": 0.2386,
       "diversity": 0.125,
       "consistency": 0.6667,
-      "score": 68.0
+      "score": 67.5
     }
   ],
   "summary": {
     "repo_count": 37,
-    "avg_score": 89.47,
-    "p50_score": 91.7,
+    "avg_score": 88.97,
+    "p50_score": 91.2,
     "low_score_count": 2
   }
 }

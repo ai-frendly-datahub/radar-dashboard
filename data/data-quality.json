@@ -70,9 +70,9 @@
     ],
     "average_data_quality_score": 69.1,
     "disabled_source_classification_summary": {
-      "total_disabled_count": 184,
+      "total_disabled_count": 177,
       "bucket_totals": {
-        "awaiting_url_replacement": 44,
+        "awaiting_url_replacement": 37,
         "awaiting_secret": 21,
         "awaiting_smoke_test": 0,
         "upstream_section_missing": 1,
@@ -572,14 +572,14 @@
       "integration_candidates": [],
       "next_step": "daily_review_items를 운영 큐로 사용해 공식 primary env gate를 해소하고 listing·재고 후보는 ToS·stale listing 검증 후 단계적으로 활성화한다.",
       "disabled_source_classification": {
-        "awaiting_url_replacement": 2,
+        "awaiting_url_replacement": 1,
         "awaiting_secret": 0,
         "awaiting_smoke_test": 0,
         "upstream_section_missing": 0,
         "awaiting_partnership_review": 0,
         "accepted_backlog": 13
       },
-      "disabled_source_classification_total": 15
+      "disabled_source_classification_total": 14
     },
     {
       "repo": "TrustRadar",
@@ -737,14 +737,14 @@
       "integration_candidates": [],
       "next_step": "공식 일정 API, 티켓 판매·잔여석, venue calendar를 붙여 실행 가능성을 높인다.",
       "disabled_source_classification": {
-        "awaiting_url_replacement": 2,
+        "awaiting_url_replacement": 1,
         "awaiting_secret": 0,
         "awaiting_smoke_test": 0,
         "upstream_section_missing": 0,
         "awaiting_partnership_review": 0,
         "accepted_backlog": 6
       },
-      "disabled_source_classification_total": 8
+      "disabled_source_classification_total": 7
     },
     {
       "repo": "MobilityRadar",
@@ -1449,14 +1449,14 @@
       "integration_candidates": [],
       "next_step": "Steam charts, app store ranking, 콘솔 스토어 bestseller, patch note를 넣어 흥행 추적을 보강한다.",
       "disabled_source_classification": {
-        "awaiting_url_replacement": 8,
+        "awaiting_url_replacement": 7,
         "awaiting_secret": 0,
         "awaiting_smoke_test": 0,
         "upstream_section_missing": 0,
         "awaiting_partnership_review": 0,
         "accepted_backlog": 3
       },
-      "disabled_source_classification_total": 11
+      "disabled_source_classification_total": 10
     },
     {
       "repo": "QueueRadar",
@@ -1532,14 +1532,14 @@
       "integration_candidates": [],
       "next_step": "티켓 가격, 예약 슬롯, 날씨·시즈널리티를 합쳐 예측력을 높인다.",
       "disabled_source_classification": {
-        "awaiting_url_replacement": 2,
+        "awaiting_url_replacement": 0,
         "awaiting_secret": 0,
         "awaiting_smoke_test": 0,
         "upstream_section_missing": 0,
         "awaiting_partnership_review": 0,
         "accepted_backlog": 14
       },
-      "disabled_source_classification_total": 16
+      "disabled_source_classification_total": 14
     },
     {
       "repo": "ArtRadar",
@@ -1611,14 +1611,14 @@
       "integration_candidates": [],
       "next_step": "경매 낙찰가, 티켓 판매, 아트페어 참가사 같은 거래형 소스를 넣어 시장성 판단을 강화한다.",
       "disabled_source_classification": {
-        "awaiting_url_replacement": 3,
+        "awaiting_url_replacement": 1,
         "awaiting_secret": 0,
         "awaiting_smoke_test": 0,
         "upstream_section_missing": 0,
         "awaiting_partnership_review": 0,
         "accepted_backlog": 1
       },
-      "disabled_source_classification_total": 4
+      "disabled_source_classification_total": 2
     },
     {
       "repo": "MovieRadar",
