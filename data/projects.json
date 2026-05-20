@@ -1,5 +1,5 @@
 {
-  "generated_at": "2026-05-20T02:17:08.782476+00:00",
+  "generated_at": "2026-05-20T03:30:30.744604+00:00",
   "workspace_root": "/mnt/c/projects/ai-frendly-datahub",
   "projects": [
     {
@@ -1526,12 +1526,12 @@
       "source_count": 1,
       "match_rate": 100.0,
       "last_updated": "2026-05-19",
-      "generated_at": "2026-05-19T22:28:41.648643+00:00",
+      "generated_at": "2026-05-19T17:38:46.906163+00:00",
       "total_reports": 13,
       "report_index_path": "MiscMCPRadar/reports/index.html",
       "latest_report_path": "MiscMCPRadar/reports/index.html",
       "data_origin": "MiscMCPRadar/reports/misc_mcp_20260519_summary.json",
-      "quality_origin": "MiscMCPRadar/reports/misc_mcp_20260519_quality.json",
+      "quality_origin": "MiscMCPRadar/reports/misc_mcp_quality.json",
       "quality_summary": {
         "total_sources": 2,
         "enabled_sources": 1,
@@ -1744,17 +1744,17 @@
       "status": "active",
       "pipeline_kind": "summary_json",
       "has_summary_json": true,
-      "article_count": 159,
-      "matched_count": 159,
-      "source_count": 16,
-      "match_rate": 100.0,
+      "article_count": 363,
+      "matched_count": 345,
+      "source_count": 15,
+      "match_rate": 95.0,
       "last_updated": "2026-05-20",
-      "generated_at": "2026-05-20T08:09:45.957159+09:00",
+      "generated_at": "2026-05-20T11:39:57.231438+09:00",
       "total_reports": 16,
       "report_index_path": "PaperRadar/reports/index.html",
       "latest_report_path": "PaperRadar/reports/index.html",
       "data_origin": "PaperRadar/reports/research_20260520_summary.json",
-      "quality_origin": "PaperRadar/reports/research_20260519_quality.json",
+      "quality_origin": "PaperRadar/reports/research_quality.json",
       "quality_summary": {
         "total_sources": 23,
         "enabled_sources": 16,
@@ -1767,17 +1767,17 @@
         "not_tracked_sources": 7,
         "skipped_disabled_sources": 7,
         "collection_error_count": 0,
-        "paper_release_events": 430,
-        "citation_snapshot_events": 31,
+        "paper_release_events": 428,
+        "citation_snapshot_events": 30,
         "code_repository_events": 5,
         "benchmark_result_events": 0,
-        "research_signal_event_count": 466,
-        "paper_canonical_key_present_count": 461,
+        "research_signal_event_count": 463,
+        "paper_canonical_key_present_count": 458,
         "repository_canonical_key_present_count": 0,
         "benchmark_canonical_key_present_count": 0,
         "title_proxy_key_count": 10,
         "missing_canonical_key_count": 0,
-        "citation_count_present_count": 31,
+        "citation_count_present_count": 30,
         "code_repository_present_count": 33,
         "benchmark_metric_present_count": 0,
         "event_required_field_gap_count": 5,
@@ -1789,23 +1789,23 @@
       "top_entities": [
         {
           "name": "ResearchGeneral",
-          "count": 1387
-        },
-        {
-          "name": "Research Areas",
-          "count": 119
+          "count": 3582
         },
         {
           "name": "Tasks",
-          "count": 68
+          "count": 198
+        },
+        {
+          "name": "Research Areas",
+          "count": 194
         },
         {
           "name": "Techniques",
-          "count": 54
+          "count": 141
         },
         {
           "name": "Institutions",
-          "count": 23
+          "count": 43
         }
       ],
       "warnings": [
@@ -2911,17 +2911,17 @@
       "status": "active",
       "pipeline_kind": "summary_json",
       "has_summary_json": true,
-      "article_count": 63,
-      "matched_count": 63,
-      "source_count": 21,
+      "article_count": 70,
+      "matched_count": 70,
+      "source_count": 18,
       "match_rate": 100.0,
       "last_updated": "2026-05-20",
-      "generated_at": "2026-05-20T07:01:48.127972+09:00",
+      "generated_at": "2026-05-20T09:05:27.786480+09:00",
       "total_reports": 24,
       "report_index_path": "WineRadar/reports/index.html",
       "latest_report_path": "WineRadar/reports/index.html",
       "data_origin": "WineRadar/reports/wine_20260520_summary.json",
-      "quality_origin": "WineRadar/reports/wine_20260519_quality.json",
+      "quality_origin": "WineRadar/reports/wine_quality.json",
       "quality_summary": {
         "total_sources": 71,
         "tracked_sources": 32,
@@ -2943,7 +2943,7 @@
       "top_entities": [
         {
           "name": "topic",
-          "count": 106
+          "count": 112
         },
         {
           "name": "region",
@@ -2951,11 +2951,11 @@
         },
         {
           "name": "grape_variety",
-          "count": 41
+          "count": 40
         },
         {
           "name": "climate_zone",
-          "count": 31
+          "count": 32
         },
         {
           "name": "winery",

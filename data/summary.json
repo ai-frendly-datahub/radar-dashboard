@@ -1,14 +1,14 @@
 {
-  "generated_at": "2026-05-20T02:17:08.782659+00:00",
+  "generated_at": "2026-05-20T03:30:30.744761+00:00",
   "workspace_root": "/mnt/c/projects/ai-frendly-datahub",
   "projects_scanned": 37,
   "active_projects": 37,
   "projects_with_full_metrics": 37,
   "projects_with_partial_metrics": 0,
   "projects_missing_metrics": 0,
-  "article_total": 5398,
-  "matched_total": 5398,
-  "overall_match_rate": 100.0,
+  "article_total": 5609,
+  "matched_total": 5591,
+  "overall_match_rate": 99.7,
   "latest_updates": [
     {
       "repo": "ArtRadar",

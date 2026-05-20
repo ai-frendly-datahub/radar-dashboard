@@ -9,7 +9,11 @@ quality scorecard per repo (and a workspace-wide rollup):
 - timeliness   : 1 - min(staleness_days / 14, 1)
 - volume       : log10(article_count + 1) scaled to 0..1
 - diversity    : source_count / target_source_count (capped at 1.0)
-- consistency  : 1 - abs(article_count - rolling_median) / rolling_median
+- consistency  : symmetric ratio between this repo's article count and its
+                 family median, capped at 1.0 when within a 2x tolerance band
+                 (min/max ratio >= 0.5). Family cohorts are {standard, mcp,
+                 dict_pattern, non_standard} so structurally smaller MCPRadar
+                 repos are not penalized against general-purpose Radar volumes.
 
 The output JSON is consumed by ``data-quality.html`` (existing) and the new
 ``build_data_quality_panel_html.py`` builder.
@@ -29,6 +33,21 @@ DATA_DIR = DASHBOARD_ROOT / "data"
 OUT_PATH = DATA_DIR / "data-quality-panel.json"
 
 TARGET_SOURCES_PER_REPO = 8
+
+DICT_PATTERN_REPOS = frozenset({"HomeRadar", "PriceRadar", "TrendRadar", "WineRadar"})
+NON_STANDARD_REPOS = frozenset({"CommerceRadar"})
+
+
+def _repo_family(repo: str) -> str:
+    if not repo:
+        return "standard"
+    if repo.endswith("MCPRadar"):
+        return "mcp"
+    if repo in DICT_PATTERN_REPOS:
+        return "dict_pattern"
+    if repo in NON_STANDARD_REPOS:
+        return "non_standard"
+    return "standard"
 
 
 def _load_projects() -> list[dict]:
@@ -75,7 +94,12 @@ def _consistency(p: dict, median: float) -> float:
     article = int(p.get("article_count", 0) or 0)
     if median <= 0:
         return 0.0
-    return max(0.0, 1.0 - abs(article - median) / median)
+    if article <= 0:
+        return 0.0
+    ratio = min(article, median) / max(article, median)
+    if ratio >= 0.5:
+        return 1.0
+    return round(ratio * 2.0, 4)
 
 
 def _timeliness(p: dict) -> float:
@@ -85,17 +109,30 @@ def _timeliness(p: dict) -> float:
     return max(0.0, 1.0 - min(stale, 14.0) / 14.0)
 
 
+def _family_medians(projects: list[dict]) -> dict[str, float]:
+    buckets: dict[str, list[int]] = {}
+    for p in projects:
+        count = int(p.get("article_count", 0) or 0)
+        if count <= 0:
+            continue
+        buckets.setdefault(_repo_family(p.get("repo", "")), []).append(count)
+    return {fam: statistics.median(counts) for fam, counts in buckets.items()}
+
+
 def build_panel(projects: list[dict]) -> dict:
     article_counts = [int(p.get("article_count", 0) or 0) for p in projects if p.get("article_count")]
     median = statistics.median(article_counts) if article_counts else 0.0
+    family_medians = _family_medians(projects)
 
     rows: list[dict] = []
     for p in projects:
+        family = _repo_family(p.get("repo", ""))
+        family_median = family_medians.get(family, median)
         completeness = _completeness(p)
         timeliness = _timeliness(p)
         volume = _volume(p)
         diversity = _diversity(p)
-        consistency = _consistency(p, median)
+        consistency = _consistency(p, family_median)
         score = round(
             100 * (
                 0.30 * completeness
@@ -109,6 +146,7 @@ def build_panel(projects: list[dict]) -> dict:
         rows.append(
             {
                 "repo": p.get("repo"),
+                "family": family,
                 "article_count": int(p.get("article_count", 0) or 0),
                 "matched_count": int(p.get("matched_count", 0) or 0),
                 "source_count": int(p.get("source_count", 0) or 0),
@@ -126,6 +164,7 @@ def build_panel(projects: list[dict]) -> dict:
     return {
         "generated_at": datetime.now(UTC).isoformat(),
         "median_article_count": median,
+        "family_median_article_counts": {k: round(v, 1) for k, v in family_medians.items()},
         "target_sources_per_repo": TARGET_SOURCES_PER_REPO,
         "rows": rows,
         "summary": {
