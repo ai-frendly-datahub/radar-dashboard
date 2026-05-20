@@ -70,14 +70,14 @@
     ],
     "average_data_quality_score": 69.1,
     "disabled_source_classification_summary": {
-      "total_disabled_count": 183,
+      "total_disabled_count": 184,
       "bucket_totals": {
         "awaiting_url_replacement": 44,
         "awaiting_secret": 21,
-        "awaiting_smoke_test": 1,
+        "awaiting_smoke_test": 0,
         "upstream_section_missing": 1,
         "awaiting_partnership_review": 0,
-        "accepted_backlog": 116
+        "accepted_backlog": 118
       },
       "repo_count_with_disabled_sources": 30
     }
@@ -972,9 +972,9 @@
         "awaiting_smoke_test": 0,
         "upstream_section_missing": 0,
         "awaiting_partnership_review": 0,
-        "accepted_backlog": 1
+        "accepted_backlog": 2
       },
-      "disabled_source_classification_total": 1
+      "disabled_source_classification_total": 2
     },
     {
       "repo": "BenefitRadar",
@@ -1764,9 +1764,9 @@
         "awaiting_smoke_test": 0,
         "upstream_section_missing": 0,
         "awaiting_partnership_review": 0,
-        "accepted_backlog": 6
+        "accepted_backlog": 7
       },
-      "disabled_source_classification_total": 6
+      "disabled_source_classification_total": 7
     },
     {
       "repo": "SubscriptionRadar",
@@ -2047,12 +2047,12 @@
       "disabled_source_classification": {
         "awaiting_url_replacement": 0,
         "awaiting_secret": 0,
-        "awaiting_smoke_test": 1,
+        "awaiting_smoke_test": 0,
         "upstream_section_missing": 1,
         "awaiting_partnership_review": 0,
         "accepted_backlog": 0
       },
-      "disabled_source_classification_total": 2
+      "disabled_source_classification_total": 1
     },
     {
       "repo": "CollaborationMCPRadar",

@@ -1,5 +1,5 @@
 {
-  "generated_at": "2026-05-13T17:17:56.924243+00:00",
+  "generated_at": "2026-05-20T02:17:08.782476+00:00",
   "workspace_root": "/mnt/c/projects/ai-frendly-datahub",
   "projects": [
     {
@@ -9,74 +9,72 @@
       "status": "active",
       "pipeline_kind": "summary_json",
       "has_summary_json": true,
-      "article_count": 8,
-      "matched_count": 8,
-      "source_count": 1,
+      "article_count": 26,
+      "matched_count": 26,
+      "source_count": 5,
       "match_rate": 100.0,
-      "last_updated": "2026-05-13",
-      "generated_at": "2026-05-13T12:35:40.701689+09:00",
-      "total_reports": 59,
+      "last_updated": "2026-05-20",
+      "generated_at": "2026-05-20T07:49:56.263491+09:00",
+      "total_reports": 64,
       "report_index_path": "ArtRadar/reports/index.html",
       "latest_report_path": "ArtRadar/reports/index.html",
-      "data_origin": "ArtRadar/reports/artwork_20260513_summary.json",
-      "quality_origin": "ArtRadar/reports/art_20260513_quality.json",
+      "data_origin": "ArtRadar/reports/artwork_20260520_summary.json",
+      "quality_origin": "ArtRadar/reports/artwork_20260519_quality.json",
       "quality_summary": {
-        "total_sources": 36,
-        "enabled_sources": 32,
-        "tracked_sources": 10,
-        "fresh_sources": 10,
+        "total_sources": 5,
+        "enabled_sources": 5,
+        "tracked_sources": 0,
+        "fresh_sources": 0,
         "stale_sources": 0,
         "missing_sources": 0,
         "missing_event_sources": 0,
         "unknown_event_date_sources": 0,
-        "not_tracked_sources": 22,
-        "skipped_disabled_sources": 4,
+        "not_tracked_sources": 5,
+        "skipped_disabled_sources": 0,
         "collection_error_count": 0,
-        "auction_result_events": 3,
-        "art_fair_participant_events": 1,
-        "exhibition_ticket_signal_events": 12,
+        "auction_result_events": 0,
+        "art_fair_participant_events": 0,
+        "exhibition_ticket_signal_events": 0,
         "artist_institution_entity_events": 0,
-        "art_signal_event_count": 16,
-        "official_or_operational_event_count": 11,
+        "art_signal_event_count": 0,
+        "official_or_operational_event_count": 0,
         "news_proxy_event_count": 0,
-        "complete_canonical_key_count": 1,
-        "proxy_canonical_key_count": 15,
+        "complete_canonical_key_count": 0,
+        "proxy_canonical_key_count": 0,
         "missing_canonical_key_count": 0,
-        "artist_present_count": 2,
-        "institution_present_count": 10,
-        "market_present_count": 4,
+        "artist_present_count": 0,
+        "institution_present_count": 0,
+        "market_present_count": 0,
         "hammer_price_present_count": 0,
-        "event_required_field_gap_count": 41,
+        "event_required_field_gap_count": 0,
         "tracked_source_gap_count": 0,
-        "missing_event_model_count": 1,
-        "source_backlog_candidate_count": 4,
-        "daily_review_item_count": 35
+        "missing_event_model_count": 4,
+        "source_backlog_candidate_count": 0,
+        "daily_review_item_count": 4
       },
       "top_entities": [
         {
-          "name": "ArtworkType",
-          "count": 11
-        },
-        {
           "name": "Artist",
-          "count": 11
+          "count": 23
         },
         {
-          "name": "Period",
-          "count": 9
+          "name": "ArtworkType",
+          "count": 16
         },
         {
-          "name": "CollectionChange",
-          "count": 6
+          "name": "MarketSignal",
+          "count": 14
         },
         {
           "name": "Medium",
-          "count": 5
+          "count": 13
+        },
+        {
+          "name": "CollectionChange",
+          "count": 10
         }
       ],
-      "warnings": [
-        "quality report has 4 disabled source(s)"
-      ]
+      "warnings": []
     },
     {
       "repo": "BenefitRadar",
@@ -85,17 +83,17 @@
       "status": "active",
       "pipeline_kind": "summary_json",
       "has_summary_json": true,
-      "article_count": 111,
-      "matched_count": 111,
-      "source_count": 13,
+      "article_count": 316,
+      "matched_count": 316,
+      "source_count": 15,
       "match_rate": 100.0,
-      "last_updated": "2026-05-13",
-      "generated_at": "2026-05-13T21:19:10.203374+09:00",
-      "total_reports": 35,
+      "last_updated": "2026-05-20",
+      "generated_at": "2026-05-20T07:06:55.229566+09:00",
+      "total_reports": 38,
       "report_index_path": "BenefitRadar/reports/index.html",
       "latest_report_path": "BenefitRadar/reports/index.html",
-      "data_origin": "BenefitRadar/reports/benefit_20260513_summary.json",
-      "quality_origin": "BenefitRadar/reports/benefit_20260513_quality.json",
+      "data_origin": "BenefitRadar/reports/benefit_20260520_summary.json",
+      "quality_origin": "BenefitRadar/reports/benefit_20260519_quality.json",
       "quality_summary": {
         "total_sources": 38,
         "tracked_sources": 7,
@@ -108,33 +106,33 @@
         "not_tracked_sources": 19,
         "skipped_disabled_sources": 12,
         "collection_error_count": 0,
-        "unique_program_key_count": 109,
-        "deadline_with_program_key_events": 45,
-        "support_program_notice_events": 94,
-        "application_deadline_events": 45,
-        "eligibility_rule_events": 98,
+        "unique_program_key_count": 274,
+        "deadline_with_program_key_events": 114,
+        "support_program_notice_events": 258,
+        "application_deadline_events": 114,
+        "eligibility_rule_events": 262,
         "selection_result_events": 0
       },
       "top_entities": [
         {
           "name": "GovernmentPolicy",
-          "count": 347
+          "count": 966
         },
         {
-          "name": "TargetDemographic",
-          "count": 135
-        },
-        {
-          "name": "SocialWelfare",
-          "count": 124
+          "name": "EligibilityRegion",
+          "count": 368
         },
         {
           "name": "OperationalEvent",
-          "count": 124
+          "count": 345
         },
         {
-          "name": "Eligibility",
-          "count": 122
+          "name": "SubsidyProgram",
+          "count": 321
+        },
+        {
+          "name": "BenefitProgramKey",
+          "count": 316
         }
       ],
       "warnings": [
@@ -148,17 +146,17 @@
       "status": "active",
       "pipeline_kind": "summary_json",
       "has_summary_json": true,
-      "article_count": 299,
-      "matched_count": 299,
-      "source_count": 41,
+      "article_count": 565,
+      "matched_count": 565,
+      "source_count": 47,
       "match_rate": 100.0,
-      "last_updated": "2026-05-13",
-      "generated_at": "2026-05-13T13:44:41.154573+09:00",
-      "total_reports": 27,
+      "last_updated": "2026-05-19",
+      "generated_at": "2026-05-19T22:27:03.236670+09:00",
+      "total_reports": 29,
       "report_index_path": "BlogRadar/reports/index.html",
       "latest_report_path": "BlogRadar/reports/index.html",
-      "data_origin": "BlogRadar/reports/techblog_20260513_summary.json",
-      "quality_origin": "BlogRadar/reports/techblog_20260513_quality.json",
+      "data_origin": "BlogRadar/reports/techblog_20260519_summary.json",
+      "quality_origin": "BlogRadar/reports/techblog_quality.json",
       "quality_summary": {
         "total_sources": 78,
         "tracked_sources": 0,
@@ -190,23 +188,23 @@
       "top_entities": [
         {
           "name": "SourceSignal",
-          "count": 857
+          "count": 1261
         },
         {
           "name": "Domain",
-          "count": 348
+          "count": 619
         },
         {
           "name": "Topic",
-          "count": 249
+          "count": 508
         },
         {
           "name": "Framework",
-          "count": 244
+          "count": 491
         },
         {
           "name": "Company",
-          "count": 152
+          "count": 292
         }
       ],
       "warnings": [
@@ -220,16 +218,16 @@
       "status": "active",
       "pipeline_kind": "summary_json",
       "has_summary_json": true,
-      "article_count": 18,
-      "matched_count": 18,
-      "source_count": 18,
+      "article_count": 314,
+      "matched_count": 314,
+      "source_count": 19,
       "match_rate": 100.0,
-      "last_updated": "2026-05-13",
-      "generated_at": "2026-05-13T21:20:55.811105+09:00",
-      "total_reports": 34,
+      "last_updated": "2026-05-19",
+      "generated_at": "2026-05-19T22:26:49.483134+09:00",
+      "total_reports": 36,
       "report_index_path": "BookRadar/reports/index.html",
       "latest_report_path": "BookRadar/reports/index.html",
-      "data_origin": "BookRadar/reports/book_20260513_summary.json",
+      "data_origin": "BookRadar/reports/book_20260519_summary.json",
       "quality_origin": "BookRadar/reports/book_quality.json",
       "quality_summary": {
         "total_sources": 32,
@@ -245,45 +243,45 @@
         "collection_error_count": 0,
         "sales_ranking_events": 0,
         "library_lending_events": 0,
-        "author_event_events": 1,
-        "award_signal_events": 3,
-        "book_signal_event_count": 4,
-        "official_or_operational_event_count": 4,
+        "author_event_events": 9,
+        "award_signal_events": 24,
+        "book_signal_event_count": 33,
+        "official_or_operational_event_count": 12,
         "community_proxy_event_count": 0,
-        "complete_canonical_key_count": 4,
-        "proxy_canonical_key_count": 0,
+        "complete_canonical_key_count": 17,
+        "proxy_canonical_key_count": 16,
         "missing_canonical_key_count": 0,
-        "isbn_present_count": 4,
-        "author_present_count": 4,
-        "publisher_present_count": 4,
-        "rank_present_count": 0,
+        "isbn_present_count": 17,
+        "author_present_count": 17,
+        "publisher_present_count": 9,
+        "rank_present_count": 1,
         "lending_count_present_count": 0,
-        "event_required_field_gap_count": 0,
+        "event_required_field_gap_count": 18,
         "tracked_source_gap_count": 0,
         "missing_event_model_count": 2,
         "source_backlog_candidate_count": 4,
-        "daily_review_item_count": 6
+        "daily_review_item_count": 40
       },
       "top_entities": [
         {
           "name": "SourceSignal",
-          "count": 37
+          "count": 688
         },
         {
           "name": "Genre",
-          "count": 29
+          "count": 398
         },
         {
           "name": "Author",
-          "count": 9
+          "count": 78
         },
         {
           "name": "BookType",
-          "count": 7
+          "count": 58
         },
         {
-          "name": "Publisher",
-          "count": 4
+          "name": "Award",
+          "count": 35
         }
       ],
       "warnings": [
@@ -301,13 +299,13 @@
       "matched_count": 4,
       "source_count": 1,
       "match_rate": 100.0,
-      "last_updated": "2026-05-13",
-      "generated_at": "2026-05-13T12:36:59.416330+00:00",
-      "total_reports": 8,
+      "last_updated": "2026-05-19",
+      "generated_at": "2026-05-19T13:27:49.930052+00:00",
+      "total_reports": 14,
       "report_index_path": "CollaborationMCPRadar/reports/index.html",
       "latest_report_path": "CollaborationMCPRadar/reports/index.html",
-      "data_origin": "CollaborationMCPRadar/reports/collaboration_mcp_20260513_summary.json",
-      "quality_origin": "CollaborationMCPRadar/reports/collaboration_mcp_20260513_quality.json",
+      "data_origin": "CollaborationMCPRadar/reports/collaboration_mcp_20260519_summary.json",
+      "quality_origin": "CollaborationMCPRadar/reports/collaboration_mcp_quality.json",
       "quality_summary": {
         "total_sources": 3,
         "enabled_sources": 1,
@@ -335,11 +333,11 @@
         "env_preflight_not_required_source_count": 0,
         "repository_metadata_complete_source_count": 2,
         "repository_metadata_gap_count": 0,
-        "repository_metadata_fresh_source_count": 2,
-        "repository_metadata_stale_source_count": 0,
+        "repository_metadata_fresh_source_count": 0,
+        "repository_metadata_stale_source_count": 2,
         "repository_metadata_incomplete_source_count": 0,
         "repository_metadata_missing_checked_at_source_count": 0,
-        "repository_metadata_review_required_count": 0,
+        "repository_metadata_review_required_count": 2,
         "repository_docs_present_source_count": 2,
         "repository_docs_missing_source_count": 0,
         "repository_security_policy_present_source_count": 0,
@@ -366,7 +364,7 @@
         "activation_real_transport_required_source_count": 2,
         "activation_runtime_review_required_source_count": 0,
         "activation_ready_for_fake_transport_source_count": 0,
-        "daily_review_item_count": 4,
+        "daily_review_item_count": 6,
         "mcp_directory_entry_events": 4,
         "mcp_tool_result_events": 0,
         "linked_repository_metadata_events": 2,
@@ -409,12 +407,12 @@
       "matched_count": 12,
       "source_count": 2,
       "match_rate": 100.0,
-      "last_updated": "2026-05-13",
-      "generated_at": "2026-05-13T12:37:08.660346+00:00",
-      "total_reports": 9,
+      "last_updated": "2026-05-19",
+      "generated_at": "2026-05-19T13:27:46.516313+00:00",
+      "total_reports": 15,
       "report_index_path": "CommerceMCPRadar/reports/index.html",
       "latest_report_path": "CommerceMCPRadar/reports/index.html",
-      "data_origin": "CommerceMCPRadar/reports/commerce_mcp_20260513_summary.json",
+      "data_origin": "CommerceMCPRadar/reports/commerce_mcp_20260519_summary.json",
       "quality_origin": "CommerceMCPRadar/reports/commerce_mcp_quality.json",
       "quality_summary": {
         "total_sources": 3,
@@ -443,11 +441,11 @@
         "env_preflight_not_required_source_count": 1,
         "repository_metadata_complete_source_count": 2,
         "repository_metadata_gap_count": 0,
-        "repository_metadata_fresh_source_count": 2,
-        "repository_metadata_stale_source_count": 0,
+        "repository_metadata_fresh_source_count": 0,
+        "repository_metadata_stale_source_count": 2,
         "repository_metadata_incomplete_source_count": 0,
         "repository_metadata_missing_checked_at_source_count": 0,
-        "repository_metadata_review_required_count": 0,
+        "repository_metadata_review_required_count": 2,
         "repository_docs_present_source_count": 2,
         "repository_docs_missing_source_count": 0,
         "repository_security_policy_present_source_count": 1,
@@ -477,7 +475,7 @@
         "controlled_rollout_warning_count": 0,
         "controlled_rollout_failure_count": 0,
         "enabled_mcp_without_controlled_rollout_guard_count": 0,
-        "daily_review_item_count": 2,
+        "daily_review_item_count": 4,
         "mcp_directory_entry_events": 2,
         "mcp_tool_result_events": 10,
         "linked_repository_metadata_events": 2,
@@ -520,12 +518,12 @@
       "matched_count": 2,
       "source_count": 8,
       "match_rate": 100.0,
-      "last_updated": "2026-05-14",
-      "generated_at": "2026-05-13T16:54:45.106400+00:00",
-      "total_reports": 5,
+      "last_updated": "2026-05-19",
+      "generated_at": "2026-05-19T13:43:59.699020+00:00",
+      "total_reports": 10,
       "report_index_path": "CommerceRadar/reports/index.html",
       "latest_report_path": "CommerceRadar/reports/index.html",
-      "data_origin": "CommerceRadar/reports/commerce_20260514_summary.json",
+      "data_origin": "CommerceRadar/reports/commerce_20260519_summary.json",
       "quality_origin": "CommerceRadar/reports/commerce_quality.json",
       "quality_summary": {},
       "top_entities": [
@@ -559,17 +557,17 @@
       "status": "active",
       "pipeline_kind": "summary_json",
       "has_summary_json": true,
-      "article_count": 36,
-      "matched_count": 36,
-      "source_count": 10,
+      "article_count": 197,
+      "matched_count": 197,
+      "source_count": 12,
       "match_rate": 100.0,
-      "last_updated": "2026-05-13",
-      "generated_at": "2026-05-13T21:21:07.578638+09:00",
-      "total_reports": 34,
+      "last_updated": "2026-05-19",
+      "generated_at": "2026-05-19T22:26:56.836395+09:00",
+      "total_reports": 36,
       "report_index_path": "CryptoRadar/reports/index.html",
       "latest_report_path": "CryptoRadar/reports/index.html",
-      "data_origin": "CryptoRadar/reports/crypto_20260513_summary.json",
-      "quality_origin": "CryptoRadar/reports/crypto_20260513_quality.json",
+      "data_origin": "CryptoRadar/reports/crypto_20260519_summary.json",
+      "quality_origin": "CryptoRadar/reports/crypto_quality.json",
       "quality_summary": {
         "total_sources": 19,
         "enabled_sources": 13,
@@ -588,50 +586,50 @@
           "liquidity_snapshot"
         ],
         "exchange_listing_notice_configured_sources": 0,
-        "exchange_listing_notice_events": 6,
+        "exchange_listing_notice_events": 16,
         "regulatory_action_configured_sources": 0,
-        "regulatory_action_events": 15,
+        "regulatory_action_events": 56,
         "onchain_metric_configured_sources": 1,
-        "onchain_metric_events": 16,
+        "onchain_metric_events": 35,
         "liquidity_snapshot_configured_sources": 0,
         "liquidity_snapshot_events": 0,
-        "crypto_signal_event_count": 37,
+        "crypto_signal_event_count": 107,
         "official_or_operational_event_count": 0,
-        "news_proxy_event_count": 21,
-        "complete_canonical_key_count": 37,
+        "news_proxy_event_count": 72,
+        "complete_canonical_key_count": 107,
         "proxy_canonical_key_count": 0,
         "missing_canonical_key_count": 0,
-        "asset_symbol_present_count": 37,
-        "exchange_present_count": 12,
-        "regulator_present_count": 16,
-        "metric_name_present_count": 21,
+        "asset_symbol_present_count": 107,
+        "exchange_present_count": 31,
+        "regulator_present_count": 61,
+        "metric_name_present_count": 61,
         "metric_value_present_count": 0,
-        "event_required_field_gap_count": 40,
+        "event_required_field_gap_count": 91,
         "tracked_source_gap_count": 0,
         "missing_event_model_count": 1,
         "source_backlog_candidate_count": 4,
-        "daily_review_item_count": 31
+        "daily_review_item_count": 50
       },
       "top_entities": [
         {
           "name": "CryptoGeneral",
-          "count": 209
-        },
-        {
-          "name": "Market",
-          "count": 36
+          "count": 745
         },
         {
           "name": "Cryptocurrency",
-          "count": 27
+          "count": 215
         },
         {
           "name": "Technology",
-          "count": 21
+          "count": 75
         },
         {
-          "name": "Exchange",
-          "count": 13
+          "name": "Market",
+          "count": 55
+        },
+        {
+          "name": "Regulation",
+          "count": 32
         }
       ],
       "warnings": [
@@ -645,64 +643,63 @@
       "status": "active",
       "pipeline_kind": "summary_json",
       "has_summary_json": true,
-      "article_count": 432,
-      "matched_count": 432,
+      "article_count": 747,
+      "matched_count": 747,
       "source_count": 25,
       "match_rate": 100.0,
-      "last_updated": "2026-05-13",
-      "generated_at": "2026-05-13T14:55:37.826353+09:00",
-      "total_reports": 35,
+      "last_updated": "2026-05-20",
+      "generated_at": "2026-05-20T07:10:08.899342+09:00",
+      "total_reports": 38,
       "report_index_path": "EventRadar/reports/index.html",
       "latest_report_path": "EventRadar/reports/index.html",
-      "data_origin": "EventRadar/reports/event_20260513_summary.json",
-      "quality_origin": "EventRadar/reports/event_quality.json",
+      "data_origin": "EventRadar/reports/event_20260520_summary.json",
+      "quality_origin": "EventRadar/reports/event_20260519_quality.json",
       "quality_summary": {
         "total_sources": 36,
         "enabled_sources": 28,
         "tracked_sources": 17,
-        "fresh_sources": 16,
+        "fresh_sources": 17,
         "stale_sources": 0,
-        "missing_sources": 1,
+        "missing_sources": 0,
         "missing_event_sources": 0,
         "unknown_event_date_sources": 0,
         "not_tracked_sources": 11,
         "skipped_disabled_sources": 8,
         "collection_error_count": 0,
         "official_event_calendar_events": 1,
-        "ticket_availability_events": 60,
-        "venue_calendar_events": 2,
-        "exhibitor_sponsor_signal_events": 157,
-        "event_occurrence_present_count": 38,
-        "venue_id_present_count": 38,
-        "availability_status_present_count": 4,
+        "ticket_availability_events": 90,
+        "venue_calendar_events": 3,
+        "exhibitor_sponsor_signal_events": 282,
+        "event_occurrence_present_count": 46,
+        "venue_id_present_count": 46,
+        "availability_status_present_count": 5,
         "organization_signal_present_count": 0,
-        "event_required_field_gap_count": 537,
+        "event_required_field_gap_count": 955,
         "daily_review_item_count": 50
       },
       "top_entities": [
         {
+          "name": "Entertainment",
+          "count": 542
+        },
+        {
           "name": "SourceSignal",
-          "count": 334
+          "count": 494
         },
         {
           "name": "EventGeneral",
-          "count": 291
-        },
-        {
-          "name": "Entertainment",
-          "count": 268
+          "count": 460
         },
         {
           "name": "Performance",
-          "count": 185
+          "count": 307
         },
         {
           "name": "Event",
-          "count": 155
+          "count": 271
         }
       ],
       "warnings": [
-        "quality freshness gaps: stale=0, missing=1, unknown_event_date=0",
         "quality report has 8 disabled source(s)"
       ]
     },
@@ -713,17 +710,17 @@
       "status": "active",
       "pipeline_kind": "summary_json",
       "has_summary_json": true,
-      "article_count": 6,
-      "matched_count": 6,
+      "article_count": 8,
+      "matched_count": 8,
       "source_count": 1,
       "match_rate": 100.0,
-      "last_updated": "2026-05-13",
-      "generated_at": "2026-05-13T12:37:14.067046+00:00",
-      "total_reports": 9,
+      "last_updated": "2026-05-19",
+      "generated_at": "2026-05-19T13:27:48.947026+00:00",
+      "total_reports": 15,
       "report_index_path": "FinanceTaxMCPRadar/reports/index.html",
       "latest_report_path": "FinanceTaxMCPRadar/reports/index.html",
-      "data_origin": "FinanceTaxMCPRadar/reports/finance_tax_mcp_20260513_summary.json",
-      "quality_origin": "FinanceTaxMCPRadar/reports/finance_tax_mcp_20260513_quality.json",
+      "data_origin": "FinanceTaxMCPRadar/reports/finance_tax_mcp_20260519_summary.json",
+      "quality_origin": "FinanceTaxMCPRadar/reports/finance_tax_mcp_quality.json",
       "quality_summary": {
         "total_sources": 3,
         "enabled_sources": 1,
@@ -736,7 +733,7 @@
         "not_tracked_sources": 0,
         "skipped_disabled_sources": 2,
         "collection_error_count": 0,
-        "mcp_signal_event_count": 9,
+        "mcp_signal_event_count": 12,
         "directory_seed_source_count": 1,
         "mcp_server_candidate_count": 2,
         "enabled_mcp_server_source_count": 0,
@@ -751,11 +748,11 @@
         "env_preflight_not_required_source_count": 1,
         "repository_metadata_complete_source_count": 2,
         "repository_metadata_gap_count": 0,
-        "repository_metadata_fresh_source_count": 1,
-        "repository_metadata_stale_source_count": 1,
+        "repository_metadata_fresh_source_count": 0,
+        "repository_metadata_stale_source_count": 2,
         "repository_metadata_incomplete_source_count": 0,
         "repository_metadata_missing_checked_at_source_count": 0,
-        "repository_metadata_review_required_count": 1,
+        "repository_metadata_review_required_count": 2,
         "repository_docs_present_source_count": 2,
         "repository_docs_missing_source_count": 0,
         "repository_security_policy_present_source_count": 0,
@@ -782,32 +779,32 @@
         "activation_real_transport_required_source_count": 1,
         "activation_runtime_review_required_source_count": 0,
         "activation_ready_for_fake_transport_source_count": 0,
-        "daily_review_item_count": 4,
-        "mcp_directory_entry_events": 6,
+        "daily_review_item_count": 5,
+        "mcp_directory_entry_events": 8,
         "mcp_tool_result_events": 0,
         "linked_repository_metadata_events": 2,
-        "risk_scope_signal_events": 1
+        "risk_scope_signal_events": 2
       },
       "top_entities": [
         {
           "name": "ProjectHealth",
-          "count": 13
+          "count": 19
         },
         {
           "name": "MCPDomain",
-          "count": 9
+          "count": 10
         },
         {
           "name": "Capability",
-          "count": 8
+          "count": 10
         },
         {
           "name": "Provider",
-          "count": 5
+          "count": 6
         },
         {
           "name": "RiskScope",
-          "count": 1
+          "count": 2
         }
       ],
       "warnings": [
@@ -821,17 +818,17 @@
       "status": "active",
       "pipeline_kind": "summary_json",
       "has_summary_json": true,
-      "article_count": 7,
-      "matched_count": 7,
-      "source_count": 7,
+      "article_count": 170,
+      "matched_count": 170,
+      "source_count": 10,
       "match_rate": 100.0,
-      "last_updated": "2026-05-13",
-      "generated_at": "2026-05-13T21:23:44.962443+09:00",
-      "total_reports": 35,
+      "last_updated": "2026-05-20",
+      "generated_at": "2026-05-20T08:09:51.955276+09:00",
+      "total_reports": 38,
       "report_index_path": "FoodRadar/reports/index.html",
       "latest_report_path": "FoodRadar/reports/index.html",
-      "data_origin": "FoodRadar/reports/food_20260513_summary.json",
-      "quality_origin": "FoodRadar/reports/food_20260513_quality.json",
+      "data_origin": "FoodRadar/reports/food_20260520_summary.json",
+      "quality_origin": "FoodRadar/reports/food_20260519_quality.json",
       "quality_summary": {
         "total_sources": 12,
         "tracked_sources": 3,
@@ -843,48 +840,48 @@
         "catalog_only_sources": 0,
         "skipped_disabled_sources": 1,
         "collection_error_count": 0,
-        "alias_candidate_count": 0,
+        "alias_candidate_count": 5,
         "product_alias_candidate_count": 0,
-        "brand_alias_candidate_count": 0,
-        "manufacturer_alias_candidate_count": 0,
-        "match_coverage_article_count": 15,
-        "match_coverage_matched_count": 15,
+        "brand_alias_candidate_count": 3,
+        "manufacturer_alias_candidate_count": 2,
+        "match_coverage_article_count": 170,
+        "match_coverage_matched_count": 170,
         "match_coverage_unmatched_count": 0,
         "match_coverage_rate": 100.0,
         "match_coverage_review_item_count": 0,
-        "fresh_food_events": 3,
-        "stale_food_events": 2,
+        "fresh_food_events": 33,
+        "stale_food_events": 11,
         "undated_food_events": 0,
-        "unique_food_event_key_count": 5,
-        "recall_events_with_notice_date_count": 1,
-        "recall_events_with_status_count": 1,
+        "unique_food_event_key_count": 44,
+        "recall_events_with_notice_date_count": 6,
+        "recall_events_with_status_count": 6,
         "event_alias_trace_count": 0,
-        "complaint_auxiliary_only_events": 2,
-        "official_evidence_events": 3,
-        "recall_status_change_events": 1,
-        "enforcement_action_events": 2,
-        "complaint_signal_events": 2
+        "complaint_auxiliary_only_events": 13,
+        "official_evidence_events": 31,
+        "recall_status_change_events": 6,
+        "enforcement_action_events": 25,
+        "complaint_signal_events": 13
       },
       "top_entities": [
         {
-          "name": "FoodType",
-          "count": 11
-        },
-        {
           "name": "FoodGeneral",
-          "count": 10
+          "count": 302
         },
         {
-          "name": "Region",
-          "count": 3
-        },
-        {
-          "name": "Regulation",
-          "count": 2
+          "name": "FoodType",
+          "count": 160
         },
         {
           "name": "SafetyIssue",
-          "count": 1
+          "count": 138
+        },
+        {
+          "name": "Regulation",
+          "count": 31
+        },
+        {
+          "name": "Brand",
+          "count": 15
         }
       ],
       "warnings": [
@@ -898,16 +895,16 @@
       "status": "active",
       "pipeline_kind": "summary_json",
       "has_summary_json": true,
-      "article_count": 729,
-      "matched_count": 729,
-      "source_count": 33,
+      "article_count": 732,
+      "matched_count": 732,
+      "source_count": 22,
       "match_rate": 100.0,
-      "last_updated": "2026-05-13",
-      "generated_at": "2026-05-13T15:19:07.271260+09:00",
-      "total_reports": 32,
+      "last_updated": "2026-05-19",
+      "generated_at": "2026-05-19T22:28:00.159871+09:00",
+      "total_reports": 34,
       "report_index_path": "GameRadar/reports/index.html",
       "latest_report_path": "GameRadar/reports/index.html",
-      "data_origin": "GameRadar/reports/game_20260513_summary.json",
+      "data_origin": "GameRadar/reports/game_20260519_summary.json",
       "quality_origin": "GameRadar/reports/game_quality.json",
       "quality_summary": {
         "total_sources": 48,
@@ -922,36 +919,36 @@
         "skipped_disabled_sources": 11,
         "collection_error_count": 0,
         "steam_chart_events": 0,
-        "store_ranking_events": 4,
-        "patch_note_events": 8,
-        "release_schedule_events": 27,
-        "actionable_game_event_count": 39,
-        "canonical_game_key_present_count": 9,
-        "missing_canonical_game_key_count": 30,
-        "official_or_trade_event_count": 32,
+        "store_ranking_events": 3,
+        "patch_note_events": 13,
+        "release_schedule_events": 21,
+        "actionable_game_event_count": 37,
+        "canonical_game_key_present_count": 3,
+        "missing_canonical_game_key_count": 34,
+        "official_or_trade_event_count": 14,
         "event_required_field_gap_count": 34,
         "daily_review_item_count": 10
       },
       "top_entities": [
         {
           "name": "GameGeneral",
-          "count": 1591
+          "count": 1715
         },
         {
           "name": "SourceSignal",
-          "count": 990
+          "count": 1040
         },
         {
           "name": "Platform",
-          "count": 331
+          "count": 413
         },
         {
           "name": "Release",
-          "count": 317
+          "count": 334
         },
         {
           "name": "Genre",
-          "count": 281
+          "count": 256
         }
       ],
       "warnings": [
@@ -965,17 +962,17 @@
       "status": "active",
       "pipeline_kind": "summary_json",
       "has_summary_json": true,
-      "article_count": 10,
-      "matched_count": 10,
-      "source_count": 6,
+      "article_count": 90,
+      "matched_count": 90,
+      "source_count": 10,
       "match_rate": 100.0,
-      "last_updated": "2026-05-13",
-      "generated_at": "2026-05-13T21:25:55.625284+09:00",
-      "total_reports": 27,
+      "last_updated": "2026-05-20",
+      "generated_at": "2026-05-20T07:06:34.162899+09:00",
+      "total_reports": 30,
       "report_index_path": "GovRadar/reports/index.html",
       "latest_report_path": "GovRadar/reports/index.html",
-      "data_origin": "GovRadar/reports/govsupport_20260513_summary.json",
-      "quality_origin": "GovRadar/reports/govsupport_20260513_quality.json",
+      "data_origin": "GovRadar/reports/govsupport_20260520_summary.json",
+      "quality_origin": "GovRadar/reports/govsupport_20260519_quality.json",
       "quality_summary": {
         "total_sources": 25,
         "tracked_sources": 6,
@@ -986,34 +983,34 @@
         "unknown_event_date_sources": 0,
         "not_tracked_sources": 17,
         "skipped_disabled_sources": 2,
-        "support_program_notice_events": 12,
-        "application_deadline_events": 10,
-        "eligibility_rule_events": 41,
+        "support_program_notice_events": 58,
+        "application_deadline_events": 39,
+        "eligibility_rule_events": 147,
         "selection_result_events": 0,
-        "unique_program_key_count": 55,
-        "events_with_evidence_url": 63,
+        "unique_program_key_count": 219,
+        "events_with_evidence_url": 244,
         "collection_error_count": 0
       },
       "top_entities": [
         {
           "name": "GovGeneral",
-          "count": 142
-        },
-        {
-          "name": "ApplicationInfo",
-          "count": 34
+          "count": 1274
         },
         {
           "name": "TargetGroup",
-          "count": 31
+          "count": 306
         },
         {
-          "name": "SourceSignal",
-          "count": 27
+          "name": "ApplicationInfo",
+          "count": 276
         },
         {
           "name": "SupportType",
-          "count": 24
+          "count": 210
+        },
+        {
+          "name": "SourceSignal",
+          "count": 193
         }
       ],
       "warnings": [
@@ -1029,15 +1026,15 @@
       "has_summary_json": true,
       "article_count": 100,
       "matched_count": 100,
-      "source_count": 1,
+      "source_count": 3,
       "match_rate": 100.0,
-      "last_updated": "2026-05-13",
-      "generated_at": "2026-05-13T21:33:01.780566+09:00",
-      "total_reports": 8,
+      "last_updated": "2026-05-20",
+      "generated_at": "2026-05-20T07:57:43.381879+09:00",
+      "total_reports": 15,
       "report_index_path": "HomeRadar/reports/index.html",
       "latest_report_path": "HomeRadar/reports/index.html",
-      "data_origin": "HomeRadar/reports/home_20260513_summary.json",
-      "quality_origin": "HomeRadar/reports/home_quality.json",
+      "data_origin": "HomeRadar/reports/home_20260520_summary.json",
+      "quality_origin": "HomeRadar/reports/home_20260519_quality.json",
       "quality_summary": {
         "total_sources": 25,
         "enabled_sources": 10,
@@ -1076,7 +1073,7 @@
           "onbid_auction"
         ],
         "not_tracked_sources": 6,
-        "verification_state_count": 887,
+        "verification_state_count": 1325,
         "verification_review_sample_count": 20,
         "daily_review_item_count": 32,
         "official_primary_status": "blocked_missing_env",
@@ -1095,25 +1092,25 @@
           "ONBID_API_KEY",
           "SUBSCRIPTION_API_KEY"
         ],
-        "corroboration_only_items": 416,
+        "corroboration_only_items": 492,
         "official_primary_items": 0
       },
       "top_entities": [
         {
           "name": "keyword",
-          "count": 150
+          "count": 162
         },
         {
           "name": "district",
-          "count": 51
-        },
-        {
-          "name": "project",
-          "count": 12
+          "count": 136
         },
         {
           "name": "complex",
-          "count": 9
+          "count": 8
+        },
+        {
+          "name": "project",
+          "count": 3
         }
       ],
       "warnings": [
@@ -1128,17 +1125,17 @@
       "status": "active",
       "pipeline_kind": "summary_json",
       "has_summary_json": true,
-      "article_count": 4,
-      "matched_count": 4,
-      "source_count": 4,
+      "article_count": 200,
+      "matched_count": 200,
+      "source_count": 14,
       "match_rate": 100.0,
-      "last_updated": "2026-05-13",
-      "generated_at": "2026-05-13T21:26:14.985850+09:00",
-      "total_reports": 34,
+      "last_updated": "2026-05-19",
+      "generated_at": "2026-05-19T22:27:27.104249+09:00",
+      "total_reports": 36,
       "report_index_path": "JobRadar/reports/index.html",
       "latest_report_path": "JobRadar/reports/index.html",
-      "data_origin": "JobRadar/reports/job_20260513_summary.json",
-      "quality_origin": "JobRadar/reports/job_20260513_quality.json",
+      "data_origin": "JobRadar/reports/job_20260519_summary.json",
+      "quality_origin": "JobRadar/reports/job_quality.json",
       "quality_summary": {
         "total_sources": 21,
         "enabled_sources": 15,
@@ -1151,49 +1148,49 @@
         "not_tracked_sources": 12,
         "skipped_disabled_sources": 6,
         "collection_error_count": 0,
-        "official_job_posting_events": 17,
+        "official_job_posting_events": 2,
         "job_board_posting_events": 0,
-        "labor_market_signal_events": 2,
+        "labor_market_signal_events": 4,
         "skill_demand_events": 0,
         "salary_signal_events": 0,
-        "job_signal_event_count": 19,
-        "official_or_operational_event_count": 17,
+        "job_signal_event_count": 6,
+        "official_or_operational_event_count": 2,
         "community_proxy_event_count": 0,
-        "complete_canonical_key_count": 13,
-        "proxy_canonical_key_count": 6,
+        "complete_canonical_key_count": 4,
+        "proxy_canonical_key_count": 2,
         "missing_canonical_key_count": 0,
-        "company_present_count": 17,
-        "job_title_present_count": 11,
-        "location_present_count": 19,
-        "salary_range_present_count": 0,
-        "skill_present_count": 4,
+        "company_present_count": 2,
+        "job_title_present_count": 0,
+        "location_present_count": 6,
+        "salary_range_present_count": 1,
+        "skill_present_count": 1,
         "demand_count_present_count": 0,
-        "event_required_field_gap_count": 5,
+        "event_required_field_gap_count": 1,
         "tracked_source_gap_count": 0,
         "missing_event_model_count": 3,
         "source_backlog_candidate_count": 4,
-        "daily_review_item_count": 18
+        "daily_review_item_count": 10
       },
       "top_entities": [
         {
-          "name": "SourceSignal",
-          "count": 11
-        },
-        {
-          "name": "Company",
-          "count": 2
-        },
-        {
           "name": "EmploymentTrend",
-          "count": 2
+          "count": 202
+        },
+        {
+          "name": "Industry",
+          "count": 144
         },
         {
           "name": "JobTitle",
-          "count": 2
+          "count": 120
         },
         {
-          "name": "JobGeneral",
-          "count": 1
+          "name": "TechStack",
+          "count": 85
+        },
+        {
+          "name": "SourceSignal",
+          "count": 74
         }
       ],
       "warnings": [
@@ -1211,12 +1208,12 @@
       "matched_count": 5,
       "source_count": 3,
       "match_rate": 100.0,
-      "last_updated": "2026-05-13",
-      "generated_at": "2026-05-13T12:37:38.848438+00:00",
-      "total_reports": 10,
+      "last_updated": "2026-05-19",
+      "generated_at": "2026-05-19T13:32:08.854213+00:00",
+      "total_reports": 16,
       "report_index_path": "KoreanNLPMCPRadar/reports/index.html",
       "latest_report_path": "KoreanNLPMCPRadar/reports/index.html",
-      "data_origin": "KoreanNLPMCPRadar/reports/korean_nlp_mcp_20260513_summary.json",
+      "data_origin": "KoreanNLPMCPRadar/reports/korean_nlp_mcp_20260519_summary.json",
       "quality_origin": "KoreanNLPMCPRadar/reports/korean_nlp_mcp_quality.json",
       "quality_summary": {
         "total_sources": 3,
@@ -1229,7 +1226,7 @@
         "unknown_event_date_sources": 0,
         "not_tracked_sources": 0,
         "skipped_disabled_sources": 0,
-        "collection_error_count": 1,
+        "collection_error_count": 0,
         "mcp_signal_event_count": 8,
         "directory_seed_source_count": 1,
         "mcp_server_candidate_count": 2,
@@ -1245,11 +1242,11 @@
         "env_preflight_not_required_source_count": 1,
         "repository_metadata_complete_source_count": 2,
         "repository_metadata_gap_count": 0,
-        "repository_metadata_fresh_source_count": 2,
-        "repository_metadata_stale_source_count": 0,
+        "repository_metadata_fresh_source_count": 0,
+        "repository_metadata_stale_source_count": 2,
         "repository_metadata_incomplete_source_count": 0,
         "repository_metadata_missing_checked_at_source_count": 0,
-        "repository_metadata_review_required_count": 0,
+        "repository_metadata_review_required_count": 2,
         "repository_docs_present_source_count": 2,
         "repository_docs_missing_source_count": 0,
         "repository_security_policy_present_source_count": 1,
@@ -1279,7 +1276,7 @@
         "controlled_rollout_warning_count": 0,
         "controlled_rollout_failure_count": 1,
         "enabled_mcp_without_controlled_rollout_guard_count": 0,
-        "daily_review_item_count": 1,
+        "daily_review_item_count": 3,
         "mcp_directory_entry_events": 2,
         "mcp_tool_result_events": 3,
         "linked_repository_metadata_events": 2,
@@ -1303,9 +1300,7 @@
           "count": 1
         }
       ],
-      "warnings": [
-        "quality report has 1 collection error(s)"
-      ]
+      "warnings": []
     },
     {
       "repo": "LegalGovMCPRadar",
@@ -1314,17 +1309,17 @@
       "status": "active",
       "pipeline_kind": "summary_json",
       "has_summary_json": true,
-      "article_count": 6,
-      "matched_count": 6,
+      "article_count": 9,
+      "matched_count": 9,
       "source_count": 1,
       "match_rate": 100.0,
-      "last_updated": "2026-05-13",
-      "generated_at": "2026-05-13T12:37:46.603856+00:00",
-      "total_reports": 9,
+      "last_updated": "2026-05-19",
+      "generated_at": "2026-05-19T13:44:40.298644+00:00",
+      "total_reports": 15,
       "report_index_path": "LegalGovMCPRadar/reports/index.html",
       "latest_report_path": "LegalGovMCPRadar/reports/index.html",
-      "data_origin": "LegalGovMCPRadar/reports/legal_gov_mcp_20260513_summary.json",
-      "quality_origin": "LegalGovMCPRadar/reports/legal_gov_mcp_20260513_quality.json",
+      "data_origin": "LegalGovMCPRadar/reports/legal_gov_mcp_20260519_summary.json",
+      "quality_origin": "LegalGovMCPRadar/reports/legal_gov_mcp_quality.json",
       "quality_summary": {
         "total_sources": 3,
         "enabled_sources": 1,
@@ -1337,7 +1332,7 @@
         "not_tracked_sources": 0,
         "skipped_disabled_sources": 2,
         "collection_error_count": 0,
-        "mcp_signal_event_count": 10,
+        "mcp_signal_event_count": 13,
         "directory_seed_source_count": 1,
         "mcp_server_candidate_count": 2,
         "enabled_mcp_server_source_count": 0,
@@ -1352,11 +1347,11 @@
         "env_preflight_not_required_source_count": 0,
         "repository_metadata_complete_source_count": 2,
         "repository_metadata_gap_count": 0,
-        "repository_metadata_fresh_source_count": 2,
-        "repository_metadata_stale_source_count": 0,
+        "repository_metadata_fresh_source_count": 0,
+        "repository_metadata_stale_source_count": 2,
         "repository_metadata_incomplete_source_count": 0,
         "repository_metadata_missing_checked_at_source_count": 0,
-        "repository_metadata_review_required_count": 0,
+        "repository_metadata_review_required_count": 2,
         "repository_docs_present_source_count": 2,
         "repository_docs_missing_source_count": 0,
         "repository_security_policy_present_source_count": 0,
@@ -1383,8 +1378,8 @@
         "activation_real_transport_required_source_count": 2,
         "activation_runtime_review_required_source_count": 0,
         "activation_ready_for_fake_transport_source_count": 0,
-        "daily_review_item_count": 4,
-        "mcp_directory_entry_events": 6,
+        "daily_review_item_count": 6,
+        "mcp_directory_entry_events": 9,
         "mcp_tool_result_events": 0,
         "linked_repository_metadata_events": 2,
         "risk_scope_signal_events": 2
@@ -1392,15 +1387,15 @@
       "top_entities": [
         {
           "name": "MCPDomain",
-          "count": 17
+          "count": 22
         },
         {
           "name": "ProjectHealth",
-          "count": 14
+          "count": 21
         },
         {
           "name": "Capability",
-          "count": 9
+          "count": 13
         },
         {
           "name": "RiskScope",
@@ -1422,13 +1417,13 @@
       "matched_count": 6,
       "source_count": 1,
       "match_rate": 100.0,
-      "last_updated": "2026-05-13",
-      "generated_at": "2026-05-13T12:37:52.198963+00:00",
-      "total_reports": 9,
+      "last_updated": "2026-05-19",
+      "generated_at": "2026-05-19T13:44:36.472218+00:00",
+      "total_reports": 15,
       "report_index_path": "MapAddressMCPRadar/reports/index.html",
       "latest_report_path": "MapAddressMCPRadar/reports/index.html",
-      "data_origin": "MapAddressMCPRadar/reports/map_address_mcp_20260513_summary.json",
-      "quality_origin": "MapAddressMCPRadar/reports/map_address_mcp_20260513_quality.json",
+      "data_origin": "MapAddressMCPRadar/reports/map_address_mcp_20260519_summary.json",
+      "quality_origin": "MapAddressMCPRadar/reports/map_address_mcp_quality.json",
       "quality_summary": {
         "total_sources": 3,
         "enabled_sources": 1,
@@ -1456,11 +1451,11 @@
         "env_preflight_not_required_source_count": 1,
         "repository_metadata_complete_source_count": 2,
         "repository_metadata_gap_count": 0,
-        "repository_metadata_fresh_source_count": 2,
-        "repository_metadata_stale_source_count": 0,
+        "repository_metadata_fresh_source_count": 0,
+        "repository_metadata_stale_source_count": 2,
         "repository_metadata_incomplete_source_count": 0,
         "repository_metadata_missing_checked_at_source_count": 0,
-        "repository_metadata_review_required_count": 0,
+        "repository_metadata_review_required_count": 2,
         "repository_docs_present_source_count": 2,
         "repository_docs_missing_source_count": 0,
         "repository_security_policy_present_source_count": 0,
@@ -1487,7 +1482,7 @@
         "activation_real_transport_required_source_count": 1,
         "activation_runtime_review_required_source_count": 0,
         "activation_ready_for_fake_transport_source_count": 0,
-        "daily_review_item_count": 3,
+        "daily_review_item_count": 5,
         "mcp_directory_entry_events": 6,
         "mcp_tool_result_events": 0,
         "linked_repository_metadata_events": 2,
@@ -1526,30 +1521,30 @@
       "status": "active",
       "pipeline_kind": "summary_json",
       "has_summary_json": true,
-      "article_count": 0,
-      "matched_count": 0,
-      "source_count": 0,
-      "match_rate": 0.0,
-      "last_updated": "2026-05-13",
-      "generated_at": "2026-05-13T12:37:56.537600+00:00",
-      "total_reports": 8,
+      "article_count": 9,
+      "matched_count": 9,
+      "source_count": 1,
+      "match_rate": 100.0,
+      "last_updated": "2026-05-19",
+      "generated_at": "2026-05-19T22:28:41.648643+00:00",
+      "total_reports": 13,
       "report_index_path": "MiscMCPRadar/reports/index.html",
       "latest_report_path": "MiscMCPRadar/reports/index.html",
-      "data_origin": "MiscMCPRadar/reports/misc_mcp_20260513_summary.json",
-      "quality_origin": "MiscMCPRadar/reports/misc_mcp_quality.json",
+      "data_origin": "MiscMCPRadar/reports/misc_mcp_20260519_summary.json",
+      "quality_origin": "MiscMCPRadar/reports/misc_mcp_20260519_quality.json",
       "quality_summary": {
         "total_sources": 2,
-        "enabled_sources": 0,
+        "enabled_sources": 1,
         "tracked_sources": 2,
-        "fresh_sources": 0,
+        "fresh_sources": 1,
         "stale_sources": 0,
         "missing_sources": 0,
         "missing_event_sources": 0,
         "unknown_event_date_sources": 0,
         "not_tracked_sources": 0,
-        "skipped_disabled_sources": 2,
+        "skipped_disabled_sources": 1,
         "collection_error_count": 0,
-        "mcp_signal_event_count": 0,
+        "mcp_signal_event_count": 9,
         "directory_seed_source_count": 2,
         "mcp_server_candidate_count": 0,
         "enabled_mcp_server_source_count": 0,
@@ -1594,14 +1589,31 @@
         "activation_runtime_review_required_source_count": 0,
         "activation_ready_for_fake_transport_source_count": 0,
         "daily_review_item_count": 0,
-        "mcp_directory_entry_events": 0,
+        "mcp_directory_entry_events": 9,
         "mcp_tool_result_events": 0,
         "linked_repository_metadata_events": 0,
         "risk_scope_signal_events": 0
       },
-      "top_entities": [],
+      "top_entities": [
+        {
+          "name": "Capability",
+          "count": 15
+        },
+        {
+          "name": "ProjectHealth",
+          "count": 7
+        },
+        {
+          "name": "MCPDomain",
+          "count": 5
+        },
+        {
+          "name": "Provider",
+          "count": 5
+        }
+      ],
       "warnings": [
-        "quality report has 2 disabled source(s)"
+        "quality report has 1 disabled source(s)"
       ]
     },
     {
@@ -1611,38 +1623,38 @@
       "status": "active",
       "pipeline_kind": "summary_json",
       "has_summary_json": true,
-      "article_count": 131,
-      "matched_count": 131,
-      "source_count": 11,
+      "article_count": 118,
+      "matched_count": 118,
+      "source_count": 14,
       "match_rate": 100.0,
-      "last_updated": "2026-05-13",
-      "generated_at": "2026-05-13T16:45:28.157977+09:00",
-      "total_reports": 54,
+      "last_updated": "2026-05-19",
+      "generated_at": "2026-05-19T22:27:55.720429+09:00",
+      "total_reports": 56,
       "report_index_path": "MobilityRadar/reports/index.html",
       "latest_report_path": "MobilityRadar/reports/index.html",
-      "data_origin": "MobilityRadar/reports/mobility_20260513_summary.json",
+      "data_origin": "MobilityRadar/reports/mobility_20260519_summary.json",
       "quality_origin": null,
       "quality_summary": {},
       "top_entities": [
         {
           "name": "VehicleType",
-          "count": 98
-        },
-        {
-          "name": "EVModel",
-          "count": 64
+          "count": 89
         },
         {
           "name": "Manufacturer",
-          "count": 61
+          "count": 54
+        },
+        {
+          "name": "EVModel",
+          "count": 48
+        },
+        {
+          "name": "ChargingInfra",
+          "count": 22
         },
         {
           "name": "Service",
-          "count": 11
-        },
-        {
-          "name": "Regulation",
-          "count": 10
+          "count": 12
         }
       ],
       "warnings": []
@@ -1654,17 +1666,17 @@
       "status": "active",
       "pipeline_kind": "summary_json",
       "has_summary_json": true,
-      "article_count": 8,
-      "matched_count": 8,
-      "source_count": 8,
+      "article_count": 106,
+      "matched_count": 106,
+      "source_count": 10,
       "match_rate": 100.0,
-      "last_updated": "2026-05-13",
-      "generated_at": "2026-05-13T21:27:06.060318+09:00",
-      "total_reports": 33,
+      "last_updated": "2026-05-19",
+      "generated_at": "2026-05-19T22:27:40.100733+09:00",
+      "total_reports": 35,
       "report_index_path": "MovieRadar/reports/index.html",
       "latest_report_path": "MovieRadar/reports/index.html",
-      "data_origin": "MovieRadar/reports/movie_20260513_summary.json",
-      "quality_origin": "MovieRadar/reports/movie_20260513_quality.json",
+      "data_origin": "MovieRadar/reports/movie_20260519_summary.json",
+      "quality_origin": "MovieRadar/reports/movie_quality.json",
       "quality_summary": {
         "total_sources": 12,
         "enabled_sources": 10,
@@ -1680,19 +1692,19 @@
         "reservation_ranking_events": 0,
         "box_office_events": 2,
         "ott_ranking_events": 0,
-        "release_calendar_events": 2,
-        "movie_signal_event_count": 4,
+        "release_calendar_events": 1,
+        "movie_signal_event_count": 3,
         "official_or_operational_event_count": 1,
         "news_proxy_event_count": 0,
-        "complete_canonical_key_count": 4,
+        "complete_canonical_key_count": 3,
         "proxy_canonical_key_count": 0,
         "missing_canonical_key_count": 0,
         "movie_id_present_count": 0,
-        "normalized_title_present_count": 4,
-        "release_year_present_count": 4,
+        "normalized_title_present_count": 3,
+        "release_year_present_count": 3,
         "rank_present_count": 0,
         "gross_present_count": 0,
-        "platform_present_count": 3,
+        "platform_present_count": 2,
         "event_required_field_gap_count": 6,
         "tracked_source_gap_count": 0,
         "missing_event_model_count": 2,
@@ -1702,23 +1714,23 @@
       "top_entities": [
         {
           "name": "FilmGeneral",
-          "count": 30
+          "count": 288
         },
         {
           "name": "SourceSignal",
-          "count": 16
-        },
-        {
-          "name": "Platform",
-          "count": 10
-        },
-        {
-          "name": "Studio",
-          "count": 5
+          "count": 162
         },
         {
           "name": "Genre",
-          "count": 4
+          "count": 62
+        },
+        {
+          "name": "Award",
+          "count": 55
+        },
+        {
+          "name": "Platform",
+          "count": 51
         }
       ],
       "warnings": [
@@ -1732,72 +1744,72 @@
       "status": "active",
       "pipeline_kind": "summary_json",
       "has_summary_json": true,
-      "article_count": 17,
-      "matched_count": 17,
-      "source_count": 17,
+      "article_count": 159,
+      "matched_count": 159,
+      "source_count": 16,
       "match_rate": 100.0,
-      "last_updated": "2026-05-13",
-      "generated_at": "2026-05-13T21:27:29.512281+09:00",
-      "total_reports": 9,
+      "last_updated": "2026-05-20",
+      "generated_at": "2026-05-20T08:09:45.957159+09:00",
+      "total_reports": 16,
       "report_index_path": "PaperRadar/reports/index.html",
       "latest_report_path": "PaperRadar/reports/index.html",
-      "data_origin": "PaperRadar/reports/research_20260513_summary.json",
-      "quality_origin": "PaperRadar/reports/research_quality.json",
+      "data_origin": "PaperRadar/reports/research_20260520_summary.json",
+      "quality_origin": "PaperRadar/reports/research_20260519_quality.json",
       "quality_summary": {
         "total_sources": 23,
-        "enabled_sources": 17,
+        "enabled_sources": 16,
         "tracked_sources": 14,
-        "fresh_sources": 10,
+        "fresh_sources": 9,
         "stale_sources": 0,
         "missing_sources": 0,
         "missing_event_sources": 0,
         "unknown_event_date_sources": 0,
         "not_tracked_sources": 7,
-        "skipped_disabled_sources": 6,
+        "skipped_disabled_sources": 7,
         "collection_error_count": 0,
-        "paper_release_events": 16,
-        "citation_snapshot_events": 1,
-        "code_repository_events": 2,
+        "paper_release_events": 430,
+        "citation_snapshot_events": 31,
+        "code_repository_events": 5,
         "benchmark_result_events": 0,
-        "research_signal_event_count": 19,
-        "paper_canonical_key_present_count": 17,
+        "research_signal_event_count": 466,
+        "paper_canonical_key_present_count": 461,
         "repository_canonical_key_present_count": 0,
         "benchmark_canonical_key_present_count": 0,
-        "title_proxy_key_count": 4,
+        "title_proxy_key_count": 10,
         "missing_canonical_key_count": 0,
-        "citation_count_present_count": 1,
-        "code_repository_present_count": 0,
+        "citation_count_present_count": 31,
+        "code_repository_present_count": 33,
         "benchmark_metric_present_count": 0,
-        "event_required_field_gap_count": 2,
+        "event_required_field_gap_count": 5,
         "tracked_source_gap_count": 0,
         "missing_event_model_count": 1,
         "source_backlog_candidate_count": 4,
-        "daily_review_item_count": 11
+        "daily_review_item_count": 20
       },
       "top_entities": [
         {
           "name": "ResearchGeneral",
-          "count": 161
-        },
-        {
-          "name": "Tasks",
-          "count": 12
+          "count": 1387
         },
         {
           "name": "Research Areas",
-          "count": 7
+          "count": 119
+        },
+        {
+          "name": "Tasks",
+          "count": 68
         },
         {
           "name": "Techniques",
-          "count": 4
+          "count": 54
         },
         {
-          "name": "Venues",
-          "count": 3
+          "name": "Institutions",
+          "count": 23
         }
       ],
       "warnings": [
-        "quality report has 6 disabled source(s)"
+        "quality report has 7 disabled source(s)"
       ]
     },
     {
@@ -1809,36 +1821,36 @@
       "has_summary_json": true,
       "article_count": 200,
       "matched_count": 200,
-      "source_count": 12,
+      "source_count": 15,
       "match_rate": 100.0,
-      "last_updated": "2026-05-13",
-      "generated_at": "2026-05-13T18:36:39.511189+09:00",
-      "total_reports": 59,
+      "last_updated": "2026-05-19",
+      "generated_at": "2026-05-19T22:27:55.591001+09:00",
+      "total_reports": 61,
       "report_index_path": "PaperworkRadar/reports/index.html",
       "latest_report_path": "PaperworkRadar/reports/index.html",
-      "data_origin": "PaperworkRadar/reports/paperwork_20260513_summary.json",
+      "data_origin": "PaperworkRadar/reports/paperwork_20260519_summary.json",
       "quality_origin": null,
       "quality_summary": {},
       "top_entities": [
         {
           "name": "PaperworkGeneral",
-          "count": 2798
+          "count": 2540
         },
         {
           "name": "Registration",
-          "count": 241
-        },
-        {
-          "name": "DigitalGov",
-          "count": 44
+          "count": 200
         },
         {
           "name": "TaxDocs",
-          "count": 43
+          "count": 54
         },
         {
           "name": "Visa",
-          "count": 23
+          "count": 42
+        },
+        {
+          "name": "DigitalGov",
+          "count": 38
         }
       ],
       "warnings": []
@@ -1850,38 +1862,38 @@
       "status": "active",
       "pipeline_kind": "summary_json",
       "has_summary_json": true,
-      "article_count": 23,
-      "matched_count": 23,
-      "source_count": 9,
+      "article_count": 139,
+      "matched_count": 139,
+      "source_count": 15,
       "match_rate": 100.0,
-      "last_updated": "2026-05-13",
-      "generated_at": "2026-05-13T21:28:11.002928+09:00",
-      "total_reports": 55,
+      "last_updated": "2026-05-19",
+      "generated_at": "2026-05-19T22:27:46.403532+09:00",
+      "total_reports": 57,
       "report_index_path": "PolicyRadar/reports/index.html",
       "latest_report_path": "PolicyRadar/reports/index.html",
-      "data_origin": "PolicyRadar/reports/policy_20260513_summary.json",
+      "data_origin": "PolicyRadar/reports/policy_20260519_summary.json",
       "quality_origin": null,
       "quality_summary": {},
       "top_entities": [
         {
           "name": "Regulation",
-          "count": 22
+          "count": 181
         },
         {
           "name": "Legislation",
-          "count": 11
-        },
-        {
-          "name": "Platform",
-          "count": 10
+          "count": 88
         },
         {
           "name": "JudicialRuling",
-          "count": 8
+          "count": 56
         },
         {
           "name": "ConsumerRights",
-          "count": 7
+          "count": 37
+        },
+        {
+          "name": "ExecutiveOrder",
+          "count": 30
         }
       ],
       "warnings": []
@@ -1897,34 +1909,57 @@
       "matched_count": 100,
       "source_count": 4,
       "match_rate": 100.0,
-      "last_updated": "2026-05-13",
-      "generated_at": "2026-05-13T11:28:38.054070+00:00",
-      "total_reports": 25,
+      "last_updated": "2026-05-19",
+      "generated_at": "2026-05-19T22:47:14.229952+09:00",
+      "total_reports": 31,
       "report_index_path": "PriceRadar/reports/index.html",
       "latest_report_path": "PriceRadar/reports/index.html",
-      "data_origin": "PriceRadar/reports/price_20260513_summary.json",
+      "data_origin": "PriceRadar/reports/price_20260519_summary.json",
       "quality_origin": "PriceRadar/reports/price_quality.json",
       "quality_summary": {
         "priority": "P1",
         "primary_motion": "conversion",
         "configured_source_count": 10,
-        "enabled_source_count": 9,
+        "enabled_source_count": 8,
         "canonical_key_coverage": 1.0,
         "effective_price_coverage": 1.0,
         "stock_signal_coverage": 1.0,
         "verification_signal_coverage": 1.0,
         "official_source_backlog_count": 3,
         "official_candidate_domain_count": 7,
-        "tracked_price_event_count": 74,
+        "tracked_price_event_count": 73,
         "daily_review_item_count": 11,
         "authority_gap_review_count": 1,
-        "unique_sku_count": 74,
+        "unique_sku_count": 73,
         "effective_price_present_count": 0,
         "purchase_benefit_present_count": 0,
         "stock_status_present_count": 0,
         "outlier_event_count": 0,
+        "current_price_null_total": 8,
+        "current_price_null_by_source": {
+          "fallcent_electronics": {
+            "total": 18,
+            "null": 0,
+            "null_pct": 0.0
+          },
+          "enuri_main": {
+            "total": 60,
+            "null": 0,
+            "null_pct": 0.0
+          },
+          "fallcent_main": {
+            "total": 13,
+            "null": 0,
+            "null_pct": 0.0
+          },
+          "algumon_main": {
+            "total": 9,
+            "null": 8,
+            "null_pct": 88.89
+          }
+        },
         "missing_required_components": [],
-        "sku_price_snapshot_events": 74,
+        "sku_price_snapshot_events": 73,
         "purchase_benefit_snapshot_events": 0,
         "stock_status_transition_events": 0
       },
@@ -1935,11 +1970,11 @@
         },
         {
           "name": "source:enuri_main",
-          "count": 61
+          "count": 60
         },
         {
           "name": "discount:50%+",
-          "count": 43
+          "count": 44
         },
         {
           "name": "platform:coupang",
@@ -1959,16 +1994,16 @@
       "status": "active",
       "pipeline_kind": "summary_json",
       "has_summary_json": true,
-      "article_count": 8,
-      "matched_count": 8,
+      "article_count": 170,
+      "matched_count": 170,
       "source_count": 8,
       "match_rate": 100.0,
-      "last_updated": "2026-05-13",
-      "generated_at": "2026-05-13T21:28:37.635302+09:00",
-      "total_reports": 34,
+      "last_updated": "2026-05-19",
+      "generated_at": "2026-05-19T22:33:38.310147+09:00",
+      "total_reports": 36,
       "report_index_path": "PropertyRadar/reports/index.html",
       "latest_report_path": "PropertyRadar/reports/index.html",
-      "data_origin": "PropertyRadar/reports/property_20260513_summary.json",
+      "data_origin": "PropertyRadar/reports/property_20260519_summary.json",
       "quality_origin": "PropertyRadar/reports/property_quality.json",
       "quality_summary": {
         "total_sources": 17,
@@ -1982,51 +2017,51 @@
         "not_tracked_sources": 5,
         "skipped_disabled_sources": 8,
         "collection_error_count": 0,
-        "transaction_record_events": 3,
-        "presale_competition_events": 8,
-        "listing_inventory_events": 1,
-        "permit_completion_events": 0,
-        "property_signal_event_count": 12,
+        "transaction_record_events": 9,
+        "presale_competition_events": 60,
+        "listing_inventory_events": 18,
+        "permit_completion_events": 4,
+        "property_signal_event_count": 91,
         "official_or_operational_event_count": 3,
-        "news_proxy_event_count": 8,
+        "news_proxy_event_count": 87,
         "complete_canonical_key_count": 0,
-        "proxy_canonical_key_count": 9,
-        "missing_canonical_key_count": 3,
-        "region_code_present_count": 2,
-        "project_key_present_count": 8,
-        "transaction_price_present_count": 3,
-        "listing_count_present_count": 0,
-        "competition_rate_present_count": 2,
+        "proxy_canonical_key_count": 80,
+        "missing_canonical_key_count": 11,
+        "region_code_present_count": 9,
+        "project_key_present_count": 64,
+        "transaction_price_present_count": 21,
+        "listing_count_present_count": 13,
+        "competition_rate_present_count": 7,
         "event_required_field_gap_count": 0,
         "tracked_source_gap_count": 1,
-        "missing_event_model_count": 1,
+        "missing_event_model_count": 0,
         "source_backlog_candidate_count": 4,
         "source_activation_item_count": 7,
         "disabled_operational_source_count": 2,
         "enabled_operational_gap_count": 1,
         "operational_coverage_status": "activation_required",
-        "daily_review_item_count": 29
+        "daily_review_item_count": 50
       },
       "top_entities": [
         {
           "name": "PropertyGeneral",
-          "count": 33
-        },
-        {
-          "name": "PropertyType",
-          "count": 19
+          "count": 260
         },
         {
           "name": "Market",
-          "count": 17
+          "count": 248
         },
         {
-          "name": "Policy",
-          "count": 5
+          "name": "PropertyType",
+          "count": 138
         },
         {
           "name": "Location",
-          "count": 3
+          "count": 72
+        },
+        {
+          "name": "Policy",
+          "count": 48
         }
       ],
       "warnings": [
@@ -2040,16 +2075,16 @@
       "status": "active",
       "pipeline_kind": "summary_json",
       "has_summary_json": true,
-      "article_count": 8,
-      "matched_count": 8,
+      "article_count": 10,
+      "matched_count": 10,
       "source_count": 1,
       "match_rate": 100.0,
-      "last_updated": "2026-05-13",
-      "generated_at": "2026-05-13T12:38:01.998790+00:00",
-      "total_reports": 10,
+      "last_updated": "2026-05-19",
+      "generated_at": "2026-05-19T13:44:47.501322+00:00",
+      "total_reports": 16,
       "report_index_path": "PublicDataMCPRadar/reports/index.html",
       "latest_report_path": "PublicDataMCPRadar/reports/index.html",
-      "data_origin": "PublicDataMCPRadar/reports/publicdata_mcp_20260513_summary.json",
+      "data_origin": "PublicDataMCPRadar/reports/publicdata_mcp_20260519_summary.json",
       "quality_origin": "PublicDataMCPRadar/reports/publicdata_mcp_quality.json",
       "quality_summary": {
         "total_sources": 8,
@@ -2063,7 +2098,7 @@
         "not_tracked_sources": 0,
         "skipped_disabled_sources": 7,
         "collection_error_count": 0,
-        "mcp_signal_event_count": 18,
+        "mcp_signal_event_count": 20,
         "directory_seed_source_count": 1,
         "mcp_server_candidate_count": 7,
         "enabled_mcp_server_source_count": 0,
@@ -2078,11 +2113,11 @@
         "env_preflight_not_required_source_count": 1,
         "repository_metadata_complete_source_count": 7,
         "repository_metadata_gap_count": 0,
-        "repository_metadata_fresh_source_count": 7,
-        "repository_metadata_stale_source_count": 0,
+        "repository_metadata_fresh_source_count": 0,
+        "repository_metadata_stale_source_count": 7,
         "repository_metadata_incomplete_source_count": 0,
         "repository_metadata_missing_checked_at_source_count": 0,
-        "repository_metadata_review_required_count": 0,
+        "repository_metadata_review_required_count": 7,
         "repository_docs_present_source_count": 7,
         "repository_docs_missing_source_count": 0,
         "repository_security_policy_present_source_count": 0,
@@ -2109,8 +2144,8 @@
         "activation_real_transport_required_source_count": 6,
         "activation_runtime_review_required_source_count": 0,
         "activation_ready_for_fake_transport_source_count": 0,
-        "daily_review_item_count": 13,
-        "mcp_directory_entry_events": 8,
+        "daily_review_item_count": 20,
+        "mcp_directory_entry_events": 10,
         "mcp_tool_result_events": 0,
         "linked_repository_metadata_events": 7,
         "risk_scope_signal_events": 3
@@ -2118,19 +2153,19 @@
       "top_entities": [
         {
           "name": "ProjectHealth",
-          "count": 22
-        },
-        {
-          "name": "Capability",
-          "count": 11
+          "count": 26
         },
         {
           "name": "MCPDomain",
-          "count": 10
+          "count": 15
+        },
+        {
+          "name": "Capability",
+          "count": 13
         },
         {
           "name": "Provider",
-          "count": 7
+          "count": 10
         },
         {
           "name": "RiskScope",
@@ -2148,17 +2183,17 @@
       "status": "active",
       "pipeline_kind": "summary_json",
       "has_summary_json": true,
-      "article_count": 200,
-      "matched_count": 200,
-      "source_count": 16,
+      "article_count": 176,
+      "matched_count": 176,
+      "source_count": 21,
       "match_rate": 100.0,
-      "last_updated": "2026-05-13",
-      "generated_at": "2026-05-13T20:30:06.038402+09:00",
-      "total_reports": 36,
+      "last_updated": "2026-05-20",
+      "generated_at": "2026-05-20T08:25:07.105162+09:00",
+      "total_reports": 39,
       "report_index_path": "QueueRadar/reports/index.html",
       "latest_report_path": "QueueRadar/reports/index.html",
-      "data_origin": "QueueRadar/reports/queue_20260513_summary.json",
-      "quality_origin": "QueueRadar/reports/queue_20260513_quality.json",
+      "data_origin": "QueueRadar/reports/queue_20260520_summary.json",
+      "quality_origin": "QueueRadar/reports/queue_20260519_quality.json",
       "quality_summary": {
         "total_sources": 39,
         "enabled_sources": 23,
@@ -2171,18 +2206,18 @@
         "not_tracked_sources": 11,
         "skipped_disabled_sources": 16,
         "collection_error_count": 0,
-        "wait_time_snapshot_events": 12,
+        "wait_time_snapshot_events": 369,
         "reservation_slot_events": 0,
         "ticket_price_events": 0,
         "weather_context_events": 0,
-        "queue_signal_event_count": 12,
-        "wait_time_observation_count": 12,
-        "open_attraction_count": 2,
-        "closed_attraction_count": 10,
-        "zero_wait_count": 12,
-        "high_wait_review_count": 0,
-        "target_canonical_key_present_count": 12,
-        "attraction_canonical_key_present_count": 12,
+        "queue_signal_event_count": 369,
+        "wait_time_observation_count": 369,
+        "open_attraction_count": 223,
+        "closed_attraction_count": 146,
+        "zero_wait_count": 214,
+        "high_wait_review_count": 10,
+        "target_canonical_key_present_count": 369,
+        "attraction_canonical_key_present_count": 357,
         "reservation_canonical_key_present_count": 0,
         "ticket_canonical_key_present_count": 0,
         "weather_context_present_count": 0,
@@ -2191,28 +2226,28 @@
         "tracked_source_gap_count": 0,
         "missing_event_model_count": 3,
         "source_backlog_candidate_count": 4,
-        "daily_review_item_count": 7
+        "daily_review_item_count": 17
       },
       "top_entities": [
         {
-          "name": "RealTimeData",
-          "count": 1146
-        },
-        {
           "name": "QueueGeneral",
-          "count": 1125
-        },
-        {
-          "name": "WaitTime",
-          "count": 860
-        },
-        {
-          "name": "Status",
-          "count": 385
+          "count": 2624
         },
         {
           "name": "Location",
-          "count": 247
+          "count": 272
+        },
+        {
+          "name": "Attraction",
+          "count": 146
+        },
+        {
+          "name": "RealTimeData",
+          "count": 103
+        },
+        {
+          "name": "WaitTime",
+          "count": 90
         }
       ],
       "warnings": [
@@ -2230,12 +2265,12 @@
       "matched_count": 3,
       "source_count": 1,
       "match_rate": 100.0,
-      "last_updated": "2026-05-12",
-      "generated_at": "2026-05-12T20:28:57.481276+00:00",
-      "total_reports": 8,
+      "last_updated": "2026-05-19",
+      "generated_at": "2026-05-19T13:44:47.422381+00:00",
+      "total_reports": 15,
       "report_index_path": "RealEstateMCPRadar/reports/index.html",
       "latest_report_path": "RealEstateMCPRadar/reports/index.html",
-      "data_origin": "RealEstateMCPRadar/reports/realestate_mcp_20260512_summary.json",
+      "data_origin": "RealEstateMCPRadar/reports/realestate_mcp_20260519_summary.json",
       "quality_origin": "RealEstateMCPRadar/reports/realestate_mcp_quality.json",
       "quality_summary": {
         "total_sources": 2,
@@ -2264,11 +2299,11 @@
         "env_preflight_not_required_source_count": 0,
         "repository_metadata_complete_source_count": 1,
         "repository_metadata_gap_count": 0,
-        "repository_metadata_fresh_source_count": 1,
-        "repository_metadata_stale_source_count": 0,
+        "repository_metadata_fresh_source_count": 0,
+        "repository_metadata_stale_source_count": 1,
         "repository_metadata_incomplete_source_count": 0,
         "repository_metadata_missing_checked_at_source_count": 0,
-        "repository_metadata_review_required_count": 0,
+        "repository_metadata_review_required_count": 1,
         "repository_docs_present_source_count": 1,
         "repository_docs_missing_source_count": 0,
         "repository_security_policy_present_source_count": 0,
@@ -2295,7 +2330,7 @@
         "activation_real_transport_required_source_count": 1,
         "activation_runtime_review_required_source_count": 0,
         "activation_ready_for_fake_transport_source_count": 0,
-        "daily_review_item_count": 2,
+        "daily_review_item_count": 3,
         "mcp_directory_entry_events": 3,
         "mcp_tool_result_events": 0,
         "linked_repository_metadata_events": 1,
@@ -2330,38 +2365,38 @@
       "status": "active",
       "pipeline_kind": "summary_json",
       "has_summary_json": true,
-      "article_count": 198,
-      "matched_count": 198,
-      "source_count": 8,
+      "article_count": 196,
+      "matched_count": 196,
+      "source_count": 11,
       "match_rate": 100.0,
-      "last_updated": "2026-05-13",
-      "generated_at": "2026-05-13T20:35:05.528435+09:00",
-      "total_reports": 59,
+      "last_updated": "2026-05-19",
+      "generated_at": "2026-05-19T22:28:06.199397+09:00",
+      "total_reports": 61,
       "report_index_path": "RefundRadar/reports/index.html",
       "latest_report_path": "RefundRadar/reports/index.html",
-      "data_origin": "RefundRadar/reports/refund_20260513_summary.json",
+      "data_origin": "RefundRadar/reports/refund_20260519_summary.json",
       "quality_origin": null,
       "quality_summary": {},
       "top_entities": [
         {
           "name": "RefundGeneral",
-          "count": 1384
+          "count": 1649
         },
         {
           "name": "FinancialAmount",
-          "count": 117
-        },
-        {
-          "name": "Subsidy",
-          "count": 22
-        },
-        {
-          "name": "Eligibility",
-          "count": 18
+          "count": 85
         },
         {
           "name": "TaxBenefit",
-          "count": 13
+          "count": 31
+        },
+        {
+          "name": "Subsidy",
+          "count": 27
+        },
+        {
+          "name": "Eligibility",
+          "count": 22
         }
       ],
       "warnings": []
@@ -2377,12 +2412,12 @@
       "matched_count": 2,
       "source_count": 1,
       "match_rate": 100.0,
-      "last_updated": "2026-05-12",
-      "generated_at": "2026-05-12T20:29:30.080068+00:00",
-      "total_reports": 8,
+      "last_updated": "2026-05-19",
+      "generated_at": "2026-05-19T13:44:49.704789+00:00",
+      "total_reports": 15,
       "report_index_path": "SearchTrendMCPRadar/reports/index.html",
       "latest_report_path": "SearchTrendMCPRadar/reports/index.html",
-      "data_origin": "SearchTrendMCPRadar/reports/search_trend_mcp_20260512_summary.json",
+      "data_origin": "SearchTrendMCPRadar/reports/search_trend_mcp_20260519_summary.json",
       "quality_origin": "SearchTrendMCPRadar/reports/search_trend_mcp_quality.json",
       "quality_summary": {
         "total_sources": 3,
@@ -2411,11 +2446,11 @@
         "env_preflight_not_required_source_count": 0,
         "repository_metadata_complete_source_count": 2,
         "repository_metadata_gap_count": 0,
-        "repository_metadata_fresh_source_count": 2,
-        "repository_metadata_stale_source_count": 0,
+        "repository_metadata_fresh_source_count": 0,
+        "repository_metadata_stale_source_count": 2,
         "repository_metadata_incomplete_source_count": 0,
         "repository_metadata_missing_checked_at_source_count": 0,
-        "repository_metadata_review_required_count": 0,
+        "repository_metadata_review_required_count": 2,
         "repository_docs_present_source_count": 2,
         "repository_docs_missing_source_count": 0,
         "repository_security_policy_present_source_count": 0,
@@ -2442,7 +2477,7 @@
         "activation_real_transport_required_source_count": 2,
         "activation_runtime_review_required_source_count": 0,
         "activation_ready_for_fake_transport_source_count": 0,
-        "daily_review_item_count": 4,
+        "daily_review_item_count": 6,
         "mcp_directory_entry_events": 2,
         "mcp_tool_result_events": 0,
         "linked_repository_metadata_events": 2,
@@ -2477,24 +2512,24 @@
       "status": "active",
       "pipeline_kind": "summary_json",
       "has_summary_json": true,
-      "article_count": 89,
-      "matched_count": 89,
-      "source_count": 22,
+      "article_count": 144,
+      "matched_count": 144,
+      "source_count": 23,
       "match_rate": 100.0,
-      "last_updated": "2026-05-13",
-      "generated_at": "2026-05-13T21:11:27.319306+09:00",
-      "total_reports": 35,
+      "last_updated": "2026-05-20",
+      "generated_at": "2026-05-20T07:04:21.046144+09:00",
+      "total_reports": 38,
       "report_index_path": "SubscriptionRadar/reports/index.html",
       "latest_report_path": "SubscriptionRadar/reports/index.html",
-      "data_origin": "SubscriptionRadar/reports/subscription_20260513_summary.json",
-      "quality_origin": "SubscriptionRadar/reports/subscription_quality.json",
+      "data_origin": "SubscriptionRadar/reports/subscription_20260520_summary.json",
+      "quality_origin": "SubscriptionRadar/reports/subscription_20260519_quality.json",
       "quality_summary": {
         "total_sources": 51,
         "enabled_sources": 37,
         "tracked_sources": 25,
-        "fresh_sources": 12,
-        "quiet_sources": 3,
-        "stale_sources": 1,
+        "fresh_sources": 16,
+        "quiet_sources": 0,
+        "stale_sources": 0,
         "missing_sources": 0,
         "missing_event_sources": 0,
         "unknown_event_date_sources": 0,
@@ -2502,50 +2537,49 @@
         "skipped_disabled_sources": 14,
         "collection_error_count": 0,
         "pricing_page_snapshot_events": 8,
-        "plan_change_notice_events": 5,
-        "app_store_ranking_events": 9,
-        "churn_proxy_events": 10,
-        "subscription_signal_event_count": 32,
+        "plan_change_notice_events": 27,
+        "app_store_ranking_events": 25,
+        "churn_proxy_events": 32,
+        "subscription_signal_event_count": 92,
         "official_pricing_page_event_count": 8,
         "community_churn_proxy_event_count": 0,
-        "plan_canonical_key_present_count": 13,
-        "vendor_proxy_key_count": 2,
-        "price_amount_present_count": 8,
-        "currency_present_count": 14,
-        "change_type_present_count": 6,
-        "app_ranking_key_present_count": 9,
-        "churn_metric_present_count": 4,
+        "plan_canonical_key_present_count": 35,
+        "vendor_proxy_key_count": 23,
+        "price_amount_present_count": 9,
+        "currency_present_count": 22,
+        "change_type_present_count": 8,
+        "app_ranking_key_present_count": 25,
+        "churn_metric_present_count": 9,
         "missing_canonical_key_count": 0,
-        "event_required_field_gap_count": 10,
-        "tracked_source_gap_count": 1,
+        "event_required_field_gap_count": 69,
+        "tracked_source_gap_count": 0,
         "missing_event_model_count": 0,
         "source_backlog_candidate_count": 4,
-        "daily_review_item_count": 15
+        "daily_review_item_count": 50
       },
       "top_entities": [
         {
-          "name": "Service",
-          "count": 163
+          "name": "Price",
+          "count": 229
         },
         {
-          "name": "Price",
-          "count": 155
+          "name": "Service",
+          "count": 213
         },
         {
           "name": "Subscription",
-          "count": 143
-        },
-        {
-          "name": "SourceSignal",
-          "count": 54
+          "count": 212
         },
         {
           "name": "Provider",
-          "count": 52
+          "count": 75
+        },
+        {
+          "name": "SourceSignal",
+          "count": 66
         }
       ],
       "warnings": [
-        "quality freshness gaps: stale=1, missing=0, unknown_event_date=0",
         "quality report has 14 disabled source(s)"
       ]
     },
@@ -2560,12 +2594,12 @@
       "matched_count": 2,
       "source_count": 1,
       "match_rate": 100.0,
-      "last_updated": "2026-05-12",
-      "generated_at": "2026-05-12T20:29:59.462005+00:00",
-      "total_reports": 8,
+      "last_updated": "2026-05-19",
+      "generated_at": "2026-05-19T13:44:55.582036+00:00",
+      "total_reports": 15,
       "report_index_path": "TravelMCPRadar/reports/index.html",
       "latest_report_path": "TravelMCPRadar/reports/index.html",
-      "data_origin": "TravelMCPRadar/reports/travel_mcp_20260512_summary.json",
+      "data_origin": "TravelMCPRadar/reports/travel_mcp_20260519_summary.json",
       "quality_origin": "TravelMCPRadar/reports/travel_mcp_quality.json",
       "quality_summary": {
         "total_sources": 3,
@@ -2594,11 +2628,11 @@
         "env_preflight_not_required_source_count": 0,
         "repository_metadata_complete_source_count": 2,
         "repository_metadata_gap_count": 0,
-        "repository_metadata_fresh_source_count": 2,
-        "repository_metadata_stale_source_count": 0,
+        "repository_metadata_fresh_source_count": 0,
+        "repository_metadata_stale_source_count": 2,
         "repository_metadata_incomplete_source_count": 0,
         "repository_metadata_missing_checked_at_source_count": 0,
-        "repository_metadata_review_required_count": 0,
+        "repository_metadata_review_required_count": 2,
         "repository_docs_present_source_count": 2,
         "repository_docs_missing_source_count": 0,
         "repository_security_policy_present_source_count": 0,
@@ -2623,7 +2657,7 @@
         "activation_real_transport_required_source_count": 2,
         "activation_runtime_review_required_source_count": 0,
         "activation_ready_for_fake_transport_source_count": 0,
-        "daily_review_item_count": 4,
+        "daily_review_item_count": 6,
         "mcp_directory_entry_events": 2,
         "mcp_tool_result_events": 0,
         "linked_repository_metadata_events": 2,
@@ -2658,55 +2692,65 @@
       "status": "active",
       "pipeline_kind": "summary_json",
       "has_summary_json": true,
-      "article_count": 14,
-      "matched_count": 14,
-      "source_count": 1,
+      "article_count": 180,
+      "matched_count": 180,
+      "source_count": 2,
       "match_rate": 100.0,
-      "last_updated": "2026-05-13",
-      "generated_at": "2026-05-13T21:34:43.538227+09:00",
-      "total_reports": 7,
+      "last_updated": "2026-05-19",
+      "generated_at": "2026-05-19T22:45:35.264024+09:00",
+      "total_reports": 13,
       "report_index_path": "TrendRadar/reports/index.html",
       "latest_report_path": "TrendRadar/reports/index.html",
-      "data_origin": "TrendRadar/reports/trend_20260513_summary.json",
+      "data_origin": "TrendRadar/reports/trend_20260519_summary.json",
       "quality_origin": "TrendRadar/reports/trend_quality.json",
       "quality_summary": {
         "priority": "P1",
         "primary_motion": "attention",
-        "configured_pack_count": 1,
-        "enabled_pack_count": 1,
+        "configured_pack_count": 8,
+        "enabled_pack_count": 8,
         "versioned_pack_coverage": 1.0,
         "taxonomy_coverage": 1.0,
-        "attention_pack_coverage": 1.0,
-        "conversion_proxy_pack_coverage": 0.0,
-        "community_pack_coverage": 0.0,
+        "attention_pack_coverage": 0.875,
+        "conversion_proxy_pack_coverage": 0.125,
+        "community_pack_coverage": 0.25,
         "separated_score_axes": true,
-        "raw_signal_point_count": 14,
-        "collected_signal_count": 14,
-        "attention_signal_count": 14,
+        "raw_signal_point_count": 180,
+        "collected_signal_count": 180,
+        "attention_signal_count": 180,
         "conversion_proxy_signal_count": 0,
         "community_signal_count": 0,
-        "fresh_signal_count": 2,
-        "stale_signal_count": 12,
+        "fresh_signal_count": 15,
+        "stale_signal_count": 165,
         "undated_signal_count": 0,
-        "distinct_signal_channel_count": 1,
-        "distinct_keyword_pack_event_count": 1,
-        "unique_signal_key_count": 14,
-        "signal_required_field_gap_count": 0,
+        "distinct_signal_channel_count": 2,
+        "distinct_keyword_pack_event_count": 4,
+        "unique_signal_key_count": 180,
+        "signal_required_field_gap_count": 180,
         "score_axis_contamination_count": 0,
-        "daily_review_item_count": 12,
+        "daily_review_item_count": 50,
         "events_truncated": 0,
-        "missing_required_components": [
-          "conversion_proxy_layer"
-        ]
+        "missing_required_components": []
       },
       "top_entities": [
         {
-          "name": "Python (programming language)",
-          "count": 7
+          "name": "Seoul",
+          "count": 6
         },
         {
-          "name": "Seoul",
-          "count": 7
+          "name": "South Korea",
+          "count": 6
+        },
+        {
+          "name": "Python (programming language)",
+          "count": 6
+        },
+        {
+          "name": "Artificial intelligence",
+          "count": 6
+        },
+        {
+          "name": "Machine learning",
+          "count": 6
         }
       ],
       "warnings": []
@@ -2718,38 +2762,38 @@
       "status": "active",
       "pipeline_kind": "summary_json",
       "has_summary_json": true,
-      "article_count": 102,
-      "matched_count": 102,
-      "source_count": 12,
+      "article_count": 112,
+      "matched_count": 112,
+      "source_count": 11,
       "match_rate": 100.0,
-      "last_updated": "2026-05-13",
-      "generated_at": "2026-05-13T22:15:24.500225+09:00",
-      "total_reports": 59,
+      "last_updated": "2026-05-19",
+      "generated_at": "2026-05-19T22:56:05.772221+09:00",
+      "total_reports": 61,
       "report_index_path": "TrustRadar/reports/index.html",
       "latest_report_path": "TrustRadar/reports/index.html",
-      "data_origin": "TrustRadar/reports/trust_20260513_summary.json",
+      "data_origin": "TrustRadar/reports/trust_20260519_summary.json",
       "quality_origin": null,
       "quality_summary": {},
       "top_entities": [
         {
           "name": "SecurityGeneral",
-          "count": 165
-        },
-        {
-          "name": "Threat",
-          "count": 42
+          "count": 172
         },
         {
           "name": "Vulnerability",
-          "count": 37
+          "count": 51
+        },
+        {
+          "name": "Threat",
+          "count": 49
         },
         {
           "name": "DataBreach",
           "count": 23
         },
         {
-          "name": "CorporateTrust",
-          "count": 12
+          "name": "Malware",
+          "count": 16
         }
       ],
       "warnings": []
@@ -2761,16 +2805,16 @@
       "status": "active",
       "pipeline_kind": "summary_json",
       "has_summary_json": true,
-      "article_count": 5,
-      "matched_count": 5,
+      "article_count": 6,
+      "matched_count": 6,
       "source_count": 1,
       "match_rate": 100.0,
-      "last_updated": "2026-05-12",
-      "generated_at": "2026-05-12T20:28:48.470079+00:00",
-      "total_reports": 8,
+      "last_updated": "2026-05-19",
+      "generated_at": "2026-05-19T13:45:01.009862+00:00",
+      "total_reports": 15,
       "report_index_path": "WeatherMCPRadar/reports/index.html",
       "latest_report_path": "WeatherMCPRadar/reports/index.html",
-      "data_origin": "WeatherMCPRadar/reports/weather_mcp_20260512_summary.json",
+      "data_origin": "WeatherMCPRadar/reports/weather_mcp_20260519_summary.json",
       "quality_origin": "WeatherMCPRadar/reports/weather_mcp_quality.json",
       "quality_summary": {
         "total_sources": 3,
@@ -2784,7 +2828,7 @@
         "not_tracked_sources": 0,
         "skipped_disabled_sources": 2,
         "collection_error_count": 0,
-        "mcp_signal_event_count": 9,
+        "mcp_signal_event_count": 11,
         "directory_seed_source_count": 1,
         "mcp_server_candidate_count": 2,
         "enabled_mcp_server_source_count": 0,
@@ -2799,11 +2843,11 @@
         "env_preflight_not_required_source_count": 0,
         "repository_metadata_complete_source_count": 2,
         "repository_metadata_gap_count": 0,
-        "repository_metadata_fresh_source_count": 2,
-        "repository_metadata_stale_source_count": 0,
+        "repository_metadata_fresh_source_count": 0,
+        "repository_metadata_stale_source_count": 2,
         "repository_metadata_incomplete_source_count": 0,
         "repository_metadata_missing_checked_at_source_count": 0,
-        "repository_metadata_review_required_count": 0,
+        "repository_metadata_review_required_count": 2,
         "repository_docs_present_source_count": 2,
         "repository_docs_missing_source_count": 0,
         "repository_security_policy_present_source_count": 0,
@@ -2828,28 +2872,28 @@
         "activation_real_transport_required_source_count": 2,
         "activation_runtime_review_required_source_count": 0,
         "activation_ready_for_fake_transport_source_count": 0,
-        "daily_review_item_count": 4,
-        "mcp_directory_entry_events": 5,
+        "daily_review_item_count": 6,
+        "mcp_directory_entry_events": 6,
         "mcp_tool_result_events": 0,
         "linked_repository_metadata_events": 2,
-        "risk_scope_signal_events": 2
+        "risk_scope_signal_events": 3
       },
       "top_entities": [
         {
           "name": "MCPDomain",
-          "count": 21
+          "count": 24
         },
         {
           "name": "ProjectHealth",
-          "count": 13
+          "count": 16
         },
         {
           "name": "Provider",
-          "count": 6
+          "count": 7
         },
         {
           "name": "RiskScope",
-          "count": 2
+          "count": 3
         },
         {
           "name": "Capability",
@@ -2867,25 +2911,25 @@
       "status": "active",
       "pipeline_kind": "summary_json",
       "has_summary_json": true,
-      "article_count": 58,
-      "matched_count": 58,
-      "source_count": 16,
+      "article_count": 63,
+      "matched_count": 63,
+      "source_count": 21,
       "match_rate": 100.0,
-      "last_updated": "2026-05-13",
-      "generated_at": "2026-05-13T22:12:03.399103+09:00",
-      "total_reports": 17,
+      "last_updated": "2026-05-20",
+      "generated_at": "2026-05-20T07:01:48.127972+09:00",
+      "total_reports": 24,
       "report_index_path": "WineRadar/reports/index.html",
       "latest_report_path": "WineRadar/reports/index.html",
-      "data_origin": "WineRadar/reports/wine_20260513_summary.json",
-      "quality_origin": "WineRadar/reports/wine_quality.json",
+      "data_origin": "WineRadar/reports/wine_20260520_summary.json",
+      "quality_origin": "WineRadar/reports/wine_20260519_quality.json",
       "quality_summary": {
         "total_sources": 71,
-        "tracked_sources": 33,
-        "fresh_sources": 28,
-        "stale_sources": 2,
-        "missing_sources": 3,
+        "tracked_sources": 32,
+        "fresh_sources": 32,
+        "stale_sources": 0,
+        "missing_sources": 0,
         "unknown_event_date_sources": 0,
-        "not_tracked_sources": 9,
+        "not_tracked_sources": 10,
         "skipped_disabled_sources": 29,
         "disabled_high_value_sources": 25,
         "collection_error_count": 0,
@@ -2893,33 +2937,32 @@
         "restaurant_wine_list_sources": 0,
         "importer_portfolio_signal_sources": 1,
         "market_report_sources": 5,
-        "daily_briefing_sources": 24,
+        "daily_briefing_sources": 23,
         "education_sources": 3
       },
       "top_entities": [
         {
           "name": "topic",
-          "count": 105
+          "count": 106
         },
         {
           "name": "region",
-          "count": 80
+          "count": 93
         },
         {
           "name": "grape_variety",
-          "count": 25
+          "count": 41
+        },
+        {
+          "name": "climate_zone",
+          "count": 31
         },
         {
           "name": "winery",
           "count": 20
-        },
-        {
-          "name": "climate_zone",
-          "count": 18
         }
       ],
       "warnings": [
-        "quality freshness gaps: stale=2, missing=3, unknown_event_date=0",
         "quality report has 29 disabled source(s)"
       ]
     }
