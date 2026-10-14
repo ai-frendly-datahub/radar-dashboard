@@ -3,7 +3,15 @@ name: Quality SLA Alert
 on:
   workflow_dispatch:
   schedule:
-    - cron: "0 8 * * *"  # daily 08:00 UTC = 17:00 KST
+    # 17:00 Asia/Seoul (no DST). The cron expression itself changed from
+    # "0 8 * * *" so a default-branch commit can reactivate this workflow
+    # after GitHub set it to disabled_inactivity. Enabling via
+    # PUT /repos/{owner}/{repo}/actions/workflows/{id}/enable returns
+    # 403 Resource not accessible by integration for this app.
+    # workflow_dispatch from this app is also 403; humans can still run it
+    # from the Actions UI.
+    - cron: "0 17 * * *"
+      timezone: "Asia/Seoul"
 
 permissions:
   contents: read
@@ -51,6 +59,10 @@ jobs:
         with:
           script: |
             const fs = require('fs');
+            if (!fs.existsSync('artifacts/sla.json')) {
+              core.setFailed('SLA artifact missing; score step did not finish');
+              return;
+            }
             const sla = JSON.parse(fs.readFileSync('artifacts/sla.json', 'utf8'));
             // Threshold: avg_score < 70 OR more than 6 repos under 70.
             if (sla.avg_score >= 70 && sla.low_count <= 6) {

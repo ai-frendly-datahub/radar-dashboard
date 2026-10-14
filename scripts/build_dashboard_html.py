@@ -53,10 +53,22 @@ def load_optional_json(path: Path) -> dict[str, Any] | None:
     return load_json(path)
 
 
+GITHUB_PAGES_ORIGIN = "https://ai-frendly-datahub.github.io"
+GITHUB_REPO_ORIGIN = "https://github.com/ai-frendly-datahub"
+# Published Pages sites serve the report index at /{repo}/.
+# /{repo}/reports/index.html 404s. CommerceRadar has no Pages site.
+REPOS_WITHOUT_PAGES = frozenset({"CommerceRadar"})
+
+
 def dashboard_href(path_value: str | None) -> str | None:
     if not path_value:
         return None
-    return f"../{path_value}"
+    repo = path_value.split("/", 1)[0]
+    if not repo or repo in {".", ".."}:
+        return None
+    if repo in REPOS_WITHOUT_PAGES:
+        return f"{GITHUB_REPO_ORIGIN}/{repo}"
+    return f"{GITHUB_PAGES_ORIGIN}/{repo}/"
 
 
 def badge_class(status: str) -> str:
@@ -627,6 +639,18 @@ def build_index_html(
       color: rgba(255,255,255,0.78);
     }}
 
+    .hero-links {{
+      display: flex;
+      flex-wrap: wrap;
+      gap: 8px 14px;
+      margin-top: 16px;
+    }}
+
+    .hero-links a {{
+      color: white;
+      font-weight: 700;
+    }}
+
     .stats {{
       display: grid;
       grid-template-columns: repeat(auto-fit, minmax(180px, 1fr));
@@ -999,6 +1023,16 @@ def build_index_html(
       <h1>Radar Projects Dashboard</h1>
       <p>각 Radar 저장소의 `summary JSON`과 리포트 인덱스를 읽어 워크스페이스 전체 상태를 집계한 canonical 대시보드입니다. 현재는 full metrics 우선, 부족한 저장소는 partial fallback으로 표시합니다.</p>
       <div class="hero-meta">Generated at {escape(generated_at)} · Workspace scan source: sibling Radar repositories</div>
+      <nav class="hero-links">
+        <a href="classification.html">Classification</a>
+        <a href="data-quality.html">Quality</a>
+        <a href="data-quality-panel.html">Quality Panel</a>
+        <a href="daily-collection.html">Daily Collection</a>
+        <a href="taxonomy-analysis.html">Taxonomy Analysis</a>
+        <a href="storage.html">Storage</a>
+        <a href="event-model.html">Event Model</a>
+        <a href="source-reliability.html">Source Reliability</a>
+      </nav>
       <div class="stats">
         <article class="stat-card">
           <div class="stat-card__value">{format_number(active_projects)}</div>

@@ -316,8 +316,6 @@ def build_html(payload: dict[str, Any]) -> str:
         <a href="daily-collection.html">Daily Collection</a>
         <a href="storage.html">Storage Footprint</a>
         <a href="event-model.html">Event Model Coverage</a>
-        <a href="../docs/harness/repo-taxonomy-review.md">Markdown Review</a>
-        <a href="../docs/harness/portfolio-taxonomy-framework.md">Framework Doc</a>
       </div>
       <div class="stats">
         <article class="stat"><div class="stat__value">{summary['repo_count']}</div><div class="stat__label">Tracked Repos</div></article>
@@ -381,9 +379,9 @@ def build_html(payload: dict[str, Any]) -> str:
 def main() -> int:
     args = parse_args()
     script_path = Path(__file__).resolve()
-    workspace_root = script_path.parents[2]
-    data_path = args.data_path.resolve() if args.data_path else workspace_root / "radar-dashboard" / "data" / "classification.json"
-    output = args.output.resolve() if args.output else workspace_root / "radar-dashboard" / "classification.html"
+    dashboard_root = script_path.parents[1]
+    data_path = args.data_path.resolve() if args.data_path else dashboard_root / "data" / "classification.json"
+    output = args.output.resolve() if args.output else dashboard_root / "classification.html"
 
     payload = json.loads(data_path.read_text(encoding="utf-8"))
     output.write_text(build_html(payload), encoding="utf-8")

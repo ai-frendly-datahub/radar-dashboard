@@ -31,7 +31,6 @@ Generated outputs:
 - `data/event-model-rollout.json` 기반 event model coverage 페이지 (rollup, namespace × repo grid, coverage progression panel)
 - `data/source-reliability.json` 기반 source reliability scoreboard 페이지
 - 10개 페이지 HTML: `index.html` / `dashboard.html` / `classification.html` / `data-quality.html` / `data-quality-panel.html` / `daily-collection.html` / `taxonomy-analysis.html` / `storage.html` / `event-model.html` / `source-reliability.html`
-- 예전 PNG 자산은 참고용 스냅샷으로 남아 있음
 
 즉, 현재는 완전한 애플리케이션형 대시보드는 아니지만, 워크스페이스 집계와 taxonomy 점검을 자동 생성하는 정적 대시보드까지는 올라온 상태입니다.
 
@@ -44,7 +43,7 @@ Generated outputs:
 
 ## 다음 단계
 
-집계형 대시보드 전환 설계는 [docs/aggregation-plan.md](/home/kjs/projects/ai-frendly-datahub/radar-dashboard/docs/aggregation-plan.md)에 정리했습니다.
+집계형 대시보드 전환 설계는 [docs/aggregation-plan.md](docs/aggregation-plan.md)에 정리했습니다.
 
 ## Phase 1 구현
 
@@ -180,11 +179,13 @@ python3 radar-dashboard/scripts/check_dashboard_artifact_boundary.py
 <!-- DATAHUB-OPS-AUDIT:START -->
 ## DataHub Operations
 
-- CI/CD workflows: none detected under `.github/workflows/`.
-- GitHub Pages visualization: root static pages: `classification.html`, `daily-collection.html`, `dashboard.html`, `data-quality-panel.html`, `data-quality.html`, `event-model.html`, `index.html`, `source-reliability.html`, `storage.html`, `taxonomy-analysis.html`; no Pages deployment workflow detected.
-- Latest remote Pages check: not applicable.
-- Local workspace audit: 10 Python files parsed, 0 syntax errors.
-- Re-run audit from the workspace root: `python scripts/audit_ci_pages_readme.py --syntax-check --write`.
-- Latest audit report: `_workspace/2026-04-14_github_ci_pages_readme_audit.md`.
-- Latest Pages URL report: `_workspace/2026-04-14_github_pages_url_check.md`.
+Audited 2026-10-14.
+
+- Workflows:
+  - `Validate Dashboard Assets` (`.github/workflows/validate-dashboard.yml`) is **active**. It runs on push/PR when HTML, data, scripts, tests, or that workflow file change.
+  - `Quality SLA Alert` (`.github/workflows/quality-sla-alert.yml`) is a daily schedule at **17:00 Asia/Seoul** (`cron: "0 17 * * *"`, `timezone: Asia/Seoul`). GitHub had set it to `disabled_inactivity` after the last successful run on 2026-07-20. `PUT /repos/ai-frendly-datahub/radar-dashboard/actions/workflows/275770587/enable` returns **403 Resource not accessible by integration** for this app, so the workflow cannot be re-enabled through the API here. A commit that changes the cron on the default branch is the documented reactivation path for a user with write access. `workflow_dispatch` from this app is also 403.
+  - Built-in `pages-build-deployment` is **active**. Pages publishes the repository root of `main` to https://ai-frendly-datahub.github.io/radar-dashboard/ (legacy build, HTTPS enforced). The last successful build before this audit was commit `bc5dfcf` on 2026-05-20.
+- Project report links on the index point at `https://ai-frendly-datahub.github.io/{repo}/` because `/{repo}/reports/index.html` returns 404. `CommerceRadar` has no Pages site, so its row links to the GitHub repository.
+- Sibling `../docs/harness/*.md` links were removed from the generated pages. Those files are not in this repository and 404 on Pages.
+- Portfolio metrics in `data/projects.json` are refreshed from each Radar repo's latest `reports/*_summary.json`. Classification, storage, event-model, source-reliability, daily-collection, and the taxonomy/quality audits still come from the May 2026 `radar-analysis` workspace export. This repo cannot rebuild those marts on its own.
 <!-- DATAHUB-OPS-AUDIT:END -->

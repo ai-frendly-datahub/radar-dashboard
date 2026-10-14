@@ -223,7 +223,6 @@ def build_html(payload: dict[str, Any]) -> str:
         <a href="taxonomy-analysis.html">Taxonomy Analysis</a>
         <a href="storage.html">Storage Footprint</a>
         <a href="event-model.html">Event Model Coverage</a>
-        <a href="../docs/harness/daily-collection-review.md">Markdown Review</a>
       </div>
       <div class="stats">{render_status_counts(summary)}</div>
     </section>
@@ -264,16 +263,16 @@ def build_html(payload: dict[str, Any]) -> str:
 def main() -> int:
     args = parse_args()
     script_path = Path(__file__).resolve()
-    workspace_root = script_path.parents[2]
+    dashboard_root = script_path.parents[1]
     data_path = (
         args.data_path.resolve()
         if args.data_path
-        else workspace_root / "radar-dashboard" / "data" / "daily-collection.json"
+        else dashboard_root / "data" / "daily-collection.json"
     )
     output = (
         args.output.resolve()
         if args.output
-        else workspace_root / "radar-dashboard" / "daily-collection.html"
+        else dashboard_root / "daily-collection.html"
     )
 
     payload = json.loads(data_path.read_text(encoding="utf-8"))

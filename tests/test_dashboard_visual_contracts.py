@@ -109,3 +109,33 @@ def test_event_model_dashboard_emits_portfolio_contract() -> None:
     _assert_html_contract(html, "portfolio", "event-model-coverage")
     assert "Event Model Rollup" in html
     assert "Repo × Event Model Coverage" in html
+
+
+def test_project_links_use_published_pages_root() -> None:
+    module = _load_module("build_dashboard_html")
+    assert module.dashboard_href("ArtRadar/reports/index.html") == "https://ai-frendly-datahub.github.io/ArtRadar/"
+    assert module.dashboard_href("CommerceRadar/reports/index.html") == "https://github.com/ai-frendly-datahub/CommerceRadar"
+    assert module.dashboard_href(None) is None
+
+    html = module.build_index_html(
+        _load_json("projects.json"),
+        _load_json("summary.json"),
+        _load_json("classification.json"),
+        _load_json("data-quality.json"),
+        _load_json("daily-collection.json"),
+        _load_json("taxonomy-analysis.json"),
+        _load_json("storage-facts.json"),
+        _load_json("event-model-rollout.json"),
+    )
+    assert 'href="../ArtRadar/reports/index.html"' not in html
+    assert 'href="https://ai-frendly-datahub.github.io/ArtRadar/"' in html
+    for target in (
+        "classification.html",
+        "data-quality.html",
+        "daily-collection.html",
+        "taxonomy-analysis.html",
+        "storage.html",
+        "event-model.html",
+    ):
+        assert f'href="{target}"' in html
+    assert "../docs/harness/" not in html
