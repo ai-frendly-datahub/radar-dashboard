@@ -107,7 +107,11 @@ def latest_quality_file(repo_path: Path) -> Path | None:
     quality_files = list((repo_path / "reports").glob("*_quality.json"))
     if not quality_files:
         return None
-    return max(quality_files, key=lambda path: (path.stat().st_mtime, path.name))
+    # Prefer the newest dated artifact. Undated aliases such as
+    # ``artwork_quality.json`` share a checkout mtime with other files, so
+    # mtime order is not a stable "latest report" signal.
+    dated = [path for path in quality_files if SUMMARY_DATE_TOKEN_RE.search(path.stem)]
+    return max(dated or quality_files, key=_summary_sort_key)
 
 
 def load_quality_info(repo_path: Path, workspace_root: Path) -> QualityInfo:

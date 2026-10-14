@@ -69,9 +69,21 @@ def render(payload: dict) -> str:
     td.score.warn {{ color: #fbbf24; }}
     td.score.low {{ color: #f87171; }}
     code {{ font-family: "JetBrains Mono", ui-monospace, monospace; font-size: .9rem; }}
+    nav {{ display: flex; flex-wrap: wrap; gap: 8px 14px; margin: 0 0 16px; }}
+    nav a {{ color: #93c5fd; }}
   </style>
 </head>
 <body>
+  <nav>
+    <a href="index.html">Main</a>
+    <a href="classification.html">Classification</a>
+    <a href="data-quality.html">Quality</a>
+    <a href="daily-collection.html">Daily Collection</a>
+    <a href="taxonomy-analysis.html">Taxonomy Analysis</a>
+    <a href="storage.html">Storage</a>
+    <a href="event-model.html">Event Model</a>
+    <a href="source-reliability.html">Source Reliability</a>
+  </nav>
   <h1>Data Quality Panel</h1>
   <p class="meta">Generated {generated_at} · target sources/repo = {payload['target_sources_per_repo']} · median article count = {payload['median_article_count']:.0f}</p>
   <section class="summary-cards">

@@ -522,21 +522,21 @@ def build_html(
 def main() -> int:
     args = parse_args()
     script_path = Path(__file__).resolve()
-    workspace_root = script_path.parents[2]
+    dashboard_root = script_path.parents[1]
     data_path = (
         args.data_path.resolve()
         if args.data_path
-        else workspace_root / "radar-dashboard" / "data" / "event-model-rollout.json"
+        else dashboard_root / "data" / "event-model-rollout.json"
     )
     output = (
         args.output.resolve()
         if args.output
-        else workspace_root / "radar-dashboard" / "event-model.html"
+        else dashboard_root / "event-model.html"
     )
     storage_facts_path = (
         args.storage_facts_path.resolve()
         if args.storage_facts_path
-        else workspace_root / "radar-dashboard" / "data" / "storage-facts.json"
+        else dashboard_root / "data" / "storage-facts.json"
     )
 
     payload = json.loads(data_path.read_text(encoding="utf-8"))
