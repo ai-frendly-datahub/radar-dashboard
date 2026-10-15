@@ -16,6 +16,7 @@ on:
       - "scripts/**"
       - "tests/**"
       - ".github/workflows/validate-dashboard.yml"
+      - ".github/workflows/quality-sla-alert.yml"
   workflow_dispatch:
 
 permissions:
