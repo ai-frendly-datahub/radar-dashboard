@@ -3,14 +3,12 @@ name: Quality SLA Alert
 on:
   workflow_dispatch:
   schedule:
-    # 17:00 Asia/Seoul (no DST). The cron expression itself changed from
-    # "0 8 * * *" so a default-branch commit can reactivate this workflow
-    # after GitHub set it to disabled_inactivity. Enabling via
-    # PUT /repos/{owner}/{repo}/actions/workflows/{id}/enable returns
-    # 403 Resource not accessible by integration for this app.
-    # workflow_dispatch from this app is also 403; humans can still run it
-    # from the Actions UI.
-    - cron: "0 17 * * *"
+    # ~17:00 Asia/Seoul (no DST). Root cause of the stall: GitHub disables scheduled
+    # workflows after 60 days without repository activity (last runs: 2026-07-20, last
+    # commit before that: 2026-05-20). A default-branch commit re-activates the workflow.
+    # Minute :23 (not :00) avoids the top-of-hour load window where GitHub delays or
+    # drops scheduled runs. Keep a single daily schedule to stay within free minutes.
+    - cron: "23 17 * * *"
       timezone: "Asia/Seoul"
 
 permissions:
@@ -20,9 +18,14 @@ permissions:
 env:
   FORCE_JAVASCRIPT_ACTIONS_TO_NODE24: "true"
 
+concurrency:
+  group: quality-sla-alert
+  cancel-in-progress: false
+
 jobs:
   check-sla:
     runs-on: ubuntu-latest
+    timeout-minutes: 15
     steps:
       - uses: actions/checkout@v4
 
